@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>賽程行事曆｜棋士專區</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body class="member-area" data-member-page="cal">
+<div id="site-header"></div>
+
+<section class="page-hero" style="padding:44px 0 40px">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><a href="index.html">棋士專區</a><span class="sep">/</span><span>賽程行事曆</span></nav>
+    <h1 style="font-size:1.8rem">賽程行事曆</h1>
+    <p>各項賽事的對局日程。可切換月曆或列表檢視。</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="member-shell">
+      <div id="member-side"></div>
+
+      <div>
+        <div class="panel">
+          <div class="panel__head">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <button class="btn btn-ghost btn-sm" id="prevM" aria-label="上個月">←</button>
+              <h2 style="font-size:1.2rem;min-width:118px;text-align:center;margin:0" id="monthLabel">—</h2>
+              <button class="btn btn-ghost btn-sm" id="nextM" aria-label="下個月">→</button>
+              <button class="btn btn-ghost btn-sm" id="todayBtn">今天</button>
+            </div>
+            <div class="seg" id="viewSeg">
+              <button class="is-active" data-v="month">月曆</button>
+              <button data-v="list">列表</button>
+            </div>
+          </div>
+
+          <div class="legend" id="legend" style="margin-bottom:16px"></div>
+
+          <div id="rangeNote"></div>
+
+          <div id="monthView" class="cal-scroll">
+            <div class="cal">
+              <div class="cal__head">
+                <div>日</div><div>一</div><div>二</div><div>三</div><div>四</div><div>五</div><div>六</div>
+              </div>
+              <div class="cal__body" id="calBody"></div>
+            </div>
+          </div>
+
+          <div id="listView" style="display:none"></div>
+
+          <p class="src-note" style="margin:18px 0 0" id="srcNote"></p>
+        </div>
+
+        <div class="panel">
+          <div class="panel__head"><h3 style="font-size:1.1rem" id="detailTitle">本月賽程</h3></div>
+          <div id="monthDetail"></div>
+        </div>
+
+        <div class="callout">
+          <p class="mb-0" style="font-size:.9rem">
+            賽程如有異動，協會將於 <a href="announcements.html">內部公告</a> 發布並寄送通知信。
+            如需請假，請下載 <a href="forms.html">賽事請假申請書</a> 填妥後回傳。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/schedule.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/member.js"></script>
+<script>
+document.addEventListener('cpga:ready', function () {
+  var S = window.CPGA_SCHEDULE;
+  var TODAY = S.today();
+  var pad = S.pad;
+  var events = [], meta = null;
+  var cur = { y: +TODAY.slice(0, 4), m: +TODAY.slice(5, 7) - 1 };
+
+  var calBody   = document.getElementById('calBody');
+  var listView  = document.getElementById('listView');
+  var detailEl  = document.getElementById('monthDetail');
+
+  function key(y, m, d) { return y + '-' + pad(m + 1) + '-' + pad(d); }
+  function monthKey()   { return cur.y + '-' + pad(cur.m + 1); }
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function chip(e) {
+    return '<span class="cal__ev cal__ev--rich ' + S.slotClass(e.series_slot) + '" title="' +
+      esc(S.fullTitle(e) + '　' + S.timeLabel(e)) + '">' +
+      '<b>' + esc(e.name) + '</b>' +
+      (e.round ? '<i>' + esc(e.round) + '</i>' : '') +
+      '</span>';
+  }
+
+  function row(e) {
+    return '<div style="display:grid;grid-template-columns:88px 1fr;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line)">' +
+      '<span class="muted" style="font-size:.86rem;font-variant-numeric:tabular-nums">' +
+        fmtDate(e.date).slice(5) + '<br><span style="font-size:.8rem">' + esc(S.timeLabel(e)) + '</span></span>' +
+      '<span>' +
+        '<span class="legend__dot ' + S.slotClass(e.series_slot) + '" style="background:currentColor"></span>' +
+        '<strong style="color:var(--ink);font-weight:500">' + esc(S.fullTitle(e)) + '</strong><br>' +
+        (e.link ? '<a href="' + esc(e.link) + '" target="_blank" rel="noopener" style="font-size:.82rem">在 Google 日曆開啟 →</a>' : '') +
+      '</span></div>';
+  }
+
+  function renderMonth() {
+    document.getElementById('monthLabel').textContent = cur.y + ' 年 ' + (cur.m + 1) + ' 月';
+
+    var first = new Date(cur.y, cur.m, 1).getDay();
+    var days = new Date(cur.y, cur.m + 1, 0).getDate();
+    var prevDays = new Date(cur.y, cur.m, 0).getDate();
+    var cells = [];
+
+    for (var i = first - 1; i >= 0; i--) cells.push({ d: prevDays - i, muted: true });
+    for (var d = 1; d <= days; d++) cells.push({ d: d, muted: false, k: key(cur.y, cur.m, d) });
+    var nextD = 1;
+    while (cells.length % 7 !== 0) cells.push({ d: nextD++, muted: true });
+
+    calBody.innerHTML = cells.map(function (c) {
+      var evs = c.k ? events.filter(function (e) { return e.date === c.k; }) : [];
+      return '<div class="cal__cell' + (c.muted ? ' is-muted' : '') + (c.k === TODAY ? ' is-today' : '') + '">' +
+        '<span class="cal__date">' + c.d + '</span>' + evs.map(chip).join('') + '</div>';
+    }).join('');
+
+    var inMonth = events.filter(function (e) { return e.date.slice(0, 7) === monthKey(); });
+    document.getElementById('detailTitle').textContent = (cur.m + 1) + ' 月賽程（' + inMonth.length + ' 場）';
+    detailEl.innerHTML = inMonth.length
+      ? inMonth.map(row).join('')
+      : '<p class="muted mb-0">本月沒有賽程資料。</p>';
+
+    renderRangeNote();
+  }
+
+  function renderRangeNote() {
+    var el = document.getElementById('rangeNote');
+    if (!meta) { el.innerHTML = ''; return; }
+    var mk = monthKey();
+    var outside = mk < meta.range.from.slice(0, 7) || mk > meta.range.to.slice(0, 7);
+    el.innerHTML = outside
+      ? '<div class="callout" style="margin-bottom:16px"><p class="mb-0" style="font-size:.88rem">' +
+        '此月份超出目前的行事曆資料範圍（資料涵蓋 ' + fmtDate(meta.range.from) + ' – ' + fmtDate(meta.range.to) + '）。</p></div>'
+      : '';
+  }
+
+  function renderList() {
+    var upcoming = events.filter(function (e) { return e.date >= TODAY; });
+    var past = events.filter(function (e) { return e.date < TODAY; });
+    var rows = past.concat(upcoming);
+
+    listView.innerHTML =
+      '<div class="table-wrap"><table class="table"><thead><tr>' +
+      '<th style="width:120px">日期</th><th style="width:92px">時間</th><th>賽事</th><th style="width:120px"></th>' +
+      '</tr></thead><tbody>' +
+      rows.map(function (e) {
+        return '<tr' + (e.date < TODAY ? ' style="opacity:.5"' : '') + '>' +
+          '<td class="num">' + fmtDate(e.date) + '</td>' +
+          '<td class="num">' + esc(S.timeLabel(e)) + '</td>' +
+          '<td><span class="legend__dot ' + S.slotClass(e.series_slot) + '" style="background:currentColor"></span>' +
+            '<strong style="color:var(--ink)">' + esc(e.name) + '</strong>' +
+            (e.round ? ' <span class="muted">' + esc(e.round) + '</span>' : '') + '</td>' +
+          '<td>' + (e.link ? '<a href="' + esc(e.link) + '" target="_blank" rel="noopener" style="font-size:.84rem">Google 日曆 →</a>' : '') + '</td>' +
+          '</tr>';
+      }).join('') + '</tbody></table></div>';
+  }
+
+  function renderLegend() {
+    var labels = S.seriesLabels(events);
+    document.getElementById('legend').innerHTML = Object.keys(labels)
+      .sort(function (a, b) { return a - b; })
+      .map(function (s) {
+        return '<span><span class="legend__dot ev-s' + s + '" style="background:currentColor"></span>' +
+          esc(labels[s]) + '</span>';
+      }).join('');
+  }
+
+  function renderSource() {
+    var hasInferred = events.some(function (e) { return e.time_inferred; });
+    document.getElementById('srcNote').innerHTML =
+      '資料來源：<strong>' + esc(meta.source) + '</strong>　·　' +
+      '更新於 ' + S.generatedLabel(meta) + '　·　' +
+      '涵蓋 ' + fmtDate(meta.range.from) + ' – ' + fmtDate(meta.range.to) +
+      (hasInferred ? '<br>＊ 標示星號的開賽時間為依慣例推定，非日曆原始資料，實際時間以協會公告為準。' : '');
+  }
+
+  /* 事件繫結 */
+  document.getElementById('prevM').addEventListener('click', function () {
+    cur.m--; if (cur.m < 0) { cur.m = 11; cur.y--; } renderMonth();
+  });
+  document.getElementById('nextM').addEventListener('click', function () {
+    cur.m++; if (cur.m > 11) { cur.m = 0; cur.y++; } renderMonth();
+  });
+  document.getElementById('todayBtn').addEventListener('click', function () {
+    cur = { y: +TODAY.slice(0, 4), m: +TODAY.slice(5, 7) - 1 }; renderMonth();
+  });
+  document.getElementById('viewSeg').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    this.querySelectorAll('button').forEach(function (x) { x.classList.remove('is-active'); });
+    b.classList.add('is-active');
+    var isMonth = b.dataset.v === 'month';
+    document.getElementById('monthView').style.display = isMonth ? '' : 'none';
+    document.getElementById('rangeNote').style.display = isMonth ? '' : 'none';
+    listView.style.display = isMonth ? 'none' : '';
+  });
+
+  /* 載入資料 */
+  S.load().then(function (data) {
+    meta = data;
+    events = (data.events || []).slice().sort(function (a, b) {
+      return a.date === b.date
+        ? String(a.time || '').localeCompare(String(b.time || ''))
+        : a.date.localeCompare(b.date);
+    });
+    renderLegend();
+    renderSource();
+    renderMonth();
+    renderList();
+  }).catch(function (err) {
+    document.getElementById('monthView').style.display = 'none';
+    document.getElementById('rangeNote').innerHTML =
+      '<div class="callout callout--accent"><p class="mb-0">' +
+      '<strong>無法載入賽程資料。</strong><br>' +
+      '請確認 <code>assets/data/schedule.json</code> 存在，且網站是透過網址開啟（非直接以 file:// 開檔）。' +
+      '<br><span class="muted" style="font-size:.84rem">錯誤：' + esc(err.message) + '</span></p></div>';
+    detailEl.innerHTML = '<p class="muted mb-0">—</p>';
+  });
+});
+</script>
+</body>
+</html>

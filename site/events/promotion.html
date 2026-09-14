@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>晉升辦法｜中華職業圍棋協會</title>
+<meta name="description" content="職業棋士入段管道與歷次升段公告。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="events">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><a href="index.html">賽事專區</a><span class="sep">/</span><span>晉升辦法</span></nav>
+    <h1>晉升辦法</h1>
+    <p>入段管道、晉段公告與相關規定。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Entry</span>
+      <h2>入段：成為職業棋士</h2>
+      <p>職業棋士資格須通過職業棋士甄選取得，通過者授予初段。</p>
+    </div>
+
+    <div class="grid grid-2" style="margin-bottom:48px">
+      <div class="card">
+        <h3>社會組甄選</h3>
+        <p class="muted" style="font-size:.94rem">
+          面向一般棋手。須符合年齡規定並具業餘 6 段以上實力，
+          經初賽、複賽、決賽三階段，決賽前兩名晉升職業棋士；
+          女子棋手於複賽排名前五名（含）即可晉升。
+        </p>
+        <a class="card__more" href="qualification.html">完整辦法 →</a>
+      </div>
+      <div class="card">
+        <h3>院生組甄選</h3>
+        <p class="muted" style="font-size:.94rem">
+          面向海峰棋院院生。院生組落選者與年度積分排名第 13–14 名女子院生，
+          可直接參加社會組複賽。辦法另行公告。
+        </p>
+        <a class="card__more" href="../news/index.html?cat=notice">查看公告 →</a>
+      </div>
+    </div>
+
+    <div class="grid grid-aside" style="grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:start">
+      <div>
+        <div class="section-head"><span class="eyebrow">Promotions</span><h2>升段公告</h2>
+          <p>職業棋士段位晉升以協會公告為準。以下為近期公告紀錄。</p></div>
+        <div id="promoNews"><p class="muted">載入中…</p></div>
+
+        <div class="callout callout--accent mt-3">
+          <p class="mb-0">
+            本會尚未於官網公開完整的晉段積分辦法。
+            棋士如需查詢個人晉段進度，請洽秘書處，或登入
+            <a href="../member/login.html">棋士專區</a>。
+          </p>
+        </div>
+      </div>
+
+      <aside class="stack">
+        <div class="card">
+          <h3 style="font-size:1.05rem">相關規定</h3>
+          <ul style="list-style:none;padding:0;margin:0;font-size:.92rem">
+            <li style="margin-bottom:8px"><a href="dan-system.html">段位／資格制度</a></li>
+            <li style="margin-bottom:8px"><a href="qualification.html">職業棋士甄選</a></li>
+            <li style="margin-bottom:8px"><a href="rules.html">賽制／競賽規則</a></li>
+            <li><a href="../downloads/index.html">甄選辦法下載</a></li>
+          </ul>
+        </div>
+        <div class="callout callout--jade">
+          <p class="mb-0" style="font-size:.9rem">
+            通過甄選之棋手<strong>不得以請假方式保留或放棄資格</strong>，
+            並應遵守棋士規約與棋賽規定。
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  var N = window.CPGA_NEWS;
+  N.load().then(function (data) {
+    var rows = (data.items || []).filter(function (n) {
+      return /升段|晉升|入段|段位/.test(n.title);
+    });
+    document.getElementById('promoNews').innerHTML = rows.length
+      ? N.render(rows)
+      : '<p class="muted">目前的消息中沒有升段公告紀錄。' +
+        '完整公告請見 <a href="../news/index.html?cat=notice">公告</a>。</p>';
+  }).catch(function () {
+    document.getElementById('promoNews').innerHTML = '<p class="muted">公告載入失敗。</p>';
+  });
+})();
+</script>
+</body>
+</html>

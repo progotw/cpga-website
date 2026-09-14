@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>下載專區｜中華職業圍棋協會</title>
+<meta name="description" content="協會章程、甄選辦法、年度工作報告與收支決算表下載。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="downloads">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><span>下載專區</span></nav>
+    <h1>下載專區</h1>
+    <p>協會章程、職業棋士甄選辦法與年度會務公開資料。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;margin-bottom:28px">
+      <div class="field" style="margin:0;min-width:200px">
+        <label for="dCat">分類</label>
+        <select id="dCat"><option value="all">全部分類</option></select>
+      </div>
+      <div class="field" style="margin:0;flex:1 1 240px;max-width:360px">
+        <label for="dSearch">搜尋</label>
+        <input type="search" id="dSearch" placeholder="輸入檔案名稱關鍵字…">
+      </div>
+    </div>
+
+    <div id="dlList"></div>
+    <p class="muted mt-2" id="dlCount"></p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div class="callout">
+        <h3 style="font-size:1.1rem">文件繳交方式</h3>
+        <p class="mb-0" style="font-size:.94rem">
+          填妥之表單請以電子郵件寄回協會，或親送／郵寄至協會會址。
+          需用印之文件請寄送正本。聯絡方式請見 <a href="../about/contact.html">聯絡我們</a>。
+        </p>
+      </div>
+      <div class="callout callout--accent">
+        <h3 style="font-size:1.1rem">職業棋士甄選</h3>
+        <p class="mb-0" style="font-size:.94rem">
+          甄選辦法載明參賽資格、報名費與報名方式。
+          相關說明請見 <a href="../events/qualification.html">職業棋士甄選</a>。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  var cats = DOWNLOADS.map(function (d) { return d.cat; })
+    .filter(function (v, i, a) { return a.indexOf(v) === i; });
+
+  document.getElementById('dCat').innerHTML = '<option value="all">全部分類</option>' +
+    cats.map(function (c) { return '<option>' + c + '</option>'; }).join('');
+
+  function render() {
+    var cat = document.getElementById('dCat').value;
+    var kw = document.getElementById('dSearch').value.trim();
+    var rows = DOWNLOADS.filter(function (d) {
+      return (cat === 'all' || d.cat === cat) && (!kw || d.name.indexOf(kw) > -1);
+    });
+
+    var html = '';
+    (cat === 'all' ? cats : [cat]).forEach(function (g) {
+      var items = rows.filter(function (d) { return d.cat === g; });
+      if (!items.length) return;
+      html += '<div class="section-head" style="margin:34px 0 16px"><h2 style="font-size:1.25rem">' + g + '</h2></div>';
+      html += dlListHtml(items, '../');
+    });
+
+    document.getElementById('dlList').innerHTML = html ||
+      '<p class="muted" style="padding:24px 0">找不到符合條件的檔案。</p>';
+    document.getElementById('dlCount').textContent = '共 ' + rows.length + ' 個檔案';
+  }
+
+  document.getElementById('dCat').addEventListener('change', render);
+  document.getElementById('dSearch').addEventListener('input', render);
+  render();
+})();
+</script>
+</body>
+</html>

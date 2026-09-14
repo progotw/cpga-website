@@ -1,0 +1,3909 @@
+{
+ "schema_version": 1,
+ "generated": "2026-09-11T13:44:59+08:00",
+ "source": "海峰棋院 職業棋士名錄",
+ "source_url": "https://www.haifong.org/profession",
+ "count": 139,
+ "players": [
+  {
+   "id": "524D63AB167F4AC82887FD1660977B3E",
+   "name": "周俊勛",
+   "rank": "九段",
+   "photo": "assets/img/players/524D63AB167F4AC82887FD1660977B3E.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:50冠 (含世界賽1冠、國際賽1冠)"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "4勝3負　勝率57.1%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "1勝5負　勝率16.7%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>1980年2月23日生，出生於臺灣新北市。</p><br />\n<br />\n<p>1993年中國圍棋協會入段，後至三段。1994年中國圍棋會入品，直接定八品。1995年跳昇四品。1997年三品，1998年跳昇一品。2000年台灣棋院聘為九段，2007年第11屆LG盃世界棋王戰冠軍，成為臺灣圍棋史上第一位世界冠軍。2013年擔任中華職協道場總教練，2015年擔任中華職協精銳隊總教練。</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2015年</strong><br /><br />\n第8屆棋王 (個人第50冠達成)</p><br />\n<br />\n<p><strong>2012年</strong><br /><br />\n第2屆友士盃十段 二連霸<br /><br />\n第3屆思源盃職業圍棋賽冠軍</p><br />\n<br />\n<p><strong>2011年 </strong><br /><br />\n第11屆東鋼盃職業賽冠軍 二連霸 <br /><br />\n第1屆友士盃十段 </p><br />\n<br />\n<p><strong>2010年</strong> <br /><br />\n第10屆東鋼盃職業賽冠軍 <br /><br />\n第3屆中日精英賽冠軍(國際賽) </p><br />\n<br />\n<p><strong>2009年 </strong><br /><br />\n第36屆名人 十六連霸 <br /><br />\n2008年 第1屆棋王 <br /><br />\n第35屆名人 十五連霸 <br /><br />\n第3屆王座 三連霸 </p><br />\n<br />\n<p><strong>2007年</strong> <br /><br />\n第11屆LG盃世界棋王戰冠軍 <br /><br />\n第34屆名人 十四連霸 <br /><br />\n第2屆王座 二連霸 <br /><br />\n第1屆鈺德盃十段戰冠軍 <br /><br />\n第1屆愛心盃職業圍棋賽冠軍 </p><br />\n<br />\n<p><strong>2006年 </strong><br /><br />\n第32屆名人 十二連霸 <br /><br />\n第33屆名人 十三連霸 <br /><br />\n第6屆東鋼盃職業賽冠軍 <br /><br />\n第5屆天元 三連霸 <br /><br />\n第1屆王座 </p><br />\n<br />\n<p><strong>2005年</strong> <br /><br />\n第31屆名人戰 十一連霸 <br /><br />\n第4屆台灣棋院盃優勝 二連霸 <br /><br />\n第4屆天元 二連霸 <br /><br />\n第3屆魔戒盃王者再現冠軍 </p><br />\n<br />\n<p><strong>2004年</strong> <br /><br />\n第30屆名人 十連霸 <br /><br />\n第11屆中環盃優勝 <br /><br />\n第3屆台灣棋院盃優勝 <br /><br />\n第3屆天元 <br /><br />\n第17屆富士通杯世界職業圍棋錦標賽8強 </p><br />\n<br />\n<p><strong>2003年 </strong><br /><br />\n第29屆名人戰 九連霸 <br /><br />\n第2屆CMC盃職業圍棋電視快棋賽冠軍 <br /><br />\n第1屆亞藝盃冠軍 </p><br />\n<br />\n<p><strong>2002年 </strong><br /><br />\n第28屆名人戰 八連霸 <br /><br />\n第15屆富士通杯世界職業圍棋錦標賽8強 </p><br />\n<br />\n<p><strong>2001年</strong> <br /><br />\n第27屆名人 七連霸 <br /><br />\n第1屆東鋼盃職業賽冠軍 <br /><br />\n第14屆富士通杯世界職業圍棋錦標賽4強 </p><br />\n<br />\n<p><strong>2000年</strong> <br /><br />\n第26屆名人 六連霸 <br /><br />\n第7屆中環盃優勝 二連霸 <br /><br />\n聯電千禧盃冠軍 </p><br />\n<br />\n<p><strong>1999年 </strong><br /><br />\n第25屆名人 五連霸 <br /><br />\n第6屆中環盃優勝 <br /><br />\n第3屆LG盃世界棋王戰8強 </p><br />\n<br />\n<p><strong>1998年</strong> <br /><br />\n第24屆名人 四連霸 <br /><br />\n第19屆自立晚報國手戰冠軍 三連霸 <br /><br />\n第6屆永大盃冠軍 </p><br />\n<br />\n<p><strong>1997年</strong> <br /><br />\n第23屆名人戰優勝 三連霸 <br /><br />\n第18屆自立晚報國手戰冠軍 二連霸 </p><br />\n<br />\n<p><strong>1996年</strong> <br /><br />\n第22屆名人 二連霸 <br /><br />\n第3屆中環盃優勝 <br /><br />\n第17屆自立晚報國手戰冠軍 <br /><br />\n第4屆永大盃冠軍 </p><br />\n<br />\n<p><strong>1995年</strong> <br /><br />\n第21屆名人戰優勝</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.facebook.com/GOking2007/"
+    },
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E5%91%A8%E4%BF%8A%E5%8B%B3"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/524D63AB167F4AC82887FD1660977B3E"
+  },
+  {
+   "id": "07C277A02F5A3328B8E44D1B653B2996",
+   "name": "林至涵",
+   "rank": "九段",
+   "photo": "assets/img/players/07C277A02F5A3328B8E44D1B653B2996.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:28 冠 (含非公式戰2)"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong> <br /><br />\n1980年11月14日生，出生於臺灣新北市。 <br /><br />\n2001年入段，2002年二段，2003年跳昇五段，2004年跳昇七段，2007年八段，2009年九段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong><br /><br />\n<strong>2012年</strong> <br /><br />\n第2屆世界智力精英運動會圍棋男子個人賽 銅牌 </p><br />\n<br />\n<p><strong>2011年</strong> <br /><br />\n第7屆國手 四連霸 <br /><br />\n第3屆海峰盃 冠軍 <br /><br />\n第4屆碁聖<br /><br />\n第1屆台北市中正盃圍棋公開賽冠軍 (非公式戰) </p><br />\n<br />\n<p><strong>2010年</strong> <br /><br />\n第6屆國手 三連霸 <br /><br />\n第4屆愛心盃職業圍棋賽 冠軍 </p><br />\n<br />\n<p><strong>2009年</strong> <br /><br />\n第8屆天元 二連霸 <br /><br />\n第5屆國手 二連霸 <br /><br />\n第1屆海峰盃 冠軍 </p><br />\n<br />\n<p><strong>2008年</strong> <br /><br />\n第7屆天元 <br /><br />\n第4屆國手 <br /><br />\n第1屆碁聖戰冠軍 <br /><br />\n第8屆CMC盃職業圍棋電視快棋賽冠軍 <br /><br />\nCMC盃職業圍棋電視快棋賽特別賽冠軍(非公式戰) </p><br />\n<br />\n<p><strong>2007年 </strong><br /><br />\n第1屆力兆盃職業圍棋賽冠軍 <br /><br />\n第11屆LG盃世界棋王戰16強 </p><br />\n<br />\n<p><strong>2006年 </strong><br /><br />\n第6屆CMC盃職業圍棋電視快棋賽冠軍 二連霸 </p><br />\n<br />\n<p><strong>2005年 </strong><br /><br />\n第5屆CMC盃職業圍棋電視快棋賽冠軍 </p><br />\n<br />\n<p><strong>2004年 </strong><br /><br />\n第2屆亞藝盃冠軍 <br /><br />\n第4屆東鋼盃冠軍 <br /><br />\n第3屆棋靈王盃職業圍棋快棋賽冠軍 <br /><br />\n第3屆魔戒盃冠軍 </p><br />\n<br />\n<p><strong>2003年</strong> <br /><br />\n第2屆天元 <br /><br />\n第2屆棋靈王盃職業圍棋快棋賽 冠軍 <br /><br />\n第2屆魔戒盃 冠軍 <br /><br />\n第1屆新人王 二連霸 </p><br />\n<br />\n<p><strong>2002年</strong> <br /><br />\n第2屆台灣棋院盃 冠軍 二連霸 <br /><br />\n第1屆新人王 </p><br />\n<br />\n<p><strong>2001年</strong> <br /><br />\n第1屆台灣棋院盃冠軍 </p><br />\n<br />\n<p><strong>2000年 </strong><br /><br />\n第3屆全國大專盃圍棋錦標賽冠軍 </p><br />\n<br />\n<p><strong>1992年</strong> <br /><br />\n第9屆應氏盃世界青少年圍棋錦標賽 少年組冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E8%87%B3%E6%B6%B5"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/07C277A02F5A3328B8E44D1B653B2996"
+  },
+  {
+   "id": "248B7B2EE622C94D9B841530AE46D9FF",
+   "name": "陳詩淵",
+   "rank": "九段",
+   "photo": "assets/img/players/248B7B2EE622C94D9B841530AE46D9FF.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 33 冠(含國際賽1冠)"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "10勝10負　勝率50%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝1負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "26勝15負　勝率63.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1985年10月28日生，出生於臺灣臺北市。 <br /><br />\n2000年韓國棋院入段，2001年韓國棋院二段，2005年移籍至臺灣棋院二段，同年跳昇五段，2006年跳昇七段，2009年八段，2010年自韓國棋院退役，2011年九段，2015加入中華職協精英隊(~2016)。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2017年</strong> <br /><br />\n第9屆海峰盃職業圍棋賽冠軍 <br /><br />\n第13屆國手 三連霸 </p><br />\n<br />\n<p><strong>2016年</strong> <br /><br />\n第12屆國手 二連霸 <br /><br />\n2016世界杯圍棋配對賽亞軍 (搭檔黑嘉嘉) </p><br />\n<br />\n<p><strong>2015年 </strong><br /><br />\n第11屆國手 <br /><br />\n第7屆海峰盃職業圍棋賽冠軍 <br /><br />\n第3屆中環碁聖 </p><br />\n<br />\n<p><strong>2014年</strong> <br /><br />\n第2屆中環碁聖 <br /><br />\n第2屆百靈愛透盃國際統合預選賽出線 </p><br />\n<br />\n<p><strong>2012年 </strong><br /><br />\n第5屆棋王 四連霸 <br /><br />\n第11屆天元 二連霸 <br /><br />\n第8屆國手 <br /><br />\n第8屆王座 五連霸 <br /><br />\n第4屆海峰盃職業圍棋賽冠軍 </p><br />\n<br />\n<p><strong>2011年 </strong><br /><br />\n第4屆中日精英賽冠軍(國際賽) <br /><br />\n第4屆棋王 三連霸 <br /><br />\n第10屆天元 <br /><br />\n第7屆王座 四連霸 <br /><br />\n第18屆中環盃圍棋公開賽冠軍 <br /><br />\n第16屆LG盃世界棋王戰八強 </p><br />\n<br />\n<p><strong>2010年 </strong><br /><br />\n第3屆棋王 二連霸 <br /><br />\n第6屆王座 三連霸 <br /><br />\n第3屆碁聖 </p><br />\n<br />\n<p><strong>2009年</strong> <br /><br />\n第2屆棋王 <br /><br />\n第5屆王座 二連霸 <br /><br />\n第9屆東鋼盃職業圍棋賽冠軍 <br /><br />\n第3屆愛心盃冠軍 <br /><br />\n第1屆BC信用卡盃國際統合預選賽出線 </p><br />\n<br />\n<p><strong>2008年</strong> <br /><br />\n第4屆王座 <br /><br />\n第15屆中環盃圍棋公開賽冠軍 </p><br />\n<br />\n<p><strong>2007年 </strong><br /><br />\n第6屆天元 <br /><br />\n第3屆國手 二連霸 <br /><br />\n第7屆東鋼盃職業圍棋賽冠軍 <br /><br />\n第7屆CMC盃職業圍棋電視快棋賽冠軍 </p><br />\n<br />\n<p><strong>2006年 </strong><br /><br />\n第2屆國手 </p><br />\n<br />\n<p><strong>2005年</strong> <br /><br />\n第12屆中環盃圍棋公開賽冠軍 <br /><br />\n第5屆東鋼盃職業圍棋賽冠軍 <br /><br />\n第10屆三星火災盃國際統合預選賽出線</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E9%99%B3%E8%A9%A9%E6%B7%B5"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/248B7B2EE622C94D9B841530AE46D9FF"
+  },
+  {
+   "id": "24FA409B34B5EDEB5AA85CD9CA4234E5",
+   "name": "蕭正浩",
+   "rank": "九段",
+   "photo": "assets/img/players/24FA409B34B5EDEB5AA85CD9CA4234E5.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 23冠 (含非公式戰2)"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "13勝6負　勝率68.4%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "23勝10負　勝率69.7%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1988年10月5日生，出生於臺灣臺北市。 <br /><br />\n2001年入段，2002年二段，2004年三段，同年四段，2005年五段，2008年六段，2009年七段，2012年八段，2014年九段，2015年加入中華職協精英隊(~2018)，2018年擔任中華職協精銳隊客座教練。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2026年</strong><br /><br />\n第18屆海峰杯職業圍棋賽 亞軍</p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第6屆友士盃十段 二連霸 <br /><br />\n第8屆海峰盃職業圍棋賽冠軍 </p><br />\n<br />\n<p><strong>2015年 </strong><br /><br />\n第5屆友士盃十段 <br /><br />\n第20期三星火災盃世界圍棋大師國際統合預選賽出線 </p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n第13屆天元 二連霸 <br /><br />\n第10屆國手 二連霸 <br /><br />\n第19期三星火災盃世界圍棋大師國際統合預選賽出線 </p><br />\n<br />\n<p><strong>2013年</strong> <br /><br />\n第12屆天元 <br /><br />\n第9屆國手 <br /><br />\n第9屆台灣王座 <br /><br />\n第13屆東鋼盃職業圍棋賽冠軍 <br /><br />\n第3屆台北市中正盃圍棋公開賽冠軍(非公式戰) </p><br />\n<br />\n<p><strong>2012年</strong> <br /><br />\n第1屆MOD電視快棋賽冠軍 <br /><br />\n第5屆碁聖 <br /><br />\n第4屆BC信用卡盃國際統合預選賽出線 </p><br />\n<br />\n<p><strong>2011年 </strong><br /><br />\n第2屆思源盃職業圍棋賽冠軍 <br /><br />\n第5屆愛心盃職業圍棋賽冠軍 </p><br />\n<br />\n<p><strong>2010年 </strong><br /><br />\n第9屆天元 <br /><br />\n第2屆海峰盃冠軍 </p><br />\n<br />\n<p><strong>2008年 </strong><br /><br />\n第2屆力兆盃職業圍棋賽冠軍 <br /><br />\n第8屆東鋼盃職業圍棋賽冠軍 <br /><br />\n第7屆新人王 <br /><br />\n第1屆張栩盃U20賽冠軍(非公式戰) </p><br />\n<br />\n<p><strong>2007年 </strong><br /><br />\n第14屆中環盃圍棋公開賽冠軍 <br /><br />\n亞藝盃職業圍棋賽冠軍 </p><br />\n<br />\n<p><strong>2005年 </strong><br /><br />\n第1屆國手</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.youtube.com/channel/UClhnxVNg8CgMeScXfJgsihA"
+    },
+    {
+     "label": "著作",
+     "url": "https://search.books.com.tw/search/query/key/%E8%95%AD%E6%AD%A3%E6%B5%A9/adv_author/1/"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/24FA409B34B5EDEB5AA85CD9CA4234E5"
+  },
+  {
+   "id": "E9D94D4CE46F6025510F71D1EA39FCB3",
+   "name": "王元均",
+   "rank": "九段",
+   "photo": "assets/img/players/E9D94D4CE46F6025510F71D1EA39FCB3.jpg",
+   "history": [
+    {
+     "label": "頭銜冠軍",
+     "value": "快棋爭霸戰"
+    },
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 21冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "32勝13負　勝率71.1%"
+    },
+    {
+     "label": "世界賽",
+     "value": "5勝5負   勝率50%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "53勝28負　勝率65.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>1996年03月14日生，出生於臺灣臺北市。 <br /><br />\n2007年入段，2009年二段，2010年三段，2011年四段，2012年五段，2013年六段，同年七段，2016年八段，2018年九段，2021加入中華職協精英隊至今。 </p><br />\n<br />\n<p><strong>主要棋戰履歷</strong> </p><br />\n<br />\n<p><strong>2026年</strong><br /><br />\n第7屆快棋爭霸戰 冠軍 </p><br />\n<br />\n<p><strong>2024年</strong><br /><br />\n第1屆南洋杯世界圍棋大師賽 32強</p><br />\n<br />\n<p><strong>2023年 </strong><br /><br />\n第15屆海峰盃職業圍棋賽 冠軍 </p><br />\n<br />\n<p><strong>2021年</strong><br /><br />\n第20屆天元 二連霸<br /><br />\n第2屆聯電盃 冠軍<br /><br />\n第9屆中環碁聖賽 冠軍</p><br />\n<br />\n<p><strong>2020年</strong><br /><br />\n第19屆天元 <br /><br />\n第1屆UMC聯電盃快棋爭霸戰 冠軍 </p><br />\n<br />\n<p><strong>2019年</strong> <br /><br />\n第12屆棋王 <br /><br />\n第3屆國際智力運動協會(IMSA)精英運動會 混雙銅牌 (搭配黑嘉嘉) </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n第17屆天元 四連霸 <br /><br />\n第14屆國手 <br /><br />\n第5屆國手山脈國際圍棋大會世界最強戰 亞軍 </p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第16屆天元 三連霸 <br /><br />\n第7屆友士盃十段 </p><br />\n<br />\n<p><strong>2016年</strong> <br /><br />\n第9屆棋王 <br /><br />\n第15屆天元 二連霸 <br /><br />\n第4屆中環碁聖賽冠軍 </p><br />\n<br />\n<p><strong>2015年 </strong><br /><br />\n第14屆天元 </p><br />\n<br />\n<p><strong>2014年</strong> <br /><br />\n第7屆棋王 二連霸 <br /><br />\n第14屆東鋼盃職業圍棋賽冠軍 <br /><br />\n第4屆台北市中正盃圍棋公開賽冠軍(非公式戰) </p><br />\n<br />\n<p><strong>2013年 </strong><br /><br />\n第6屆棋王 <br /><br />\n第3屆友士盃十段 <br /><br />\n第5屆海峰盃職業圍棋賽冠軍 </p><br />\n<br />\n<p><strong>2012年 </strong><br /><br />\n第2屆台北市中正盃圍棋公開賽冠軍(非公式戰) </p><br />\n<br />\n<p><strong>2010年 </strong><br /><br />\n第2屆張栩盃G13圍棋賽冠軍(非公式戰)</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.facebook.com/wang1996314/"
+    },
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E7%8E%8B%E5%85%83%E5%9D%87"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/E9D94D4CE46F6025510F71D1EA39FCB3"
+  },
+  {
+   "id": "115967099A3190B9705F17A83DFF23C5",
+   "name": "林書陽",
+   "rank": "九段",
+   "photo": "assets/img/players/115967099A3190B9705F17A83DFF23C5.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 5冠 (含非公式戰1)"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "8勝7負　勝率53.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "17勝13負　勝率56.7%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1989年9月19日生，出生於臺灣臺中市。 <br /><br />\n2003年入段，2004年二段，2005年三段，2006年四段，2008年五段，2009年六段，20011年七段，2014年八段，2015年加入中華職協精英隊(~2017)。2019年九段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2017年 </strong><br /><br />\n第7屆台北市中正盃圍棋公開賽亞軍(非公式戰) </p><br />\n<br />\n<p><strong>2012年 </strong><br /><br />\n第19屆中環盃圍棋公開賽冠軍 </p><br />\n<br />\n<p><strong>2010年 </strong><br /><br />\n第1屆張栩盃G13賽冠軍(非公式戰) </p><br />\n<br />\n<p><strong>2009年</strong> <br /><br />\n第2屆碁聖 <br /><br />\n第16屆中環盃圍棋公開賽冠軍 </p><br />\n<br />\n<p><strong>2008年 </strong><br /><br />\n第2屆愛心盃職業圍棋賽冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.facebook.com/%E6%9E%97%E6%9B%B8%E9%99%BD-270331873040317/?fref=ts"
+    },
+    {
+     "label": "精彩好棋",
+     "url": "https://www.haifong.org/game/classes/81DA46A14B38EDAFFEB03C9F5AE01E34"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/115967099A3190B9705F17A83DFF23C5"
+  },
+  {
+   "id": "D354DB8D0B2F277236D9E6B5FBC5D228",
+   "name": "林君諺",
+   "rank": "九段",
+   "photo": "assets/img/players/D354DB8D0B2F277236D9E6B5FBC5D228.jpg",
+   "history": [
+    {
+     "label": "頭銜冠軍",
+     "value": "海峰盃"
+    },
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 9冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "20勝16負　勝率55.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "2勝6負   勝率25%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "38勝16負　勝率70.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>1997年11月26日生，出生於臺灣臺北市。</p><br />\n<br />\n<p>2010年入段，同年二段，2011年三段，2012年跳昇五段，2013年六段，2015加入中華職協精英隊至今，2016年七段。2019年八段，2022年九段。</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2026年</strong><br /><br />\n第18屆海峰杯職業圍棋賽 冠軍</p><br />\n<br />\n<p><strong>2025年</strong><br /><br />\n第17屆海峰杯職業圍棋賽 冠軍</p><br />\n<br />\n<p><strong>2024年</strong><br /><br />\n名人賽亞軍</p><br />\n<br />\n<p><strong>2021年</strong><br /><br />\n第14屆棋王<br /><br />\n第17屆倡棋杯中國職業圍棋錦標賽 8強</p><br />\n<br />\n<p><strong>2020年</strong><br /><br />\n第1屆名人冠軍</p><br />\n<br />\n<p><strong>2019年</strong><br /><br />\n第18屆天元</p><br />\n<br />\n<p><strong>2018年</strong><br /><br />\n第11屆棋王 二連霸</p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第10屆棋王 </p><br />\n<br />\n<p><strong>2015年</strong> <br /><br />\n第20期三星火災盃世界圍棋大師國際統合預選賽出線 </p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n第4屆友士盃十段 </p><br />\n<br />\n<p><strong>2012年</strong> <br /><br />\n第12屆東鋼盃職業賽冠軍 </p><br />\n<br />\n<p><strong>2011年 </strong><br /><br />\n感恩盃新銳磨練賽冠軍(非公式戰) </p><br />\n<br />\n<p><strong>2009年 </strong><br /><br />\n第26屆應氏盃世界青少年圍棋錦標賽 青年組第三名</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.facebook.com/jefferry.lin"
+    },
+    {
+     "label": "棋譜",
+     "url": "http://www.haifong.org/?p=21603"
+    },
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E5%90%9B%E8%AB%BA"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/D354DB8D0B2F277236D9E6B5FBC5D228"
+  },
+  {
+   "id": "CFE91E4CC316BDAA23077D2D414DA825",
+   "name": "林立祥",
+   "rank": "九段",
+   "photo": "assets/img/players/CFE91E4CC316BDAA23077D2D414DA825.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "12勝6負　勝率66.7%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "22勝15負　勝率59.5%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1993年9月7日生，出生於臺灣臺中市。<br /><br />\n2006年入段，2008年二段，2009年三段，2010年四段，2012年五段，2013年六段，2015年加入中華職協精英隊至今，2016年七段，2019年擔任中華職協精銳隊副總教練，2020年八段，2022年九段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷</strong> </p><br />\n<br />\n<p><strong>2024年</strong><br /><br />\n第20屆國手 亞軍</p><br />\n<br />\n<p><strong>2023年</strong><br /><br />\n第13屆棋王賽 亞軍</p><br />\n<br />\n<p><strong>2022年 </strong><br /><br />\n第10屆中環碁聖賽 亞軍</p><br />\n<br />\n<p><strong>2021年</strong><br /><br />\n第17屆國手 亞軍</p><br />\n<br />\n<p><strong>2020年</strong><br /><br />\n第10屆友士盃十段 亞軍</p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n第3屆國際智力運動協會(IMSA)精英運動會 混雙銀牌 (搭配白昕卉) </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第8屆應氏杯世界職業圍棋錦標賽 台灣代表 <br /><br />\n第4屆中環碁聖賽 亞軍</p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n第4屆世界智力精英運動會男子團體組 個人全勝 <br /><br />\n第7屆棋王 亞軍<br /><br />\n第13屆天元 亞軍<br /><br />\n第2屆中環碁聖賽 亞軍</p><br />\n<br />\n<p><strong>2013年 </strong><br /><br />\n第1屆中環碁聖</p><br />\n<br />\n<p><strong>2009年</strong><br /><br />\n第5屆王座 亞軍</p><br />\n<br />\n<p> </p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E7%AB%8B%E7%A5%A5"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/CFE91E4CC316BDAA23077D2D414DA825"
+  },
+  {
+   "id": "498745583367139F2AD618F39303A6C4",
+   "name": "許皓鋐",
+   "rank": "九段",
+   "photo": "assets/img/players/498745583367139F2AD618F39303A6C4.jpg",
+   "history": [
+    {
+     "label": "頭銜冠軍",
+     "value": "名人、棋王、中環天元、中環國手"
+    },
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:  46冠(含國際賽1冠)"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "18勝5負　勝率78.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "6勝8負　勝率42.9%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "35勝26負　勝率57.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2001年4月30日生，出生於臺灣新竹市。 <br /><br />\n2013年入段，2014年二段，2015年加入中華職協新銳隊，2016年三段，2017年加入中華職協精英隊至今，同年四段，跳昇五段，2019年六段，2020年跳昇七段<span style=\"font-size:12pt;\"><span>，</span></span>2022年晉升八段，同年跳升九段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2026年</strong><br /><br />\n第7屆名人賽 冠軍<br /><br />\n第25屆中環天元  五連霸</p><br />\n<br />\n<p><strong>2025年</strong><br /><br />\n第18屆棋王 四連霸<br /><br />\n第24屆天元 四連霸<br /><br />\n第15屆友士盃十段 八連霸<br /><br />\n第21屆國手 七連霸</p><br />\n<br />\n<p><strong>2024年 </strong><br /><br />\n第5屆名人賽 冠軍<br /><br />\n第17屆棋王 三連霸<br /><br />\n第23屆天元 三連霸<br /><br />\n第14屆友士盃十段 七連霸<br /><br />\n第16屆海峰盃職業圍棋賽 冠軍 <br /><br />\n第5屆快棋爭霸戰 冠軍<br /><br />\n第20屆國手 六連霸<br /><br />\n第12屆中環碁聖賽 冠軍 二連霸<br /><br />\n第10屆應氏杯世界職業圍棋錦標賽 四強<br /><br />\n第1屆南洋杯世界圍棋大師賽 16強</p><br />\n<br />\n<p><strong>2023年</strong><br /><br />\n2022杭州亞運男子個人賽 金牌<br /><br />\n第16屆棋王 二連霸<br /><br />\n第22屆天元 二連霸<br /><br />\n第4屆聯電盃 冠軍 二連霸<br /><br />\n第13屆友士盃十段 六連霸<br /><br />\n第19屆國手 五連霸<br /><br />\n第11屆中環碁聖賽 冠軍 </p><br />\n<br />\n<p><strong>2022年</strong><br /><br />\n第3屆名人賽 冠軍<br /><br />\n第15屆棋王<br /><br />\n第3屆聯電盃 冠軍<br /><br />\n第21屆天元<br /><br />\n第12屆友士盃十段 五連霸<br /><br />\n第14屆海峰盃職業圍棋賽 冠軍<br /><br />\n第3屆快棋爭霸戰 冠軍<br /><br />\n第18屆國手 四連霸</p><br />\n<br />\n<p><strong>2021年</strong><br /><br />\n第2屆名人冠軍賽 冠軍<br /><br />\n第11屆友士盃十段 四連霸<br /><br />\n第13屆海峰盃職業圍棋賽 冠軍<br /><br />\n第2屆UMC聯電盃快棋爭霸戰 冠軍<br /><br />\n第17屆國手 三連霸<br /><br />\n第13屆春蘭杯世界職業圍棋錦標賽八強</p><br />\n<br />\n<p><strong>2020年</strong> <br /><br />\n第13屆棋王<br /><br />\n第10屆友士盃十段 三連霸 <br /><br />\n第16屆國手 二連霸 <br /><br />\n第8屆中環碁聖賽冠軍 二連霸 <br /><br />\n第9屆應氏杯世界職業圍棋錦標賽 八強 (同一年兩度打入世界賽八強) </p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n第9屆友士盃十段 二連霸 <br /><br />\n第15屆國手 <br /><br />\n第11屆海峰盃職業圍棋賽冠軍 二連霸 <br /><br />\n第7屆中環碁聖賽 冠軍 <br /><br />\n107學年各級學校圍棋運動錦標賽-高中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n第8屆友士盃十段 <br /><br />\n第10屆海峰盃職業圍棋賽 冠軍 <br /><br />\n106學年各級學校圍棋運動錦標賽-高中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第5屆中環碁聖賽 冠軍 <br /><br />\n2017新人王賽 冠軍 <br /><br />\n第7屆台北市中正盃圍棋公開賽 冠軍(非公式戰) <br /><br />\n第4屆大成杯全國圍棋棋聖賽 冠軍(非公式戰) </p><br />\n<br />\n<p><strong>2016年 </strong> <br /><br />\n104學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2012年 </strong><br /><br />\n第2屆世界智力運動會 團體組銀牌 <br /><br />\n第2屆世界智力運動會 青年賽銅牌</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E8%A8%B1%E7%9A%93%E9%8B%90"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/498745583367139F2AD618F39303A6C4"
+  },
+  {
+   "id": "E81B48D148D947DCA3E3ECFF3CA72E20",
+   "name": "賴均輔",
+   "rank": "九段",
+   "photo": "assets/img/players/E81B48D148D947DCA3E3ECFF3CA72E20.jpg",
+   "history": [
+    {
+     "label": "頭銜冠軍",
+     "value": "中環碁聖"
+    },
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 7冠 (含國際賽1冠)"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "23勝9負　勝率71.9%"
+    },
+    {
+     "label": "世界賽",
+     "value": "2勝3負   勝率40%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "52勝14負　勝率78.8%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2002年04月08日生，出生於臺灣臺中市。 <br /><br />\n2013年加入中華職協圍棋道場，2016年入段並加入中華職協新銳隊，同年二段。2018年三段。2019年四段，2020年加入中華職協精英隊至今，同年海峰盃冠軍跳升五段，2021年六段，追溯2020年聯電盃冠軍跳七段，2022年八段。 2024年打入國手山脈盃國際圍棋大賽決賽晉升九段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2025年 </strong><br /><br />\n第6屆 名人賽 冠軍<br /><br />\n第13屆中環碁聖賽 冠軍</p><br />\n<br />\n<p><strong>2024年</strong><br /><br />\n第10屆 國手山脈盃國際圍棋大賽 冠軍<br /><br />\n第2屆衢州爛柯杯世界圍棋公開賽 16強<br /><br />\n第29屆LG杯世界棋王戰 16強<br /><br />\n第14屆友士盃十段賽亞軍</p><br />\n<br />\n<p><strong>2023年 </strong><br /><br />\n第4屆 名人賽 冠軍<br /><br />\n第1屆衢州爛柯杯世界圍棋公開賽 16強</p><br />\n<br />\n<p><strong>2022年 </strong><br /><br />\n第10屆中環碁聖賽 冠軍</p><br />\n<br />\n<p><strong>2020年 </strong><br /><br />\n第12屆海峰盃職業圍棋賽 冠軍 <br /><br />\n第1屆聯電盃 冠軍 </p><br />\n<br />\n<p><strong>2019年</strong> <br /><br />\n第9屆友士盃十段賽 亞軍 </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n2018年新人王亞軍 </p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第7屆台北市中正盃圍棋公開賽季軍(非公式戰) </p><br />\n<br />\n<p><strong>2015年 </strong><br /><br />\n第36屆世界業餘圍棋錦標賽 季軍 <br /><br />\n第32屆吳清源大師紀念盃世界青少年圍棋錦標賽 青年組 亞軍 </p><br />\n<br />\n<p><strong>2013年 </strong><br /><br />\n第30屆應氏盃世界青少年圍棋錦標賽 少年組第四名</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E8%B3%B4%E5%9D%87%E8%BC%94"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/E81B48D148D947DCA3E3ECFF3CA72E20"
+  },
+  {
+   "id": "E0105F37B8050597F275972467EA648E",
+   "name": "陳祈睿",
+   "rank": "九段",
+   "photo": "assets/img/players/E0105F37B8050597F275972467EA648E.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 3冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "18勝12負　勝率60 %"
+    },
+    {
+     "label": "世界賽",
+     "value": "8勝2負　勝率80 %"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "39勝32負　勝率54.9%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>2000年6月15日生，出生於臺灣臺中市。 <br /><br />\n2013年入段，同年二段，2014年三段，2015年加入中華職協精英隊至今，2016年四段，2018年五段，2019年六段，2021年七段，2023年八段，2025年九段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2026年</strong><br /><br />\n第25屆中環天元  亞軍</p><br />\n<br />\n<p><strong>2025年 </strong><br /><br />\n第6屆 名人賽 亞軍<br /><br />\n第21屆國手 亞軍</p><br />\n<br />\n<p><strong>2024年</strong><br /><br />\n2024新人王賽 冠軍<br /><br />\n第17屆棋王 亞軍<br /><br />\n第12屆中環碁聖賽 亞軍 <br /><br />\n113年吳彫枝盃全國圍棋公開賽高段組 冠軍 (非公式戰)</p><br />\n<br />\n<p><strong>2023年 </strong><br /><br />\n第4屆 名人賽 亞軍<br /><br />\n第13屆友士盃十段 亞軍<br /><br />\n第10屆大成杯全國圍棋棋聖賽 冠軍(非公式戰) </p><br />\n<br />\n<p><strong>2022年</strong><br /><br />\n第12屆友士盃十段 亞軍<br /><br />\n2022新人王賽 亞軍</p><br />\n<br />\n<p><strong>2021年</strong><br /><br />\n2021環旭新人王賽 冠軍<br /><br />\n第9屆中環碁聖賽 亞軍</p><br />\n<br />\n<p><strong>2020年</strong><br /><br />\n第16屆國手 亞軍<br /><br />\n2020新人王賽 亞軍</p><br />\n<br />\n<p><strong>2017年</strong><br /><br />\n2017大樂司盃圍棋公開賽冠軍 (非公式戰)<br /><br />\n第22期三星火災盃世界圍棋大師賽國際統合賽 打入預選決賽</p><br />\n<br />\n<p><strong>2016年</strong><br /><br />\n2016年新人王賽冠軍</p><br />\n<br />\n<p><strong>2015年</strong><br /><br />\n第2屆夢百合盃國際統合預選賽出線<br /><br />\n103學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍</p><br />\n<br />\n<p><strong>2012年</strong><br /><br />\n第12屆韓國壽險盃世界兒童圍棋賽冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E9%99%B3%E7%A5%88%E7%9D%BF"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/E0105F37B8050597F275972467EA648E"
+  },
+  {
+   "id": "656782CAB5A2F7025566457688468C15",
+   "name": "林聖賢",
+   "rank": "八段",
+   "photo": "assets/img/players/656782CAB5A2F7025566457688468C15.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 8冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1959年6月14日<br><br>1983年九品，1986年八品，1987年七品，1993年四品，2000年六段，2002年七段，2010年八段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2001年</strong><br /><br />\n第一屆棋士盃冠軍</p><br />\n<br />\n<p><strong>1994年</strong><br /><br />\n第二屆永大盃冠軍</p><br />\n<br />\n<p><strong>1993年</strong><br /><br />\n第十三屆舊國手賽冠軍、第十九屆名人賽冠軍</p><br />\n<br />\n<p><strong>1992年</strong><br /><br />\n第十二屆舊國手賽冠軍</p><br />\n<br />\n<p><strong>1991年</strong><br /><br />\n第十一屆舊國手賽冠軍</p><br />\n<br />\n<p><strong>1990年</strong><br /><br />\n第二屆茂榜盃冠軍</p><br />\n<br />\n<p><strong>1989年</strong><br /><br />\n第一屆茂榜盃冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/656782CAB5A2F7025566457688468C15"
+  },
+  {
+   "id": "EABAB380EA36DEDD2090DBE6D518E186",
+   "name": "戴嘉伸",
+   "rank": "八段",
+   "photo": "assets/img/players/EABAB380EA36DEDD2090DBE6D518E186.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝3負　勝率25%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "1勝9負　勝率10%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1958年6月2日</p><br />\n<br />\n<p>2022年八段</p><br />\n<br />\n<p><br /><br />\n<strong>主要棋戰履歷<br><br>2003年 </strong><br /><br />\n第三屆東鋼盃亞軍</p><br />\n<br />\n<p><strong>2001年</strong><br /><br />\n第一屆棋士盃亞軍</p><br />\n<br />\n<p><strong>1995、1996年</strong><br /><br />\n名人擂台賽第二名</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/EABAB380EA36DEDD2090DBE6D518E186"
+  },
+  {
+   "id": "39DB6A531FEBD95C2829A32DA88CCCE0",
+   "name": "林士勛",
+   "rank": "八段",
+   "photo": "assets/img/players/39DB6A531FEBD95C2829A32DA88CCCE0.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 5冠(含非公式戰1)"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "10勝9負　勝率52.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "6勝2負　勝率75%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "23勝22負　勝率51.1%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1997年7月12日生，出生於臺灣高雄市。 <br /><br />\n2012年入段，同年二段，2015年三段並加入中華職協新銳隊，同年跳昇五段，2016年加入中華職協精英隊(~2020)，2017年六段，2020年七段。2021重返中華職協新銳隊，2022年八段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2024年 </strong><br /><br />\n第23屆天元賽 亞軍 </p><br />\n<br />\n<p><strong>2022年</strong><br /><br />\n2022新人王賽 冠軍</p><br />\n<br />\n<p><strong>2021年</strong><br /><br />\n2021環旭新人王賽 亞軍</p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n2019新人王 冠軍<strong> </strong></p><br />\n<br />\n<p><strong>2018年</strong><br /><br />\n第6屆中環碁聖 冠軍 </p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第16屆天元賽 亞軍 <br /><br />\n105學年各級學校圍棋運動錦標賽-高中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第6屆台北市中正盃圍棋公開賽冠軍(非公式戰) <br /><br />\n利民杯世界星銳戰臺灣代表 <br /><br />\n第3屆GLOBIS盃臺灣代表 </p><br />\n<br />\n<p><strong>2015年 </strong><br /><br />\n第15屆東鋼盃職業圍棋賽冠軍 </p><br />\n<br />\n<p><strong>2009年</strong> <br /><br />\n第4屆榮三盃全國學生棋王賽 中學組冠軍 </p><br />\n<br />\n<p><strong>2008年</strong> <br /><br />\n第3屆榮三盃全國學生棋王賽 小學組冠軍 </p><br />\n<br />\n<p><strong>2007年 </strong><br /><br />\n第2屆榮三盃全國學生棋王賽 小學組冠軍<br /><br />\n </p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E5%A3%AB%E5%8B%9B"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/39DB6A531FEBD95C2829A32DA88CCCE0"
+  },
+  {
+   "id": "3AB09C2D42977CB66F69737B529900F2",
+   "name": "簡靖庭",
+   "rank": "八段",
+   "photo": "assets/img/players/3AB09C2D42977CB66F69737B529900F2.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "24勝9負　勝率72.7%"
+    },
+    {
+     "label": "世界賽",
+     "value": "6勝2負   勝率75%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "40勝23負　勝率63.5%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2000年9月5日生，出生於臺灣屏東市。 <br /><br />\n2013年加入中華職協圍棋道場，2015年入段並加入中華職協新銳隊，同年二段，2017年加入中華職協精英隊至今，同年三段，2018年四段，2020年五段，2021年六段，2023年七段。</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong> </p><br />\n<br />\n<p><strong>2025年</strong><br /><br />\n2025年新人王賽冠軍</p><br />\n<br />\n<p><strong>2021年</strong><br /><br />\n第13屆海峰盃職業圍棋賽 亞軍<br /><br />\n第20屆天元 亞軍<br /><br />\n第2屆UMC聯電盃快棋爭霸戰 亞軍 </p><br />\n<br />\n<p><strong>2019年</strong> <br /><br />\n第7屆中環碁聖賽亞軍 </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n第10屆海峰盃職業圍棋賽 亞軍 </p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第2屆未來之星新銳最強戰臺灣代表 <br /><br />\n第4屆GLOBIS盃世界新銳圍棋錦標賽臺灣代表 <br /><br />\n2017新人王亞軍 </p><br />\n<br />\n<p><strong>2016年</strong> <br /><br />\n第8屆海峰盃職業圍棋賽 亞軍 <br /><br />\n第3屆大成杯全國圍棋棋聖賽 冠軍(非公式戰) </p><br />\n<br />\n<p><strong>2015年 </strong><br /><br />\n第2屆MLILY夢百合杯世界圍棋公開賽國際統合預選賽 打入決賽</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E7%B0%A1%E9%9D%96%E5%BA%AD"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/3AB09C2D42977CB66F69737B529900F2"
+  },
+  {
+   "id": "BAB49E1223C36B263E5B436D7CCD99AF",
+   "name": "彭景華",
+   "rank": "七段",
+   "photo": "assets/img/players/BAB49E1223C36B263E5B436D7CCD99AF.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:10冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "4勝5負　勝率44.4%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "3勝11負　勝率21.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1960年3月13日</p><br />\n<br />\n<p>2007年七段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br /><br />\n<strong>2003年</strong> <br /><br />\n第十屆中環盃 冠軍<br /><br />\n第三屆CMC盃職業圍棋電視快棋賽 亞軍</p><br />\n<br />\n<p><strong>2002年</strong><br /><br />\n第二屆東鋼盃 冠軍<br /><br />\n第一屆棋靈盃 冠軍</p><br />\n<br />\n<p><strong>2001年</strong><br /><br />\n第一屆CMC盃職業圍棋電視快棋賽 冠軍</p><br />\n<br />\n<p><strong>1999年</strong><br /><br />\n第七屆永大盃 冠軍</p><br />\n<br />\n<p><strong>1996年</strong><br /><br />\n第十六屆舊國手賽 冠軍</p><br />\n<br />\n<p><strong>1995年</strong><br /><br />\n第二屆中環盃 冠軍</p><br />\n<br />\n<p><strong>1992年</strong><br /><br />\n第十八屆名人賽 冠軍</p><br />\n<br />\n<p><strong>1990年</strong><br /><br />\n第十六屆名人賽 冠軍</p><br />\n<br />\n<p><strong>1988年</strong><br /><br />\n第八屆舊國手賽 冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/BAB49E1223C36B263E5B436D7CCD99AF"
+  },
+  {
+   "id": "CE7FB82858C7438605C9D65FE9274AB1",
+   "name": "黑嘉嘉",
+   "rank": "七段",
+   "photo": "assets/img/players/CE7FB82858C7438605C9D65FE9274AB1.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:4冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介 </strong><br /><br />\n1994年05月26日生，生生於澳洲布里斯本，目前定居臺灣臺北市。<br /><br />\n2008年於中國定段，2010年台灣棋院入段，同年二段，2011年跳昇五段，2012年六段，2015年七段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2019年 </strong><br /><br />\n第5屆女子圍棋最強戰 冠軍 <br /><br />\n第3屆國際智力運動協會(IMSA)精英運動會 混雙銅牌 (搭配王元均) </p><br />\n<br />\n<p><strong>2018年</strong> <br /><br />\n2018扇興杯世界女流最強戰 亞軍 </p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第3屆女子圍棋最強戰 冠軍 三連霸 <br /><br />\n第4屆國手山脈國際圍棋大賽 混雙賽 亞軍 (搭配陳詩淵) <br /><br />\n2017日本東京世界圍棋最強戰混雙賽 季軍 (搭配陳詩淵) <br /><br />\n明月山杯中日韓台女子圍棋爭霸賽 季軍 <br /><br />\n第2屆國際智力運動協會（IMSA）精英運動會 女子團體賽 殿軍 <br /><br />\n第2屆國際智力運動協會（IMSA）精英運動會 女子快賽賽 殿軍 <br /><br />\n第22届三星車險杯世界围棋公開赛 本賽 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第2屆女子圍棋最強戰 冠軍 二連霸 <br /><br />\n第1屆國際智力運動協會(IMSA)精英運動會女子個人賽 銅牌 <br /><br />\n第5屆天台山•農商銀行杯 世界女子圍棋團體錦標賽 季軍 <br /><br />\n2016日本東京世界圍棋混雙赛 亞軍 (搭配陳詩淵) <br /><br />\n第3屆福蔭杯國際精銳圍棋對抗戰 團體賽季軍 </p><br />\n<br />\n<p><strong>2015年 </strong><br /><br />\n第1屆女子圍棋最強戰 冠軍 <br /><br />\n第1屆MDM韓國女子聯賽 冠軍 </p><br />\n<br />\n<p><strong>2013年 </strong><br /><br />\n第3屆世界智力精英運動會男女混雙賽 銀牌 (搭配王元均) </p><br />\n<br />\n<p><strong>2010年 </strong><br /><br />\n第1屆蘇州穹窿山兵聖杯世界女子圍棋賽 亞軍 <br /><br />\n廣州亞洲運動會 女子圍棋團體賽 銅牌</p><br />\n<br />\n<p><strong>2006年 </strong><br /><br />\n第8屆全國女子圍棋公開賽 冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.facebook.com/jiajia94526/"
+    },
+    {
+     "label": "instagram",
+     "url": "https://www.instagram.com/jiajia94526/?hl=zh-tw"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/CE7FB82858C7438605C9D65FE9274AB1"
+  },
+  {
+   "id": "70228523DBA5896634FC5837AC5CA377",
+   "name": "夏大銘",
+   "rank": "七段",
+   "photo": "assets/img/players/70228523DBA5896634FC5837AC5CA377.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:3冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介 </strong><br /><br />\n1984年12月01日生，出生於臺灣臺北市。 <br /><br />\n2002年入段，同年二段，2004年三段，2005年四段，2007年五段，2011年六段，2018年七段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong><br /><br />\n<strong>2008年 </strong><br /><br />\n第8屆 CMC盃職業圍棋電視快棋賽 亞軍 </p><br />\n<br />\n<p><strong>2007年</strong> <br /><br />\n第6屆 新人王 </p><br />\n<br />\n<p><strong>2005年</strong> <br /><br />\n第4屆 新人王 </p><br />\n<br />\n<p><strong>2004年 </strong><br /><br />\n第3屆 新人王 </p><br />\n<br />\n<p><strong>2002年</strong> <br /><br />\n第1屆天元賽 亞軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.facebook.com/people/%E5%A4%8F%E5%A4%A7%E9%8A%98/100058163676019/"
+    },
+    {
+     "label": "著作",
+     "url": "https://search.books.com.tw/search/query/key/%E5%A4%8F%E5%A4%A7%E9%8A%98/adv_author/1/"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/70228523DBA5896634FC5837AC5CA377"
+  },
+  {
+   "id": "37BBCE6C7228E2D9AE8B6EB84221BA97",
+   "name": "楊博崴",
+   "rank": "七段",
+   "photo": "assets/img/players/37BBCE6C7228E2D9AE8B6EB84221BA97.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:3冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "5勝4負　勝率55.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "20勝10負　勝率66.7%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1998年1月3日生，臺灣桃園市人。 <br /><br />\n2011年入段，2012年二段，2013年三段，2014年跳昇五段，2015年加入中華職協精英隊(~2016)，2018年六段，2019年重返中華職協精英隊，2021年七段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2020年 </strong><br /><br />\n108學年各級學校圍棋運動錦標賽-高中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2018年</strong> <br /><br />\n2018新人王冠軍 第17屆天元 亞軍 </p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n第6屆海峰盃職業圍棋賽 冠軍 </p><br />\n<br />\n<p><strong>2013年</strong> <br /><br />\n第4屆思源盃職業圍棋賽冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/37BBCE6C7228E2D9AE8B6EB84221BA97"
+  },
+  {
+   "id": "529515168CFC55E68A81B0B8308189E4",
+   "name": "李維",
+   "rank": "七段",
+   "photo": "assets/img/players/529515168CFC55E68A81B0B8308189E4.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:2冠 (含非公式戰1冠)"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "12勝16負　勝率42.9%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "27勝17負　勝率61.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1998年8月23日生，出生於臺灣臺北市。 <br /><br />\n2013年入段，2015年二段並加入中華職協新銳隊至今，同年三段，2018年四段，2019年擔任中華職協精銳隊副教練，2020年五段，2021年加入中華職協精英隊，2022年六段，2025年七段</p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2023年</strong><br /><br />\n2023新人王賽 亞軍 </p><br />\n<br />\n<p><strong>2022年 </strong><br /><br />\n第9屆大成杯全國圍棋棋聖賽 冠軍 (非公式戰)  </p><br />\n<br />\n<p><strong>2020年 </strong><br /><br />\n2020新人王 冠軍 </p><br />\n<br />\n<p><strong>2015年 </strong><br /><br />\n第5屆台北市中正盃圍棋公開賽季軍(非公式戰)</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/529515168CFC55E68A81B0B8308189E4"
+  },
+  {
+   "id": "A171DFC04906431680FC73EB858CC94A",
+   "name": "張哲豪",
+   "rank": "七段",
+   "photo": "assets/img/players/A171DFC04906431680FC73EB858CC94A.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "9勝7負　勝率56.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "13勝14負　勝率48.1%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1986年4月7日</p><br />\n<br />\n<p>2007年入段，同年二段，2008年三段，2011年四段，2013年五段，2017年六段，2025年七段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2014年</strong><br /><br />\n第四屆世界智力精英運動會男子團體賽第四名</p><br />\n<br />\n<p><strong>2009年</strong><br /><br />\n第二屆愛心盃亞軍</p><br />\n<br />\n<p> </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/A171DFC04906431680FC73EB858CC94A"
+  },
+  {
+   "id": "E9DF0E8E3BA4B7CB4D5A44BC0598CF01",
+   "name": "盧奕銓",
+   "rank": "七段",
+   "photo": "assets/img/players/E9DF0E8E3BA4B7CB4D5A44BC0598CF01.jpg",
+   "history": [
+    {
+     "label": "頭銜冠軍",
+     "value": "新人王"
+    },
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "31勝8負　勝率79.5%"
+    },
+    {
+     "label": "世界賽",
+     "value": "5勝3負   勝率62.5%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "39勝28負　勝率58.2%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2001年3月29日生，出生於臺灣新竹縣。 <br /><br />\n2014年加入中華職協圍棋道場，2016年入段並加入中華職協新銳隊至今，2018年二段，2019年三段，2020年四段，2021年五段，<br /><br />\n2023年加入中華職協精英隊，同年六段，2026年七段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong> </p><br />\n<br />\n<p><strong>2026年 </strong><br /><br />\n2026新人王 冠軍 </p><br />\n<br />\n<p><strong>2023年</strong><br /><br />\n112年吳彫枝盃全國圍棋公開賽高段組 冠軍 (非公式戰)<br /><br />\n第19屆國手 亞軍</p><br />\n<br />\n<p><strong>2022年</strong><br /><br />\n第12屆友士盃十段賽季軍 </p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n2019新人王 亞軍 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第6屆台北市中正盃圍棋公開賽季軍(非公式戰)</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E7%9B%A7%E5%A5%95%E9%8A%93"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/E9DF0E8E3BA4B7CB4D5A44BC0598CF01"
+  },
+  {
+   "id": "5F56B6A27939285C8C6CE8EAF86E33FD",
+   "name": "徐靖恩",
+   "rank": "七段",
+   "photo": "assets/img/players/5F56B6A27939285C8C6CE8EAF86E33FD.jpg",
+   "history": [
+    {
+     "label": "頭銜冠軍",
+     "value": "快棋爭霸戰"
+    },
+    {
+     "label": "歷史成績",
+     "value": "冠軍數 : 3冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "18勝10負　勝率64.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "2勝1負   勝率66.7%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "44勝21負　勝率67.7%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2006年12月26日生，出生於臺灣新北市。 <br /><br />\n2016年加入中華職業圍棋道場，2019年入段並加入中華職協新銳隊至今，同年二段，<br /><br />\n2020年三段，2021年四段，2023年五段，2024年六段，2026年七段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2026年 </strong><br /><br />\n第7屆快棋爭霸戰 亞軍</p><br />\n<br />\n<p><strong>2025年 </strong><br /><br />\n第6屆快棋爭霸戰 冠軍<br /><br />\n第24屆天元賽 亞軍<br /><br />\n第17屆海峰杯職業圍棋賽 亞軍</p><br />\n<br />\n<p><strong>2024年 </strong><br /><br />\n第16屆海峰盃職業圍棋戰 亞軍<br /><br />\n第5屆快棋爭霸戰 亞軍 <br /><br />\n2024新人王賽 亞軍<br /><br />\n112學年各級學校圍棋運動錦標賽-高中男子個人組 冠軍 二連霸</p><br />\n<br />\n<p><strong>2023年</strong><br /><br />\n第4屆快棋爭霸戰 冠軍<br /><br />\n2023新人王賽 冠軍 <br /><br />\n第4屆聯電盃 亞軍 <br /><br />\n第15屆海峰盃職業圍棋賽 亞軍 <br /><br />\n111學年各級學校圍棋運動錦標賽-高中男子個人組 冠軍</p><br />\n<br />\n<p><strong>2021年 </strong><br /><br />\n109學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍<br /><br />\n<strong> <br /><br />\n2020年 </strong><br /><br />\n108學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍<br /><br />\n<strong> <br /><br />\n2019年</strong><br /><br />\n 第24屆LG盃朝鮮日報棋王戰預選賽 進入決賽 </p><br />\n<br />\n<p><strong>2018年</strong> <br /><br />\nTOTO杯青少年圍棋國際大會 無差別組冠軍 <br /><br />\n第35屆世界青少年圍棋錦標賽 青年組 殿軍 <br /><br />\n第40屆世界業餘圍棋錦標賽臺灣選拔 冠軍 <br /><br />\n106學年各級學校圍棋運動錦標賽-國小男子個人組冠軍 </p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第34屆世界青少年圍棋錦標賽 少年組 亞軍 <br /><br />\n第12屆榮三盃全國學生棋王賽 小學組 冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E5%BE%90%E9%9D%96%E6%81%A9"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/5F56B6A27939285C8C6CE8EAF86E33FD"
+  },
+  {
+   "id": "56DB4F3D10D6B220F65B67D09C244002",
+   "name": "陳永安",
+   "rank": "六段",
+   "photo": "assets/img/players/56DB4F3D10D6B220F65B67D09C244002.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:6冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1953年06月04日，出生於臺灣臺北市。<br /><br />\n1979年中國圍棋協會入品，1982年七品，1984年六品，1985年五品，2000年聘任台灣棋院五段，2007年六段。</p><br />\n<br />\n<p><strong>主要棋戰履歷<br /><br />\n2002年</strong><br /><br />\n第1屆天元賽冠軍</p><br />\n<br />\n<p><strong>1995年</strong><br /><br />\n第15屆自立晚報國手賽 冠軍 二連霸</p><br />\n<br />\n<p><strong>1994年</strong><br /><br />\n第14屆自立晚報國手賽 冠軍</p><br />\n<br />\n<p><strong>1985年</strong><br /><br />\n第7屆民生報棋王戰 冠軍</p><br />\n<br />\n<p><strong>1980年</strong><br /><br />\n第2屆民生報棋王戰 冠軍</p><br />\n<br />\n<p><strong>1979年</strong><br /><br />\n第1屆民生報棋王戰 冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/56DB4F3D10D6B220F65B67D09C244002"
+  },
+  {
+   "id": "FD8E84C36BEC219DB02DD64565C10989",
+   "name": "黃祥任",
+   "rank": "六段",
+   "photo": "assets/img/players/FD8E84C36BEC219DB02DD64565C10989.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介 </strong><br /><br />\n1974年06月22日生，出生於臺灣臺北市。 <br /><br />\n2000年臺灣棋院直接聘為初段，同年二段，2001年三段，2004年四段，2007年五段，2012年六段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong><br /><br />\n<strong>2004年 </strong><br /><br />\n第11屆中環盃圍棋公開賽 亞軍 </p><br />\n<br />\n<p><strong>2003年 </strong><br /><br />\n第2屆魔戒盃 亞軍 <br /><br />\n第2屆新人王 亞軍<br><br><strong>2002年</strong> <br /><br />\n第9屆中環盃圍棋公開賽 冠軍 <br /><br />\n第2屆東鋼盃 亞軍 <br /><br />\n第1屆魔戒盃 亞軍 </p><br />\n<br />\n<p><strong>1996年</strong> <br /><br />\n第18屆世界業餘圍棋錦標賽 臺灣代表</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/FD8E84C36BEC219DB02DD64565C10989"
+  },
+  {
+   "id": "FD4F71FF30877A4D784D40B82F6ABA13",
+   "name": "周平強",
+   "rank": "六段",
+   "photo": "assets/img/players/FD4F71FF30877A4D784D40B82F6ABA13.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "6勝5負　勝率54.5%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "4勝13負　勝率23.5%"
+    }
+   ],
+   "body": "<p>簡介<br /><br />\n生日:1982年12月24日</p><br />\n<br />\n<p>2001年入段，2002年二段，2003年三段，2006年四段，2010年五段，2015年六段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/FD4F71FF30877A4D784D40B82F6ABA13"
+  },
+  {
+   "id": "DD4FAAF5BECA8897B01156991D2A7803",
+   "name": "周可平",
+   "rank": "六段",
+   "photo": "assets/img/players/DD4FAAF5BECA8897B01156991D2A7803.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝3負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "3勝9負　勝率25%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1967年7月19日</p><br />\n<br />\n<p>2000年二段，2002年三段，2004年四段，2009年五段，2015年六段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2003年</strong> <br /><br />\n第三屆東鋼盃冠軍</p><br />\n<br />\n<p><strong>2001年</strong> <br /><br />\n第一屆東鋼盃亞軍</p><br />\n<br />\n<p><strong>1999年</strong> <br /><br />\n永大杯第二名</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/DD4FAAF5BECA8897B01156991D2A7803"
+  },
+  {
+   "id": "9D2A7763AEE6BD3CBC65C3383F7C0E29",
+   "name": "林修平",
+   "rank": "六段",
+   "photo": "assets/img/players/9D2A7763AEE6BD3CBC65C3383F7C0E29.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "5勝7負　勝率41.7%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1992年3月8日</p><br />\n<br />\n<p>2007年入段，2008年二段，2009年三段，2011年四段，2013年五段，2016年六段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2011年</strong><br /><br />\n第五屆愛心盃亞軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/9D2A7763AEE6BD3CBC65C3383F7C0E29"
+  },
+  {
+   "id": "40BC858E8C6FE2A96019D6D6FB7E460F",
+   "name": "楊志德",
+   "rank": "六段",
+   "photo": "assets/img/players/40BC858E8C6FE2A96019D6D6FB7E460F.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝2負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1956年10月27日</p><br />\n<br />\n<p>2000年四段，2005年五段，2017年六段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2002年</strong> <br /><br />\n第九屆中環盃亞軍<br /><br />\n<strong>2001年</strong> <br /><br />\n第八屆中環盃冠軍<br /><br />\n<strong>1994年</strong> <br /><br />\n第二十屆名人賽亞軍<br /><br />\n<strong>1993年</strong> <br /><br />\n第一屆永大盃冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/40BC858E8C6FE2A96019D6D6FB7E460F"
+  },
+  {
+   "id": "96D22F1BFCD9F6FC92CC958E167EC390",
+   "name": "劉耀文",
+   "rank": "六段",
+   "photo": "assets/img/players/96D22F1BFCD9F6FC92CC958E167EC390.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "4勝4負　勝率50%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "7勝7負　勝率50%"
+    }
+   ],
+   "body": "<p><strong>簡介 </strong><br /><br />\n1982年07月07日生，出生於臺灣高雄市，圍棋界知名主講人。 <br /><br />\n2006年定段，2007年二段，2008年三段，2010年四段，2012年五段，2019年六段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong><br /><br />\n<strong>2007年 </strong><br /><br />\n第7屆CMC盃職業圍棋電視快棋賽 亞軍 </p><br />\n<br />\n<p><strong>2002年 </strong><br /><br />\n第5屆全國大專盃圍棋錦標賽 冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.youtube.com/playlist?list=PLj88uZWN187gxj9navQvb0VXrGXK8qsVm"
+    },
+    {
+     "label": "教學講座",
+     "url": "https://www.youtube.com/playlist?list=PL9F6AD046F8F7D4D2"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/96D22F1BFCD9F6FC92CC958E167EC390"
+  },
+  {
+   "id": "08D697DF2D668FC2B0F8A6B67498CBBD",
+   "name": "周尹南",
+   "rank": "六段",
+   "photo": "assets/img/players/08D697DF2D668FC2B0F8A6B67498CBBD.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝5負　勝率28.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "10勝13負　勝率43.5%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1989年01月30日生，出生於臺灣台中市人。 <br /><br />\n2003年入段，2004年二段， 2006年三段，2010年四段，2014年五段 2015年加入中華職協新銳隊(2015)。2019年六段。  </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/08D697DF2D668FC2B0F8A6B67498CBBD"
+  },
+  {
+   "id": "C69D6010E6103B10BE46C2050F1B73ED",
+   "name": "張凱馨",
+   "rank": "六段",
+   "photo": "assets/img/players/C69D6010E6103B10BE46C2050F1B73ED.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:2冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝5負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "5勝15負　勝率25%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1980年7月4日生，出生於臺灣。 <br /><br />\n2003年入段，同年二段，2006年三段，2011年四段，2014年五段，2015年加入中華職協精英隊(~2016)，2021加入中華職協新銳隊，2021年晉升六段。</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2021年</strong><br /><br />\n第四屆大森盃全國女子職業圍棋名人錦標賽 亞軍</p><br />\n<br />\n<p><strong>2020年</strong><br /><br />\n第三屆大森盃全國女子職業名人賽 季軍</p><br />\n<br />\n<p><strong>2018年</strong><br /><br />\n第七屆天台山•森然楊帆杯世界女子圍棋團體錦標賽 殿軍</p><br />\n<br />\n<p><strong> </strong><br /><br />\n<strong>2016年</strong> <br /><br />\n第5屆天台山•農商銀行杯世界女子圍棋團體錦標賽 季軍 (團體隊友黑嘉嘉、張正平) </p><br />\n<br />\n<p><strong>2015年</strong> <br /><br />\n第1屆女子最強戰 亞軍 </p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n第4屆鈺德盃女子名人戰 冠軍 <br /><br />\n第4屆世界智力精英運動會女子個人賽第四名 <br /><br />\n第4屆世界智力精英運動會男女混雙賽銅牌 (搭檔林立祥) </p><br />\n<br />\n<p><strong>2012年</strong> <br /><br />\n第2屆鈺德盃女子名人賽 冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/C69D6010E6103B10BE46C2050F1B73ED"
+  },
+  {
+   "id": "AED46C721B4BC83AA23815E70632D976",
+   "name": "林宇翔",
+   "rank": "六段",
+   "photo": "assets/img/players/AED46C721B4BC83AA23815E70632D976.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝4負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "8勝14負　勝率36.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1984年9月10日</p><br />\n<br />\n<p>2002年入段，2004年二段，2007年三段，2011年四段，2013年五段，2021年六段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2016年</strong><br /><br />\n中正盃圍棋公開賽(職業、業餘混合賽) 殿軍</p><br />\n<br />\n<p><strong>2013年</strong><br /><br />\n中正盃圍棋公開賽(職業、業餘混合賽) 亞軍 </p><br />\n<br />\n<p><strong>2009年</strong><br /><br />\n第八屆東鋼盃四強</p><br />\n<br />\n<p><strong>2007年</strong><br /><br />\n第六屆新人王賽亞軍、第一屆亞藝盃四強</p><br />\n<br />\n<p><strong>2006年</strong><br /><br />\n第五屆新人王賽亞軍</p><br />\n<br />\n<p><strong>2003年</strong><br /><br />\n第三屆東鋼盃四強</p><br />\n<br />\n<p><strong>2002年</strong><br /><br />\n第一屆新人王賽亞軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/AED46C721B4BC83AA23815E70632D976"
+  },
+  {
+   "id": "C52F5EFDF989D8CE3BA53AB7A2355F45",
+   "name": "楊子萱",
+   "rank": "六段",
+   "photo": "assets/img/players/C52F5EFDF989D8CE3BA53AB7A2355F45.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 3冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "9勝6負　勝率60%"
+    },
+    {
+     "label": "世界賽",
+     "value": "5勝8負　勝率38.5%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "35勝27負　勝率56.5%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2002年12月24日生，出生於臺灣臺北市。 <br /><br />\n2015年加入中華職協圍棋道場，2017年入段並加入中華職協新銳隊(~2020)，2018年二段，2019年三段，2020年四段，2021年重返中華職協新銳隊，2022年五段，2024年六段</p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2026年</strong><br /><br />\n第12屆健喬盃女子圍棋最強戰 亞軍</p><br />\n<br />\n<p><strong>2025年</strong> <br /><br />\n第11屆健喬盃女子圍棋最強戰 冠軍</p><br />\n<br />\n<p><strong>2024年 </strong><br /><br />\n第7屆大森盃女子名人賽 亞軍</p><br />\n<br />\n<p><strong>2022年</strong> <br /><br />\n第8屆健喬盃女子圍棋最強戰 冠軍<br><br><strong>2020年</strong> <br /><br />\n第3屆大森盃女子名人戰 冠軍<br /><br />\n108學年各級學校圍棋運動錦標賽-高中女子個人組 冠軍 </p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n第5屆女子圍棋最強戰 亞軍 </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n第8屆鈺德女子名人賽 亞軍 <br /><br />\n106學年各級學校圍棋運動錦標賽-國中女子個人組 冠軍 <br /><br />\n第9屆穹窿山兵聖杯世界女子圍棋錦標賽 8強 </p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第7屆鈺德女子名人賽 亞軍 <br /><br />\n105學年各級學校圍棋運動錦標賽-國中女子個人組 冠軍 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第2屆女子圍棋最強戰 亞軍 <br /><br />\n第6屆鈺德女子名人賽 亞軍 <br /><br />\n第18屆全國女子圍棋公開賽 冠軍 二連霸 </p><br />\n<br />\n<p><strong>2015年 </strong><br /><br />\n第17屆全國女子圍棋公開賽 冠軍 <br /><br />\n103學年各級學校圍棋運動錦標賽-國小女子個人組 冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E6%A5%8A%E5%AD%90%E8%90%B1"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/C52F5EFDF989D8CE3BA53AB7A2355F45"
+  },
+  {
+   "id": "B26F65E303FB09F01C3DAF55AC233885",
+   "name": "蔡丞韋",
+   "rank": "六段",
+   "photo": "assets/img/players/B26F65E303FB09F01C3DAF55AC233885.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "7勝5負　勝率58.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "20勝17負　勝率54.1%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1998年03月21日生，出生於臺灣新北市。 <br /><br />\n2014年入段，2015年二段並加入中華職協新銳隊(~2019)，2016年三段，2019四段，2021重返中華職協新銳隊，2022年五段，2025年六段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong><br /><br />\n<strong>2012年 </strong><br /><br />\n第2屆世界智力運動會 團體組銀牌 <br /><br />\n第2屆世界智力運動會 青年賽銀牌</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E8%94%A1%E4%B8%9E%E9%9F%8B"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/B26F65E303FB09F01C3DAF55AC233885"
+  },
+  {
+   "id": "D763F81C56FC291C1793C17AA82439C1",
+   "name": "簡立宸",
+   "rank": "五段",
+   "photo": "assets/img/players/D763F81C56FC291C1793C17AA82439C1.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1996年09月25日</p><br />\n<br />\n<p>2009年入段，同年二段，2010年中環盃冠軍跳升五段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>《業餘》<br /><br />\n2008年</strong><br /><br />\n韓國國務總理盃業餘大賽冠軍</p><br />\n<br />\n<p><strong>《職業》</strong><br /><br />\n<strong>2010年</strong><br /><br />\n中環盃冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/D763F81C56FC291C1793C17AA82439C1"
+  },
+  {
+   "id": "AE397B760DDE4789458D37C595AA3E9C",
+   "name": "陳逸達",
+   "rank": "五段",
+   "photo": "assets/img/players/AE397B760DDE4789458D37C595AA3E9C.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:4冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1983年11月23日</p><br />\n<br />\n<p>2001入段，2002年二段，2004年三段，2007年四段，2013年五段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2004年</strong><br /><br />\n第四屆CMC杯職業圍棋電視快棋賽 冠軍</p><br />\n<br />\n<p><strong>2003年</strong><br /><br />\n第三屆CMC杯職業圍棋電視快棋賽 冠軍</p><br />\n<br />\n<p><strong>2002年</strong><br /><br />\n第一屆魔戒盃 冠軍</p><br />\n<br />\n<p><strong>2001年</strong><br /><br />\n第一屆富聚杯 冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/AE397B760DDE4789458D37C595AA3E9C"
+  },
+  {
+   "id": "98406AFBE07BEF7B4CA1DD035F6AD998",
+   "name": "陳義翔",
+   "rank": "五段",
+   "photo": "assets/img/players/98406AFBE07BEF7B4CA1DD035F6AD998.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝2負　勝率33.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "2勝3負　勝率40%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1983年11月07日</p><br />\n<br />\n<p>2007年二段，2009年三段，2012年四段，2017年五段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/98406AFBE07BEF7B4CA1DD035F6AD998"
+  },
+  {
+   "id": "CF3E0D31C9F118003D870534329B32D9",
+   "name": "陳鋒",
+   "rank": "五段",
+   "photo": "assets/img/players/CF3E0D31C9F118003D870534329B32D9.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1991年12月04日</p><br />\n<br />\n<p>2004年入段，2007年二段，2010年三段，2014年四段，2018年五段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2005年</strong><br /><br />\n第五屆CMC盃職業圍棋電視快棋賽 亞軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/CF3E0D31C9F118003D870534329B32D9"
+  },
+  {
+   "id": "ACAC693DCD98F923A2FA353ECD593F74",
+   "name": "楊孟允",
+   "rank": "五段",
+   "photo": "assets/img/players/ACAC693DCD98F923A2FA353ECD593F74.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (91更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝2負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1985年04月24日</p><br />\n<br />\n<p>2004年入段，2005年二段，2007年三段，2012年四段，2018年五段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/ACAC693DCD98F923A2FA353ECD593F74"
+  },
+  {
+   "id": "339499576DF93AC3D85F41B3F4AC97B8",
+   "name": "陳禧",
+   "rank": "五段",
+   "photo": "assets/img/players/339499576DF93AC3D85F41B3F4AC97B8.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1995年09月30日</p><br />\n<br />\n<p>2007年入段，2009年二段，2012年三段，2018年四段，2021年五段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/339499576DF93AC3D85F41B3F4AC97B8"
+  },
+  {
+   "id": "011C328596ED1AB76CFCF3203696B1DD",
+   "name": "許育祺",
+   "rank": "五段",
+   "photo": "assets/img/players/011C328596ED1AB76CFCF3203696B1DD.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "8勝7負　勝率53.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "20勝14負　勝率58.8%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年12月03日</p><br />\n<br />\n<p>2014年入段，2016年二段，2018年三段，2020年四段，2024年五段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2025年</strong><br /><br />\n第1屆龍星賽 亞軍</p><br />\n<br />\n<p><strong>2015年</strong><br /><br />\n臺北市中正盃圍棋公開賽(職業、業餘混合賽) 亞軍<br /><br />\n </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/011C328596ED1AB76CFCF3203696B1DD"
+  },
+  {
+   "id": "177AC3E5D8241171ADC3F4BA4AD04108",
+   "name": "牛詩特",
+   "rank": "五段",
+   "photo": "assets/img/players/177AC3E5D8241171ADC3F4BA4AD04108.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "13勝10負　勝率56.5%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "28勝21負　勝率57.1%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2001年4月2日生，出生於臺灣臺北市。 <br /><br />\n2015年加入中華職協圍棋道場，2018年入段並加入中華職協新銳隊至今。2019年二段。2020年三段，2022年四段，2024年五段。</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E7%89%9B%E8%A9%A9%E7%89%B9"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/177AC3E5D8241171ADC3F4BA4AD04108"
+  },
+  {
+   "id": "4CE8E505BBEEC3B5C043C1C50291CDD9",
+   "name": "黃世元",
+   "rank": "五段",
+   "photo": "assets/img/players/4CE8E505BBEEC3B5C043C1C50291CDD9.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝5負   勝率28.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "9勝13負　勝率40.9%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2000年8月31日生，出生於臺灣臺北市。 <br /><br />\n2014年加入中華職協圍棋道場，2015年入段並加入中華職協新銳隊至今，2017年二段。2019年三段，2021年四段，2024年五段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2014年 </strong><br /><br />\n第4屆陳毅杯中國圍棋圍棋公開賽 台灣代表 </p><br />\n<br />\n<p><strong>2013年 </strong><br /><br />\n第30屆應氏盃世界青少年圍棋錦標賽 青年組第四名</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/4CE8E505BBEEC3B5C043C1C50291CDD9"
+  },
+  {
+   "id": "AE4B5AB0DFEB900CDE0CBD2979FAFEA0",
+   "name": "林彥丞",
+   "rank": "五段",
+   "photo": "assets/img/players/AE4B5AB0DFEB900CDE0CBD2979FAFEA0.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "9勝6負　勝率60%"
+    },
+    {
+     "label": "世界賽",
+     "value": "6勝2負　勝率75%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "32勝22負　勝率59.3%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2001年9月18日生，出生於臺灣新北市。 <br /><br />\n2014年加入中華職協圍棋道場，2017年入段，2017加入中華職協新銳隊(~2018)，2018年二段，2019年三段，2021重返中華職協新銳隊，2022年四段，2024年五段</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2017年 </strong><br /><br />\n第22期LG盃朝鮮日報棋王戰國際統合賽 打入決賽 <br /><br />\n105學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第33屆世界青少年圍棋錦標賽 青年組亞軍 </p><br />\n<br />\n<p><strong>2013年 </strong><br /><br />\n第8屆榮三盃全國學生棋王賽 小學組冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E5%BD%A5%E4%B8%9E"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/AE4B5AB0DFEB900CDE0CBD2979FAFEA0"
+  },
+  {
+   "id": "2FAC98B749A332D40442FDDE6626FDE5",
+   "name": "盧鈺樺",
+   "rank": "五段",
+   "photo": "assets/img/players/2FAC98B749A332D40442FDDE6626FDE5.jpg",
+   "history": [
+    {
+     "label": "頭銜冠軍",
+     "value": "女子最強、女子名人"
+    },
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:8冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "16勝10負　勝率61.5%"
+    },
+    {
+     "label": "世界賽",
+     "value": "3勝4負　勝率42.9%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "22勝23負　勝率48.9%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1997年10月16日生，出生於臺灣高雄市。 <br /><br />\n2019年入段，同年跳昇三段，2021年加入中華職協新銳隊，2022年晉升四段，2024年晉升五段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2026年</strong><br /><br />\n第12屆健喬盃女子圍棋最強戰 冠軍</p><br />\n<br />\n<p><strong>2025年 </strong><br /><br />\n第8屆大森盃女子名人賽 冠軍 </p><br />\n<br />\n<p><strong>2024年</strong><br /><br />\n第10屆健喬盃女子圍棋最強戰 冠軍</p><br />\n<br />\n<p><strong>2023年</strong><br /><br />\n第6屆大森盃女子名人賽 冠軍<br /><br />\n第9屆健喬盃女子圍棋最強戰 亞軍</p><br />\n<br />\n<p><strong>2022年</strong><br /><br />\n第5屆大森盃女子名人賽 冠軍<br /><br />\n第4屆扇興杯世界女流最強戰 亞軍<br /><br />\n第8屆健喬盃女子圍棋最強戰 亞軍</p><br />\n<br />\n<p><strong>2021年</strong><br /><br />\n第7屆健喬盃女子圍棋最強戰 冠軍<br /><br />\n第4屆大森盃女子名人賽 冠軍</p><br />\n<br />\n<p><strong>2020年</strong><br /><br />\n第6屆健喬盃女子圍棋最強戰 亞軍</p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n第2屆大森盃女子名人戰冠軍 <br /><br />\n九華山地藏庵 108 年職業圍棋女子菁英邀請賽 亞軍 (非公式戰) </p><br />\n<br />\n<p><strong>2012年</strong> <br /><br />\n第2屆世界智力運動會 混雙賽銅牌(搭檔賴宥丞) <br /><br />\n第23回國際業餘圍棋配對賽 臺灣代表</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E7%9B%A7%E9%88%BA%E6%A8%BA"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/2FAC98B749A332D40442FDDE6626FDE5"
+  },
+  {
+   "id": "3596D56FE306EA2C941FC3BDF88AF346",
+   "name": "陳國興",
+   "rank": "四段",
+   "photo": "assets/img/players/3596D56FE306EA2C941FC3BDF88AF346.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝4負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝11負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>1945年8月3日生</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/3596D56FE306EA2C941FC3BDF88AF346"
+  },
+  {
+   "id": "2A01EF2BD63BF8A0BE96AB0545BA7C5F",
+   "name": "丁少傑",
+   "rank": "四段",
+   "photo": "assets/img/players/2A01EF2BD63BF8A0BE96AB0545BA7C5F.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝4負　勝率20%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "2勝5負　勝率28.6%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1990年09月04日生，出生於臺灣台北市。 <br /><br />\n2009年入段，2010年二段，2012年三段，2015年加入中華職協精英隊(~2015)，2020年四段。</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/2A01EF2BD63BF8A0BE96AB0545BA7C5F"
+  },
+  {
+   "id": "D5F5D47C98B0595491AF1146956FE38D",
+   "name": "林杰漢",
+   "rank": "四段",
+   "photo": "assets/img/players/D5F5D47C98B0595491AF1146956FE38D.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "7勝5負　勝率58.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1995年04月10日生，出生於臺灣高雄市。 <br /><br />\n2012年入段，2013年二段，2015年加入中華職協新銳隊，2017年三段，2018加入中華職協新銳隊並擔任道場助理教練(~2018)，2020年四段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2013年</strong> <br /><br />\n第3屆台北市中正盃圍棋公開賽第四名 (非公式戰)</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/D5F5D47C98B0595491AF1146956FE38D"
+  },
+  {
+   "id": "1B1B317DAFD897543FF1C175651B06AC",
+   "name": "林世民",
+   "rank": "四段",
+   "photo": "assets/img/players/1B1B317DAFD897543FF1C175651B06AC.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝5負　勝率28.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "8勝12負　勝率40%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1996年12月31日生，出生於臺灣台中市。 <br /><br />\n2013年入段，2014年二段，2016年三段，同年加入中華職協精銳隊(~2016)，2021年四段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/1B1B317DAFD897543FF1C175651B06AC"
+  },
+  {
+   "id": "EC6378120418024CD419E8EA5228E370",
+   "name": "俞俐均",
+   "rank": "四段",
+   "photo": "assets/img/players/EC6378120418024CD419E8EA5228E370.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:3冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝3負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝5負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1999年4月29日生，出生於臺灣臺北市。<br /><br />\n2014年入段，2015年加入中華職協新銳隊(~2019)，2016赴韓國國家隊培訓，2017年二段，2019年三段，2021年重返中華職協新銳隊，2022年四段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷</strong> <br /><br />\n<strong>2020年 </strong><br /><br />\n第6屆健喬盃女子圍棋最強戰冠軍 </p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n第6屆國手山脈杯世界圍棋混雙冠軍(與王立誠搭配) </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n第4屆女子圍棋最強戰冠軍 </p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第3屆女子圍棋最強戰亞軍 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第6屆鈺德盃女子名人戰冠軍 </p><br />\n<br />\n<p><strong>2012年 </strong><br /><br />\n第14屆全國女子圍棋公開賽 冠軍 台灣第一位女子業餘7段棋士</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.facebook.com/%E5%9C%8D%E6%A3%8B%E7%94%9C%E5%BF%83-%E4%BF%9E%E4%BF%90%E5%9D%87-2133655473311622/?__xts__[0]=68.ARBFcb0f8rIiNy3E05z5448ju7UxML5ABDvsbOTlyZkutWEeh9VPjNheZxWHQ76dOMpYPt-Xqs9_WH31lESvcQU46Cb8yp68RdemtTzr5_23YY1s1c4hGDzs46tn40-eyJx9Z_YnZy4ytZ4oOHPar_zeelsOrqJ6TQf3DQRWoqrvbOreltamneEmOfoKZ2fZe5_9dLh6D3UAqS2yJkiti-tKpA6Lt8nrrMyvNY185YVlft1DEUXIK6yY0NXB3htYgpiE5jyYU8vO6V-bCW2p4Ed9lyKuj-G5NCnJoaeDH4yhszHZDk6UfioE637oa-8kDaP7tXTHHtD-bnNS8IBR4XnOa6AU34ksA-3nFRgLyT5NOz7Y8VQDEBrHM88"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/EC6378120418024CD419E8EA5228E370"
+  },
+  {
+   "id": "5633D60970E952C7F0F7EFB8F55DC5FE",
+   "name": "蘇聖芳",
+   "rank": "四段",
+   "photo": "assets/img/players/5633D60970E952C7F0F7EFB8F55DC5FE.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "7勝7負　勝率50%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "9勝17負　勝率34.6%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1996年8月05日生，出生於臺灣新北市。 <br /><br />\n2011年入段，同年二段，2015年加入中華職協新銳隊(~2016)，2016年三段，2022年四段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷<br /><br />\n2021年</strong><br /><br />\n第七屆健喬盃女子圍棋最強戰亞軍</p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第7屆鈺德盃女子名人戰冠軍 <br /><br />\n105學年各級學校圍棋運動錦標賽-高中女子個人組 冠軍 </p><br />\n<br />\n<p><strong>2016年</strong> <br /><br />\n第7屆蘇州穹窿山兵聖盃世界女子圍棋賽台灣代表 <br /><br />\n104學年各級學校圍棋運動錦標賽-高中女子個人組 冠軍 </p><br />\n<br />\n<p><strong>2010年</strong> <br /><br />\n第12屆全國女子圍棋公開賽 冠軍 三連霸 </p><br />\n<br />\n<p><strong>2009年</strong> <br /><br />\n第11屆全國女子圍棋公開賽 冠軍 二連霸 </p><br />\n<br />\n<p><strong>2008年 </strong><br /><br />\n第10屆全國女子圍棋公開賽 冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.facebook.com/shengfang85/"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/5633D60970E952C7F0F7EFB8F55DC5FE"
+  },
+  {
+   "id": "B19E86B66130698F373BB1AEF26EDE12",
+   "name": "高昀",
+   "rank": "四段",
+   "photo": "assets/img/players/B19E86B66130698F373BB1AEF26EDE12.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "2勝3負　勝率40%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年11月04日</p><br />\n<br />\n<p>2012年入段，2013年二段，2016年三段，2022年四段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/B19E86B66130698F373BB1AEF26EDE12"
+  },
+  {
+   "id": "7CE0B44C8D68B4C450E08D17864AA4D9",
+   "name": "黃彥誠",
+   "rank": "四段",
+   "photo": "assets/img/players/7CE0B44C8D68B4C450E08D17864AA4D9.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝1負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "5勝7負　勝率41.7%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1994年12月09日生，出生於臺灣新北市。 <br /><br />\n2011年入段，2012年二段，2015年加入中華職協新銳隊(~2015)，2016年三段，2023年四段。</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/7CE0B44C8D68B4C450E08D17864AA4D9"
+  },
+  {
+   "id": "A5C3900CB8FC98E0B62E558F008D3014",
+   "name": "陳威廷",
+   "rank": "四段",
+   "photo": "assets/img/players/A5C3900CB8FC98E0B62E558F008D3014.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "5勝5負　勝率50%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "13勝13負　勝率50%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2000年01月30日生，出生於臺灣新北市。 <br /><br />\n2017年入段。2019加入中華職協新銳隊至今，2020年二段，2021年三段，2023年四段。</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E9%99%B3%E5%A8%81%E5%BB%B7"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/A5C3900CB8FC98E0B62E558F008D3014"
+  },
+  {
+   "id": "62EC6449700E8FB51C87B841DC69DFAC",
+   "name": "白昕卉",
+   "rank": "四段",
+   "photo": "assets/img/players/62EC6449700E8FB51C87B841DC69DFAC.jpg",
+   "history": [
+    {
+     "label": "頭銜冠軍",
+     "value": "九華山地藏庵職業圍棋女子菁英賽"
+    },
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:2冠(含非公式戰2)"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "8勝17負　勝率32%"
+    },
+    {
+     "label": "世界賽",
+     "value": "4勝3負   勝率57.1%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "18勝27負　勝率40%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>2001年4月12日生，出生於臺灣臺中市。</p><br />\n<br />\n<p>2014年加入中華職協圍棋道場，2018年入段並加入中華職協新銳隊至今，2019年二段，2021年三段，2023年四段。</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2020年</strong> <br /><br />\n第3屆大森盃女子名人戰 亞軍 </p><br />\n<br />\n<p><strong>2019年</strong> <br /><br />\n九華山地藏庵 108 年職業圍棋女子菁英邀請賽 冠軍 (非公式戰) <br /><br />\n107學年各級學校圍棋運動錦標賽-高中女子個人組冠軍 <br /><br />\n第3屆國際智力運動協會(IMSA)精英運動會 混雙銀牌 (搭配林立祥) </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n第4屆女子圍棋最強戰亞軍 第3屆國際智力運動協會(IMSA)精英運動會 中華台北女子代表 <br /><br />\n106學年各級學校圍棋運動錦標賽-高中女子個人組冠軍 </p><br />\n<br />\n<p><strong>2017年 </strong><br /><br />\n第4屆大成杯全國圍棋棋聖賽女子組冠軍(非公式戰) <br /><br />\n第19屆全國女子圍棋公開賽 季軍 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第18屆全國女子圍棋公開賽 亞軍 <br /><br />\n第27回國際業餘圍棋配對賽 亞軍 <br /><br />\n104學年各級學校圍棋運動錦標賽-國中女子個人組冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E7%99%BD%E6%98%95%E5%8D%89"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/62EC6449700E8FB51C87B841DC69DFAC"
+  },
+  {
+   "id": "879C866C12836DB6656B81021DD2BB19",
+   "name": "陳首廉",
+   "rank": "四段",
+   "photo": "assets/img/players/879C866C12836DB6656B81021DD2BB19.jpg",
+   "history": [
+    {
+     "label": "頭銜冠軍",
+     "value": "龍星"
+    },
+    {
+     "label": "歷史成績",
+     "value": "冠軍數: 1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "8勝6負　勝率57.1%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "24勝13負　勝率64.9%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2003年01月02日</p><br />\n<br />\n<p>2018年入段，同年二段，2021年三段，2023年四段</p><br />\n<br />\n<p><strong>2025年</strong><br /><br />\n第1屆龍星賽 冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/879C866C12836DB6656B81021DD2BB19"
+  },
+  {
+   "id": "CD870F50F947A140848F9F4E75842EED",
+   "name": "林新為",
+   "rank": "四段",
+   "photo": "assets/img/players/CD870F50F947A140848F9F4E75842EED.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "6勝7負　勝率46.2%"
+    },
+    {
+     "label": "世界賽",
+     "value": "2勝6負　勝率25%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "16勝20負　勝率44.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1999年01月10日</p><br />\n<br />\n<p>2014年入段，2016年二段，2021年三段，2024年四段</p><br />\n<br />\n<p> </p><br />\n<br />\n<p><strong>2025年 </strong><br /><br />\n第13屆中環碁聖賽 亞軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/CD870F50F947A140848F9F4E75842EED"
+  },
+  {
+   "id": "CDF70610323C8ED99F7262A73CAF89B5",
+   "name": "詹宜典",
+   "rank": "四段",
+   "photo": "assets/img/players/CDF70610323C8ED99F7262A73CAF89B5.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝3負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "13勝12負　勝率52%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年07月29日</p><br />\n<br />\n<p>2021年三段 (103、107年榮獲二次世界業餘大賽冠軍，經第八屆第三次董事會通過晉升)</p><br />\n<br />\n<p>2025年四段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br>《業餘》<br /><br />\n<strong>2018年</strong> <br /><br />\n世界業餘錦標賽 冠軍</p><br />\n<br />\n<p><strong>2014年</strong> <br /><br />\n世界業餘錦標賽 冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/CDF70610323C8ED99F7262A73CAF89B5"
+  },
+  {
+   "id": "3299C78D82B897AD55C0D0C3E7420002",
+   "name": "余承叡",
+   "rank": "三段",
+   "photo": "assets/img/players/3299C78D82B897AD55C0D0C3E7420002.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝1負　勝率50%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "4勝9負　勝率30.8%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>1983年4月7日生</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/3299C78D82B897AD55C0D0C3E7420002"
+  },
+  {
+   "id": "FE5BC7B18BA028ED87BD3F05A07D9FFF",
+   "name": "廖冠泓",
+   "rank": "三段",
+   "photo": "assets/img/players/FE5BC7B18BA028ED87BD3F05A07D9FFF.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年02月25日</p><br />\n<br />\n<p>2006年入段，2008年二段，2009年思源盃冠軍跳升三段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2009年</strong><br /><br />\n第一屆思源盃冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/FE5BC7B18BA028ED87BD3F05A07D9FFF"
+  },
+  {
+   "id": "1E1D56B68405F91D63929F9FFDA0B1AC",
+   "name": "趙佩哲",
+   "rank": "三段",
+   "photo": "assets/img/players/1E1D56B68405F91D63929F9FFDA0B1AC.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年02月11日</p><br />\n<br />\n<p>2007年入段，2009年二段，2011年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/1E1D56B68405F91D63929F9FFDA0B1AC"
+  },
+  {
+   "id": "6E223B36BE5A435F135E8C813D105283",
+   "name": "張懷一",
+   "rank": "三段",
+   "photo": "assets/img/players/6E223B36BE5A435F135E8C813D105283.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝3負　勝率25%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "1勝2負　勝率33.3%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1981年12月16日</p><br />\n<br />\n<p>2005年入段，2008年二段，2012年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/6E223B36BE5A435F135E8C813D105283"
+  },
+  {
+   "id": "9591BEE9466684C1AFD8B656A66F14A7",
+   "name": "陳秋龍",
+   "rank": "三段",
+   "photo": "assets/img/players/9591BEE9466684C1AFD8B656A66F14A7.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1952年08月27日</p><br />\n<br />\n<p>2012年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/9591BEE9466684C1AFD8B656A66F14A7"
+  },
+  {
+   "id": "C8DB0930E8F794DE61B6FE1F8C177400",
+   "name": "黃丞毅",
+   "rank": "三段",
+   "photo": "assets/img/players/C8DB0930E8F794DE61B6FE1F8C177400.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1992年12月06日</p><br />\n<br />\n<p>2006年入段，2008年二段，2012年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/C8DB0930E8F794DE61B6FE1F8C177400"
+  },
+  {
+   "id": "814BC77388BF34101205FD5C82ECADBE",
+   "name": "范揚波",
+   "rank": "三段",
+   "photo": "assets/img/players/814BC77388BF34101205FD5C82ECADBE.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1973年10月03日</p><br />\n<br />\n<p>2003年入段，2008年二段，2012年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/814BC77388BF34101205FD5C82ECADBE"
+  },
+  {
+   "id": "8EF756A53BCB8BD1D3C8CF8EEFDF2A69",
+   "name": "張正平",
+   "rank": "三段",
+   "photo": "assets/img/players/8EF756A53BCB8BD1D3C8CF8EEFDF2A69.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "2勝3負　勝率40%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1981年10月05日</p><br />\n<br />\n<p>1998年韓國棋院入段，2000年台灣棋院初段，2009年二段，2012三段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2016年</strong><br /><br />\n第五屆『天台山•農商銀行杯』世界女子圍棋團體錦標賽 季軍</p><br />\n<br />\n<p><strong>2013年</strong><br /><br />\n第三屆世界智力精英運動會女子個人賽 殿軍<br /><br />\n鈺德盃第三屆女子名人戰冠軍</p><br />\n<br />\n<p><strong>2011年</strong><br /><br />\n鈺德盃第一屆女子名人戰冠軍</p><br />\n<br />\n<p><strong>2009年</strong><br /><br />\n入選2010年廣州亞運國手</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/8EF756A53BCB8BD1D3C8CF8EEFDF2A69"
+  },
+  {
+   "id": "AB983C38E0F6CC44207444B3B5A46458",
+   "name": "葉紘源",
+   "rank": "三段",
+   "photo": "assets/img/players/AB983C38E0F6CC44207444B3B5A46458.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1997年05月07日</p><br />\n<br />\n<p>2011年入段，同年二段，2013年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/AB983C38E0F6CC44207444B3B5A46458"
+  },
+  {
+   "id": "7F62ED0BE5F25AB2324B436CFD94A55D",
+   "name": "陳冠維",
+   "rank": "三段",
+   "photo": "assets/img/players/7F62ED0BE5F25AB2324B436CFD94A55D.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p>簡介<br /><br />\n生日:1996年11月20日</p><br />\n<br />\n<p>2009年入段，2010年二段，2014年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/7F62ED0BE5F25AB2324B436CFD94A55D"
+  },
+  {
+   "id": "ED29DEC1345C1158BABED0D24B900235",
+   "name": "魏豪廷",
+   "rank": "三段",
+   "photo": "assets/img/players/ED29DEC1345C1158BABED0D24B900235.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年10月11日</p><br />\n<br />\n<p>2004年入段，2006年二段，2019年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/ED29DEC1345C1158BABED0D24B900235"
+  },
+  {
+   "id": "07FBD55A0E698F4F543B575FA58160FA",
+   "name": "王湘傑",
+   "rank": "三段",
+   "photo": "assets/img/players/07FBD55A0E698F4F543B575FA58160FA.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝2負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1992年10月16日</p><br />\n<br />\n<p>2007年入段，2011年二段，2014年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/07FBD55A0E698F4F543B575FA58160FA"
+  },
+  {
+   "id": "C8580FB096D478712175B7CC9CAFE177",
+   "name": "饒瑞雍",
+   "rank": "三段",
+   "photo": "assets/img/players/C8580FB096D478712175B7CC9CAFE177.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1987年11月02日</p><br />\n<br />\n<p>2003年入段，2004年二段，2014年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/C8580FB096D478712175B7CC9CAFE177"
+  },
+  {
+   "id": "FBDFBD0302EDD53201B64B6BA9BBD404",
+   "name": "張原榮",
+   "rank": "三段",
+   "photo": "assets/img/players/FBDFBD0302EDD53201B64B6BA9BBD404.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1985年03月08日</p><br />\n<br />\n<p>2009年入段，2010年二段，2016年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/FBDFBD0302EDD53201B64B6BA9BBD404"
+  },
+  {
+   "id": "F285D7E0BE55E357CEF8841C1AE85C3D",
+   "name": "林聖弈",
+   "rank": "三段",
+   "photo": "assets/img/players/F285D7E0BE55E357CEF8841C1AE85C3D.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝3負　勝率25%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝2負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1992年11月10日</p><br />\n<br />\n<p>2011年入段，2013年二段，2018年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/F285D7E0BE55E357CEF8841C1AE85C3D"
+  },
+  {
+   "id": "8D59175A9D5B3DA2D0A3B65560A5D476",
+   "name": "劉建昌",
+   "rank": "三段",
+   "photo": "assets/img/players/8D59175A9D5B3DA2D0A3B65560A5D476.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝4負　勝率20%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "3勝7負　勝率30%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1974年11月17日</p><br />\n<br />\n<p>2004年入段，2012年二段，2021年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/8D59175A9D5B3DA2D0A3B65560A5D476"
+  },
+  {
+   "id": "07D1230959795CC93A7B1AC664B2ABD0",
+   "name": "莊承濬",
+   "rank": "三段",
+   "photo": "assets/img/players/07D1230959795CC93A7B1AC664B2ABD0.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p>簡介<br /><br />\n1999年11月29日生，出生於臺灣新北市。<br /><br />\n2015年入段，同年二段。 2015年加入中華職協新銳隊(~2015)。2016~2019前往中國杭州棋院訓練，2021年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/07D1230959795CC93A7B1AC664B2ABD0"
+  },
+  {
+   "id": "588F241257F65FD5855A660A81BCD243",
+   "name": "林子元",
+   "rank": "三段",
+   "photo": "assets/img/players/588F241257F65FD5855A660A81BCD243.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1994年10月19日</p><br />\n<br />\n<p>2010年入段，2013年二段，2022年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/588F241257F65FD5855A660A81BCD243"
+  },
+  {
+   "id": "C53A54B63C282F8FAF2FA3D078B51178",
+   "name": "彭鐏德",
+   "rank": "三段",
+   "photo": "assets/img/players/C53A54B63C282F8FAF2FA3D078B51178.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "6勝10負　勝率37.5%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1991年10月24日</p><br />\n<br />\n<p>2010年入段，2016年二段，2022年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/C53A54B63C282F8FAF2FA3D078B51178"
+  },
+  {
+   "id": "0747ABCC941FB323AC5BAA3B8E2CBAB8",
+   "name": "陳劭全",
+   "rank": "三段",
+   "photo": "assets/img/players/0747ABCC941FB323AC5BAA3B8E2CBAB8.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝5負　勝率28.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "7勝14負　勝率33.3%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1999年6月2日生，出生於臺灣新竹市。 <br /><br />\n2018年入段，2018加入中華職協新銳隊至今。2019年二段。2022年三段。</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/0747ABCC941FB323AC5BAA3B8E2CBAB8"
+  },
+  {
+   "id": "A09CE0ACB62DC6C4075045F63418D5F4",
+   "name": "張嘉桓",
+   "rank": "三段",
+   "photo": "assets/img/players/A09CE0ACB62DC6C4075045F63418D5F4.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "3勝4負　勝率42.9%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "3勝3負　勝率50%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2003年11月12日生，出生於臺灣新北市。 <br /><br />\n2017年加入中華職業圍棋道場，2019年入段並加入中華職協新銳隊(~2020)，2020年二段，2023年三段。</p><br />\n<br />\n<p> </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/A09CE0ACB62DC6C4075045F63418D5F4"
+  },
+  {
+   "id": "3124CD1CC5C356605D28F2EF244A3688",
+   "name": "林怡廷",
+   "rank": "三段",
+   "photo": "assets/img/players/3124CD1CC5C356605D28F2EF244A3688.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "5勝7負　勝率41.7%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "17勝17負　勝率50%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2006年11月10日生，出生於臺灣新竹市。 <br /><br />\n2017年加入中華職業圍棋道場(~2018，2021~22)，2023年入段並加入中華職協新銳隊，同年跳升三段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2025年 </strong><br /><br />\n第11屆健喬盃女子圍棋最強戰 亞軍  <br /><br />\n第8屆大森盃女子名人賽 亞軍  </p><br />\n<br />\n<p><strong>2024年 </strong><br /><br />\n112學年各級學校圍棋運動錦標賽-高中女子個人組 冠軍 </p><br />\n<br />\n<p><strong>2023年 </strong><br /><br />\n第9屆健喬盃女子圍棋最強戰 冠軍 <strong> </strong></p><br />\n<br />\n<p><strong>2022年 </strong><br /><br />\n110學年各級學校圍棋運動錦標賽-國中女子個人組 冠軍 </p><br />\n<br />\n<p> </p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E6%80%A1%E5%BB%B7"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/3124CD1CC5C356605D28F2EF244A3688"
+  },
+  {
+   "id": "058D14C68533983342FAF53879C0BCE2",
+   "name": "黨希昀",
+   "rank": "三段",
+   "photo": "assets/img/players/058D14C68533983342FAF53879C0BCE2.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝2負　勝率33.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1989年4月16日生，出生於臺灣桃園市。<br /><br />\n2004年入段，2013年二段，2023年三段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2019年</strong><br /><br />\n第2屆大森盃女子名人戰亞軍</p><br />\n<br />\n<p><strong>2018年</strong><br /><br />\n第1屆大森盃女子名人戰冠軍</p><br />\n<br />\n<p><strong>2013年</strong><br /><br />\n第3屆鈺德盃女子名人戰亞軍</p><br />\n<br />\n<p><strong>2012年</strong><br /><br />\n第2屆鈺德盃女子名人戰亞軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "粉絲團",
+     "url": "https://www.facebook.com/debbietanggogo/"
+    },
+    {
+     "label": "棋弈果",
+     "url": "https://www.youtube.com/channel/UCotV2Ue163bbF20vxBD6qRg"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/058D14C68533983342FAF53879C0BCE2"
+  },
+  {
+   "id": "81991D2DE8FF2F97698D8EC7905B1417",
+   "name": "曾品傑",
+   "rank": "三段",
+   "photo": "assets/img/players/81991D2DE8FF2F97698D8EC7905B1417.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "7勝5負　勝率58.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "12勝16負　勝率42.9%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2000年12月12日</p><br />\n<br />\n<p>2020年入段，2021年二段，2023年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/81991D2DE8FF2F97698D8EC7905B1417"
+  },
+  {
+   "id": "8F897BBF92C2E7CE794CBE8CE93875B3",
+   "name": "施景堯",
+   "rank": "三段",
+   "photo": "assets/img/players/8F897BBF92C2E7CE794CBE8CE93875B3.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝6負　勝率25%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "12勝11負　勝率52.2%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2003年04月30日</p><br />\n<br />\n<p>2019年入段，2022年二段，2024年三段。</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/8F897BBF92C2E7CE794CBE8CE93875B3"
+  },
+  {
+   "id": "F858AB28DCA4A96A066C33E153AE680C",
+   "name": "李嘉馨",
+   "rank": "三段",
+   "photo": "assets/img/players/F858AB28DCA4A96A066C33E153AE680C.jpg",
+   "history": [
+    {
+     "label": "頭銜冠軍",
+     "value": "冠軍數：1冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "17勝11負　勝率60.7%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "19勝31負　勝率38%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2008年9月14日生，出生於臺灣新北市。 </p><br />\n<br />\n<p>2017年加入中華職業圍棋道場，2023年入段並加入中華職協新銳隊，同年二段，<br /><br />\n2024年奪得大森盃女子名人賽冠軍，跳升三段。</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2024年 </strong><br /><br />\n第7屆大森盃女子名人賽 冠軍<br /><br />\n112學年各級學校圍棋運動錦標賽-國中女子個人組 冠軍 </p><br />\n<br />\n<p><strong>2022年 </strong><br /><br />\n第22屆 全國女子圍棋公開賽 冠軍</p><br />\n<br />\n<p><strong>2021年 </strong><br /><br />\n109學年各級學校圍棋運動錦標賽-國小女子個人組 冠軍 </p><br />\n<br />\n<p><strong>2020年 </strong><br /><br />\n108學年各級學校圍棋運動錦標賽-國小女子個人組 冠軍 </p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9D%8E%E5%98%89%E9%A6%A8"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/F858AB28DCA4A96A066C33E153AE680C"
+  },
+  {
+   "id": "A994D5EC1935043B7991E0D5B047154B",
+   "name": "林瀚彰",
+   "rank": "三段",
+   "photo": "assets/img/players/A994D5EC1935043B7991E0D5B047154B.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "4勝6負　勝率40%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "9勝14負　勝率39.1%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2004年11月01日</p><br />\n<br />\n<p>2021年入段，2022年二段，2025年三段。</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/A994D5EC1935043B7991E0D5B047154B"
+  },
+  {
+   "id": "422575A04644AFD6BE4763C9A20BA3C7",
+   "name": "孫偉勛",
+   "rank": "三段",
+   "photo": "assets/img/players/422575A04644AFD6BE4763C9A20BA3C7.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝6負　勝率25%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "8勝13負　勝率38.1%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2005年03月27日</p><br />\n<br />\n<p>2021年入段，2022年二段，2025年三段<br /><br />\n </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/422575A04644AFD6BE4763C9A20BA3C7"
+  },
+  {
+   "id": "09F1EB3EA731D094DD1EA6C740EAF53D",
+   "name": "黃袖圃",
+   "rank": "三段",
+   "photo": "assets/img/players/09F1EB3EA731D094DD1EA6C740EAF53D.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "4勝6負　勝率40%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "5勝17負　勝率22.7%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2005年03月19日生，出生於臺灣臺北市。 <br /><br />\n2016~2017年加入中華職業圍棋道場，2020年入段，2022二段，2024加入中華職協新銳隊至今。 2025年三段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2017年</strong> <br /><br />\n105學年各級學校圍棋運動錦標賽-國小男子個人組 冠軍 </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/09F1EB3EA731D094DD1EA6C740EAF53D"
+  },
+  {
+   "id": "EA6735DDA07BCB49726EEDDD26C70014",
+   "name": "黃偉",
+   "rank": "三段",
+   "photo": "assets/img/players/EA6735DDA07BCB49726EEDDD26C70014.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "3勝5負　勝率37.5%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "6勝11負　勝率35.3%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1998年10月10日生，臺灣新北市人。 <br /><br />\n2013~2016年加入中華職業圍棋道場，2019年入段並加入中華職協新銳隊(~2019)，2020年二段，2025年三段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2017年</strong> <br /><br />\n第12屆榮三盃全國學生棋王賽 中學組 冠軍<br><br><strong>2016年 </strong><br /><br />\n第27回國際業餘圍棋配對賽 亞軍 (搭檔 白昕卉)</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/EA6735DDA07BCB49726EEDDD26C70014"
+  },
+  {
+   "id": "2F00F3E909704F83EF577DCA651BF421",
+   "name": "沈逸恩",
+   "rank": "三段",
+   "photo": "assets/img/players/2F00F3E909704F83EF577DCA651BF421.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績(9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "11勝10負　勝率52.4%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "7勝16負　勝率30.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2005年05月13日</p><br />\n<br />\n<p>2023年入段，同年二段，2026年三段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/2F00F3E909704F83EF577DCA651BF421"
+  },
+  {
+   "id": "06F4746CEB171C0D5428EDA5CFE69315",
+   "name": "吳彥諶",
+   "rank": "三段",
+   "photo": "assets/img/players/06F4746CEB171C0D5428EDA5CFE69315.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "15勝12負　勝率55.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝2負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "22勝25負　勝率46.8%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2009年1月20日生，出生於臺灣新北市。 <br /><br />\n2019年加入中華職業圍棋道場，2023年入段並加入中華職協新銳隊。<br /><br />\n2025年 二段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2026年 </strong><br /><br />\n2026新人王 亞軍 </p><br />\n<br />\n<p><strong>2024年 </strong><br /><br />\n112學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍 二連霸</p><br />\n<br />\n<p><br /><br />\n<strong>2023年 </strong><br /><br />\n111學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍</p><br />\n<br />\n<p><strong>2020年 </strong><br /><br />\n第15屆 榮三盃全國學生棋王賽 小學組冠軍 </p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E5%90%B3%E5%BD%A5%E8%AB%B6"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/06F4746CEB171C0D5428EDA5CFE69315"
+  },
+  {
+   "id": "7832DC10400C5CC0FCEAFB40394E9ED6",
+   "name": "蔡文河",
+   "rank": "二段",
+   "photo": "assets/img/players/7832DC10400C5CC0FCEAFB40394E9ED6.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝1負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝9負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p> </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/7832DC10400C5CC0FCEAFB40394E9ED6"
+  },
+  {
+   "id": "775267E2780B550129D345B125002307",
+   "name": "秦士",
+   "rank": "二段",
+   "photo": "assets/img/players/775267E2780B550129D345B125002307.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1987年09月13日</p><br />\n<br />\n<p>2008年鈺德盃十段賽冠軍跳升二段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2008年</strong> <br /><br />\n鈺德盃十段賽冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/775267E2780B550129D345B125002307"
+  },
+  {
+   "id": "DD1E65F813D3FC0F74757318A184B0EC",
+   "name": "王允中",
+   "rank": "二段",
+   "photo": "assets/img/players/DD1E65F813D3FC0F74757318A184B0EC.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1981年01月25日</p><br />\n<br />\n<p>2005年入段，2010年二段<br /><br />\n </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/DD1E65F813D3FC0F74757318A184B0EC"
+  },
+  {
+   "id": "A5B93221E600DDB19DEC301B9331941A",
+   "name": "許長正",
+   "rank": "二段",
+   "photo": "assets/img/players/A5B93221E600DDB19DEC301B9331941A.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1990年03月20日</p><br />\n<br />\n<p>2005年入段，2010年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/A5B93221E600DDB19DEC301B9331941A"
+  },
+  {
+   "id": "AAA5D2F511B54119D7203E9D35DD808B",
+   "name": "陳擎宇",
+   "rank": "二段",
+   "photo": "assets/img/players/AAA5D2F511B54119D7203E9D35DD808B.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1990年08月16日</p><br />\n<br />\n<p>2005年入段，2011年二段<br /><br />\n </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/AAA5D2F511B54119D7203E9D35DD808B"
+  },
+  {
+   "id": "0F0054572581E083B2A2B305CD9671C6",
+   "name": "蕭愛霖",
+   "rank": "二段",
+   "photo": "assets/img/players/0F0054572581E083B2A2B305CD9671C6.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝2負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "2勝2負　勝率50%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1989年06月09日</p><br />\n<br />\n<p>2006年入段，2012年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/0F0054572581E083B2A2B305CD9671C6"
+  },
+  {
+   "id": "8CE247A1C017225FD4067F9346748E31",
+   "name": "黃道隆",
+   "rank": "二段",
+   "photo": "assets/img/players/8CE247A1C017225FD4067F9346748E31.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1998年01月11日</p><br />\n<br />\n<p>2014年入段，2016年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/8CE247A1C017225FD4067F9346748E31"
+  },
+  {
+   "id": "0D1E5FC664B42F21CF21FF5877565C7B",
+   "name": "何承威",
+   "rank": "二段",
+   "photo": "assets/img/players/0D1E5FC664B42F21CF21FF5877565C7B.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p>簡介<br /><br />\n生日:1997年07月05日</p><br />\n<br />\n<p>2012年入段，2017年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/0D1E5FC664B42F21CF21FF5877565C7B"
+  },
+  {
+   "id": "88BC5E16030BA3E4C02E448DD20DB009",
+   "name": "余炳葟",
+   "rank": "二段",
+   "photo": "assets/img/players/88BC5E16030BA3E4C02E448DD20DB009.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2004年01月07日生，出生於臺灣台北市。 <br /><br />\n2016年入段，2018年二段。2016年加入中華職協新銳隊(~2016)。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2019年</strong> <br /><br />\n107學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2015年</strong><br /><br />\n第32屆世界青少年圍棋錦標賽少年組 亞軍 </p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n102學年各級學校圍棋運動錦標賽-國小男子個人組 冠軍<br /><br />\n第14屆韓華生命保險杯世界兒童圍棋國手戰 季軍<br /><br />\n第9屆榮三盃全國學生棋王賽 小學組冠軍<br /><br />\n </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/88BC5E16030BA3E4C02E448DD20DB009"
+  },
+  {
+   "id": "36E06BE8056630B0AA286117B14EA99E",
+   "name": "李奎漢",
+   "rank": "二段",
+   "photo": "assets/img/players/36E06BE8056630B0AA286117B14EA99E.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝4負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "3勝10負　勝率23.1%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1987年10月23日</p><br />\n<br />\n<p>2001年入段，2021年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/36E06BE8056630B0AA286117B14EA99E"
+  },
+  {
+   "id": "50A678286D3D9124EB68460F11B08E88",
+   "name": "林鈺娗",
+   "rank": "二段",
+   "photo": "assets/img/players/50A678286D3D9124EB68460F11B08E88.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "4勝9負　勝率30.8%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "9勝14負　勝率39.1%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2006年07月23日生，出生於臺灣桃園市。 <br /><br />\n2018~2019年加入中華職業圍棋道場，2020年入段並加入中華職協新銳隊(~2021)，2022年二段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2023年</strong><br /><br />\n111年中等以下學校圍棋運動錦標賽高中女子組 冠軍<strong> </strong></p><br />\n<br />\n<p><strong>2020年 </strong><br /><br />\n108年中等以下學校圍棋運動錦標賽國中女子組 亞軍 </p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n107年中等以下學校圍棋運動錦標賽國中女子組 亞軍 </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n106年中等以下學校圍棋運動錦標賽國小女子組 亞軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/50A678286D3D9124EB68460F11B08E88"
+  },
+  {
+   "id": "0AE98742F2BC82BE37B10999148A3769",
+   "name": "王智弘",
+   "rank": "二段",
+   "photo": "assets/img/players/0AE98742F2BC82BE37B10999148A3769.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝5負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "6勝9負　勝率40%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2000年9月13日生，出生於臺灣臺北市。 <br /><br />\n2017年入段，2017加入中華職協新銳隊(~2018)，2023年二段。</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/0AE98742F2BC82BE37B10999148A3769"
+  },
+  {
+   "id": "66CCCAD1DCB05AD7264B07A94F7DAAD3",
+   "name": "林柏宇",
+   "rank": "二段",
+   "photo": "assets/img/players/66CCCAD1DCB05AD7264B07A94F7DAAD3.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝2負　勝率33.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p>簡介<br /><br />\n生日:2004年07月07日</p><br />\n<br />\n<p>2018年入段，2023年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/66CCCAD1DCB05AD7264B07A94F7DAAD3"
+  },
+  {
+   "id": "B09E5E3FAB5F3FA5013162AA3D560569",
+   "name": "劉一芳",
+   "rank": "二段",
+   "photo": "assets/img/players/B09E5E3FAB5F3FA5013162AA3D560569.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝4負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝11負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1998年5月8日生，出生於臺灣桃園市。 <br /><br />\n2016~2017年加入中華職業圍棋道場，2020年入段，2023年加入中華職協新銳隊，同年晉升二段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n第20屆全國女子公開賽 冠軍</p><br />\n<br />\n<p> </p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E5%8A%89%E4%B8%80%E8%8A%B3"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/B09E5E3FAB5F3FA5013162AA3D560569"
+  },
+  {
+   "id": "4C23B9A228EAD5E3FA353CFC17192C6B",
+   "name": "黃宥騰",
+   "rank": "二段",
+   "photo": "assets/img/players/4C23B9A228EAD5E3FA353CFC17192C6B.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝2負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2007年10月29日生，出生於臺灣基隆市。 <br /><br />\n2018~2019年加入中華職業圍棋道場，2020年入段並加入中華職協新銳隊(~2020)，2023年二段。</p><br />\n<br />\n<p><strong>主要棋戰履歷<br /><br />\n2022年 </strong><br /><br />\n110學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/4C23B9A228EAD5E3FA353CFC17192C6B"
+  },
+  {
+   "id": "83D107A920C782C4AC1995F1AAFCCB4B",
+   "name": "尤浩宇",
+   "rank": "二段",
+   "photo": "assets/img/players/83D107A920C782C4AC1995F1AAFCCB4B.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝5負　勝率28.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "17勝17負　勝率50%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2006年5月17日生，出生於臺灣新北市。 <br /><br />\n2022年入段並加入中華職協新銳隊，2024年二段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p> </p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E5%B0%A4%E6%B5%A9%E5%AE%87"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/83D107A920C782C4AC1995F1AAFCCB4B"
+  },
+  {
+   "id": "932038A2F21AA24E87EF526ABFC40B55",
+   "name": "張庭維",
+   "rank": "二段",
+   "photo": "assets/img/players/932038A2F21AA24E87EF526ABFC40B55.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝1負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2003年10月29日</p><br />\n<br />\n<p>2021年入段，2024年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/932038A2F21AA24E87EF526ABFC40B55"
+  },
+  {
+   "id": "C0BD4D0B9C99262A469F4C04ADAE83B0",
+   "name": "李真雄",
+   "rank": "二段",
+   "photo": "assets/img/players/C0BD4D0B9C99262A469F4C04ADAE83B0.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝3負　勝率40%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "3勝2負　勝率60%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1994年09月15日</p><br />\n<br />\n<p>2010年入段(韓國籍)，2025年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/C0BD4D0B9C99262A469F4C04ADAE83B0"
+  },
+  {
+   "id": "FB01E247BDE33C245ED82C83417B0A84",
+   "name": "鄭予皓",
+   "rank": "二段",
+   "photo": "assets/img/players/FB01E247BDE33C245ED82C83417B0A84.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "10勝11負　勝率47.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "14勝19負　勝率42.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2012年10月9日生，出生於臺灣新北市。 <br /><br />\n2020年加入中華職業圍棋道場，2023年入段並加入中華職協新銳隊。 <br /><br />\n2025年二段</p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2024年 </strong><br /><br />\n112學年各級學校圍棋運動錦標賽-國小男子個人組 冠軍 </p><br />\n<br />\n<p> </p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E9%84%AD%E4%BA%88%E7%9A%93"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/FB01E247BDE33C245ED82C83417B0A84"
+  },
+  {
+   "id": "9D499F9D84E063199B9472622146859E",
+   "name": "董友棠",
+   "rank": "二段",
+   "photo": "assets/img/players/9D499F9D84E063199B9472622146859E.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "1勝1負　勝率50%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年11月09日</p><br />\n<br />\n<p>2008年入段，2025年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/9D499F9D84E063199B9472622146859E"
+  },
+  {
+   "id": "ACD79CE5E8DF58153703BD197D1743BD",
+   "name": "陳品樺",
+   "rank": "二段",
+   "photo": "assets/img/players/ACD79CE5E8DF58153703BD197D1743BD.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "4勝14負 　勝率30%"
+    },
+    {
+     "label": "世界賽",
+     "value": "4勝3負　勝率57.1%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "8勝24負 　勝率25%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2008年11月2日生，出生於臺灣宜蘭縣。 <br /><br />\n2021年加入中華職業圍棋道場，2023年入段並加入中華職協新銳隊。 2025年二段</p><br />\n<br />\n<p><strong>主要棋戰履歷<br /><br />\n2023年 </strong><br /><br />\n111學年各級學校圍棋運動錦標賽-國中女子個人組 冠軍</p><br />\n<br />\n<p><strong>2022年 </strong><br /><br />\n第9屆大成杯全國圍棋棋聖賽 女子組冠軍<br /><br />\n第22屆 全國女子圍棋公開賽 亞軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E9%99%B3%E5%93%81%E6%A8%BA"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/ACD79CE5E8DF58153703BD197D1743BD"
+  },
+  {
+   "id": "9D9CE3D386D8B7E6177A2CAF682FB380",
+   "name": "孫立言",
+   "rank": "二段",
+   "photo": "assets/img/players/9D9CE3D386D8B7E6177A2CAF682FB380.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "7勝11負　勝率38.9%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "14勝16負　勝率46.7%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2005年11月03日</p><br />\n<br />\n<p>2024年入段，2025年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/9D9CE3D386D8B7E6177A2CAF682FB380"
+  },
+  {
+   "id": "403CCFF3850BDA70455BBF929FCA4AB7",
+   "name": "陳映嘉",
+   "rank": "二段",
+   "photo": "assets/img/players/403CCFF3850BDA70455BBF929FCA4AB7.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "9勝11負   勝率45%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "16勝16負　勝率50%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日：2012年10月12日</p><br />\n<br />\n<p>2025年入段，2026年二段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/403CCFF3850BDA70455BBF929FCA4AB7"
+  },
+  {
+   "id": "32AEA3B47BF32E1DDF31A8EB04BB6CEF",
+   "name": "陳永奇",
+   "rank": "初段",
+   "photo": "assets/img/players/32AEA3B47BF32E1DDF31A8EB04BB6CEF.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1955年12月31日</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/32AEA3B47BF32E1DDF31A8EB04BB6CEF"
+  },
+  {
+   "id": "13457E7445F9AFA1EFBB5651322429FE",
+   "name": "李晶彬",
+   "rank": "初段",
+   "photo": "assets/img/players/13457E7445F9AFA1EFBB5651322429FE.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1990年04月28日</p><br />\n<br />\n<p>2009年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/13457E7445F9AFA1EFBB5651322429FE"
+  },
+  {
+   "id": "945647E17CE9BB405E0BAFB0867DDFAF",
+   "name": "謝東霖",
+   "rank": "初段",
+   "photo": "assets/img/players/945647E17CE9BB405E0BAFB0867DDFAF.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:1997年09月22日</p><br />\n<br />\n<p>2015年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/945647E17CE9BB405E0BAFB0867DDFAF"
+  },
+  {
+   "id": "86D4681C71D90F91ED128A3AE3CEB875",
+   "name": "簡意弘",
+   "rank": "初段",
+   "photo": "assets/img/players/86D4681C71D90F91ED128A3AE3CEB875.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2000年10月26日</p><br />\n<br />\n<p>2016年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/86D4681C71D90F91ED128A3AE3CEB875"
+  },
+  {
+   "id": "777A643554A2A7129433C1CB640D0141",
+   "name": "朱紹維",
+   "rank": "初段",
+   "photo": "assets/img/players/777A643554A2A7129433C1CB640D0141.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2001年09月26日</p><br />\n<br />\n<p>2017年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/777A643554A2A7129433C1CB640D0141"
+  },
+  {
+   "id": "03427F04E78D2C4DFD0841F2676F2390",
+   "name": "舒敬雯",
+   "rank": "初段",
+   "photo": "assets/img/players/03427F04E78D2C4DFD0841F2676F2390.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2005年06月07日</p><br />\n<br />\n<p>2020年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/03427F04E78D2C4DFD0841F2676F2390"
+  },
+  {
+   "id": "1C420292E1C7DCBAFD8B8875704EAA8B",
+   "name": "劉川霆",
+   "rank": "初段",
+   "photo": "assets/img/players/1C420292E1C7DCBAFD8B8875704EAA8B.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝3負　勝率40%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2002年02月19日</p><br />\n<br />\n<p>2020年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/1C420292E1C7DCBAFD8B8875704EAA8B"
+  },
+  {
+   "id": "E5FDC6FC1538CCA3F43846503E7B0D98",
+   "name": "李漢驎",
+   "rank": "初段",
+   "photo": "assets/img/players/E5FDC6FC1538CCA3F43846503E7B0D98.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (8/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "1勝2負　勝率33.3%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2006年4月20日</p><br />\n<br />\n<p>2021年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/E5FDC6FC1538CCA3F43846503E7B0D98"
+  },
+  {
+   "id": "8AB03BA6DA9332148C3AC88706421907",
+   "name": "蕭睿杉",
+   "rank": "初段",
+   "photo": "assets/img/players/8AB03BA6DA9332148C3AC88706421907.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績(9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝2負　勝率33.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝1負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2010年08月05日</p><br />\n<br />\n<p>2022年入段<br /><br />\n </p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/8AB03BA6DA9332148C3AC88706421907"
+  },
+  {
+   "id": "E2147DAF60476BEB86CB683B107B3690",
+   "name": "陳柏菘",
+   "rank": "初段",
+   "photo": "assets/img/players/E2147DAF60476BEB86CB683B107B3690.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "3勝4負　勝率42.9%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "1勝2負　勝率33.3%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2003年03月12日</p><br />\n<br />\n<p>2023年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/E2147DAF60476BEB86CB683B107B3690"
+  },
+  {
+   "id": "A3086B92CB5CF060FA04DDA30E0A2058",
+   "name": "黃家胤",
+   "rank": "初段",
+   "photo": "assets/img/players/A3086B92CB5CF060FA04DDA30E0A2058.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "3勝5負　勝率37.5%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝2負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2007年08月14日</p><br />\n<br />\n<p>2023年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/A3086B92CB5CF060FA04DDA30E0A2058"
+  },
+  {
+   "id": "EE45F7AC217BD46C293D002F1CDFB7DB",
+   "name": "謝承翰",
+   "rank": "初段",
+   "photo": "assets/img/players/EE45F7AC217BD46C293D002F1CDFB7DB.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝5負　勝率16.7%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝8負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2009年03月26日</p><br />\n<br />\n<p>2023年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/EE45F7AC217BD46C293D002F1CDFB7DB"
+  },
+  {
+   "id": "ACBF499C50310A39B5ED50FBD5B1E4E3",
+   "name": "柯沛辰",
+   "rank": "初段",
+   "photo": "assets/img/players/ACBF499C50310A39B5ED50FBD5B1E4E3.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝3負　勝率40%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "1勝3負　勝率25%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2010年01月17日</p><br />\n<br />\n<p>2024年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/ACBF499C50310A39B5ED50FBD5B1E4E3"
+  },
+  {
+   "id": "EA39A1946C438D77F69289CA6789016C",
+   "name": "徐銘均",
+   "rank": "初段",
+   "photo": "assets/img/players/EA39A1946C438D77F69289CA6789016C.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝1負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝3負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2007年04月12日</p><br />\n<br />\n<p>2024年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/EA39A1946C438D77F69289CA6789016C"
+  },
+  {
+   "id": "212B6175C46FA774BF7A6970C616FED6",
+   "name": "王惇楷",
+   "rank": "初段",
+   "photo": "assets/img/players/212B6175C46FA774BF7A6970C616FED6.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝4負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "3勝7負　勝率30%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2007年03月13日</p><br />\n<br />\n<p>2024年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/212B6175C46FA774BF7A6970C616FED6"
+  },
+  {
+   "id": "B15AD71345F8FF8D7E2E8FC2D7037F82",
+   "name": "王紫涵",
+   "rank": "初段",
+   "photo": "assets/img/players/B15AD71345F8FF8D7E2E8FC2D7037F82.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝3負　勝率25%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "1勝4負　勝率20%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2010年10月29日</p><br />\n<br />\n<p>2024年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/B15AD71345F8FF8D7E2E8FC2D7037F82"
+  },
+  {
+   "id": "49D6C8A4D62E0918E9CB8628417A5155",
+   "name": "粟睦蓉",
+   "rank": "初段",
+   "photo": "assets/img/players/49D6C8A4D62E0918E9CB8628417A5155.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝1負　勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日:2007年11月08日</p><br />\n<br />\n<p>2024年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/49D6C8A4D62E0918E9CB8628417A5155"
+  },
+  {
+   "id": "9A6C5B763F85D75AFCB337502A485757",
+   "name": "陳加栩",
+   "rank": "初段",
+   "photo": "assets/img/players/9A6C5B763F85D75AFCB337502A485757.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝0負   勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日：2013年09月23日</p><br />\n<br />\n<p>2025年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/9A6C5B763F85D75AFCB337502A485757"
+  },
+  {
+   "id": "465B233177CF9525D2CD7B642B932693",
+   "name": "戴旭辰",
+   "rank": "初段",
+   "photo": "assets/img/players/465B233177CF9525D2CD7B642B932693.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝1負   勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝4負   勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日：2010年05月18日</p><br />\n<br />\n<p>2025年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/465B233177CF9525D2CD7B642B932693"
+  },
+  {
+   "id": "DBB39646C51ABED6B86C346731EA8C1E",
+   "name": "林佾緯",
+   "rank": "初段",
+   "photo": "assets/img/players/DBB39646C51ABED6B86C346731EA8C1E.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "2勝5負   勝率28.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "2勝7負   勝率22.2%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日：2006年06月17日</p><br />\n<br />\n<p>2025年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/DBB39646C51ABED6B86C346731EA8C1E"
+  },
+  {
+   "id": "D22D25EACDA34CD7C1E02C36CB6DD873",
+   "name": "林律安",
+   "rank": "初段",
+   "photo": "assets/img/players/D22D25EACDA34CD7C1E02C36CB6DD873.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "0勝1負   勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日：2005年04月27日</p><br />\n<br />\n<p>2025年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/D22D25EACDA34CD7C1E02C36CB6DD873"
+  },
+  {
+   "id": "BB19A81D2A276320E28F25EFC92E0747",
+   "name": "黃柏人",
+   "rank": "初段",
+   "photo": "assets/img/players/BB19A81D2A276320E28F25EFC92E0747.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "4勝9負　勝率30.8%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日：2011年11月12日</p><br />\n<br />\n<p>2026年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/BB19A81D2A276320E28F25EFC92E0747"
+  },
+  {
+   "id": "04F4C5C9AE6905E6C7428ADF5B5498D7",
+   "name": "吳君成",
+   "rank": "初段",
+   "photo": "assets/img/players/04F4C5C9AE6905E6C7428ADF5B5498D7.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "5勝8負　勝率38.5%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日：2013年4月29日</p><br />\n<br />\n<p>2026年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/04F4C5C9AE6905E6C7428ADF5B5498D7"
+  },
+  {
+   "id": "CDF2A5819244A0A6FF8FB6E06DAAF205",
+   "name": "蔡明叡",
+   "rank": "初段",
+   "photo": "assets/img/players/CDF2A5819244A0A6FF8FB6E06DAAF205.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "5勝5負　勝率50%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日：2010年9月8日</p><br />\n<br />\n<p>2026年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/CDF2A5819244A0A6FF8FB6E06DAAF205"
+  },
+  {
+   "id": "AD9C93B9FA23345BBB7EA4037B249B0D",
+   "name": "王柏勛",
+   "rank": "初段",
+   "photo": "assets/img/players/AD9C93B9FA23345BBB7EA4037B249B0D.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "1勝5負　勝率16.7%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n生日：2005年9月9日</p><br />\n<br />\n<p>2026年入段</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/AD9C93B9FA23345BBB7EA4037B249B0D"
+  }
+ ]
+}

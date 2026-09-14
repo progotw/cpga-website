@@ -1,0 +1,4 @@
+# Netlify 只發布 site/ 這個資料夾，scripts/ 與 .github/ 不會被公開存取。
+[build]
+  publish = "site"
+  command = ""

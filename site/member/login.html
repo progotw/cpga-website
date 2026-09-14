@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>棋士專區登入｜中華職業圍棋協會</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body class="member-area">
+<div id="site-header"></div>
+
+<section class="section goban-bg" style="min-height:calc(100vh - 68px);display:grid;align-items:center">
+  <div class="wrap" style="max-width:920px">
+    <div class="grid" style="grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg)">
+
+      <div style="background:var(--ink);color:#b9bcc3;padding:44px 38px;display:flex;flex-direction:column;justify-content:center">
+        <span class="tag tag--dark" style="align-self:flex-start">棋士專區</span>
+        <h2 style="color:#fff;margin:1rem 0 .6em;font-size:1.6rem">專屬於職業棋士的<br>線上服務</h2>
+        <ul style="list-style:none;padding:0;margin:0;font-size:.92rem">
+          <li style="margin-bottom:10px">▦　賽程行事曆（月曆／列表雙模式）</li>
+          <li style="margin-bottom:10px">✉　內部公告（非公開會務訊息）</li>
+          <li style="margin-bottom:10px">＄　撥款時程與個人撥款紀錄</li>
+          <li style="margin-bottom:10px">▲　升段進度與排名查詢</li>
+          <li style="margin-bottom:10px">◍　個人資料維護</li>
+          <li>▤　表單與規則下載</li>
+        </ul>
+        <p style="font-size:.82rem;color:#6f757f;margin:2rem 0 0">
+          帳號由協會統一開通。尚未取得帳號者，請洽秘書處（02-2702-8898 轉 131、132）。
+        </p>
+      </div>
+
+      <div style="padding:44px 38px">
+        <h1 style="font-size:1.5rem;margin-bottom:.3em">登入</h1>
+        <p class="muted" style="font-size:.9rem">請輸入協會核發的棋士帳號與密碼。</p>
+
+        <div class="callout callout--accent" style="margin-bottom:22px">
+          <p class="mb-0" style="font-size:.84rem">
+            <strong>展示模式</strong>：此登入為前端示意，未串接後端驗證。
+            直接點「登入」即可以範例棋士身分進入專區預覽。
+          </p>
+        </div>
+
+        <form id="loginForm">
+          <div class="field">
+            <label for="lgId">棋士帳號</label>
+            <input type="text" id="lgId" placeholder="CPGA-0087" autocomplete="username">
+          </div>
+          <div class="field">
+            <label for="lgPw">密碼</label>
+            <input type="password" id="lgPw" placeholder="••••••••" autocomplete="current-password">
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:.86rem">
+            <label style="display:flex;gap:7px;align-items:center;font-weight:400;margin:0">
+              <input type="checkbox" style="width:auto"> 記住我
+            </label>
+            <a href="#" onclick="alert('請洽協會秘書處協助重設密碼：02-2702-8898 轉 131、132。');return false;">忘記密碼？</a>
+          </div>
+          <button class="btn btn-accent btn-block" type="submit">登入</button>
+        </form>
+
+        <p class="form-note mt-2 mb-0">
+          非職業棋士請前往 <a href="../membership/index.html">加入會員</a>，
+          或返回 <a href="../index.html">協會首頁</a>。
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/member.js"></script>
+<script>
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  /* 展示用：不驗證帳密，直接以 data.js 的範例棋士身分登入。
+     正式版請改為呼叫後端登入 API，並由伺服器建立 Session。 */
+  CPGA_MEMBER.login({
+    name: MEMBER_PROFILE.name,
+    rank: MEMBER_PROFILE.rank,
+    id: MEMBER_PROFILE.id
+  });
+  var next = new URLSearchParams(location.search).get('next');
+  location.href = next && next.indexOf('//') === -1 ? next : 'index.html';
+});
+</script>
+</body>
+</html>

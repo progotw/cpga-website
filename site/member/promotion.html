@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>升段進度／排名查詢｜棋士專區</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body class="member-area" data-member-page="promo">
+<div id="site-header"></div>
+
+<section class="page-hero" style="padding:44px 0 40px">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><a href="index.html">棋士專區</a><span class="sep">/</span><span>升段進度／排名</span></nav>
+    <h1 style="font-size:1.8rem">升段進度／排名查詢</h1>
+    <p>目前段位、累計積分、距離下一段位所需分數與年度排名。</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="member-shell">
+      <div id="member-side"></div>
+
+      <div>
+        <div class="panel">
+          <div class="panel__head">
+            <h2 style="font-size:1.2rem">升段進度</h2>
+            <span class="muted" style="font-size:.84rem">積分結算至 2026.09.05</span>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:20px">
+            <div style="font-family:var(--serif);font-size:2.4rem;color:var(--ink);font-weight:700" id="curRank">—</div>
+            <div style="color:var(--ink-4);font-size:1.4rem">→</div>
+            <div style="font-family:var(--serif);font-size:2.4rem;color:var(--wood-deep);font-weight:700" id="nextRank">—</div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:4px">
+            <span class="muted">累計積分</span>
+            <strong style="color:var(--ink)" id="ptsText">—</strong>
+          </div>
+          <div class="progress" style="height:12px"><div class="progress__bar" id="ptsBar" style="width:0%"></div></div>
+          <p class="muted" style="font-size:.88rem" id="ptsRemain">—</p>
+
+          <div class="grid grid-4 mt-2">
+            <div class="stat-tile"><div class="stat-tile__label">年度勝率</div>
+              <div class="stat-tile__value" id="wr">—</div></div>
+            <div class="stat-tile"><div class="stat-tile__label">積分排名</div>
+              <div class="stat-tile__value" id="rk">—</div>
+              <div class="stat-tile__sub">全體職業棋士</div></div>
+            <div class="stat-tile"><div class="stat-tile__label">獎金排名</div>
+              <div class="stat-tile__value" id="pr">—</div>
+              <div class="stat-tile__sub">2026 年度</div></div>
+            <div class="stat-tile"><div class="stat-tile__label">年度出賽</div>
+              <div class="stat-tile__value">14</div>
+              <div class="stat-tile__sub">最低要求 6 局</div></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__head">
+            <h2 style="font-size:1.2rem">近期對局積分</h2>
+            <a class="btn btn-ghost btn-sm" href="../events/rules.html">積分規則 →</a>
+          </div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>日期</th><th>賽事</th><th>對手</th><th style="width:70px">結果</th><th class="num" style="width:80px">積分</th></tr></thead>
+              <tbody id="resultBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="callout callout--accent">
+          <p class="mb-0" style="font-size:.9rem">
+            <strong>提醒：</strong>積分達標仍須符合年度最低出賽局數與會費繳納規定，
+            始得列入晉升名單。詳見 <a href="../events/promotion.html">晉升辦法</a>。
+            <br>本頁數據於第二階段採<strong>手動更新版</strong>，第四階段將與賽事系統即時串接。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/member.js"></script>
+<script>
+document.addEventListener('cpga:ready', function () {
+  var p = MY_PROMOTION;
+  var pct = Math.round(p.points / p.pointsNeeded * 100);
+
+  document.getElementById('curRank').textContent = p.currentRank;
+  document.getElementById('nextRank').textContent = p.nextRank;
+  document.getElementById('ptsText').textContent = p.points + ' / ' + p.pointsNeeded + ' 分（' + pct + '%）';
+  document.getElementById('ptsBar').style.width = pct + '%';
+  document.getElementById('ptsRemain').innerHTML =
+    '距離 ' + p.nextRank + ' 門檻尚需 <strong style="color:var(--accent)">' +
+    (p.pointsNeeded - p.points) + ' 分</strong>';
+
+  document.getElementById('wr').textContent = p.winRate;
+  document.getElementById('rk').textContent = '第 ' + p.rankOverall + ' 名';
+  document.getElementById('pr').textContent = '第 ' + p.prizeRank + ' 名';
+
+  document.getElementById('resultBody').innerHTML = p.recentResults.map(function (r) {
+    var win = r.result === '勝';
+    return '<tr><td class="num">' + fmtDate(r.date) + '</td>' +
+      '<td>' + r.event + '</td><td class="muted">' + r.opponent + '</td>' +
+      '<td><span class="badge-status ' + (win ? 'badge-status--done' : 'badge-status--pending') + '">' + r.result + '</span></td>' +
+      '<td class="num"><strong style="color:var(--ink)">' + r.points + '</strong></td></tr>';
+  }).join('');
+});
+</script>
+</body>
+</html>

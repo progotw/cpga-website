@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>段位／資格制度｜中華職業圍棋協會</title>
+<meta name="description" content="職業棋士段位分級、資格取得方式與現行段位分布。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="events">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><a href="index.html">賽事專區</a><span class="sep">/</span><span>段位／資格制度</span></nav>
+    <h1>段位／資格制度</h1>
+    <p>職業棋士段位自初段至九段，共九級。九段為最高段位。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-aside" style="grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:start">
+      <div class="prose">
+        <h2>職業棋士資格的取得</h2>
+        <p>
+          職業棋士資格須通過本會與海峰棋院共同辦理之<strong>職業棋士甄選</strong>取得，
+          分為<strong>社會組</strong>與<strong>院生組</strong>兩種管道。
+          通過甄選者授予<strong>初段</strong>，並登錄為本會職業棋士。
+        </p>
+        <p>
+          社會組甄選的參賽資格、比賽方式與相關規範，詳見
+          <a href="qualification.html">職業棋士甄選</a>；
+          院生組甄選辦法另行公告。
+        </p>
+
+        <h2>段位分級</h2>
+        <p>
+          段位由低至高為：初段、二段、三段、四段、五段、六段、七段、八段、九段。
+          現行本會職業棋士的段位分布如右（資料取自棋士名錄）。
+        </p>
+
+        <h2>段位晉升</h2>
+        <p>
+          段位晉升依本會晉段相關規定辦理，晉段結果以
+          <strong><a href="../news/index.html?cat=notice">協會公告</a></strong>為準。
+          例如「升段公告 — 簡靖庭七段晉升職業八段」即屬此類公告。
+        </p>
+        <div class="callout callout--accent">
+          <p class="mb-0">
+            本會尚未於官網公開完整的晉段積分辦法。
+            棋士如需查詢個人晉段進度，請洽秘書處，或登入
+            <a href="../member/login.html">棋士專區</a>。
+          </p>
+        </div>
+
+        <h2>業餘段級位</h2>
+        <p>
+          業餘段級位由<strong>中華民國圍棋協會</strong>或<strong>中國圍棋會</strong>核發證書認定，
+          非由本會授予。職業棋士甄選要求業餘 6 段以上（含）並持前述單位核發之證書。
+        </p>
+
+        <div class="callout callout--jade mt-2">
+          <p class="mb-0">
+            歷年入段名單與升段公告，請見
+            <a href="../news/index.html?cat=notice">公告</a>；
+            現任職業棋士名單請見 <a href="../players/index.html">棋士名錄</a>。
+          </p>
+        </div>
+      </div>
+
+      <aside class="stack">
+        <div class="card">
+          <h3 style="font-size:1.05rem">現行段位分布</h3>
+          <div id="danChart"><p class="muted mb-0">載入中…</p></div>
+          <p class="src-note mt-2 mb-0" id="danSrc"></p>
+        </div>
+        <div class="card">
+          <h3 style="font-size:1.05rem">相關頁面</h3>
+          <ul style="list-style:none;padding:0;margin:0;font-size:.92rem">
+            <li style="margin-bottom:8px"><a href="qualification.html">職業棋士甄選</a></li>
+            <li style="margin-bottom:8px"><a href="apply.html">甄選簡章與報名</a></li>
+            <li style="margin-bottom:8px"><a href="rules.html">賽制／競賽規則</a></li>
+            <li><a href="../players/index.html">職業棋士名錄</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/players.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  var P = window.CPGA_PLAYERS;
+  P.load().then(function (data) {
+    var all = data.players || [];
+    var counts = P.RANK_ORDER.map(function (r) {
+      return { rank: r, n: all.filter(function (p) { return p.rank === r; }).length };
+    }).filter(function (x) { return x.n > 0; });
+    var max = Math.max.apply(null, counts.map(function (c) { return c.n; }));
+
+    document.getElementById('danChart').innerHTML = counts.map(function (c) {
+      return '<div style="display:grid;grid-template-columns:52px 1fr 34px;gap:10px;align-items:center;margin-bottom:10px">' +
+        '<span style="font-weight:500;color:var(--ink);font-size:.92rem">' + c.rank + '</span>' +
+        '<span style="display:block;height:18px;background:var(--paper-3);border-radius:4px;overflow:hidden">' +
+          '<span style="display:block;height:100%;width:' + (c.n / max * 100) + '%;background:var(--ink);border-radius:4px"></span>' +
+        '</span>' +
+        '<span class="muted" style="text-align:right;font-variant-numeric:tabular-nums;font-size:.88rem">' + c.n + '</span>' +
+        '</div>';
+    }).join('');
+
+    document.getElementById('danSrc').textContent = '共 ' + all.length + ' 位職業棋士';
+  }).catch(function () {
+    document.getElementById('danChart').innerHTML = '<p class="muted mb-0">資料載入失敗。</p>';
+  });
+})();
+</script>
+</body>
+</html>

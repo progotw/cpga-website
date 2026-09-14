@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>賽事專區｜中華職業圍棋協會</title>
+<meta name="description" content="中華職業圍棋協會賽事總覽：職業賽事、世界賽、業餘賽事、賽制積分與段位制度。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="events">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><span>賽事專區</span></nav>
+    <h1>賽事專區</h1>
+    <p>本會年度職業賽事、國際賽事與業餘賽事，以及賽制、積分、段位與甄選等制度說明。</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="grid grid-3">
+      <a class="card card--link card-link" href="pro.html">
+        <div class="card__icon">◎</div><h3>職業賽事列表</h3>
+        <p class="muted" style="font-size:.92rem">四大頭銜戰與各項年度職業賽事的賽制、獎金與期程。</p>
+        <span class="card__more">查看列表 →</span>
+      </a>
+      <a class="card card--link card-link" href="world.html">
+        <div class="card__icon">◈</div><h3>世界賽</h3>
+        <p class="muted" style="font-size:.92rem">國際賽事參賽紀錄與代表選拔方式。</p>
+        <span class="card__more">國際賽事 →</span>
+      </a>
+      <a class="card card--link card-link" href="amateur.html">
+        <div class="card__icon">✦</div><h3>業餘賽事</h3>
+        <p class="muted" style="font-size:.92rem">協會盃、學生賽等業餘賽事與報名資訊。</p>
+        <span class="card__more">業餘賽事 →</span>
+      </a>
+      <a class="card card--link card-link" href="qualification.html">
+        <div class="card__icon">◍</div><h3>職業棋士甄選</h3>
+        <p class="muted" style="font-size:.92rem">入段資格、甄選流程與名額說明。</p>
+        <span class="card__more">甄選制度 →</span>
+      </a>
+      <a class="card card--link card-link" href="rules.html">
+        <div class="card__icon">▤</div><h3>賽制／積分規則</h3>
+        <p class="muted" style="font-size:.92rem">對局規則、用時規定與積分計算方式。</p>
+        <span class="card__more">競賽規則 →</span>
+      </a>
+      <a class="card card--link card-link" href="dan-system.html">
+        <div class="card__icon">◆</div><h3>段位／資格制度</h3>
+        <p class="muted" style="font-size:.92rem">段位分級、資格維持與晉升辦法。</p>
+        <span class="card__more">段位制度 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="wrap">
+    <div class="section-head section-head--row">
+      <div>
+        <span class="eyebrow">Upcoming</span>
+        <h2>近期賽程</h2>
+        <p>各賽事已排定的對局日程。</p>
+      </div>
+      <div class="legend" id="schedLegend"></div>
+    </div>
+    <div class="table-wrap">
+      <table class="table">
+        <thead><tr><th style="width:120px">日期</th><th style="width:96px">時間</th><th>賽事</th></tr></thead>
+        <tbody id="schedBody"></tbody>
+      </table>
+    </div>
+    <p class="src-note mt-2" id="schedSrc"></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head section-head--row">
+      <div><span class="eyebrow">All Events</span><h2>年度賽事一覽</h2>
+        <p>本會主辦或協辦之賽事，實際期程以各賽事公告為準。</p></div>
+      <a class="btn btn-ghost btn-sm" href="../news/index.html?cat=match">比賽訊息 →</a>
+    </div>
+
+    <div class="tabs" id="evTabs"></div>
+
+    <div class="table-wrap">
+      <table class="table">
+        <thead><tr><th>賽事名稱</th><th style="width:150px">最新冠軍</th><th style="width:110px">備註</th><th style="width:90px"></th></tr></thead>
+        <tbody id="evBody"></tbody>
+      </table>
+    </div>
+    <p class="src-note mt-2" id="gamesSrc"></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div class="callout">
+        <h3 style="font-size:1.1rem">現場拍攝規範</h3>
+        <p class="mb-0" style="font-size:.94rem">
+          所有職業賽事於<strong>開賽前 15 分鐘</strong>開放媒體與現場人員拍攝，
+          開賽後請勿攝影或發出聲響，以維護對局品質。相關照片將整理於
+          <a href="../gallery/index.html">賽事花絮</a>。
+        </p>
+      </div>
+      <div class="callout callout--accent">
+        <h3 style="font-size:1.1rem">棋士請注意</h3>
+        <p class="mb-0" style="font-size:.94rem">
+          個人賽程、報到時間異動與請假申請，請登入
+          <a href="../member/login.html">棋士專區</a> 查看行事曆與內部公告。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/schedule.js"></script>
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script>
+/* 近期賽程：真實賽事行事曆 */
+(function () {
+  var S = window.CPGA_SCHEDULE;
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  S.load().then(function (data) {
+    var today = S.today();
+    var rows = (data.events || [])
+      .filter(function (e) { return e.date >= today; })
+      .sort(function (a, b) {
+        return a.date === b.date
+          ? String(a.time || '').localeCompare(String(b.time || ''))
+          : a.date.localeCompare(b.date);
+      });
+
+    document.getElementById('schedBody').innerHTML = rows.length
+      ? rows.map(function (e) {
+          return '<tr><td class="num">' + fmtDate(e.date) + '</td>' +
+            '<td class="num">' + esc(S.timeLabel(e)) + '</td>' +
+            '<td><span class="legend__dot ' + S.slotClass(e.series_slot) + '" style="background:currentColor"></span>' +
+            '<strong style="color:var(--ink)">' + esc(e.name) + '</strong>' +
+            (e.round ? ' <span class="muted">' + esc(e.round) + '</span>' : '') + '</td></tr>';
+        }).join('')
+      : '<tr><td colspan="3" class="muted" style="text-align:center;padding:28px">近期無排定賽程。</td></tr>';
+
+    var labels = S.seriesLabels(rows.length ? rows : (data.events || []));
+    document.getElementById('schedLegend').innerHTML = Object.keys(labels)
+      .sort(function (a, b) { return a - b; })
+      .map(function (s) {
+        return '<span><span class="legend__dot ev-s' + s + '" style="background:currentColor"></span>' +
+          esc(labels[s]) + '</span>';
+      }).join('');
+
+    document.getElementById('schedSrc').innerHTML =
+      '資料來源：<strong>' + esc(data.source) + '</strong>　·　更新於 ' + S.generatedLabel(data) +
+      '　·　涵蓋 ' + fmtDate(data.range.from) + ' – ' + fmtDate(data.range.to) +
+      '<br>＊ 標示星號的開賽時間為依慣例推定，非日曆原始資料，實際時間以協會公告為準。';
+  }).catch(function () {
+    document.getElementById('schedBody').innerHTML =
+      '<tr><td colspan="3" class="muted" style="text-align:center;padding:28px">賽程資料載入失敗。</td></tr>';
+  });
+})();
+
+/* 賽事一覽：真實賽事清單 */
+(function () {
+  var esc = window.CPGA_NEWS.esc;
+  var body = document.getElementById('evBody');
+  var tabs = document.getElementById('evTabs');
+  var all = [];
+
+  function render(t) {
+    var rows = all.filter(function (g) { return t === 'all' || g.category === t; });
+    body.innerHTML = rows.length ? rows.map(function (g) {
+      return '<tr>' +
+        '<td><strong style="color:var(--ink)">' + esc(g.name) + '</strong>' +
+          '<span class="muted" style="display:block;font-size:.8rem">' + esc(g.category) + '</span></td>' +
+        '<td>' + (g.champion
+          ? '<span class="muted" style="font-size:.8rem">' + esc(g.champLabel) + '</span><br>' +
+            '<strong style="color:var(--ink)">' + esc(g.champion) + '</strong>'
+          : '<span class="muted">—</span>') + '</td>' +
+        '<td class="muted">' + (esc(g.note) || '—') + '</td>' +
+        '<td>' + (g.url
+          ? '<a href="' + esc(g.url) + '" target="_blank" rel="noopener" style="font-size:.84rem">詳情 ↗</a>'
+          : '') + '</td></tr>';
+    }).join('') : '<tr><td colspan="4" class="muted" style="text-align:center;padding:28px">此分類沒有賽事。</td></tr>';
+  }
+
+  window.CPGA_GAMES.load().then(function (data) {
+    /* 只列現行賽事，已停辦者不顯示 */
+    all = (data.games || []).filter(function (g) { return g.active; });
+    var cats = [];
+    all.forEach(function (g) { if (cats.indexOf(g.category) === -1) cats.push(g.category); });
+
+    tabs.innerHTML = '<button class="tab is-active" data-t="all">全部</button>' +
+      cats.map(function (c) {
+        var n = all.filter(function (g) { return g.category === c; }).length;
+        return '<button class="tab" data-t="' + esc(c) + '">' + esc(c) + '（' + n + '）</button>';
+      }).join('');
+    tabs.addEventListener('click', function (e) {
+      var b = e.target.closest('.tab'); if (!b) return;
+      this.querySelectorAll('.tab').forEach(function (x) { x.classList.remove('is-active'); });
+      b.classList.add('is-active');
+      render(b.dataset.t);
+    });
+
+    document.getElementById('gamesSrc').innerHTML =
+      '賽事資料來源：<strong>' + esc(data.source) + '</strong>　·　' +
+      '現行賽事 ' + all.length + ' 項（不含已停辦）。';
+    render('all');
+  }).catch(function () {
+    body.innerHTML = '<tr><td colspan="4" class="muted" style="text-align:center;padding:28px">賽事資料載入失敗。</td></tr>';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Netlify CLI 的本機狀態
+.netlify
+
+# Python
+__pycache__/
+*.pyc
+
+# 系統檔
+Thumbs.db
+.DS_Store

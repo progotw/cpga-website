@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>棋士介紹｜中華職業圍棋協會</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+<style>
+  /* 棋戰履歷為原站富文字內容，統一排版 */
+  .player-bio p { margin: 0 0 .9em; }
+  .player-bio strong { color: var(--ink); }
+  .player-bio br + br { display: none; }
+</style>
+</head>
+<body data-nav="players">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb">
+      <a href="../index.html">首頁</a><span class="sep">/</span>
+      <a href="index.html">職業棋士</a><span class="sep">/</span><span id="bcName">棋士介紹</span>
+    </nav>
+    <h1 id="pName">—</h1>
+    <p id="pSub"></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div id="profileWrap"><p class="muted">載入中…</p></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/players.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  var P = window.CPGA_PLAYERS;
+  var id = new URLSearchParams(location.search).get('id');
+  var wrap = document.getElementById('profileWrap');
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  P.load().then(function (data) {
+    var p = P.byId(data, id);
+    if (!p) {
+      document.getElementById('pName').textContent = '找不到此棋士';
+      wrap.innerHTML = '<p><a href="index.html">← 回到棋士名錄</a></p>';
+      return;
+    }
+
+    var list = data.players || [];
+    var idx = list.indexOf(p);
+    var prev = list[idx - 1], next = list[idx + 1];
+
+    document.title = p.name + ' ' + p.rank + '｜中華職業圍棋協會';
+    document.getElementById('bcName').textContent = p.name;
+    document.getElementById('pName').textContent = p.name + '　' + p.rank;
+    /* history 可能有「頭銜冠軍」與「歷史成績」兩列，順序不固定 */
+    var hists = p.history || [];
+    var record = hists.filter(function (h) { return /冠軍數/.test(h.value) || /歷史成績/.test(h.label); })[0];
+    document.getElementById('pSub').textContent =
+      record ? record.value : (hists[0] ? hists[0].label + '：' + hists[0].value : '本會登錄職業棋士');
+
+    var photo = p.photo
+      ? '<img src="' + esc(P.photoUrl(p)) + '" alt="' + esc(p.name) + '" ' +
+        'style="width:100%;aspect-ratio:1;object-fit:cover;display:block">'
+      : '<div class="player-card__photo"><span class="player-card__initial">' +
+        esc(p.name.charAt(0)) + '</span></div>';
+
+    var seasonTiles = (p.season || []).map(function (s) {
+      return '<div class="stat-tile">' +
+        '<div class="stat-tile__label">' + esc(s.label) + '</div>' +
+        '<div class="stat-tile__value" style="font-size:1.25rem">' + esc(s.value) + '</div></div>';
+    }).join('');
+
+    var linkBtns = (p.links || []).map(function (l) {
+      return '<a class="btn btn-ghost btn-sm" href="' + esc(l.url) + '" target="_blank" rel="noopener">' +
+        esc(l.label) + ' ↗</a>';
+    }).join('');
+
+    wrap.innerHTML =
+      '<div class="grid grid-aside" style="grid-template-columns:300px minmax(0,1fr);gap:44px">' +
+
+        '<div class="stack">' +
+          '<div class="card" style="padding:0;overflow:hidden;position:relative">' +
+            photo +
+            '<span class="player-card__rank" style="top:14px;right:14px">' + esc(p.rank) + '</span>' +
+          '</div>' +
+          (hists.length
+            ? '<div class="card">' + hists.map(function (h, i) {
+                return '<div' + (i ? ' style="margin-top:14px;padding-top:14px;border-top:1px solid var(--line)"' : '') + '>' +
+                  '<h3 style="font-size:.86rem;font-family:var(--sans);letter-spacing:.06em;color:var(--ink-4);margin-bottom:4px">' +
+                  esc(h.label) + '</h3>' +
+                  '<p class="mb-0" style="color:var(--ink);font-weight:500">' + esc(h.value) + '</p></div>';
+              }).join('') + '</div>'
+            : '') +
+          (linkBtns
+            ? '<div class="card"><h3 style="font-size:1.05rem">相關連結</h3>' +
+              '<div style="display:flex;flex-direction:column;gap:8px">' + linkBtns + '</div></div>'
+            : '') +
+        '</div>' +
+
+        '<div>' +
+          (seasonTiles
+            ? '<div class="section-head" style="margin-bottom:16px"><h2 style="font-size:1.3rem">' +
+              esc(p.seasonLabel || '年度成績') + '</h2></div>' +
+              '<div class="grid grid-3" style="margin-bottom:32px">' + seasonTiles + '</div>'
+            : '') +
+
+          '<article class="prose player-bio">' + (p.body || '<p class="muted">暫無簡介。</p>') + '</article>' +
+
+          '<p class="src-note mt-3">資料來源：<strong>' + esc(data.source) + '</strong>' +
+            (p.source ? '　·　<a href="' + esc(p.source) + '" target="_blank" rel="noopener">原始頁面 ↗</a>' : '') +
+          '</p>' +
+
+          '<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;justify-content:space-between">' +
+            (prev ? '<a class="btn btn-ghost btn-sm" href="profile.html?id=' + encodeURIComponent(prev.id) + '">← ' + esc(prev.name) + '</a>' : '<span></span>') +
+            '<a class="btn btn-ghost btn-sm" href="index.html">回到棋士名錄</a>' +
+            (next ? '<a class="btn btn-ghost btn-sm" href="profile.html?id=' + encodeURIComponent(next.id) + '">' + esc(next.name) + ' →</a>' : '<span></span>') +
+          '</div>' +
+        '</div>' +
+      '</div>';
+  }).catch(function (err) {
+    document.getElementById('pName').textContent = '載入失敗';
+    wrap.innerHTML = '<p class="muted">無法載入棋士資料（' + esc(err.message) + '）。</p>';
+  });
+})();
+</script>
+</body>
+</html>

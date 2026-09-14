@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>撥款時程與紀錄｜棋士專區</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body class="member-area" data-member-page="pay">
+<div id="site-header"></div>
+
+<section class="page-hero" style="padding:44px 0 40px">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><a href="index.html">棋士專區</a><span class="sep">/</span><span>撥款時程與紀錄</span></nav>
+    <h1 style="font-size:1.8rem">撥款時程與紀錄</h1>
+    <p>「什麼時候會匯款」看撥款時程公告；「這筆匯款是哪些項目」看我的撥款紀錄。</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="member-shell">
+      <div id="member-side"></div>
+
+      <div>
+        <!-- 撥款時程公告（全體共通，不涉個資） -->
+        <div class="panel">
+          <div class="panel__head">
+            <h2 style="font-size:1.2rem">撥款時程公告</h2>
+            <span class="muted" style="font-size:.84rem">全體棋士共通資訊</span>
+          </div>
+          <p class="muted" style="font-size:.92rem">
+            對局費、獎金與差旅費依下列時程辦理撥款。單據截止日前送達者，併入當期撥款；
+            逾期者順延至次期。
+          </p>
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>結算期間</th><th>單據截止日</th><th>預定撥款日</th><th style="width:110px">狀態</th></tr></thead>
+              <tbody id="schedBody"></tbody>
+            </table>
+          </div>
+          <div class="callout mt-2">
+            <p class="mb-0" style="font-size:.9rem">
+              撥款日遇例假日順延至次一營業日。如有異動，將於
+              <a href="announcements.html">內部公告</a> 說明。
+            </p>
+          </div>
+        </div>
+
+        <!-- 我的撥款紀錄（個人財務） -->
+        <div class="panel">
+          <div class="panel__head">
+            <h2 style="font-size:1.2rem">我的撥款紀錄</h2>
+            <button class="btn btn-ghost btn-sm" onclick="alert('對帳單 PDF 下載需由後端產生，屬第三階段功能。')">下載對帳單 PDF</button>
+          </div>
+
+          <div class="callout callout--accent" style="margin-bottom:20px">
+            <p class="mb-0" style="font-size:.86rem">
+              <strong>開發階段提醒：</strong>個人財務明細屬第三階段功能，需串接協會財務資料來源，
+              並在伺服器端做權限檢查。目前顯示的是範例資料。
+            </p>
+          </div>
+
+          <div class="grid grid-3" style="margin-bottom:22px">
+            <div class="stat-tile">
+              <div class="stat-tile__label">本年度累計</div>
+              <div class="stat-tile__value" id="sumYear">—</div>
+              <div class="stat-tile__sub">2026 年 1–8 月</div>
+            </div>
+            <div class="stat-tile">
+              <div class="stat-tile__label">最近一筆</div>
+              <div class="stat-tile__value" id="sumLast">—</div>
+              <div class="stat-tile__sub" id="sumLastDate">—</div>
+            </div>
+            <div class="stat-tile">
+              <div class="stat-tile__label">下期預定撥款</div>
+              <div class="stat-tile__value" id="sumNext">—</div>
+              <div class="stat-tile__sub" id="sumNextPeriod">—</div>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>入帳日</th><th>結算期間</th><th>項目</th><th class="num">金額</th><th style="width:90px">狀態</th></tr></thead>
+              <tbody id="payBody"></tbody>
+            </table>
+          </div>
+
+          <p class="form-note mt-2 mb-0">
+            如對撥款金額有疑義，請於入帳後 14 日內洽秘書處（02-2702-8898 轉 131、132）。
+          </p>
+        </div>
+
+        <div class="panel" style="margin-bottom:0">
+          <div class="panel__head"><h3 style="font-size:1.1rem">相關表單</h3></div>
+          <div id="payForms"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/member.js"></script>
+<script>
+document.addEventListener('cpga:ready', function () {
+  var BADGE = { done: ['已撥款', 'badge-status--done'], pending: ['作業中', 'badge-status--pending'], soon: ['預定', 'badge-status--soon'] };
+
+  document.getElementById('schedBody').innerHTML = PAYOUT_SCHEDULE.map(function (p) {
+    var b = BADGE[p.status];
+    return '<tr><td><strong style="color:var(--ink)">' + p.period + '</strong></td>' +
+      '<td class="num">' + fmtDate(p.cutoff) + '</td>' +
+      '<td class="num">' + fmtDate(p.payDate) + '</td>' +
+      '<td><span class="badge-status ' + b[1] + '">' + b[0] + '</span></td></tr>';
+  }).join('');
+
+  var total = MY_PAYMENTS.reduce(function (s, p) { return s + p.amount; }, 0);
+  document.getElementById('sumYear').textContent = fmtMoney(total).replace('NT$ ', '');
+  document.getElementById('sumLast').textContent = fmtMoney(MY_PAYMENTS[0].amount).replace('NT$ ', '');
+  document.getElementById('sumLastDate').textContent = fmtDate(MY_PAYMENTS[0].date) + ' 入帳';
+
+  var next = PAYOUT_SCHEDULE.filter(function (p) { return p.status !== 'done'; })[0];
+  document.getElementById('sumNext').textContent = next ? fmtDate(next.payDate).slice(5) : '—';
+  document.getElementById('sumNextPeriod').textContent = next ? next.period + '　' + next.note : '—';
+
+  document.getElementById('payBody').innerHTML = MY_PAYMENTS.map(function (p) {
+    var b = BADGE[p.status];
+    return '<tr><td class="num">' + fmtDate(p.date) + '</td><td>' + p.period + '</td>' +
+      '<td class="muted">' + p.items + '</td>' +
+      '<td class="num"><strong style="color:var(--ink)">' + fmtMoney(p.amount) + '</strong></td>' +
+      '<td><span class="badge-status ' + b[1] + '">' + b[0] + '</span></td></tr>';
+  }).join('');
+
+  document.getElementById('payForms').innerHTML = dlListHtml(DOWNLOADS, '../');
+});
+</script>
+</body>
+</html>

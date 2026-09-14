@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>內部公告｜棋士專區</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body class="member-area" data-member-page="ann">
+<div id="site-header"></div>
+
+<section class="page-hero" style="padding:44px 0 40px">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><a href="index.html">棋士專區</a><span class="sep">/</span><span>內部公告</span></nav>
+    <h1 style="font-size:1.8rem">內部公告</h1>
+    <p>僅提供予職業棋士的會務訊息，請勿轉載或對外公開。</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="member-shell">
+      <div id="member-side"></div>
+
+      <div>
+        <div class="callout callout--accent" style="margin-bottom:24px">
+          <p class="mb-0" style="font-size:.9rem">
+            本頁內容屬非公開會務訊息。如需對外說明，請先與秘書處確認。
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="panel__head">
+            <h2 style="font-size:1.2rem">全部公告</h2>
+            <div class="field" style="margin:0;min-width:220px">
+              <input type="search" id="annSearch" placeholder="搜尋公告…" aria-label="搜尋公告">
+            </div>
+          </div>
+          <div id="annList"></div>
+        </div>
+
+        <div class="callout">
+          <p class="mb-0" style="font-size:.9rem">
+            對外公開的賽事與活動訊息，請見官網
+            <a href="../news/index.html">最新消息</a>。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/member.js"></script>
+<script>
+document.addEventListener('cpga:ready', function () {
+  var listEl = document.getElementById('annList');
+
+  function render(kw) {
+    var rows = MEMBER_ANNOUNCEMENTS.filter(function (a) {
+      return !kw || a.title.indexOf(kw) > -1 || a.body.indexOf(kw) > -1;
+    });
+    listEl.innerHTML = rows.length ? rows.map(function (a, i) {
+      return '<details' + (i === 0 ? ' open' : '') + ' style="border-bottom:1px solid var(--line);padding:16px 0">' +
+        '<summary style="cursor:pointer;list-style:none">' +
+          '<span class="muted" style="font-size:.82rem;font-variant-numeric:tabular-nums">' + fmtDate(a.date) + '</span>' +
+          '<strong style="display:block;color:var(--ink);font-weight:500;font-size:1rem">' + a.title + '</strong>' +
+        '</summary>' +
+        '<p class="muted" style="margin:.8em 0 0;font-size:.94rem">' + a.body + '</p>' +
+        '</details>';
+    }).join('') : '<p class="muted mb-0" style="padding:20px 0">找不到符合的公告。</p>';
+  }
+
+  document.getElementById('annSearch').addEventListener('input', function () {
+    render(this.value.trim());
+  });
+  render('');
+});
+</script>
+</body>
+</html>

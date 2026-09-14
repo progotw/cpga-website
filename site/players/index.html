@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>職業棋士名錄｜中華職業圍棋協會</title>
+<meta name="description" content="中華職業圍棋協會職業棋士名錄，含段位、照片與棋戰履歷。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="players">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><span>職業棋士</span></nav>
+    <h1>職業棋士名錄</h1>
+    <p>本會登錄之職業棋士共 <strong id="totalCount" style="color:#fff">—</strong> 位。點選棋士可查看詳細介紹。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;margin-bottom:28px">
+      <div class="field" style="margin:0;min-width:190px">
+        <label for="fRank">段位</label>
+        <select id="fRank"><option value="all">全部段位</option></select>
+      </div>
+      <div class="field" style="margin:0;flex:1 1 220px;max-width:340px">
+        <label for="fSearch">搜尋</label>
+        <input type="search" id="fSearch" placeholder="輸入棋士姓名…">
+      </div>
+    </div>
+
+    <div id="playerGrid"></div>
+    <p class="muted mt-2" id="resultCount"></p>
+  </div>
+</section>
+
+<section class="section section--paper2" id="dan">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Distribution</span><h2>段位分布</h2>
+      <p>本會職業棋士目前的段位組成。段位取得與晉升方式請見
+        <a href="../events/dan-system.html">段位／資格制度</a>。</p>
+    </div>
+    <div class="card">
+      <div id="danChart"></div>
+    </div>
+    <p class="src-note mt-2" id="srcNote"></p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/players.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  var P = window.CPGA_PLAYERS;
+  var RANK_ORDER = P.RANK_ORDER;
+  var grid = document.getElementById('playerGrid');
+  var all = [], meta = null;
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  /* 從「冠軍數:50冠 (…)」取出數字。
+     history 可能同時有「頭銜冠軍」與「歷史成績」兩列，順序不固定，所以全部掃過。 */
+  function titleCount(p) {
+    var n = 0;
+    (p.history || []).forEach(function (h) {
+      var m = String(h.value).match(/(\d+)\s*冠/);
+      if (m) n = Math.max(n, +m[1]);
+    });
+    return n;
+  }
+
+  function item(p) {
+    var n = titleCount(p);
+    return '<a class="name-item" href="profile.html?id=' + encodeURIComponent(p.id) + '">' +
+      '<span class="name-item__name">' + esc(p.name) + '</span>' +
+      '<span class="name-item__meta">' + (n ? n + ' 座冠軍' : '') + '</span>' +
+      '</a>';
+  }
+
+  function render() {
+    var rank = document.getElementById('fRank').value;
+    var kw = document.getElementById('fSearch').value.trim();
+
+    var rows = all.filter(function (p) {
+      return (rank === 'all' || p.rank === rank) && (!kw || p.name.indexOf(kw) > -1);
+    });
+
+    /* 依段位分組，組內維持原名錄的順序 */
+    var html = RANK_ORDER.map(function (r) {
+      var group = rows.filter(function (p) { return p.rank === r; });
+      if (!group.length) return '';
+      return '<section class="rank-group">' +
+        '<div class="rank-group__head">' +
+          '<span class="rank-group__rank">' + r + '</span>' +
+          '<span class="rank-group__count">' + group.length + ' 位</span>' +
+        '</div>' +
+        '<div class="name-grid">' + group.map(item).join('') + '</div>' +
+        '</section>';
+    }).join('');
+
+    grid.innerHTML = html || '<p class="muted">找不到符合條件的棋士。</p>';
+    document.getElementById('resultCount').textContent = '共 ' + rows.length + ' 位棋士';
+  }
+
+  function renderChart() {
+    var counts = RANK_ORDER.map(function (r) {
+      return { rank: r, n: all.filter(function (p) { return p.rank === r; }).length };
+    }).filter(function (x) { return x.n > 0; });
+    var max = Math.max.apply(null, counts.map(function (c) { return c.n; }));
+
+    document.getElementById('danChart').innerHTML = counts.map(function (c) {
+      return '<div style="display:grid;grid-template-columns:64px 1fr 44px;gap:14px;align-items:center;margin-bottom:12px">' +
+        '<span style="font-weight:500;color:var(--ink)">' + c.rank + '</span>' +
+        '<span style="display:block;height:22px;background:var(--paper-3);border-radius:5px;overflow:hidden">' +
+          '<span style="display:block;height:100%;width:' + (c.n / max * 100) + '%;background:var(--ink);border-radius:5px"></span>' +
+        '</span>' +
+        '<span class="muted" style="text-align:right;font-variant-numeric:tabular-nums">' + c.n + '</span>' +
+        '</div>';
+    }).join('');
+  }
+
+  ['fRank', 'fSearch'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', render);
+  });
+
+  P.load().then(function (data) {
+    meta = data;
+    all = data.players || [];
+
+    document.getElementById('totalCount').textContent = all.length;
+    document.getElementById('fRank').innerHTML = '<option value="all">全部段位</option>' +
+      RANK_ORDER.filter(function (r) { return all.some(function (p) { return p.rank === r; }); })
+        .map(function (r) {
+          var n = all.filter(function (p) { return p.rank === r; }).length;
+          return '<option value="' + r + '">' + r + '（' + n + '）</option>';
+        }).join('');
+
+    document.getElementById('srcNote').innerHTML =
+      '棋士資料與照片來源：<strong>' + esc(data.source) + '</strong>　·　' +
+      '共 ' + data.count + ' 位　·　' +
+      '<a href="' + esc(data.source_url) + '" target="_blank" rel="noopener">原始名錄</a>';
+
+    render();
+    renderChart();
+  }).catch(function (err) {
+    grid.innerHTML = '<p class="muted">無法載入棋士資料（' + esc(err.message) + '）。' +
+      '請確認 <code>assets/data/players.json</code> 存在，且網站是透過網址開啟。</p>';
+  });
+})();
+</script>
+</body>
+</html>

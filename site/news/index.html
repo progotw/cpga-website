@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>最新消息｜中華職業圍棋協會</title>
+<meta name="description" content="中華職業圍棋協會比賽訊息、媒體報導與公告事項。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="news">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><span>最新消息</span></nav>
+    <h1 id="newsTitle">最新消息</h1>
+    <p>賽事戰報、媒體報導與各項會務公告。點選標題可閱讀完整內容。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-aside" style="grid-template-columns:minmax(0,1fr) 260px;gap:44px">
+      <div>
+        <div class="tabs" id="newsTabs"></div>
+
+        <div class="field" style="max-width:340px">
+          <input type="search" id="newsSearch" placeholder="搜尋標題關鍵字…" aria-label="搜尋消息">
+        </div>
+
+        <div id="newsList" style="margin-top:8px"></div>
+        <div class="text-center mt-3">
+          <button class="btn btn-ghost" id="loadMore">載入更多</button>
+        </div>
+        <p class="src-note mt-3" id="srcNote"></p>
+      </div>
+
+      <aside class="stack">
+        <div class="card">
+          <h3 style="font-size:1.05rem">分類</h3>
+          <ul style="list-style:none;padding:0;margin:0;font-size:.92rem" id="catCounts"></ul>
+        </div>
+        <div class="card" style="background:var(--paper-2)">
+          <h3 style="font-size:1.05rem">賽程與賽事</h3>
+          <p class="muted" style="font-size:.88rem">查看各賽事的對局日程與歷屆冠軍。</p>
+          <a class="btn btn-primary btn-sm btn-block" href="../events/index.html">前往賽事專區</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  var N = window.CPGA_NEWS;
+  var PAGE = 15;
+  var shown = PAGE;
+  var cat = new URLSearchParams(location.search).get('cat') || 'all';
+  var keyword = '';
+  var all = [];
+
+  var listEl = document.getElementById('newsList');
+  var moreBtn = document.getElementById('loadMore');
+  var titleEl = document.getElementById('newsTitle');
+
+  function label(c) {
+    var hit = all.filter(function (n) { return n.cat === c; })[0];
+    return hit ? hit.catLabel : c;
+  }
+
+  function filtered() {
+    return all.filter(function (n) {
+      return (cat === 'all' || n.cat === cat) && (!keyword || n.title.indexOf(keyword) > -1);
+    });
+  }
+
+  function render() {
+    var rows = filtered();
+    titleEl.textContent = cat === 'all' ? '最新消息' : label(cat);
+    document.title = titleEl.textContent + '｜中華職業圍棋協會';
+
+    listEl.innerHTML = N.render(rows.slice(0, shown),
+      { empty: '<p class="muted" style="padding:28px 0">找不到符合條件的消息。</p>' });
+    moreBtn.style.display = rows.length > shown ? '' : 'none';
+  }
+
+  function setCat(next) {
+    cat = next; shown = PAGE;
+    document.querySelectorAll('#newsTabs .tab').forEach(function (t) {
+      t.classList.toggle('is-active', t.dataset.cat === cat);
+    });
+    history.replaceState(null, '', cat === 'all' ? location.pathname : location.pathname + '?cat=' + cat);
+    render();
+  }
+
+  document.getElementById('newsSearch').addEventListener('input', function () {
+    keyword = this.value.trim(); shown = PAGE; render();
+  });
+  moreBtn.addEventListener('click', function () { shown += PAGE; render(); });
+
+  N.load().then(function (data) {
+    all = data.items || [];
+    var cats = N.categories(all);
+
+    var tabs = document.getElementById('newsTabs');
+    tabs.innerHTML = '<button class="tab" data-cat="all">全部</button>' +
+      cats.map(function (c) {
+        return '<button class="tab" data-cat="' + c.cat + '">' + N.esc(c.label) + '</button>';
+      }).join('');
+    tabs.addEventListener('click', function (e) {
+      var b = e.target.closest('.tab'); if (b) setCat(b.dataset.cat);
+    });
+
+    var counts = document.getElementById('catCounts');
+    counts.innerHTML =
+      '<li style="margin-bottom:8px"><a href="#" data-jump="all">全部消息 <span class="muted">(' + all.length + ')</span></a></li>' +
+      cats.map(function (c) {
+        var n = all.filter(function (x) { return x.cat === c.cat; }).length;
+        return '<li style="margin-bottom:8px"><a href="#" data-jump="' + c.cat + '">' +
+          N.esc(c.label) + ' <span class="muted">(' + n + ')</span></a></li>';
+      }).join('');
+    counts.addEventListener('click', function (e) {
+      var a = e.target.closest('a[data-jump]'); if (!a) return;
+      e.preventDefault(); setCat(a.dataset.jump);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.getElementById('srcNote').innerHTML =
+      '消息來源：<strong>' + N.esc(data.source) + '</strong>　·　共 ' + data.count + ' 則　·　' +
+      '點擊標題將前往原始文章頁。';
+
+    setCat(cat);
+  }).catch(function (err) {
+    listEl.innerHTML = '<p class="muted">無法載入消息（' + N.esc(err.message) + '）。</p>';
+    moreBtn.style.display = 'none';
+  });
+})();
+</script>
+</body>
+</html>

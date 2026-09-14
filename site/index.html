@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中華職業圍棋協會｜官方網站</title>
+<meta name="description" content="中華職業圍棋協會官方網站 — 職業賽事、棋士名錄、段位制度、職業棋士甄選、賽事花絮與會員服務。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="home">
+<div id="site-header"></div>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <span class="hero__eyebrow">Chinese Professional Go Association</span>
+        <h1>一手一世界<br>以棋道<em>連結</em>台灣與世界</h1>
+        <p class="hero__lead">
+          中華職業圍棋協會致力於健全職業棋士制度、經營年度賽事體系，
+          並推動圍棋教育扎根與國際交流。
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn-accent" href="events/qualification.html">職業棋士甄選</a>
+          <a class="btn btn-light" href="events/index.html">賽事專區</a>
+          <a class="btn btn-ghost" style="color:#e7e3dc;border-color:rgba(255,255,255,.25)" href="about/index.html">認識協會</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat"><b id="statPlayers">—</b><span>職業棋士</span></div>
+          <div class="hero__stat"><b id="statEvents">—</b><span>年度職業賽事</span></div>
+          <div class="hero__stat"><b>2008</b><span>創會年份</span></div>
+        </div>
+      </div>
+      <div>
+        <svg viewBox="0 0 360 360" role="img" aria-label="棋盤示意" style="width:100%;max-width:400px;margin-inline:auto;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.45)">
+          <defs>
+            <linearGradient id="woodG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#e8d3aa"/><stop offset="55%" stop-color="#dcc094"/><stop offset="100%" stop-color="#c9a879"/>
+            </linearGradient>
+            <radialGradient id="bS" cx="35%" cy="30%"><stop offset="0%" stop-color="#5a5f68"/><stop offset="55%" stop-color="#22252b"/><stop offset="100%" stop-color="#0d0e11"/></radialGradient>
+            <radialGradient id="wS" cx="35%" cy="30%"><stop offset="0%" stop-color="#ffffff"/><stop offset="65%" stop-color="#f0ece3"/><stop offset="100%" stop-color="#d3cbbc"/></radialGradient>
+          </defs>
+          <rect width="360" height="360" rx="10" fill="url(#woodG)"/>
+          <g stroke="#8a6a3a" stroke-width="1.1" opacity=".85">
+            <path d="M40 40h280M40 75h280M40 110h280M40 145h280M40 180h280M40 215h280M40 250h280M40 285h280M40 320h280"/>
+            <path d="M40 40v280M75 40v280M110 40v280M145 40v280M180 40v280M215 40v280M250 40v280M285 40v280M320 40v280"/>
+          </g>
+          <g fill="#8a6a3a">
+            <circle cx="110" cy="110" r="3.2"/><circle cx="250" cy="110" r="3.2"/>
+            <circle cx="180" cy="180" r="3.2"/>
+            <circle cx="110" cy="250" r="3.2"/><circle cx="250" cy="250" r="3.2"/>
+          </g>
+          <g>
+            <circle cx="110" cy="110" r="15.5" fill="url(#bS)"/>
+            <circle cx="180" cy="145" r="15.5" fill="url(#bS)"/>
+            <circle cx="145" cy="250" r="15.5" fill="url(#bS)"/>
+            <circle cx="250" cy="180" r="15.5" fill="url(#bS)"/>
+            <circle cx="215" cy="285" r="15.5" fill="url(#bS)"/>
+            <circle cx="145" cy="110" r="15.5" fill="url(#wS)"/>
+            <circle cx="110" cy="145" r="15.5" fill="url(#wS)"/>
+            <circle cx="250" cy="110" r="15.5" fill="url(#wS)"/>
+            <circle cx="180" cy="250" r="15.5" fill="url(#wS)"/>
+            <circle cx="250" cy="215" r="15.5" fill="url(#wS)"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 棋士專區捷徑（登入後顯示） ===== -->
+<section id="memberShortcut" class="section section--tight" style="display:none">
+  <div class="wrap">
+    <div class="card" style="border-left:4px solid var(--accent)">
+      <div class="section-head--row" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+        <div>
+          <span class="tag tag--notice">棋士專區</span>
+          <h3 style="margin:.5em 0 .2em">歡迎回來，<span id="scName">棋士</span></h3>
+          <p class="mb-0 muted" id="scHint">您有近期賽程與待處理事項，點擊進入專區查看。</p>
+        </div>
+        <a class="btn btn-accent" href="member/index.html">進入棋士專區</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 快速入口 ===== -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="grid grid-4">
+      <a class="card card--link card-link" href="events/index.html">
+        <div class="card__icon">◎</div>
+        <h3>賽事專區</h3>
+        <p class="muted" style="font-size:.9rem">職業賽事、世界賽、賽制與積分規則一次掌握。</p>
+        <span class="card__more">查看賽事 →</span>
+      </a>
+      <a class="card card--link card-link" href="players/index.html">
+        <div class="card__icon">◍</div>
+        <h3>職業棋士</h3>
+        <p class="muted" style="font-size:.9rem">本會職業棋士名錄、段位與經歷介紹。</p>
+        <span class="card__more">棋士名錄 →</span>
+      </a>
+      <a class="card card--link card-link" href="events/qualification.html">
+        <div class="card__icon">◈</div>
+        <h3>職業棋士甄選</h3>
+        <p class="muted" style="font-size:.9rem">入段資格、甄選流程與年度簡章下載。</p>
+        <span class="card__more">了解甄選 →</span>
+      </a>
+      <a class="card card--link card-link" href="membership/index.html">
+        <div class="card__icon">✦</div>
+        <h3>加入會員</h3>
+        <p class="muted" style="font-size:.9rem">入會資格、會員權益與會費說明。</p>
+        <span class="card__more">立即入會 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 最新消息 + 近期賽程 ===== -->
+<section class="section section--paper2">
+  <div class="wrap">
+    <div class="grid grid-aside" style="grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:44px">
+      <div>
+        <div class="section-head section-head--row">
+          <div>
+            <span class="eyebrow">News</span>
+            <h2>最新消息</h2>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="news/index.html">所有消息</a>
+        </div>
+        <div class="tabs" id="homeTabs"></div>
+        <div class="news-list" id="homeNews"></div>
+      </div>
+
+      <aside>
+        <div class="section-head"><span class="eyebrow">Schedule</span><h2 style="font-size:1.4rem">近期賽程</h2></div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <div id="homeSchedule"></div>
+        </div>
+        <a class="btn btn-ghost btn-sm mt-2" href="events/index.html">完整賽程 →</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 賽事花絮 / IG 精選 ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head section-head--row">
+      <div>
+        <span class="eyebrow">Gallery</span>
+        <h2>賽事花絮／IG 精選</h2>
+        <p>開賽前 15 分鐘開放拍攝的現場相簿，以及協會 Instagram 最新貼文。</p>
+      </div>
+      <a class="btn btn-ghost btn-sm" href="gallery/index.html">前往賽事花絮</a>
+    </div>
+    <div class="gallery-grid" id="homeGallery"></div>
+  </div>
+</section>
+
+<!-- ===== 關於協會 ===== -->
+<section class="section section--ink">
+  <div class="wrap">
+    <div class="grid grid-aside" style="grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;align-items:center">
+      <div>
+        <span class="eyebrow" style="color:var(--wood)">About</span>
+        <h2>建立一個能讓棋士專注於棋的環境</h2>
+        <p style="color:#b9bcc3">
+          本會自 2008 年成立以來，持續完善職業棋士的段位制度、賽事規章與權益保障，
+          並以穩定的年度賽事體系，讓職業棋士得以長期投入競技生涯。
+        </p>
+        <p style="color:#b9bcc3">
+          同時，我們透過校園推廣、少年研習與國際交流，讓圍棋在台灣紮根、與世界接軌。
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:1.6rem">
+          <a class="btn btn-light" href="about/index.html">協會簡介</a>
+          <a class="btn btn-ghost" style="color:#e7e3dc;border-color:rgba(255,255,255,.25)" href="about/milestones.html">大事紀</a>
+        </div>
+      </div>
+      <div>
+        <ul class="timeline" id="homeMilestones" style="--line-2:rgba(255,255,255,.18)"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section goban-bg">
+  <div class="wrap text-center">
+    <h2>想成為職業棋士，或支持台灣圍棋？</h2>
+    <p class="lead" style="max-width:56ch;margin-inline:auto">
+      無論您是準備挑戰職業之路的棋手，或是願意一同推動圍棋發展的支持者，
+      都歡迎加入我們。
+    </p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:1.8rem">
+      <a class="btn btn-primary" href="events/apply.html">甄選簡章與報名</a>
+      <a class="btn btn-ghost" href="membership/index.html">加入會員</a>
+      <a class="btn btn-ghost" href="about/contact.html">聯絡我們</a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/schedule.js"></script>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/site.js" defer></script>
+<script>
+(function () {
+  document.getElementById('statPlayers').textContent = PLAYER_COUNT;
+
+  /* 年度職業賽事數：現行台灣職業賽（不含已停辦） */
+  window.CPGA_GAMES.load().then(function (data) {
+    var n = (data.games || []).filter(function (g) {
+      return g.category === '職業賽' && g.active;
+    }).length;
+    document.getElementById('statEvents').textContent = n;
+  }).catch(function () {});
+
+  /* ---- 最新消息 ---- */
+  var N = window.CPGA_NEWS;
+  var listEl = document.getElementById('homeNews');
+  var tabsEl = document.getElementById('homeTabs');
+  var news = [];
+
+  function renderNews(cat) {
+    var rows = news.filter(function (n) { return cat === 'all' || n.cat === cat; }).slice(0, 7);
+    listEl.innerHTML = N.render(rows, { empty: '<p class="muted" style="padding:20px 0">此分類目前沒有消息。</p>' });
+  }
+
+  N.load().then(function (data) {
+    news = data.items || [];
+    tabsEl.innerHTML = '<button class="tab is-active" data-cat="all">全部</button>' +
+      N.categories(news).map(function (c) {
+        return '<button class="tab" data-cat="' + c.cat + '">' + N.esc(c.label) + '</button>';
+      }).join('');
+    tabsEl.addEventListener('click', function (e) {
+      var btn = e.target.closest('.tab'); if (!btn) return;
+      this.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      renderNews(btn.dataset.cat);
+    });
+    renderNews('all');
+  }).catch(function () {
+    listEl.innerHTML = '<p class="muted" style="padding:20px 0">消息載入失敗。</p>';
+  });
+
+  /* ---- 近期賽程（真實賽事行事曆） ---- */
+  var S = window.CPGA_SCHEDULE;
+  var schedEl = document.getElementById('homeSchedule');
+  S.load().then(function (data) {
+    var today = S.today();
+    var upcoming = (data.events || [])
+      .filter(function (e) { return e.date >= today; })
+      .sort(function (a, b) {
+        return a.date === b.date
+          ? String(a.time || '').localeCompare(String(b.time || ''))
+          : a.date.localeCompare(b.date);
+      })
+      .slice(0, 6);
+
+    schedEl.innerHTML = upcoming.length
+      ? upcoming.map(function (e) {
+          return '<div style="padding:14px 20px;border-bottom:1px solid var(--line)">' +
+            '<div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline">' +
+              '<strong style="color:var(--ink);font-size:.95rem">' +
+                '<span class="legend__dot ' + S.slotClass(e.series_slot) + '" style="background:currentColor"></span>' +
+                S.fullTitle(e) + '</strong>' +
+              '<span class="muted" style="font-size:.82rem;font-variant-numeric:tabular-nums;white-space:nowrap">' +
+                fmtDate(e.date).slice(5) + '</span>' +
+            '</div>' +
+            '<div class="muted" style="font-size:.82rem;margin-top:2px;padding-left:16px">' + S.timeLabel(e) + '</div></div>';
+        }).join('') +
+        '<div style="padding:12px 20px;font-size:.78rem;color:var(--ink-4)">＊ 開賽時間為依慣例推定</div>'
+      : '<div style="padding:20px" class="muted">近期無排定賽程。</div>';
+  }).catch(function () {
+    schedEl.innerHTML = '<div style="padding:20px" class="muted">賽程資料載入失敗。</div>';
+  });
+
+  /* ---- 花絮 ---- */
+  document.getElementById('homeGallery').innerHTML = GALLERY.slice(0, 6).map(function (g) {
+    return '<a class="gallery-item" href="gallery/index.html" style="text-decoration:none">' +
+      '<span class="gallery-item__ph">◍</span>' +
+      '<span class="gallery-item__label">' + g.album + '</span></a>';
+  }).join('');
+
+  /* ---- 大事紀 ---- */
+  document.getElementById('homeMilestones').innerHTML = MILESTONES.slice(0, 4).map(function (m) {
+    return '<li><span class="timeline__year">' + m.year + '</span>' +
+      '<span style="color:#b9bcc3;font-size:.92rem">' + m.text + '</span></li>';
+  }).join('');
+
+  /* ---- 已登入時顯示棋士專區捷徑 ---- */
+  try {
+    var u = JSON.parse(localStorage.getItem('cpga_user') || 'null');
+    if (u) {
+      document.getElementById('scName').textContent = u.name + ' ' + u.rank;
+      document.getElementById('memberShortcut').style.display = '';
+    }
+  } catch (err) { /* 略過 */ }
+})();
+</script>
+</body>
+</html>

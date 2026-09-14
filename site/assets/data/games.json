@@ -1,0 +1,789 @@
+{
+ "schema_version": 1,
+ "generated": "2026-09-14T14:33:35+08:00",
+ "source": "海峰棋院 賽事",
+ "source_url": "https://www.haifong.org",
+ "count": 78,
+ "games": [
+  {
+   "category": "世界賽",
+   "name": "衢州爛柯盃國際兒童友好圍棋錦標賽",
+   "period": "2025.10.22~2025.10.27",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/AD7F9445B2BD3CBA88DAE4635C2C2200",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "新韓銀行世界棋仙戰",
+   "period": "2025.12.24~2026.12.31",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/20ADB0BD8850A4FC8F3F5E95F2CD20F4",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "世界最高棋士戰",
+   "period": "2025.03.25~2025.10.31",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/A86B7E7749D009DA1438E8900C76EEF6",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "南洋杯世界圍棋大師賽",
+   "period": "2024.11.01~2025.03.01",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/C06B1C2BBCE079FC294CB87474ECCB75",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "衢州爛柯盃",
+   "period": "2026.03.11~2023.06.17",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/8C5868282D2B83CBD2D1DEEF5C07DE8D",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "亞州運動會(亞運)",
+   "period": "2022.09.10~2010.11.26",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/6ACAC3BD47139B13B4D6EF2E779D96AD",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "春蘭杯世界職業圍棋錦標賽",
+   "period": "2026.03.16~1998.12.28",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/0D13ACB8AFE22F9BDE07FDAABECD53AA",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "應氏杯世界職業圍棋錦標賽",
+   "period": "2024.04.20~2020.12.31",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/8AD0F09CC001B8A2EEBBC376AEEAB539",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "LG盃世界棋王戰",
+   "period": "2026.04.21~2021.02.04",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/B882779D6FED290414D882FFE5A6808E",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "三星盃世界圍棋大師賽",
+   "period": "2026.08.24~1996.11.29",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/B0A85C728A240460DBA68725773324CF",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "夢百合杯世界賽",
+   "period": "2026.03.30~2013.12.06",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/1270DFFAAF3269D7793FF55248A9DDDE",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "吳清源盃世界女子圍棋賽",
+   "period": "2026.08.17~2018.05.12",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/63843E924EECC1240CC2CD06877F0BE4",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "扇興杯世界女子圍棋最強戰",
+   "period": "2026.03.13~2018.03.16",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/3A469FBEDF0C8A56195335C006EEBB94",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "北海新繹杯",
+   "period": "2025.04.10~2025.04.19",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/78C4A5A67C7DB020128D56DF22F3BCB4",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "農心辛拉麵盃",
+   "period": "2022.10.11~2000.03.28",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/CA40D19A82CA0BAF714BD89575651B66",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "東京Pair GO世界杯圍棋配對賽",
+   "period": "2019.08.18~2016.07.10",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/30FE6943250F0E3807F3D8793874D77E",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "國手山脈國際圍棋賽",
+   "period": "2026.08.13~2014.08.11",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/2ECACF7A41EF781B3F09A73C7573A55A",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "KB國民銀行杯圍棋聯賽",
+   "period": "2024.12.12~2023.05.10",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/F073F992B64DE103212A93B6E0C3AB1C",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "倡棋杯",
+   "period": "2026.03.04~2004.10.25",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/889B583FD295AC653FB6B4B0AA0DA5CC",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "中國全國圍棋團體聯賽",
+   "period": "2026.06.06~2015.05.20",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/4B2A63133D93536B1B852266FF78C230",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "1004島新安國際元老圍棋賽",
+   "period": "2024.06.12~2019.06.12",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/028B0C7A6061914604382C6F52B1DC1D",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "議政府杯世界新銳團體賽 (已停辦)",
+   "period": "2022.03.03~2022.03.05",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/29DC2EC2171BC678C5FCDF39E831806F",
+   "active": false
+  },
+  {
+   "category": "世界賽",
+   "name": "金立海峽兩岸圍棋冠軍爭霸賽 (停辦)",
+   "period": "2017.07.20~2014.07.17",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/CF3901B146366EDFDD9C92781CD4A4C9",
+   "active": false
+  },
+  {
+   "category": "世界賽",
+   "name": "國際智力運動協會(IMSA)精英運動會 (已停辦)",
+   "period": "2019.07.25~2016.03.01",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/09FCC85E2AA6D2D15494B87FEF3CA8E6",
+   "active": false
+  },
+  {
+   "category": "世界賽",
+   "name": "利民盃星銳賽 (停辦)",
+   "period": "2017.03.01~2014.12.20",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/74291E40C2BDBC85AB2235F92E656992",
+   "active": false
+  },
+  {
+   "category": "世界賽",
+   "name": "百靈杯世界圍棋公開賽 (已停辦)",
+   "period": "2016.06.28~2019.01.17",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/FEE7B1D873988CEBE2D7E87952D5F6C4",
+   "active": false
+  },
+  {
+   "category": "世界賽",
+   "name": "天台山世界女子圍棋團體錦標賽 (已停辦)",
+   "period": "2019.05.10~2012.04.28",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/B731F9677B876250C340200DCD6663DE",
+   "active": false
+  },
+  {
+   "category": "世界賽",
+   "name": "GLOBIS杯世界新銳圍棋錦標賽",
+   "period": "2026.03.25~2014.05.11",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/E2576C1C1009D86E0E323497542136E1",
+   "active": true
+  },
+  {
+   "category": "世界賽",
+   "name": "世界最強棋士決定戰  (已停辦)",
+   "period": "2019.03.18~2017.03.23",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/AF94586CDB2897A7852AD1672865D8F8",
+   "active": false
+  },
+  {
+   "category": "世界賽",
+   "name": "福蔭杯國際新銳對抗賽 (已停辦)",
+   "period": "2019.10.14~2014.11.02",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/CAAF16AB6F24FF6F0E6ABB0FBA27B7E8",
+   "active": false
+  },
+  {
+   "category": "世界賽",
+   "name": "IBK企業銀行盃女子圍棋世界大師賽",
+   "period": "2026.08.12~2027.01.08",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/F741E09908A705D54D56CE6A66D18603",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "名人賽",
+   "period": "2026.01.08~2020.12.06",
+   "champLabel": "2026冠軍",
+   "champion": "許皓鋐",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/34438A5CEB10C6076BF0DB735C4887AE",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "棋王賽",
+   "period": "2026.09.15~2008.09.04",
+   "champLabel": "2025冠軍",
+   "champion": "許皓鋐",
+   "note": "四連霸",
+   "url": "https://www.haifong.org/game/classes/AF702E6E9FED2AF72DB9109146E2EB41",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "中環天元賽",
+   "period": "2025.11.05~2002.05.08",
+   "champLabel": "2026冠軍",
+   "champion": "許皓鋐",
+   "note": "五連霸",
+   "url": "https://www.haifong.org/game/classes/714DC4215C0E56E366421FBA2ABB6FC0",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "玄樂盃",
+   "period": "2026.09.03~2026.12.05",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/A9946861BC79FEDD7C1EA86A099A0496",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "快棋爭霸戰",
+   "period": "2026.04.27~2020.12.26",
+   "champLabel": "2026 冠軍",
+   "champion": "王元均",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/8C2BB48814F12AAC5EEDD25FA577A3B6",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "海峰盃",
+   "period": "2026.01.02~2009.11.19",
+   "champLabel": "2026 冠軍",
+   "champion": "林君諺",
+   "note": "二連霸",
+   "url": "https://www.haifong.org/game/classes/A2FFE56B0B4732EB124A800914804861",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "中環國手賽",
+   "period": "2026.09.04~2005.11.08",
+   "champLabel": "2025冠軍",
+   "champion": "許皓鋐",
+   "note": "七連霸",
+   "url": "https://www.haifong.org/game/classes/A822120A9D857AB7AC88180F76BF3529",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "健喬盃女子圍棋最強戰",
+   "period": "2026.08.03~2015.08.26",
+   "champLabel": "2026冠軍",
+   "champion": "盧鈺樺",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/C168764C44B3ADAE652797B05FE76E50",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "中環碁聖賽",
+   "period": "2026.09.04~2013.06.01",
+   "champLabel": "2025冠軍",
+   "champion": "賴均輔",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/480E360835EAB350F93094AAECD2A797",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "新人王賽",
+   "period": "2026.05.05~2016.12.02",
+   "champLabel": "2026冠軍",
+   "champion": "盧奕銓",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/A00CB5787503754CAEE98AFB2A3F9917",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "大森盃女子職業圍棋名人賽",
+   "period": "2025.03.06~2018.08.27",
+   "champLabel": "2025冠軍",
+   "champion": "盧鈺樺",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/6518E9DFA5A5F4832BC6F47E2F7B5640",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "龍星賽",
+   "period": "2025.12.05~2025.12.29",
+   "champLabel": "2025冠軍",
+   "champion": "陳首廉",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/F383ED878704891477874E7B7A07C4EC",
+   "active": true
+  },
+  {
+   "category": "職業賽",
+   "name": "中日精英賽(停辦)",
+   "period": "2011.06.04~2008.06.15",
+   "champLabel": "2011年 冠軍",
+   "champion": "陳詩淵",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/0D5B96A8AFEF9794D421C797DD6B795C",
+   "active": false
+  },
+  {
+   "category": "職業賽",
+   "name": "聯電盃 (停辦)",
+   "period": "2023.05.05~2020.11.06",
+   "champLabel": "2023冠軍",
+   "champion": "許皓鋐",
+   "note": "二連霸",
+   "url": "https://www.haifong.org/game/classes/2E725C23C4DE1EEF626BA6D71BDEC4B2",
+   "active": false
+  },
+  {
+   "category": "職業賽",
+   "name": "友士盃十段賽 (停辦)",
+   "period": "2025.04.14~2011.12.28",
+   "champLabel": "2025冠軍",
+   "champion": "許皓鋐",
+   "note": "八連霸",
+   "url": "https://www.haifong.org/game/classes/22295E7A6A9DE65E308C214A17A815EB",
+   "active": false
+  },
+  {
+   "category": "職棋甄選",
+   "name": "2026年 職業棋士甄選",
+   "period": "2026.07.01~2026.08.01",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/64A551299C16DE57F25AF9FC97A9B50C",
+   "active": true
+  },
+  {
+   "category": "職棋甄選",
+   "name": "2026年 院生培訓",
+   "period": "2025.09.19~2026.06.14",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/542382D913F72541C8D050C8A39A470A",
+   "active": true
+  },
+  {
+   "category": "職棋甄選",
+   "name": "2025年 職業棋士甄選",
+   "period": "2025.07.10~2025.07.05",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/15B81A6DF30EE4356F866976B735EBD1",
+   "active": true
+  },
+  {
+   "category": "職棋甄選",
+   "name": "2025年 院生培訓",
+   "period": "2025.02.22~2024.11.29",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/C2495A1E6EAF8F576CA0AC4E64D65BA3",
+   "active": true
+  },
+  {
+   "category": "職棋甄選",
+   "name": "2024年 職業棋士甄選",
+   "period": "2024.06.29~2024.07.26",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/EB507427F41E8B0205E0D13F681B0DEF",
+   "active": true
+  },
+  {
+   "category": "職棋甄選",
+   "name": "2024年 院生培訓",
+   "period": "2024.02.03~2024.01.01",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/84A34030BE31FEB619653B89DA13EEC1",
+   "active": true
+  },
+  {
+   "category": "職棋甄選",
+   "name": "新科授證儀式",
+   "period": "2026.01.01~2024.01.01",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/62F50341446067C111AE9CA9FAF9EB1C",
+   "active": true
+  },
+  {
+   "category": "業餘賽",
+   "name": "女子圍棋公開賽",
+   "period": "2026.07.04~1999.10.17",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/8338F078A7231BEAFA24B8A26625B649",
+   "active": true
+  },
+  {
+   "category": "業餘賽",
+   "name": "海峰盃長青圍棋賽",
+   "period": "2026.08.26~2000.09.10",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/2EEA0D8A04762D0A9F7D5A58BEC1CC20",
+   "active": true
+  },
+  {
+   "category": "業餘賽",
+   "name": "大學生圍棋十傑賽",
+   "period": "2025.11.29~2014.10.05",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/D4AF5827D3D9AA9C1B048F0B3E6D2774",
+   "active": true
+  },
+  {
+   "category": "業餘賽",
+   "name": "國際業餘配對賽",
+   "period": "2025.05.17~2010.08.07",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/91A4CF7A93D2EDFB1E4D58C33FBB5AFD",
+   "active": true
+  },
+  {
+   "category": "業餘賽",
+   "name": "TOTO杯青少年國際大會(停辦)",
+   "period": "2018.07.30~2008.07.28",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/B56CC79442383F6AB37262426BB75303",
+   "active": false
+  },
+  {
+   "category": "業餘賽",
+   "name": "全國大專盃圍棋錦標賽(停辦)",
+   "period": "2013.05.04~1998.04.02",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/397C85D4617CA9F90CFF0EEDAC79705F",
+   "active": false
+  },
+  {
+   "category": "業餘賽",
+   "name": "全國高中圍棋聯賽(停辦)",
+   "period": "2006.08.19~2007.08.18",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/FB00EA0EA22E48262C3F1EE402AE5830",
+   "active": false
+  },
+  {
+   "category": "業餘賽",
+   "name": "中日大專學生交流賽(停辦)",
+   "period": "2006.09.01~2000.08.29",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/000C7F6E89E4482312C9F834E2A3D7B5",
+   "active": false
+  },
+  {
+   "category": "相關活動",
+   "name": "商界棋王",
+   "period": "2019.01.25~2016.01.22",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/246C7B5686318C550B9EFD5B85076504",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "年終配對快棋表演賽",
+   "period": "2021.12.16~2021.12.21",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/411066702CE19C6B5C7E25DB09E1F861",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "2022圍棋混雙世界杯JAPAN",
+   "period": "2022.03.18~2022.03.18",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/993A8E94BDCAA0C482CDD3E9CF07DAD0",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "富邦甲子盃",
+   "period": "2025.07.12~2019.07.27",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/E488F5D495605812B48AF38F5F29B336",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "世界學生圍棋王座戰",
+   "period": "2026.02.10~2003.01.10",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/00F3AB771DEF5503D0F5E112D1D0AB4C",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "日本名人戰來台舉行",
+   "period": "2019.09.10~2019.09.11",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/979F83A48CCFE9C643DE3572C35B9FD9",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "精銳隊年終最強戰",
+   "period": "2018.12.26~2017.12.29",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/E055EC1B91B0A5F36F226732E59EB40A",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "張栩名人返台記者會",
+   "period": "2018.12.21~2018.12.21",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/542E9B28E097FE5EE37C19B5DCD2B26D",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "頒獎典禮",
+   "period": "2026.01.09~2012.12.31",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/8DC3B0C1806D6EDA7B7E341B7D8075F0",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "棋人來訪",
+   "period": "2025.01.01~2018.12.31",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/DA4DA53E6CC931F356A0B332E50B3853",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "日本王座戰在台北",
+   "period": "2012.10.25~1999.11.18",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/E5D8B02142D49D4BBCC36A89037683ED",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "AlphaGo & AI",
+   "period": "2017.01.01~2016.12.31",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/E55A3B6A278303FE1C83D736BCF26432",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "三英戰呂布",
+   "period": "2018.12.18~2018.12.20",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/2C44F8DF647AA3F3124F4812D2DE4ABC",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "棋聖戰",
+   "period": "2010.01.10~2001.01.13",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/00DA5C3D68C7D74C8A0F8BA5D762C705",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "精英磨練賽",
+   "period": "2014.02.10~2013.11.12",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/067694A09CD62AA999701632D1B7939C",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "日本理光盃職業配對賽",
+   "period": "2001.01.14~2001.01.14",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/57180F57CFF9378C2BFB5A7E932C90D3",
+   "active": true
+  },
+  {
+   "category": "相關活動",
+   "name": "全國最強女子圍棋邀請賽",
+   "period": "2000.04.22~2000.04.23",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/F488C3E7D1C6A84BEDBB09683E49F239",
+   "active": true
+  }
+ ]
+}

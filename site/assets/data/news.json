@@ -1,0 +1,969 @@
+{
+ "schema_version": 1,
+ "generated": "2026-09-14T14:33:35+08:00",
+ "source": "海峰棋院 最新消息",
+ "source_url": "https://www.haifong.org/news",
+ "count": 120,
+ "items": [
+  {
+   "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
+   "date": "2026-09-11",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【中環碁聖賽戰報：楊博崴七段本周強取3連勝，晉級3回戰】",
+   "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A"
+  },
+  {
+   "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
+   "date": "2026-09-10",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【第一屆玄樂盃｜楊博崴、黃袖圃、林世民等棋士陸續晉級32強】",
+   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
+  },
+  {
+   "id": "938FE4D21C2FF829067BBE5631298E69",
+   "date": "2026-09-09",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "《林文伯：人生如棋，黑白分明》今天(9/9)正式上市，現正預購中！",
+   "url": "https://www.haifong.org/news/content/938FE4D21C2FF829067BBE5631298E69"
+  },
+  {
+   "id": "B5C93DE67B68238D0B1785F5B093B3BB",
+   "date": "2026-09-09",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【升段公告 - 簡靖庭七段晉升職業八段】",
+   "url": "https://www.haifong.org/news/content/B5C93DE67B68238D0B1785F5B093B3BB"
+  },
+  {
+   "id": "3D4CDB7FE80F551905080B38148A060A",
+   "date": "2026-09-08",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【第19屆棋王賽・循環圈 第一輪戰報：陳詩淵、簡靖庭、楊博崴、賴均輔四位棋士分獲勝利】",
+   "url": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A"
+  },
+  {
+   "id": "3451570A26F89280F60B1C54E340EC15",
+   "date": "2026-09-07",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "「中環國手賽」本賽一回戰報：陳首廉、林立祥、林彥丞、李嘉馨等棋手晉級三回戰",
+   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15"
+  },
+  {
+   "id": "03D6B22E84F12E9B1C38F30AA3CB8491",
+   "date": "2026-09-04",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "一步棋，一輩子——呂水上與玄樂盃的緣分",
+   "url": "https://www.haifong.org/news/content/03D6B22E84F12E9B1C38F30AA3CB8491"
+  },
+  {
+   "id": "9C639DF04E1E98B296D032CB8929AB7C",
+   "date": "2026-09-02",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "id": "6A3BCCA683287F85004280B5C93A2887",
+   "date": "2026-09-01",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第19屆棋王賽循環賽比賽日程公告",
+   "url": "https://www.haifong.org/news/content/6A3BCCA683287F85004280B5C93A2887"
+  },
+  {
+   "id": "54BA02F71E29CE68107EE8F7BCC0DC03",
+   "date": "2026-09-01",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第20屆棋王賽 比賽辦法",
+   "url": "https://www.haifong.org/news/content/54BA02F71E29CE68107EE8F7BCC0DC03"
+  },
+  {
+   "id": "3406ACB254C8EC935D79E11516348D95",
+   "date": "2026-08-31",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第31期三星盃世界圍棋大師賽統合預選成績",
+   "url": "https://www.haifong.org/news/content/3406ACB254C8EC935D79E11516348D95"
+  },
+  {
+   "id": "7EBC69190755EB1E0821802EB5454182",
+   "date": "2026-08-31",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第14屆中環碁聖賽 抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "id": "66D681653A406C04C726CFFC34D10E3C",
+   "date": "2026-08-28",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第1屆玄樂盃 抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "id": "B6F87E936AF26D69D869468C3BAC5D24",
+   "date": "2026-08-26",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第25屆海峰盃全國長青圍棋賽",
+   "url": "https://www.haifong.org/news/content/B6F87E936AF26D69D869468C3BAC5D24"
+  },
+  {
+   "id": "D00162ECCA97063D7160DC48DDD83B20",
+   "date": "2026-08-24",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第22屆『中環國手賽』比賽辦法",
+   "url": "https://www.haifong.org/news/content/D00162ECCA97063D7160DC48DDD83B20"
+  },
+  {
+   "id": "5312FEC0DD8F3154352F04B0F965AEFE",
+   "date": "2026-08-21",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第14屆『中環碁聖賽』比賽辦法",
+   "url": "https://www.haifong.org/news/content/5312FEC0DD8F3154352F04B0F965AEFE"
+  },
+  {
+   "id": "83DDF91C4AEDAE48FD332D16B434A322",
+   "date": "2026-08-19",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【李嘉馨勇奪吳清源杯台灣代表】",
+   "url": "https://www.haifong.org/news/content/83DDF91C4AEDAE48FD332D16B434A322"
+  },
+  {
+   "id": "283285C4707CCB42BEDEB65304A070DA",
+   "date": "2026-08-15",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【夢百合杯世界圍棋公開賽：陳詩淵九段負張柏清六段，止步本賽64強】",
+   "url": "https://www.haifong.org/news/content/283285C4707CCB42BEDEB65304A070DA"
+  },
+  {
+   "id": "B870BEB250E497FEC9E10CAB0CD72DA4",
+   "date": "2026-08-14",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "楊子萱六段、李嘉馨三段取得 IBK 世界女子圍棋大師賽代表權",
+   "url": "https://www.haifong.org/news/content/B870BEB250E497FEC9E10CAB0CD72DA4"
+  },
+  {
+   "id": "FE96A4C2C55A6F99DEC490820F34F29A",
+   "date": "2026-08-14",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "陳祈睿九段、盧奕銓七段取得國手山脈盃台灣代表權",
+   "url": "https://www.haifong.org/news/content/FE96A4C2C55A6F99DEC490820F34F29A"
+  },
+  {
+   "id": "4B39CB2428827F386F4DCA8F0771AD3C",
+   "date": "2026-08-14",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "專注棋道，無懼現實——海峰棋院與宜特科技攜手啟動「精銳隊百萬激勵培育計畫」",
+   "url": "https://www.haifong.org/news/content/4B39CB2428827F386F4DCA8F0771AD3C"
+  },
+  {
+   "id": "0AB8C9C72B30E9619A6A508474BFD1DE",
+   "date": "2026-08-14",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "精銳隊百萬新氣象 何理事長勉勵棋士做青年典範",
+   "url": "https://www.haifong.org/news/content/0AB8C9C72B30E9619A6A508474BFD1DE"
+  },
+  {
+   "id": "89ECD41D8BF94BEE5594A1721DBC0D32",
+   "date": "2026-08-14",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第1届玄樂杯 簡章",
+   "url": "https://www.haifong.org/news/content/89ECD41D8BF94BEE5594A1721DBC0D32"
+  },
+  {
+   "id": "2FE0014735B1F18E47862A75681F3816",
+   "date": "2026-08-14",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "圍棋的樂趣盡在玄妙之中！ 「玄樂盃」職業圍棋賽將於9月登場",
+   "url": "https://www.haifong.org/news/content/2FE0014735B1F18E47862A75681F3816"
+  },
+  {
+   "id": "23C237FF41C1955FB5B5342D0547D077",
+   "date": "2026-08-11",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "時隔四年！盧鈺樺復仇楊子萱 加冕健喬盃女子最強后冠",
+   "url": "https://www.haifong.org/news/content/23C237FF41C1955FB5B5342D0547D077"
+  },
+  {
+   "id": "CB3C74886426B6291B382682945DFA9E",
+   "date": "2026-08-11",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第十二屆健喬盃女子圍棋最強戰 【本賽】棋譜 & 結果",
+   "url": "https://www.haifong.org/news/content/CB3C74886426B6291B382682945DFA9E"
+  },
+  {
+   "id": "924A2A29F266036ACF94C299AFE0A24A",
+   "date": "2026-08-11",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "IBK企業銀行盃 女子圍棋世界大師賽臺灣代表選拔抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/924A2A29F266036ACF94C299AFE0A24A"
+  },
+  {
+   "id": "11FEFD17FF1B69B9BFE4873ABFB284DC",
+   "date": "2026-08-10",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第12屆全羅南道「國手山脈國際圍棋大會」 世界職業最強戰 台灣代表選拔抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/11FEFD17FF1B69B9BFE4873ABFB284DC"
+  },
+  {
+   "id": "A058767062E8962AA673137E2BC490C9",
+   "date": "2026-08-06",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "2026 IBK企業銀行盃 女子圍棋世界大師賽 台灣代表選拔辦法",
+   "url": "https://www.haifong.org/news/content/A058767062E8962AA673137E2BC490C9"
+  },
+  {
+   "id": "EC958F66B3AFCCEA4363DA8B9A6ABA94",
+   "date": "2026-08-05",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "2026 IBK企業銀行盃 女子圍棋世界大師賽- 大賽簡章",
+   "url": "https://www.haifong.org/news/content/EC958F66B3AFCCEA4363DA8B9A6ABA94"
+  },
+  {
+   "id": "1632CBD144D7DC5E33DB00D7B0012A92",
+   "date": "2026-08-04",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "健喬集團7年力挺女子圍棋最強戰 日傳奇女棋士跨海參賽",
+   "url": "https://www.haifong.org/news/content/1632CBD144D7DC5E33DB00D7B0012A92"
+  },
+  {
+   "id": "F3834F9FEE5A385594D52D677FB06378",
+   "date": "2026-08-03",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第12屆健喬盃女子圍棋最強戰 女棋士簡介",
+   "url": "https://www.haifong.org/news/content/F3834F9FEE5A385594D52D677FB06378"
+  },
+  {
+   "id": "8E22DE1E96670941B23CBEE1DFB79702",
+   "date": "2026-08-03",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第12屆健喬盃女子圍棋最強戰 初賽成績",
+   "url": "https://www.haifong.org/news/content/8E22DE1E96670941B23CBEE1DFB79702"
+  },
+  {
+   "id": "DC44FEF15F2225655308325FDCB54CED",
+   "date": "2026-08-03",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第十二屆健喬盃女子圍棋最強戰 【初賽】棋譜 & 結果",
+   "url": "https://www.haifong.org/news/content/DC44FEF15F2225655308325FDCB54CED"
+  },
+  {
+   "id": "F6A268A331A895BC5295F72F879046D5",
+   "date": "2026-07-31",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選決賽 - 總成績 / 林秉寬、謝知勵 晉升新科職棋】",
+   "url": "https://www.haifong.org/news/content/F6A268A331A895BC5295F72F879046D5"
+  },
+  {
+   "id": "1100E3EA770478B3AE2EC7ECECC1DE19",
+   "date": "2026-07-30",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選決賽 - 第三日成績】",
+   "url": "https://www.haifong.org/news/content/1100E3EA770478B3AE2EC7ECECC1DE19"
+  },
+  {
+   "id": "DC859FC88550207EF731D646BAE1E9C8",
+   "date": "2026-07-28",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選決賽 - 第二日成績】",
+   "url": "https://www.haifong.org/news/content/DC859FC88550207EF731D646BAE1E9C8"
+  },
+  {
+   "id": "6D3D1EEC00E5FCC90CA6E0A2FBA4C537",
+   "date": "2026-07-27",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選決賽 - 第一日成績】",
+   "url": "https://www.haifong.org/news/content/6D3D1EEC00E5FCC90CA6E0A2FBA4C537"
+  },
+  {
+   "id": "AE9141919A4F1991B81814795374987F",
+   "date": "2026-07-23",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選複賽 - 總成績】",
+   "url": "https://www.haifong.org/news/content/AE9141919A4F1991B81814795374987F"
+  },
+  {
+   "id": "A1DE8030A7BD77EE0F67383BE344E515",
+   "date": "2026-07-23",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第12屆全羅南道國手山脈國際圍棋大會 世界職業最強戰 台灣代表選拔辦法",
+   "url": "https://www.haifong.org/news/content/A1DE8030A7BD77EE0F67383BE344E515"
+  },
+  {
+   "id": "2E9D4FA41CE7135E6F8BB51F26ED28CF",
+   "date": "2026-07-22",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選複賽 - 第五日成績】",
+   "url": "https://www.haifong.org/news/content/2E9D4FA41CE7135E6F8BB51F26ED28CF"
+  },
+  {
+   "id": "BBA0EC09B7C87807B970177196D8415D",
+   "date": "2026-07-21",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選複賽 - 第四日成績 / 蔡品倩晉升新科職棋】",
+   "url": "https://www.haifong.org/news/content/BBA0EC09B7C87807B970177196D8415D"
+  },
+  {
+   "id": "5959BF659C06878C654CD75E843EC6DB",
+   "date": "2026-07-20",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選複賽 - 第三日成績】",
+   "url": "https://www.haifong.org/news/content/5959BF659C06878C654CD75E843EC6DB"
+  },
+  {
+   "id": "156ABD5851EB49E4AB29357B916DC2B4",
+   "date": "2026-07-17",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選複賽 - 第二日成績】",
+   "url": "https://www.haifong.org/news/content/156ABD5851EB49E4AB29357B916DC2B4"
+  },
+  {
+   "id": "20CCDF07BF3A593E07A19104B43D555E",
+   "date": "2026-07-17",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第12屆 全羅南道 國手山脈 國際圍棋大會 大會規程",
+   "url": "https://www.haifong.org/news/content/20CCDF07BF3A593E07A19104B43D555E"
+  },
+  {
+   "id": "BD29B4ED1FB02F8696D5CF918581C435",
+   "date": "2026-07-16",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選複賽 - 第一日成績】",
+   "url": "https://www.haifong.org/news/content/BD29B4ED1FB02F8696D5CF918581C435"
+  },
+  {
+   "id": "9334DE1173C0A6D33AEFA096E8EDE06F",
+   "date": "2026-07-14",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選初賽 - 總成績】",
+   "url": "https://www.haifong.org/news/content/9334DE1173C0A6D33AEFA096E8EDE06F"
+  },
+  {
+   "id": "501908ADE98DC2C89F6E0FE7A32ACBB5",
+   "date": "2026-07-14",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選複賽 分組名單及注意事項】",
+   "url": "https://www.haifong.org/news/content/501908ADE98DC2C89F6E0FE7A32ACBB5"
+  },
+  {
+   "id": "A751530BFF2205660098641160A29483",
+   "date": "2026-07-13",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【社會組 職棋甄選初賽 - 第一日成績】",
+   "url": "https://www.haifong.org/news/content/A751530BFF2205660098641160A29483"
+  },
+  {
+   "id": "82E64FEF60451C64BFE986CE4A16EB1B",
+   "date": "2026-07-13",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第12屆健喬盃女子圍棋最強戰  簡章",
+   "url": "https://www.haifong.org/news/content/82E64FEF60451C64BFE986CE4A16EB1B"
+  },
+  {
+   "id": "14A3B1197494D429F7043F863B5BDD88",
+   "date": "2026-07-08",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【院生組 職棋甄選 - 總成績 / 陳天宸、楊淞賁晉升新科職棋】",
+   "url": "https://www.haifong.org/news/content/14A3B1197494D429F7043F863B5BDD88"
+  },
+  {
+   "id": "DD0705C1473F80EB142248BE39D6D1C2",
+   "date": "2026-07-07",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【院生組 職棋甄選 - 第五日成績 / 黃名棻、楊昕潔晉升新科職棋】",
+   "url": "https://www.haifong.org/news/content/DD0705C1473F80EB142248BE39D6D1C2"
+  },
+  {
+   "id": "05094752F149D3645BBA14F63C10F00D",
+   "date": "2026-07-06",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【院生組 職棋甄選 - 第四日成績】",
+   "url": "https://www.haifong.org/news/content/05094752F149D3645BBA14F63C10F00D"
+  },
+  {
+   "id": "C5A0A0C0F909ACC3086A956F3FF3F4B7",
+   "date": "2026-07-04",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第26屆女子圍棋公開賽圓滿落幕｜級位組報名人數創新高、6、7段組陳芊瑜二度奪冠！",
+   "url": "https://www.haifong.org/news/content/C5A0A0C0F909ACC3086A956F3FF3F4B7"
+  },
+  {
+   "id": "B2B701FA8705A531B1C618036ADA04AD",
+   "date": "2026-07-03",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【院生組 職棋甄選 - 第三日成績 】",
+   "url": "https://www.haifong.org/news/content/B2B701FA8705A531B1C618036ADA04AD"
+  },
+  {
+   "id": "78EA09F3675FF325A48C6B251C91F908",
+   "date": "2026-07-02",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【院生組 職棋甄選 - 第二日成績 】",
+   "url": "https://www.haifong.org/news/content/78EA09F3675FF325A48C6B251C91F908"
+  },
+  {
+   "id": "196DB987F1EBC050DA769BCD9E22573C",
+   "date": "2026-07-01",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【院生組 職棋甄選 - 第一日成績 】",
+   "url": "https://www.haifong.org/news/content/196DB987F1EBC050DA769BCD9E22573C"
+  },
+  {
+   "id": "FFAC5F635AA0F527094DD6D3C19272A1",
+   "date": "2026-06-29",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "徐靖恩七段Globis杯二連勝後惜敗韓國金昇珍，止步八強",
+   "url": "https://www.haifong.org/news/content/FFAC5F635AA0F527094DD6D3C19272A1"
+  },
+  {
+   "id": "3542090403889B1AE8E191C2D33FD66B",
+   "date": "2026-06-24",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "終結三年冠軍荒 王元均 2：0 甜蜜復仇徐靖恩 奪快棋爭霸戰冠軍",
+   "url": "https://www.haifong.org/news/content/3542090403889B1AE8E191C2D33FD66B"
+  },
+  {
+   "id": "4B3EADC1BCBA466A93B50D55D6DBBCE3",
+   "date": "2026-06-24",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第7屆快棋爭霸戰【決賽】棋譜 ＆ 結果",
+   "url": "https://www.haifong.org/news/content/4B3EADC1BCBA466A93B50D55D6DBBCE3"
+  },
+  {
+   "id": "6A323B0B88411D85BC17254ED637A587",
+   "date": "2026-06-24",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【2026年 社會組 職業棋士甄選名單及注意事項】",
+   "url": "https://www.haifong.org/news/content/6A323B0B88411D85BC17254ED637A587"
+  },
+  {
+   "id": "8B15BFFC66518AB88A3EAFED8211BF87",
+   "date": "2026-06-22",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第7屆名人賽決賽落幕！許皓鋐4：0戰勝王元均 第四度奪得名人!",
+   "url": "https://www.haifong.org/news/content/8B15BFFC66518AB88A3EAFED8211BF87"
+  },
+  {
+   "id": "F4AE383875FE266CC20B869840D146A9",
+   "date": "2026-06-22",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第7屆名人賽 【本賽】【決賽】棋譜 & 結果",
+   "url": "https://www.haifong.org/news/content/F4AE383875FE266CC20B869840D146A9"
+  },
+  {
+   "id": "00D8C9A186DD8FE67E29EDBE45AB3FD1",
+   "date": "2026-06-19",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "【精彩好棋專欄：第89篇 海峰盃之旅】",
+   "url": "https://www.haifong.org/news/content/00D8C9A186DD8FE67E29EDBE45AB3FD1"
+  },
+  {
+   "id": "9CCF5215162ED1FCCD9BC8D73CD51F35",
+   "date": "2026-06-14",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【台灣中環隊獲得男子圍丙聯賽第八名】",
+   "url": "https://www.haifong.org/news/content/9CCF5215162ED1FCCD9BC8D73CD51F35"
+  },
+  {
+   "id": "3D615AAB2569BAF9336021393736163C",
+   "date": "2026-06-14",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "環旭電子寶島隊 圍乙聯賽成績",
+   "url": "https://www.haifong.org/news/content/3D615AAB2569BAF9336021393736163C"
+  },
+  {
+   "id": "EB4A1DF327BE871F90B05DFA217E5344",
+   "date": "2026-06-14",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "海峰棋院女子隊 圍乙聯賽成績",
+   "url": "https://www.haifong.org/news/content/EB4A1DF327BE871F90B05DFA217E5344"
+  },
+  {
+   "id": "837855B842313A0E67EA9191A55C662A",
+   "date": "2026-06-14",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【2026年 院生組 職業棋士甄選名單及注意事項】",
+   "url": "https://www.haifong.org/news/content/837855B842313A0E67EA9191A55C662A"
+  },
+  {
+   "id": "432739B6241717B6E0D5400C578C737D",
+   "date": "2026-06-13",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生第六輪月賽 - 總成績 及 年度積分表公告】",
+   "url": "https://www.haifong.org/news/content/432739B6241717B6E0D5400C578C737D"
+  },
+  {
+   "id": "8FEE419806ADBE8C39B2D2808531DC89",
+   "date": "2026-06-13",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生結訓儀式 - 邁向職業棋士考試】",
+   "url": "https://www.haifong.org/news/content/8FEE419806ADBE8C39B2D2808531DC89"
+  },
+  {
+   "id": "BEB7F8B2B0DB634ECA7FC30407C0016A",
+   "date": "2026-06-11",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第31屆LG杯世界棋王戰：賴均輔九段止步本賽16強",
+   "url": "https://www.haifong.org/news/content/BEB7F8B2B0DB634ECA7FC30407C0016A"
+  },
+  {
+   "id": "6340F58BFB3AF6007B21734864E014DA",
+   "date": "2026-06-07",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生第六輪月賽 - 第二週成績公告】",
+   "url": "https://www.haifong.org/news/content/6340F58BFB3AF6007B21734864E014DA"
+  },
+  {
+   "id": "D0DE2168BF2EA551A076B2A53AB93CD9",
+   "date": "2026-06-04",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【社群媒體使用指引】",
+   "url": "https://www.haifong.org/news/content/D0DE2168BF2EA551A076B2A53AB93CD9"
+  },
+  {
+   "id": "6DD9BC85DC6148535C3915E04C497BFD",
+   "date": "2026-06-04",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【圍棋比賽作弊防制與處理辦法】",
+   "url": "https://www.haifong.org/news/content/6DD9BC85DC6148535C3915E04C497BFD"
+  },
+  {
+   "id": "18946B1C7944A87310855E422956302A",
+   "date": "2026-06-03",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【第7屆快棋爭霸戰本賽4強賽果：王元均九段、徐靖恩快棋王會師決賽】",
+   "url": "https://www.haifong.org/news/content/18946B1C7944A87310855E422956302A"
+  },
+  {
+   "id": "5B572BF8DC774CF00BBCD1DFB57B2056",
+   "date": "2026-06-03",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第7屆快棋爭霸戰【本賽】 棋譜 & 結果",
+   "url": "https://www.haifong.org/news/content/5B572BF8DC774CF00BBCD1DFB57B2056"
+  },
+  {
+   "id": "34E8658EAEFC39D080963EC9A84535E3",
+   "date": "2026-06-01",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "圍棋》長征11年！ 盧奕銓「最後一舞」2:0戰勝吳彥諶 奪新人王畢業圓夢 (風傳媒報導)",
+   "url": "https://www.haifong.org/news/content/34E8658EAEFC39D080963EC9A84535E3"
+  },
+  {
+   "id": "0E9DCEF9EDA610160CEC9AD6DEEB6278",
+   "date": "2026-05-31",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生第六輪月賽 - 第一週成績公告】",
+   "url": "https://www.haifong.org/news/content/0E9DCEF9EDA610160CEC9AD6DEEB6278"
+  },
+  {
+   "id": "D4289F73F5710B4863CDCA966C1C34F5",
+   "date": "2026-05-29",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "預言成真！ 盧奕銓「最後一舞」2:0戰勝吳彥諶 奪新人王畢業圓夢",
+   "url": "https://www.haifong.org/news/content/D4289F73F5710B4863CDCA966C1C34F5"
+  },
+  {
+   "id": "DABC26B68F504C876891CF97335095E1",
+   "date": "2026-05-29",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "2026新人王賽【決賽與本賽】 棋譜 & 結果",
+   "url": "https://www.haifong.org/news/content/DABC26B68F504C876891CF97335095E1"
+  },
+  {
+   "id": "2881291C9CFDED05AE95A20BC4AEE1B1",
+   "date": "2026-05-24",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生第五輪月賽 - 總成績公告】",
+   "url": "https://www.haifong.org/news/content/2881291C9CFDED05AE95A20BC4AEE1B1"
+  },
+  {
+   "id": "98504B4B324991C411897EB7AFF84546",
+   "date": "2026-05-24",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生第六輪月賽 賽程表】",
+   "url": "https://www.haifong.org/news/content/98504B4B324991C411897EB7AFF84546"
+  },
+  {
+   "id": "B6893ED1E14E3004DF555697FE683123",
+   "date": "2026-05-23",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第16屆春蘭杯世界職業圍棋錦標賽：台灣代表賴均輔止步世界24強",
+   "url": "https://www.haifong.org/news/content/B6893ED1E14E3004DF555697FE683123"
+  },
+  {
+   "id": "D6A8155F630E319A34A7781D59AD42E8",
+   "date": "2026-05-22",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【2026新人王決賽組合出爐！盧奕銓、吳彥諶會師冠軍戰】",
+   "url": "https://www.haifong.org/news/content/D6A8155F630E319A34A7781D59AD42E8"
+  },
+  {
+   "id": "D4772B945FF8FF6830306341050178F3",
+   "date": "2026-05-17",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生第五輪月賽 - 第二週成績公告】",
+   "url": "https://www.haifong.org/news/content/D4772B945FF8FF6830306341050178F3"
+  },
+  {
+   "id": "A82B292825107A759AD5E9594887292C",
+   "date": "2026-05-12",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【夢百合杯預選賽：台灣男將遺憾出局，楊子萱今對決韓國崔精】",
+   "url": "https://www.haifong.org/news/content/A82B292825107A759AD5E9594887292C"
+  },
+  {
+   "id": "2491EA4AF49CD6B7B1B8B932BB3022A6",
+   "date": "2026-05-11",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第26屆全國女子圍棋公開賽",
+   "url": "https://www.haifong.org/news/content/2491EA4AF49CD6B7B1B8B932BB3022A6"
+  },
+  {
+   "id": "7B8AA071E78D6CB21237A033F01D3F6E",
+   "date": "2026-05-10",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生第五輪月賽 - 第一週成績公告】",
+   "url": "https://www.haifong.org/news/content/7B8AA071E78D6CB21237A033F01D3F6E"
+  },
+  {
+   "id": "56C4E060F345FB2C6E9C1CF7D83E04AA",
+   "date": "2026-05-06",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【升段公告 - 吳彥諶二段晉升職業三段】",
+   "url": "https://www.haifong.org/news/content/56C4E060F345FB2C6E9C1CF7D83E04AA"
+  },
+  {
+   "id": "E6B9B8D4BD0A5C8F9758955B65A12492",
+   "date": "2026-05-05",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "2026年新人王初賽成績",
+   "url": "https://www.haifong.org/news/content/E6B9B8D4BD0A5C8F9758955B65A12492"
+  },
+  {
+   "id": "41F62D89E90CD799BE589E4C771E7D67",
+   "date": "2026-05-05",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "2026新人王賽【初賽】棋譜 & 結果",
+   "url": "https://www.haifong.org/news/content/41F62D89E90CD799BE589E4C771E7D67"
+  },
+  {
+   "id": "1A5421E94A98DEAF2526C966F65E8A1D",
+   "date": "2026-04-30",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "2026海峰棋院vs關西新世代精銳交流賽 圓滿落幕",
+   "url": "https://www.haifong.org/news/content/1A5421E94A98DEAF2526C966F65E8A1D"
+  },
+  {
+   "id": "B23602CE14084A97A066E43445961EF6",
+   "date": "2026-04-30",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "2026新人王賽初賽與本賽抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "id": "A6AFD27E287965083E11E3FBBBB9EDBF",
+   "date": "2026-04-29",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "【精彩好棋專欄：第88篇 傳奇對決(下)】",
+   "url": "https://www.haifong.org/news/content/A6AFD27E287965083E11E3FBBBB9EDBF"
+  },
+  {
+   "id": "837572E4D4FCF715BF8C17EE80096B27",
+   "date": "2026-04-29",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生第四輪月賽 - 總成績公告】",
+   "url": "https://www.haifong.org/news/content/837572E4D4FCF715BF8C17EE80096B27"
+  },
+  {
+   "id": "1858BB345D38BB00C345B3E1A89B56CC",
+   "date": "2026-04-29",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生第五輪月賽 賽程表】",
+   "url": "https://www.haifong.org/news/content/1858BB345D38BB00C345B3E1A89B56CC"
+  },
+  {
+   "id": "0686B80CED6865CCE1DFBDC0AD3F82CA",
+   "date": "2026-04-28",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第31屆LG杯「朝鮮日報世界棋王戰」賴均輔獲得代表權",
+   "url": "https://www.haifong.org/news/content/0686B80CED6865CCE1DFBDC0AD3F82CA"
+  },
+  {
+   "id": "8520CEC6758BB446DC209D41BA52BC5E",
+   "date": "2026-04-27",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【第7屆快棋爭霸戰初賽成績：16名入圍者獲勝晉級，本賽48強名單誕生！】",
+   "url": "https://www.haifong.org/news/content/8520CEC6758BB446DC209D41BA52BC5E"
+  },
+  {
+   "id": "42C84431521083D7B6767BA98218B4F6",
+   "date": "2026-04-27",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第7屆快棋爭霸戰【初賽】 棋譜&結果",
+   "url": "https://www.haifong.org/news/content/42C84431521083D7B6767BA98218B4F6"
+  },
+  {
+   "id": "8607401EE00C3E5B6579AACBF51E363A",
+   "date": "2026-04-25",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "2026新人王賽 簡章",
+   "url": "https://www.haifong.org/news/content/8607401EE00C3E5B6579AACBF51E363A"
+  },
+  {
+   "id": "FF8FCCD2B0E39D82ADE499F9BC36DB11",
+   "date": "2026-04-24",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "中華職業圍棋協會 參賽棋士紀律規範",
+   "url": "https://www.haifong.org/news/content/FF8FCCD2B0E39D82ADE499F9BC36DB11"
+  },
+  {
+   "id": "5124041E7DF1763C2410E0E21D4FA07D",
+   "date": "2026-04-24",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "中華職業圍棋協會 對局管理規定",
+   "url": "https://www.haifong.org/news/content/5124041E7DF1763C2410E0E21D4FA07D"
+  },
+  {
+   "id": "A4B3496B6CE82D8F6807EF322D79D0D9",
+   "date": "2026-04-23",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【名人賽冠亞軍對決出爐！許皓鋐、王元均直落二對手，時隔五年會師名人決賽】",
+   "url": "https://www.haifong.org/news/content/A4B3496B6CE82D8F6807EF322D79D0D9"
+  },
+  {
+   "id": "EC2101C33C8760B423D65C4CE3E5C847",
+   "date": "2026-04-23",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第7屆快棋爭霸戰 抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "id": "320A4B8265668D2944D67D9A7BCFBC66",
+   "date": "2026-04-22",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第31屆LG杯「朝鮮日報世界棋王戰」台灣代表選拔初選成績",
+   "url": "https://www.haifong.org/news/content/320A4B8265668D2944D67D9A7BCFBC66"
+  },
+  {
+   "id": "EB8076EE1328C542D64E2A8904FD6206",
+   "date": "2026-04-22",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【2026 社會組 職業棋士甄選辦法】",
+   "url": "https://www.haifong.org/news/content/EB8076EE1328C542D64E2A8904FD6206"
+  },
+  {
+   "id": "5976033F7A2DA01A8ED17AAFAE6AED43",
+   "date": "2026-04-22",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【2026 院生組 職業棋士甄選辦法】",
+   "url": "https://www.haifong.org/news/content/5976033F7A2DA01A8ED17AAFAE6AED43"
+  },
+  {
+   "id": "D49E703D885C18AC7E9D9C542253EFDC",
+   "date": "2026-04-22",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第7屆快棋爭霸戰 抽籤日期公告",
+   "url": "https://www.haifong.org/news/content/D49E703D885C18AC7E9D9C542253EFDC"
+  },
+  {
+   "id": "EA3E055B8324F57C2A6E278754B4EBA8",
+   "date": "2026-04-19",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "【棋編碎碎念：這就是人生吧】",
+   "url": "https://www.haifong.org/news/content/EA3E055B8324F57C2A6E278754B4EBA8"
+  },
+  {
+   "id": "DECB75E3A80CB4A4C65F147F07E469E0",
+   "date": "2026-04-19",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【賴均輔九段止步倡棋杯本賽30強】",
+   "url": "https://www.haifong.org/news/content/DECB75E3A80CB4A4C65F147F07E469E0"
+  },
+  {
+   "id": "98EA809DCDE01972D37A228E04138375",
+   "date": "2026-04-17",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "台灣圍棋破紀錄！三劍客攜手勇闖世界16強、創新里程碑",
+   "url": "https://www.haifong.org/news/content/98EA809DCDE01972D37A228E04138375"
+  },
+  {
+   "id": "31564758CBFAEA0978559D691990531C",
+   "date": "2026-04-16",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第31屆LG杯『朝鮮日報世界棋王戰』 台灣代表選拔抽籤結果",
+   "url": "https://www.haifong.org/news/content/31564758CBFAEA0978559D691990531C"
+  },
+  {
+   "id": "552556DA3BF451E8CBED2ACC85F8A11E",
+   "date": "2026-04-15",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "狂取14連勝！台灣圍棋「黃金世代」降臨！衢州爛柯杯「三劍客」，挺進世界16 強！！！",
+   "url": "https://www.haifong.org/news/content/552556DA3BF451E8CBED2ACC85F8A11E"
+  },
+  {
+   "id": "3FD5507825A0DEB705778817C94AD9A6",
+   "date": "2026-04-14",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第四屆衢州爛柯杯世界圍棋公開賽本賽48強抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/3FD5507825A0DEB705778817C94AD9A6"
+  },
+  {
+   "id": "2B4B8036EADCF0A83272091367EA69D0",
+   "date": "2026-04-13",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【2026 中華職協圍棋道場選拔賽成績】",
+   "url": "https://www.haifong.org/news/content/2B4B8036EADCF0A83272091367EA69D0"
+  },
+  {
+   "id": "DC1F39871FA096F5B362D78013AAE13D",
+   "date": "2026-04-12",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【院生第四輪月賽 - 第二週成績公告】",
+   "url": "https://www.haifong.org/news/content/DC1F39871FA096F5B362D78013AAE13D"
+  },
+  {
+   "id": "C4DAFA275F9F64292C365EC8979D2052",
+   "date": "2026-04-10",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【爛柯盃史詩突破】睽違十年！賴均輔、陳祈睿雙雙突圍預選，重返本賽榮耀",
+   "url": "https://www.haifong.org/news/content/C4DAFA275F9F64292C365EC8979D2052"
+  },
+  {
+   "id": "4496661D67E47D9010BF3A4BA19CF293",
+   "date": "2026-04-10",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第31回 LG盃 朝鮮日報 棋王戰 大會要綱",
+   "url": "https://www.haifong.org/news/content/4496661D67E47D9010BF3A4BA19CF293"
+  },
+  {
+   "id": "F5A52C833EBF0ED8DDAD236FF78E8478",
+   "date": "2026-04-07",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第31屆LG杯『朝鮮日報世界棋王戰』 台灣代表選拔辦法",
+   "url": "https://www.haifong.org/news/content/F5A52C833EBF0ED8DDAD236FF78E8478"
+  },
+  {
+   "id": "70F68973C8887EC9178ABE5BDE3E6E50",
+   "date": "2026-04-02",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "2026/4/02 第6屆「MLILY夢百合0壓床墊杯」世界圍棋公開賽臺灣代表選拔賽 陳詩淵取得代表權",
+   "url": "https://www.haifong.org/news/content/70F68973C8887EC9178ABE5BDE3E6E50"
+  }
+ ]
+}
