@@ -1,0 +1,55 @@
+{
+ "_說明": [
+  "這是 site/assets/data/teachers.json 的欄位範例與填寫說明，本檔不會被網站讀取。",
+  "id 必須對應 players.json 裡的棋士 id（可在棋士介紹頁網址的 ?id= 後面找到）。",
+  "name / rank / photo / 經歷 都會自動從 players.json 帶入，不要在這裡重複填。",
+  "contacts 只放老師『同意公開』的管道；不同意公開的一律不要寫進來。",
+  "acceptForm 為 true 時，老師頁面會顯示聯絡表單。"
+ ],
+
+ "schema_version": 1,
+ "updated": "2026-09-17",
+
+ "teachers": [
+  {
+   "id": "對應 players.json 的棋士 id，例如 524D63AB167F4AC82887FD1660977B3E",
+
+   "modes": ["實體", "線上"],
+   "areas": ["台北", "新北"],
+   "students": ["兒童", "青少年", "成人"],
+   "levels": "入門 ～ 業餘 5 段",
+   "languages": ["中文", "英文"],
+
+   "fee": "面議",
+   "availability": "平日晚間、週六全天",
+
+   "intro": "教學簡介，由老師自行提供。建議 100–200 字，說明教學風格、擅長的對象與課程形式。",
+
+   "acceptForm": true,
+   "contacts": [
+    { "type": "line",    "label": "LINE",       "value": "@example" },
+    { "type": "ig",      "label": "Instagram",  "value": "https://www.instagram.com/example/" },
+    { "type": "fb",      "label": "Facebook",   "value": "https://www.facebook.com/example" },
+    { "type": "website", "label": "教學網站",   "value": "https://example.com" },
+    { "type": "email",   "label": "電子信箱",   "value": "teacher@example.com" },
+    { "type": "phone",   "label": "電話",       "value": "0900-000-000" }
+   ]
+  }
+ ],
+
+ "_登錄表單建議欄位": [
+  "姓名（用於對應棋士名錄）",
+  "是否同意刊登於協會官網「找老師」專區（必填・同意才登錄）",
+  "授課方式：實體／線上／兩者皆可",
+  "可授課地區（實體才需填）",
+  "招收對象：兒童／青少年／成人（可複選）",
+  "可教學程度範圍，例如「入門 ～ 業餘 5 段」",
+  "授課語言",
+  "收費方式（可填「面議」）",
+  "可授課時段",
+  "教學簡介（100–200 字）",
+  "是否願意接收官網轉來的學生詢問表單（是／否）",
+  "願意公開的聯絡管道（可複選，並填寫內容）：LINE／IG／FB／教學網站／電子信箱／電話",
+  "※ 未勾選的管道一律不會出現在網站上"
+ ]
+}

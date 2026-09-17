@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>老師介紹｜中華職業圍棋協會</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="teachers">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb">
+      <a href="../index.html">首頁</a><span class="sep">/</span>
+      <a href="index.html">找職業老師</a><span class="sep">/</span><span id="bcName">老師介紹</span>
+    </nav>
+    <h1 id="tName">—</h1>
+    <p id="tSub"></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div id="profileWrap"><p class="muted">載入中…</p></div>
+  </div>
+</section>
+
+<!--
+  聯絡表單必須以靜態 HTML 存在，Netlify 才能在部署時偵測到並收件。
+  實際顯示位置由 JS 搬移到老師資訊下方；未開放表單的老師會整段移除。
+-->
+<div id="formSlot" hidden>
+  <div class="panel">
+    <div class="panel__head">
+      <h2 style="font-size:1.2rem">向老師提出詢問</h2>
+      <span class="muted" style="font-size:.82rem">送出後由協會轉交老師</span>
+    </div>
+
+    <form name="teacher-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+      <input type="hidden" name="form-name" value="teacher-contact">
+      <input type="hidden" name="老師" id="fTeacher" value="">
+      <p hidden><label>請勿填寫：<input name="bot-field"></label></p>
+
+      <div class="grid grid-2" style="gap:0 20px">
+        <div class="field">
+          <label for="sName">您的稱呼 <span style="color:var(--accent)">*</span></label>
+          <input type="text" id="sName" name="姓名" required>
+        </div>
+        <div class="field">
+          <label for="sContact">聯絡方式 <span style="color:var(--accent)">*</span></label>
+          <input type="text" id="sContact" name="聯絡方式" required placeholder="電子信箱或電話">
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="gap:0 20px">
+        <div class="field">
+          <label for="sLevel">目前程度</label>
+          <input type="text" id="sLevel" name="目前程度" placeholder="例：完全初學、業餘 3 級">
+        </div>
+        <div class="field">
+          <label for="sMode">希望上課方式</label>
+          <select id="sMode" name="希望上課方式">
+            <option>不限</option>
+            <option>實體</option>
+            <option>線上</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="sMsg">想詢問的內容 <span style="color:var(--accent)">*</span></label>
+        <textarea id="sMsg" name="詢問內容" rows="5" required
+          placeholder="例：想了解課程形式、可上課時段與收費方式"></textarea>
+      </div>
+
+      <div class="field">
+        <label style="display:flex;gap:8px;align-items:flex-start;font-weight:400">
+          <input type="checkbox" name="同意轉交" required style="width:auto;margin-top:5px">
+          <span style="font-size:.88rem;color:var(--ink-3)">
+            我同意協會將本次詢問的內容與聯絡方式轉交給這位老師，以便老師與我聯繫。
+          </span>
+        </label>
+      </div>
+
+      <button class="btn btn-accent" type="submit">送出詢問</button>
+      <p class="form-note mt-2 mb-0">
+        課程內容與費用由您與老師自行約定，本會不介入教學契約與費用爭議。
+      </p>
+    </form>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="../assets/js/players.js"></script>
+<script src="../assets/js/teachers.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  var T = window.CPGA_TEACHERS;
+  var id = new URLSearchParams(location.search).get('id');
+  var wrap = document.getElementById('profileWrap');
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  T.load().then(function (data) {
+    var t = data.teachers.filter(function (x) { return x.id === id; })[0];
+    if (!t) {
+      document.getElementById('tName').textContent = '找不到這位老師';
+      wrap.innerHTML = '<p><a href="index.html">← 回到找職業老師</a></p>';
+      document.getElementById('formSlot').remove();
+      return;
+    }
+
+    document.title = t.name + ' ' + t.rank + '｜找職業老師';
+    document.getElementById('bcName').textContent = t.name;
+    document.getElementById('tName').textContent = t.name + '　' + t.rank;
+    document.getElementById('tSub').textContent =
+      [t.modes.join('／'), t.areas.join('、')].filter(Boolean).join('　·　');
+
+    var contacts = (t.contacts || []).filter(function (c) { return c.value; });
+    var contactHtml = contacts.length
+      ? '<div style="display:flex;flex-direction:column;gap:8px">' + contacts.map(function (c) {
+          var href = T.contactHref(c);
+          var inner = '<span style="width:18px;display:inline-block">' + T.contactIcon(c.type) + '</span>' +
+            esc(c.label) + '<span class="muted" style="font-size:.85rem;margin-left:6px">' + esc(c.value) + '</span>';
+          return href
+            ? '<a class="btn btn-ghost btn-sm" style="justify-content:flex-start" href="' + esc(href) +
+              '" target="_blank" rel="noopener">' + inner + '</a>'
+            : '<span class="btn btn-ghost btn-sm" style="justify-content:flex-start;cursor:default">' + inner + '</span>';
+        }).join('') + '</div>'
+      : '<p class="muted mb-0" style="font-size:.9rem">這位老師未公開直接聯絡管道，請使用下方詢問表單。</p>';
+
+    var meta = [
+      ['授課方式', t.modes.join('／')],
+      ['地區', t.areas.join('、')],
+      ['招收對象', t.students.join('、')],
+      ['可教程度', t.levels],
+      ['授課語言', t.languages.join('、')],
+      ['費用', t.fee],
+      ['可授課時段', t.availability]
+    ].filter(function (r) { return r[1]; });
+
+    wrap.innerHTML =
+      '<div class="grid grid-aside" style="grid-template-columns:300px minmax(0,1fr);gap:44px">' +
+        '<div class="stack">' +
+          '<div class="card" style="padding:0;overflow:hidden;position:relative">' +
+            (t.photo
+              ? '<img src="' + esc(T.photoUrl(t)) + '" alt="' + esc(t.name) + '" style="width:100%;aspect-ratio:1;object-fit:cover;display:block">'
+              : '<div class="player-card__photo"><span class="player-card__initial">' + esc(t.name.charAt(0)) + '</span></div>') +
+            '<span class="player-card__rank" style="top:14px;right:14px">' + esc(t.rank) + '</span>' +
+          '</div>' +
+          '<div class="card"><h3 style="font-size:1.05rem">聯絡管道</h3>' + contactHtml + '</div>' +
+          (t.playerSource
+            ? '<div class="card"><h3 style="font-size:1.05rem">棋士資料</h3>' +
+              '<p class="muted mb-0" style="font-size:.9rem">完整段位、成績與棋戰履歷</p>' +
+              '<a class="btn btn-ghost btn-sm btn-block mt-2" href="../' + esc(t.playerSource) + '">查看棋士介紹頁 →</a></div>'
+            : '') +
+        '</div>' +
+
+        '<div>' +
+          '<div class="panel">' +
+            '<div class="panel__head"><h2 style="font-size:1.2rem">教學資訊</h2></div>' +
+            '<dl class="deflist">' + meta.map(function (r) {
+              return '<dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd>';
+            }).join('') + '</dl>' +
+          '</div>' +
+          (t.intro
+            ? '<div class="panel"><div class="panel__head"><h2 style="font-size:1.2rem">教學簡介</h2></div>' +
+              '<p class="mb-0" style="white-space:pre-line">' + esc(t.intro) + '</p></div>'
+            : '') +
+          '<div id="formHost"></div>' +
+          '<div style="margin-top:24px"><a class="btn btn-ghost btn-sm" href="index.html">← 回到找職業老師</a></div>' +
+        '</div>' +
+      '</div>';
+
+    var slot = document.getElementById('formSlot');
+    if (t.acceptForm) {
+      document.getElementById('fTeacher').value = t.name + '（' + t.id + '）';
+      slot.hidden = false;
+      document.getElementById('formHost').appendChild(slot);
+    } else {
+      slot.remove();
+    }
+  }).catch(function (err) {
+    document.getElementById('tName').textContent = '載入失敗';
+    wrap.innerHTML = '<p class="muted">資料載入失敗（' + esc(err.message) + '）。</p>';
+    var slot = document.getElementById('formSlot');
+    if (slot) slot.remove();
+  });
+})();
+</script>
+</body>
+</html>

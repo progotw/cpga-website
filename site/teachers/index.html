@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>找職業老師｜中華職業圍棋協會</title>
+<meta name="description" content="向本會職業棋士學棋。依授課方式、地區與對象尋找適合的老師。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="teachers">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><span>找職業老師</span></nav>
+    <h1>找職業老師</h1>
+    <p>向本會登錄的職業棋士學棋。選擇適合的老師後，可直接透過老師公開的管道聯繫，或在老師頁面填寫詢問表單。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div id="filters" style="display:none">
+      <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;margin-bottom:28px">
+        <div class="field" style="margin:0;min-width:160px">
+          <label for="fMode">授課方式</label>
+          <select id="fMode"><option value="all">不限</option></select>
+        </div>
+        <div class="field" style="margin:0;min-width:160px">
+          <label for="fArea">地區</label>
+          <select id="fArea"><option value="all">不限</option></select>
+        </div>
+        <div class="field" style="margin:0;min-width:160px">
+          <label for="fStudent">招收對象</label>
+          <select id="fStudent"><option value="all">不限</option></select>
+        </div>
+        <div class="field" style="margin:0;flex:1 1 200px;max-width:300px">
+          <label for="fSearch">搜尋</label>
+          <input type="search" id="fSearch" placeholder="輸入老師姓名…">
+        </div>
+      </div>
+    </div>
+
+    <div id="teacherList"><p class="muted">載入中…</p></div>
+    <p class="muted mt-2" id="resultCount"></p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div class="callout">
+        <h3 style="font-size:1.1rem">給學生的提醒</h3>
+        <p class="mb-0" style="font-size:.94rem">
+          課程內容、時間與費用由老師與學生自行約定，
+          本會提供的是媒合資訊，不介入雙方的教學契約與費用爭議。
+          聯繫前建議先確認上課方式、頻率與收費。
+        </p>
+      </div>
+      <div class="callout callout--accent">
+        <h3 style="font-size:1.1rem">職業棋士登錄</h3>
+        <p class="mb-0" style="font-size:.94rem">
+          本會職業棋士如有意願開放教學，歡迎向秘書處登錄。
+          登錄採自願制，公開哪些聯絡管道由老師自行決定。
+          洽詢：(02) 2702-8898 轉 131、132。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/players.js"></script>
+<script src="../assets/js/teachers.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  var T = window.CPGA_TEACHERS;
+  var listEl = document.getElementById('teacherList');
+  var all = [];
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function card(t) {
+    var tags = t.modes.map(function (m) {
+      return '<span class="tag ' + (m === '線上' ? 'tag--media' : 'tag--match') + '">' + esc(m) + '</span>';
+    }).join(' ');
+
+    return '<a class="card card--link card-link teacher-card" href="profile.html?id=' + encodeURIComponent(t.id) + '">' +
+      '<div class="teacher-card__head">' +
+        (t.photo
+          ? '<img class="teacher-card__photo" src="' + esc(T.photoUrl(t)) + '" alt="' + esc(t.name) + '" loading="lazy">'
+          : '<span class="teacher-card__photo teacher-card__photo--none">' + esc(t.name.charAt(0)) + '</span>') +
+        '<div>' +
+          '<h3 style="margin:0 0 2px">' + esc(t.name) + '<span class="muted" style="font-size:.86rem;font-weight:400">　' + esc(t.rank) + '</span></h3>' +
+          '<div>' + tags + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<dl class="deflist teacher-card__meta">' +
+        (t.areas.length ? '<dt>地區</dt><dd>' + esc(t.areas.join('、')) + '</dd>' : '') +
+        (t.students.length ? '<dt>對象</dt><dd>' + esc(t.students.join('、')) + '</dd>' : '') +
+        (t.levels ? '<dt>程度</dt><dd>' + esc(t.levels) + '</dd>' : '') +
+        (t.fee ? '<dt>費用</dt><dd>' + esc(t.fee) + '</dd>' : '') +
+      '</dl>' +
+      (t.intro ? '<p class="muted teacher-card__intro">' + esc(t.intro) + '</p>' : '') +
+      '<span class="card__more">查看老師頁面 →</span>' +
+      '</a>';
+  }
+
+  function render() {
+    var mode = document.getElementById('fMode').value;
+    var area = document.getElementById('fArea').value;
+    var stu = document.getElementById('fStudent').value;
+    var kw = document.getElementById('fSearch').value.trim();
+
+    var rows = all.filter(function (t) {
+      return (mode === 'all' || t.modes.indexOf(mode) > -1)
+        && (area === 'all' || t.areas.indexOf(area) > -1)
+        && (stu === 'all' || t.students.indexOf(stu) > -1)
+        && (!kw || t.name.indexOf(kw) > -1);
+    });
+
+    listEl.innerHTML = rows.length
+      ? '<div class="grid grid-3">' + rows.map(card).join('') + '</div>'
+      : '<p class="muted">找不到符合條件的老師，請放寬篩選條件。</p>';
+    document.getElementById('resultCount').textContent = '共 ' + rows.length + ' 位老師';
+  }
+
+  function fillSelect(id, values) {
+    var sel = document.getElementById(id);
+    sel.innerHTML = '<option value="all">不限</option>' +
+      values.map(function (v) { return '<option>' + esc(v) + '</option>'; }).join('');
+  }
+
+  T.load().then(function (data) {
+    all = data.teachers;
+
+    if (!all.length) {
+      listEl.innerHTML =
+        '<div class="card" style="text-align:center;padding:48px 28px">' +
+          '<h2 style="font-size:1.4rem">職業老師登錄招募中</h2>' +
+          '<p class="muted" style="max-width:52ch;margin-inline:auto">' +
+            '本專區正在建置中。協會正在邀請職業棋士登錄教學資訊，' +
+            '開放後您就能在這裡依地區、授課方式與招收對象找到適合的老師。' +
+          '</p>' +
+          '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:1.4rem">' +
+            '<a class="btn btn-primary" href="../players/index.html">先看看職業棋士名錄</a>' +
+            '<a class="btn btn-ghost" href="../about/contact.html">我是棋士，想登錄</a>' +
+          '</div>' +
+        '</div>';
+      document.getElementById('resultCount').textContent = '';
+      return;
+    }
+
+    document.getElementById('filters').style.display = '';
+    fillSelect('fMode', T.options(all, 'modes'));
+    fillSelect('fArea', T.options(all, 'areas'));
+    fillSelect('fStudent', T.options(all, 'students'));
+    ['fMode', 'fArea', 'fStudent', 'fSearch'].forEach(function (id) {
+      document.getElementById(id).addEventListener('input', render);
+    });
+    render();
+  }).catch(function (err) {
+    listEl.innerHTML = '<p class="muted">資料載入失敗（' + esc(err.message) + '）。</p>';
+  });
+})();
+</script>
+</body>
+</html>

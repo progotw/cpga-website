@@ -1,0 +1,6 @@
+{
+ "schema_version": 1,
+ "note": "職業老師登錄資料。id 對應 players.json 的棋士 id，照片、段位、經歷會自動帶入，不需在此重複填寫。欄位說明與範例見 scripts/teachers.sample.json。",
+ "updated": "2026-09-17",
+ "teachers": []
+}

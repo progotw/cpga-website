@@ -54,6 +54,7 @@
         { label: '晉升辦法',      href: 'events/promotion.html' }
       ]
     },
+    { label: '找老師',   href: 'teachers/index.html',   key: 'teachers' },
     { label: '賽事花絮', href: 'gallery/index.html',    key: 'gallery' },
     { label: '加入會員', href: 'membership/index.html', key: 'membership' },
     { label: '下載專區', href: 'downloads/index.html',  key: 'downloads' }
@@ -120,6 +121,7 @@
               '<li><a href="' + ROOT + 'gallery/index.html">賽事花絮</a></li>' +
             '</ul></div>' +
             '<div class="footer-col"><h4>服務</h4><ul>' +
+              '<li><a href="' + ROOT + 'teachers/index.html">找職業老師</a></li>' +
               '<li><a href="' + ROOT + 'membership/index.html">加入會員</a></li>' +
               '<li><a href="' + ROOT + 'downloads/index.html">下載專區</a></li>' +
               '<li><a href="' + ROOT + 'member/login.html">棋士專區</a></li>' +

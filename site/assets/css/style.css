@@ -349,6 +349,25 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
   display: grid; place-items: center; position: relative;
   background-image: radial-gradient(circle at 50% 35%, var(--paper-3), var(--paper-2));
 }
+/* 找老師：老師卡片 */
+.teacher-card { display: flex; flex-direction: column; }
+.teacher-card__head { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+.teacher-card__photo {
+  width: 64px; height: 64px; flex: none; border-radius: 50%;
+  object-fit: cover; background: var(--paper-2);
+}
+.teacher-card__photo--none {
+  display: grid; place-items: center;
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: var(--line-2);
+}
+.teacher-card__meta { grid-template-columns: max-content 1fr; margin-bottom: 14px; }
+.teacher-card__meta dt, .teacher-card__meta dd { padding: 7px 0; font-size: .88rem; }
+.teacher-card__meta dt { padding-right: 16px; }
+.teacher-card__intro {
+  font-size: .9rem; margin: 0 0 12px;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+
 /* 名錄：依段位分組的純文字清單（照片只在個人頁顯示） */
 .rank-group { margin-bottom: 36px; }
 .rank-group__head {
