@@ -38,7 +38,21 @@
      "value": "https://www.instagram.com/example/"
     }
    ],
-   "id": "524D63AB167F4AC82887FD1660977B3E"
+   "id": "524D63AB167F4AC82887FD1660977B3E",
+   "links": [
+    {
+     "label": "課程介紹與收費",
+     "url": "https://example.com/courses"
+    },
+    {
+     "label": "YouTube 教學頻道",
+     "url": "https://www.youtube.com/@example"
+    },
+    {
+     "label": "線上報名表單",
+     "url": "https://forms.gle/example"
+    }
+   ]
   },
   {
    "modes": [
@@ -58,7 +72,13 @@
    "intro": "範例文字：僅線上授課，適合有基礎、想提升中盤戰鬥力的成人學生。",
    "acceptForm": true,
    "contacts": [],
-   "id": "CE7FB82858C7438605C9D65FE9274AB1"
+   "id": "CE7FB82858C7438605C9D65FE9274AB1",
+   "links": [
+    {
+     "label": "線上課程說明",
+     "url": "https://example.com/online"
+    }
+   ]
   },
   {
    "modes": [
@@ -79,14 +99,14 @@
    "availability": "平日下午",
    "intro": "範例文字：以兒童啟蒙為主，重視基本功與對局禮儀。",
    "acceptForm": false,
-   "contacts": [
+   "contacts": [],
+   "id": "248B7B2EE622C94D9B841530AE46D9FF",
+   "links": [
     {
-     "type": "website",
      "label": "教學網站",
-     "value": "https://example.com"
+     "url": "https://example.com"
     }
-   ],
-   "id": "248B7B2EE622C94D9B841530AE46D9FF"
+   ]
   }
  ]
 }

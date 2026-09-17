@@ -26,13 +26,20 @@
    "intro": "教學簡介，由老師自行提供。建議 100–200 字，說明教學風格、擅長的對象與課程形式。",
 
    "acceptForm": true,
+
    "contacts": [
     { "type": "line",    "label": "LINE",       "value": "@example" },
     { "type": "ig",      "label": "Instagram",  "value": "https://www.instagram.com/example/" },
     { "type": "fb",      "label": "Facebook",   "value": "https://www.facebook.com/example" },
-    { "type": "website", "label": "教學網站",   "value": "https://example.com" },
     { "type": "email",   "label": "電子信箱",   "value": "teacher@example.com" },
     { "type": "phone",   "label": "電話",       "value": "0900-000-000" }
+   ],
+
+   "_links說明": "老師自行提供的連結，數量不限，label 自由命名。適合放課程介紹、教學影片、報名表單、部落格等。",
+   "links": [
+    { "label": "課程介紹與收費", "url": "https://example.com/courses" },
+    { "label": "YouTube 教學頻道", "url": "https://www.youtube.com/@example" },
+    { "label": "線上報名表單", "url": "https://forms.gle/example" }
    ]
   }
  ],
@@ -49,7 +56,10 @@
   "可授課時段",
   "教學簡介（100–200 字）",
   "是否願意接收官網轉來的學生詢問表單（是／否）",
-  "願意公開的聯絡管道（可複選，並填寫內容）：LINE／IG／FB／教學網站／電子信箱／電話",
-  "※ 未勾選的管道一律不會出現在網站上"
+  "願意公開的聯絡管道（可複選，並填寫內容）：LINE／IG／FB／電子信箱／電話",
+  "※ 未勾選的管道一律不會出現在網站上",
+  "相關連結（選填，可填多筆，每筆含『名稱』與『網址』）：",
+  "　　例如 課程介紹與收費、YouTube 教學頻道、部落格、線上報名表單、個人網站",
+  "　　建議在表單裡開 3 組『連結名稱 + 網址』欄位，不夠再請老師來信補充"
  ]
 }

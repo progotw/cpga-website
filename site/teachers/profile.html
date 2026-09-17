@@ -131,12 +131,13 @@
     var contactHtml = contacts.length
       ? '<div style="display:flex;flex-direction:column;gap:8px">' + contacts.map(function (c) {
           var href = T.contactHref(c);
-          var inner = '<span style="width:18px;display:inline-block">' + T.contactIcon(c.type) + '</span>' +
-            esc(c.label) + '<span class="muted" style="font-size:.85rem;margin-left:6px">' + esc(c.value) + '</span>';
+          var inner = '<span style="width:18px;flex:none">' + T.contactIcon(c.type) + '</span>' +
+            '<span style="flex:none">' + esc(c.label) + '</span>' +
+            '<span class="contact-value">' + esc(c.value) + '</span>';
           return href
-            ? '<a class="btn btn-ghost btn-sm" style="justify-content:flex-start" href="' + esc(href) +
+            ? '<a class="btn btn-ghost btn-sm contact-btn" href="' + esc(href) +
               '" target="_blank" rel="noopener">' + inner + '</a>'
-            : '<span class="btn btn-ghost btn-sm" style="justify-content:flex-start;cursor:default">' + inner + '</span>';
+            : '<span class="btn btn-ghost btn-sm contact-btn" style="cursor:default">' + inner + '</span>';
         }).join('') + '</div>'
       : '<p class="muted mb-0" style="font-size:.9rem">這位老師未公開直接聯絡管道，請使用下方詢問表單。</p>';
 
@@ -177,6 +178,15 @@
           (t.intro
             ? '<div class="panel"><div class="panel__head"><h2 style="font-size:1.2rem">教學簡介</h2></div>' +
               '<p class="mb-0" style="white-space:pre-line">' + esc(t.intro) + '</p></div>'
+            : '') +
+          (t.links.length
+            ? '<div class="panel"><div class="panel__head"><h2 style="font-size:1.2rem">相關連結</h2></div>' +
+              '<div class="link-list">' + t.links.map(function (l) {
+                return '<a class="link-item" href="' + esc(l.url) + '" target="_blank" rel="noopener">' +
+                  '<span class="link-item__label">' + esc(l.label || l.url) + '</span>' +
+                  '<span class="link-item__url">' + esc(l.url) + '</span>' +
+                  '<span class="link-item__arrow">↗</span></a>';
+              }).join('') + '</div></div>'
             : '') +
           '<div id="formHost"></div>' +
           '<div style="margin-top:24px"><a class="btn btn-ghost btn-sm" href="' +

@@ -349,6 +349,30 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
   display: grid; place-items: center; position: relative;
   background-image: radial-gradient(circle at 50% 35%, var(--paper-3), var(--paper-2));
 }
+/* 找老師：聯絡管道按鈕 —— 長網址不得撐破版面 */
+.contact-btn { justify-content: flex-start; max-width: 100%; }
+.contact-value {
+  min-width: 0; font-size: .85rem; color: var(--ink-4);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* 找老師：老師自行提供的相關連結 */
+.link-list { display: flex; flex-direction: column; gap: 8px; }
+.link-item {
+  display: grid; grid-template-columns: 1fr auto; align-items: baseline;
+  gap: 2px 12px; padding: 12px 16px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--white); text-decoration: none !important; color: inherit;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.link-item:hover { border-color: var(--ink); box-shadow: var(--shadow-sm); }
+.link-item__label { font-weight: 500; color: var(--ink); }
+.link-item__url {
+  grid-column: 1; font-size: .8rem; color: var(--ink-4);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.link-item__arrow { grid-row: 1 / span 2; color: var(--ink-4); }
+
 /* 找老師：老師卡片 */
 .teacher-card { display: flex; flex-direction: column; }
 .teacher-card__head { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }

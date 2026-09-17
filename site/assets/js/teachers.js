@@ -78,7 +78,9 @@
               availability: t.availability || '',
               intro: t.intro || '',
               acceptForm: t.acceptForm !== false,
-              contacts: t.contacts || []
+              contacts: t.contacts || [],
+              /* 老師自行提供的相關連結：課程介紹、教學影片、報名表單等，數量不限 */
+              links: (t.links || []).filter(function (l) { return l && l.url; })
             };
           });
           return { meta: data, teachers: merged };
