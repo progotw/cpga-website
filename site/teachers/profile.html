@@ -110,6 +110,8 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
+  T.previewBanner();
+
   T.load().then(function (data) {
     var t = data.teachers.filter(function (x) { return x.id === id; })[0];
     if (!t) {
@@ -177,7 +179,8 @@
               '<p class="mb-0" style="white-space:pre-line">' + esc(t.intro) + '</p></div>'
             : '') +
           '<div id="formHost"></div>' +
-          '<div style="margin-top:24px"><a class="btn btn-ghost btn-sm" href="index.html">← 回到找職業老師</a></div>' +
+          '<div style="margin-top:24px"><a class="btn btn-ghost btn-sm" href="' +
+            T.withPreview('index.html') + '">← 回到找職業老師</a></div>' +
         '</div>' +
       '</div>';
 

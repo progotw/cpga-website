@@ -18,14 +18,40 @@
     line: '💬', ig: '◎', fb: 'f', website: '↗', email: '✉', phone: '☎'
   };
 
+  /* 網址加上 ?preview=1 會改讀範例資料，方便在正式網站上檢視版面。
+     正式頁面仍讀 teachers.json，不受影響。 */
+  var isPreview = new URLSearchParams(location.search).get('preview') === '1';
+
   window.CPGA_TEACHERS = {
+    isPreview: isPreview,
+
+    /* 在頁面頂端插入預覽模式提示 */
+    previewBanner: function () {
+      if (!isPreview) return;
+      var el = document.createElement('div');
+      el.className = 'wrap';
+      el.style.paddingTop = '24px';
+      el.innerHTML = '<div class="callout callout--accent"><p class="mb-0">' +
+        '<strong>預覽模式</strong>：以下老師為版面示意。' +
+        '教學資訊、費用與聯絡方式<strong>皆為範例，非實際資料</strong>。' +
+        '正式頁面請移除網址後方的 <code>?preview=1</code>。</p></div>';
+      var first = document.querySelector('.page-hero');
+      if (first && first.nextSibling) first.parentNode.insertBefore(el, first.nextSibling);
+    },
+
+    /* 讓連結在預覽模式下保持預覽 */
+    withPreview: function (href) {
+      return isPreview ? href + (href.indexOf('?') > -1 ? '&' : '?') + 'preview=1' : href;
+    },
+
     /* 回傳 { meta, teachers: [...] }，每位老師已合併棋士基本資料 */
     load: function () {
       if (!promise) {
         promise = Promise.all([
-          fetch(ROOT + 'assets/data/teachers.json', { cache: 'no-cache' })
+          fetch(ROOT + 'assets/data/' + (isPreview ? 'teachers.preview.json' : 'teachers.json'),
+                { cache: 'no-cache' })
             .then(function (r) {
-              if (!r.ok) throw new Error('teachers.json HTTP ' + r.status);
+              if (!r.ok) throw new Error('teachers 資料 HTTP ' + r.status);
               return r.json();
             }),
           window.CPGA_PLAYERS.load()

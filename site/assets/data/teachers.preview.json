@@ -1,0 +1,92 @@
+{
+ "schema_version": 1,
+ "preview": true,
+ "note": "預覽用範例資料，僅供版面示意。教學資訊與聯絡方式皆非實際資料。",
+ "updated": "2026-09-17",
+ "teachers": [
+  {
+   "modes": [
+    "實體",
+    "線上"
+   ],
+   "areas": [
+    "台北",
+    "新北"
+   ],
+   "students": [
+    "兒童",
+    "青少年",
+    "成人"
+   ],
+   "levels": "入門 ～ 業餘 5 段",
+   "languages": [
+    "中文"
+   ],
+   "fee": "面議",
+   "availability": "平日晚間、週六全天",
+   "intro": "範例文字：說明教學風格、課程形式與擅長的學生類型。實際內容由老師於登錄表單自行填寫。",
+   "acceptForm": true,
+   "contacts": [
+    {
+     "type": "line",
+     "label": "LINE",
+     "value": "@example-line"
+    },
+    {
+     "type": "ig",
+     "label": "Instagram",
+     "value": "https://www.instagram.com/example/"
+    }
+   ],
+   "id": "524D63AB167F4AC82887FD1660977B3E"
+  },
+  {
+   "modes": [
+    "線上"
+   ],
+   "areas": [],
+   "students": [
+    "成人"
+   ],
+   "levels": "業餘 1 段以上",
+   "languages": [
+    "中文",
+    "英文"
+   ],
+   "fee": "每小時 NT$ 1,500（範例）",
+   "availability": "週末",
+   "intro": "範例文字：僅線上授課，適合有基礎、想提升中盤戰鬥力的成人學生。",
+   "acceptForm": true,
+   "contacts": [],
+   "id": "CE7FB82858C7438605C9D65FE9274AB1"
+  },
+  {
+   "modes": [
+    "實體"
+   ],
+   "areas": [
+    "台中"
+   ],
+   "students": [
+    "兒童",
+    "青少年"
+   ],
+   "levels": "入門 ～ 業餘 3 級",
+   "languages": [
+    "中文"
+   ],
+   "fee": "面議",
+   "availability": "平日下午",
+   "intro": "範例文字：以兒童啟蒙為主，重視基本功與對局禮儀。",
+   "acceptForm": false,
+   "contacts": [
+    {
+     "type": "website",
+     "label": "教學網站",
+     "value": "https://example.com"
+    }
+   ],
+   "id": "248B7B2EE622C94D9B841530AE46D9FF"
+  }
+ ]
+}

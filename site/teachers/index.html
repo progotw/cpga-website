@@ -93,7 +93,8 @@
       return '<span class="tag ' + (m === '線上' ? 'tag--media' : 'tag--match') + '">' + esc(m) + '</span>';
     }).join(' ');
 
-    return '<a class="card card--link card-link teacher-card" href="profile.html?id=' + encodeURIComponent(t.id) + '">' +
+    return '<a class="card card--link card-link teacher-card" href="' +
+      T.withPreview('profile.html?id=' + encodeURIComponent(t.id)) + '">' +
       '<div class="teacher-card__head">' +
         (t.photo
           ? '<img class="teacher-card__photo" src="' + esc(T.photoUrl(t)) + '" alt="' + esc(t.name) + '" loading="lazy">'
@@ -138,6 +139,8 @@
     sel.innerHTML = '<option value="all">不限</option>' +
       values.map(function (v) { return '<option>' + esc(v) + '</option>'; }).join('');
   }
+
+  T.previewBanner();
 
   T.load().then(function (data) {
     all = data.teachers;
