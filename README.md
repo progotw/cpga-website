@@ -20,13 +20,14 @@ site/                   ← Netlify 發布的網站本體
   gallery/              賽事花絮
   membership/           加入會員
   downloads/            下載專區
-  member/               棋士專區（目前為前端示意，見下方限制）
+  member/               棋士專區說明頁（尚未開放登入）
   assets/css/style.css  全站樣式
   assets/js/            共用程式（見下表）
   assets/data/          抓取產生的 JSON
   assets/img/players/   棋士照片（壓縮後約 4 MB）
   assets/files/         可下載的協會文件
 
+prototype/member/       棋士專區示意版（已移出發布目錄，第二階段改接後端時作為參考）
 scripts/                抓取程式（不會被公開存取）
 .github/workflows/      每日自動更新資料
 netlify.toml            指定發布目錄為 site/
@@ -35,13 +36,12 @@ netlify.toml            指定發布目錄為 site/
 | 檔案 | 用途 |
 | --- | --- |
 | `assets/js/site.js` | 頁首、頁尾、導覽列（改導覽列編輯最上方的 `NAV`） |
-| `assets/js/data.js` | 手動維護的資料：下載清單、大事紀、棋士人數、棋士專區示範資料 |
+| `assets/js/data.js` | 手動維護的資料：下載清單、大事紀、棋士人數 |
 | `assets/js/schedule.js` | 賽程行事曆載入與時間顯示 |
 | `assets/js/players.js` | 棋士名錄載入 |
 | `assets/js/content.js` | 最新消息與賽事清單載入 |
 | `assets/js/teachers.js` | 找老師資料載入（含預覽模式） |
 | `assets/js/games-page.js` | 賽事分類頁共用渲染 |
-| `assets/js/member.js` | 棋士專區登入守門與側邊選單 |
 
 ---
 
@@ -119,19 +119,19 @@ npx --yes netlify-cli@latest deploy --prod --dir site
 
 ## 已知限制
 
-**棋士專區（`site/member/`）是前端示意版本**
+**棋士專區尚未開放（第一階段刻意如此）**
 
-- 登入不驗證帳密，點一下就進得去；登入狀態只存在瀏覽器本機
-- 撥款金額、積分、對局紀錄都是範例資料
-- 正式上線必須改為後端驗證，個人財務資料需在伺服器端做權限檢查
+- `site/member/index.html` 只是說明頁，沒有登入功能
+- 原本的示意版（假登入、虛構撥款金額與積分）已移到 `prototype/member/`，**不在發布目錄內**
+- `netlify.toml` 有一條 `/member/*` 轉址，舊書籤會導回說明頁
 
-後端建置規劃（Supabase、139 位棋士帳號、資料表設計、分階段上線）：
-<https://claude.ai/code/artifact/8e0c2760-bd1d-4dce-9ea1-8b2c6b1641f9>
+分三階段上線：①先讓公開內容完全正確並對外發表　②開發棋士帳號與賽程、對局費串接　③交付棋士使用
 
 **其他**
 
 - 協會尚未公開晉段的積分門檻辦法，因此段位與晉升頁只呈現已發生的升段公告，不顯示「還差幾分」
-- 賽事花絮的 IG 貼文牆仍是空版位，需協會 IG 帳號才能串接
+- 賽事花絮目前只有拍攝規範；相簿與 IG 貼文牆待協會提供照片與 IG 帳號
+- 大事紀僅收錄可查證的項目（章程備查紀錄、114 年度工作報告），2009–2024 待協會提供，**不可自行編寫**
 - 理監事名冊與會員大會會議紀錄含個資，**刻意未放入網站與版控**
 
 ---

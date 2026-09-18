@@ -90,7 +90,7 @@
           '</a>' +
           '<nav class="nav" id="mainNav" aria-label="主導覽">' +
             '<ul style="display:contents;list-style:none;margin:0;padding:0">' + items + '</ul>' +
-            '<a class="nav__link nav__link--member" href="' + ROOT + 'member/login.html">棋士專區</a>' +
+            '<a class="nav__link nav__link--member" href="' + ROOT + 'member/index.html">棋士專區</a>' +
           '</nav>' +
           '<button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false">' +
             '<span></span></button>' +
@@ -124,7 +124,7 @@
               '<li><a href="' + ROOT + 'teachers/index.html">找職業老師</a></li>' +
               '<li><a href="' + ROOT + 'membership/index.html">加入會員</a></li>' +
               '<li><a href="' + ROOT + 'downloads/index.html">下載專區</a></li>' +
-              '<li><a href="' + ROOT + 'member/login.html">棋士專區</a></li>' +
+              '<li><a href="' + ROOT + 'member/index.html">棋士專區</a></li>' +
               '<li><a href="' + ROOT + 'about/contact.html">聯絡我們</a></li>' +
             '</ul></div>' +
           '</div>' +

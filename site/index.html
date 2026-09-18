@@ -73,22 +73,6 @@
   </div>
 </section>
 
-<!-- ===== 棋士專區捷徑（登入後顯示） ===== -->
-<section id="memberShortcut" class="section section--tight" style="display:none">
-  <div class="wrap">
-    <div class="card" style="border-left:4px solid var(--accent)">
-      <div class="section-head--row" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
-        <div>
-          <span class="tag tag--notice">棋士專區</span>
-          <h3 style="margin:.5em 0 .2em">歡迎回來，<span id="scName">棋士</span></h3>
-          <p class="mb-0 muted" id="scHint">您有近期賽程與待處理事項，點擊進入專區查看。</p>
-        </div>
-        <a class="btn btn-accent" href="member/index.html">進入棋士專區</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== 快速入口 ===== -->
 <section class="section section--tight">
   <div class="wrap">
@@ -145,21 +129,6 @@
         <a class="btn btn-ghost btn-sm mt-2" href="events/index.html">完整賽程 →</a>
       </aside>
     </div>
-  </div>
-</section>
-
-<!-- ===== 賽事花絮 / IG 精選 ===== -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head section-head--row">
-      <div>
-        <span class="eyebrow">Gallery</span>
-        <h2>賽事花絮／IG 精選</h2>
-        <p>開賽前 15 分鐘開放拍攝的現場相簿，以及協會 Instagram 最新貼文。</p>
-      </div>
-      <a class="btn btn-ghost btn-sm" href="gallery/index.html">前往賽事花絮</a>
-    </div>
-    <div class="gallery-grid" id="homeGallery"></div>
   </div>
 </section>
 
@@ -283,27 +252,12 @@
     schedEl.innerHTML = '<div style="padding:20px" class="muted">賽程資料載入失敗。</div>';
   });
 
-  /* ---- 花絮 ---- */
-  document.getElementById('homeGallery').innerHTML = GALLERY.slice(0, 6).map(function (g) {
-    return '<a class="gallery-item" href="gallery/index.html" style="text-decoration:none">' +
-      '<span class="gallery-item__ph">◍</span>' +
-      '<span class="gallery-item__label">' + g.album + '</span></a>';
-  }).join('');
-
   /* ---- 大事紀 ---- */
   document.getElementById('homeMilestones').innerHTML = MILESTONES.slice(0, 4).map(function (m) {
     return '<li><span class="timeline__year">' + m.year + '</span>' +
       '<span style="color:#b9bcc3;font-size:.92rem">' + m.text + '</span></li>';
   }).join('');
 
-  /* ---- 已登入時顯示棋士專區捷徑 ---- */
-  try {
-    var u = JSON.parse(localStorage.getItem('cpga_user') || 'null');
-    if (u) {
-      document.getElementById('scName').textContent = u.name + ' ' + u.rank;
-      document.getElementById('memberShortcut').style.display = '';
-    }
-  } catch (err) { /* 略過 */ }
 })();
 </script>
 </body>

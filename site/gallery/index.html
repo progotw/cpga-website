@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>賽事花絮｜中華職業圍棋協會</title>
-<meta name="description" content="賽事現場照片相簿與協會 Instagram 最新貼文。">
+<meta name="description" content="職業賽事現場拍攝規範與賽事照片相簿。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
@@ -18,33 +18,38 @@
   <div class="wrap">
     <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><span>賽事花絮</span></nav>
     <h1>賽事花絮</h1>
-    <p>賽事現場紀錄與協會社群動態。所有照片皆於開賽前 15 分鐘的開放拍攝時段內拍攝。</p>
+    <p>賽事現場紀錄。所有照片皆於開賽前 15 分鐘的開放拍攝時段內拍攝。</p>
   </div>
 </section>
 
-<!-- ===== IG 崁入牆 ===== -->
+<!-- ===== 現場拍攝規範 ===== -->
 <section class="section">
   <div class="wrap">
-    <div class="section-head section-head--row">
-      <div>
-        <span class="eyebrow">Instagram</span>
-        <h2>協會 Instagram</h2>
-        <p>最新貼文自動同步，小編只需在 IG 發文，網站即會更新。</p>
+    <div class="section-head">
+      <span class="eyebrow">Rules</span>
+      <h2>現場拍攝規範</h2>
+    </div>
+
+    <div class="grid grid-aside" style="grid-template-columns:minmax(0,1fr) 320px;gap:44px">
+      <div class="panel">
+        <p>
+          為維護對局品質，各項職業賽事僅於<strong>開賽前 15 分鐘</strong>開放拍攝。
+          開賽後請勿使用閃光燈與快門聲，亦請勿進入對局區。
+        </p>
+        <p class="mb-0">
+          對局進行中若需補拍，請先徵得現場裁判同意；
+          頒獎與賽後訪問時段的拍攝安排，依各賽事現場公告辦理。
+        </p>
       </div>
-      <a class="btn btn-ghost btn-sm" href="#" onclick="alert('請將連結改為協會實際的 Instagram 帳號網址。');return false;">前往 IG 帳號 →</a>
-    </div>
 
-    <div class="callout mt-0" style="margin-bottom:24px">
-      <p class="mb-0" style="font-size:.9rem">
-        <strong>給網站維護者：</strong>下方為 IG 貼文牆的版位示意。正式串接有兩種做法—
-        <br>① <strong>簡易版</strong>：在 IG 貼文按「分享 → 嵌入」取得 <code>&lt;blockquote class="instagram-media"&gt;</code>
-        程式碼，直接貼進下方 <code>#igWall</code> 區塊，並載入 <code>//www.instagram.com/embed.js</code>。
-        <br>② <strong>自動版</strong>：申請 Instagram Graph API（需商業帳號綁定 FB 粉專），
-        或使用第三方 IG feed 外掛自動抓取最新貼文。
-      </p>
+      <div class="card">
+        <h3 style="font-size:1.05rem">媒體採訪</h3>
+        <p class="muted" style="font-size:.92rem">
+          採訪與拍攝申請請事先與本會聯繫，以便安排現場動線與時段。
+        </p>
+        <a class="btn btn-ghost btn-sm btn-block" href="../about/contact.html">聯絡方式 →</a>
+      </div>
     </div>
-
-    <div class="grid grid-4" id="igWall"></div>
   </div>
 </section>
 
@@ -54,93 +59,18 @@
     <div class="section-head">
       <span class="eyebrow">Albums</span>
       <h2>賽事照片相簿</h2>
-      <p>依賽事分類瀏覽現場照片。點選相簿卡片可開啟照片牆。</p>
     </div>
 
-    <div class="tabs" id="galTabs"></div>
-    <div class="grid grid-3" id="albumGrid"></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="callout callout--accent">
-      <h3 style="font-size:1.1rem">現場拍攝規範</h3>
-      <p class="mb-0" style="font-size:.94rem">
-        為維護對局品質，各項職業賽事僅於<strong>開賽前 15 分鐘</strong>開放拍攝，
-        開賽後請勿使用閃光燈、快門聲或進入對局區。
-        媒體採訪請事先與協會聯繫，詳見 <a href="../about/contact.html">聯絡方式</a>。
+    <div class="callout">
+      <p class="mb-0">
+        相簿建置中，各項賽事的現場照片將陸續上線。
+        在此之前，賽事結果與賽況報導可於<a href="../news/index.html">最新消息</a>查詢。
       </p>
     </div>
   </div>
 </section>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="相簿檢視">
-  <button class="lightbox__close" id="lbClose" aria-label="關閉">×</button>
-  <div class="lightbox__inner">
-    <div class="lightbox__frame" id="lbFrame">照片版位</div>
-    <p id="lbCaption" style="margin:0"></p>
-    <p class="muted" style="font-size:.84rem">
-      （示意用版位：實際照片請放入 <code>assets/img/</code> 後，於 <code>data.js</code> 的 GALLERY 加上照片路徑陣列。）
-    </p>
-  </div>
-</div>
-
 <div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
 <script src="../assets/js/site.js" defer></script>
-<script>
-(function () {
-  /* IG 貼文版位（6 格） */
-  document.getElementById('igWall').innerHTML = Array.from({ length: 6 }).map(function (_, i) {
-    return '<div class="gallery-item" style="cursor:default">' +
-      '<span class="gallery-item__ph">IG</span>' +
-      '<span class="gallery-item__label">貼文版位 ' + (i + 1) + '</span></div>';
-  }).join('');
-
-  /* 相簿分類 */
-  var cats = ['全部'].concat(GALLERY.map(function (g) { return g.event; })
-    .filter(function (v, i, a) { return a.indexOf(v) === i; }));
-
-  document.getElementById('galTabs').innerHTML = cats.map(function (c, i) {
-    return '<button class="tab' + (i === 0 ? ' is-active' : '') + '" data-c="' + c + '">' + c + '</button>';
-  }).join('');
-
-  var grid = document.getElementById('albumGrid');
-  function render(c) {
-    var rows = GALLERY.filter(function (g) { return c === '全部' || g.event === c; });
-    grid.innerHTML = rows.map(function (g) {
-      return '<button class="card card--link" style="text-align:left;border:1px solid var(--line);padding:0;overflow:hidden;background:var(--white);cursor:pointer;width:100%" data-album="' + g.album + '">' +
-        '<span class="gallery-item" style="aspect-ratio:16/10;border:0;border-radius:0;display:grid;width:100%">' +
-          '<span class="gallery-item__ph">◍</span></span>' +
-        '<span style="display:block;padding:16px 18px 18px">' +
-          '<strong style="display:block;color:var(--ink);font-family:var(--serif);font-size:1.05rem">' + g.album + '</strong>' +
-          '<span class="muted" style="font-size:.84rem">' + fmtDate(g.date) + '　·　' + g.count + ' 張　·　' + g.event + '</span>' +
-        '</span></button>';
-    }).join('');
-  }
-  render('全部');
-
-  document.getElementById('galTabs').addEventListener('click', function (e) {
-    var b = e.target.closest('.tab'); if (!b) return;
-    this.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('is-active'); });
-    b.classList.add('is-active');
-    render(b.dataset.c);
-  });
-
-  /* Lightbox */
-  var lb = document.getElementById('lightbox');
-  grid.addEventListener('click', function (e) {
-    var btn = e.target.closest('[data-album]'); if (!btn) return;
-    document.getElementById('lbCaption').textContent = btn.dataset.album;
-    lb.classList.add('is-open');
-  });
-  function close() { lb.classList.remove('is-open'); }
-  document.getElementById('lbClose').addEventListener('click', close);
-  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
-})();
-</script>
 </body>
 </html>

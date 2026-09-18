@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
@@ -11,156 +11,75 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
 </head>
-<body class="member-area" data-member-page="home">
+<body data-nav="member">
 <div id="site-header"></div>
 
-<section class="page-hero" style="padding:44px 0 40px">
+<section class="page-hero">
   <div class="wrap">
-    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><span>棋士專區</span></nav>
-    <h1 style="font-size:1.8rem">歡迎回來，<span data-user-name>棋士</span></h1>
-    <p>以下為您的近期賽程、待處理事項與帳務摘要。</p>
+    <nav class="breadcrumb">
+      <a href="../index.html">首頁</a><span class="sep">/</span><span>棋士專區</span>
+    </nav>
+    <h1>棋士專區</h1>
+    <p>本專區限本會職業棋士使用，目前建置中，尚未開放登入。</p>
   </div>
 </section>
 
-<section class="section section--tight">
+<section class="section">
   <div class="wrap">
-    <div class="member-shell">
-      <div id="member-side"></div>
+    <div class="grid grid-aside" style="grid-template-columns:minmax(0,1fr) 320px;gap:44px">
 
       <div>
-        <div class="grid grid-3" style="margin-bottom:24px">
-          <div class="stat-tile">
-            <div class="stat-tile__label">下一場對局</div>
-            <div class="stat-tile__value" id="tileNextDate">—</div>
-            <div class="stat-tile__sub" id="tileNextName">—</div>
-          </div>
-          <div class="stat-tile">
-            <div class="stat-tile__label">下次撥款預定日</div>
-            <div class="stat-tile__value" id="tilePayDate">—</div>
-            <div class="stat-tile__sub" id="tilePayPeriod">—</div>
-          </div>
-          <div class="stat-tile">
-            <div class="stat-tile__label">升段進度</div>
-            <div class="stat-tile__value" id="tilePoints">—</div>
-            <div class="stat-tile__sub" id="tilePointsSub">—</div>
-          </div>
+        <div class="panel">
+          <div class="panel__head"><h2 style="font-size:1.2rem">規劃中的服務</h2></div>
+          <p>專區將分階段開放，各階段上線前會另行公告並發送帳號。</p>
+
+          <dl class="deflist">
+            <dt>第一階段</dt>
+            <dd>帳號登入、賽程行事曆、內部公告、表單下載</dd>
+            <dt>第二階段</dt>
+            <dd>撥款時程、升段進度與排名</dd>
+            <dt>第三階段</dt>
+            <dd>對局費與匯款明細查詢、個人資料維護</dd>
+            <dt>第四階段</dt>
+            <dd>棋譜 SGF 下載、甄選進度、AI 對局分析</dd>
+          </dl>
         </div>
 
         <div class="panel">
-          <div class="panel__head">
-            <h2 style="font-size:1.2rem">近期賽程</h2>
-            <a class="btn btn-ghost btn-sm" href="calendar.html">完整行事曆 →</a>
-          </div>
-          <div id="upcoming"></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel__head">
-            <h2 style="font-size:1.2rem">內部公告</h2>
-            <a class="btn btn-ghost btn-sm" href="announcements.html">全部公告 →</a>
-          </div>
-          <div id="annPreview"></div>
-        </div>
-
-        <div class="grid grid-2">
-          <div class="panel" style="margin-bottom:0">
-            <div class="panel__head"><h3 style="font-size:1.1rem">最近一筆撥款</h3></div>
-            <div id="lastPay"></div>
-            <a class="btn btn-ghost btn-sm btn-block mt-2" href="payments.html">撥款紀錄查詢 →</a>
-          </div>
-          <div class="panel" style="margin-bottom:0">
-            <div class="panel__head"><h3 style="font-size:1.1rem">待處理事項</h3></div>
-            <ul style="list-style:none;padding:0;margin:0;font-size:.92rem" id="todoList"></ul>
-          </div>
+          <div class="panel__head"><h2 style="font-size:1.2rem">帳號如何取得</h2></div>
+          <p class="mb-0">
+            帳號由本會統一建立並發送，不需自行註冊。開放時會依本會登記的聯絡方式通知各位棋士，
+            屆時請以收到的帳號登入。若聯絡方式有異動，請先與秘書處更新。
+          </p>
         </div>
       </div>
+
+      <div class="stack">
+        <div class="card">
+          <h3 style="font-size:1.05rem">在此之前</h3>
+          <p class="muted" style="font-size:.92rem">
+            賽程、賽事結果與最新公告，目前都可在官網公開頁面查詢。
+          </p>
+          <a class="btn btn-ghost btn-sm btn-block" href="../events/index.html">賽事專區 →</a>
+          <a class="btn btn-ghost btn-sm btn-block mt-1" href="../news/index.html">最新消息 →</a>
+          <a class="btn btn-ghost btn-sm btn-block mt-1" href="../downloads/index.html">下載專區 →</a>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size:1.05rem">聯絡秘書處</h3>
+          <p class="muted mb-0" style="font-size:.92rem">
+            (02) 2702-8898 轉 131、132<br>
+            haifongigo@gmail.com
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <div id="site-footer"></div>
 <script src="../assets/js/data.js"></script>
-<script src="../assets/js/schedule.js"></script>
 <script src="../assets/js/site.js" defer></script>
-<script src="../assets/js/member.js"></script>
-<script>
-document.addEventListener('cpga:ready', function () {
-  var S = window.CPGA_SCHEDULE;
-  var TODAY = S.today();
-
-  /* 下一場對局＋近期賽程：取自賽程行事曆資料 */
-  S.load().then(function (data) {
-    var upcoming = (data.events || [])
-      .filter(function (e) { return e.date >= TODAY; })
-      .sort(function (a, b) {
-        return a.date === b.date
-          ? String(a.time || '').localeCompare(String(b.time || ''))
-          : a.date.localeCompare(b.date);
-      });
-
-    if (upcoming.length) {
-      var n = upcoming[0];
-      document.getElementById('tileNextDate').textContent = n.date.slice(5).replace('-', '/');
-      document.getElementById('tileNextName').textContent = S.fullTitle(n) + '　' + S.timeLabel(n);
-    } else {
-      document.getElementById('tileNextName').textContent = '近期無排定賽程';
-    }
-
-    document.getElementById('upcoming').innerHTML = upcoming.length
-      ? upcoming.slice(0, 5).map(function (e) {
-          return '<div style="display:grid;grid-template-columns:78px 1fr;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line)">' +
-            '<span class="muted" style="font-size:.86rem;font-variant-numeric:tabular-nums">' + fmtDate(e.date).slice(5) + '</span>' +
-            '<span><span class="legend__dot ' + S.slotClass(e.series_slot) + '" style="background:currentColor"></span>' +
-            '<strong style="color:var(--ink);font-weight:500">' + S.fullTitle(e) + '</strong>' +
-            '<span class="muted" style="display:block;font-size:.84rem;padding-left:16px">' + S.timeLabel(e) + '</span></span></div>';
-        }).join('')
-      : '<p class="muted mb-0">近期無排定賽程。</p>';
-  }).catch(function () {
-    document.getElementById('upcoming').innerHTML =
-      '<p class="muted mb-0">無法載入賽程資料，請確認 assets/data/schedule.json。</p>';
-    document.getElementById('tileNextName').textContent = '資料未載入';
-  });
-
-  /* 下次撥款 */
-  var pay = PAYOUT_SCHEDULE.filter(function (p) { return p.status !== 'done'; })[0];
-  if (pay) {
-    document.getElementById('tilePayDate').textContent = pay.payDate.slice(5).replace('-', '/');
-    document.getElementById('tilePayPeriod').textContent = pay.period + '　' + pay.note;
-  }
-
-  /* 升段進度 */
-  var pct = Math.round(MY_PROMOTION.points / MY_PROMOTION.pointsNeeded * 100);
-  document.getElementById('tilePoints').textContent = pct + '%';
-  document.getElementById('tilePointsSub').textContent =
-    MY_PROMOTION.points + ' / ' + MY_PROMOTION.pointsNeeded + ' 分　→ ' + MY_PROMOTION.nextRank;
-
-  /* 內部公告 */
-  document.getElementById('annPreview').innerHTML = MEMBER_ANNOUNCEMENTS.slice(0, 3).map(function (a) {
-    return '<div style="padding:13px 0;border-bottom:1px solid var(--line)">' +
-      '<span class="muted" style="font-size:.82rem">' + fmtDate(a.date) + '</span>' +
-      '<strong style="display:block;color:var(--ink);font-weight:500">' + a.title + '</strong>' +
-      '<span class="muted" style="font-size:.88rem">' + a.body + '</span></div>';
-  }).join('');
-
-  /* 最近撥款 */
-  var lp = MY_PAYMENTS[0];
-  document.getElementById('lastPay').innerHTML =
-    '<div style="font-family:var(--serif);font-size:1.7rem;color:var(--ink);font-weight:700">' + fmtMoney(lp.amount) + '</div>' +
-    '<p class="muted" style="font-size:.88rem;margin:.3em 0 0">' +
-    fmtDate(lp.date) + ' 入帳　·　' + lp.period + '<br>' + lp.items + '</p>';
-
-  /* 待處理 */
-  document.getElementById('todoList').innerHTML = [
-    { t: '確認個人匯款帳戶資料', s: '年度校對作業，9 月底前', href: 'profile.html' },
-    { t: '職業快棋賽報名', s: '截止 09/30', href: '../events/pro.html' },
-    { t: '8 月份差旅費單據繳交', s: '已完成', done: true }
-  ].map(function (x) {
-    return '<li style="display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)">' +
-      '<span style="color:' + (x.done ? 'var(--jade)' : 'var(--accent)') + '">' + (x.done ? '✓' : '●') + '</span>' +
-      '<span>' + (x.href ? '<a href="' + x.href + '">' + x.t + '</a>' : '<span style="color:var(--ink-4)">' + x.t + '</span>') +
-      '<span class="muted" style="display:block;font-size:.82rem">' + x.s + '</span></span></li>';
-  }).join('');
-});
-</script>
 </body>
 </html>

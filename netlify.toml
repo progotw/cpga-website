@@ -2,3 +2,10 @@
 [build]
   publish = "site"
   command = ""
+
+# 舊的棋士專區示意頁已移出發布目錄；仍有書籤的人導回專區說明頁。
+# Netlify 會先比對實際檔案，所以 /member/index.html 本身不受影響。
+[[redirects]]
+  from = "/member/*"
+  to = "/member/index.html"
+  status = 301
