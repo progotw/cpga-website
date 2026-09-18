@@ -1,10 +1,18 @@
 {
  "schema_version": 1,
- "generated": "2026-09-18T09:08:14+00:00",
+ "generated": "2026-09-18T12:32:14+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
+   "date": "2026-09-18",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "中環碁聖3回戰：冠軍頭銜者輪番取勝，新人王擊退龍星",
+   "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A"
+  },
   {
    "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
    "date": "2026-09-17",
@@ -36,14 +44,6 @@
    "cat": "match",
    "title": "中環國手賽二回戰》陳映嘉觀音杯後奔波未歇 今鏖戰逾5小時刷新個人紀錄",
    "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15"
-  },
-  {
-   "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
-   "date": "2026-09-11",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【中環碁聖賽戰報：楊博崴七段本周強取3連勝，晉級3回戰】",
-   "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A"
   },
   {
    "id": "938FE4D21C2FF829067BBE5631298E69",
