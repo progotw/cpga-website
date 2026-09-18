@@ -73,7 +73,7 @@ python scripts/fetch_photos.py site
 | `scrape_players.py` | `players.json` | haifong.org 職業棋士頁 |
 | `fetch_photos.py` | `assets/img/players/*.jpg` | 只下載本地缺少的，加 `--force` 重抓全部 |
 
-`.github/workflows/update-data.yml` 每天台灣時間晚上 20:00 在雲端跑這四支，
+`.github/workflows/update-data.yml` 每天台灣時間晚上 20:17 在雲端跑這四支，
 資料有變動就自動提交。任一支中止會讓工作流程失敗並寄信通知。
 
 ### 資料的顯示規則（改程式前必讀）
