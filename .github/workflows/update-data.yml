@@ -1,9 +1,9 @@
 name: 每日更新網站資料
 
-# 每天台灣時間早上 6:00（UTC 22:00）自動執行；也可在 Actions 頁面手動觸發。
+# 每天台灣時間晚上 20:00（UTC 12:00）自動執行；也可在 Actions 頁面手動觸發。
 on:
   schedule:
-    - cron: '0 22 * * *'
+    - cron: '0 12 * * *'
   workflow_dispatch:
 
 permissions:
