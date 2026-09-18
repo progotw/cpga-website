@@ -1,79 +1,13 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-14T14:36:59+08:00",
+  "generated": "2026-09-18T17:08:14+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
-    "from": "2026-09-14",
-    "to": "2026-11-12"
+    "from": "2026-09-18",
+    "to": "2026-11-16"
   },
-  "count": 25,
+  "count": 23,
   "events": [
-    {
-      "date": "2026-09-14",
-      "weekday": 0,
-      "title": "國手賽第2回",
-      "name": "國手賽",
-      "round": "第2回",
-      "series": "國手賽",
-      "series_slot": 3,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-09-15",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=MzhwcDByN3JxbGtiaWRkcmZjdmswbjVhdHQgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-09-15",
-      "weekday": 1,
-      "title": "棋王循環圈第2輪",
-      "name": "棋王循環圈",
-      "round": "第2輪",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-09-16",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=MGttZmQ3NjBzaGRlaWl1b2o2Nmg5NWx1YWIgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-09-17",
-      "weekday": 3,
-      "title": "玄樂盃本賽32強",
-      "name": "玄樂盃",
-      "round": "本賽32強",
-      "series": "玄樂杯",
-      "series_slot": 1,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-09-18",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=M3JidGF0YWNsbnRqaXFmcnZvamRiNTNwOWQgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
     {
       "date": "2026-09-18",
       "weekday": 4,
@@ -121,9 +55,9 @@
     {
       "date": "2026-09-22",
       "weekday": 1,
-      "title": "棋王循環圈第3輪",
+      "title": "19屆棋王循環圈第3輪",
       "name": "棋王循環圈",
-      "round": "第3輪",
+      "round": "19屆 第3輪",
       "series": "棋王循環圈",
       "series_slot": 0,
       "sessions": [
@@ -166,6 +100,28 @@
     {
       "date": "2026-09-29",
       "weekday": 1,
+      "title": "19屆棋王循環圈第4輪",
+      "name": "棋王循環圈",
+      "round": "19屆 第4輪",
+      "series": "棋王循環圈",
+      "series_slot": 0,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-09-30",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=Nmx2MW82aDI5cGNwdXNpaXJpM2Vrc2I4dDggNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "weekday": 1,
       "title": "20屆棋王初賽1(上下午)",
       "name": "棋王",
       "round": "20屆 初賽1",
@@ -182,28 +138,6 @@
       "end_date": "2026-09-30",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=MjA0bDk2ZnY0bzdpZjRpdWVja3A0MzE2OXIgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-09-29",
-      "weekday": 1,
-      "title": "棋王循環圈第4輪",
-      "name": "棋王循環圈",
-      "round": "第4輪",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-09-30",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=Nmx2MW82aDI5cGNwdXNpaXJpM2Vrc2I4dDggNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
@@ -255,6 +189,28 @@
     {
       "date": "2026-10-06",
       "weekday": 1,
+      "title": "19屆棋王循環圈第5輪",
+      "name": "棋王循環圈",
+      "round": "19屆 第5輪",
+      "series": "棋王循環圈",
+      "series_slot": 0,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-10-07",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=NG4xZTIxcXAxZzI3NHNiOXUxbXQ0bjEwYmEgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "weekday": 1,
       "title": "20屆棋王初賽2(上下午)",
       "name": "棋王",
       "round": "20屆 初賽2",
@@ -271,28 +227,6 @@
       "end_date": "2026-10-07",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=NDU4cHRsc2d2dnE3NzJjaTBocmdqMW90ZjggNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-10-06",
-      "weekday": 1,
-      "title": "棋王循環圈第5輪",
-      "name": "棋王循環圈",
-      "round": "第5輪",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-10-07",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NG4xZTIxcXAxZzI3NHNiOXUxbXQ0bjEwYmEgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
@@ -322,28 +256,6 @@
     {
       "date": "2026-10-13",
       "weekday": 1,
-      "title": "棋王循環圈第6輪",
-      "name": "棋王循環圈",
-      "round": "第6輪",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-10-14",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NWFibGtjMTJxdmRtcGxqMzBxNm9jMWd1czcgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-10-13",
-      "weekday": 1,
       "title": "20屆棋王初賽3(上下午)",
       "name": "棋王",
       "round": "20屆 初賽3",
@@ -360,6 +272,28 @@
       "end_date": "2026-10-14",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=MnJqMjN2NDY3bXUxbDBrdTdodDU4djBhNWYgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "weekday": 1,
+      "title": "19屆棋王循環圈第6輪",
+      "name": "棋王循環圈",
+      "round": "19屆 第6輪",
+      "series": "棋王循環圈",
+      "series_slot": 0,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-10-14",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=NWFibGtjMTJxdmRtcGxqMzBxNm9jMWd1czcgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
@@ -411,9 +345,9 @@
     {
       "date": "2026-10-20",
       "weekday": 1,
-      "title": "棋王循環圈第7輪",
+      "title": "19屆棋王循環圈第7輪",
       "name": "棋王循環圈",
-      "round": "第7輪",
+      "round": "19屆 第7輪",
       "series": "棋王循環圈",
       "series_slot": 0,
       "sessions": [
@@ -477,9 +411,9 @@
     {
       "date": "2026-10-27",
       "weekday": 1,
-      "title": "棋王循環圈加賽",
+      "title": "19屆棋王循環圈加賽",
       "name": "棋王循環圈",
-      "round": "加賽",
+      "round": "19屆 加賽",
       "series": "棋王循環圈",
       "series_slot": 0,
       "sessions": [
@@ -558,6 +492,28 @@
       "end_date": "2026-11-10",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=NWF0c29oYWR2OHI2MHZvcHRpanFkbTIwdGcgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "weekday": 0,
+      "title": "國手賽挑戰者決定賽",
+      "name": "國手賽",
+      "round": "挑戰者決定賽",
+      "series": "國手賽",
+      "series_slot": 3,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-11-17",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=NTlxMmJiNmNhaTF0ZmJiODlvODltc2lhNzUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]

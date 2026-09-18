@@ -1,10 +1,42 @@
 {
  "schema_version": 1,
- "generated": "2026-09-14T14:33:35+08:00",
+ "generated": "2026-09-18T09:08:14+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
+   "date": "2026-09-17",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【第一屆玄樂盃｜32強直播戰報】師徒對決，陳首廉笑納勝利晉級16強！",
+   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
+  },
+  {
+   "id": "3D4CDB7FE80F551905080B38148A060A",
+   "date": "2026-09-15",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【棋王循環圈第2輪戰報：陳詩淵、簡靖庭、賴均輔三人全勝,並列龍頭】",
+   "url": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A"
+  },
+  {
+   "id": "8C5F6628BD9C2FCA4F5F329980DF81DF",
+   "date": "2026-09-15",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "id": "3451570A26F89280F60B1C54E340EC15",
+   "date": "2026-09-14",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "中環國手賽二回戰》陳映嘉觀音杯後奔波未歇 今鏖戰逾5小時刷新個人紀錄",
+   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15"
+  },
   {
    "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
    "date": "2026-09-11",
@@ -12,14 +44,6 @@
    "cat": "match",
    "title": "【中環碁聖賽戰報：楊博崴七段本周強取3連勝，晉級3回戰】",
    "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A"
-  },
-  {
-   "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
-   "date": "2026-09-10",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【第一屆玄樂盃｜楊博崴、黃袖圃、林世民等棋士陸續晉級32強】",
-   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
   },
   {
    "id": "938FE4D21C2FF829067BBE5631298E69",
@@ -36,22 +60,6 @@
    "cat": "notice",
    "title": "【升段公告 - 簡靖庭七段晉升職業八段】",
    "url": "https://www.haifong.org/news/content/B5C93DE67B68238D0B1785F5B093B3BB"
-  },
-  {
-   "id": "3D4CDB7FE80F551905080B38148A060A",
-   "date": "2026-09-08",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【第19屆棋王賽・循環圈 第一輪戰報：陳詩淵、簡靖庭、楊博崴、賴均輔四位棋士分獲勝利】",
-   "url": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A"
-  },
-  {
-   "id": "3451570A26F89280F60B1C54E340EC15",
-   "date": "2026-09-07",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "「中環國手賽」本賽一回戰報：陳首廉、林立祥、林彥丞、李嘉馨等棋手晉級三回戰",
-   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15"
   },
   {
    "id": "03D6B22E84F12E9B1C38F30AA3CB8491",
@@ -956,14 +964,6 @@
    "cat": "notice",
    "title": "第31屆LG杯『朝鮮日報世界棋王戰』 台灣代表選拔辦法",
    "url": "https://www.haifong.org/news/content/F5A52C833EBF0ED8DDAD236FF78E8478"
-  },
-  {
-   "id": "70F68973C8887EC9178ABE5BDE3E6E50",
-   "date": "2026-04-02",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "2026/4/02 第6屆「MLILY夢百合0壓床墊杯」世界圍棋公開賽臺灣代表選拔賽 陳詩淵取得代表權",
-   "url": "https://www.haifong.org/news/content/70F68973C8887EC9178ABE5BDE3E6E50"
   }
  ]
 }
