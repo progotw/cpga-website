@@ -1,10 +1,34 @@
 {
  "schema_version": 1,
- "generated": "2026-09-20T12:31:11+00:00",
+ "generated": "2026-09-21T12:31:11+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "3451570A26F89280F60B1C54E340EC15",
+   "date": "2026-09-21",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "中環國手賽三回戰》13歲鄭予皓力克八段強手 碁聖賴均輔官子逆轉林立祥九段",
+   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15"
+  },
+  {
+   "id": "C10B525E1175C72C68708BC2C87E9A35",
+   "date": "2026-09-21",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第九屆吳清源杯世界女子圍棋公開賽規程",
+   "url": "https://www.haifong.org/news/content/C10B525E1175C72C68708BC2C87E9A35"
+  },
+  {
+   "id": "DB5651C9F4A7840BC11602CBCE90F036",
+   "date": "2026-09-21",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第九屆吳清源杯世界女子圍棋公開賽  競賽補充規定",
+   "url": "https://www.haifong.org/news/content/DB5651C9F4A7840BC11602CBCE90F036"
+  },
   {
    "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
    "date": "2026-09-18",
@@ -36,14 +60,6 @@
    "cat": "notice",
    "title": "第20屆棋王資格賽、初賽抽籤結果公告",
    "url": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
-  },
-  {
-   "id": "3451570A26F89280F60B1C54E340EC15",
-   "date": "2026-09-14",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "中環國手賽二回戰》陳映嘉觀音杯後奔波未歇 今鏖戰逾5小時刷新個人紀錄",
-   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15"
   },
   {
    "id": "938FE4D21C2FF829067BBE5631298E69",
@@ -948,22 +964,6 @@
    "cat": "match",
    "title": "【爛柯盃史詩突破】睽違十年！賴均輔、陳祈睿雙雙突圍預選，重返本賽榮耀",
    "url": "https://www.haifong.org/news/content/C4DAFA275F9F64292C365EC8979D2052"
-  },
-  {
-   "id": "4496661D67E47D9010BF3A4BA19CF293",
-   "date": "2026-04-10",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "第31回 LG盃 朝鮮日報 棋王戰 大會要綱",
-   "url": "https://www.haifong.org/news/content/4496661D67E47D9010BF3A4BA19CF293"
-  },
-  {
-   "id": "F5A52C833EBF0ED8DDAD236FF78E8478",
-   "date": "2026-04-07",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "第31屆LG杯『朝鮮日報世界棋王戰』 台灣代表選拔辦法",
-   "url": "https://www.haifong.org/news/content/F5A52C833EBF0ED8DDAD236FF78E8478"
   }
  ]
 }
