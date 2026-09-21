@@ -228,7 +228,8 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
   -webkit-mask-image: radial-gradient(ellipse 70% 80% at 72% 45%, #000 20%, transparent 75%);
 }
 .hero > .wrap { position: relative; z-index: 2; }
-.hero__grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
+/* 原為左文字／右棋盤的兩欄；棋盤移除後改單欄，限制行寬避免標題與內文過長 */
+.hero__grid { display: grid; grid-template-columns: minmax(0, 760px); gap: 56px; align-items: center; }
 .hero__eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
   font-size: .78rem; letter-spacing: .2em; color: var(--wood);
