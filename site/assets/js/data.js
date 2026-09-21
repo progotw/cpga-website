@@ -15,14 +15,9 @@ var DOWNLOADS = [
   { cat: '章程與法規', name: '中華職業圍棋協會章程（2025 年版）', ext: 'DOCX', size: '19 KB', date: '2025-05-23',
     url: 'assets/files/中華職業圍棋協會章程-2025.docx' },
   { cat: '甄選辦法', name: '2026 年社會組職業棋士甄選辦法', ext: 'DOCX', size: '16 KB', date: '2026-06-02',
-    url: 'assets/files/2026年社會組職業棋士甄選辦法.docx' },
-  { cat: '會務公開', name: '114 年度工作報告', ext: 'DOCX', size: '17 KB', date: '2026-06-02',
-    url: 'assets/files/114年度工作報告.docx' },
-  { cat: '會務公開', name: '114 年度收支決算表', ext: 'DOCX', size: '17 KB', date: '2026-06-02',
-    url: 'assets/files/114年度收支決算表.docx' }
+    url: 'assets/files/2026年社會組職業棋士甄選辦法.docx' }
 ];
 
-/* 大事紀 */
 /* 大事紀。內容須可查證：目前各筆分別出自協會章程備查文號與 114 年度工作報告。
    2009–2024 年的年度紀錄尚待協會提供，請勿自行填補。 */
 var MILESTONES = [

@@ -121,13 +121,6 @@
           <div id="charterDl"></div>
           <a class="btn btn-ghost btn-sm btn-block mt-2" href="../downloads/index.html">全部下載項目 →</a>
         </div>
-        <div class="card">
-          <h3 style="font-size:1.05rem">會務公開</h3>
-          <p class="muted" style="font-size:.9rem">
-            年度工作報告與收支決算表依章程提會員大會通過後公開。
-          </p>
-          <div id="publicDl"></div>
-        </div>
         <div class="callout callout--jade">
           <p class="mb-0" style="font-size:.9rem">
             章程修訂與會員大會決議，公布於 <a href="../news/index.html?cat=notice">公告</a>。
@@ -144,8 +137,6 @@
 <script>
 document.getElementById('charterDl').innerHTML =
   dlListHtml(DOWNLOADS.filter(function (d) { return d.cat === '章程與法規'; }), '../');
-document.getElementById('publicDl').innerHTML =
-  dlListHtml(DOWNLOADS.filter(function (d) { return d.cat === '會務公開'; }), '../');
 </script>
 </body>
 </html>
