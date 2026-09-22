@@ -766,3 +766,51 @@ body.member-area { background: var(--paper-2); }
   .site-header, .site-footer, .nav-toggle, .btn { display: none !important; }
   body { background: #fff; }
 }
+
+/* ==========================================================================
+   長條文頁面的章節快捷列（賽制／競賽規則等）
+   置於頁首下方隨捲動固定；z-index 低於 .site-header(100)，捲動時滑入其下方。
+   ========================================================================== */
+.page-toc {
+  position: sticky; top: var(--header-h); z-index: 90;
+  margin: 0 0 2.5rem;
+  padding: 9px 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.page-toc__inner {
+  display: flex; align-items: center; gap: 4px;
+  overflow-x: auto;                 /* 窄螢幕改為單行橫向捲動，避免佔掉太多高度 */
+  scrollbar-width: none;
+}
+.page-toc__inner::-webkit-scrollbar { display: none; }
+.page-toc__label {
+  flex: none; padding-right: 8px;
+  font-size: .74rem; font-weight: 700; letter-spacing: .1em;
+  color: var(--ink-4); text-transform: uppercase;
+}
+.page-toc a {
+  flex: none; white-space: nowrap;
+  padding: 6px 13px; border-radius: 999px;
+  font-size: .86rem; text-decoration: none; color: var(--ink-3);
+  transition: background .15s, color .15s;
+}
+.page-toc a:hover { background: var(--paper-2); color: var(--ink); }
+.page-toc a.is-active { background: var(--ink); color: var(--white); }
+
+/* 錨點捲動時預留頁首與快捷列的高度，標題才不會被蓋住 */
+.prose h2[id], .prose h3[id] { scroll-margin-top: calc(var(--header-h) + 62px); }
+
+/* 回到頁首 */
+.to-top {
+  position: fixed; right: 22px; bottom: 22px; z-index: 95;
+  width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--ink); color: var(--white);
+  border: 0; cursor: pointer; font-size: 1rem; line-height: 1;
+  box-shadow: 0 6px 20px rgba(0,0,0,.22);
+  opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s;
+}
+.to-top.is-on { opacity: .9; visibility: visible; }
+.to-top:hover { opacity: 1; }
+@media (max-width: 860px) { .to-top { right: 14px; bottom: 14px; } }
