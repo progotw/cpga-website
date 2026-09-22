@@ -18,6 +18,7 @@
       label: '關於協會', href: 'about/index.html', key: 'about',
       children: [
         { label: '協會簡介',        href: 'about/index.html' },
+        { label: '理事長',            href: 'about/chairman.html' },
         { label: '理監事會／組織架構', href: 'about/board.html' },
         { label: '大事紀',          href: 'about/milestones.html' },
         { label: '章程／法規',      href: 'about/charter.html' },
@@ -36,9 +37,14 @@
     {
       label: '職業棋士', href: 'players/index.html', key: 'players',
       children: [
-        { label: '棋士名錄', href: 'players/index.html' },
-        { label: '精銳隊',   href: 'elite/index.html' },
-        { label: '段位分布', href: 'players/index.html#dan' }
+        { label: '棋士名錄',        href: 'players/index.html' },
+        { label: '精銳隊',          href: 'elite/index.html' },
+        { label: '段位分布',        href: 'players/index.html#dan' },
+        { label: '職業棋士甄選',    href: 'events/qualification.html' },
+        { label: '院生甄選（新進院生）', href: 'events/institute-entry.html' },
+        { label: '賽制／積分規則',  href: 'events/rules.html' },
+        { label: '段位／資格制度',  href: 'events/dan-system.html' },
+        { label: '晉升辦法',        href: 'events/promotion.html' }
       ]
     },
     {
@@ -47,12 +53,7 @@
         { label: '賽事總覽',      href: 'events/index.html' },
         { label: '世界賽',        href: 'events/world.html' },
         { label: '職業賽事列表',  href: 'events/pro.html' },
-        { label: '業餘賽事',      href: 'events/amateur.html' },
-        { label: '職業棋士甄選',  href: 'events/qualification.html' },
-        { label: '院生甄選（新進院生）', href: 'events/institute-entry.html' },
-        { label: '賽制／積分規則', href: 'events/rules.html' },
-        { label: '段位／資格制度', href: 'events/dan-system.html' },
-        { label: '晉升辦法',      href: 'events/promotion.html' }
+        { label: '業餘賽事',      href: 'events/amateur.html' }
       ]
     },
     { label: '找老師',   href: 'teachers/index.html',   key: 'teachers' },

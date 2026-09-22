@@ -869,3 +869,40 @@ body.member-area { background: var(--paper-2); }
   .elite-grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 24px 12px; }
   .elite-item__photo { max-width: 92px; }
 }
+
+/* ==========================================================================
+   理事長介紹
+   照片為人像直幅（原檔約 1:1.4），固定 3:4 顯示；林文伯的原圖僅 137px 寬，
+   因此顯示尺寸刻意壓小，放大會糊。
+   ========================================================================== */
+.chair-hero {
+  display: grid; grid-template-columns: 220px minmax(0, 1fr);
+  gap: 40px; align-items: start;
+}
+.chair-row {
+  display: grid; grid-template-columns: 132px minmax(0, 1fr);
+  gap: 28px; align-items: start;
+  padding: 30px 0; border-top: 1px solid var(--line);
+}
+.chair-row:first-child { border-top: 0; padding-top: 4px; }
+
+.chair-photo {
+  width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top;
+  display: block; border-radius: var(--radius);
+  background: var(--paper-2); border: 1px solid var(--line);
+}
+.chair-term {
+  display: inline-block; margin-bottom: 6px; padding: 3px 10px; border-radius: 999px;
+  font-size: .76rem; letter-spacing: .04em;
+  background: var(--paper-2); color: var(--ink-3);
+}
+.chair-name { font-family: var(--serif); font-size: 1.3rem; color: var(--ink); margin: 0 0 2px; }
+.chair-years { font-size: .88rem; color: var(--ink-4); margin: 0 0 12px; }
+.chair-deeds { margin: 0; padding-left: 1.15em; font-size: .93rem; color: var(--ink-3); }
+.chair-deeds li { margin-bottom: 5px; }
+
+@media (max-width: 720px) {
+  .chair-hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .chair-hero .chair-photo { max-width: 190px; }
+  .chair-row { grid-template-columns: 92px minmax(0, 1fr); gap: 18px; }
+}
