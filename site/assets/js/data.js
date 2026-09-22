@@ -8,8 +8,6 @@
 /* 職業棋士名錄不在這裡：改由 assets/data/players.json 提供（真實資料，含照片與棋戰履歷），
    透過 assets/js/players.js 載入。 */
 /* 名錄人數，供首頁與協會簡介顯示；更新名錄後請一併調整 */
-var PLAYER_COUNT = 139;
-
 /* 下載專區：url 為相對站台根目錄的路徑，沒有 url 者顯示為「尚未提供」 */
 var DOWNLOADS = [
   { cat: '章程與法規', name: '中華職業圍棋協會章程（2025 年版）', ext: 'DOCX', size: '19 KB', date: '2025-05-23',

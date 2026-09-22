@@ -138,9 +138,13 @@
 <div id="site-footer"></div>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/content.js"></script>
+<script src="../assets/js/players.js"></script>
 <script src="../assets/js/site.js" defer></script>
 <script>
-document.getElementById('aboutPlayerCount').textContent = PLAYER_COUNT + ' 位';
+/* 棋士人數直接數 players.json，名錄更新後這裡會自己跟著變 */
+window.CPGA_PLAYERS.load().then(function (data) {
+  document.getElementById('aboutPlayerCount').textContent = (data.players || []).length + ' 位';
+}).catch(function () {});
 
 window.CPGA_GAMES.load().then(function (data) {
   var games = (data.games || []).filter(function (g) { return g.active; });

@@ -146,10 +146,14 @@
 <script src="assets/js/data.js"></script>
 <script src="assets/js/schedule.js"></script>
 <script src="assets/js/content.js"></script>
+<script src="assets/js/players.js"></script>
 <script src="assets/js/site.js" defer></script>
 <script>
 (function () {
-  document.getElementById('statPlayers').textContent = PLAYER_COUNT;
+  /* 棋士人數直接數 players.json，名錄更新後首頁數字會自己跟著變 */
+  window.CPGA_PLAYERS.load().then(function (data) {
+    document.getElementById('statPlayers').textContent = (data.players || []).length;
+  }).catch(function () { /* 失敗就維持「—」，不要顯示過期數字 */ });
 
   /* 年度職業賽事數：現行台灣職業賽（不含已停辦） */
   window.CPGA_GAMES.load().then(function (data) {

@@ -33,6 +33,9 @@ jobs:
       - name: 抓取棋士名錄
         run: python scripts/scrape_players.py site/assets/data/players.json
 
+      - name: 抓取精銳隊名單
+        run: python scripts/scrape_elite.py site/assets/data/elite.json
+
       - name: 下載新增的棋士照片
         run: python scripts/fetch_photos.py site
 

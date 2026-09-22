@@ -64,6 +64,7 @@ python -m http.server 5173 --directory site
 python scripts/scrape_schedule.py site/assets/data/schedule.json --days 60
 python scripts/scrape_news_games.py site
 python scripts/scrape_players.py site/assets/data/players.json
+python scripts/scrape_elite.py site/assets/data/elite.json
 python scripts/fetch_photos.py site
 ```
 
@@ -72,6 +73,7 @@ python scripts/fetch_photos.py site
 | `scrape_schedule.py` | `schedule.json` | 海峰公開行事曆 iCal（**不需 Google 授權**） |
 | `scrape_news_games.py` | `news.json`、`games.json` | haifong.org 最新消息與賽事分類頁 |
 | `scrape_players.py` | `players.json` | haifong.org 職業棋士頁 |
+| `scrape_elite.py` | `elite.json` | haifong.org/elite 精銳隊名單 |
 | `fetch_photos.py` | `assets/img/players/*.jpg` | 只下載本地缺少的，加 `--force` 重抓全部 |
 
 `.github/workflows/update-data.yml` 每天台灣時間晚上 20:17 在雲端跑這四支，
@@ -93,7 +95,10 @@ python scripts/fetch_photos.py site
 - **棋士冠軍數**：`history` 可能同時有「頭銜冠軍」與「歷史成績」兩列且**順序不固定**，
   取冠軍數要掃過整個陣列。139 位中只有 38 位有此欄位，其餘留白不顯示「0 冠」。
 - **棋士名錄頁只顯示姓名**，依段位分組；照片只在個人頁出現（照片是正方形，顯示必須維持 1:1）。
-- 名錄人數改了要同步更新 `data.js` 的 `PLAYER_COUNT`。
+- **棋士人數不要寫死**：首頁與協會簡介的人數改為即時數 `players.json`。
+  先前寫死在 `data.js` 的 `PLAYER_COUNT` 已移除（那個變數曾因清理時被誤刪，害整個首頁空白）。
+- `elite.json` 只存分組、姓名與職稱；段位、照片、個人頁一律由 `players.json` 依姓名帶入。
+  精銳隊成員若改名或未列入名錄，卡片會缺段位與連結——改版後請確認 17 位都對得上。
 
 ---
 

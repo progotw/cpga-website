@@ -47,7 +47,7 @@
 
     <div class="callout callout--jade mt-3">
       <p class="mb-0">
-        名單為 <strong>2026 年度精銳隊</strong>，資料來源為
+        名單為 <strong><span id="eliteYear">本年度</span>精銳隊</strong>，每日自動更新。資料來源為
         <a href="https://www.haifong.org/elite" target="_blank" rel="noopener">海峰棋院精銳隊專頁 ↗</a>。
         歷屆名單與集訓動態請見該頁與<a href="../news/index.html">最新消息</a>。
       </p>
@@ -60,22 +60,6 @@
 <script src="../assets/js/site.js" defer></script>
 <script>
 (function () {
-  /* 名單以姓名維護；段位、照片與介紹頁一律由 players.json 帶入，避免重複維護 */
-  var TEAM = [
-    { title: '教練團', members: [
-      { name: '夏大銘', role: '總教練' },
-      { name: '陳祈睿', role: '副教練' }
-    ]},
-    { title: '精英隊', members: [
-      { name: '許皓鋐' }, { name: '賴均輔' }, { name: '徐靖恩' }, { name: '林君諺' },
-      { name: '王元均' }, { name: '李維' }, { name: '簡靖庭' }, { name: '盧奕銓' }
-    ]},
-    { title: '新銳隊', members: [
-      { name: '白昕卉' }, { name: '吳彥諶' }, { name: '鄭予皓' }, { name: '陳映嘉' },
-      { name: '陳品樺' }, { name: '黃柏人' }, { name: '吳君成' }
-    ]}
-  ];
-
   var P = window.CPGA_PLAYERS;
   var wrap = document.getElementById('eliteWrap');
 
@@ -84,12 +68,24 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
-  P.load().then(function (data) {
+  /* 名單抓自 haifong.org/elite（scripts/scrape_elite.py）；
+     段位與照片一律由 players.json 依姓名帶入，不在 elite.json 重複存放。 */
+  Promise.all([
+    fetch('../assets/data/elite.json', { cache: 'no-cache' }).then(function (r) {
+      if (!r.ok) throw new Error('elite 資料 HTTP ' + r.status);
+      return r.json();
+    }),
+    P.load()
+  ]).then(function (res) {
+    var elite = res[0], data = res[1];
     var byName = {};
     (data.players || []).forEach(function (p) { byName[p.name] = p; });
 
-    wrap.innerHTML = TEAM.map(function (group) {
-      var cards = group.members.map(function (m) {
+    var yearEl = document.getElementById('eliteYear');
+    if (yearEl && elite.year) yearEl.textContent = elite.year + ' 年度';
+
+    wrap.innerHTML = (elite.groups || []).map(function (group) {
+      var cards = (group.members || []).map(function (m) {
         var p = byName[m.name] || {};
         var photo = p.photo
           ? '<img src="' + esc(P.photoUrl(p)) + '" alt="' + esc(m.name) +
