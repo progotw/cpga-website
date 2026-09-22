@@ -1,0 +1,16 @@
+# Cloudflare Pages 的轉址設定（Netlify 讀的是 netlify.toml，兩邊內容需一致）
+#
+# 刻意逐條列出而非使用 /member/* 萬用字元：
+# 萬用字元可能蓋住同目錄下真實存在的 index.html，逐條列比較安全。
+
+# 棋士專區示意版已移出發布目錄，舊書籤導回專區說明頁
+/member/login.html          /member/index.html    301
+/member/announcements.html  /member/index.html    301
+/member/calendar.html       /member/index.html    301
+/member/forms.html          /member/index.html    301
+/member/payments.html       /member/index.html    301
+/member/profile.html        /member/index.html    301
+/member/promotion.html      /member/index.html    301
+
+# 甄選頁改依組別拆分
+/events/apply.html          /events/social.html   301

@@ -105,20 +105,34 @@ python scripts/fetch_photos.py site
 預覽版面（範例資料，非實際）：
 <https://cpga.netlify.app/teachers/index.html?preview=1>
 
-詢問表單使用 Netlify Forms，目前收件通知寄到協會信箱，由秘書處轉交老師。
+⚠️ 詢問表單原本用 **Netlify Forms**，搬到 Cloudflare Pages 後**不會運作**
+（`data-netlify="true"` 是 Netlify 專屬機制）。目前 `teachers.json` 是空的、
+表單不會被渲染出來，所以還沒有實際影響；開始收老師資料前必須先改用
+Cloudflare Pages Functions、第三方表單服務或 Google 表單。
 
 ---
 
 ## 部署
 
-目前用 Netlify CLI 手動部署：
+**Cloudflare Pages** 連結 GitHub 儲存庫，推送 `main` 即自動部署。
 
-```bash
-npx --yes netlify-cli@latest deploy --prod --dir site
-```
+| 設定項 | 值 |
+| --- | --- |
+| Framework preset | None |
+| Build command | （留空） |
+| Build output directory | `site` |
+| Production branch | `main` |
 
-專案已完成 git 初始化。接上 GitHub 並在 Netlify 連結該儲存庫後，
-推送即自動部署，`.github/workflows/` 的每日更新也才會生效。
+轉址寫在 `site/_redirects`（Cloudflare 格式）。`netlify.toml` 是舊的 Netlify 設定，
+內容需與 `_redirects` 保持一致，兩邊改一邊就要改另一邊。
+
+### 為什麼從 Netlify 搬走
+
+Netlify 免費方案改為 credits 制（每期 300），每次建置都計費。
+接上 GitHub 後每晚爬蟲提交各觸發一次建置，2026-09-22 額度用盡，
+建置被跳過（`Skipped due to account credit usage exceeded`），
+連 CLI 手動部署都回 `Forbidden`。Cloudflare Pages 對靜態網站免費、
+每月 500 次建置，以每日一次的頻率用不完。
 
 ---
 
