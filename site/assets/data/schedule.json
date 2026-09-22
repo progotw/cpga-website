@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-21T20:31:11+08:00",
+  "generated": "2026-09-22T20:33:04+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
-    "from": "2026-09-21",
-    "to": "2026-11-19"
+    "from": "2026-09-22",
+    "to": "2026-11-20"
   },
-  "count": 22,
+  "count": 21,
   "events": [
     {
-      "date": "2026-09-21",
-      "weekday": 0,
-      "title": "國手賽第3回",
-      "name": "國手賽",
-      "round": "第3回",
-      "series": "國手賽",
-      "series_slot": 3,
+      "date": "2026-09-22",
+      "weekday": 1,
+      "title": "19屆棋王循環圈第3輪",
+      "name": "棋王循環圈",
+      "round": "19屆 第3輪",
+      "series": "棋王循環圈",
+      "series_slot": 0,
       "sessions": [
         "11:00"
       ],
@@ -23,9 +23,9 @@
       "time_inferred": true,
       "end_time": null,
       "all_day": true,
-      "end_date": "2026-09-22",
+      "end_date": "2026-09-23",
       "location": "",
-      "link": "https://www.google.com/calendar/event?eid=MjRvazVvNHBqbDRlNXJwOTJ2ZHA1c3V0Y2QgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "link": "https://www.google.com/calendar/event?eid=NjI0dW5kb2xpdTJya21iam1rbzY3NmV1MmUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
@@ -49,28 +49,6 @@
       "end_date": "2026-09-23",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=N3ByMGU5ZWMxbTcwaDZwbzkxb2EzbjJzZmggNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-09-22",
-      "weekday": 1,
-      "title": "19屆棋王循環圈第3輪",
-      "name": "棋王循環圈",
-      "round": "19屆 第3輪",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-09-23",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NjI0dW5kb2xpdTJya21iam1rbzY3NmV1MmUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]

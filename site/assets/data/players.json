@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-09-21T12:33:40+00:00",
+ "generated": "2026-09-22T12:35:01+00:00",
  "source": "海峰棋院 職業棋士名錄",
  "source_url": "https://www.haifong.org/profession",
  "count": 139,
@@ -974,7 +974,7 @@
    "history": [
     {
      "label": "歷史成績",
-     "value": "冠軍數:1冠"
+     "value": "冠軍數:2冠"
     }
    ],
    "seasonLabel": "2026年度成績 (9/1更新)",
@@ -1489,7 +1489,12 @@
    "name": "陳國興",
    "rank": "四段",
    "photo": "assets/img/players/3596D56FE306EA2C941FC3BDF88AF346.jpg",
-   "history": [],
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:2冠"
+    }
+   ],
    "seasonLabel": "2026年度成績 (9/1更新)",
    "season": [
     {
@@ -1505,7 +1510,7 @@
      "value": "0勝11負　勝率0%"
     }
    ],
-   "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>1945年8月3日生</p><br />\n</p>",
+   "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>1945年8月3日生</p><br />\n<br />\n<p> </p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>1994年</strong> </p><br />\n<br />\n<p>第一屆中環盃冠軍</p><br />\n<br />\n<p>第二十屆名人賽冠軍<br /><br />\n </p><br />\n</p>",
    "links": [],
    "source": "https://www.haifong.org/profession/venue/3596D56FE306EA2C941FC3BDF88AF346"
   },
@@ -2731,7 +2736,12 @@
    "name": "秦士",
    "rank": "二段",
    "photo": "assets/img/players/775267E2780B550129D345B125002307.jpg",
-   "history": [],
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:1冠"
+    }
+   ],
    "seasonLabel": "2026年度成績 (9/1更新)",
    "season": [
     {

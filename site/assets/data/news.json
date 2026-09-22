@@ -1,16 +1,40 @@
 {
  "schema_version": 1,
- "generated": "2026-09-21T12:31:11+00:00",
+ "generated": "2026-09-22T12:33:04+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
   {
+   "id": "3D4CDB7FE80F551905080B38148A060A",
+   "date": "2026-09-22",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【棋王循環圈三輪過後，只剩他全勝！賴均輔三連勝獨居榜首】",
+   "url": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A"
+  },
+  {
+   "id": "A55F86323317236004FBFB6864E906D1",
+   "date": "2026-09-22",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【五位初段同日突圍！棋王資格賽吹起新銳旋風】",
+   "url": "https://www.haifong.org/news/content/A55F86323317236004FBFB6864E906D1"
+  },
+  {
+   "id": "DB16D09B84265FE036A742C4DA04A910",
+   "date": "2026-09-22",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【升段公告 - 楊博崴七段晉升職業八段】",
+   "url": "https://www.haifong.org/news/content/DB16D09B84265FE036A742C4DA04A910"
+  },
+  {
    "id": "3451570A26F89280F60B1C54E340EC15",
    "date": "2026-09-21",
    "catLabel": "比賽訊息",
    "cat": "match",
-   "title": "中環國手賽三回戰》13歲鄭予皓力克八段強手 碁聖賴均輔官子逆轉林立祥九段",
+   "title": "中環國手賽三回戰》13歲鄭予皓、陳映嘉戰勝強手 碁聖賴均輔官子逆轉林立祥九段",
    "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15"
   },
   {
@@ -44,14 +68,6 @@
    "cat": "match",
    "title": "【第一屆玄樂盃｜32強直播戰報】師徒對決，陳首廉笑納勝利晉級16強！",
    "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
-  },
-  {
-   "id": "3D4CDB7FE80F551905080B38148A060A",
-   "date": "2026-09-15",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【棋王循環圈第2輪戰報：陳詩淵、簡靖庭、賴均輔三人全勝,並列龍頭】",
-   "url": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A"
   },
   {
    "id": "8C5F6628BD9C2FCA4F5F329980DF81DF",
@@ -948,22 +964,6 @@
    "cat": "match",
    "title": "【2026 中華職協圍棋道場選拔賽成績】",
    "url": "https://www.haifong.org/news/content/2B4B8036EADCF0A83272091367EA69D0"
-  },
-  {
-   "id": "DC1F39871FA096F5B362D78013AAE13D",
-   "date": "2026-04-12",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【院生第四輪月賽 - 第二週成績公告】",
-   "url": "https://www.haifong.org/news/content/DC1F39871FA096F5B362D78013AAE13D"
-  },
-  {
-   "id": "C4DAFA275F9F64292C365EC8979D2052",
-   "date": "2026-04-10",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【爛柯盃史詩突破】睽違十年！賴均輔、陳祈睿雙雙突圍預選，重返本賽榮耀",
-   "url": "https://www.haifong.org/news/content/C4DAFA275F9F64292C365EC8979D2052"
   }
  ]
 }
