@@ -48,7 +48,8 @@
         { label: '職業賽事列表',  href: 'events/pro.html' },
         { label: '業餘賽事',      href: 'events/amateur.html' },
         { label: '職業棋士甄選',  href: 'events/qualification.html' },
-        { label: '甄選簡章與報名', href: 'events/apply.html' },
+        { label: '社會組甄選與報名', href: 'events/social.html' },
+        { label: '院生組甄選辦法', href: 'events/institute.html' },
         { label: '賽制／積分規則', href: 'events/rules.html' },
         { label: '段位／資格制度', href: 'events/dan-system.html' },
         { label: '晉升辦法',      href: 'events/promotion.html' }
