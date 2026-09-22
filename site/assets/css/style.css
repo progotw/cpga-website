@@ -814,3 +814,58 @@ body.member-area { background: var(--paper-2); }
 .to-top.is-on { opacity: .9; visibility: visible; }
 .to-top:hover { opacity: 1; }
 @media (max-width: 860px) { .to-top { right: 14px; bottom: 14px; } }
+
+/* ==========================================================================
+   精銳隊名冊
+   照片尺寸固定，不隨欄寬變動——教練團只有兩人，用會自動撐開的 .grid-4
+   會把頭像放大到 400px 以上。
+   ========================================================================== */
+.elite-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 30px 18px;
+}
+.elite-item { text-align: center; text-decoration: none !important; display: block; }
+
+.elite-item__photo {
+  /* 這是 <span>，沒有 display:block 的話 aspect-ratio 與 overflow 都不會生效 */
+  display: block;
+  width: 100%; max-width: 116px; aspect-ratio: 1;
+  margin: 0 auto 12px; border-radius: 50%; overflow: hidden;
+  background: var(--paper-2);
+  box-shadow: 0 0 0 1px var(--line), 0 6px 16px rgba(0, 0, 0, .07);
+  transition: box-shadow .18s ease, transform .18s ease;
+}
+.elite-item__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.elite-item:hover .elite-item__photo {
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 1px var(--line-2), 0 12px 24px rgba(0, 0, 0, .12);
+}
+
+.elite-item__initial {
+  width: 100%; height: 100%; display: grid; place-items: center;
+  font-family: var(--serif); font-size: 2rem; color: var(--ink-4);
+}
+.elite-item__name {
+  display: block; font-family: var(--serif); font-size: 1.04rem;
+  color: var(--ink); line-height: 1.35;
+}
+.elite-item__rank { display: block; font-size: .82rem; color: var(--ink-4); margin-top: 2px; }
+.elite-item__role {
+  display: inline-block; margin-top: 6px; padding: 2px 9px; border-radius: 999px;
+  font-size: .74rem; letter-spacing: .04em;
+  background: var(--paper-2); color: var(--ink-3);
+}
+
+.elite-group { margin-bottom: 52px; }
+.elite-group__head {
+  display: flex; align-items: baseline; gap: 12px;
+  margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--line);
+}
+.elite-group__head h2 { font-size: 1.25rem; margin: 0; }
+.elite-group__count { font-size: .82rem; color: var(--ink-4); }
+
+@media (max-width: 520px) {
+  .elite-grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 24px 12px; }
+  .elite-item__photo { max-width: 92px; }
+}
