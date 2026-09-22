@@ -10,8 +10,18 @@
   to = "/member/index.html"
   status = 301
 
-# 甄選頁改依組別拆分，舊的 apply.html 導向社會組頁。
+# 甄選頁幾經調整，舊網址一律導向合併後的職業棋士甄選頁。
 [[redirects]]
   from = "/events/apply.html"
-  to = "/events/social.html"
+  to = "/events/qualification.html"
+  status = 301
+
+[[redirects]]
+  from = "/events/social.html"
+  to = "/events/qualification.html"
+  status = 301
+
+[[redirects]]
+  from = "/events/institute.html"
+  to = "/events/qualification.html"
   status = 301

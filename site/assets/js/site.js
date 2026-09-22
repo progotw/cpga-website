@@ -37,6 +37,7 @@
       label: '職業棋士', href: 'players/index.html', key: 'players',
       children: [
         { label: '棋士名錄', href: 'players/index.html' },
+        { label: '精銳隊',   href: 'elite/index.html' },
         { label: '段位分布', href: 'players/index.html#dan' }
       ]
     },
@@ -48,8 +49,6 @@
         { label: '職業賽事列表',  href: 'events/pro.html' },
         { label: '業餘賽事',      href: 'events/amateur.html' },
         { label: '職業棋士甄選',  href: 'events/qualification.html' },
-        { label: '社會組甄選與報名', href: 'events/social.html' },
-        { label: '院生組甄選辦法', href: 'events/institute.html' },
         { label: '院生甄選（新進院生）', href: 'events/institute-entry.html' },
         { label: '賽制／積分規則', href: 'events/rules.html' },
         { label: '段位／資格制度', href: 'events/dan-system.html' },

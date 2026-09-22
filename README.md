@@ -16,6 +16,7 @@ site/                   ← Netlify 發布的網站本體
   news/                 最新消息
   players/              職業棋士名錄與介紹頁
   teachers/             找職業老師
+  elite/                精銳隊（名單以姓名維護，段位照片由 players.json 帶入）
   gallery/              賽事花絮
   membership/           加入會員
   downloads/            下載專區
@@ -40,6 +41,7 @@ netlify.toml            指定發布目錄為 site/
 | `assets/js/players.js` | 棋士名錄載入 |
 | `assets/js/content.js` | 最新消息與賽事清單載入 |
 | `assets/js/teachers.js` | 找老師資料載入（含預覽模式） |
+| `assets/js/page-toc.js` | 長條文頁的章節快捷列與回頂端（有 `.page-toc` 即自動啟用） |
 | `assets/js/games-page.js` | 賽事分類頁共用渲染 |
 
 ---
@@ -80,7 +82,8 @@ python scripts/fetch_photos.py site
 - **賽程時間**：一律 11:00；日曆標題註明 `(上下午)` 者為當天兩局，10:00 與 14:00。
   推定的時間會標星號＊。日曆若填了真實時間，程式優先採用。
 - **甄選共三關**，不要混為一談：`institute-entry.html` 是業餘棋手考進院生（每年 11 月）；
-  `institute.html` 是院生組職業棋士甄選（7 月上旬）；`social.html` 是社會組職業棋士甄選（7 月中下旬）。
+  `qualification.html#institute` 是院生組職業棋士甄選（7 月上旬）；
+  `qualification.html#social` 是社會組職業棋士甄選（7 月中下旬）。
   「院生甄選」與「院生組甄選」名稱極近但完全不同，改內容前先確認是哪一個。
 - **規範全文**：`events/rules.html` 收錄對局管理規定、紀律規範、作弊防制辦法、社群媒體指引四份全文，
   來源為海峰「職業賽 → 相關規範」（`ajax_game_class_news_data`，game_class_id 97FEB3D9…）。

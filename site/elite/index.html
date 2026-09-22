@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>精銳隊｜中華職業圍棋協會</title>
+<meta name="description" content="精銳隊集合國內一線及後起新銳職業棋士，進行密集專業訓練，進軍國際棋賽。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="elite">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><span>精銳隊</span></nav>
+    <h1>精銳隊</h1>
+    <p>集合國內一線及後起新銳，有志專研棋藝的職業棋士。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-3" style="margin-bottom:48px">
+      <div class="card">
+        <h3 style="font-size:1.05rem">成立</h3>
+        <p class="mb-0" style="font-family:var(--serif);font-size:1.6rem;color:var(--ink)">2015 年</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:1.05rem">成員</h3>
+        <p class="muted mb-0" style="font-size:.94rem">
+          集合國內一線及後起新銳，有志專研棋藝的職業棋士。
+        </p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:1.05rem">目的</h3>
+        <p class="muted mb-0" style="font-size:.94rem">
+          進行密集及專業的訓練，提升棋力水準；進軍國際棋賽，爭取好成績。
+        </p>
+      </div>
+    </div>
+
+    <div id="eliteWrap"><p class="muted">載入中…</p></div>
+
+    <div class="callout callout--jade mt-3">
+      <p class="mb-0">
+        名單為 <strong>2026 年度精銳隊</strong>，資料來源為
+        <a href="https://www.haifong.org/elite" target="_blank" rel="noopener">海峰棋院精銳隊專頁 ↗</a>。
+        歷屆名單與集訓動態請見該頁與<a href="../news/index.html">最新消息</a>。
+      </p>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/players.js"></script>
+<script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  /* 名單以姓名維護；段位、照片與介紹頁一律由 players.json 帶入，避免重複維護 */
+  var TEAM = [
+    { title: '教練團', members: [
+      { name: '夏大銘', role: '總教練' },
+      { name: '陳祈睿', role: '副教練' }
+    ]},
+    { title: '精英隊', members: [
+      { name: '許皓鋐' }, { name: '賴均輔' }, { name: '徐靖恩' }, { name: '林君諺' },
+      { name: '王元均' }, { name: '李維' }, { name: '簡靖庭' }, { name: '盧奕銓' }
+    ]},
+    { title: '新銳隊', members: [
+      { name: '白昕卉' }, { name: '吳彥諶' }, { name: '鄭予皓' }, { name: '陳映嘉' },
+      { name: '陳品樺' }, { name: '黃柏人' }, { name: '吳君成' }
+    ]}
+  ];
+
+  var P = window.CPGA_PLAYERS;
+  var wrap = document.getElementById('eliteWrap');
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  P.load().then(function (data) {
+    var byName = {};
+    (data.players || []).forEach(function (p) { byName[p.name] = p; });
+
+    wrap.innerHTML = TEAM.map(function (group) {
+      var cards = group.members.map(function (m) {
+        var p = byName[m.name] || {};
+        var photo = p.photo
+          ? '<img src="' + esc(P.photoUrl(p)) + '" alt="' + esc(m.name) +
+            '" loading="lazy" style="width:100%;aspect-ratio:1;object-fit:cover;display:block">'
+          : '<div class="player-card__photo"><span class="player-card__initial">' +
+            esc(m.name.charAt(0)) + '</span></div>';
+        var inner =
+          '<div style="position:relative">' + photo +
+            (p.rank ? '<span class="player-card__rank" style="top:10px;right:10px">' + esc(p.rank) + '</span>' : '') +
+          '</div>' +
+          '<div style="padding:12px 14px 14px">' +
+            '<strong style="display:block;font-family:var(--serif);font-size:1.05rem;color:var(--ink)">' +
+              esc(m.name) + '</strong>' +
+            (m.role ? '<span class="muted" style="font-size:.84rem">' + esc(m.role) + '</span>' : '') +
+          '</div>';
+        return p.id
+          ? '<a class="card card--link" style="padding:0;overflow:hidden;text-decoration:none" href="../players/profile.html?id=' +
+            encodeURIComponent(p.id) + '">' + inner + '</a>'
+          : '<div class="card" style="padding:0;overflow:hidden">' + inner + '</div>';
+      }).join('');
+
+      return '<div style="margin-bottom:44px">' +
+        '<div class="section-head"><h2 style="font-size:1.4rem">' + esc(group.title) + '</h2></div>' +
+        '<div class="grid grid-4">' + cards + '</div></div>';
+    }).join('');
+  }).catch(function (err) {
+    wrap.innerHTML = '<p class="muted">名單載入失敗（' + esc(err.message) + '）。</p>';
+  });
+})();
+</script>
+</body>
+</html>

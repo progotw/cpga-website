@@ -12,5 +12,7 @@
 /member/profile.html        /member/index.html    301
 /member/promotion.html      /member/index.html    301
 
-# 甄選頁改依組別拆分
-/events/apply.html          /events/social.html   301
+# 甄選頁幾經調整，舊網址一律導向合併後的職業棋士甄選頁
+/events/apply.html          /events/qualification.html   301
+/events/social.html         /events/qualification.html   301
+/events/institute.html      /events/qualification.html   301
