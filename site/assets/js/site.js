@@ -54,10 +54,11 @@
         { label: '業餘賽事',      href: 'events/amateur.html' }
       ]
     },
-    { label: '找老師',   href: 'teachers/index.html',   key: 'teachers', pill: 'teachers' },
     { label: '賽事花絮', href: 'gallery/index.html',    key: 'gallery' },
     { label: '加入會員', href: 'membership/index.html', key: 'membership' },
-    { label: '下載專區', href: 'downloads/index.html',  key: 'downloads' }
+    { label: '下載專區', href: 'downloads/index.html',  key: 'downloads' },
+    /* 放在最後一項，緊鄰另一側的「棋士專區」膠囊 */
+    { label: '找老師',   href: 'teachers/index.html',   key: 'teachers', pill: 'teachers' }
   ];
 
   var LOGO_SRC = ROOT + 'assets/img/cpga-logo.png';

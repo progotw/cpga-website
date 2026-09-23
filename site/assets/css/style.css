@@ -21,6 +21,8 @@
   --accent:     #9e3029;
   --accent-2:   #c2483f;
   --jade:       #1f6b57;
+  --navy:       #1e3a5f;
+  --navy-2:     #2b5183;
 
   --line:       #e2dace;
   --line-2:     #d2c7b5;
@@ -721,7 +723,9 @@ body.member-area { background: var(--paper-2); }
   .news-item__title { grid-column: 1 / -1; }
   .news-item__arrow { display: none; }
 }
-@media (max-width: 860px) {
+/* 導覽列有 9 個項目，桌機版在 1000px 以下就會擠爆版面，
+   因此收合成漢堡選單的斷點設在 1024px 而非 860px。 */
+@media (max-width: 1024px) {
   .nav-toggle { display: flex; }
   /* backdrop-filter 會讓頁首成為 fixed 子元素的定位基準，行動版選單需以視窗為基準 */
   .site-header { backdrop-filter: none; background: var(--paper); }
@@ -745,9 +749,13 @@ body.member-area { background: var(--paper-2); }
   }
   .nav__item.is-open .dropdown { display: block; }
   .nav__item.is-open .caret { transform: rotate(180deg); }
+}
+
+@media (max-width: 860px) {
   .cal__cell { min-height: 70px; }
   .cal__ev { font-size: .64rem; padding: 2px 4px; }
 }
+
 @media (max-width: 640px) {
   .section { padding: 52px 0; }
   .hero { padding: 64px 0 72px; }
@@ -926,11 +934,11 @@ body.member-area { background: var(--paper-2); }
   border: 1px solid transparent;
 }
 .nav__link--teachers {
-  color: var(--jade); border-color: var(--jade);
+  background: var(--navy); color: var(--white); border-color: var(--navy);
 }
-.nav__link--teachers:hover { background: var(--jade); color: var(--white); }
+.nav__link--teachers:hover { background: var(--navy-2); color: var(--white); }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .nav__link--pill {
     margin: 10px 0 0; justify-content: center; border-radius: var(--radius);
   }
