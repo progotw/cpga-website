@@ -25,3 +25,9 @@
   from = "/events/institute.html"
   to = "/events/qualification.html"
   status = 301
+
+# 晉升辦法併入段位／晉升制度。
+[[redirects]]
+  from = "/events/promotion.html"
+  to = "/events/dan-system.html"
+  status = 301

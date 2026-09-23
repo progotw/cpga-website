@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>段位／資格制度｜中華職業圍棋協會</title>
-<meta name="description" content="職業棋士段位分級、資格取得方式與現行段位分布。">
+<title>段位／晉升制度｜中華職業圍棋協會</title>
+<meta name="description" content="職業棋士段位分級、晉升條件、升段公告與現行段位分布。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><a href="../players/index.html">職業棋士</a><span class="sep">/</span><span>段位／資格制度</span></nav>
-    <h1>段位／資格制度</h1>
+    <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><a href="../players/index.html">職業棋士</a><span class="sep">/</span><span>段位／晉升制度</span></nav>
+    <h1>段位／晉升制度</h1>
     <p>職業棋士段位自初段至九段，共九級。九段為最高段位。</p>
   </div>
 </section>
@@ -96,6 +96,10 @@
           </p>
         </div>
 
+        <h2>升段公告</h2>
+        <p>職業棋士段位晉升以協會公告為準。以下為近期公告紀錄。</p>
+        <div id="promoNews"><p class="muted">載入中…</p></div>
+
         <h2>業餘段級位</h2>
         <p>
           業餘段級位由<strong>中華民國圍棋協會</strong>或<strong>中國圍棋會</strong>核發證書認定，
@@ -132,7 +136,25 @@
 
 <div id="site-footer"></div>
 <script src="../assets/js/players.js"></script>
+<script src="../assets/js/content.js"></script>
 <script src="../assets/js/site.js" defer></script>
+<script>
+/* 升段公告：從最新消息裡篩出與段位相關者 */
+(function () {
+  var N = window.CPGA_NEWS;
+  N.load().then(function (data) {
+    var rows = (data.items || []).filter(function (n) {
+      return /升段|晉升|入段|段位/.test(n.title);
+    });
+    document.getElementById('promoNews').innerHTML = rows.length
+      ? N.render(rows)
+      : '<p class="muted">目前的消息中沒有升段公告紀錄。' +
+        '完整公告請見 <a href="../news/index.html?cat=notice">公告</a>。</p>';
+  }).catch(function () {
+    document.getElementById('promoNews').innerHTML = '<p class="muted">公告載入失敗。</p>';
+  });
+})();
+</script>
 <script>
 (function () {
   var P = window.CPGA_PLAYERS;
