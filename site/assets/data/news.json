@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-09-22T12:33:04+00:00",
+ "generated": "2026-09-23T12:33:26+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
@@ -20,6 +20,14 @@
    "cat": "match",
    "title": "【五位初段同日突圍！棋王資格賽吹起新銳旋風】",
    "url": "https://www.haifong.org/news/content/A55F86323317236004FBFB6864E906D1"
+  },
+  {
+   "id": "2A7A5E3F83773087406AA9CD6E25D6D5",
+   "date": "2026-09-22",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第二十屆棋王賽 【資格賽】結果",
+   "url": "https://www.haifong.org/news/content/2A7A5E3F83773087406AA9CD6E25D6D5"
   },
   {
    "id": "DB16D09B84265FE036A742C4DA04A910",
@@ -956,14 +964,6 @@
    "cat": "match",
    "title": "第四屆衢州爛柯杯世界圍棋公開賽本賽48強抽籤結果公告",
    "url": "https://www.haifong.org/news/content/3FD5507825A0DEB705778817C94AD9A6"
-  },
-  {
-   "id": "2B4B8036EADCF0A83272091367EA69D0",
-   "date": "2026-04-13",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【2026 中華職協圍棋道場選拔賽成績】",
-   "url": "https://www.haifong.org/news/content/2B4B8036EADCF0A83272091367EA69D0"
   }
  ]
 }

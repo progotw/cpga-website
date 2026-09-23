@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-09-22T12:35:01+00:00",
+ "generated": "2026-09-23T12:35:56+00:00",
  "source": "海峰棋院 職業棋士名錄",
  "source_url": "https://www.haifong.org/profession",
  "count": 139,
@@ -556,6 +556,36 @@
    "source": "https://www.haifong.org/profession/venue/3AB09C2D42977CB66F69737B529900F2"
   },
   {
+   "id": "37BBCE6C7228E2D9AE8B6EB84221BA97",
+   "name": "楊博崴",
+   "rank": "八段",
+   "photo": "assets/img/players/37BBCE6C7228E2D9AE8B6EB84221BA97.jpg",
+   "history": [
+    {
+     "label": "歷史成績",
+     "value": "冠軍數:3冠"
+    }
+   ],
+   "seasonLabel": "2026年度成績 (9/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "5勝4負　勝率55.6%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負　勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "20勝10負　勝率66.7%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n1998年1月3日生，臺灣桃園市人。 <br /><br />\n2011年入段，2012年二段，2013年三段，2014年跳昇五段，2015年加入中華職協精英隊(~2016)，2018年六段，2019年重返中華職協精英隊，2021年七段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2020年 </strong><br /><br />\n108學年各級學校圍棋運動錦標賽-高中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2018年</strong> <br /><br />\n2018新人王冠軍 第17屆天元 亞軍 </p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n第6屆海峰盃職業圍棋賽 冠軍 </p><br />\n<br />\n<p><strong>2013年</strong> <br /><br />\n第4屆思源盃職業圍棋賽冠軍</p><br />\n</p>",
+   "links": [],
+   "source": "https://www.haifong.org/profession/venue/37BBCE6C7228E2D9AE8B6EB84221BA97"
+  },
+  {
    "id": "BAB49E1223C36B263E5B436D7CCD99AF",
    "name": "彭景華",
    "rank": "七段",
@@ -662,36 +692,6 @@
     }
    ],
    "source": "https://www.haifong.org/profession/venue/70228523DBA5896634FC5837AC5CA377"
-  },
-  {
-   "id": "37BBCE6C7228E2D9AE8B6EB84221BA97",
-   "name": "楊博崴",
-   "rank": "七段",
-   "photo": "assets/img/players/37BBCE6C7228E2D9AE8B6EB84221BA97.jpg",
-   "history": [
-    {
-     "label": "歷史成績",
-     "value": "冠軍數:3冠"
-    }
-   ],
-   "seasonLabel": "2026年度成績 (9/1更新)",
-   "season": [
-    {
-     "label": "台灣職業賽",
-     "value": "5勝4負　勝率55.6%"
-    },
-    {
-     "label": "世界賽",
-     "value": "0勝0負　勝率0%"
-    },
-    {
-     "label": "去年度總成績",
-     "value": "20勝10負　勝率66.7%"
-    }
-   ],
-   "body": "<p><strong>簡介</strong><br /><br />\n1998年1月3日生，臺灣桃園市人。 <br /><br />\n2011年入段，2012年二段，2013年三段，2014年跳昇五段，2015年加入中華職協精英隊(~2016)，2018年六段，2019年重返中華職協精英隊，2021年七段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2020年 </strong><br /><br />\n108學年各級學校圍棋運動錦標賽-高中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2018年</strong> <br /><br />\n2018新人王冠軍 第17屆天元 亞軍 </p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n第6屆海峰盃職業圍棋賽 冠軍 </p><br />\n<br />\n<p><strong>2013年</strong> <br /><br />\n第4屆思源盃職業圍棋賽冠軍</p><br />\n</p>",
-   "links": [],
-   "source": "https://www.haifong.org/profession/venue/37BBCE6C7228E2D9AE8B6EB84221BA97"
   },
   {
    "id": "529515168CFC55E68A81B0B8308189E4",
