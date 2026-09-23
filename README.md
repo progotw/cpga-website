@@ -35,7 +35,8 @@ netlify.toml            指定發布目錄為 site/
 
 | 檔案 | 用途 |
 | --- | --- |
-| `assets/js/site.js` | 頁首、頁尾、導覽列（改導覽列編輯最上方的 `NAV`） |
+| `assets/js/site.js` | 頁首、頁尾、導覽列（改導覽列編輯最上方的 `NAV`；
+  項目加 `pill: 'xxx'` 會顯示為膠囊，樣式寫在 `.nav__link--xxx`） |
 | `assets/js/data.js` | 手動維護的資料：下載清單、大事紀、棋士人數 |
 | `assets/js/schedule.js` | 賽程行事曆載入與時間顯示 |
 | `assets/js/players.js` | 棋士名錄載入 |

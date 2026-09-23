@@ -54,7 +54,7 @@
         { label: '業餘賽事',      href: 'events/amateur.html' }
       ]
     },
-    { label: '找老師',   href: 'teachers/index.html',   key: 'teachers' },
+    { label: '找老師',   href: 'teachers/index.html',   key: 'teachers', pill: 'teachers' },
     { label: '賽事花絮', href: 'gallery/index.html',    key: 'gallery' },
     { label: '加入會員', href: 'membership/index.html', key: 'membership' },
     { label: '下載專區', href: 'downloads/index.html',  key: 'downloads' }
@@ -71,8 +71,10 @@
     var items = NAV.map(function (item) {
       var isActive = item.key === active ? ' is-active' : '';
       if (!item.children) {
+        /* pill 的項目在導覽列上顯示為膠囊，與一般文字連結區隔 */
+        var cls = 'nav__link' + (item.pill ? ' nav__link--pill nav__link--' + item.pill : '');
         return '<li class="nav__item' + isActive + '">' +
-          '<a class="nav__link" href="' + ROOT + item.href + '">' + item.label + '</a></li>';
+          '<a class="' + cls + '" href="' + ROOT + item.href + '">' + item.label + '</a></li>';
       }
       var sub = item.children.map(function (c) {
         return '<li><a href="' + ROOT + c.href + '">' + c.label + '</a></li>';
@@ -90,7 +92,7 @@
           '</a>' +
           '<nav class="nav" id="mainNav" aria-label="主導覽">' +
             '<ul style="display:contents;list-style:none;margin:0;padding:0">' + items + '</ul>' +
-            '<a class="nav__link nav__link--member" href="' + ROOT + 'member/index.html">棋士專區</a>' +
+            '<a class="nav__link nav__link--pill nav__link--member" href="' + ROOT + 'member/index.html">棋士專區</a>' +
           '</nav>' +
           '<button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false">' +
             '<span></span></button>' +

@@ -906,3 +906,32 @@ body.member-area { background: var(--paper-2); }
   .chair-hero .chair-photo { max-width: 190px; }
   .chair-row { grid-template-columns: 92px minmax(0, 1fr); gap: 18px; }
 }
+
+/* ---------- 深色底上的外框按鈕 ----------
+   英雄區第三顆按鈕原本用 .btn-ghost 加行內樣式，邊框只有 rgba(255,255,255,.25)，
+   在深色背景上幾乎看不見。 */
+.btn-outline-light {
+  background: transparent; color: var(--white);
+  border-color: rgba(255, 255, 255, .55);
+}
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, .14);
+  border-color: #fff; color: var(--white);
+}
+
+/* ---------- 導覽列的膠囊項目 ----------
+   棋士專區為實心紅底；找老師為玉綠外框，兩者以顏色與實心／外框區分。 */
+.nav__link--pill {
+  padding: 9px 16px; border-radius: 999px; margin-left: 8px;
+  border: 1px solid transparent;
+}
+.nav__link--teachers {
+  color: var(--jade); border-color: var(--jade);
+}
+.nav__link--teachers:hover { background: var(--jade); color: var(--white); }
+
+@media (max-width: 860px) {
+  .nav__link--pill {
+    margin: 10px 0 0; justify-content: center; border-radius: var(--radius);
+  }
+}
