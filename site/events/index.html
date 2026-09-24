@@ -122,7 +122,7 @@
 </section>
 
 <div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
+<script src="../assets/js/cms.js"></script>
 <script src="../assets/js/schedule.js"></script>
 <script src="../assets/js/content.js"></script>
 <script src="../assets/js/site.js" defer></script>
@@ -147,7 +147,7 @@
 
     document.getElementById('schedBody').innerHTML = rows.length
       ? rows.map(function (e) {
-          return '<tr><td class="num">' + fmtDate(e.date) + '</td>' +
+          return '<tr><td class="num">' + window.CPGA_CMS.fmtDate(e.date) + '</td>' +
             '<td class="num">' + esc(S.timeLabel(e)) + '</td>' +
             '<td><span class="legend__dot ' + S.slotClass(e.series_slot) + '" style="background:currentColor"></span>' +
             '<strong style="color:var(--ink)">' + esc(e.name) + '</strong>' +
@@ -165,7 +165,7 @@
 
     document.getElementById('schedSrc').innerHTML =
       '資料來源：<strong>' + esc(data.source) + '</strong>　·　更新於 ' + S.generatedLabel(data) +
-      '　·　涵蓋 ' + fmtDate(data.range.from) + ' – ' + fmtDate(data.range.to) +
+      '　·　涵蓋 ' + window.CPGA_CMS.fmtDate(data.range.from) + ' – ' + window.CPGA_CMS.fmtDate(data.range.to) +
       '<br>＊ 標示星號的開賽時間為依慣例推定，非日曆原始資料，實際時間以協會公告為準。';
   }).catch(function () {
     document.getElementById('schedBody').innerHTML =

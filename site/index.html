@@ -143,10 +143,10 @@
 
 <div id="site-footer"></div>
 
-<script src="assets/js/data.js"></script>
 <script src="assets/js/schedule.js"></script>
 <script src="assets/js/content.js"></script>
 <script src="assets/js/players.js"></script>
+<script src="assets/js/cms.js"></script>
 <script src="assets/js/site.js" defer></script>
 <script>
 (function () {
@@ -213,7 +213,7 @@
                 '<span class="legend__dot ' + S.slotClass(e.series_slot) + '" style="background:currentColor"></span>' +
                 S.fullTitle(e) + '</strong>' +
               '<span class="muted" style="font-size:.82rem;font-variant-numeric:tabular-nums;white-space:nowrap">' +
-                fmtDate(e.date).slice(5) + '</span>' +
+                window.CPGA_CMS.fmtDate(e.date).slice(5) + '</span>' +
             '</div>' +
             '<div class="muted" style="font-size:.82rem;margin-top:2px;padding-left:16px">' + S.timeLabel(e) + '</div></div>';
         }).join('') +
@@ -224,10 +224,13 @@
   });
 
   /* ---- 大事紀 ---- */
-  document.getElementById('homeMilestones').innerHTML = MILESTONES.slice(0, 4).map(function (m) {
-    return '<li><span class="timeline__year">' + m.year + '</span>' +
-      '<span style="color:#b9bcc3;font-size:.92rem">' + m.text + '</span></li>';
-  }).join('');
+  var C = window.CPGA_CMS, mEl = document.getElementById('homeMilestones');
+  C.load('milestones').then(function (d) {
+    mEl.innerHTML = (d.items || []).slice(0, 4).map(function (m) {
+      return '<li><span class="timeline__year">' + C.esc(m.year) + '</span>' +
+        '<span style="color:#b9bcc3;font-size:.92rem">' + C.esc(m.text) + '</span></li>';
+    }).join('');
+  }).catch(function (e) { C.fail(mEl, e); });
 
 })();
 </script>

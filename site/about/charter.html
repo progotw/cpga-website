@@ -132,11 +132,17 @@
 </section>
 
 <div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
+<script src="../assets/js/cms.js"></script>
 <script src="../assets/js/site.js" defer></script>
 <script>
-document.getElementById('charterDl').innerHTML =
-  dlListHtml(DOWNLOADS.filter(function (d) { return d.cat === '章程與法規'; }), '../');
+(function () {
+  var C = window.CPGA_CMS, el = document.getElementById('charterDl');
+  C.load('downloads').then(function (d) {
+    el.innerHTML = C.dlListHtml((d.items || []).filter(function (x) {
+      return x.cat === '章程與法規';
+    }), '../');
+  }).catch(function (e) { C.fail(el, e); });
+})();
 </script>
 </body>
 </html>

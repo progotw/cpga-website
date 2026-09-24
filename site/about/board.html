@@ -82,65 +82,27 @@
 
 <section class="section section--paper2">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Board</span><h2>理事會</h2></div>
-    <div class="table-wrap">
-      <table class="table">
-        <thead><tr><th style="width:140px">職別</th><th>姓名</th></tr></thead>
-        <tbody>
-          <tr><td>理事長</td><td><strong style="color:var(--ink)">何信仁</strong></td></tr>
-          <tr><td>常務理事</td><td><strong style="color:var(--ink)">林文伯</strong></td></tr>
-          <tr><td>常務理事</td><td><strong style="color:var(--ink)">林敏浩</strong></td></tr>
-          <tr><td>理事</td><td>加藤純子</td></tr>
-          <tr><td>理事</td><td>張果軍</td></tr>
-          <tr><td>理事</td><td>周俊勳</td></tr>
-          <tr><td>理事</td><td>陳秋龍</td></tr>
-          <tr><td>理事</td><td>劉康懋</td></tr>
-          <tr><td>理事</td><td>施懿宸</td></tr>
-          <tr><td>理事</td><td>林智暉</td></tr>
-          <tr><td>理事</td><td>林芳美</td></tr>
-          <tr><td>理事</td><td>張盛舒</td></tr>
-          <tr><td>理事</td><td>夏大銘</td></tr>
-          <tr><td>候補理事</td><td>劉耀文</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section-head mt-3"><h2>監事會</h2></div>
-    <div class="table-wrap">
-      <table class="table">
-        <thead><tr><th style="width:140px">職別</th><th>姓名</th></tr></thead>
-        <tbody>
-          <tr><td>常務監事</td><td><strong style="color:var(--ink)">秦世敏</strong></td></tr>
-          <tr><td>監事</td><td>楊泰雄</td></tr>
-          <tr><td>監事</td><td>彭景華</td></tr>
-          <tr><td>候補監事</td><td>張凱馨</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section-head mt-3"><h2>會務工作人員</h2></div>
-    <div class="table-wrap">
-      <table class="table">
-        <thead><tr><th style="width:140px">職別</th><th>姓名</th></tr></thead>
-        <tbody>
-          <tr><td>秘書長</td><td><strong style="color:var(--ink)">楊寶甘</strong></td></tr>
-          <tr><td>執行秘書</td><td>周平強</td></tr>
-          <tr><td>賽務專員</td><td>曾品傑</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="callout mt-3">
-      <p class="mb-0">
-        依本會章程，置理事十三人、監事三人，任期二年，連選得連任；
-        理事互選常務理事三人並由常務理事中選舉理事長一人。詳見
-        <a href="charter.html">章程／法規</a>。
-      </p>
-    </div>
+    <div id="boardWrap"><p class="muted">載入中…</p></div>
   </div>
 </section>
 
 <div id="site-footer"></div>
+<script src="../assets/js/cms.js"></script>
 <script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  var C = window.CPGA_CMS;
+  var wrap = document.getElementById('boardWrap');
+  C.load('board').then(function (d) {
+    wrap.innerHTML = (d.groups || []).map(function (g, i) {
+      return '<div class="section-head' + (i ? ' mt-3' : '') + '">' +
+        (i ? '' : '<span class="eyebrow">Board</span>') +
+        '<h2>' + C.esc(g.title) + '</h2></div>' + C.rosterTable(g.members);
+    }).join('') +
+    (d.note ? '<div class="callout mt-3"><p class="mb-0">' + C.esc(d.note) +
+      '詳見 <a href="charter.html">章程／法規</a>。</p></div>' : '');
+  }).catch(function (e) { C.fail(wrap, e); });
+})();
+</script>
 </body>
 </html>

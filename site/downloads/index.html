@@ -62,10 +62,17 @@
 </section>
 
 <div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
+<script src="../assets/js/cms.js"></script>
 <script src="../assets/js/site.js" defer></script>
 <script>
 (function () {
+  var C = window.CPGA_CMS;
+  var list = document.getElementById('dlList');
+
+  C.load('downloads').then(function (data) { init(data.items || []); })
+    .catch(function (e) { C.fail(list, e); });
+
+  function init(DOWNLOADS) {
   var cats = DOWNLOADS.map(function (d) { return d.cat; })
     .filter(function (v, i, a) { return a.indexOf(v) === i; });
 
@@ -84,7 +91,7 @@
       var items = rows.filter(function (d) { return d.cat === g; });
       if (!items.length) return;
       html += '<div class="section-head" style="margin:34px 0 16px"><h2 style="font-size:1.25rem">' + g + '</h2></div>';
-      html += dlListHtml(items, '../');
+      html += C.dlListHtml(items, '../');
     });
 
     document.getElementById('dlList').innerHTML = html ||
@@ -95,6 +102,7 @@
   document.getElementById('dCat').addEventListener('change', render);
   document.getElementById('dSearch').addEventListener('input', render);
   render();
+  }
 })();
 </script>
 </body>

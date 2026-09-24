@@ -32,13 +32,18 @@
 </section>
 
 <div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
+<script src="../assets/js/cms.js"></script>
 <script src="../assets/js/site.js" defer></script>
 <script>
-document.getElementById('milestoneList').innerHTML = MILESTONES.map(function (m) {
-  return '<li><span class="timeline__year">' + m.year + ' 年</span>' +
-    '<span style="color:var(--ink-3)">' + m.text + '</span></li>';
-}).join('');
+(function () {
+  var C = window.CPGA_CMS, el = document.getElementById('milestoneList');
+  C.load('milestones').then(function (d) {
+    el.innerHTML = (d.items || []).map(function (m) {
+      return '<li><span class="timeline__year">' + C.esc(m.year) + ' 年</span>' +
+        '<span style="color:var(--ink-3)">' + C.esc(m.text) + '</span></li>';
+    }).join('');
+  }).catch(function (e) { C.fail(el, e); });
+})();
 </script>
 </body>
 </html>

@@ -27,53 +27,10 @@
     <div class="section-head">
       <span class="eyebrow">Membership</span>
       <h2>會員類別</h2>
-      <p>依本會章程第七條，會員分為下列三種。</p>
+      <p id="memberIntro"></p>
     </div>
 
-    <div class="grid grid-3" style="margin-bottom:48px">
-      <div class="card">
-        <h3>一般會員</h3>
-        <p class="muted" style="font-size:.92rem">
-          凡贊同本會宗旨者。一般會員如為團體，可推派代表一人行使會員權利。
-        </p>
-        <dl class="deflist" style="grid-template-columns:86px 1fr;margin-top:1rem">
-          <dt>入會費</dt><dd>NT$ 1,000</dd>
-          <dt>常年會費</dt><dd>NT$ 1,000／年</dd>
-        </dl>
-        <p style="font-size:.9rem;margin-top:1rem;margin-bottom:0">
-          具表決權、選舉權、被選舉權與罷免權。
-        </p>
-      </div>
-
-      <div class="card" style="border-color:var(--wood)">
-        <h3>棋士會員</h3>
-        <p class="muted" style="font-size:.92rem">
-          凡贊同本會宗旨，並具有職業棋士資格者。
-        </p>
-        <dl class="deflist" style="grid-template-columns:86px 1fr;margin-top:1rem">
-          <dt>入會費</dt><dd>NT$ 1,000</dd>
-          <dt>常年會費</dt><dd>NT$ 1,000／年</dd>
-        </dl>
-        <p style="font-size:.9rem;margin-top:1rem;margin-bottom:0">
-          具表決權、選舉權、被選舉權與罷免權。
-        </p>
-        <a class="card__more" href="../events/qualification.html">如何取得職業棋士資格 →</a>
-      </div>
-
-      <div class="card">
-        <h3>準棋士會員</h3>
-        <p class="muted" style="font-size:.92rem">
-          具有職業棋士資格，且未滿二十歲者。
-        </p>
-        <dl class="deflist" style="grid-template-columns:86px 1fr;margin-top:1rem">
-          <dt>入會費</dt><dd>NT$ 1,000</dd>
-          <dt>常年會費</dt><dd>NT$ 500／年</dd>
-        </dl>
-        <p style="font-size:.9rem;margin-top:1rem;margin-bottom:0">
-          依章程第八條，準棋士會員無表決權、選舉權、被選舉權及罷免權。
-        </p>
-      </div>
-    </div>
+    <div class="grid grid-3" id="memberTypes" style="margin-bottom:48px"><p class="muted">載入中…</p></div>
 
     <div class="grid grid-aside" style="grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px">
       <div>
@@ -148,10 +105,37 @@
 </section>
 
 <div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
+<script src="../assets/js/cms.js"></script>
 <script src="../assets/js/site.js" defer></script>
 <script>
-document.getElementById('memberDl').innerHTML = dlListHtml(DOWNLOADS, '../');
+(function () {
+  var C = window.CPGA_CMS;
+  var wrap = document.getElementById('memberTypes');
+  C.load('membership').then(function (d) {
+    document.getElementById('memberIntro').textContent = d.intro || '';
+    wrap.innerHTML = (d.types || []).map(function (m) {
+      return '<div class="card"' + (m.accent ? ' style="border-color:var(--wood)"' : '') + '>' +
+        '<h3>' + C.esc(m.name) + '</h3>' +
+        '<p class="muted" style="font-size:.92rem">' + C.esc(m.desc) + '</p>' +
+        '<dl class="deflist" style="grid-template-columns:86px 1fr;margin-top:1rem">' +
+          '<dt>入會費</dt><dd>' + C.esc(m.join_fee) + '</dd>' +
+          '<dt>常年會費</dt><dd>' + C.esc(m.annual_fee) + '</dd>' +
+        '</dl>' +
+        '<p style="font-size:.9rem;margin-top:1rem;margin-bottom:0">' + C.esc(m.rights) + '</p>' +
+        (m.link ? '<a class="card__more" href="' + C.esc(m.link.url) + '">' +
+          C.esc(m.link.label) + '</a>' : '') +
+        '</div>';
+    }).join('');
+  }).catch(function (e) { C.fail(wrap, e); });
+})();
+</script>
+<script>
+(function () {
+  var C = window.CPGA_CMS, el = document.getElementById('memberDl');
+  C.load('downloads').then(function (d) {
+    el.innerHTML = C.dlListHtml(d.items, '../');
+  }).catch(function (e) { C.fail(el, e); });
+})();
 </script>
 </body>
 </html>
