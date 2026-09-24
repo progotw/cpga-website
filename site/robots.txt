@@ -1,0 +1,4 @@
+# 管理後台與棋士專區不需要被搜尋引擎收錄
+User-agent: *
+Disallow: /admin/
+Disallow: /member/

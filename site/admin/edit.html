@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>編輯內容｜管理後台</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="index.html">← 內容管理</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px" id="title">載入中…</h1>
+    <p class="muted mb-0" style="font-size:.9rem" id="subtitle"></p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+
+  <div id="editor" hidden>
+    <div class="field">
+      <label for="source" id="sourceLabel">內容</label>
+      <textarea id="source" class="code-area" spellcheck="false"></textarea>
+    </div>
+
+    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+      <button class="btn btn-accent" id="saveBtn" type="button">儲存</button>
+      <a class="btn btn-ghost" href="index.html">取消</a>
+      <span class="muted" style="font-size:.86rem" id="saveState"></span>
+    </div>
+
+    <div class="callout mt-3">
+      <p class="mb-0" style="font-size:.9rem">
+        <strong>目前為純文字編輯</strong>：結構化內容請維持 JSON 格式，儲存前會先檢查語法。
+        表單式編輯介面與「發布到官網」功能正在建置中，現在儲存只會存進資料庫，尚不會更新官網。
+      </p>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var key = new URLSearchParams(location.search).get('key') || '';
+  var row = null;
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    document.getElementById('notice').innerHTML =
+      '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+      '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>';
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.client.auth.signOut().then(function () { location.replace('login.html?signedout=1'); });
+  });
+
+  A.require('admin').then(function (me) {
+    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+    return A.client.from('content').select('*').eq('key', key).single();
+  }).then(function (res) {
+    if (res.error) throw res.error;
+    row = res.data;
+
+    document.getElementById('title').textContent = row.title;
+    document.getElementById('subtitle').textContent =
+      row.key + '.json　·　' + (row.kind === 'markdown' ? '條文（Markdown）' : '結構化資料（JSON）');
+    document.getElementById('sourceLabel').textContent =
+      row.kind === 'markdown' ? '條文內容（Markdown）' : '資料內容（JSON）';
+
+    var ta = document.getElementById('source');
+    ta.value = row.kind === 'markdown'
+      ? (row.body || '')
+      : JSON.stringify(row.data == null ? {} : row.data, null, 1);
+
+    document.getElementById('editor').hidden = false;
+
+    if (row.kind !== 'markdown' && row.data == null) {
+      say('', '這個項目在資料庫裡還沒有內容。匯入現有 JSON 的程式尚未建立，' +
+        '可先從 <code>site/assets/data/' + esc(row.key) + '.json</code> 複製內容貼上。');
+    }
+  }).catch(function (err) {
+    say('error', '讀取失敗：' + esc(A.message(err)));
+  });
+
+  document.getElementById('saveBtn').addEventListener('click', function () {
+    var btn = this;
+    var ta = document.getElementById('source');
+    var patch;
+
+    if (row.kind === 'markdown') {
+      patch = { body: ta.value };
+    } else {
+      try {
+        patch = { data: JSON.parse(ta.value) };
+      } catch (e) {
+        say('error', 'JSON 格式有誤，未儲存：' + esc(e.message));
+        return;
+      }
+    }
+
+    btn.disabled = true;
+    document.getElementById('saveState').textContent = '儲存中…';
+
+    A.client.from('content').update(patch).eq('key', row.key).select().single()
+      .then(function (res) {
+        if (res.error) throw res.error;
+        row = res.data;
+        document.getElementById('saveState').textContent =
+          '已儲存 ' + new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' });
+        say('', '已儲存到資料庫。官網尚未更新——發布功能建置中。');
+      })
+      .catch(function (err) { say('error', '儲存失敗：' + esc(A.message(err))); })
+      .finally(function () { btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>

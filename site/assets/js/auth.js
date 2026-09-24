@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Supabase 連線與登入狀態
+   需先載入 supabase-js（UMD 版）。
+
+   這裡的兩個值是設計上就要放進前端的公開值：
+   所有操作都受資料庫的 Row Level Security 規則限制，拿到也不能越權。
+   能繞過權限的 secret key 絕不出現在本檔或任何前端檔案。
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  var URL = 'https://tagnpbazcpdjeobjigwx.supabase.co';
+  var KEY = 'sb_publishable_VQ4YNGNm1OlF2DvZgLqZDQ_4yOX2Ygi';
+
+  var ROOT = (function () {
+    var s = document.currentScript && document.currentScript.src;
+    return s ? s.replace(/assets\/js\/auth\.js.*$/, '') : '';
+  })();
+
+  if (!window.supabase || !window.supabase.createClient) {
+    console.error('supabase-js 未載入，請確認 <script> 順序');
+    return;
+  }
+
+  var client = window.supabase.createClient(URL, KEY);
+
+  window.CPGA_AUTH = {
+    client: client,
+    root: ROOT,
+
+    signIn: function (email, password) {
+      return client.auth.signInWithPassword({ email: email, password: password });
+    },
+
+    signOut: function () {
+      return client.auth.signOut().then(function () {
+        location.href = ROOT + 'admin/login.html';
+      });
+    },
+
+    /* 回傳 { user, profile } 或 null。profile 含 role 與 display_name。 */
+    current: function () {
+      return client.auth.getSession().then(function (res) {
+        var session = res.data && res.data.session;
+        if (!session) return null;
+        return client.from('profiles')
+          .select('role, display_name, player_id')
+          .eq('id', session.user.id)
+          .single()
+          .then(function (p) {
+            return { user: session.user, profile: p.data || null, error: p.error || null };
+          });
+      });
+    },
+
+    /* 頁面守門：未登入或角色不符就導回登入頁。
+       解析成功才回傳 { user, profile }，呼叫端可直接接著渲染。 */
+    require: function (role) {
+      return this.current().then(function (me) {
+        if (!me) {
+          location.replace(ROOT + 'admin/login.html?next=' +
+            encodeURIComponent(location.pathname + location.search));
+          return new Promise(function () {});   // 停住，不要繼續渲染
+        }
+        if (role && (!me.profile || me.profile.role !== role)) {
+          location.replace(ROOT + 'admin/login.html?denied=1');
+          return new Promise(function () {});
+        }
+        return me;
+      });
+    },
+
+    /* 把 Supabase 的英文錯誤轉成看得懂的訊息 */
+    message: function (err) {
+      var m = (err && err.message) || '';
+      if (/Invalid login credentials/i.test(m)) return '帳號或密碼不正確。';
+      if (/Email not confirmed/i.test(m))       return '此帳號尚未完成驗證，請洽秘書處。';
+      if (/rate limit|too many/i.test(m))       return '嘗試次數過多，請稍後再試。';
+      if (/Failed to fetch|NetworkError/i.test(m)) return '無法連線，請檢查網路後再試。';
+      return m || '發生未預期的錯誤。';
+    }
+  };
+})();

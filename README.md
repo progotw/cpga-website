@@ -21,6 +21,7 @@ site/                   ← Netlify 發布的網站本體
   membership/           加入會員
   downloads/            下載專區
   member/               棋士專區說明頁（尚未開放登入）
+  admin/                管理後台（登入後才可進入，robots.txt 已排除）
   assets/css/style.css  全站樣式
   assets/js/            共用程式（見下表）
   assets/data/          資料檔：爬蟲產生的（players/news/games/schedule/elite）
@@ -38,6 +39,7 @@ netlify.toml            指定發布目錄為 site/
 | --- | --- |
 | `assets/js/site.js` | 頁首、頁尾、導覽列（改導覽列編輯最上方的 `NAV`；
   項目加 `pill: 'xxx'` 會顯示為膠囊，樣式寫在 `.nav__link--xxx`） |
+| `assets/js/auth.js` | Supabase 連線、登入狀態與頁面守門 |
 | `assets/js/cms.js` | 協會自有內容的載入器（理監事、會費、大事紀、下載清單）與共用渲染 |
 | `assets/js/schedule.js` | 賽程行事曆載入與時間顯示 |
 | `assets/js/players.js` | 棋士名錄載入 |

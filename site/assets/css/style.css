@@ -943,3 +943,76 @@ body.member-area { background: var(--paper-2); }
     margin: 10px 0 0; justify-content: center; border-radius: var(--radius);
   }
 }
+
+/* ==========================================================================
+   登入頁與管理後台
+   後台不套用官網的頁首頁尾，維持單純的工作介面。
+   ========================================================================== */
+.auth-body {
+  min-height: 100vh; display: grid; place-items: center;
+  padding: 32px 16px; background: var(--paper-2);
+}
+.auth-card {
+  width: 100%; max-width: 410px;
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+  padding: 38px 34px 30px;
+}
+.auth-brand { display: block; margin-bottom: 26px; }
+.auth-brand img { height: 34px; width: auto; }
+.auth-card h1 { font-size: 1.45rem; margin: 0 0 6px; }
+.auth-card .field { margin-top: 16px; }
+
+/* ---------- 後台外框 ---------- */
+.admin-bar {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--ink); color: #e7e3dc;
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+.admin-bar__inner {
+  max-width: 1120px; margin: 0 auto; padding: 0 20px;
+  height: 56px; display: flex; align-items: center; gap: 16px;
+}
+.admin-bar__title {
+  font-family: var(--serif); font-size: 1.02rem; color: var(--white);
+  text-decoration: none !important; margin-right: auto;
+}
+.admin-bar__who { font-size: .86rem; color: #b9bcc3; }
+.admin-bar a.admin-bar__link { color: #e7e3dc; font-size: .88rem; text-decoration: none; }
+.admin-bar a.admin-bar__link:hover { color: var(--white); text-decoration: underline; }
+
+.admin-wrap { max-width: 1120px; margin: 0 auto; padding: 36px 20px 64px; }
+
+.admin-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px;
+}
+.admin-tile {
+  display: block; text-decoration: none !important;
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 20px 22px;
+  transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+.admin-tile:hover {
+  border-color: var(--line-2); box-shadow: var(--shadow-sm); transform: translateY(-2px);
+}
+.admin-tile__kind {
+  display: inline-block; margin-bottom: 8px; padding: 2px 9px; border-radius: 999px;
+  font-size: .72rem; letter-spacing: .04em; background: var(--paper-2); color: var(--ink-3);
+}
+.admin-tile__name {
+  display: block; font-family: var(--serif); font-size: 1.1rem; color: var(--ink); margin-bottom: 4px;
+}
+.admin-tile__meta { display: block; font-size: .82rem; color: var(--ink-4); }
+
+@media (max-width: 620px) {
+  .auth-card { padding: 30px 22px 24px; }
+  .admin-bar__who { display: none; }
+}
+
+/* 後台的純文字／JSON 編輯區 */
+.code-area {
+  width: 100%; min-height: 60vh; resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .88rem; line-height: 1.6; tab-size: 2;
+  white-space: pre; overflow-wrap: normal; overflow-x: auto;
+}
