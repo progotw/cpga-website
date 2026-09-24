@@ -8,3 +8,8 @@ __pycache__/
 # 系統檔
 Thumbs.db
 .DS_Store
+
+# Supabase 的 service_role 金鑰與任何 .env 檔一律不進版控
+.env
+.env.*
+*.secret
