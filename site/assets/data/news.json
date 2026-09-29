@@ -1,17 +1,41 @@
 {
  "schema_version": 1,
- "generated": "2026-09-28T12:37:29+00:00",
+ "generated": "2026-09-29T12:37:08+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
   {
    "id": "3D4CDB7FE80F551905080B38148A060A",
-   "date": "2026-09-22",
+   "date": "2026-09-29",
    "catLabel": "比賽訊息",
    "cat": "match",
-   "title": "【棋王循環圈三輪過後，只剩他全勝！賴均輔三連勝獨居榜首】",
+   "title": "【棋王循環圈第四輪：賴均輔讀秒勝率5%逆轉，五連勝獨居榜首】",
    "url": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A"
+  },
+  {
+   "id": "C37E70744FA4849172A729CBADBBA6BE",
+   "date": "2026-09-29",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "圍棋／世界雙人圍棋最強戰 許皓鋐、楊子萱奪亞軍",
+   "url": "https://www.haifong.org/news/content/C37E70744FA4849172A729CBADBBA6BE"
+  },
+  {
+   "id": "45AE43CECB40863461D2D73FBEC0330B",
+   "date": "2026-09-29",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第20屆棋王初賽首日戰報｜左半區勝部七強出爐　楊子萱轉戰敗部、13歲陳映嘉連勝晉級",
+   "url": "https://www.haifong.org/news/content/45AE43CECB40863461D2D73FBEC0330B"
+  },
+  {
+   "id": "3577E9ECCE104DEBC7C317242491D435",
+   "date": "2026-09-28",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "圍棋「台日對決」激戰名古屋！許皓鋐、楊子萱連克中韓強敵，冠軍戰不敵日本奪銀",
+   "url": "https://www.haifong.org/news/content/3577E9ECCE104DEBC7C317242491D435"
   },
   {
    "id": "A55F86323317236004FBFB6864E906D1",
@@ -940,30 +964,6 @@
    "cat": "media",
    "title": "台灣圍棋破紀錄！三劍客攜手勇闖世界16強、創新里程碑",
    "url": "https://www.haifong.org/news/content/98EA809DCDE01972D37A228E04138375"
-  },
-  {
-   "id": "31564758CBFAEA0978559D691990531C",
-   "date": "2026-04-16",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "第31屆LG杯『朝鮮日報世界棋王戰』 台灣代表選拔抽籤結果",
-   "url": "https://www.haifong.org/news/content/31564758CBFAEA0978559D691990531C"
-  },
-  {
-   "id": "552556DA3BF451E8CBED2ACC85F8A11E",
-   "date": "2026-04-15",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "狂取14連勝！台灣圍棋「黃金世代」降臨！衢州爛柯杯「三劍客」，挺進世界16 強！！！",
-   "url": "https://www.haifong.org/news/content/552556DA3BF451E8CBED2ACC85F8A11E"
-  },
-  {
-   "id": "3FD5507825A0DEB705778817C94AD9A6",
-   "date": "2026-04-14",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "第四屆衢州爛柯杯世界圍棋公開賽本賽48強抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/3FD5507825A0DEB705778817C94AD9A6"
   }
  ]
 }
