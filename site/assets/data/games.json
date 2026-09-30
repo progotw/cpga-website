@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-09-29T12:37:08+00:00",
+ "generated": "2026-09-30T12:40:40+00:00",
  "source": "海峰棋院 賽事",
  "source_url": "https://www.haifong.org",
  "count": 79,
@@ -468,7 +468,7 @@
   {
    "category": "職棋甄選",
    "name": "2027年 院生培訓",
-   "period": "",
+   "period": "2026.09.30~2027.06.30",
    "champLabel": "",
    "champion": "",
    "note": "",
@@ -578,7 +578,7 @@
   {
    "category": "業餘賽",
    "name": "國際業餘配對賽",
-   "period": "2025.05.17~2010.08.07",
+   "period": "2026.09.25~2010.08.07",
    "champLabel": "",
    "champion": "",
    "note": "",

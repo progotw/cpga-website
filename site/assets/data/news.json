@@ -1,10 +1,34 @@
 {
  "schema_version": 1,
- "generated": "2026-09-29T12:37:08+00:00",
+ "generated": "2026-09-30T12:40:40+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "1367B9A2EE0C7DAED6CCC13FF066BDAD",
+   "date": "2026-09-30",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【2026名古屋PairGo｜Day 3 圓滿落幕】",
+   "url": "https://www.haifong.org/news/content/1367B9A2EE0C7DAED6CCC13FF066BDAD"
+  },
+  {
+   "id": "15C37CC26A102F2114B18E95FBCED516",
+   "date": "2026-09-30",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【2027年度 院生培訓辦法】",
+   "url": "https://www.haifong.org/news/content/15C37CC26A102F2114B18E95FBCED516"
+  },
+  {
+   "id": "82492BD11A295B6E346031BBB8BAA112",
+   "date": "2026-09-30",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【2027年度 院生甄選辦法】",
+   "url": "https://www.haifong.org/news/content/82492BD11A295B6E346031BBB8BAA112"
+  },
   {
    "id": "3D4CDB7FE80F551905080B38148A060A",
    "date": "2026-09-29",
@@ -50,7 +74,7 @@
    "date": "2026-09-22",
    "catLabel": "比賽訊息",
    "cat": "match",
-   "title": "第二十屆棋王賽 【資格賽】結果",
+   "title": "第20屆棋王賽 【資格賽】棋譜&結果",
    "url": "https://www.haifong.org/news/content/2A7A5E3F83773087406AA9CD6E25D6D5"
   },
   {
@@ -940,30 +964,6 @@
    "cat": "notice",
    "title": "第7屆快棋爭霸戰 抽籤日期公告",
    "url": "https://www.haifong.org/news/content/D49E703D885C18AC7E9D9C542253EFDC"
-  },
-  {
-   "id": "EA3E055B8324F57C2A6E278754B4EBA8",
-   "date": "2026-04-19",
-   "catLabel": "媒體報導",
-   "cat": "media",
-   "title": "【棋編碎碎念：這就是人生吧】",
-   "url": "https://www.haifong.org/news/content/EA3E055B8324F57C2A6E278754B4EBA8"
-  },
-  {
-   "id": "DECB75E3A80CB4A4C65F147F07E469E0",
-   "date": "2026-04-19",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【賴均輔九段止步倡棋杯本賽30強】",
-   "url": "https://www.haifong.org/news/content/DECB75E3A80CB4A4C65F147F07E469E0"
-  },
-  {
-   "id": "98EA809DCDE01972D37A228E04138375",
-   "date": "2026-04-17",
-   "catLabel": "媒體報導",
-   "cat": "media",
-   "title": "台灣圍棋破紀錄！三劍客攜手勇闖世界16強、創新里程碑",
-   "url": "https://www.haifong.org/news/content/98EA809DCDE01972D37A228E04138375"
   }
  ]
 }
