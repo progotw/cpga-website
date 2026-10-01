@@ -39,3 +39,49 @@
 
 因此採「後台編輯 → 發布 → 匯出成 `site/assets/data/*.json` → Cloudflare 部署」。
 公開網站維持零外部依賴，資料庫只在秘書處登入後台時才會被喚醒。
+
+---
+
+## 發布功能的設定
+
+後台按「發布」→ Edge Function 驗證權限 → 觸發 GitHub Action →
+匯出 JSON 並提交 → Cloudflare 自動部署。
+
+### 1. GitHub Secrets
+
+repo → Settings → Secrets and variables → Actions → New repository secret
+
+| 名稱 | 值 |
+| --- | --- |
+| `SUPABASE_URL` | `https://tagnpbazcpdjeobjigwx.supabase.co` |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase 的 secret key |
+
+service_role 金鑰只存在這裡，不進版控、不進前端。
+
+### 2. GitHub 權杖
+
+GitHub → Settings（個人帳號）→ Developer settings →
+Personal access tokens → Fine-grained tokens → Generate new token
+
+- Repository access：只選 `cpga-website`
+- Permissions → Repository permissions → **Contents: Read and write**
+
+### 3. Supabase Edge Function
+
+Dashboard → Edge Functions → Deploy a new function，名稱 `publish`，
+貼上 `supabase/functions/publish/index.ts` 的內容。
+
+接著 Edge Functions → Secrets 新增：
+
+| 名稱 | 值 |
+| --- | --- |
+| `GITHUB_TOKEN` | 第 2 步產生的權杖 |
+| `GITHUB_REPO` | `progotw/cpga-website` |
+
+`SUPABASE_URL` 與 `SUPABASE_ANON_KEY` 由平台自動提供，不需設定。
+
+### 為什麼要經過 Edge Function
+
+GitHub 權杖不能放進網頁——前端程式碼對任何人都是可讀的。
+Edge Function 在伺服器端持有權杖，並且只在確認呼叫者的角色是 admin
+之後才代為觸發。它本身不持有 service_role，查詢同樣受資料列權限限制。

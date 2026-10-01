@@ -70,6 +70,23 @@
       });
     },
 
+    /* 觸發發布：呼叫 Edge Function，由它驗證權限後通知 GitHub Action。
+       前端不持有 GitHub 權杖——寫進網頁的任何東西都是公開的。 */
+    publish: function () {
+      return client.functions.invoke('publish', { body: {} }).then(function (res) {
+        if (res.error) {
+          /* Edge Function 回非 2xx 時，錯誤內容在 context 裡 */
+          return (res.error.context && typeof res.error.context.json === 'function'
+            ? res.error.context.json().catch(function () { return null; })
+            : Promise.resolve(null)
+          ).then(function (body) {
+            throw new Error((body && (body.error || body.detail)) || res.error.message);
+          });
+        }
+        return res.data;
+      });
+    },
+
     /* 把 Supabase 的英文錯誤轉成看得懂的訊息 */
     message: function (err) {
       var m = (err && err.message) || '';
@@ -77,6 +94,7 @@
       if (/Email not confirmed/i.test(m))       return '此帳號尚未完成驗證，請洽秘書處。';
       if (/rate limit|too many/i.test(m))       return '嘗試次數過多，請稍後再試。';
       if (/Failed to fetch|NetworkError/i.test(m)) return '無法連線，請檢查網路後再試。';
+      if (/Function not found|404/i.test(m)) return '發布功能尚未在 Supabase 建立（Edge Function「publish」）。';
       return m || '發生未預期的錯誤。';
     }
   };

@@ -33,6 +33,17 @@
   <div id="tiles" class="admin-grid mt-3"><p class="muted">載入中…</p></div>
 
   <div class="callout mt-3" id="statusBox" hidden></div>
+
+  <div class="publish-bar">
+    <div>
+      <strong style="display:block;margin-bottom:2px">發布到官網</strong>
+      <span class="muted" style="font-size:.88rem">
+        把上面所有項目的目前內容更新到官網，約一分鐘後生效。
+      </span>
+    </div>
+    <button class="btn btn-accent" id="publishBtn" type="button">發布</button>
+  </div>
+  <p class="muted mt-2 mb-0" style="font-size:.86rem" id="publishState"></p>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
@@ -60,6 +71,19 @@
     A.client.auth.signOut().then(function () {
       location.replace('login.html?signedout=1');
     });
+  });
+
+  document.getElementById('publishBtn').addEventListener('click', function () {
+    var btn = this, state = document.getElementById('publishState');
+    if (!window.confirm('確定要把目前的內容發布到官網嗎？')) return;
+    btn.disabled = true;
+    state.textContent = '發布中…';
+    A.publish().then(function () {
+      state.innerHTML = '已送出發布，約一分鐘後官網會更新。' +
+        '<a href="https://github.com/progotw/cpga-website/actions" target="_blank" rel="noopener">查看進度 ↗</a>';
+    }).catch(function (err) {
+      state.textContent = '發布失敗：' + A.message(err);
+    }).finally(function () { btn.disabled = false; });
   });
 
   A.require('admin').then(function (me) {

@@ -1064,3 +1064,13 @@ body.member-area { background: var(--paper-2); }
 }
 .admin-raw-toggle { margin-left: auto; font-size: .84rem; color: var(--ink-4); }
 .admin-raw-toggle:hover { color: var(--ink-3); }
+
+/* 後台的發布區塊 */
+.publish-bar {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  margin-top: 34px; padding: 20px 22px;
+  background: var(--white); border: 1px solid var(--line);
+  border-left: 4px solid var(--accent); border-radius: var(--radius);
+}
+.publish-bar > div { flex: 1 1 260px; }
+.publish-bar .btn { flex: none; }
