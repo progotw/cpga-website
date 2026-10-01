@@ -38,7 +38,8 @@
     <div>
       <strong style="display:block;margin-bottom:2px">發布到官網</strong>
       <span class="muted" style="font-size:.88rem">
-        把上面所有項目的目前內容更新到官網，約一分鐘後生效。
+        平日 08:00–20:00 每 15 分鐘會自動發布一次，存檔後不必做別的事。
+        想立刻更新就按右邊的按鈕。
       </span>
     </div>
     <button class="btn btn-accent" id="publishBtn" type="button">發布</button>
@@ -82,7 +83,9 @@
       state.innerHTML = '已送出發布，約一分鐘後官網會更新。' +
         '<a href="https://github.com/progotw/cpga-website/actions" target="_blank" rel="noopener">查看進度 ↗</a>';
     }).catch(function (err) {
-      state.textContent = '發布失敗：' + A.message(err);
+      /* 立即發布屬選配；沒設定好也不影響定時發布 */
+      state.textContent = '立即發布未啟用（' + A.message(err) +
+        '）。內容已存檔，會在下一次定時發布時更新。';
     }).finally(function () { btn.disabled = false; });
   });
 

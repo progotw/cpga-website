@@ -1,8 +1,14 @@
 name: 發布協會內容
 
-# 由後台的「發布」按鈕觸發（透過 Supabase Edge Function 送出 repository_dispatch），
-# 也可在 Actions 頁面手動執行。
+# 觸發方式有三種：
+#   1. 定時：台灣時間週一至週五 08:00–20:00 每 15 分鐘檢查一次，
+#      秘書處在後台存檔後不必做別的事，內容有變動就自動發布。
+#      本專案為公開 repo，Actions 時數不計費，沒有變動的執行也不會產生提交。
+#   2. 後台的「發布」按鈕（需另外建好 Supabase Edge Function，屬選配）。
+#   3. 在 Actions 頁面手動執行。
 on:
+  schedule:
+    - cron: '*/15 0-12 * * 1-5'
   repository_dispatch:
     types: [publish-content]
   workflow_dispatch:
