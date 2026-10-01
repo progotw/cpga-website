@@ -1081,3 +1081,10 @@ body.member-area { background: var(--paper-2); }
   padding-top: 4px;
 }
 .ann-row .row-check { margin-bottom: 10px; }
+
+/* 教學資訊的刊登開關 */
+.listed-card { border-left: 4px solid var(--accent); }
+.listed-toggle { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; margin: 0; }
+.listed-toggle input { width: auto; margin: 3px 0 0; flex: none; }
+.chk-row { display: flex; gap: 18px; flex-wrap: wrap; }
+.chk-row .row-check { margin: 0; }

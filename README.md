@@ -121,8 +121,12 @@ python scripts/fetch_photos.py site
 
 ## 找職業老師
 
-`site/assets/data/teachers.json` 只存教學欄位；姓名、段位、照片、經歷由 `players.json`
-依 `id` 自動帶入，不需重複維護。欄位說明與登錄表單建議欄位見 `scripts/teachers.sample.json`。
+`teachers.json` 由棋士在棋士專區（`member/teaching.html`）自行填寫，
+存進 Supabase 的 `teaching` 表，發布時由 `scripts/export_content.py` 匯出。
+姓名、段位、照片、經歷由 `players.json` 依 `id` 自動帶入，不需重複維護。
+
+**刊登與否由棋士自己決定**：`listed` 為 false 的不會被匯出。
+棋士只能讀寫自己那一列，看不到別人的聯絡方式。
 
 **聯絡管道採自願公開**：沒有寫進 `contacts` 的管道不會出現在網站上。
 `acceptForm` 控制是否顯示詢問表單。
@@ -200,6 +204,7 @@ Markdown 對中文標題只能產生 `_1`、`_2` 這種流水號，頁內目錄�
 - 公告與表單由管理後台維護，**存檔即生效**，不需要走官網的發布流程
 - 帳號由協會在 Supabase 建立後，用 SQL 設定 `role` 與 `player_id`
   （對應方式見 `supabase/schema_member.sql` 結尾）
+- 教學資訊：棋士自行填寫並決定是否刊登於「找老師」專區
 - 第二、三階段（對局費、積分、個人資料）尚未開始
 
 ⚠️ `site/assets/files/member/` 底下的檔案雖然不會出現在任何公開連結上，

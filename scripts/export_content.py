@@ -95,11 +95,62 @@ for r in rows:
         f.write('\n')
     written.append(key)
 
+# ---------------------------------------------------------------------------
+# 找老師：由棋士自行填寫，只匯出勾選「願意刊登」的那些
+# ---------------------------------------------------------------------------
+def export_teaching():
+    req = urllib.request.Request(
+        URL + '/rest/v1/teaching?select=player_id,modes,areas,students,languages,'
+              'levels,fee,availability,intro,accept_form,contacts,links&listed=is.true',
+        headers={'apikey': KEY, 'Authorization': 'Bearer ' + KEY})
+    try:
+        rows = json.loads(urllib.request.urlopen(req, timeout=40).read().decode('utf-8'))
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            print('  – teachers.json（teaching 資料表尚未建立）')
+            return False
+        raise
+
+    teachers = []
+    for r in rows:
+        t = {'id': r['player_id']}
+        for k in ('modes', 'areas', 'students', 'languages'):
+            if r.get(k):
+                t[k] = r[k]
+        for k in ('levels', 'fee', 'availability', 'intro'):
+            if (r.get(k) or '').strip():
+                t[k] = r[k].strip()
+        t['acceptForm'] = bool(r.get('accept_form'))
+        # 只保留填了內容的聯絡管道與連結
+        contacts = [c for c in (r.get('contacts') or []) if (c or {}).get('value')]
+        links = [l for l in (r.get('links') or []) if (l or {}).get('url')]
+        if contacts:
+            t['contacts'] = contacts
+        if links:
+            t['links'] = links
+        teachers.append(t)
+
+    payload = {
+        'schema_version': 1,
+        'note': '職業老師登錄資料，由棋士在棋士專區自行填寫後發布。'
+                'id 對應 players.json 的棋士 id，照片、段位、經歷會自動帶入。',
+        'updated': datetime.date.today().isoformat(),
+        'teachers': teachers,
+    }
+    with io.open(os.path.join(OUT, 'teachers.json'), 'w', encoding='utf-8') as f:
+        json.dump(payload, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+    print('  ✓ teachers.json（%d 位老師）' % len(teachers))
+    return True
+
+
 print('匯出完成：%d 筆' % len(written))
 for k in written:
     print('  ✓ %s.json' % k)
 for k, why in skipped:
     print('  – %s（%s）' % (k, why))
+
+export_teaching()
 
 # 一筆都沒寫出來代表設定有問題，讓工作流程失敗而不是悄悄通過
 if not written:

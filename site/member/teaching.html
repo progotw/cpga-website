@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>教學資訊｜棋士專區</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="home.html">← 棋士專區</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap" style="max-width:760px">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px">教學資訊</h1>
+    <p class="muted mb-0" style="font-size:.92rem">
+      填寫後可刊登在官網的「找老師」專區，讓想學棋的人找到您。
+      姓名、段位、照片與棋戰履歷會自動帶入，不需在這裡重填。
+    </p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+
+  <div id="form" hidden>
+    <!-- 刊登開關 -->
+    <div class="card listed-card">
+      <label class="listed-toggle">
+        <input type="checkbox" id="listed">
+        <span>
+          <strong>我願意刊登在官網的「找老師」專區</strong>
+          <span class="muted" style="display:block;font-size:.88rem;margin-top:2px">
+            取消勾選後，發布時就會從官網移除，隨時可以改回來。
+          </span>
+        </span>
+      </label>
+    </div>
+
+    <div id="details">
+      <div class="card mt-2">
+        <h2 style="font-size:1.1rem">授課條件</h2>
+
+        <div class="field">
+          <label>授課方式</label>
+          <div class="chk-row" data-multi="modes">
+            <label class="row-check"><input type="checkbox" value="實體"><span>實體</span></label>
+            <label class="row-check"><input type="checkbox" value="線上"><span>線上</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="areas">可授課地區</label>
+          <input type="text" id="areas" placeholder="例：台北、新北（實體授課才需填，以頓號或逗號分隔）">
+        </div>
+
+        <div class="field">
+          <label>招收對象</label>
+          <div class="chk-row" data-multi="students">
+            <label class="row-check"><input type="checkbox" value="兒童"><span>兒童</span></label>
+            <label class="row-check"><input type="checkbox" value="青少年"><span>青少年</span></label>
+            <label class="row-check"><input type="checkbox" value="成人"><span>成人</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="levels">可教程度</label>
+          <input type="text" id="levels" placeholder="例：入門 ～ 業餘 5 段">
+        </div>
+
+        <div class="field">
+          <label for="languages">授課語言</label>
+          <input type="text" id="languages" placeholder="例：中文、英文">
+        </div>
+
+        <div class="grid grid-2" style="gap:0 20px">
+          <div class="field">
+            <label for="fee">收費方式</label>
+            <input type="text" id="fee" placeholder="可填「面議」">
+          </div>
+          <div class="field">
+            <label for="availability">可授課時段</label>
+            <input type="text" id="availability" placeholder="例：平日晚間、週六全天">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="intro">教學簡介</label>
+          <textarea id="intro" rows="5"
+            placeholder="建議 100–200 字，說明教學風格、擅長的對象與課程形式。"></textarea>
+        </div>
+      </div>
+
+      <div class="card mt-2">
+        <h2 style="font-size:1.1rem">聯絡管道</h2>
+        <p class="muted" style="font-size:.9rem">
+          <strong>只填您願意公開的</strong>。沒填的欄位不會出現在官網上。
+        </p>
+        <div id="contacts"></div>
+
+        <label class="row-check mt-2">
+          <input type="checkbox" id="acceptForm">
+          <span>願意接收官網轉來的學生詢問表單（由協會轉交）</span>
+        </label>
+      </div>
+
+      <div class="card mt-2">
+        <h2 style="font-size:1.1rem">相關連結</h2>
+        <p class="muted" style="font-size:.9rem">
+          課程介紹、教學影片、報名表單、部落格等，數量不限。
+        </p>
+        <div id="links" class="row-list"></div>
+        <button class="btn btn-ghost btn-sm" id="addLink" type="button">＋ 新增連結</button>
+      </div>
+    </div>
+
+    <div class="admin-actions mt-3">
+      <button class="btn btn-accent" id="saveBtn" type="button">儲存</button>
+      <a class="btn btn-ghost" href="home.html">返回</a>
+      <span class="muted" style="font-size:.86rem" id="state"></span>
+    </div>
+
+    <div class="callout mt-3">
+      <p class="mb-0" style="font-size:.9rem">
+        儲存後不會立刻出現在官網。協會會在平日每 15 分鐘的發布作業中更新，
+        或由秘書處手動發布。課程內容與費用由您與學生自行約定，本會不介入。
+      </p>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var me = null, row = null;
+
+  var CONTACT_TYPES = [
+    { type: 'line',  label: 'LINE',      hint: '例：@yourid' },
+    { type: 'ig',    label: 'Instagram', hint: '完整網址' },
+    { type: 'fb',    label: 'Facebook',  hint: '完整網址' },
+    { type: 'email', label: '電子信箱',  hint: '' },
+    { type: 'phone', label: '電話',      hint: '' }
+  ];
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    document.getElementById('notice').innerHTML =
+      '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+      '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>';
+  }
+  /* 「台北、新北」「台北,新北」都接受 */
+  function splitList(s) {
+    return String(s || '').split(/[、,，\s]+/).map(function (x) { return x.trim(); })
+      .filter(Boolean);
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('player');
+  });
+
+  document.getElementById('contacts').innerHTML = CONTACT_TYPES.map(function (c) {
+    return '<div class="field"><label for="c_' + c.type + '">' + esc(c.label) + '</label>' +
+      '<input type="text" id="c_' + c.type + '" data-contact="' + c.type + '"' +
+      (c.hint ? ' placeholder="' + esc(c.hint) + '"' : '') + '></div>';
+  }).join('');
+
+  function linkRow(l) {
+    return '<div class="row-card link-row">' +
+      '<div class="row-card__fields">' +
+        '<div class="field row-field" style="max-width:220px">' +
+          '<label>名稱</label>' +
+          '<input type="text" data-l="label" value="' + esc(l && l.label) + '" placeholder="例：課程介紹"></div>' +
+        '<div class="field row-field"><label>網址</label>' +
+          '<input type="text" data-l="url" value="' + esc(l && l.url) + '" placeholder="https://"></div>' +
+      '</div>' +
+      '<div class="row-card__tools">' +
+        '<button type="button" data-act="del" class="is-danger" title="刪除">✕</button>' +
+      '</div></div>';
+  }
+
+  document.getElementById('addLink').addEventListener('click', function () {
+    document.getElementById('links').insertAdjacentHTML('beforeend', linkRow(null));
+  });
+  document.getElementById('links').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-act="del"]');
+    if (b) b.closest('.link-row').remove();
+  });
+
+  /* 勾選「願意刊登」才展開下面的欄位 */
+  var listed = document.getElementById('listed');
+  function syncListed() {
+    document.getElementById('details').style.opacity = listed.checked ? '' : '.5';
+    document.getElementById('details').style.pointerEvents = listed.checked ? '' : 'none';
+  }
+  listed.addEventListener('change', syncListed);
+
+  function fill(r) {
+    listed.checked = !!r.listed;
+    document.getElementById('areas').value = (r.areas || []).join('、');
+    document.getElementById('languages').value = (r.languages || []).join('、');
+    document.getElementById('levels').value = r.levels || '';
+    document.getElementById('fee').value = r.fee || '';
+    document.getElementById('availability').value = r.availability || '';
+    document.getElementById('intro').value = r.intro || '';
+    document.getElementById('acceptForm').checked = r.accept_form !== false;
+
+    [['modes', r.modes], ['students', r.students]].forEach(function (pair) {
+      var set = pair[1] || [];
+      document.querySelectorAll('[data-multi="' + pair[0] + '"] input').forEach(function (i) {
+        i.checked = set.indexOf(i.value) > -1;
+      });
+    });
+
+    (r.contacts || []).forEach(function (c) {
+      var el = document.querySelector('[data-contact="' + c.type + '"]');
+      if (el) el.value = c.value || '';
+    });
+
+    document.getElementById('links').innerHTML =
+      (r.links || []).map(linkRow).join('');
+
+    syncListed();
+  }
+
+  function collect() {
+    var multi = function (name) {
+      return [].slice.call(document.querySelectorAll('[data-multi="' + name + '"] input:checked'))
+        .map(function (i) { return i.value; });
+    };
+    var contacts = CONTACT_TYPES.map(function (c) {
+      var v = document.querySelector('[data-contact="' + c.type + '"]').value.trim();
+      return v ? { type: c.type, label: c.label, value: v } : null;
+    }).filter(Boolean);
+
+    var links = [].slice.call(document.querySelectorAll('.link-row')).map(function (r) {
+      var url = r.querySelector('[data-l="url"]').value.trim();
+      var label = r.querySelector('[data-l="label"]').value.trim();
+      return url ? { label: label || url, url: url } : null;
+    }).filter(Boolean);
+
+    return {
+      user_id: me.user.id,
+      player_id: me.profile.player_id,
+      listed: listed.checked,
+      modes: multi('modes'),
+      students: multi('students'),
+      areas: splitList(document.getElementById('areas').value),
+      languages: splitList(document.getElementById('languages').value),
+      levels: document.getElementById('levels').value.trim(),
+      fee: document.getElementById('fee').value.trim(),
+      availability: document.getElementById('availability').value.trim(),
+      intro: document.getElementById('intro').value.trim(),
+      accept_form: document.getElementById('acceptForm').checked,
+      contacts: contacts,
+      links: links
+    };
+  }
+
+  A.require('player').then(function (user) {
+    me = user;
+    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+
+    if (!me.profile.player_id) {
+      say('error', '此帳號尚未對應到棋士名錄，無法登錄教學資訊，請洽秘書處。');
+      return;
+    }
+
+    return A.client.from('teaching').select('*').eq('user_id', me.user.id).maybeSingle()
+      .then(function (res) {
+        if (res.error) throw res.error;
+        row = res.data;
+        document.getElementById('form').hidden = false;
+        fill(row || {});
+        if (!row) say('', '尚未登錄過。勾選上方的「願意刊登」並填寫資料後儲存即可。');
+      });
+  }).catch(function (err) {
+    say('error', '載入失敗：' + esc(A.message(err)));
+  });
+
+  document.getElementById('saveBtn').addEventListener('click', function () {
+    var btn = this, state = document.getElementById('state');
+    var payload = collect();
+
+    if (payload.listed && !payload.intro) {
+      say('error', '刊登前請先填寫教學簡介，讓學生了解您的課程。');
+      return;
+    }
+
+    btn.disabled = true;
+    state.textContent = '儲存中…';
+    /* 第一次是新增、之後是更新，用 upsert 省掉判斷 */
+    A.client.from('teaching').upsert(payload, { onConflict: 'user_id' }).select().single()
+      .then(function (res) {
+        if (res.error) throw res.error;
+        row = res.data;
+        state.textContent = '已儲存';
+        say('', payload.listed
+          ? '已儲存。資料會在下一次發布後出現在官網的「找老師」專區。'
+          : '已儲存。目前設定為<strong>不刊登</strong>，發布後不會出現在官網上。');
+      })
+      .catch(function (err) { say('error', '儲存失敗：' + esc(A.message(err))); })
+      .finally(function () { btn.disabled = false; state.textContent = ''; });
+  });
+})();
+</script>
+</body>
+</html>
