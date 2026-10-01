@@ -79,6 +79,7 @@ python scripts/fetch_photos.py site
 | `scrape_news_games.py` | `news.json`、`games.json` | haifong.org 最新消息與賽事分類頁 |
 | `scrape_players.py` | `players.json` | haifong.org 職業棋士頁 |
 | `scrape_elite.py` | `elite.json` | haifong.org/elite 精銳隊名單 |
+| `invite_players.py` | — | 批次開通棋士帳號（在協會電腦上執行，名單與金鑰不進版控） |
 | `fetch_photos.py` | `assets/img/players/*.jpg` | 只下載本地缺少的，加 `--force` 重抓全部 |
 
 `.github/workflows/update-data.yml` 每天台灣時間晚上 20:17 在雲端跑這四支，
@@ -212,6 +213,29 @@ Markdown 對中文標題只能產生 `_1`、`_2` 這種流水號，頁內目錄�
 - 大事紀僅收錄可查證的項目（章程備查紀錄、114 年度工作報告），2009–2024 待協會提供，**不可自行編寫**
 - 理監事名冊與會員大會會議紀錄含個資，**刻意未放入網站與版控**
 - 年度工作報告與收支決算表依協會決定**不對外公開**，已自下載專區與 `site/assets/files/` 移除
+
+---
+
+## 開通棋士帳號
+
+```bash
+# 1. 名單放 private/（該目錄已排除於版控），欄位：姓名,電子信箱
+# 2. 設定金鑰（PowerShell）
+$env:SUPABASE_URL = "https://tagnpbazcpdjeobjigwx.supabase.co"
+$env:SUPABASE_SERVICE_ROLE_KEY = "貼上 secret key"
+
+# 3. 先試跑，確認比對結果
+python scripts/invite_players.py private/棋士名單.csv
+
+# 4. 無誤後實際建立
+python scripts/invite_players.py private/棋士名單.csv --commit
+```
+
+姓名會自動對應到 `players.json` 的棋士 id；同名或查無此人會列出來，
+補上「棋士id」欄位再跑一次即可。已存在的帳號只更新資料，不重設密碼。
+
+執行後產生 `private/開通結果_<日期>.csv`，含初始密碼，
+轉交棋士後請刪除該檔。
 
 ---
 

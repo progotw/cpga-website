@@ -13,3 +13,6 @@ Thumbs.db
 .env
 .env.*
 *.secret
+
+# 棋士名單與開通結果含個資與密碼，絕不進版控
+private/
