@@ -12,8 +12,6 @@
 import sys, io, json, os, re, datetime
 import markdown
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
 # 條文會用到的：表格、換行、標題 id（供頁內目錄跳轉）
 EXTENSIONS = ['tables', 'sane_lists', 'attr_list', 'toc']
 
@@ -63,6 +61,10 @@ def write(key, md_text, out_dir='site/assets/data'):
 
 
 if __name__ == '__main__':
+    # 只在直接執行時換 stdout。被匯入時若也換，會把呼叫端的包裝器關掉，
+    # 之後呼叫端的 print 全部拋 ValueError: I/O operation on closed file。
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
     if len(sys.argv) < 3:
         sys.exit(__doc__)
     key, src = sys.argv[1], sys.argv[2]

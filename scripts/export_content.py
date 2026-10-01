@@ -20,8 +20,23 @@ URL = (os.environ.get('SUPABASE_URL') or '').rstrip('/')
 KEY = os.environ.get('SUPABASE_SERVICE_ROLE_KEY') or ''
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'site/assets/data'
 
+def describe(name, v):
+    """只印長度與開頭幾字，足以辨認拿錯金鑰，又不洩漏內容。"""
+    if not v:
+        return '%s：未設定 ✗' % name
+    return '%s：已設定（%d 字，開頭 %s…）' % (name, len(v), v[:12])
+
+
+print(describe('SUPABASE_URL', URL))
+print(describe('SUPABASE_SERVICE_ROLE_KEY', KEY))
+
 if not URL or not KEY:
-    sys.exit('中止：缺少 SUPABASE_URL 或 SUPABASE_SERVICE_ROLE_KEY。')
+    sys.exit('中止：缺少 SUPABASE_URL 或 SUPABASE_SERVICE_ROLE_KEY，'
+             '請確認 GitHub repo 的 Settings → Secrets and variables → Actions 裡有這兩項。')
+
+if KEY.startswith('sb_publishable_') or KEY.startswith('eyJ'):
+    print('提醒：這看起來是公開金鑰而非 secret key。公開金鑰受資料列權限限制，'
+          '讀不到內容，匯出會得到空結果。')
 
 
 def fetch():
@@ -31,12 +46,19 @@ def fetch():
     try:
         return json.loads(urllib.request.urlopen(req, timeout=40).read().decode('utf-8'))
     except urllib.error.HTTPError as e:
-        sys.exit('中止：讀取資料庫失敗 HTTP %s — %s' % (e.code, e.read().decode('utf-8')[:200]))
+        body = e.read().decode('utf-8')[:200]
+        hint = ''
+        if e.code == 401:
+            hint = ('\n提示：金鑰無效。最常見的原因是 Supabase 那把已撤銷、'
+                    '但 GitHub Secrets 裡還存著舊的——到 Secrets 頁用鉛筆圖示更新。')
+        sys.exit('中止：讀取資料庫失敗 HTTP %s — %s%s' % (e.code, body, hint))
 
 
 rows = fetch()
+print('讀到 %d 筆內容項目。' % len(rows))
 if not rows:
-    sys.exit('中止：content 表是空的，不覆蓋既有檔案。')
+    sys.exit('中止：讀不到任何內容項目。若金鑰正確，表示 content 表是空的；'
+             '若用的是公開金鑰，則是被資料列權限擋下。既有檔案未被覆蓋。')
 
 written, skipped = [], []
 
