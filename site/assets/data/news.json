@@ -1,10 +1,18 @@
 {
  "schema_version": 1,
- "generated": "2026-09-30T12:40:40+00:00",
+ "generated": "2026-10-01T12:38:06+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
+   "date": "2026-10-01",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "玄樂盃8強名單有誰晉級？10/1十六強戰報一次看",
+   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
+  },
   {
    "id": "1367B9A2EE0C7DAED6CCC13FF066BDAD",
    "date": "2026-09-30",
@@ -116,14 +124,6 @@
    "cat": "match",
    "title": "中環碁聖3回戰：冠軍頭銜者輪番取勝，新人王擊退龍星",
    "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A"
-  },
-  {
-   "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
-   "date": "2026-09-17",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【第一屆玄樂盃｜32強直播戰報】師徒對決，陳首廉笑納勝利晉級16強！",
-   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
   },
   {
    "id": "8C5F6628BD9C2FCA4F5F329980DF81DF",
