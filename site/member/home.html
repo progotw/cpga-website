@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>棋士專區｜中華職業圍棋協會</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="home.html">中華職業圍棋協會　棋士專區</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="../index.html">回官網</a>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap">
+  <div class="section-head">
+    <h1 style="font-size:1.6rem;margin-bottom:6px" id="greeting">　</h1>
+    <p class="muted mb-0" style="font-size:.94rem" id="subline"></p>
+  </div>
+
+  <div class="grid grid-aside mt-3"
+       style="grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:start">
+
+    <!-- 內部公告 -->
+    <section>
+      <div class="section-head" style="margin-bottom:14px">
+        <h2 style="font-size:1.25rem;margin:0">內部公告</h2>
+      </div>
+      <div id="annList"><p class="muted">載入中…</p></div>
+    </section>
+
+    <aside class="stack">
+      <!-- 近期賽程 -->
+      <div class="card">
+        <h3 style="font-size:1.05rem">近期賽程</h3>
+        <div id="schedList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
+        <a class="btn btn-ghost btn-sm btn-block mt-2" href="../events/index.html">完整賽程 →</a>
+      </div>
+
+      <!-- 表單下載 -->
+      <div class="card">
+        <h3 style="font-size:1.05rem">表單下載</h3>
+        <div id="fileList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:1.05rem">聯絡秘書處</h3>
+        <p class="muted mb-0" style="font-size:.9rem">
+          (02) 2702-8898 轉 126<br>progotw@gmail.com
+        </p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script src="../assets/js/schedule.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var S = window.CPGA_SCHEDULE;
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function day(ts) {
+    if (!ts) return '';
+    var d = new Date(ts), p = function (n) { return (n < 10 ? '0' : '') + n; };
+    return d.getFullYear() + '.' + p(d.getMonth() + 1) + '.' + p(d.getDate());
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('player');
+  });
+
+  A.require('player').then(function (me) {
+    var name = me.profile.display_name || me.user.email;
+    document.getElementById('who').textContent =
+      name + (me.profile.role === 'admin' ? '　·　管理員檢視' : '');
+    document.getElementById('greeting').textContent = name + '，您好';
+    document.getElementById('subline').textContent =
+      me.profile.role === 'admin'
+        ? '您是以管理員身分檢視棋士專區。'
+        : '以下為本會對棋士發布的內部資訊。';
+
+    loadAnnouncements();
+    loadFiles();
+  });
+
+  /* ---- 內部公告 ---- */
+  function loadAnnouncements() {
+    var box = document.getElementById('annList');
+    A.client.from('announcements')
+      .select('id, title, body, pinned, published, published_at')
+      .order('pinned', { ascending: false })
+      .order('published_at', { ascending: false, nullsFirst: false })
+      .limit(20)
+      .then(function (res) {
+        if (res.error) throw res.error;
+        var rows = res.data || [];
+        if (!rows.length) {
+          box.innerHTML = '<div class="card"><p class="muted mb-0">目前沒有公告。</p></div>';
+          return;
+        }
+        box.innerHTML = rows.map(function (a) {
+          return '<article class="card" style="margin-bottom:14px">' +
+            '<div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap">' +
+              (a.pinned ? '<span class="tag tag--notice">置頂</span>' : '') +
+              (a.published ? '' : '<span class="tag">草稿</span>') +
+              '<span class="muted" style="font-size:.84rem">' + day(a.published_at) + '</span>' +
+            '</div>' +
+            '<h3 style="font-size:1.08rem;margin:.5em 0 .3em">' + esc(a.title) + '</h3>' +
+            '<p class="mb-0" style="white-space:pre-line;font-size:.94rem">' + esc(a.body) + '</p>' +
+            '</article>';
+        }).join('');
+      })
+      .catch(function (err) {
+        box.innerHTML = '<div class="card"><p class="muted mb-0">公告載入失敗（' +
+          esc(A.message(err)) + '）。</p></div>';
+      });
+  }
+
+  /* ---- 表單下載 ---- */
+  function loadFiles() {
+    var box = document.getElementById('fileList');
+    A.client.from('member_files')
+      .select('name, ext, size, url, category, sort')
+      .order('sort', { ascending: true })
+      .then(function (res) {
+        if (res.error) throw res.error;
+        var rows = res.data || [];
+        box.innerHTML = rows.length
+          ? rows.map(function (f) {
+              return '<a class="dl-item" href="../' + esc(f.url) + '" download>' +
+                '<span class="dl-item__ext">' + esc(f.ext) + '</span>' +
+                '<span class="dl-item__body"><span class="dl-item__name">' + esc(f.name) + '</span>' +
+                '<span class="dl-item__meta">' + esc(f.category) +
+                (f.size ? '　·　' + esc(f.size) : '') + '</span></span>' +
+                '<span class="muted" style="font-size:1.1rem">↓</span></a>';
+            }).join('')
+          : '<p class="muted mb-0" style="font-size:.9rem">目前沒有可下載的表單。</p>';
+      })
+      .catch(function () {
+        box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">表單載入失敗。</p>';
+      });
+  }
+
+  /* ---- 近期賽程（公開資料，與官網同一份） ---- */
+  S.load().then(function (data) {
+    var box = document.getElementById('schedList');
+    var now = new Date(); now.setHours(0, 0, 0, 0);
+    var rows = (data.events || []).filter(function (e) {
+      return new Date(e.date) >= now;
+    }).slice(0, 6);
+
+    box.innerHTML = rows.length
+      ? '<ul style="list-style:none;padding:0;margin:0;font-size:.9rem">' + rows.map(function (e) {
+          return '<li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;' +
+            'border-bottom:1px solid var(--line)">' +
+            '<span>' + esc(S.fullTitle(e)) + '<br>' +
+              '<span class="muted" style="font-size:.84rem">' + esc(S.timeLabel(e)) + '</span></span>' +
+            '<span class="muted" style="white-space:nowrap">' +
+              esc(String(e.date).slice(5).replace('-', '.')) + '</span></li>';
+        }).join('') + '</ul>'
+      : '<p class="muted mb-0" style="font-size:.9rem">近期沒有排定的賽程。</p>';
+  }).catch(function () {
+    document.getElementById('schedList').innerHTML =
+      '<p class="muted mb-0" style="font-size:.9rem">賽程載入失敗。</p>';
+  });
+})();
+</script>
+</body>
+</html>

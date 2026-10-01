@@ -32,9 +32,15 @@
       return client.auth.signInWithPassword({ email: email, password: password });
     },
 
-    signOut: function () {
+    /* 兩種角色各有自己的登入頁，導向時不要把棋士送到管理後台 */
+    loginPath: function (role) {
+      return ROOT + (role === 'admin' ? 'admin/login.html' : 'member/login.html');
+    },
+
+    signOut: function (role) {
+      var self = this;
       return client.auth.signOut().then(function () {
-        location.href = ROOT + 'admin/login.html';
+        location.href = self.loginPath(role) + '?signedout=1';
       });
     },
 
@@ -56,15 +62,19 @@
     /* 頁面守門：未登入或角色不符就導回登入頁。
        解析成功才回傳 { user, profile }，呼叫端可直接接著渲染。 */
     require: function (role) {
+      var login = this.loginPath(role);
       return this.current().then(function (me) {
         if (!me) {
-          location.replace(ROOT + 'admin/login.html?next=' +
+          location.replace(login + '?next=' +
             encodeURIComponent(location.pathname + location.search));
           return new Promise(function () {});   // 停住，不要繼續渲染
         }
         if (role && (!me.profile || me.profile.role !== role)) {
-          location.replace(ROOT + 'admin/login.html?denied=1');
-          return new Promise(function () {});
+          /* 管理員進棋士專區是合理的（要檢視畫面），反之則不行 */
+          if (!(role === 'player' && me.profile && me.profile.role === 'admin')) {
+            location.replace(login + '?denied=1');
+            return new Promise(function () {});
+          }
         }
         return me;
       });

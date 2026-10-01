@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>棋士專區登入｜中華職業圍棋協會</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body class="auth-body">
+
+<main class="auth-card">
+  <a class="auth-brand" href="../index.html">
+    <img src="../assets/img/cpga-logo.png" alt="中華職業圍棋協會">
+  </a>
+
+  <h1>棋士專區</h1>
+  <p class="muted" style="font-size:.92rem">
+    本專區限本會職業棋士使用。帳號由協會發送，不需自行註冊。
+  </p>
+
+  <div id="notice"></div>
+
+  <form id="loginForm" autocomplete="on">
+    <div class="field">
+      <label for="email">電子信箱</label>
+      <input type="email" id="email" name="email" autocomplete="username" required>
+    </div>
+    <div class="field">
+      <label for="password">密碼</label>
+      <input type="password" id="password" name="password" autocomplete="current-password" required>
+    </div>
+    <button class="btn btn-accent btn-block" type="submit" id="submitBtn">登入</button>
+  </form>
+
+  <p class="form-note mt-3 mb-0">
+    忘記密碼或尚未收到帳號，請洽秘書處 (02) 2702-8898 轉 126。
+  </p>
+  <p class="mt-2 mb-0" style="font-size:.88rem">
+    <a href="index.html">← 回到專區說明</a>　·　<a href="../index.html">回到官網</a>
+  </p>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var notice = document.getElementById('notice');
+  var form = document.getElementById('loginForm');
+  var btn = document.getElementById('submitBtn');
+  var params = new URLSearchParams(location.search);
+
+  function say(kind, text) {
+    notice.innerHTML = '<div class="callout' +
+      (kind === 'error' ? ' callout--accent' : '') + '"><p class="mb-0" style="font-size:.92rem">' +
+      text + '</p></div>';
+  }
+
+  if (params.get('denied')) say('error', '此帳號沒有棋士專區的權限，請洽秘書處。');
+  if (params.get('signedout')) say('', '已登出。');
+
+  /* 依角色決定去處：管理員登入這裡時直接送進後台，不要擋在門外 */
+  function go(me) {
+    if (me.profile && me.profile.role === 'admin') {
+      location.replace(params.get('next') || '../admin/index.html');
+    } else {
+      location.replace(params.get('next') || 'home.html');
+    }
+  }
+
+  A.current().then(function (me) { if (me && me.profile) go(me); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = '登入中…';
+    notice.innerHTML = '';
+
+    A.signIn(document.getElementById('email').value.trim(),
+             document.getElementById('password').value)
+      .then(function (res) {
+        if (res.error) throw res.error;
+        return A.current();
+      })
+      .then(function (me) {
+        if (!me || !me.profile) {
+          return A.client.auth.signOut().then(function () {
+            throw new Error('此帳號尚未完成設定，請洽秘書處。');
+          });
+        }
+        go(me);
+      })
+      .catch(function (err) {
+        say('error', A.message(err));
+        btn.disabled = false;
+        btn.textContent = '登入';
+      });
+  });
+})();
+</script>
+</body>
+</html>
