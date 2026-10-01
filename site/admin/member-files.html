@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>棋士專區表單｜管理後台</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="index.html">← 管理後台</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px">棋士專區表單</h1>
+    <p class="muted mb-0" style="font-size:.92rem">
+      只有登入的棋士看得到。這裡只維護清單，檔案本身要另外放進網站。
+    </p>
+  </div>
+
+  <div class="callout mt-2">
+    <p class="mb-0" style="font-size:.9rem">
+      <strong>檔案怎麼放</strong>：請把檔案交給網站維護者，放到
+      <code>site/assets/files/member/</code> 之下，再把路徑填進下方的「檔案路徑」欄位，
+      例如 <code>assets/files/member/請假單.docx</code>。
+      後台目前還不能直接上傳檔案。
+    </p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+
+  <div class="admin-actions" style="border-top:0;padding-top:0;margin:22px 0">
+    <button class="btn btn-accent" id="newBtn" type="button">＋ 新增項目</button>
+    <span class="muted" style="font-size:.86rem" id="state"></span>
+  </div>
+
+  <div id="list"><p class="muted">載入中…</p></div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var list = document.getElementById('list');
+  var state = document.getElementById('state');
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    document.getElementById('notice').innerHTML =
+      '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+      '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>';
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('admin');
+  });
+
+  A.require('admin').then(function (me) {
+    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+    load();
+  });
+
+  function load() {
+    A.client.from('member_files').select('*')
+      .order('sort', { ascending: true }).order('id', { ascending: true })
+      .then(function (res) {
+        if (res.error) throw res.error;
+        render(res.data || []);
+      })
+      .catch(function (err) {
+        list.innerHTML = '<p class="muted">載入失敗：' + esc(A.message(err)) + '</p>';
+      });
+  }
+
+  var FIELDS = [
+    { k: 'name',     label: '檔案名稱', w: '' },
+    { k: 'category', label: '分類',     w: '150px' },
+    { k: 'ext',      label: '格式',     w: '90px' },
+    { k: 'size',     label: '大小',     w: '100px' },
+    { k: 'sort',     label: '排序',     w: '80px' },
+    { k: 'url',      label: '檔案路徑', w: '' }
+  ];
+
+  function cardHtml(f) {
+    return '<article class="card row-card" data-id="' + f.id + '" style="margin-bottom:12px">' +
+      '<div class="row-card__fields">' +
+        FIELDS.map(function (d) {
+          var style = d.w ? ' style="max-width:' + d.w + '"' : '';
+          return '<div class="field row-field"' + style + '>' +
+            '<label>' + esc(d.label) + '</label>' +
+            '<input type="text" data-f="' + d.k + '" value="' + esc(f[d.k]) + '"' + style + '>' +
+            '</div>';
+        }).join('') +
+      '</div>' +
+      '<div class="row-card__tools" style="flex-direction:column;gap:6px">' +
+        '<button type="button" data-act="save" title="儲存">✓</button>' +
+        '<button type="button" data-act="del" class="is-danger" title="刪除">✕</button>' +
+      '</div>' +
+      '<p class="muted mb-0" style="grid-column:1/-1;font-size:.82rem" data-role="status"></p>' +
+      '</article>';
+  }
+
+  function render(rows) {
+    list.innerHTML = rows.length
+      ? rows.map(cardHtml).join('')
+      : '<div class="card"><p class="muted mb-0">目前沒有項目。按上方「新增項目」開始。</p></div>';
+  }
+
+  document.getElementById('newBtn').addEventListener('click', function () {
+    var btn = this;
+    btn.disabled = true;
+    state.textContent = '新增中…';
+    A.client.from('member_files').insert({ name: '（未命名）' }).select().single()
+      .then(function (res) {
+        if (res.error) throw res.error;
+        state.textContent = '';
+        load();
+      })
+      .catch(function (err) { say('error', '新增失敗：' + esc(A.message(err))); state.textContent = ''; })
+      .finally(function () { btn.disabled = false; });
+  });
+
+  list.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-act]');
+    if (!btn) return;
+    var card = btn.closest('.row-card');
+    var id = Number(card.dataset.id);
+    var status = card.querySelector('[data-role="status"]');
+
+    if (btn.dataset.act === 'del') {
+      if (!window.confirm('確定要刪除這個項目嗎？（只會移除清單，不會刪掉檔案）')) return;
+      btn.disabled = true;
+      A.client.from('member_files').delete().eq('id', id)
+        .then(function (res) {
+          if (res.error) throw res.error;
+          card.remove();
+          if (!list.querySelector('.row-card')) render([]);
+        })
+        .catch(function (err) { status.textContent = '刪除失敗：' + A.message(err); btn.disabled = false; });
+      return;
+    }
+
+    var patch = {};
+    FIELDS.forEach(function (d) {
+      var v = card.querySelector('[data-f="' + d.k + '"]').value.trim();
+      patch[d.k] = d.k === 'sort' ? (parseInt(v, 10) || 0) : v;
+    });
+    if (!patch.name) patch.name = '（未命名）';
+
+    btn.disabled = true;
+    status.textContent = '儲存中…';
+    A.client.from('member_files').update(patch).eq('id', id).select().single()
+      .then(function (res) {
+        if (res.error) throw res.error;
+        status.textContent = '已儲存';
+      })
+      .catch(function (err) { status.textContent = '儲存失敗：' + A.message(err); })
+      .finally(function () { btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>

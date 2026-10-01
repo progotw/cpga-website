@@ -22,6 +22,7 @@ site/                   ← Netlify 發布的網站本體
   downloads/            下載專區
   member/               棋士專區說明頁（尚未開放登入）
   admin/                管理後台（登入後才可進入，robots.txt 已排除）
+  assets/files/member/  棋士專區的表單檔案（不在公開頁面上，但知道網址仍可下載）
   assets/css/style.css  全站樣式
   assets/js/            共用程式（見下表）
   assets/data/          資料檔：爬蟲產生的（players/news/games/schedule/elite）
@@ -191,13 +192,17 @@ Markdown 對中文標題只能產生 `_1`、`_2` 這種流水號，頁內目錄�
 
 ## 已知限制
 
-**棋士專區尚未開放（第一階段刻意如此）**
+**棋士專區（第一階段已開放）**
 
-- `site/member/index.html` 只是說明頁，沒有登入功能
-- 原本的示意版（假登入、虛構撥款金額與積分）已移到 `prototype/member/`，**不在發布目錄內**
-- `netlify.toml` 有一條 `/member/*` 轉址，舊書籤會導回說明頁
+- 登入 `member/login.html`，專區首頁 `member/home.html`
+- 內容：內部公告、棋士專屬表單、近期賽程（賽程沿用官網同一份 `schedule.json`）
+- 公告與表單由管理後台維護，**存檔即生效**，不需要走官網的發布流程
+- 帳號由協會在 Supabase 建立後，用 SQL 設定 `role` 與 `player_id`
+  （對應方式見 `supabase/schema_member.sql` 結尾）
+- 第二、三階段（對局費、積分、個人資料）尚未開始
 
-分三階段上線：①先讓公開內容完全正確並對外發表　②開發棋士帳號與賽程、對局費串接　③交付棋士使用
+⚠️ `site/assets/files/member/` 底下的檔案雖然不會出現在任何公開連結上，
+但**只要知道網址仍可直接下載**。不要放含個資或財務細節的文件。
 
 **其他**
 

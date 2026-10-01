@@ -1074,3 +1074,10 @@ body.member-area { background: var(--paper-2); }
 }
 .publish-bar > div { flex: 1 1 260px; }
 .publish-bar .btn { flex: none; }
+
+/* 公告編輯卡片 */
+.ann-row {
+  display: flex; gap: 20px; align-items: flex-end; flex-wrap: wrap;
+  padding-top: 4px;
+}
+.ann-row .row-check { margin-bottom: 10px; }
