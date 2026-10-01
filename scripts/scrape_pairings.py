@@ -13,13 +13,22 @@
 
 姓名後面黏著段位或頭銜（「盧奕銓新人王」），用棋士名錄做最長前綴比對切出來。
 
+雙來源交叉比對：若設定了環境變數 PAIRINGS_FEED（指向賽程操作台輸出的
+JSON，格式見 docs/賽程資料交換規格.md），會與公告解析的結果比對：
+
+    兩邊一致            → 正常顯示
+    只有一邊有          → 顯示，標示來源
+    對手或日期不一致    → 不顯示，寫進 conflicts 供後台確認
+
+最後一種是比對的主要理由：棋士會依這份資料安排當天行程，
+顯示錯誤的對手或時間比顯示不足更嚴重。
+
 用法：
     python scripts/scrape_pairings.py site
+    PAIRINGS_FEED=https://… python scripts/scrape_pairings.py site
 """
 import os, sys, io, re, json, time, html, datetime
 import urllib.request, urllib.error
-
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 UA = {'User-Agent': 'Mozilla/5.0 (compatible; CPGA-site-builder/1.0)'}
 
@@ -85,6 +94,71 @@ def resolve_year(month, day, announced):
     elif (month - announced.month) > 6:
         d = datetime.date(y - 1, month, day)
     return d
+
+
+def merge(announced, feed):
+    """合併兩個來源。以（日期, 棋士）為鍵比對對手；衝突者剔除並回報。
+
+    只在兩邊都有同一位棋士同一天的對局時才算衝突——
+    某一邊沒有資料是常態（公告沒貼、或操作台尚未輸入），不是錯誤。
+    """
+    def norm(p, source):
+        return {
+            'date': p.get('date', ''),
+            'time': p.get('time', '') or '',
+            'event': p.get('event', ''),
+            'round': p.get('round', ''),
+            'players': [x for x in (p.get('players') or []) if x],
+            'pending_opponent': len([x for x in (p.get('players') or []) if x]) < 2,
+            'winner': p.get('winner') or None,
+            'source': source,
+        }
+
+    feed_rows = [norm(p, 'schedule-app') for p in feed if p.get('date')]
+    ann_rows = [dict(p, source='announcement') for p in announced]
+
+    # 索引：(日期, 棋士) → 對手
+    def index(rows):
+        ix = {}
+        for r in rows:
+            for i, n in enumerate(r['players']):
+                opp = r['players'][1 - i] if len(r['players']) > 1 else None
+                ix.setdefault((r['date'], n), []).append((opp, r))
+        return ix
+
+    ia, ifd = index(ann_rows), index(feed_rows)
+    conflicts, bad_keys = [], set()
+
+    for key in set(ia) & set(ifd):
+        opps_a = {o for o, _ in ia[key] if o}
+        opps_f = {o for o, _ in ifd[key] if o}
+        if opps_a and opps_f and opps_a != opps_f:
+            conflicts.append({
+                'date': key[0], 'player': key[1],
+                'announced': '、'.join(sorted(opps_a)),
+                'feed': '、'.join(sorted(opps_f)),
+            })
+            bad_keys.add(key)
+
+    def clean(rows):
+        out = []
+        for r in rows:
+            if any((r['date'], n) in bad_keys for n in r['players']):
+                continue
+            out.append(r)
+        return out
+
+    # 操作台為上游，同一組對局以它為準；公告補足它沒有的
+    merged, seen = [], set()
+    for r in clean(feed_rows) + clean(ann_rows):
+        k = (r['date'], r['time'], tuple(sorted(r['players'])))
+        if k in seen:
+            continue
+        seen.add(k)
+        merged.append(r)
+
+    merged.sort(key=lambda p: (p['date'], p['time']))
+    return merged, conflicts
 
 
 def main():
@@ -154,6 +228,22 @@ def main():
             found += 1
         print('  %-52s %d 組' % ((n.get('title') or '')[:52], found))
 
+    # ---- 第二來源（選配）----
+    feed_url = os.environ.get('PAIRINGS_FEED', '').strip()
+    conflicts = []
+    if feed_url:
+        try:
+            feed = json.loads(get(feed_url))
+            pairs, conflicts = merge(pairs, feed.get('pairings') or [])
+            print('\n已與賽程操作台比對：合併後 %d 組，不一致 %d 組'
+                  % (len(pairs), len(conflicts)))
+            for c in conflicts[:10]:
+                print('  ⚠ %s %s：公告「%s」／操作台「%s」'
+                      % (c['date'], c['player'], c['announced'], c['feed']))
+        except Exception as e:
+            # 第二來源壞掉不該讓整份資料消失，退回只用公告
+            print('\n第二來源讀取失敗，僅使用公告資料：%s' % e)
+
     if len(pairs) < MIN_PAIRS:
         sys.exit('中止：只解析到 %d 組對局（門檻 %d）。原站格式可能已改，既有資料未被覆蓋。'
                  % (len(pairs), MIN_PAIRS))
@@ -166,6 +256,7 @@ def main():
         'source': '海峰棋院 抽籤結果公告',
         'count': len(pairs),
         'pairings': pairs,
+        'conflicts': conflicts,
     }
     dest = os.path.join(site, 'assets', 'data', 'pairings.json')
     with io.open(dest, 'w', encoding='utf-8') as f:
@@ -178,4 +269,7 @@ def main():
 
 
 if __name__ == '__main__':
+    # 只在直接執行時換 stdout。被匯入時若也換，會關掉呼叫端的輸出
+    # （與 render_content.py 同一個坑）。
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     main()
