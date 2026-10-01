@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>意見與申訴｜棋士專區</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="home.html">← 棋士專區</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap" style="max-width:720px">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px">意見與申訴</h1>
+    <p class="muted mb-0" style="font-size:.92rem">
+      對賽事規程、行政安排或其他會務的意見，都可以從這裡提出。
+    </p>
+  </div>
+
+  <div class="callout mt-2">
+    <p class="mb-0" style="font-size:.9rem">
+      依〈社群媒體使用指引〉，對賽事或相關單位有疑慮時，請優先透過正式管道反映，
+      由相關單位出面協調。送出後會由秘書處處理，必要時會以您登記的聯絡方式回覆。
+    </p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+
+  <div id="form" hidden>
+    <div class="card mt-2">
+      <div class="field">
+        <label for="subject">主旨</label>
+        <input type="text" id="subject" maxlength="200" placeholder="例：複賽報到時間的建議">
+      </div>
+
+      <div class="field">
+        <label for="category">類別</label>
+        <select id="category">
+          <option>賽事規程</option>
+          <option>行政與排程</option>
+          <option>對局費與撥款</option>
+          <option>場地與設備</option>
+          <option>申訴</option>
+          <option>其他</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="body">內容</label>
+        <textarea id="body" rows="9" maxlength="4000"
+          placeholder="請具體說明時間、賽事與情況，有助於加快處理。"></textarea>
+        <p class="form-note mb-0" id="count">0 / 4000 字</p>
+      </div>
+
+      <div class="field">
+        <label for="contact">方便的聯絡方式（選填）</label>
+        <input type="text" id="contact" maxlength="200" placeholder="若希望以特定方式回覆，請填寫">
+      </div>
+    </div>
+
+    <div class="admin-actions mt-3">
+      <button class="btn btn-accent" id="sendBtn" type="button">送出</button>
+      <a class="btn btn-ghost" href="home.html">返回</a>
+      <span class="muted" style="font-size:.86rem" id="state"></span>
+    </div>
+  </div>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var me = null;
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, html) {
+    document.getElementById('notice').innerHTML =
+      '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+      '"><p class="mb-0" style="font-size:.92rem">' + html + '</p></div>';
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('player');
+  });
+
+  var body = document.getElementById('body');
+  body.addEventListener('input', function () {
+    document.getElementById('count').textContent = this.value.length + ' / 4000 字';
+  });
+
+  A.require('player').then(function (user) {
+    me = user;
+    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+    document.getElementById('form').hidden = false;
+  }).catch(function (err) {
+    say('error', '載入失敗：' + esc(A.message(err)));
+  });
+
+  document.getElementById('sendBtn').addEventListener('click', function () {
+    var btn = this, state = document.getElementById('state');
+    var subject = document.getElementById('subject').value.trim();
+    var text = body.value.trim();
+
+    if (!subject || !text) {
+      say('error', '請填寫主旨與內容。');
+      return;
+    }
+
+    btn.disabled = true;
+    state.textContent = '送出中…';
+
+    A.client.from('messages').insert({
+      kind: 'member_feedback',
+      from_name: me.profile.display_name || me.user.email,
+      from_contact: document.getElementById('contact').value.trim(),
+      subject: subject,
+      body: text,
+      meta: { 類別: document.getElementById('category').value },
+      created_by: me.user.id
+    }).then(function (res) {
+      if (res.error) throw res.error;
+      document.getElementById('form').hidden = true;
+      say('', '已送出，謝謝您。秘書處收到後會儘速處理，必要時會與您聯繫。' +
+        '<br><a href="home.html">← 回到棋士專區</a>');
+    }).catch(function (err) {
+      say('error', '送出失敗：' + esc(A.message(err)));
+      btn.disabled = false;
+      state.textContent = '';
+    });
+  });
+})();
+</script>
+</body>
+</html>

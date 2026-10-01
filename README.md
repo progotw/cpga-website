@@ -134,10 +134,9 @@ python scripts/fetch_photos.py site
 預覽版面（範例資料，非實際）：
 <https://cpga.netlify.app/teachers/index.html?preview=1>
 
-⚠️ 詢問表單原本用 **Netlify Forms**，搬到 Cloudflare Pages 後**不會運作**
-（`data-netlify="true"` 是 Netlify 專屬機制）。目前 `teachers.json` 是空的、
-表單不會被渲染出來，所以還沒有實際影響；開始收老師資料前必須先改用
-Cloudflare Pages Functions、第三方表單服務或 Google 表單。
+詢問表單寫入 Supabase 的 `messages` 表，由管理後台的「收件匣」處理。
+（原本用 Netlify Forms，搬到 Cloudflare 後 POST 直接回 405、送出的內容
+完全消失，已於 2026-10-02 修正。）
 
 ---
 
@@ -205,6 +204,9 @@ Markdown 對中文標題只能產生 `_1`、`_2` 這種流水號，頁內目錄�
 - 帳號由協會在 Supabase 建立後，用 SQL 設定 `role` 與 `player_id`
   （對應方式見 `supabase/schema_member.sql` 結尾）
 - 教學資訊：棋士自行填寫並決定是否刊登於「找老師」專區
+- 意見與申訴：棋士提出後進入後台收件匣
+- 收件匣允許**匿名寫入**（學生詢問時不會登入），已用長度上限限制單筆大小，
+  但無法完全防濫發。若日後出現垃圾訊息，需加上驗證碼或改走 Edge Function。
 - 第二、三階段（對局費、積分、個人資料）尚未開始
 
 ⚠️ `site/assets/files/member/` 底下的檔案雖然不會出現在任何公開連結上，

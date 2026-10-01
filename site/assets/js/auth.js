@@ -9,8 +9,13 @@
 (function () {
   'use strict';
 
-  var URL = 'https://tagnpbazcpdjeobjigwx.supabase.co';
-  var KEY = 'sb_publishable_VQ4YNGNm1OlF2DvZgLqZDQ_4yOX2Ygi';
+  /* 連線設定集中在 sb-config.js，避免同一組值散落在多個檔案裡 */
+  var cfg = window.CPGA_SB;
+  if (!cfg) {
+    console.error('sb-config.js 未載入，請放在 auth.js 之前');
+    return;
+  }
+  var URL = cfg.url, KEY = cfg.key;
 
   var ROOT = (function () {
     var s = document.currentScript && document.currentScript.src;

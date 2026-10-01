@@ -31,6 +31,11 @@
   </div>
 
   <div class="admin-grid mt-3">
+    <a class="admin-tile" href="inbox.html">
+      <span class="admin-tile__kind">來訊</span>
+      <span class="admin-tile__name">收件匣<span id="inboxBadge"></span></span>
+      <span class="admin-tile__meta">學生對老師的詢問、棋士提出的意見</span>
+    </a>
     <a class="admin-tile" href="announcements.html">
       <span class="admin-tile__kind">棋士專區</span>
       <span class="admin-tile__name">內部公告</span>
@@ -68,6 +73,7 @@
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/sb-config.js"></script>
 <script src="../assets/js/auth.js"></script>
 <script>
 (function () {
@@ -109,7 +115,18 @@
     }).finally(function () { btn.disabled = false; });
   });
 
+  /* 收件匣未處理數：只取數量不取內容，載入失敗就不顯示 */
+  function inboxBadge() {
+    A.client.from('messages').select('id', { count: 'exact', head: true }).eq('handled', false)
+      .then(function (res) {
+        if (res.error || !res.count) return;
+        document.getElementById('inboxBadge').outerHTML =
+          '<span class="tile-badge">' + res.count + '</span>';
+      }).catch(function () { /* 不顯示就好 */ });
+  }
+
   A.require('admin').then(function (me) {
+    inboxBadge();
     document.getElementById('who').textContent =
       (me.profile.display_name || me.user.email) + '　·　管理員';
 

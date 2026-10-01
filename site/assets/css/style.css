@@ -1088,3 +1088,10 @@ body.member-area { background: var(--paper-2); }
 .listed-toggle input { width: auto; margin: 3px 0 0; flex: none; }
 .chk-row { display: flex; gap: 18px; flex-wrap: wrap; }
 .chk-row .row-check { margin: 0; }
+
+/* 後台格子上的未處理數 */
+.tile-badge {
+  display: inline-block; margin-left: 8px; padding: 1px 8px; border-radius: 999px;
+  background: var(--accent); color: var(--white);
+  font-size: .76rem; font-family: var(--sans); vertical-align: middle;
+}

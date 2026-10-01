@@ -31,7 +31,8 @@
 </section>
 
 <!--
-  聯絡表單必須以靜態 HTML 存在，Netlify 才能在部署時偵測到並收件。
+  詢問表單。原本用 Netlify Forms，搬到 Cloudflare 後 POST 直接回 405、
+  送出的內容完全消失，因此改為寫入 Supabase 的 messages 表。
   實際顯示位置由 JS 搬移到老師資訊下方；未開放表單的老師會整段移除。
 -->
 <div id="formSlot" hidden>
@@ -41,10 +42,9 @@
       <span class="muted" style="font-size:.82rem">送出後由協會轉交老師</span>
     </div>
 
-    <form name="teacher-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
-      <input type="hidden" name="form-name" value="teacher-contact">
-      <input type="hidden" name="老師" id="fTeacher" value="">
-      <p hidden><label>請勿填寫：<input name="bot-field"></label></p>
+    <form id="contactForm" novalidate>
+      <!-- 機器人陷阱：真人看不到，填了就不送出 -->
+      <p hidden><label>請勿填寫：<input id="botField" autocomplete="off"></label></p>
 
       <div class="grid grid-2" style="gap:0 20px">
         <div class="field">
@@ -80,14 +80,15 @@
 
       <div class="field">
         <label style="display:flex;gap:8px;align-items:flex-start;font-weight:400">
-          <input type="checkbox" name="同意轉交" required style="width:auto;margin-top:5px">
+          <input type="checkbox" id="sAgree" required style="width:auto;margin-top:5px">
           <span style="font-size:.88rem;color:var(--ink-3)">
             我同意協會將本次詢問的內容與聯絡方式轉交給這位老師，以便老師與我聯繫。
           </span>
         </label>
       </div>
 
-      <button class="btn btn-accent" type="submit">送出詢問</button>
+      <button class="btn btn-accent" type="submit" id="sendBtn">送出詢問</button>
+      <p class="mb-0 mt-2" id="formState" style="font-size:.9rem"></p>
       <p class="form-note mt-2 mb-0">
         課程內容與費用由您與老師自行約定，本會不介入教學契約與費用爭議。
       </p>
@@ -96,6 +97,7 @@
 </div>
 
 <div id="site-footer"></div>
+<script src="../assets/js/sb-config.js"></script>
 <script src="../assets/js/players.js"></script>
 <script src="../assets/js/teachers.js"></script>
 <script src="../assets/js/site.js" defer></script>
@@ -196,12 +198,60 @@
 
     var slot = document.getElementById('formSlot');
     if (t.acceptForm) {
-      document.getElementById('fTeacher').value = t.name + '（' + t.id + '）';
       slot.hidden = false;
       document.getElementById('formHost').appendChild(slot);
+      wireForm(t);
     } else {
       slot.remove();
     }
+  function wireForm(teacher) {
+    var form = document.getElementById('contactForm');
+    var btn = document.getElementById('sendBtn');
+    var state = document.getElementById('formState');
+
+    function val(id) { return (document.getElementById(id).value || '').trim(); }
+
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+
+      if (document.getElementById('botField').value) return;   // 機器人
+
+      if (!val('sName') || !val('sContact') || !val('sMsg')) {
+        state.style.color = 'var(--accent)';
+        state.textContent = '請填寫稱呼、聯絡方式與詢問內容。';
+        return;
+      }
+      if (!document.getElementById('sAgree').checked) {
+        state.style.color = 'var(--accent)';
+        state.textContent = '請勾選同意將詢問內容轉交給老師。';
+        return;
+      }
+
+      btn.disabled = true;
+      state.style.color = '';
+      state.textContent = '送出中…';
+
+      window.CPGA_SB.insert('messages', {
+        kind: 'teacher_enquiry',
+        teacher_player_id: teacher.id,
+        teacher_name: teacher.name,
+        from_name: val('sName'),
+        from_contact: val('sContact'),
+        subject: '向 ' + teacher.name + ' 老師提出詢問',
+        body: val('sMsg'),
+        meta: { 目前程度: val('sLevel'), 希望上課方式: val('sMode') }
+      }).then(function () {
+        form.innerHTML = '<p class="mb-0">已送出，謝謝您。協會會將您的詢問轉交給 ' +
+          esc(teacher.name) + ' 老師，請留意來電或來信。</p>';
+      }).catch(function (err) {
+        state.style.color = 'var(--accent)';
+        state.textContent = '送出失敗，請改用上方的聯絡管道直接聯繫老師。（' +
+          esc(err.message) + '）';
+        btn.disabled = false;
+      });
+    });
+  }
+
   }).catch(function (err) {
     document.getElementById('tName').textContent = '載入失敗';
     wrap.innerHTML = '<p class="muted">資料載入失敗（' + esc(err.message) + '）。</p>';

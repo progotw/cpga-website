@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>收件匣｜管理後台</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="index.html">← 管理後台</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px">收件匣</h1>
+    <p class="muted mb-0" style="font-size:.92rem">
+      學生對老師的詢問，以及棋士提出的意見。處理完請標記為已處理。
+    </p>
+  </div>
+
+  <div class="tabs mt-2" id="tabs">
+    <button class="tab is-active" data-f="open">待處理</button>
+    <button class="tab" data-f="all">全部</button>
+    <button class="tab" data-f="teacher_enquiry">學生詢問</button>
+    <button class="tab" data-f="member_feedback">棋士意見</button>
+  </div>
+
+  <div id="list" class="mt-3"><p class="muted">載入中…</p></div>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var list = document.getElementById('list');
+  var filter = 'open';
+  var rows = [];
+
+  var KIND = { teacher_enquiry: '學生詢問', member_feedback: '棋士意見' };
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function when(ts) {
+    if (!ts) return '';
+    var d = new Date(ts), p = function (n) { return (n < 10 ? '0' : '') + n; };
+    return d.getFullYear() + '.' + p(d.getMonth() + 1) + '.' + p(d.getDate()) +
+      ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('admin');
+  });
+
+  document.getElementById('tabs').addEventListener('click', function (e) {
+    var b = e.target.closest('.tab');
+    if (!b) return;
+    this.querySelectorAll('.tab').forEach(function (x) { x.classList.remove('is-active'); });
+    b.classList.add('is-active');
+    filter = b.dataset.f;
+    render();
+  });
+
+  A.require('admin').then(function (me) {
+    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+    return load();
+  }).catch(function (err) {
+    list.innerHTML = '<p class="muted">載入失敗：' + esc(A.message(err)) + '</p>';
+  });
+
+  function load() {
+    return A.client.from('messages').select('*')
+      .order('created_at', { ascending: false })
+      .limit(200)
+      .then(function (res) {
+        if (res.error) throw res.error;
+        rows = res.data || [];
+        render();
+      });
+  }
+
+  function metaHtml(m) {
+    var keys = Object.keys(m || {}).filter(function (k) { return m[k]; });
+    if (!keys.length) return '';
+    return '<dl class="deflist" style="grid-template-columns:max-content 1fr;font-size:.88rem;margin-top:.6em">' +
+      keys.map(function (k) {
+        return '<dt>' + esc(k) + '</dt><dd>' + esc(m[k]) + '</dd>';
+      }).join('') + '</dl>';
+  }
+
+  function cardHtml(r) {
+    return '<article class="card msg-card" data-id="' + r.id + '" style="margin-bottom:14px' +
+        (r.handled ? ';opacity:.62' : '') + '">' +
+      '<div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap">' +
+        '<span class="tag' + (r.kind === 'teacher_enquiry' ? ' tag--notice' : '') + '">' +
+          esc(KIND[r.kind] || r.kind) + '</span>' +
+        (r.handled ? '<span class="tag">已處理</span>' : '') +
+        '<span class="muted" style="font-size:.84rem">' + when(r.created_at) + '</span>' +
+      '</div>' +
+
+      '<h3 style="font-size:1.05rem;margin:.5em 0 .2em">' + esc(r.subject || '（無主旨）') + '</h3>' +
+
+      '<dl class="deflist" style="grid-template-columns:max-content 1fr;font-size:.9rem">' +
+        (r.teacher_name ? '<dt>詢問對象</dt><dd>' + esc(r.teacher_name) + ' 老師</dd>' : '') +
+        '<dt>來信者</dt><dd>' + esc(r.from_name || '—') + '</dd>' +
+        '<dt>聯絡方式</dt><dd>' + esc(r.from_contact || '—') + '</dd>' +
+      '</dl>' +
+
+      '<p class="mb-0 mt-2" style="white-space:pre-line">' + esc(r.body) + '</p>' +
+      metaHtml(r.meta) +
+
+      '<div class="admin-actions" style="padding-top:14px">' +
+        '<button class="btn btn-ghost btn-sm" data-act="toggle" type="button">' +
+          (r.handled ? '標記為待處理' : '標記為已處理') + '</button>' +
+        '<button class="btn btn-ghost btn-sm" data-act="del" type="button">刪除</button>' +
+        '<span class="muted" style="font-size:.84rem" data-role="status"></span>' +
+      '</div></article>';
+  }
+
+  function render() {
+    var shown = rows.filter(function (r) {
+      if (filter === 'open') return !r.handled;
+      if (filter === 'all') return true;
+      return r.kind === filter;
+    });
+    var open = rows.filter(function (r) { return !r.handled; }).length;
+    document.querySelector('[data-f="open"]').textContent = '待處理' + (open ? '（' + open + '）' : '');
+
+    list.innerHTML = shown.length
+      ? shown.map(cardHtml).join('')
+      : '<div class="card"><p class="muted mb-0">' +
+        (filter === 'open' ? '沒有待處理的訊息。' : '這個分類目前沒有訊息。') + '</p></div>';
+  }
+
+  list.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-act]');
+    if (!btn) return;
+    var card = btn.closest('.msg-card');
+    var id = Number(card.dataset.id);
+    var row = rows.filter(function (r) { return r.id === id; })[0];
+    var status = card.querySelector('[data-role="status"]');
+
+    if (btn.dataset.act === 'del') {
+      if (!window.confirm('確定要刪除這則訊息嗎？此動作無法復原。')) return;
+      btn.disabled = true;
+      A.client.from('messages').delete().eq('id', id).then(function (res) {
+        if (res.error) throw res.error;
+        rows = rows.filter(function (r) { return r.id !== id; });
+        render();
+      }).catch(function (err) {
+        status.textContent = '刪除失敗：' + A.message(err);
+        btn.disabled = false;
+      });
+      return;
+    }
+
+    btn.disabled = true;
+    status.textContent = '處理中…';
+    A.client.from('messages').update({ handled: !row.handled }).eq('id', id).select().single()
+      .then(function (res) {
+        if (res.error) throw res.error;
+        row.handled = res.data.handled;
+        render();
+      })
+      .catch(function (err) {
+        status.textContent = '更新失敗：' + A.message(err);
+        btn.disabled = false;
+      });
+  });
+})();
+</script>
+</body>
+</html>
