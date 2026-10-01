@@ -179,6 +179,11 @@ Netlify 免費方案改為 credits 制（每期 300），每次建置都計費�
 | 對局與紀律規範 | `regulations.json`（來源 `content/regulations.md`） |
 | 職業棋士甄選辦法 | `qualification.json`（來源 `content/qualification.md`） |
 
+匯出的 JSON **不含產生時間**：同樣內容每次輸出必須逐字相同，
+否則定時發布會因為時間戳不同而不斷產生提交並觸發部署。
+`render_content.py` 與 `export_content.py` 共用 `payload_for()`，
+兩邊的輸出必須一致，改其中一邊要確認另一邊。
+
 長條文以 Markdown 儲存（`content/*.md`），用 `scripts/render_content.py` 轉成 HTML
 寫進 JSON，公開頁面直接注入——瀏覽器端不載入任何 Markdown 函式庫。
 轉換時會過濾標籤白名單外的內容，並把表格包上 `.table-wrap` 以便窄螢幕橫向捲動。

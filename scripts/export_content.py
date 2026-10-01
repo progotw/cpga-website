@@ -10,11 +10,11 @@
 條文類的 markdown 會在這裡轉成 html 一併寫入，公開頁面因此不需要
 載入任何 Markdown 函式庫。
 """
-import os, sys, io, json, urllib.request, urllib.error, datetime
+import os, sys, io, json, urllib.request, urllib.error
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from render_content import render   # noqa: E402
+from render_content import render, payload_for   # noqa: E402
 
 URL = (os.environ.get('SUPABASE_URL') or '').rstrip('/')
 KEY = os.environ.get('SUPABASE_SERVICE_ROLE_KEY') or ''
@@ -71,14 +71,7 @@ for r in rows:
         if not md.strip():
             skipped.append((key, '資料庫裡還沒有內容'))
             continue
-        payload = {
-            '_說明': '條文內容。markdown 為編輯來源，html 為轉換後供頁面注入的結果，'
-                     '由後台發布時產生，請勿手動編輯。',
-            'schema_version': 1,
-            'generated': datetime.datetime.now().astimezone().isoformat(timespec='seconds'),
-            'markdown': md,
-            'html': render(md),
-        }
+        payload = payload_for(md)
     else:
         data = r.get('data')
         if data is None:
@@ -134,7 +127,7 @@ def export_teaching():
         'schema_version': 1,
         'note': '職業老師登錄資料，由棋士在棋士專區自行填寫後發布。'
                 'id 對應 players.json 的棋士 id，照片、段位、經歷會自動帶入。',
-        'updated': datetime.date.today().isoformat(),
+
         'teachers': teachers,
     }
     with io.open(os.path.join(OUT, 'teachers.json'), 'w', encoding='utf-8') as f:

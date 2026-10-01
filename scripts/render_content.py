@@ -9,7 +9,7 @@
 
 發布流程（GitHub Action）會改以資料庫內容為輸入呼叫同一支 render()。
 """
-import sys, io, json, os, re, datetime
+import sys, io, json, os, re
 import markdown
 
 # 條文會用到的：表格、換行、標題 id（供頁內目錄跳轉）
@@ -44,15 +44,21 @@ def render(md_text):
     return html
 
 
-def write(key, md_text, out_dir='site/assets/data'):
-    payload = {
+def payload_for(md_text):
+    """條文 JSON 的內容。發布流程（export_content.py）也用這支，
+    兩邊必須產生完全相同的結果，否則交替執行會不斷產生差異。"""
+    return {
         '_說明': '條文內容。markdown 為編輯來源，html 為轉換後供頁面注入的結果，'
-                 '兩者由 scripts/render_content.py 產生，請勿手動改 html。',
+                 '請勿手動改 html。',
         'schema_version': 1,
-        'generated': datetime.datetime.now().astimezone().isoformat(timespec='seconds'),
         'markdown': md_text,
         'html': render(md_text),
     }
+
+
+def write(key, md_text, out_dir='site/assets/data'):
+    payload = payload_for(md_text)
+
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, key + '.json')
     with io.open(path, 'w', encoding='utf-8') as f:
