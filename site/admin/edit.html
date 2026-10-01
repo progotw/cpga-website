@@ -91,11 +91,8 @@
       row.key + '.json　·　' + (row.kind === 'markdown' ? '條文（Markdown）' : '結構化資料');
     document.getElementById('editor').hidden = false;
 
-    if (row.kind === 'structured' && row.data == null) {
-      offerImport();
-    } else {
-      show();
-    }
+    var empty = row.kind === 'markdown' ? !row.body : row.data == null;
+    if (empty) { offerImport(); } else { show(); }
   }).catch(function (err) {
     say('error', '讀取失敗：' + esc(A.message(err)));
   });
@@ -114,7 +111,12 @@
           if (!r.ok) throw new Error('找不到 ' + row.key + '.json（HTTP ' + r.status + '）');
           return r.json();
         })
-        .then(function (json) { return save({ data: json }); })
+        .then(function (json) {
+          /* 條文類的 JSON 同時含 markdown 來源與轉好的 html，後台只編輯前者 */
+          return save(row.kind === 'markdown'
+            ? { body: json.markdown || '' }
+            : { data: json });
+        })
         .then(function () {
           clearNotice();
           show();

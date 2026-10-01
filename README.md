@@ -171,11 +171,8 @@ Netlify 免費方案改為 credits 制（每期 300），每次建置都計費�
 | 大事紀 | `milestones.json` |
 | 下載項目 | `downloads.json` |
 | 章程要點 | `charter.json`（來源 `content/charter.md`） |
-
-| 待搬 | 目前位置 |
-| --- | --- |
-| 四份規範 | `events/rules.html` |
-| 甄選辦法 | `events/qualification.html`、`events/institute-entry.html` |
+| 對局與紀律規範 | `regulations.json`（來源 `content/regulations.md`） |
+| 職業棋士甄選辦法 | `qualification.json`（來源 `content/qualification.md`） |
 
 長條文以 Markdown 儲存（`content/*.md`），用 `scripts/render_content.py` 轉成 HTML
 寫進 JSON，公開頁面直接注入——瀏覽器端不載入任何 Markdown 函式庫。
@@ -183,7 +180,12 @@ Netlify 免費方案改為 credits 制（每期 300），每次建置都計費�
 
 ```bash
 python scripts/render_content.py charter content/charter.md
+python scripts/render_content.py regulations content/regulations.md
+python scripts/render_content.py qualification content/qualification.md
 ```
+
+條文的標題要寫 `{#id}` 指定錨點（例如 `## 昇段制度 {#promotion}`）：
+Markdown 對中文標題只能產生 `_1`、`_2` 這種流水號，頁內目錄會全部失效。
 
 ---
 
