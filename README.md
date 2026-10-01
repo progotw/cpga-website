@@ -170,15 +170,20 @@ Netlify 免費方案改為 credits 制（每期 300），每次建置都計費�
 | 會員類別與會費 | `membership.json` |
 | 大事紀 | `milestones.json` |
 | 下載項目 | `downloads.json` |
+| 章程要點 | `charter.json`（來源 `content/charter.md`） |
 
 | 待搬 | 目前位置 |
 | --- | --- |
-| 章程要點 | `about/charter.html` |
 | 四份規範 | `events/rules.html` |
 | 甄選辦法 | `events/qualification.html`、`events/institute-entry.html` |
 
-長條文（章程、規範、辦法）預計以 Markdown 儲存，發布時轉成 HTML 寫進 JSON，
-公開頁面直接注入，不在瀏覽器端解析。
+長條文以 Markdown 儲存（`content/*.md`），用 `scripts/render_content.py` 轉成 HTML
+寫進 JSON，公開頁面直接注入——瀏覽器端不載入任何 Markdown 函式庫。
+轉換時會過濾標籤白名單外的內容，並把表格包上 `.table-wrap` 以便窄螢幕橫向捲動。
+
+```bash
+python scripts/render_content.py charter content/charter.md
+```
 
 ---
 
