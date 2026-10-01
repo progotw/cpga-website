@@ -33,6 +33,10 @@ jobs:
       - name: 抓取棋士名錄
         run: python scripts/scrape_players.py site/assets/data/players.json
 
+      # 對戰組合取自抽籤公告，必須在 scrape_news_games 之後執行
+      - name: 抓取各輪對戰組合
+        run: python scripts/scrape_pairings.py site
+
       - name: 抓取精銳隊名單
         run: python scripts/scrape_elite.py site/assets/data/elite.json
 

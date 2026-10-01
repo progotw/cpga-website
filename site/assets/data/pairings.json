@@ -1,0 +1,1928 @@
+{
+ "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
+ "schema_version": 1,
+ "source": "海峰棋院 抽籤結果公告",
+ "count": 162,
+ "pairings": [
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "吳彥諶",
+    "施景堯"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "林佾緯",
+    "黃袖圃"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "陳國興",
+    "蕭睿杉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "李奎漢",
+    "戴嘉伸"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "陳映嘉",
+    "黃柏人"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "柯沛辰",
+    "蔡明叡"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "丁少傑",
+    "周尹南"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "戴旭辰",
+    "王柏勛"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "王智弘",
+    "劉耀文"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "謝承翰",
+    "林宇翔"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "周平強",
+    "黃彥誠"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "曾品傑",
+    "林瀚彰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "林世民",
+    "陳品樺"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "彭景華",
+    "沈逸恩"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "劉一芳",
+    "陳劭全"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "10:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "劉建昌",
+    "張凱馨"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "14:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "下午：初賽2回",
+   "players": [
+    "林宇翔"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "14:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "下午：初賽2回",
+   "players": [
+    "黃彥誠"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "14:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "下午：初賽2回",
+   "players": [
+    "林瀚彰"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "14:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "下午：初賽2回",
+   "players": [
+    "陳品樺"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "14:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "下午：初賽2回",
+   "players": [
+    "沈逸恩"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "14:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "下午：初賽2回",
+   "players": [
+    "陳劭全"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-04-27",
+   "time": "14:00",
+   "event": "第7屆快棋爭霸戰 抽籤結果公告",
+   "round": "下午：初賽2回",
+   "players": [
+    "張凱馨"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "林瀚彰",
+    "沈逸恩"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "王惇楷",
+    "柯沛辰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "謝承翰",
+    "蔡明叡"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "林佾緯",
+    "鄭予皓"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "林鈺娗",
+    "陳映嘉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "楊子萱",
+    "王柏勛"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "吳彥諶",
+    "陳柏菘"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "孫偉勛",
+    "黃家胤"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "白昕卉",
+    "黃柏人"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "陳品樺",
+    "吳君成"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-05-05",
+   "time": "",
+   "event": "2026新人王賽初賽與本賽抽籤結果公告",
+   "round": "10：00 初賽",
+   "players": [
+    "李嘉馨",
+    "蕭睿杉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
+  },
+  {
+   "date": "2026-08-13",
+   "time": "10:00",
+   "event": "第12屆全羅南道「國手山脈國際圍棋大會」 世界職業最強戰 台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "陳品樺",
+    "黃袖圃"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/11FEFD17FF1B69B9BFE4873ABFB284DC"
+  },
+  {
+   "date": "2026-08-13",
+   "time": "10:00",
+   "event": "第12屆全羅南道「國手山脈國際圍棋大會」 世界職業最強戰 台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "陳祈睿",
+    "鄭予皓"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/11FEFD17FF1B69B9BFE4873ABFB284DC"
+  },
+  {
+   "date": "2026-08-13",
+   "time": "10:00",
+   "event": "第12屆全羅南道「國手山脈國際圍棋大會」 世界職業最強戰 台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "吳彥諶",
+    "陳映嘉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/11FEFD17FF1B69B9BFE4873ABFB284DC"
+  },
+  {
+   "date": "2026-08-13",
+   "time": "10:00",
+   "event": "第12屆全羅南道「國手山脈國際圍棋大會」 世界職業最強戰 台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "黃柏人",
+    "林士勛"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/11FEFD17FF1B69B9BFE4873ABFB284DC"
+  },
+  {
+   "date": "2026-08-13",
+   "time": "10:00",
+   "event": "第12屆全羅南道「國手山脈國際圍棋大會」 世界職業最強戰 台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "牛詩特",
+    "簡靖庭"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/11FEFD17FF1B69B9BFE4873ABFB284DC"
+  },
+  {
+   "date": "2026-08-13",
+   "time": "10:00",
+   "event": "第12屆全羅南道「國手山脈國際圍棋大會」 世界職業最強戰 台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "吳君成",
+    "白昕卉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/11FEFD17FF1B69B9BFE4873ABFB284DC"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "柯沛辰",
+    "劉耀文"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "蔡文河",
+    "蘇聖芳"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "丁少傑",
+    "徐銘均"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "張凱馨",
+    "劉一芳"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "吳彥諶",
+    "林杰漢"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "彭景華",
+    "黃偉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "陳品樺",
+    "王柏勛"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "黃世元",
+    "陳映嘉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "詹宜典",
+    "施景堯"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "李奎漢",
+    "戴旭辰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "陳國興",
+    "曾品傑"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "戴嘉伸",
+    "余承叡"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "黃家胤",
+    "蔡明叡"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "周可平",
+    "黃柏人"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "陳劭全",
+    "王智弘"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "陳威廷",
+    "周尹南"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "黃袖圃",
+    "白昕卉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "俞俐均",
+    "周平強"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "林鈺娗",
+    "孫偉勛"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "林瀚彰",
+    "謝承翰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "林聖弈",
+    "李嘉馨"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "蕭睿杉",
+    "劉建昌"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "林書陽",
+    "鄭予皓"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "10:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "上午：初賽1回",
+   "players": [
+    "吳君成",
+    "林世民"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "14:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "下午：初賽2回",
+   "players": [
+    "劉耀文"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "14:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "下午：初賽2回",
+   "players": [
+    "蘇聖芳"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-03",
+   "time": "14:00",
+   "event": "第1屆玄樂盃 抽籤結果公告",
+   "round": "下午：初賽2回",
+   "players": [
+    "徐銘均"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "林瀚彰",
+    "戴嘉伸"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "白昕卉",
+    "牛詩特"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "李嘉馨",
+    "楊子萱"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "丁少傑",
+    "劉耀文"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "彭鐏德",
+    "戴旭辰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "蔡明叡",
+    "吳彥諶"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "孫立言",
+    "張凱馨"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "劉一芳",
+    "陳品樺"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "林宇翔",
+    "陳劭全"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "施景堯",
+    "黃偉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "周尹南",
+    "尤浩宇"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "孫偉勛",
+    "俞俐均"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "楊博崴",
+    "周可平"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "林立祥",
+    "黃家胤"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "陳映嘉",
+    "蘇聖芳"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "陳威廷",
+    "黃袖圃"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "謝承翰",
+    "黃柏人"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "張哲豪",
+    "陳首廉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "周平強",
+    "盧奕銓"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "王智弘",
+    "林世民"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-04",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
+   "players": [
+    "余承叡",
+    "吳君成"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "陳劭全",
+    "蔡丞韋"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "吳彥諶",
+    "李嘉馨"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "陳品樺",
+    "孫立言"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "劉一芳",
+    "彭鐏德"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "蔡文河",
+    "黃世元"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "林宇翔",
+    "周可平"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "黃柏人",
+    "余承叡"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "林瀚彰",
+    "彭景華"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "沈逸恩",
+    "陳威廷"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "鄭予皓",
+    "徐銘均"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "施景堯",
+    "柯沛辰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "盧奕銓",
+    "林立祥"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "林佾緯",
+    "孫偉勛"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "楊博崴",
+    "林彥丞"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "陳首廉",
+    "戴嘉伸"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "周尹南",
+    "戴旭辰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "丁少傑",
+    "周平強"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "劉耀文",
+    "謝承翰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "曾品傑",
+    "蔡明叡"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "張凱馨",
+    "林世民"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "牛詩特",
+    "林士勛"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-07",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
+   "players": [
+    "黃彥誠",
+    "白昕卉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "賴均輔",
+    "曾品傑"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "彭景華"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "李維",
+    "李奎漢"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "林佾緯",
+    "黃彥誠"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "林君諺",
+    "陳國興"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "許育祺"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "陳祈睿",
+    "盧鈺樺"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "蔡文河",
+    "王惇楷"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "王元均",
+    "徐銘均"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "蔡丞韋"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "徐靖恩",
+    "沈逸恩"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "林杰漢"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "簡靖庭",
+    "林士勛"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "鄭予皓"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "林彥丞",
+    "黃世元"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "林書陽",
+    "林新為"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "陳祈睿",
+    "盧鈺樺"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "俞俐均"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "王元均",
+    "許育祺"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "黃偉"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "林新為",
+    "蘇聖芳"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "尤浩宇"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "簡靖庭",
+    "陳國興"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "林杰漢",
+    "王智弘"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "賴均輔",
+    "蕭睿杉"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "陳映嘉"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "林君諺",
+    "林書陽"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "吳君成"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "李維",
+    "林鈺娗"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "林聖弈"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "徐靖恩",
+    "張哲豪"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "李奎漢",
+    "楊子萱"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+  },
+  {
+   "date": "2026-09-22",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "資格賽",
+   "players": [
+    "徐銘均",
+    "林聖弈"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-22",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "資格賽",
+   "players": [
+    "林杰漢",
+    "吳君成"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-22",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "資格賽",
+   "players": [
+    "黃柏人",
+    "柯沛辰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-22",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "資格賽",
+   "players": [
+    "楊孟允",
+    "蔡明叡"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-22",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "資格賽",
+   "players": [
+    "黃家胤",
+    "戴旭辰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-22",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "資格賽",
+   "players": [
+    "蕭睿杉",
+    "謝承翰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "盧奕銓",
+    "林宇翔"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "周平強",
+    "余承叡"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "林士勛",
+    "陳劭全"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "楊子萱",
+    "牛詩特"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "白昕卉",
+    "許育祺"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "李奎漢",
+    "林瀚彰"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "孫偉勛",
+    "張哲豪"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "林彥丞"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "陳映嘉"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "陳品樺",
+    "戴嘉伸"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "林世民",
+    "蔡文河"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "劉建昌",
+    "施景堯"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "孫立言"
+   ],
+   "pending_opponent": true,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "林修平",
+    "丁少傑"
+   ],
+   "pending_opponent": false,
+   "source": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+  }
+ ]
+}

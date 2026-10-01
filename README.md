@@ -79,6 +79,7 @@ python scripts/fetch_photos.py site
 | `scrape_news_games.py` | `news.json`、`games.json` | haifong.org 最新消息與賽事分類頁 |
 | `scrape_players.py` | `players.json` | haifong.org 職業棋士頁 |
 | `scrape_elite.py` | `elite.json` | haifong.org/elite 精銳隊名單 |
+| `scrape_pairings.py` | `pairings.json` | 抽籤結果公告的對戰組合（須在 scrape_news_games 之後執行） |
 | `invite_players.py` | — | 批次開通棋士帳號（在協會電腦上執行，名單與金鑰不進版控） |
 | `fetch_photos.py` | `assets/img/players/*.jpg` | 只下載本地缺少的，加 `--force` 重抓全部 |
 
@@ -210,6 +211,15 @@ Markdown 對中文標題只能產生 `_1`、`_2` 這種流水號，頁內目錄�
   （對應方式見 `supabase/schema_member.sql` 結尾）
 - 教學資訊：棋士自行填寫並決定是否刊登於「找老師」專區
 - 意見與申訴：棋士提出後進入後台收件匣
+- **我的賽程**：只列出該棋士接下來還要下的對局。淘汰後不會再有新的對戰組合，
+  個人賽程自然就空了，不需要另外記錄輸贏。
+
+  ⚠️ **資料來源是海峰的「抽籤結果公告」純文字**，因此有兩個限制：
+  協會若沒把對陣文字貼到官網，該輪就不會出現；對陣表若只放在圖片裡也無法解析。
+  實測 9 則公告可解析出 162 組對局、姓名辨識 100%。
+  真正的上游是協會的「棋賽賽程操作台」（Firebase），它有「產生對陣文字（給官網用）」
+  的功能——貼到官網本來就是既有流程，所以爬蟲不增加額外工作。
+  若日後官網貼得不穩定，可改為從該系統的「匯出存檔」匯入。
 - 收件匣允許**匿名寫入**（學生詢問時不會登入），已用長度上限限制單筆大小，
   但無法完全防濫發。若日後出現垃圾訊息，需加上驗證碼或改走 Edge Function。
 - 第二、三階段（對局費、積分、個人資料）尚未開始

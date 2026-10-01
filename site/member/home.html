@@ -40,9 +40,15 @@
     </section>
 
     <aside class="stack">
-      <!-- 近期賽程 -->
+      <!-- 我的賽程 -->
+      <div class="card" style="border-left:4px solid var(--accent)">
+        <h3 style="font-size:1.05rem">我的賽程</h3>
+        <div id="myList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
+      </div>
+
+      <!-- 全體賽程 -->
       <div class="card">
-        <h3 style="font-size:1.05rem">近期賽程</h3>
+        <h3 style="font-size:1.05rem">近期賽程（全體）</h3>
         <div id="schedList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
         <a class="btn btn-ghost btn-sm btn-block mt-2" href="../events/index.html">完整賽程 →</a>
       </div>
@@ -116,7 +122,56 @@
 
     loadAnnouncements();
     loadFiles();
+    loadMine(me.profile.player_id, name);
   });
+
+  /* ---- 我的賽程 ----
+     對戰組合抓自海峰的抽籤公告。淘汰之後不會再有新的對戰組合，
+     所以這裡自然就空了，不需要另外記錄輸贏。 */
+  function loadMine(playerId, fallbackName) {
+    var box = document.getElementById('myList');
+    if (!playerId) {
+      box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">' +
+        '此帳號尚未對應到棋士名錄，無法顯示個人賽程，請洽秘書處。</p>';
+      return;
+    }
+
+    Promise.all([
+      fetch('../assets/data/pairings.json', { cache: 'no-cache' })
+        .then(function (r) { return r.ok ? r.json() : { pairings: [] }; }),
+      fetch('../assets/data/players.json', { cache: 'no-cache' }).then(function (r) { return r.json(); })
+    ]).then(function (res) {
+      var all = res[0].pairings || [];
+      var mine = (res[1].players || []).filter(function (p) { return p.id === playerId; })[0];
+      var myName = (mine && mine.name) || fallbackName;
+
+      var today = new Date(); today.setHours(0, 0, 0, 0);
+      var rows = all.filter(function (p) {
+        return p.players.indexOf(myName) > -1 && new Date(p.date) >= today;
+      });
+
+      if (!rows.length) {
+        box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">' +
+          '目前沒有您的待賽對局。新一輪抽籤公告後會自動出現。</p>';
+        return;
+      }
+
+      box.innerHTML = '<ul style="list-style:none;padding:0;margin:0;font-size:.9rem">' +
+        rows.map(function (p) {
+          var opp = p.players.filter(function (n) { return n !== myName; })[0];
+          return '<li style="padding:9px 0;border-bottom:1px solid var(--line)">' +
+            '<strong style="color:var(--ink)">' +
+              esc(String(p.date).slice(5).replace('-', '/')) +
+              (p.time ? '　' + esc(p.time) : '') + '</strong><br>' +
+            '<span>對手：' + esc(opp || '尚未產生') + '</span><br>' +
+            '<span class="muted" style="font-size:.84rem">' +
+              esc(p.round || '') + (p.round && p.event ? '　·　' : '') +
+              esc((p.event || '').replace(/抽籤結果公告$/, '').trim()) + '</span></li>';
+        }).join('') + '</ul>';
+    }).catch(function () {
+      box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">個人賽程載入失敗。</p>';
+    });
+  }
 
   /* ---- 內部公告 ---- */
   function loadAnnouncements() {
