@@ -1016,3 +1016,51 @@ body.member-area { background: var(--paper-2); }
   font-size: .88rem; line-height: 1.6; tab-size: 2;
   white-space: pre; overflow-wrap: normal; overflow-x: auto;
 }
+
+/* ---------- 後台表單 ---------- */
+.top-field { margin-bottom: 18px; }
+.form-group { margin-bottom: 30px; }
+.form-group__title {
+  font-size: 1.1rem; margin: 0 0 12px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.row-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px; }
+
+.row-card {
+  display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: start;
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 14px 16px;
+}
+.row-card__fields { display: flex; flex-wrap: wrap; gap: 0 16px; align-items: flex-end; }
+.row-card__fields .row-field { flex: 1 1 200px; margin: 0 0 6px; }
+.row-card__fields .field label { font-size: .78rem; }
+.row-card__fields input, .row-card__fields textarea { font-size: .92rem; }
+
+.row-card__tools { display: flex; gap: 4px; }
+.row-card__tools button {
+  width: 30px; height: 30px; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--paper);
+  color: var(--ink-3); font-size: .9rem; line-height: 1;
+}
+.row-card__tools button:hover { border-color: var(--line-2); color: var(--ink); }
+.row-card__tools button.is-danger:hover {
+  border-color: var(--accent); color: var(--accent); background: #fff;
+}
+
+.row-check {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .86rem; color: var(--ink-3); margin: 0 0 10px; white-space: nowrap;
+}
+.row-check input { width: auto; margin: 0; }
+
+@media (max-width: 620px) {
+  .row-card { grid-template-columns: 1fr; }
+  .row-card__tools { justify-content: flex-end; }
+}
+
+.admin-actions {
+  display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+  padding-top: 18px; border-top: 1px solid var(--line);
+}
+.admin-raw-toggle { margin-left: auto; font-size: .84rem; color: var(--ink-4); }
+.admin-raw-toggle:hover { color: var(--ink-3); }

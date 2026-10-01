@@ -30,50 +30,55 @@
   <div id="notice" class="mt-2"></div>
 
   <div id="editor" hidden>
-    <div class="field">
-      <label for="source" id="sourceLabel">內容</label>
-      <textarea id="source" class="code-area" spellcheck="false"></textarea>
+    <div id="formHost"></div>
+
+    <div id="rawWrap" hidden>
+      <div class="field">
+        <label for="source" id="sourceLabel">內容</label>
+        <textarea id="source" class="code-area" spellcheck="false"></textarea>
+      </div>
     </div>
 
-    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+    <div class="admin-actions">
       <button class="btn btn-accent" id="saveBtn" type="button">儲存</button>
-      <a class="btn btn-ghost" href="index.html">取消</a>
+      <a class="btn btn-ghost" href="index.html">返回</a>
       <span class="muted" style="font-size:.86rem" id="saveState"></span>
-    </div>
-
-    <div class="callout mt-3">
-      <p class="mb-0" style="font-size:.9rem">
-        <strong>目前為純文字編輯</strong>：結構化內容請維持 JSON 格式，儲存前會先檢查語法。
-        表單式編輯介面與「發布到官網」功能正在建置中，現在儲存只會存進資料庫，尚不會更新官網。
-      </p>
+      <a href="#" id="toggleRaw" class="admin-raw-toggle">直接編輯 JSON</a>
     </div>
   </div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
 <script src="../assets/js/auth.js"></script>
+<script src="../assets/js/admin-forms.js"></script>
 <script>
 (function () {
-  var A = window.CPGA_AUTH;
+  var A = window.CPGA_AUTH, F = window.CPGA_FORMS;
   var key = new URLSearchParams(location.search).get('key') || '';
-  var row = null;
+  var row = null, raw = false;
+
+  var elForm = document.getElementById('formHost');
+  var elRaw  = document.getElementById('rawWrap');
+  var elSrc  = document.getElementById('source');
 
   function esc(s) {
     return String(s == null ? '' : s)
       .replace(/&/g, '&amp;').replace(/</g, '&lt;')
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
-  function say(kind, text) {
+  function say(kind, html) {
     document.getElementById('notice').innerHTML =
       '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
-      '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>';
+      '"><p class="mb-0" style="font-size:.92rem">' + html + '</p></div>';
   }
+  function clearNotice() { document.getElementById('notice').innerHTML = ''; }
 
   document.getElementById('logout').addEventListener('click', function (e) {
     e.preventDefault();
     A.client.auth.signOut().then(function () { location.replace('login.html?signedout=1'); });
   });
 
+  /* ---- 載入 ---- */
   A.require('admin').then(function (me) {
     document.getElementById('who').textContent = me.profile.display_name || me.user.email;
     return A.client.from('content').select('*').eq('key', key).single();
@@ -83,54 +88,112 @@
 
     document.getElementById('title').textContent = row.title;
     document.getElementById('subtitle').textContent =
-      row.key + '.json　·　' + (row.kind === 'markdown' ? '條文（Markdown）' : '結構化資料（JSON）');
-    document.getElementById('sourceLabel').textContent =
-      row.kind === 'markdown' ? '條文內容（Markdown）' : '資料內容（JSON）';
-
-    var ta = document.getElementById('source');
-    ta.value = row.kind === 'markdown'
-      ? (row.body || '')
-      : JSON.stringify(row.data == null ? {} : row.data, null, 1);
-
+      row.key + '.json　·　' + (row.kind === 'markdown' ? '條文（Markdown）' : '結構化資料');
     document.getElementById('editor').hidden = false;
 
-    if (row.kind !== 'markdown' && row.data == null) {
-      say('', '這個項目在資料庫裡還沒有內容。匯入現有 JSON 的程式尚未建立，' +
-        '可先從 <code>site/assets/data/' + esc(row.key) + '.json</code> 複製內容貼上。');
+    if (row.kind === 'structured' && row.data == null) {
+      offerImport();
+    } else {
+      show();
     }
   }).catch(function (err) {
     say('error', '讀取失敗：' + esc(A.message(err)));
   });
 
+  /* 資料庫還沒有內容時，提供從官網現有 JSON 匯入。
+     匯入由已登入的管理員在瀏覽器執行，不需要任何後端金鑰。 */
+  function offerImport() {
+    say('', '這個項目在資料庫裡還沒有內容。' +
+      '<button class="btn btn-accent btn-sm" id="importBtn" type="button" ' +
+      'style="margin-left:10px">從目前官網匯入</button>');
+    document.getElementById('importBtn').addEventListener('click', function () {
+      var b = this;
+      b.disabled = true; b.textContent = '匯入中…';
+      fetch('../assets/data/' + encodeURIComponent(row.key) + '.json', { cache: 'no-cache' })
+        .then(function (r) {
+          if (!r.ok) throw new Error('找不到 ' + row.key + '.json（HTTP ' + r.status + '）');
+          return r.json();
+        })
+        .then(function (json) { return save({ data: json }); })
+        .then(function () {
+          clearNotice();
+          show();
+          say('', '已從官網匯入現有內容，可以開始編輯。');
+        })
+        .catch(function (err) {
+          say('error', '匯入失敗：' + esc(A.message(err)));
+          b.disabled = false; b.textContent = '從目前官網匯入';
+        });
+    });
+  }
+
+  /* ---- 顯示 ---- */
+  function show() {
+    if (row.kind === 'markdown' || !F.has(row.key)) {
+      raw = true;
+      document.getElementById('toggleRaw').hidden = true;
+      document.getElementById('sourceLabel').textContent =
+        row.kind === 'markdown' ? '條文內容（Markdown）' : '資料內容（JSON）';
+    }
+    if (raw) {
+      elForm.hidden = true; elRaw.hidden = false;
+      elSrc.value = row.kind === 'markdown'
+        ? (row.body || '')
+        : JSON.stringify(row.data == null ? {} : row.data, null, 1);
+    } else {
+      elRaw.hidden = true; elForm.hidden = false;
+      F.render(elForm, row.key, row.data);
+    }
+    document.getElementById('toggleRaw').textContent = raw ? '回到表單編輯' : '直接編輯 JSON';
+  }
+
+  document.getElementById('toggleRaw').addEventListener('click', function (e) {
+    e.preventDefault();
+    /* 切換前先把目前畫面上的內容收回 row.data，避免編到一半的修改消失 */
+    try {
+      row.data = raw ? JSON.parse(elSrc.value) : F.collect(elForm, row.key, row.data);
+    } catch (err) {
+      say('error', 'JSON 格式有誤，無法切換：' + esc(err.message));
+      return;
+    }
+    clearNotice();
+    raw = !raw;
+    show();
+  });
+
+  /* ---- 儲存 ---- */
+  function save(patch) {
+    return A.client.from('content').update(patch).eq('key', row.key).select().single()
+      .then(function (res) {
+        if (res.error) throw res.error;
+        row = res.data;
+        return row;
+      });
+  }
+
   document.getElementById('saveBtn').addEventListener('click', function () {
-    var btn = this;
-    var ta = document.getElementById('source');
-    var patch;
+    var btn = this, patch;
 
     if (row.kind === 'markdown') {
-      patch = { body: ta.value };
+      patch = { body: elSrc.value };
+    } else if (raw) {
+      try { patch = { data: JSON.parse(elSrc.value) }; }
+      catch (e) { say('error', 'JSON 格式有誤，未儲存：' + esc(e.message)); return; }
     } else {
-      try {
-        patch = { data: JSON.parse(ta.value) };
-      } catch (e) {
-        say('error', 'JSON 格式有誤，未儲存：' + esc(e.message));
-        return;
-      }
+      patch = { data: F.collect(elForm, row.key, row.data) };
     }
 
     btn.disabled = true;
     document.getElementById('saveState').textContent = '儲存中…';
+    clearNotice();
 
-    A.client.from('content').update(patch).eq('key', row.key).select().single()
-      .then(function (res) {
-        if (res.error) throw res.error;
-        row = res.data;
-        document.getElementById('saveState').textContent =
-          '已儲存 ' + new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' });
-        say('', '已儲存到資料庫。官網尚未更新——發布功能建置中。');
-      })
-      .catch(function (err) { say('error', '儲存失敗：' + esc(A.message(err))); })
-      .finally(function () { btn.disabled = false; });
+    save(patch).then(function () {
+      document.getElementById('saveState').textContent =
+        '已儲存 ' + new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' });
+      say('', '已儲存到資料庫。<strong>官網尚未更新</strong>——發布功能建置中。');
+    }).catch(function (err) {
+      say('error', '儲存失敗：' + esc(A.message(err)));
+    }).finally(function () { btn.disabled = false; });
   });
 })();
 </script>
