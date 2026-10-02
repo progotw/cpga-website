@@ -23,6 +23,8 @@
   --jade:       #1f6b57;
   --navy:       #1e3a5f;
   --navy-2:     #2b5183;
+  --sky:        #a9cce8;   /* 深色主視覺上的淺底按鈕，配黑字 */
+  --sky-2:      #90bade;
 
   --line:       #e2dace;
   --line-2:     #d2c7b5;
@@ -140,6 +142,10 @@ button { font: inherit; cursor: pointer; }
 }
 .btn-ghost:hover { border-color: var(--ink); background: var(--white); }
 .btn-light { background: var(--white); color: var(--ink); box-shadow: var(--shadow-sm); }
+/* 深色主視覺上的第三顆按鈕：白底會與「賽事專區」撞在一起，
+   外框款在這張照片上又太隱沒，所以用淺藍實底配黑字。 */
+.btn-sky { background: var(--sky); color: var(--ink); box-shadow: var(--shadow-sm); }
+.btn-sky:hover { background: var(--sky-2); color: var(--ink); }
 .btn-sm { padding: .5em 1.1em; font-size: .86rem; }
 .btn-block { display: flex; width: 100%; justify-content: center; }
 
@@ -173,7 +179,6 @@ button { font: inherit; cursor: pointer; }
 
 .nav__link--member {
   background: var(--accent); color: var(--white);
-  padding: 9px 16px; border-radius: 999px; margin-left: 8px;
 }
 .nav__link--member:hover { background: var(--accent-2); color: var(--white); }
 
@@ -930,9 +935,14 @@ body.member-area { background: var(--paper-2); }
 /* ---------- 導覽列的膠囊項目 ----------
    棋士專區為實心紅底；找老師為玉綠外框，兩者以顏色與實心／外框區分。 */
 .nav__link--pill {
-  padding: 9px 16px; border-radius: 999px; margin-left: 8px;
+  padding: 9px 16px; border-radius: 999px; margin-left: 6px;
   border: 1px solid transparent;
+  /* 兩顆並排時字數不同（三字／四字），不對齊寬度會看起來一大一小。
+     以較寬的四字為準，兩顆等寬並置中。 */
+  min-width: 94px; justify-content: center;
 }
+/* 兩顆膠囊是一組，與左邊的文字選單拉開，才不會看起來黏在「下載專區」後面 */
+.nav__link--teachers { margin-left: 16px; }
 .nav__link--teachers {
   background: var(--navy); color: var(--white); border-color: var(--navy);
 }
@@ -940,6 +950,14 @@ body.member-area { background: var(--paper-2); }
 /* 停在膠囊自己的頁面時，.nav__item.is-active 的紅字會落在深色底上讀不出來。
    選取器要比 .nav__item.is-active > .nav__link 更明確才蓋得過去。 */
 .nav__item.is-active > .nav__link--pill { color: var(--white); }
+
+/* 1025–1080px 是桌機導覽最窄的區間（1024 以下換成漢堡選單）。
+   兩顆維持等寬，但整體縮一號，否則「棋士專區」會被擠出頁首右緣。
+   這段必須放在上面的 .nav__link--pill 之後——媒體查詢不會提高優先序。 */
+@media (max-width: 1080px) {
+  .nav__link--pill { min-width: 79px; padding: 9px 10px; }
+  .nav__link--teachers { margin-left: 10px; }
+}
 
 @media (max-width: 1024px) {
   .nav__link--pill {
