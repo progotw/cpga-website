@@ -51,6 +51,47 @@
   var A = window.CPGA_AUTH;
   var listEl = document.getElementById('list');
   var rows = [], counts = {};
+  var players = null;            // 棋士名錄，第一次需要時才載入
+
+  /* ---- 棋士名錄與出賽局數 ----
+     「活躍棋士」沒有客觀邊界，所以這裡不做標記、也不設預設門檻，
+     直接把局數攤出來讓承辦人自己判斷。
+     局數來自海峰的年度成績，每天隨爬取更新。 */
+  var THIS_YEAR = ['台灣職業賽', '世界賽'];
+  var LAST_YEAR = ['去年度總成績'];
+  var WL = /(\d+)勝(\d+)負/;
+  var DAN = { '初': 1, '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9 };
+
+  function games(p, labels) {
+    var n = 0;
+    (p.season || []).forEach(function (s) {
+      if (labels.indexOf(s.label) > -1) {
+        var m = WL.exec(s.value || '');
+        if (m) n += Number(m[1]) + Number(m[2]);
+      }
+    });
+    return n;
+  }
+  function danOf(p) { return DAN[String(p.rank || '').charAt(0)] || 0; }
+
+  function loadPlayers() {
+    if (players) return Promise.resolve(players);
+    return fetch('../assets/data/players.json')
+      .then(function (r) {
+        if (!r.ok) throw new Error('讀取棋士名錄失敗（HTTP ' + r.status + '）');
+        return r.json();
+      })
+      .then(function (d) {
+        players = (d.players || []).map(function (p) {
+          return {
+            id: p.id, name: p.name, rank: p.rank || '',
+            dan: danOf(p), now: games(p, THIS_YEAR), prev: games(p, LAST_YEAR)
+          };
+        });
+        return players;
+      });
+  }
+
 
   function esc(s) {
     return String(s == null ? '' : s)
@@ -116,10 +157,13 @@
         '<button class="btn btn-accent btn-sm" data-act="save">儲存</button>' +
         '<button class="btn btn-ghost btn-sm" data-act="roster">報名名單（' + n + '）</button>' +
         '<button class="btn btn-ghost btn-sm" data-act="csv">匯出 CSV</button>' +
+        '<button class="btn btn-ghost btn-sm" data-act="missing">尚未報名</button>' +
+        '<button class="btn btn-ghost btn-sm" data-act="promo">文宣格式</button>' +
         '<button class="btn btn-ghost btn-sm" data-act="del">刪除</button>' +
         '<span class="muted" style="font-size:.84rem" data-state></span>' +
       '</div>' +
       '<div data-roster></div>' +
+      '<div data-extra></div>' +
     '</div>';
   }
 
@@ -207,6 +251,94 @@
     setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
   }
 
+  /* 報名者對應到名錄。優先用棋士 id，沒有才退回姓名——
+     姓名比對正是原本試算表會靜默出錯的地方，能不用就不用。 */
+  function joinRoster(list) {
+    var byId = {}, byName = {};
+    players.forEach(function (p) { byId[p.id] = p; byName[p.name] = p; });
+    return list.filter(function (e) { return !e.withdrawn; }).map(function (e) {
+      var p = (e.player_id && byId[e.player_id]) || byName[e.display_name] || null;
+      return {
+        name: p ? p.name : e.display_name,
+        rank: p ? p.rank : '',
+        dan: p ? p.dan : 0,
+        now: p ? p.now : 0,
+        matched: !!p,
+        created_at: e.created_at
+      };
+    });
+  }
+
+  function missingHtml(list, min) {
+    var inId = {}, inName = {};
+    list.filter(function (e) { return !e.withdrawn; }).forEach(function (e) {
+      if (e.player_id) inId[e.player_id] = 1;
+      if (e.display_name) inName[e.display_name] = 1;
+    });
+    var miss = players.filter(function (p) { return !inId[p.id] && !inName[p.name]; })
+      .filter(function (p) { return p.now >= min; })
+      .sort(function (a, b) { return (b.now - a.now) || (b.prev - a.prev) || (b.dan - a.dan); });
+
+    var opts = [0, 1, 3, 5].map(function (n) {
+      return '<option value="' + n + '"' + (n === min ? ' selected' : '') + '>' +
+        (n ? '本年度 ≥ ' + n + ' 局' : '全部') + '</option>';
+    }).join('');
+
+    return '<div class="mt-2">' +
+      '<p class="muted mb-0" style="font-size:.86rem">' +
+        '共 ' + miss.length + ' 位尚未報名，依本年度出賽局數排序。' +
+        '局數來自海峰的年度成績，每天自動更新。' +
+      '</p>' +
+      '<div class="field" style="max-width:220px">' +
+        '<label>篩選</label><select data-missmin>' + opts + '</select>' +
+      '</div>' +
+      (miss.length
+        ? '<div style="overflow-x:auto"><table class="table"><thead><tr>' +
+            '<th>#</th><th>棋士</th><th>段位</th><th>本年度局數</th><th>去年度局數</th>' +
+          '</tr></thead><tbody>' +
+          miss.map(function (p, i) {
+            return '<tr><td>' + (i + 1) + '</td><td>' + esc(p.name) + '</td>' +
+              '<td>' + esc(p.rank) + '</td><td>' + p.now + '</td><td>' + p.prev + '</td></tr>';
+          }).join('') + '</tbody></table></div>'
+        : '<p class="muted mb-0">沒有符合條件的棋士。</p>') +
+    '</div>';
+  }
+
+  function promoHtml(list, order) {
+    var arr = joinRoster(list);
+    if (order === 'time') {
+      arr.sort(function (a, b) { return new Date(a.created_at) - new Date(b.created_at); });
+    } else {
+      arr.sort(function (a, b) { return (b.dan - a.dan) || (b.now - a.now); });
+    }
+    var parts = arr.map(function (x) { return x.name + x.rank; });
+    var lines = [];
+    for (var i = 0; i < parts.length; i += 8) {
+      lines.push(parts.slice(i, i + 8).join('、') + (i + 8 < parts.length ? '、' : ''));
+    }
+    var unmatched = arr.filter(function (x) { return !x.matched; }).map(function (x) { return x.name; });
+
+    return '<div class="mt-2">' +
+      '<div class="field" style="max-width:260px">' +
+        '<label>排序</label>' +
+        '<select data-promoorder>' +
+          '<option value="dan"' + (order !== 'time' ? ' selected' : '') + '>段位（高到低）</option>' +
+          '<option value="time"' + (order === 'time' ? ' selected' : '') + '>報名先後</option>' +
+        '</select>' +
+      '</div>' +
+      '<p class="muted mb-0" style="font-size:.86rem">' + arr.length + ' 人，每行 8 位，共 ' +
+        lines.length + ' 行。段位自棋士名錄帶入，不需要手動維護。</p>' +
+      (unmatched.length
+        ? '<p class="mb-0 mt-2" style="font-size:.86rem;color:var(--accent)">' +
+          '⚠ 對不到名錄，段位空白：' + esc(unmatched.join('、')) + '</p>'
+        : '') +
+      '<textarea rows="' + Math.max(3, lines.length) + '" data-promo readonly ' +
+        'style="margin-top:10px">' + esc(lines.join('\n')) + '</textarea>' +
+      '<div class="mt-2"><button class="btn btn-ghost btn-sm" data-act="copy">複製</button>' +
+        '<span class="muted" style="font-size:.84rem" data-copied></span></div>' +
+    '</div>';
+  }
+
   listEl.addEventListener('click', function (e) {
     var btn = e.target.closest('button[data-act]');
     if (!btn) return;
@@ -260,6 +392,34 @@
         downloadCsv(get('title').value.trim() || '賽事', list);
       }).catch(function (err) { state.textContent = ''; say('error', '匯出失敗：' + A.message(err)); });
 
+    } else if (act === 'missing' || act === 'promo') {
+      var box = card.querySelector('[data-extra]');
+      if (box.getAttribute('data-kind') === act) {
+        box.innerHTML = ''; box.removeAttribute('data-kind'); return;
+      }
+      state.textContent = '載入中…';
+      Promise.all([loadPlayers(), fetchRoster(id)]).then(function (r) {
+        box.setAttribute('data-kind', act);
+        box.innerHTML = act === 'missing' ? missingHtml(r[1], 0) : promoHtml(r[1], 'dan');
+        box.setAttribute('data-tid', id);
+        state.textContent = '';
+      }).catch(function (err) { state.textContent = ''; say('error', A.message(err)); });
+
+    } else if (act === 'copy') {
+      var ta = card.querySelector('[data-promo]');
+      var done = card.querySelector('[data-copied]');
+      ta.select();
+      /* navigator.clipboard 在非安全來源會不存在，保留 execCommand 作為備援 */
+      var ok = false;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(ta.value).then(function () {
+          done.textContent = '已複製';
+        }, function () { done.textContent = '請手動複製（Ctrl+C）'; });
+        return;
+      }
+      try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+      done.textContent = ok ? '已複製' : '請手動複製（Ctrl+C）';
+
     } else if (act === 'del') {
       var n = counts[id] || 0;
       if (!confirm(n
@@ -277,6 +437,20 @@
           say('error', '刪除失敗：' + A.message(err));
         });
     }
+  });
+
+  /* 下拉選單改變時重畫，不必重新查資料庫 */
+  listEl.addEventListener('change', function (e) {
+    var sel = e.target.closest('[data-missmin], [data-promoorder]');
+    if (!sel) return;
+    var box = sel.closest('[data-extra]');
+    var id = Number(box.getAttribute('data-tid'));
+    var isMin = sel.hasAttribute('data-missmin');
+    var v = sel.value;
+    fetchRoster(id).then(function (list) {
+      box.innerHTML = isMin ? missingHtml(list, Number(v)) : promoHtml(list, v);
+      box.setAttribute('data-tid', id);
+    }).catch(function (err) { say('error', A.message(err)); });
   });
 
   A.require('admin').then(function (me) {
