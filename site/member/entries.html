@@ -40,7 +40,7 @@
 (function () {
   var A = window.CPGA_AUTH;
   var listEl = document.getElementById('list');
-  var me = null, rows = [], mine = {};
+  var me = null, rows = [], mine = {}, viewOnly = false;
 
   function esc(s) {
     return String(s == null ? '' : s)
@@ -92,7 +92,9 @@
         : phase === 'after' ? '<span class="badge-status badge-status--pending">已截止</span>' : '');
 
     var actions;
-    if (phase === 'open') {
+    if (viewOnly) {
+      actions = '<span class="muted" style="font-size:.86rem">管理員檢視中，無法報名。</span>';
+    } else if (phase === 'open') {
       actions = joined
         ? '<button class="btn btn-ghost btn-sm" data-act="withdraw" data-id="' + t.id + '">取消報名</button>'
         : '<button class="btn btn-accent btn-sm" data-act="enter" data-id="' + t.id + '">我要報名</button>';
@@ -103,7 +105,7 @@
       actions = '<span class="muted" style="font-size:.86rem">報名尚未開始。</span>';
     }
 
-    var noteBox = (phase === 'open' && joined)
+    var noteBox = (!viewOnly && phase === 'open' && joined)
       ? '<div class="field mt-2">' +
           '<label for="note' + t.id + '">備註（選填，例如不便出席的時段）</label>' +
           '<textarea id="note' + t.id + '" rows="2" maxlength="500" data-note="' + t.id + '">' +
@@ -218,7 +220,13 @@
 
   A.require('player').then(function (user) {
     me = user;
-    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+    viewOnly = me.profile.role === 'admin';
+    document.getElementById('who').textContent =
+      (me.profile.display_name || me.user.email) + (viewOnly ? '　·　管理員檢視' : '');
+    if (viewOnly) {
+      say('', '您是以管理員身分檢視這個畫面。報名功能只開放給棋士帳號——' +
+        '管理員報名會在名單裡留下一筆沒有對應棋士的紀錄。');
+    }
     return load();
   }).catch(function (err) {
     listEl.innerHTML = '';
