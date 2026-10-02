@@ -73,8 +73,29 @@ def load_players():
     return by_name
 
 
+def decode_csv(path):
+    """讀進名單並判斷編碼。
+
+    Excel 在繁體中文 Windows 上存「CSV (逗號分隔)」會得到 Big5，
+    要選「CSV UTF-8」才是 UTF-8——很容易選錯，所以這裡兩種都收。
+    順序不能反：Big5 檔用 UTF-8 解幾乎必定失敗（可以安全地往下試），
+    但 UTF-8 檔用 Big5 解常常會「成功」而得到亂碼。
+    """
+    raw = io.open(path, 'rb').read()
+    for enc in ('utf-8-sig', 'utf-8', 'cp950'):
+        try:
+            text = raw.decode(enc)
+        except UnicodeDecodeError:
+            continue
+        if enc == 'cp950':
+            print('注意：名單是 Big5 編碼，已自動轉換。'
+                  '下次在 Excel 另存時選「CSV UTF-8 (逗號分隔)」可避免。')
+        return text
+    sys.exit('中止：無法判斷 %s 的編碼，請另存為 UTF-8 後再試。' % path)
+
+
 def read_rows(path):
-    with io.open(path, encoding='utf-8-sig', newline='') as f:
+    with io.StringIO(decode_csv(path), newline='') as f:
         for i, row in enumerate(csv.DictReader(f), start=2):
             name = (row.get('姓名') or '').strip()
             email = (row.get('電子信箱') or row.get('信箱') or '').strip().lower()
