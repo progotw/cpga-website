@@ -1,10 +1,18 @@
 {
  "schema_version": 1,
- "generated": "2026-10-01T12:38:06+00:00",
+ "generated": "2026-10-02T12:36:53+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "71C2277A75C1387BCABC4FA23AFD2080",
+   "date": "2026-10-02",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【首屆IBK世界女子圍棋大師賽｜楊子萱今晨出戰，強碰韓國名將吳政娥】",
+   "url": "https://www.haifong.org/news/content/71C2277A75C1387BCABC4FA23AFD2080"
+  },
   {
    "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
    "date": "2026-10-01",
@@ -956,14 +964,6 @@
    "cat": "notice",
    "title": "【2026 院生組 職業棋士甄選辦法】",
    "url": "https://www.haifong.org/news/content/5976033F7A2DA01A8ED17AAFAE6AED43"
-  },
-  {
-   "id": "D49E703D885C18AC7E9D9C542253EFDC",
-   "date": "2026-04-22",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "第7屆快棋爭霸戰 抽籤日期公告",
-   "url": "https://www.haifong.org/news/content/D49E703D885C18AC7E9D9C542253EFDC"
   }
  ]
 }
