@@ -96,6 +96,20 @@ def resolve_year(month, day, announced):
     return d
 
 
+def unwrap_feed(raw):
+    """接受兩種來源格式。
+
+    方案 A（靜態檔）直接就是規格的 JSON；方案 B（Firestore 公開文件）
+    會把同一份 JSON 包在 fields.json.stringValue 這個字串欄位裡。
+    兩種都收，上游換做法時這支程式不必動。
+    """
+    if isinstance(raw, dict):
+        f = (raw.get('fields') or {}).get('json')
+        if isinstance(f, dict) and 'stringValue' in f:
+            return json.loads(f['stringValue'])
+    return raw
+
+
 def merge(announced, feed):
     """合併兩個來源。以（日期, 棋士）為鍵比對對手；衝突者剔除並回報。
 
@@ -114,7 +128,9 @@ def merge(announced, feed):
             'source': source,
         }
 
-    feed_rows = [norm(p, 'schedule-app') for p in feed if p.get('date')]
+    # 輪空沒有要下的棋，列進去會變成假的出席通知
+    feed_rows = [norm(p, 'schedule-app') for p in feed
+                 if p.get('date') and '輪空' not in (p.get('round') or '')]
     ann_rows = [dict(p, source='announcement') for p in announced]
 
     # 索引：(日期, 棋士) → 對手
@@ -132,7 +148,10 @@ def merge(announced, feed):
     for key in set(ia) & set(ifd):
         opps_a = {o for o, _ in ia[key] if o}
         opps_f = {o for o, _ in ifd[key] if o}
-        if opps_a and opps_f and opps_a != opps_f:
+        # 只有兩邊互相不包含才算矛盾。
+        # 同一天上下午兩局時，公告可能只貼了其中一局，
+        # 若用「集合不相等」判斷，會把這種涵蓋範圍不同誤判成衝突。
+        if opps_a and opps_f and not (opps_a <= opps_f or opps_f <= opps_a):
             conflicts.append({
                 'date': key[0], 'player': key[1],
                 'announced': '、'.join(sorted(opps_a)),
@@ -233,7 +252,7 @@ def main():
     conflicts = []
     if feed_url:
         try:
-            feed = json.loads(get(feed_url))
+            feed = unwrap_feed(json.loads(get(feed_url)))
             pairs, conflicts = merge(pairs, feed.get('pairings') or [])
             print('\n已與賽程操作台比對：合併後 %d 組，不一致 %d 組'
                   % (len(pairs), len(conflicts)))
