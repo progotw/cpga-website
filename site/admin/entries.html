@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>賽事報名｜協會後台</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="index.html">← 協會後台</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap" style="max-width:900px">
+  <div class="section-head section-head--row">
+    <div>
+      <h1 style="font-size:1.5rem;margin-bottom:4px">賽事報名</h1>
+      <p class="muted mb-0" style="font-size:.92rem">
+        只用於職業賽事。院生甄選與業餘賽事維持原本的報名管道。
+      </p>
+    </div>
+    <button class="btn btn-accent" id="newBtn" type="button">新增賽事</button>
+  </div>
+
+  <div class="callout mt-2">
+    <p class="mb-0" style="font-size:.9rem">
+      勾選「開放報名」後棋士才看得到。報名期間留空表示不限制；
+      <strong>超過截止時間後資料庫就不收報名</strong>，不是只把按鈕關掉而已。
+    </p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+  <div id="list" class="mt-2"><p class="muted">載入中…</p></div>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var listEl = document.getElementById('list');
+  var rows = [], counts = {};
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    document.getElementById('notice').innerHTML = text
+      ? '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+        '"><p class="mb-0" style="font-size:.92rem">' + esc(text) + '</p></div>'
+      : '';
+  }
+
+  /* datetime-local 要的是當地時間字串，Date.toISOString() 是 UTC，不能直接用 */
+  function toInput(ts) {
+    if (!ts) return '';
+    var d = new Date(ts), p = function (n) { return (n < 10 ? '0' : '') + n; };
+    return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) +
+      'T' + p(d.getHours()) + ':' + p(d.getMinutes());
+  }
+  function fromInput(v) {
+    return v ? new Date(v).toISOString() : null;
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('admin');
+  });
+
+  function cardHtml(t) {
+    var n = counts[t.id] || 0;
+    return '<div class="card mt-2" data-id="' + t.id + '">' +
+      '<div class="field">' +
+        '<label>賽事名稱</label>' +
+        '<input type="text" data-f="title" value="' + esc(t.title) + '">' +
+      '</div>' +
+      '<div class="field">' +
+        '<label>說明</label>' +
+        '<textarea rows="2" data-f="note">' + esc(t.note || '') + '</textarea>' +
+      '</div>' +
+      '<div class="field">' +
+        '<label>參賽資格（文字說明，系統不據此擋人）</label>' +
+        '<input type="text" data-f="eligibility" value="' + esc(t.eligibility || '') + '">' +
+      '</div>' +
+      '<div style="display:flex;gap:14px;flex-wrap:wrap">' +
+        '<div class="field" style="flex:1 1 200px">' +
+          '<label>報名開始</label>' +
+          '<input type="datetime-local" data-f="opens_at" value="' + toInput(t.opens_at) + '">' +
+        '</div>' +
+        '<div class="field" style="flex:1 1 200px">' +
+          '<label>報名截止</label>' +
+          '<input type="datetime-local" data-f="closes_at" value="' + toInput(t.closes_at) + '">' +
+        '</div>' +
+        '<div class="field" style="flex:0 0 110px">' +
+          '<label>排序</label>' +
+          '<input type="number" data-f="sort" value="' + (t.sort || 0) + '">' +
+        '</div>' +
+      '</div>' +
+      '<label style="display:flex;align-items:center;gap:8px;font-size:.92rem">' +
+        '<input type="checkbox" data-f="published"' + (t.published ? ' checked' : '') + '>開放報名' +
+      '</label>' +
+      '<div class="admin-actions mt-3">' +
+        '<button class="btn btn-accent btn-sm" data-act="save">儲存</button>' +
+        '<button class="btn btn-ghost btn-sm" data-act="roster">報名名單（' + n + '）</button>' +
+        '<button class="btn btn-ghost btn-sm" data-act="csv">匯出 CSV</button>' +
+        '<button class="btn btn-ghost btn-sm" data-act="del">刪除</button>' +
+        '<span class="muted" style="font-size:.84rem" data-state></span>' +
+      '</div>' +
+      '<div data-roster></div>' +
+    '</div>';
+  }
+
+  function render() {
+    listEl.innerHTML = rows.length
+      ? rows.map(cardHtml).join('')
+      : '<p class="muted">還沒有任何賽事，按右上角「新增賽事」開始。</p>';
+  }
+
+  function load() {
+    return A.client.from('tournaments').select('*')
+      .order('sort', { ascending: false })
+      .order('id', { ascending: false })
+      .then(function (res) {
+        if (res.error) throw res.error;
+        rows = res.data || [];
+        /* 報名人數：只算沒有取消的 */
+        return A.client.from('entries')
+          .select('tournament_id').eq('withdrawn', false);
+      })
+      .then(function (res) {
+        if (res.error) throw res.error;
+        counts = {};
+        (res.data || []).forEach(function (e) {
+          counts[e.tournament_id] = (counts[e.tournament_id] || 0) + 1;
+        });
+        render();
+      });
+  }
+
+  document.getElementById('newBtn').addEventListener('click', function () {
+    var btn = this;
+    btn.disabled = true;
+    A.client.from('tournaments').insert({ title: '未命名賽事' }).select().single()
+      .then(function (res) {
+        if (res.error) throw res.error;
+        return load();
+      })
+      .then(function () { say('', '已新增，請填寫內容後儲存。'); })
+      .catch(function (err) { say('error', '新增失敗：' + A.message(err)); })
+      .finally(function () { btn.disabled = false; });
+  });
+
+  function rosterHtml(list) {
+    if (!list.length) return '<p class="muted mb-0 mt-2" style="font-size:.9rem">目前沒有人報名。</p>';
+    return '<div class="mt-2" style="overflow-x:auto"><table class="table"><thead><tr>' +
+      '<th>#</th><th>姓名</th><th>報名時間</th><th>備註</th><th>狀態</th>' +
+      '</tr></thead><tbody>' +
+      list.map(function (e, i) {
+        return '<tr><td>' + (i + 1) + '</td>' +
+          '<td>' + esc(e.display_name) + '</td>' +
+          '<td>' + esc(new Date(e.created_at).toLocaleString('zh-TW')) + '</td>' +
+          '<td>' + esc(e.note || '') + '</td>' +
+          '<td>' + (e.withdrawn ? '已取消' : '報名中') + '</td></tr>';
+      }).join('') +
+      '</tbody></table></div>';
+  }
+
+  function fetchRoster(id) {
+    return A.client.from('entries')
+      .select('display_name,player_id,note,withdrawn,created_at')
+      .eq('tournament_id', id)
+      .order('created_at', { ascending: true })
+      .then(function (res) {
+        if (res.error) throw res.error;
+        return res.data || [];
+      });
+  }
+
+  function downloadCsv(title, list) {
+    var head = ['序號', '姓名', '棋士id', '報名時間', '備註', '狀態'];
+    var cell = function (v) { return '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"'; };
+    var lines = [head.map(cell).join(',')];
+    list.filter(function (e) { return !e.withdrawn; }).forEach(function (e, i) {
+      lines.push([i + 1, e.display_name, e.player_id,
+        new Date(e.created_at).toLocaleString('zh-TW'), e.note || '', '報名中'].map(cell).join(','));
+    });
+    /* BOM：Excel 沒有它會把 UTF-8 中文讀成亂碼 */
+    var blob = new Blob(['﻿' + lines.join('\r\n') + '\r\n'],
+      { type: 'text/csv;charset=utf-8;' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = title.replace(/[\\/:*?"<>|]/g, '') + '_報名名單.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  }
+
+  listEl.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-act]');
+    if (!btn) return;
+    var card = btn.closest('[data-id]');
+    var id = Number(card.getAttribute('data-id'));
+    var act = btn.getAttribute('data-act');
+    var state = card.querySelector('[data-state]');
+    var get = function (f) { return card.querySelector('[data-f="' + f + '"]'); };
+
+    if (act === 'save') {
+      var title = get('title').value.trim();
+      if (!title) { say('error', '賽事名稱不能空白。'); return; }
+      var opens = fromInput(get('opens_at').value);
+      var closes = fromInput(get('closes_at').value);
+      if (opens && closes && new Date(closes) <= new Date(opens)) {
+        say('error', '報名截止時間必須晚於開始時間。'); return;
+      }
+      btn.disabled = true; state.textContent = '儲存中…';
+      A.client.from('tournaments').update({
+        title: title,
+        note: get('note').value.trim(),
+        eligibility: get('eligibility').value.trim(),
+        opens_at: opens, closes_at: closes,
+        sort: Number(get('sort').value) || 0,
+        published: get('published').checked
+      }).eq('id', id)
+        .then(function (res) {
+          if (res.error) throw res.error;
+          state.textContent = '已儲存';
+          say('', '已儲存。');
+        })
+        .catch(function (err) { state.textContent = ''; say('error', '儲存失敗：' + A.message(err)); })
+        .finally(function () { btn.disabled = false; });
+
+    } else if (act === 'roster') {
+      var box = card.querySelector('[data-roster]');
+      if (box.innerHTML) { box.innerHTML = ''; return; }
+      state.textContent = '載入中…';
+      fetchRoster(id).then(function (list) {
+        box.innerHTML = rosterHtml(list);
+        state.textContent = '';
+      }).catch(function (err) { state.textContent = ''; say('error', '讀取失敗：' + A.message(err)); });
+
+    } else if (act === 'csv') {
+      state.textContent = '準備中…';
+      fetchRoster(id).then(function (list) {
+        state.textContent = '';
+        if (!list.filter(function (x) { return !x.withdrawn; }).length) {
+          say('error', '沒有可匯出的報名資料。'); return;
+        }
+        downloadCsv(get('title').value.trim() || '賽事', list);
+      }).catch(function (err) { state.textContent = ''; say('error', '匯出失敗：' + A.message(err)); });
+
+    } else if (act === 'del') {
+      var n = counts[id] || 0;
+      if (!confirm(n
+        ? '這場賽事已有 ' + n + ' 人報名，刪除會一併刪掉報名紀錄，且無法復原。確定要刪除嗎？'
+        : '確定要刪除這場賽事嗎？')) return;
+      btn.disabled = true; state.textContent = '刪除中…';
+      A.client.from('tournaments').delete().eq('id', id)
+        .then(function (res) {
+          if (res.error) throw res.error;
+          return load();
+        })
+        .then(function () { say('', '已刪除。'); })
+        .catch(function (err) {
+          state.textContent = ''; btn.disabled = false;
+          say('error', '刪除失敗：' + A.message(err));
+        });
+    }
+  });
+
+  A.require('admin').then(function (me) {
+    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+    return load();
+  }).catch(function (err) {
+    listEl.innerHTML = '';
+    say('error', '載入失敗：' + A.message(err));
+  });
+})();
+</script>
+</body>
+</html>
