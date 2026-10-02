@@ -164,6 +164,13 @@ button { font: inherit; cursor: pointer; }
 .brand__logo { height: 32px; width: auto; }
 
 .nav { display: flex; align-items: center; gap: 2px; }
+/* 這層曾經是 display:contents，但那樣 <li> 拿不到 align-items: center，
+   整排選單會貼齊頂端，只有清單外的「棋士專區」被置中——兩顆膠囊因此差 3px。
+   改成真正的 flex 容器，兩邊就在同一條中線上。 */
+.nav__list {
+  display: flex; align-items: center; gap: 2px;
+  list-style: none; margin: 0; padding: 0;
+}
 .nav__item { position: relative; }
 .nav__link {
   display: flex; align-items: center; gap: 4px;
@@ -740,9 +747,11 @@ body.member-area { background: var(--paper-2); }
     background: var(--paper); padding: 16px 24px 48px;
     overflow-y: auto; display: none;
   }
+  .nav__list { flex-direction: column; align-items: stretch; gap: 0; width: 100%; }
   body.nav-open { overflow: hidden; }
   body.nav-open .nav { display: flex; }
   .nav__item { border-bottom: 1px solid var(--line); }
+  .nav__item--pill { border-bottom: 0; }
   .nav__link { padding: 15px 4px; font-size: 1rem; justify-content: space-between; }
   .nav__link--member {
     margin: 18px 0 0; justify-content: center; border-radius: var(--radius);
@@ -942,7 +951,8 @@ body.member-area { background: var(--paper-2); }
   min-width: 94px; justify-content: center;
 }
 /* 兩顆膠囊是一組，與左邊的文字選單拉開，才不會看起來黏在「下載專區」後面 */
-.nav__link--teachers { margin-left: 16px; }
+/* 兩顆膠囊是一組，與左邊的文字選單拉開 */
+.nav__link--teachers { margin-left: 14px; }
 .nav__link--teachers {
   background: var(--navy); color: var(--white); border-color: var(--navy);
 }
@@ -956,7 +966,7 @@ body.member-area { background: var(--paper-2); }
    這段必須放在上面的 .nav__link--pill 之後——媒體查詢不會提高優先序。 */
 @media (max-width: 1080px) {
   .nav__link--pill { min-width: 79px; padding: 9px 10px; }
-  .nav__link--teachers { margin-left: 10px; }
+  .nav__link--teachers { margin-left: 8px; }
 }
 
 @media (max-width: 1024px) {

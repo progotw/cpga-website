@@ -57,8 +57,9 @@
     { label: '賽事花絮', href: 'gallery/index.html',    key: 'gallery' },
     { label: '加入會員', href: 'membership/index.html', key: 'membership' },
     { label: '下載專區', href: 'downloads/index.html',  key: 'downloads' },
-    /* 放在最後一項，緊鄰另一側的「棋士專區」膠囊 */
-    { label: '找老師',   href: 'teachers/index.html',   key: 'teachers', pill: 'teachers' }
+    /* 最後兩項是膠囊，成對放在導覽列右端 */
+    { label: '找老師',   href: 'teachers/index.html',   key: 'teachers', pill: 'teachers' },
+    { label: '棋士專區', href: 'member/index.html',     key: 'member',   pill: 'member' }
   ];
 
   var LOGO_SRC = ROOT + 'assets/img/cpga-logo.png';
@@ -74,7 +75,7 @@
       if (!item.children) {
         /* pill 的項目在導覽列上顯示為膠囊，與一般文字連結區隔 */
         var cls = 'nav__link' + (item.pill ? ' nav__link--pill nav__link--' + item.pill : '');
-        return '<li class="nav__item' + isActive + '">' +
+        return '<li class="nav__item' + (item.pill ? ' nav__item--pill' : '') + isActive + '">' +
           '<a class="' + cls + '" href="' + ROOT + item.href + '">' + item.label + '</a></li>';
       }
       var sub = item.children.map(function (c) {
@@ -92,8 +93,7 @@
             '<img class="brand__logo" src="' + LOGO_SRC + '" alt="中華職業圍棋協會">' +
           '</a>' +
           '<nav class="nav" id="mainNav" aria-label="主導覽">' +
-            '<ul style="display:contents;list-style:none;margin:0;padding:0">' + items + '</ul>' +
-            '<a class="nav__link nav__link--pill nav__link--member" href="' + ROOT + 'member/index.html">棋士專區</a>' +
+            '<ul class="nav__list">' + items + '</ul>' +
           '</nav>' +
           '<button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false">' +
             '<span></span></button>' +
