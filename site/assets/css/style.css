@@ -937,6 +937,9 @@ body.member-area { background: var(--paper-2); }
   background: var(--navy); color: var(--white); border-color: var(--navy);
 }
 .nav__link--teachers:hover { background: var(--navy-2); color: var(--white); }
+/* 停在膠囊自己的頁面時，.nav__item.is-active 的紅字會落在深色底上讀不出來。
+   選取器要比 .nav__item.is-active > .nav__link 更明確才蓋得過去。 */
+.nav__item.is-active > .nav__link--pill { color: var(--white); }
 
 @media (max-width: 1024px) {
   .nav__link--pill {
