@@ -28,7 +28,8 @@
     },
 
     /* 同系列固定同色，slot 由產生端給定（0–7） */
-    slotClass: function (slot) { return 'ev-s' + ((slot || 0) % 8); },
+    /* 五個系列循環。顏色只是輔助，系列名稱一直顯示在圓點旁邊。 */
+    slotClass: function (slot) { return 'ev-s' + ((slot || 0) % 5); },
 
     /* 每個配色編號的顯示名稱。
        不直接用 series —— 那是正規化過的分組鍵（異體字會被統一，例如「玄樂盃」變「玄樂杯」）。

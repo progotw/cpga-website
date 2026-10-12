@@ -14,20 +14,56 @@
   --paper-3:    #ebe3d6;
   --white:      #ffffff;
 
-  --wood:       #c9a063;
-  --wood-deep:  #9c7434;
-  --wood-soft:  #e8d7b8;
+  /* 三個色相，各有分工：
+     朱紅＝行動（入會、報名、主要按鈕）
+     深藍＝系統功能（登入、棋士專區、找老師）
+     木金＝裝飾點綴（章節小標、分隔、提示框）
+     原本還有玉綠與淺藍，各只用到一兩次，拿掉。 */
+  --accent:      #9e3029;
+  --accent-2:    #c2483f;
+  --accent-tint: #f3e5e4;   /* 標籤、行事曆小方塊的底 */
+  --accent-wash: #faf1f0;   /* 提示框的底，比 tint 更淡 */
 
-  --accent:     #9e3029;
-  --accent-2:   #c2483f;
-  --jade:       #1f6b57;
-  --navy:       #1e3a5f;
-  --navy-2:     #2b5183;
-  --sky:        #a9cce8;   /* 深色主視覺上的淺底按鈕，配黑字 */
-  --sky-2:      #90bade;
+  --navy:        #1e3a5f;
+  --navy-2:      #2b5183;
+  --navy-3:      #2b4a74;   /* 淺底上的深藍文字 */
+  --navy-tint:   #e6eaf2;
 
-  --line:       #e2dace;
-  --line-2:     #d2c7b5;
+  --wood:        #c9a063;
+  --wood-deep:   #9c7434;
+  --wood-tint:   #efe9e2;
+  --wood-wash:   #fdf8ef;
+  --ink-tint:    #e8e6e1;
+
+  /* 狀態色。刻意與賽事系列的分類色分開：
+     分類色代表「是哪一個」，狀態色代表「是什麼情況」，混用會讀錯。 */
+  --good:        #0d7f4f;
+  --good-tint:   #e3f0e9;
+
+  /* 深色表面（頁首大圖、頁尾、後台列）上的文字。
+     原本這裡散著八種不同的灰，各寫各的，收成三階。 */
+  --on-dark:    #e9e5de;
+  --on-dark-2:  #b7bcc5;
+  --on-dark-3:  #8f96a1;
+
+  /* 賽事系列配色：五個系列循環。
+     顏色只是輔助——系列名稱一直顯示在圓點旁邊。
+     這組是用 OKLab 的色差驗證挑的，舊的那八色有兩組對色盲幾乎無法分辨。 */
+  --series-0: #9e3029;
+  --series-1: #b8842c;
+  --series-2: #2b6fc4;
+  --series-3: #0d7f4f;
+  --series-4: #8a4a9e;
+  --series-0-tint: #f6e9e8;
+  --series-1-tint: #f6eddb;
+  --series-2-tint: #e7ecf5;
+  --series-3-tint: #e3f0e9;
+  --series-4-tint: #f0e8f2;
+
+  /* 邊線加深一階。原本 #e2dace 對白卡片只有 1.39 的對比，
+     卡片邊界看不出來，整頁因此顯得糊，不是顏色的問題是層次的問題。 */
+  --line:       #d8cfbe;
+  --line-2:     #c9bda7;
 
   --radius:   10px;
   --radius-lg: 16px;
@@ -83,7 +119,7 @@ button { font: inherit; cursor: pointer; }
 .section { padding: 72px 0; }
 .section--tight { padding: 48px 0; }
 .section--paper2 { background: var(--paper-2); }
-.section--ink { background: var(--ink); color: #cfd3da; }
+.section--ink { background: var(--ink); color: var(--on-dark-2); }
 .section--ink h2, .section--ink h3 { color: var(--white); }
 
 .grid { display: grid; gap: 24px; }
@@ -142,10 +178,6 @@ button { font: inherit; cursor: pointer; }
 }
 .btn-ghost:hover { border-color: var(--ink); background: var(--white); }
 .btn-light { background: var(--white); color: var(--ink); box-shadow: var(--shadow-sm); }
-/* 深色主視覺上的第三顆按鈕：白底會與「賽事專區」撞在一起，
-   外框款在這張照片上又太隱沒，所以用淺藍實底配黑字。 */
-.btn-sky { background: var(--sky); color: var(--ink); box-shadow: var(--shadow-sm); }
-.btn-sky:hover { background: var(--sky-2); color: var(--ink); }
 .btn-sm { padding: .5em 1.1em; font-size: .86rem; }
 .btn-block { display: flex; width: 100%; justify-content: center; }
 
@@ -228,8 +260,8 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 /* ---------- Hero ---------- */
 .hero {
   position: relative; overflow: hidden;
-  background: linear-gradient(160deg, #1b1e23 0%, #23272e 55%, #2c2419 100%);
-  color: #e7e3dc;
+  background: linear-gradient(160deg, #18202c 0%, #1e3a5f 58%, #16202e 100%);
+  color: var(--on-dark);
   padding: 96px 0 104px;
 }
 .hero::before {
@@ -255,7 +287,7 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
   line-height: 1.28; margin-bottom: .5em; letter-spacing: .03em;
 }
 .hero h1 em { font-style: normal; color: var(--wood); }
-.hero__lead { font-size: 1.06rem; color: #b9bcc3; max-width: 44ch; margin-bottom: 2rem; }
+.hero__lead { font-size: 1.06rem; color: var(--on-dark-2); max-width: 44ch; margin-bottom: 2rem; }
 .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero__stats {
   display: flex; gap: 40px; margin-top: 52px;
@@ -269,7 +301,7 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 
 /* Page hero (inner pages) */
 .page-hero {
-  background: var(--ink); color: #cfd3da;
+  background: var(--ink); color: var(--on-dark-2);
   padding: 56px 0 52px; position: relative; overflow: hidden;
 }
 .page-hero::before {
@@ -283,7 +315,7 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 }
 .page-hero > .wrap { position: relative; z-index: 2; }
 .page-hero h1 { color: var(--white); margin-bottom: .35em; }
-.page-hero p { color: #a8adb6; margin: 0; max-width: 60ch; }
+.page-hero p { color: var(--on-dark-2); margin: 0; max-width: 60ch; }
 .breadcrumb {
   font-size: .82rem; color: var(--ink-4); margin-bottom: 14px;
   display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
@@ -334,11 +366,11 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
   font-size: .74rem; font-weight: 500; letter-spacing: .04em;
   background: var(--paper-3); color: var(--ink-3); white-space: nowrap;
 }
-.tag--match   { background: #e7efe9; color: #1f6b57; }
-.tag--event   { background: #efe9e2; color: #8a6a3a; }
-.tag--media   { background: #e6eaf2; color: #3a4d80; }
-.tag--notice  { background: #f3e5e4; color: var(--accent); }
-.tag--dark    { background: rgba(255,255,255,.1); color: #cfd3da; }
+.tag--match   { background: var(--navy-tint); color: var(--navy-3); }
+.tag--event   { background: var(--wood-tint); color: var(--wood-deep); }
+.tag--media   { background: var(--ink-tint); color: var(--ink-3); }
+.tag--notice  { background: var(--accent-tint); color: var(--accent); }
+.tag--dark    { background: rgba(255,255,255,.1); color: var(--on-dark-2); }
 
 /* Filter tabs */
 .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
@@ -493,7 +525,7 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 .lightbox.is-open { display: flex; }
 .lightbox__inner { max-width: 900px; width: 100%; text-align: center; color: #ddd; }
 .lightbox__frame {
-  aspect-ratio: 3/2; background: #24262b; border-radius: var(--radius);
+  aspect-ratio: 3/2; background: var(--ink-2); border-radius: var(--radius);
   display: grid; place-items: center; color: #555; margin-bottom: 16px;
 }
 .lightbox__close {
@@ -508,8 +540,8 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
   background: var(--paper-2); padding: 18px 22px;
   border-radius: 0 var(--radius) var(--radius) 0;
 }
-.callout--accent { border-left-color: var(--accent); background: #faf1f0; }
-.callout--jade { border-left-color: var(--jade); background: #eef4f1; }
+.callout--accent { border-left-color: var(--accent); background: var(--accent-wash); }
+.callout--navy { border-left-color: var(--navy); background: var(--navy-tint); }
 .callout p:last-child { margin-bottom: 0; }
 .callout strong { color: var(--ink); }
 
@@ -550,11 +582,11 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 .dl-item:hover { border-color: var(--line-2); box-shadow: var(--shadow-sm); }
 .dl-item__ext {
   flex: none; width: 44px; height: 44px; border-radius: 9px;
-  background: #f3e5e4; color: var(--accent);
+  background: var(--accent-tint); color: var(--accent);
   display: grid; place-items: center; font-size: .7rem; font-weight: 700; letter-spacing: .04em;
 }
-.dl-item__ext--doc { background: #e6eaf2; color: #3a4d80; }
-.dl-item__ext--xls { background: #e7efe9; color: #1f6b57; }
+.dl-item__ext--doc { background: var(--navy-tint); color: var(--navy-3); }
+.dl-item__ext--xls { background: var(--good-tint); color: var(--good); }
 .dl-item__body { flex: 1 1 auto; min-width: 0; }
 .dl-item__name { font-weight: 500; color: var(--ink); display: block; }
 .dl-item__meta { font-size: .8rem; color: var(--ink-4); }
@@ -617,15 +649,15 @@ body.member-area { background: var(--paper-2); }
 .stat-tile__sub { font-size: .82rem; color: var(--ink-3); margin-top: 4px; }
 
 .progress { height: 8px; border-radius: 999px; background: var(--paper-3); overflow: hidden; margin: 10px 0 6px; }
-.progress__bar { height: 100%; background: var(--jade); border-radius: 999px; }
+.progress__bar { height: 100%; background: var(--good); border-radius: 999px; }
 
 .badge-status {
   display: inline-block; padding: 2px 10px; border-radius: 999px;
   font-size: .76rem; font-weight: 500;
 }
-.badge-status--done    { background: #e7efe9; color: #1f6b57; }
-.badge-status--pending { background: #fdf1e0; color: #9a6f34; }
-.badge-status--soon    { background: #e6eaf2; color: #3a4d80; }
+.badge-status--done    { background: var(--good-tint); color: var(--good); }
+.badge-status--pending { background: var(--wood-wash); color: var(--wood-deep); }
+.badge-status--soon    { background: var(--navy-tint); color: var(--navy-3); }
 
 /* Calendar */
 .cal { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--white); }
@@ -648,19 +680,18 @@ body.member-area { background: var(--paper-2); }
   font-size: .72rem; line-height: 1.35; background: var(--paper-3); color: var(--ink-2);
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.cal__ev--match { background: #e7efe9; color: #1f6b57; }
-.cal__ev--admin { background: #f3e5e4; color: var(--accent); }
-.cal__ev--event { background: #e6eaf2; color: #3a4d80; }
+.cal__ev--match { background: var(--navy-tint); color: var(--navy-3); }
+.cal__ev--admin { background: var(--accent-tint); color: var(--accent); }
+.cal__ev--event { background: var(--wood-tint); color: var(--wood-deep); }
 
 /* 賽事系列配色：slot 由 schedule.json 的 series_slot 指定，同系列跨次執行固定不變 */
-.ev-s0 { background: #f6e9e8; color: #9e3029; }
-.ev-s1 { background: #e6efea; color: #1f6b57; }
-.ev-s2 { background: #e7ecf5; color: #3a4d80; }
-.ev-s3 { background: #f6eddb; color: #8a5a1f; }
-.ev-s4 { background: #f0e8f2; color: #6b3f6e; }
-.ev-s5 { background: #e3eff1; color: #1f5f6b; }
-.ev-s6 { background: #eef1e1; color: #55631c; }
-.ev-s7 { background: #f2eae5; color: #6b4a3a; }
+/* 賽事系列五色。實際資料目前是五個系列，超過會從頭循環；
+   顏色只是輔助，系列名稱一直顯示在圓點旁邊。 */
+.ev-s0 { background: var(--series-0-tint); color: var(--series-0); }
+.ev-s1 { background: var(--series-1-tint); color: var(--series-1); }
+.ev-s2 { background: var(--series-2-tint); color: var(--series-2); }
+.ev-s3 { background: var(--series-3-tint); color: var(--series-3); }
+.ev-s4 { background: var(--series-4-tint); color: var(--series-4); }
 
 /* 月曆格內的賽事晶片：賽事名 + 輪次兩行 */
 .cal__ev--rich { white-space: normal; line-height: 1.3; padding: 4px 6px; }
@@ -680,13 +711,13 @@ body.member-area { background: var(--paper-2); }
 .seg button.is-active { background: var(--ink); color: var(--white); }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--ink); color: #9aa0aa; padding: 56px 0 28px; font-size: .9rem; }
-.site-footer a { color: #c3c8d0; }
+.site-footer { background: var(--ink); color: var(--on-dark-3); padding: 56px 0 28px; font-size: .9rem; }
+.site-footer a { color: var(--on-dark-2); }
 .site-footer a:hover { color: var(--wood); text-decoration: none; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 36px; }
 /* logo 於深色底反相：黑字轉白、雙圈的內部明暗對比得以保留 */
 .footer-logo { height: 30px; width: auto; filter: invert(1); }
-.footer-brand p { font-size: .86rem; line-height: 1.75; margin: 18px 0 0; color: #8a909b; }
+.footer-brand p { font-size: .86rem; line-height: 1.75; margin: 18px 0 0; color: var(--on-dark-3); }
 .footer-col h4 {
   color: var(--white); font-family: var(--sans); font-size: .82rem;
   letter-spacing: .12em; text-transform: uppercase; margin-bottom: 14px; font-weight: 700;
@@ -696,7 +727,7 @@ body.member-area { background: var(--paper-2); }
 .footer-bottom {
   margin-top: 44px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.1);
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-  font-size: .8rem; color: #6f757f;
+  font-size: .8rem; color: var(--on-dark-3);
 }
 
 /* ---------- Utilities ---------- */
@@ -711,7 +742,7 @@ body.member-area { background: var(--paper-2); }
 .prose > h2:first-child, .prose > h3:first-child { margin-top: 0; }
 .divider-dot { color: var(--line-2); margin: 0 .5em; }
 .placeholder-note {
-  font-size: .82rem; color: var(--wood-deep); background: #fdf8ef;
+  font-size: .82rem; color: var(--wood-deep); background: var(--wood-wash);
   border: 1px dashed var(--wood); border-radius: var(--radius);
   padding: 10px 14px; margin-bottom: 22px;
 }
@@ -954,12 +985,13 @@ body.member-area { background: var(--paper-2); }
 /* 兩顆膠囊是一組，與左邊的文字選單拉開 */
 .nav__link--teachers { margin-left: 14px; }
 .nav__link--teachers {
-  background: var(--navy); color: var(--white); border-color: var(--navy);
+  background: transparent; color: var(--navy); border-color: #a9bdd6;
 }
-.nav__link--teachers:hover { background: var(--navy-2); color: var(--white); }
+.nav__link--teachers:hover { background: var(--navy-tint); color: var(--navy); border-color: var(--navy-2); }
 /* 停在膠囊自己的頁面時，.nav__item.is-active 的紅字會落在深色底上讀不出來。
    選取器要比 .nav__item.is-active > .nav__link 更明確才蓋得過去。 */
-.nav__item.is-active > .nav__link--pill { color: var(--white); }
+.nav__item.is-active > .nav__link--member { color: var(--white); }
+.nav__item.is-active > .nav__link--teachers { color: var(--navy); }
 
 /* 1025–1080px 是桌機導覽最窄的區間（1024 以下換成漢堡選單）。
    兩顆維持等寬，但整體縮一號，否則「棋士專區」會被擠出頁首右緣。
@@ -997,7 +1029,7 @@ body.member-area { background: var(--paper-2); }
 /* ---------- 後台外框 ---------- */
 .admin-bar {
   position: sticky; top: 0; z-index: 50;
-  background: var(--ink); color: #e7e3dc;
+  background: var(--ink); color: var(--on-dark);
   border-bottom: 1px solid rgba(255, 255, 255, .12);
 }
 .admin-bar__inner {
@@ -1008,8 +1040,8 @@ body.member-area { background: var(--paper-2); }
   font-family: var(--serif); font-size: 1.02rem; color: var(--white);
   text-decoration: none !important; margin-right: auto;
 }
-.admin-bar__who { font-size: .86rem; color: #b9bcc3; }
-.admin-bar a.admin-bar__link { color: #e7e3dc; font-size: .88rem; text-decoration: none; }
+.admin-bar__who { font-size: .86rem; color: var(--on-dark-2); }
+.admin-bar a.admin-bar__link { color: var(--on-dark); font-size: .88rem; text-decoration: none; }
 .admin-bar a.admin-bar__link:hover { color: var(--white); text-decoration: underline; }
 
 .admin-wrap { max-width: 1120px; margin: 0 auto; padding: 36px 20px 64px; }
