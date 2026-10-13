@@ -106,16 +106,16 @@
       <div>
         <span class="eyebrow" style="color:var(--wood)">About</span>
         <h2>建立一個能讓棋士專注於棋的環境</h2>
-        <p style="color:#b9bcc3">
+        <p style="color:var(--on-dark-2)">
           本會自 2008 年成立以來，持續完善職業棋士的段位制度、賽事規章與權益保障，
           並以穩定的年度賽事體系，讓職業棋士得以長期投入競技生涯。
         </p>
-        <p style="color:#b9bcc3">
-          同時，我們透過校園推廣、少年研習與國際交流，讓圍棋在台灣紮根、與世界接軌。
+        <p style="color:var(--on-dark-2)">
+          我們透過交流，讓圍棋在台灣紮根、與世界接軌。
         </p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:1.6rem">
           <a class="btn btn-light" href="about/index.html">協會簡介</a>
-          <a class="btn btn-ghost" style="color:#e7e3dc;border-color:rgba(255,255,255,.25)" href="about/milestones.html">大事紀</a>
+          <a class="btn btn-ghost" style="color:var(--on-dark);border-color:rgba(255,255,255,.25)" href="about/milestones.html">大事紀</a>
         </div>
       </div>
       <div>
@@ -228,7 +228,7 @@
   C.load('milestones').then(function (d) {
     mEl.innerHTML = (d.items || []).slice(0, 4).map(function (m) {
       return '<li><span class="timeline__year">' + C.esc(m.year) + '</span>' +
-        '<span style="color:#b9bcc3;font-size:.92rem">' + C.esc(m.text) + '</span></li>';
+        '<span style="color:var(--on-dark-2);font-size:.92rem">' + C.esc(m.text) + '</span></li>';
     }).join('');
   }).catch(function (e) { C.fail(mEl, e); });
 
