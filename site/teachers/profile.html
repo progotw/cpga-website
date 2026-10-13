@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 </head>
 <body data-nav="teachers">
 <div id="site-header"></div>
@@ -86,6 +87,8 @@
           </span>
         </label>
       </div>
+
+      <div id="tsHost" class="mt-2"></div>
 
       <button class="btn btn-accent" type="submit" id="sendBtn">送出詢問</button>
       <p class="mb-0 mt-2" id="formState" style="font-size:.9rem"></p>
@@ -227,17 +230,26 @@
         return;
       }
 
+      var token = (window.turnstile && tsWidget !== null)
+        ? window.turnstile.getResponse(tsWidget) : '';
+      if (!token) {
+        state.style.color = 'var(--accent)';
+        state.textContent = '請先完成人機驗證（若沒有看到驗證元件，請重新整理頁面）。';
+        return;
+      }
+
       btn.disabled = true;
       state.style.color = '';
       state.textContent = '送出中…';
 
-      window.CPGA_SB.insert('messages', {
-        kind: 'teacher_enquiry',
+      /* 不再由瀏覽器直接寫入資料表：改送到 enquiry 函式，
+         由它驗過 Turnstile 再以 service_role 寫入。 */
+      window.CPGA_SB.callFunction('enquiry', {
+        token: token,
         teacher_player_id: teacher.id,
         teacher_name: teacher.name,
         from_name: val('sName'),
         from_contact: val('sContact'),
-        subject: '向 ' + teacher.name + ' 老師提出詢問',
         body: val('sMsg'),
         meta: { 目前程度: val('sLevel'), 希望上課方式: val('sMode') }
       }).then(function () {
@@ -248,8 +260,33 @@
         state.textContent = '送出失敗，請改用上方的聯絡管道直接聯繫老師。（' +
           esc(err.message) + '）';
         btn.disabled = false;
+        /* 憑證只能用一次，失敗後要換一張新的才能重送 */
+        if (window.turnstile && tsWidget !== null) window.turnstile.reset(tsWidget);
       });
     });
+
+    /* ---- 人機驗證 ----
+       表單一開始藏在 #formSlot、之後才搬進版面，隱藏容器裡的元件不一定畫得出來，
+       所以等它就定位再手動渲染，不用自動偵測。 */
+    var tsWidget = null;
+    var siteKey = (window.CPGA_SB && window.CPGA_SB.turnstileSiteKey) || '';
+    if (!siteKey) {
+      btn.disabled = true;
+      state.style.color = 'var(--accent)';
+      state.textContent = '線上詢問表單暫停使用，請改用上方的聯絡管道直接聯繫老師。';
+    } else {
+      (function render(tries) {
+        if (window.turnstile && window.turnstile.render) {
+          tsWidget = window.turnstile.render('#tsHost', { sitekey: siteKey });
+        } else if (tries > 0) {
+          setTimeout(function () { render(tries - 1); }, 300);
+        } else {
+          btn.disabled = true;
+          state.style.color = 'var(--accent)';
+          state.textContent = '驗證元件載入失敗，請重新整理頁面，或改用上方的聯絡管道。';
+        }
+      })(20);
+    }
   }
 
   }).catch(function (err) {
