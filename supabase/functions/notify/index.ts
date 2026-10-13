@@ -16,7 +16,7 @@
 //                    協會的網域（cpga.org.tw）驗證完成後改成自己的地址。
 
 const RESEND = 'https://api.resend.com/emails';
-const ADMIN_INBOX = 'https://cpga-website.progotw.workers.dev/admin/inbox.html';
+const ADMIN_INBOX = 'https://cpga.org.tw/admin/inbox.html';
 
 const KIND_LABEL: Record<string, string> = {
   teacher_enquiry: '學生對老師的詢問',
