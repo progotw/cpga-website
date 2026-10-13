@@ -1,102 +1,13 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-02T20:36:53+08:00",
+  "generated": "2026-10-13T20:43:31+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
-    "from": "2026-10-02",
-    "to": "2026-11-30"
+    "from": "2026-10-13",
+    "to": "2026-12-11"
   },
-  "count": 16,
+  "count": 17,
   "events": [
-    {
-      "date": "2026-10-05",
-      "weekday": 0,
-      "title": "國手賽16強",
-      "name": "國手賽",
-      "round": "16強",
-      "series": "國手賽",
-      "series_slot": 3,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-10-06",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NGJiNWFjNnI4YWkxYWxhMjEya2w0bnNqdmQgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-10-06",
-      "weekday": 1,
-      "title": "19屆棋王循環圈第5輪",
-      "name": "棋王循環圈",
-      "round": "19屆 第5輪",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-10-07",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NG4xZTIxcXAxZzI3NHNiOXUxbXQ0bjEwYmEgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-10-06",
-      "weekday": 1,
-      "title": "20屆棋王初賽2(上下午)",
-      "name": "棋王",
-      "round": "20屆 初賽2",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "10:00",
-        "14:00"
-      ],
-      "time": "10:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-10-07",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NDU4cHRsc2d2dnE3NzJjaTBocmdqMW90ZjggNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-10-08",
-      "weekday": 3,
-      "title": "玄樂盃本賽8強",
-      "name": "玄樂盃",
-      "round": "本賽8強",
-      "series": "玄樂杯",
-      "series_slot": 1,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-10-09",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NjFsZGtubmE0OHZma2N2MnFybGRnamtxb24gNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
     {
       "date": "2026-10-13",
       "weekday": 1,
@@ -319,6 +230,28 @@
       ]
     },
     {
+      "date": "2026-11-06",
+      "weekday": 4,
+      "title": "中環碁聖決賽第1場",
+      "name": "中環碁聖",
+      "round": "決賽第1場",
+      "series": "中環碁聖",
+      "series_slot": 2,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-11-07",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=MGxhdjVncXA5NnE4a3IxdWo3c3ZrbmluaDIgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
       "date": "2026-11-09",
       "weekday": 0,
       "title": "國手賽4強",
@@ -341,6 +274,28 @@
       ]
     },
     {
+      "date": "2026-11-13",
+      "weekday": 4,
+      "title": "中環碁聖決賽第2場",
+      "name": "中環碁聖",
+      "round": "決賽第2場",
+      "series": "中環碁聖",
+      "series_slot": 2,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-11-14",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=NTVyaGRyZW4zZmZ1YWxqc2djaWYxMWZuYmggNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
       "date": "2026-11-16",
       "weekday": 0,
       "title": "國手賽挑戰者決定賽",
@@ -358,6 +313,72 @@
       "end_date": "2026-11-17",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=NTlxMmJiNmNhaTF0ZmJiODlvODltc2lhNzUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "weekday": 4,
+      "title": "中環碁聖決賽第3場",
+      "name": "中環碁聖",
+      "round": "決賽第3場",
+      "series": "中環碁聖",
+      "series_slot": 2,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-11-21",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=NzcxdDJyMmM0cWZndnJuaGdxbXI1bnJ2M3IgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "weekday": 0,
+      "title": "國手挑戰賽第1局",
+      "name": "國手",
+      "round": "挑戰賽第1局",
+      "series": "國手",
+      "series_slot": 5,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-11-24",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=MTVvZjNkbWs4MHYxa3Zza2pra2RqamJidXQgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-11-30",
+      "weekday": 0,
+      "title": "國手挑戰賽第2局",
+      "name": "國手",
+      "round": "挑戰賽第2局",
+      "series": "國手",
+      "series_slot": 5,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-12-01",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=MmkxNGdvNzYwYTBtc2VzbDBpOTd1czA0cHYgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]

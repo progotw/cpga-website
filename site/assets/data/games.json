@@ -1,9 +1,9 @@
 {
  "schema_version": 1,
- "generated": "2026-10-02T12:36:53+00:00",
+ "generated": "2026-10-13T12:43:31+00:00",
  "source": "海峰棋院 賽事",
  "source_url": "https://www.haifong.org",
- "count": 79,
+ "count": 80,
  "games": [
   {
    "category": "世界賽",
@@ -547,6 +547,16 @@
   },
   {
    "category": "業餘賽",
+   "name": "大專院校圍棋交流團體邀請賽",
+   "period": "2026.10.04~2026.10.04",
+   "champLabel": "",
+   "champion": "",
+   "note": "",
+   "url": "https://www.haifong.org/game/classes/9CDE9D68E157C521871648FB3FF0B574",
+   "active": true
+  },
+  {
+   "category": "業餘賽",
    "name": "女子圍棋公開賽",
    "period": "2026.07.04~1999.10.17",
    "champLabel": "",
@@ -568,7 +578,7 @@
   {
    "category": "業餘賽",
    "name": "大學生圍棋十傑賽",
-   "period": "2025.11.29~2014.10.05",
+   "period": "2026.11.07~2014.10.05",
    "champLabel": "",
    "champion": "",
    "note": "",

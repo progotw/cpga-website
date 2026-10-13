@@ -1,10 +1,90 @@
 {
  "schema_version": 1,
- "generated": "2026-10-02T12:36:53+00:00",
+ "generated": "2026-10-13T12:43:31+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "3D4CDB7FE80F551905080B38148A060A",
+   "date": "2026-10-13",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【棋王循環圈｜劫爭定乾坤！陳詩淵化解楊博崴猛攻，中盤收下第3勝】",
+   "url": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A"
+  },
+  {
+   "id": "9A86571D0FC95663C85655CD48943A7B",
+   "date": "2026-10-10",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "【棋編碎碎念：你聽到落子 她聽見思念】",
+   "url": "https://www.haifong.org/news/content/9A86571D0FC95663C85655CD48943A7B"
+  },
+  {
+   "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
+   "date": "2026-10-08",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【玄樂盃4強誕生！許皓鋐、賴均輔、陳詩淵、簡靖庭，誰會拿下首屆冠軍？】",
+   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
+  },
+  {
+   "id": "0A60C8925A7E9EE8B16C465C57BA8B07",
+   "date": "2026-10-08",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【升段公告 - 林士勛八段晉升職業九段】",
+   "url": "https://www.haifong.org/news/content/0A60C8925A7E9EE8B16C465C57BA8B07"
+  },
+  {
+   "id": "CB1A6F48F26CB78CD83823379389CFDE",
+   "date": "2026-10-08",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【升段公告 - 林鈺娗二段晉升職業三段】",
+   "url": "https://www.haifong.org/news/content/CB1A6F48F26CB78CD83823379389CFDE"
+  },
+  {
+   "id": "45AE43CECB40863461D2D73FBEC0330B",
+   "date": "2026-10-06",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "棋王之路 》世界亞軍上演二度對決 棋王複賽27強率先誕生",
+   "url": "https://www.haifong.org/news/content/45AE43CECB40863461D2D73FBEC0330B"
+  },
+  {
+   "id": "3451570A26F89280F60B1C54E340EC15",
+   "date": "2026-10-05",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "中環國手賽16強》賴均輔中盤擊退陳映嘉 13歲鄭予皓闖進八強",
+   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15"
+  },
+  {
+   "id": "5CE948D602E3F3D5C6DDC48B3145E500",
+   "date": "2026-10-05",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【2026年大學生圍棋十傑賽 簡章】",
+   "url": "https://www.haifong.org/news/content/5CE948D602E3F3D5C6DDC48B3145E500"
+  },
+  {
+   "id": "6251682609A359E3A26DAEB6CA285D97",
+   "date": "2026-10-04",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【2026大專院校圍棋交流團體邀請賽｜佛光大學奪冠】",
+   "url": "https://www.haifong.org/news/content/6251682609A359E3A26DAEB6CA285D97"
+  },
+  {
+   "id": "DF87A054E0A9B144A315EDC67F7C815E",
+   "date": "2026-10-03",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "【棋編碎碎念：感謝曾走過低谷】",
+   "url": "https://www.haifong.org/news/content/DF87A054E0A9B144A315EDC67F7C815E"
+  },
   {
    "id": "71C2277A75C1387BCABC4FA23AFD2080",
    "date": "2026-10-02",
@@ -12,14 +92,6 @@
    "cat": "match",
    "title": "【首屆IBK世界女子圍棋大師賽｜楊子萱今晨出戰，強碰韓國名將吳政娥】",
    "url": "https://www.haifong.org/news/content/71C2277A75C1387BCABC4FA23AFD2080"
-  },
-  {
-   "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
-   "date": "2026-10-01",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "玄樂盃8強名單有誰晉級？10/1十六強戰報一次看",
-   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
   },
   {
    "id": "1367B9A2EE0C7DAED6CCC13FF066BDAD",
@@ -46,28 +118,12 @@
    "url": "https://www.haifong.org/news/content/82492BD11A295B6E346031BBB8BAA112"
   },
   {
-   "id": "3D4CDB7FE80F551905080B38148A060A",
-   "date": "2026-09-29",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【棋王循環圈第四輪：賴均輔讀秒勝率5%逆轉，五連勝獨居榜首】",
-   "url": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A"
-  },
-  {
    "id": "C37E70744FA4849172A729CBADBBA6BE",
    "date": "2026-09-29",
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "圍棋／世界雙人圍棋最強戰 許皓鋐、楊子萱奪亞軍",
    "url": "https://www.haifong.org/news/content/C37E70744FA4849172A729CBADBBA6BE"
-  },
-  {
-   "id": "45AE43CECB40863461D2D73FBEC0330B",
-   "date": "2026-09-29",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "第20屆棋王初賽首日戰報｜左半區勝部七強出爐　楊子萱轉戰敗部、13歲陳映嘉連勝晉級",
-   "url": "https://www.haifong.org/news/content/45AE43CECB40863461D2D73FBEC0330B"
   },
   {
    "id": "3577E9ECCE104DEBC7C317242491D435",
@@ -100,14 +156,6 @@
    "cat": "notice",
    "title": "【升段公告 - 楊博崴七段晉升職業八段】",
    "url": "https://www.haifong.org/news/content/DB16D09B84265FE036A742C4DA04A910"
-  },
-  {
-   "id": "3451570A26F89280F60B1C54E340EC15",
-   "date": "2026-09-21",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "中環國手賽三回戰》13歲鄭予皓、陳映嘉戰勝強手 碁聖賴均輔官子逆轉林立祥九段",
-   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15"
   },
   {
    "id": "C10B525E1175C72C68708BC2C87E9A35",
@@ -916,54 +964,6 @@
    "cat": "notice",
    "title": "中華職業圍棋協會 參賽棋士紀律規範",
    "url": "https://www.haifong.org/news/content/FF8FCCD2B0E39D82ADE499F9BC36DB11"
-  },
-  {
-   "id": "5124041E7DF1763C2410E0E21D4FA07D",
-   "date": "2026-04-24",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "中華職業圍棋協會 對局管理規定",
-   "url": "https://www.haifong.org/news/content/5124041E7DF1763C2410E0E21D4FA07D"
-  },
-  {
-   "id": "A4B3496B6CE82D8F6807EF322D79D0D9",
-   "date": "2026-04-23",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【名人賽冠亞軍對決出爐！許皓鋐、王元均直落二對手，時隔五年會師名人決賽】",
-   "url": "https://www.haifong.org/news/content/A4B3496B6CE82D8F6807EF322D79D0D9"
-  },
-  {
-   "id": "EC2101C33C8760B423D65C4CE3E5C847",
-   "date": "2026-04-23",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "第7屆快棋爭霸戰 抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/EC2101C33C8760B423D65C4CE3E5C847"
-  },
-  {
-   "id": "320A4B8265668D2944D67D9A7BCFBC66",
-   "date": "2026-04-22",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "第31屆LG杯「朝鮮日報世界棋王戰」台灣代表選拔初選成績",
-   "url": "https://www.haifong.org/news/content/320A4B8265668D2944D67D9A7BCFBC66"
-  },
-  {
-   "id": "EB8076EE1328C542D64E2A8904FD6206",
-   "date": "2026-04-22",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【2026 社會組 職業棋士甄選辦法】",
-   "url": "https://www.haifong.org/news/content/EB8076EE1328C542D64E2A8904FD6206"
-  },
-  {
-   "id": "5976033F7A2DA01A8ED17AAFAE6AED43",
-   "date": "2026-04-22",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【2026 院生組 職業棋士甄選辦法】",
-   "url": "https://www.haifong.org/news/content/5976033F7A2DA01A8ED17AAFAE6AED43"
   }
  ]
 }
