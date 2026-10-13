@@ -109,7 +109,7 @@
           '<div class="footer-grid">' +
             '<div class="footer-brand">' +
               '<img class="footer-logo" src="' + LOGO_SRC + '" alt="中華職業圍棋協會">' +
-              '<p>推動職業圍棋發展，健全棋士制度與賽事環境，<br>培育新生代棋士並促進國際交流。</p>' +
+              '<p>推動職業圍棋發展，健全棋士制度與賽事環境，<br>培育新生代棋士並促進世界交流。</p>' +
             '</div>' +
             '<div class="footer-col"><h4>關於</h4><ul>' +
               '<li><a href="' + ROOT + 'about/index.html">協會簡介</a></li>' +
