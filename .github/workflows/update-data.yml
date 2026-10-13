@@ -22,28 +22,46 @@ jobs:
       - name: 安裝相依套件
         run: pip install --quiet pillow
 
-      # 任何一支爬蟲判定資料異常就會以非零狀態結束，整個工作流程失敗並寄信通知，
-      # 既有的 JSON 不會被覆蓋。
+      # 每支爬蟲判定資料異常時會以非零狀態結束，既有的 JSON 不會被壞資料覆蓋。
+      #
+      # 但失敗不能中斷後面的步驟：原本一支失敗就跳過「提交變更」，
+      # 連其他抓成功的資料也一起丟掉——2026-10-03 起棋士名錄連續失敗十天，
+      # 新聞其實每天都抓到了，卻一次都沒被提交。
+      #
+      # 所以改成：每支都跑完、有成果就提交，最後再統一把失敗回報出來讓這次執行變紅。
       - name: 抓取賽程行事曆
+        id: schedule
+        continue-on-error: true
         run: python scripts/scrape_schedule.py site/assets/data/schedule.json --days 60
 
       - name: 抓取最新消息與賽事
+        id: news
+        continue-on-error: true
         run: python scripts/scrape_news_games.py site
 
       - name: 抓取棋士名錄
+        id: players
+        continue-on-error: true
         run: python scripts/scrape_players.py site/assets/data/players.json
 
       # 對戰組合取自抽籤公告，必須在 scrape_news_games 之後執行
       - name: 抓取各輪對戰組合
+        id: pairings
+        continue-on-error: true
         run: python scripts/scrape_pairings.py site
 
       - name: 抓取精銳隊名單
+        id: elite
+        continue-on-error: true
         run: python scripts/scrape_elite.py site/assets/data/elite.json
 
       - name: 下載新增的棋士照片
+        id: photos
+        continue-on-error: true
         run: python scripts/fetch_photos.py site
 
       - name: 提交變更
+        if: always()
         run: |
           git config user.name  "cpga-data-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -54,3 +72,28 @@ jobs:
             git commit -m "自動更新網站資料（$(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M')）"
             git push
           fi
+
+      # 放在提交之後：先把抓到的資料存下來，再讓這次執行顯示為失敗。
+      # 不這樣做的話，一支爬蟲壞掉會靜默地讓整站資料停止更新。
+      - name: 回報爬取失敗
+        if: always()
+        env:
+          R_賽程行事曆: ${{ steps.schedule.outcome }}
+          R_最新消息:   ${{ steps.news.outcome }}
+          R_棋士名錄:   ${{ steps.players.outcome }}
+          R_對戰組合:   ${{ steps.pairings.outcome }}
+          R_精銳隊:     ${{ steps.elite.outcome }}
+          R_棋士照片:   ${{ steps.photos.outcome }}
+        run: |
+          bad=0
+          for name in 賽程行事曆 最新消息 棋士名錄 對戰組合 精銳隊 棋士照片; do
+            var="R_$name"
+            result="${!var}"
+            if [ "$result" != "success" ]; then
+              echo "::error title=$name 抓取失敗::結果為 $result，請檢查上方該步驟的記錄"
+              bad=1
+            else
+              echo "$name 正常"
+            fi
+          done
+          exit $bad
