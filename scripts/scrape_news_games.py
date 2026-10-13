@@ -6,7 +6,7 @@ import urllib.request, re, json, time, sys, io, html, datetime, os
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-UA = {'User-Agent': 'Mozilla/5.0 (compatible; CPGA-site-builder/1.0)'}
+UA = {'User-Agent': 'CPGA-site-builder/1.1 (+https://cpga.org.tw; CPGA official site data sync)'}
 BASE = 'https://www.haifong.org'
 
 # 分類對應到網站既有的四個分類

@@ -9,7 +9,7 @@ import urllib.request, re, json, time, sys, html, io, datetime
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 URL = 'https://www.haifong.org/elite'
-UA = {'User-Agent': 'Mozilla/5.0 (compatible; CPGA-site-builder/1.0)'}
+UA = {'User-Agent': 'CPGA-site-builder/1.1 (+https://cpga.org.tw; CPGA official site data sync)'}
 
 # 資料異常就中止，不要用壞資料覆蓋好資料。
 # 2026 年為 2 位教練 + 8 位精英 + 7 位新銳 = 17 人，門檻抓寬一點以容納名單增減。

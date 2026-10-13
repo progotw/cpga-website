@@ -136,7 +136,7 @@ def event_link(uid):
 def fetch_ics(calendar_id):
     enc = urllib.parse.quote(calendar_id, safe='')
     url = f'https://calendar.google.com/calendar/ical/{enc}/public/basic.ics'
-    req = urllib.request.Request(url, headers={'User-Agent': 'CPGA-site-builder/1.0'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'CPGA-site-builder/1.1 (+https://cpga.org.tw; CPGA official site data sync)'})
     return urllib.request.urlopen(req, timeout=60).read().decode('utf-8', 'replace')
 
 

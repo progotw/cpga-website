@@ -14,7 +14,7 @@ from PIL import Image
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 MAX = (600, 750)
-UA = {'User-Agent': 'CPGA-site-builder/1.0'}
+UA = {'User-Agent': 'CPGA-site-builder/1.1 (+https://cpga.org.tw; CPGA official site data sync)'}
 
 
 def main():

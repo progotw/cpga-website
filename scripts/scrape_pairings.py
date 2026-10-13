@@ -30,7 +30,7 @@ JSON，格式見 docs/賽程資料交換規格.md），會與公告解析的結�
 import os, sys, io, re, json, time, html, datetime
 import urllib.request, urllib.error
 
-UA = {'User-Agent': 'Mozilla/5.0 (compatible; CPGA-site-builder/1.0)'}
+UA = {'User-Agent': 'CPGA-site-builder/1.1 (+https://cpga.org.tw; CPGA official site data sync)'}
 
 # 解析不到任何對局就中止，不要用空資料覆蓋既有檔案
 MIN_PAIRS = 10

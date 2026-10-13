@@ -7,7 +7,9 @@ import urllib.request, re, json, time, sys, html, io, datetime
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 LIST_URL = 'https://www.haifong.org/profession'
-UA = {'User-Agent': 'Mozilla/5.0 (compatible; CPGA-site-builder/1.0)'}
+# 誠實標示身分並留下聯絡方式：對方的維運人員看到異常流量時，
+# 才知道是誰、找得到人，不必先當成攻擊處理。
+UA = {'User-Agent': 'CPGA-site-builder/1.1 (+https://cpga.org.tw; CPGA official site data sync)'}
 RANK_ORDER = ['九段', '八段', '七段', '六段', '五段', '四段', '三段', '二段', '初段']
 
 
@@ -19,7 +21,7 @@ def get(url, tries=3):
         except Exception as e:
             if i == tries - 1:
                 raise
-            time.sleep(2)
+            time.sleep(5 * (i + 1))   # 遞增退讓，不要在對方不穩時連續撞
 
 
 def clean_html(s):
@@ -53,12 +55,23 @@ for m in re.finditer(r'href="(https://www\.haifong\.org/profession/venue/([A-Za-
 print(f'找到 {len(ids)} 位棋士頁面')
 
 # ---- 2. 逐頁抓取 ----
+# 連續失敗代表對方異常或我們被擋，繼續重試只會讓情況更糟。
+# 2026-10-03 起這支程式每天硬撞 139 頁、重試三次、跑滿 104 分鐘，
+# 觸發了海峰的資安機制——那是把自己變成攻擊流量。
+MAX_CONSECUTIVE_FAILS = 8
+
 players = []
+consecutive_fails = 0
 for n, (pid, url) in enumerate(ids, 1):
     try:
         h = get(url)
+        consecutive_fails = 0
     except Exception as e:
+        consecutive_fails += 1
         print(f'  [{n}/{len(ids)}] {pid} 失敗: {e}')
+        if consecutive_fails >= MAX_CONSECUTIVE_FAILS:
+            sys.exit(f'\n中止：連續 {consecutive_fails} 頁失敗，判定來源異常或請求被拒。'
+                     f'\n已停止抓取，既有資料未被覆蓋。請先確認原站狀況再重跑。')
         continue
 
     m = re.search(r'(?is)<section class="Chessplayer".*?<h3>\s*(.*?)\s*<span>\s*(.*?)\s*</span>\s*</h3>', h)
@@ -116,7 +129,9 @@ for n, (pid, url) in enumerate(ids, 1):
     })
     if n % 20 == 0 or n == len(ids):
         print(f'  進度 {n}/{len(ids)}')
-    time.sleep(0.25)
+    # 1 秒一頁。139 頁約 2.5 分鐘，對方不會看成突波；
+    # 這是每天跑一次的排程，快沒有意義。
+    time.sleep(1.0)
 
 # ---- 3. 依段位排序 ----
 # 安全門檻：抓到的人數明顯偏少通常代表原站改版、解析失效。
