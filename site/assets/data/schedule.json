@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-13T20:43:31+08:00",
+  "generated": "2026-10-13T21:42:46+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
     "from": "2026-10-13",
@@ -8,6 +8,28 @@
   },
   "count": 17,
   "events": [
+    {
+      "date": "2026-10-13",
+      "weekday": 1,
+      "title": "19屆棋王循環圈第6輪",
+      "name": "棋王循環圈",
+      "round": "19屆 第6輪",
+      "series": "棋王循環圈",
+      "series_slot": 0,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-10-14",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=NWFibGtjMTJxdmRtcGxqMzBxNm9jMWd1czcgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
     {
       "date": "2026-10-13",
       "weekday": 1,
@@ -27,28 +49,6 @@
       "end_date": "2026-10-14",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=MnJqMjN2NDY3bXUxbDBrdTdodDU4djBhNWYgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-10-13",
-      "weekday": 1,
-      "title": "19屆棋王循環圈第6輪",
-      "name": "棋王循環圈",
-      "round": "19屆 第6輪",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-10-14",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NWFibGtjMTJxdmRtcGxqMzBxNm9jMWd1czcgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
@@ -149,11 +149,9 @@
       "round": "",
       "series": "北區長青賽",
       "series_slot": 6,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
+      "sessions": [],
+      "time": null,
+      "time_inferred": false,
       "end_time": null,
       "all_day": true,
       "end_date": "2026-10-25",
@@ -345,8 +343,8 @@
       "title": "國手挑戰賽第1局",
       "name": "國手",
       "round": "挑戰賽第1局",
-      "series": "國手",
-      "series_slot": 5,
+      "series": "國手賽",
+      "series_slot": 3,
       "sessions": [
         "11:00"
       ],
@@ -367,8 +365,8 @@
       "title": "國手挑戰賽第2局",
       "name": "國手",
       "round": "挑戰賽第2局",
-      "series": "國手",
-      "series_slot": 5,
+      "series": "國手賽",
+      "series_slot": 3,
       "sessions": [
         "11:00"
       ],

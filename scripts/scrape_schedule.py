@@ -16,14 +16,18 @@ JSON_SCHEMA_VERSION = 1
 TZ = dt.timezone(dt.timedelta(hours=8))  # Asia/Taipei
 
 # 開賽時間規則（由協會確認）：
-#   一律 11:00；標題註明「(上午)」「(下午)」者為當天兩場，分別 10:00 與 14:00。
+#   職業賽一律 11:00；標題註明「(上午)」「(下午)」者為當天兩場，分別 10:00 與 14:00。
+#
+# 這個慣例只適用於 SERIES_RULES 認得的職業賽事。業餘賽（例如北區長青賽）
+# 的開賽時間各辦各的，套 11:00 等於憑空生出一個資料沒有的時間，
+# 反而會害人算錯出門時間——寧可空著。
 DEFAULT_TIME = '11:00'
 
 SERIES_RULES = [
     (r'棋王(?:循環圈)?', '棋王循環圈'),
     (r'玄樂[杯盃]', '玄樂杯'),
     (r'(?:中環)?碁聖賽?', '中環碁聖'),
-    (r'(?:中環)?國手賽', '國手賽'),
+    (r'(?:中環)?國手賽?', '國手賽'),      # 日曆上有時只寫「國手」
 ]
 SERIES_SLOTS = 8
 ROUND_MARKER = re.compile(r'第|本賽|預賽|複賽|決賽|挑戰|循環|\d')
@@ -64,6 +68,11 @@ def split_title(title):
     return title, ''
 
 
+def is_pro_series(title):
+    """標題是否屬於有開賽時間慣例的職業賽系列。"""
+    return any(re.search(pattern, title) for pattern, _label in SERIES_RULES)
+
+
 def series_of(title):
     for pattern, label in SERIES_RULES:
         if re.search(pattern, title):
@@ -89,7 +98,8 @@ def infer_times(events):
     """為整天行程補上開賽時間。
 
     標題註明「(上下午)」→ 當天兩局，10:00 與 14:00；
-    「(上午)」→ 10:00、「(下午)」→ 14:00；其餘一律 11:00。
+    「(上午)」→ 10:00、「(下午)」→ 14:00。這些是日曆上寫明的，照辦。
+    沒有註明時，只有職業賽系列才套用 11:00 的慣例；業餘賽留空不猜。
     跨多天的行程（例如為期一週的活動）不適用單日開賽時間，維持「整天」。
     日曆上本來就填了時間的行程不受影響，render_json 會優先採用真實時間。
     """
@@ -98,7 +108,11 @@ def infer_times(events):
             continue
         if (e['end'].date() - e['start'].date()).days > 1:
             continue
-        e['session_hint'] = sessions_of(e['summary']) or [DEFAULT_TIME]
+        hint = sessions_of(e['summary'])
+        if not hint and is_pro_series(e['summary']):
+            hint = [DEFAULT_TIME]
+        if hint:
+            e['session_hint'] = hint
     return events
 
 
