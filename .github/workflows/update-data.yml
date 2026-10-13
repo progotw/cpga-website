@@ -5,6 +5,11 @@ on:
   schedule:
     - cron: '17 12 * * *'
   workflow_dispatch:
+    inputs:
+      players:
+        description: '要重抓的棋士（姓名或 id，多位用逗號分隔；留空＝照常輪替）'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -39,10 +44,23 @@ jobs:
         continue-on-error: true
         run: python scripts/scrape_news_games.py site
 
+      # 名單頁每天抓，所以升段、新進棋士隔天就會反映。
+      # 個人頁（戰績、簡介）只在秘書處指名時重抓，平常靠 28 天輪替保底。
+      #
+      # 輸入值用環境變數傳遞，不要直接內插進 shell——
+      # ${{ }} 會在 shell 解析前就被替換成字面文字，等於可被注入指令。
       - name: 抓取棋士名錄
         id: players
         continue-on-error: true
-        run: python scripts/scrape_players.py site/assets/data/players.json
+        env:
+          PLAYERS: ${{ inputs.players }}
+        run: |
+          if [ -n "$PLAYERS" ]; then
+            echo "指定重抓：$PLAYERS"
+            python scripts/scrape_players.py site/assets/data/players.json --only "$PLAYERS"
+          else
+            python scripts/scrape_players.py site/assets/data/players.json
+          fi
 
       # 對戰組合取自抽籤公告，必須在 scrape_news_games 之後執行
       - name: 抓取各輪對戰組合

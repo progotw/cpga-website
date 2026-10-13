@@ -43,16 +43,96 @@ def text_of(s):
     return html.unescape(s).replace('\xa0', ' ').strip()
 
 
+DEST = next((a for a in sys.argv[1:] if not a.startswith('-')), 'players.json')
+FULL = '--full' in sys.argv
+ONLY = ''
+for i, a in enumerate(sys.argv):
+    if a == '--only' and i + 1 < len(sys.argv):
+        ONLY = sys.argv[i + 1]
+
+# 個人頁的保底輪替週期（天）。來源的年度成績是每月一號批次更新的，
+# 平常靠秘書處通知即可，這個輪替只是避免有人忘了通知而資料停滯。
+ROTATE_DAYS = 28
+
+
 # ---- 1. 取得名單 ----
+# 列表頁一次就給出 id、姓名、段位、照片——那正是名錄頁要顯示的全部內容。
+# 個人頁只多了戰績與簡介，而那些變動很慢。
+# 每天抓 139 個個人頁是 30 倍的無謂流量，2026-10-13 觸發了海峰的資安機制。
 print('抓取名單頁…')
 listing = get(LIST_URL)
-ids = []
+
+roster = []
 seen = set()
-for m in re.finditer(r'href="(https://www\.haifong\.org/profession/venue/([A-Za-z0-9]+))"', listing):
-    if m.group(2) not in seen:
-        seen.add(m.group(2))
-        ids.append((m.group(2), m.group(1)))
-print(f'找到 {len(ids)} 位棋士頁面')
+for block in re.split(r'(?i)<li[\s>]', listing):
+    m = re.search(r'href="(https://www\.haifong\.org/profession/venue/([A-Za-z0-9]+))"', block)
+    if not m or m.group(2) in seen:
+        continue
+    seen.add(m.group(2))
+    mp = re.search(r'background-image:url\(([^)]*)\)', block)
+    mn = re.search(r'(?is)<b>\s*(.*?)\s*</b>', block)
+    mr = re.search(r'(?is)</b>\s*</span>\s*<br\s*/?>\s*<span>\s*(.*?)\s*</span>', block)
+    roster.append({
+        'id': m.group(2),
+        'url': m.group(1),
+        'name': text_of(mn.group(1)) if mn else '',
+        'rank': text_of(mr.group(1)) if mr else '',
+        'photo': (mp.group(1).strip() if mp else ''),
+    })
+print('名單頁解析到 %d 位（姓名 %d、段位 %d）'
+      % (len(roster), sum(1 for r in roster if r['name']), sum(1 for r in roster if r['rank'])))
+
+# 名單頁本身就是門檻：這裡不足代表原站改版，不必再往下打擾對方
+MIN_PLAYERS = 100
+if len(roster) < MIN_PLAYERS:
+    sys.exit('\n中止：名單頁只解析到 %d 位（門檻 %d）。原站可能已改版，既有資料未被覆蓋。'
+             % (len(roster), MIN_PLAYERS))
+
+
+# ---- 1b. 讀入既有資料，決定這次要抓誰 ----
+cache = {}
+try:
+    with io.open(DEST, encoding='utf-8') as f:
+        for rec in json.load(f).get('players', []):
+            cache[rec['id']] = rec
+    print('既有資料 %d 位' % len(cache))
+except Exception:
+    print('沒有既有資料，這次全部抓取')
+    FULL = True
+
+order = [r['id'] for r in roster]
+by_name = {r['name']: r['id'] for r in roster if r['name']}
+
+if FULL:
+    todo = set(order)
+    why = '--full 全部重抓'
+elif ONLY:
+    todo = set()
+    missing = []
+    for key in re.split(r'[,，、\s]+', ONLY.strip()):
+        if not key:
+            continue
+        if key in by_name:
+            todo.add(by_name[key])
+        elif key in seen:
+            todo.add(key)
+        else:
+            missing.append(key)
+    if missing:
+        sys.exit('\n中止：名單中找不到 %s。請確認姓名或棋士 id。' % '、'.join(missing))
+    why = '指定 %d 位' % len(todo)
+else:
+    # 新加入的、或既有資料不完整的，一定要抓
+    todo = {r['id'] for r in roster
+            if r['id'] not in cache or not cache[r['id']].get('season')}
+    # 其餘依日期輪替，當作沒人通知時的保底
+    per_day = max(1, -(-len(order) // ROTATE_DAYS))
+    start = (datetime.date.today().toordinal() * per_day) % max(1, len(order))
+    todo |= {order[(start + k) % len(order)] for k in range(per_day)}
+    why = '新增/不完整 + %d 天輪替' % ROTATE_DAYS
+
+ids = [(r['id'], r['url']) for r in roster if r['id'] in todo]
+print('本次需抓個人頁 %d 頁（%s）' % (len(ids), why))
 
 # ---- 2. 逐頁抓取 ----
 # 連續失敗代表對方異常或我們被擋，繼續重試只會讓情況更糟。
@@ -133,26 +213,63 @@ for n, (pid, url) in enumerate(ids, 1):
     # 這是每天跑一次的排程，快沒有意義。
     time.sleep(1.0)
 
-# ---- 3. 依段位排序 ----
-# 安全門檻：抓到的人數明顯偏少通常代表原站改版、解析失效。
-# 這時寧可中止、保留既有的好資料，也不要用殘缺清單覆蓋上去。
-MIN_PLAYERS = 100
+# ---- 3. 合併並排序 ----
+# 這次抓到的覆蓋舊的，沒抓的沿用既有資料；
+# 姓名、段位、照片一律以名單頁為準，所以升段隔天就會反映。
+fresh = {p['id']: p for p in players}
+players = []
+for r in roster:
+    rec = dict(fresh.get(r['id']) or cache.get(r['id']) or {})
+    if not rec:
+        print('  略過 %s：沒有既有資料也沒抓到' % r['id'])
+        continue
+    rec['id'] = r['id']
+    rec['source'] = r['url']
+    if r['name']:
+        rec['name'] = r['name']
+    if r['rank']:
+        rec['rank'] = r['rank']
+    # photo 存的是 fetch_photos.py 改寫過的本機路徑。只要已經有本機檔就一律保留——
+    # 若覆寫回遠端網址而那支程式剛好失敗，網站會讓每位訪客直接去海峰要 139 張圖。
+    cached_photo = (cache.get(r['id']) or {}).get('photo') or ''
+    if cached_photo.startswith('assets/'):
+        rec['photo'] = cached_photo
+    elif r['photo']:
+        rec['photo'] = r['photo']
+    rec.setdefault('history', [])
+    rec.setdefault('seasonLabel', '')
+    rec.setdefault('season', [])
+    rec.setdefault('body', '')
+    rec.setdefault('links', [])
+    players.append(rec)
+
 if len(players) < MIN_PLAYERS:
-    sys.exit(f'\n中止：只解析到 {len(players)} 位棋士（門檻 {MIN_PLAYERS}，'
-             f'名單頁共 {len(ids)} 個連結）。原站可能已改版，既有資料未被覆蓋。')
+    sys.exit('\n中止：合併後只有 %d 位（門檻 %d）。既有資料未被覆蓋。'
+             % (len(players), MIN_PLAYERS))
 
 players.sort(key=lambda p: (RANK_ORDER.index(p['rank']) if p['rank'] in RANK_ORDER else 99))
 
+# 內容沒變就沿用舊的時間戳，否則每天都會產生一筆沒有意義的提交
+prev_generated = ''
+try:
+    with io.open(DEST, encoding='utf-8') as f:
+        old_doc = json.load(f)
+    prev_generated = old_doc.get('generated', '')
+    unchanged = old_doc.get('players') == players
+except Exception:
+    unchanged = False
+
 out = {
     'schema_version': 1,
-    'generated': datetime.datetime.now().astimezone().isoformat(timespec='seconds'),
+    'generated': prev_generated if (unchanged and prev_generated)
+                 else datetime.datetime.now().astimezone().isoformat(timespec='seconds'),
     'source': '海峰棋院 職業棋士名錄',
     'source_url': LIST_URL,
     'count': len(players),
     'players': players,
 }
 
-dest = sys.argv[1] if len(sys.argv) > 1 else 'players.json'
+dest = DEST
 with open(dest, 'w', encoding='utf-8') as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
 
