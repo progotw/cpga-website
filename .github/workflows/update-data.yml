@@ -95,23 +95,30 @@ jobs:
       # 不這樣做的話，一支爬蟲壞掉會靜默地讓整站資料停止更新。
       - name: 回報爬取失敗
         if: always()
+        # 變數名稱必須是 ASCII：shell 的識別字不接受中文，
+        # 用 R_棋士名錄 這種名字會讓間接展開一律取到空值，
+        # 於是每次執行都被判定為失敗——那個紅燈從頭到尾都是假的。
         env:
-          R_賽程行事曆: ${{ steps.schedule.outcome }}
-          R_最新消息:   ${{ steps.news.outcome }}
-          R_棋士名錄:   ${{ steps.players.outcome }}
-          R_對戰組合:   ${{ steps.pairings.outcome }}
-          R_精銳隊:     ${{ steps.elite.outcome }}
-          R_棋士照片:   ${{ steps.photos.outcome }}
+          R_SCHEDULE: ${{ steps.schedule.outcome }}
+          R_NEWS:     ${{ steps.news.outcome }}
+          R_PLAYERS:  ${{ steps.players.outcome }}
+          R_PAIRINGS: ${{ steps.pairings.outcome }}
+          R_ELITE:    ${{ steps.elite.outcome }}
+          R_PHOTOS:   ${{ steps.photos.outcome }}
         run: |
           bad=0
-          for name in 賽程行事曆 最新消息 棋士名錄 對戰組合 精銳隊 棋士照片; do
-            var="R_$name"
-            result="${!var}"
-            if [ "$result" != "success" ]; then
-              echo "::error title=$name 抓取失敗::結果為 $result，請檢查上方該步驟的記錄"
+          check() {
+            if [ "$2" != "success" ]; then
+              echo "::error title=$1 抓取失敗::結果為 $2，請檢查上方該步驟的記錄"
               bad=1
             else
-              echo "$name 正常"
+              echo "$1 正常"
             fi
-          done
+          }
+          check 賽程行事曆 "$R_SCHEDULE"
+          check 最新消息   "$R_NEWS"
+          check 棋士名錄   "$R_PLAYERS"
+          check 對戰組合   "$R_PAIRINGS"
+          check 精銳隊     "$R_ELITE"
+          check 棋士照片   "$R_PHOTOS"
           exit $bad
