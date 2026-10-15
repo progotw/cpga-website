@@ -1,10 +1,18 @@
 {
  "schema_version": 1,
- "generated": "2026-10-14T12:55:22+00:00",
+ "generated": "2026-10-15T12:58:01+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
+   "date": "2026-10-15",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "首屆玄樂盃決賽　許皓鋐、賴均輔10/22起五番棋爭冠",
+   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
+  },
   {
    "id": "3D4CDB7FE80F551905080B38148A060A",
    "date": "2026-10-13",
@@ -20,14 +28,6 @@
    "cat": "media",
    "title": "【棋編碎碎念：你聽到落子 她聽見思念】",
    "url": "https://www.haifong.org/news/content/9A86571D0FC95663C85655CD48943A7B"
-  },
-  {
-   "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
-   "date": "2026-10-08",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【玄樂盃4強誕生！許皓鋐、賴均輔、陳詩淵、簡靖庭，誰會拿下首屆冠軍？】",
-   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
   },
   {
    "id": "0A60C8925A7E9EE8B16C465C57BA8B07",
