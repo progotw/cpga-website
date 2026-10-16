@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>棋士帳號開通申請｜中華職業圍棋協會</title>
+<meta name="description" content="職業棋士申請開通棋士專區帳號。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+</head>
+<body class="auth-body">
+
+<main class="auth-card" style="max-width:480px">
+  <a class="auth-brand" href="../index.html">
+    <img src="../assets/img/cpga-logo.png" alt="中華職業圍棋協會">
+  </a>
+
+  <h1>棋士帳號開通申請</h1>
+  <p class="muted" style="font-size:.92rem">
+    填寫後由秘書處核對身分，再將帳號與初始密碼交給您。
+  </p>
+
+  <div id="notice" class="mt-2"></div>
+
+  <form id="applyForm" novalidate hidden>
+    <div class="field">
+      <label for="who">您的姓名</label>
+      <select id="who" required>
+        <option value="">載入中…</option>
+      </select>
+      <p class="form-note mb-0">請從名單中選擇，不必手動輸入。</p>
+    </div>
+
+    <div class="field">
+      <label for="email">電子信箱</label>
+      <input type="email" id="email" autocomplete="email" required
+             placeholder="example@gmail.com">
+      <p class="form-note mb-0">這會成為您的登入帳號，也是忘記密碼時的唯一救援管道。</p>
+    </div>
+
+    <div class="field">
+      <label for="phone">聯絡電話（選填）</label>
+      <input type="tel" id="phone" autocomplete="tel" placeholder="方便核對身分時聯繫">
+    </div>
+
+    <div class="field">
+      <label for="note">備註（選填）</label>
+      <textarea id="note" rows="2" maxlength="1000"
+                placeholder="例如：信箱與協會留存的不同，請以此為準。"></textarea>
+    </div>
+
+    <div id="tsHost" class="mt-2"></div>
+
+    <button class="btn btn-accent btn-block mt-2" type="submit" id="sendBtn">送出申請</button>
+    <p class="mb-0 mt-2" id="state" style="font-size:.9rem"></p>
+  </form>
+
+  <div class="callout mt-3">
+    <p class="mb-0" style="font-size:.86rem">
+      您填寫的信箱僅用於開通帳號與協會的必要聯繫，不會公開、也不會提供給第三方。
+      有疑問請洽秘書處 (02) 2702-8898 轉 126。
+    </p>
+  </div>
+
+  <p class="mt-3 mb-0" style="font-size:.9rem">
+    已經有帳號了？<a href="login.html">前往登入</a>
+  </p>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script>
+(function () {
+  var form = document.getElementById('applyForm');
+  var btn = document.getElementById('sendBtn');
+  var state = document.getElementById('state');
+  var sel = document.getElementById('who');
+  var tsWidget = null;
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, html) {
+    document.getElementById('notice').innerHTML = html
+      ? '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+        '"><p class="mb-0" style="font-size:.92rem">' + html + '</p></div>'
+      : '';
+  }
+  function fail(msg) {
+    state.style.color = 'var(--accent)';
+    state.textContent = msg;
+  }
+
+  /* 從名錄載入棋士清單。
+     讓人「選」而不是「打」，送出來就帶著正確的棋士 id，
+     秘書處開通時不必再比對姓名——姓名比對正是最容易出錯的地方。 */
+  fetch('../assets/data/players.json')
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function (d) {
+      var players = d.players || [];
+      var groups = {};
+      players.forEach(function (p) {
+        (groups[p.rank || '其他'] = groups[p.rank || '其他'] || []).push(p);
+      });
+      var html = '<option value="">請選擇…</option>';
+      ['九段','八段','七段','六段','五段','四段','三段','二段','初段','其他']
+        .forEach(function (rank) {
+          var list = groups[rank];
+          if (!list || !list.length) return;
+          /* 用 optgroup 而不是 disabled 的假選項：那種寫法會混在選項裡，
+             .value 還會取到標題文字。 */
+          html += '<optgroup label="' + esc(rank) + '">';
+          list.forEach(function (p) {
+            html += '<option value="' + esc(p.id) + '" data-rank="' + esc(p.rank || '') +
+              '">' + esc(p.name) + '</option>';
+          });
+          html += '</optgroup>';
+        });
+      sel.innerHTML = html;
+      form.hidden = false;
+      initTurnstile();
+    })
+    .catch(function (err) {
+      say('error', '棋士名單載入失敗（' + esc(err.message) +
+        '），請稍後再試，或直接聯繫秘書處。');
+    });
+
+  function initTurnstile() {
+    var siteKey = (window.CPGA_SB && window.CPGA_SB.turnstileSiteKey) || '';
+    if (!siteKey) {
+      btn.disabled = true;
+      fail('線上申請暫停使用，請直接聯繫秘書處開通帳號。');
+      return;
+    }
+    (function render(tries) {
+      if (window.turnstile && window.turnstile.render) {
+        tsWidget = window.turnstile.render('#tsHost', { sitekey: siteKey });
+      } else if (tries > 0) {
+        setTimeout(function () { render(tries - 1); }, 300);
+      } else {
+        btn.disabled = true;
+        fail('驗證元件載入失敗，請重新整理頁面。');
+      }
+    })(20);
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    state.style.color = '';
+    state.textContent = '';
+
+    var id = sel.value;
+    var name = id ? sel.options[sel.selectedIndex].textContent.trim() : '';
+    var rank = id ? (sel.options[sel.selectedIndex].getAttribute('data-rank') || '') : '';
+    var email = document.getElementById('email').value.trim();
+
+    if (!id) { fail('請選擇您的姓名。'); return; }
+    /* 瀏覽器的 type=email 檢查會被略過（novalidate），這裡自己擋一次；
+       伺服器端也會再驗一次，不靠前端把關。 */
+    if (!/^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(email)) {
+      fail('請填寫正確的電子信箱。'); return;
+    }
+
+    var token = (window.turnstile && tsWidget !== null)
+      ? window.turnstile.getResponse(tsWidget) : '';
+    if (!token) { fail('請先完成人機驗證。'); return; }
+
+    btn.disabled = true;
+    state.textContent = '送出中…';
+
+    window.CPGA_SB.callFunction('enquiry', {
+      token: token,
+      kind: 'account_request',
+      from_name: name,
+      from_contact: email,
+      body: document.getElementById('note').value.trim(),
+      meta: {
+        棋士id: id,
+        段位: rank,
+        聯絡電話: document.getElementById('phone').value.trim()
+      }
+    }).then(function () {
+      form.hidden = true;
+      say('', '已收到您的申請，謝謝。秘書處核對身分後會與您聯繫，' +
+        '並提供帳號與初始密碼。<br><a href="../index.html">← 回到官網</a>');
+    }).catch(function (err) {
+      fail('送出失敗：' + err.message + '　請改洽秘書處。');
+      btn.disabled = false;
+      /* 憑證只能用一次，失敗後要換一張新的才能重送 */
+      if (window.turnstile && tsWidget !== null) window.turnstile.reset(tsWidget);
+    });
+  });
+})();
+</script>
+</body>
+</html>

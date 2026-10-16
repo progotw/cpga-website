@@ -1,4 +1,4 @@
-// 老師詢問表單的收件端。
+// 公開表單的收件端：老師詢問，以及棋士帳號開通申請。
 //
 // 原本表單是由瀏覽器直接寫入 messages 資料表：publishable 金鑰就印在網頁
 // 原始碼裡，任何人都能寫迴圈往收件匣灌資料。2026-10-13 實測連送五筆全部成功，
@@ -76,27 +76,59 @@ Deno.serve(async (req) => {
   }
 
   // ---- 2. 驗證內容 ----
-  const from_name = str(body.from_name, 100);
-  const from_contact = str(body.from_contact, 200);
-  const text = str(body.body, 4000);
-  if (!from_name || !from_contact || !text) {
-    return reply(400, { error: '請填寫稱呼、聯絡方式與詢問內容。' });
+  // 同一個入口處理兩種表單。kind 由前端指定，但這裡只認白名單裡的值，
+  // 而且 member_feedback 不在其中——那種訊息必須由登入的棋士自己送出，
+  // 不能從這條匿名管道偽造。
+  const kind = str(body.kind, 32) || 'teacher_enquiry';
+  if (kind !== 'teacher_enquiry' && kind !== 'account_request') {
+    return reply(400, { error: '不支援的表單類型。' });
   }
 
-  const teacher_name = str(body.teacher_name, 100);
-  const row = {
-    kind: 'teacher_enquiry',
-    teacher_player_id: str(body.teacher_player_id, 64),
-    teacher_name,
-    from_name,
-    from_contact,
-    subject: teacher_name ? `向 ${teacher_name} 老師提出詢問` : '老師詢問',
-    body: text,
-    meta: {
-      目前程度: str((body.meta as Record<string, unknown>)?.['目前程度'], 100),
-      希望上課方式: str((body.meta as Record<string, unknown>)?.['希望上課方式'], 100),
-    },
-  };
+  const from_name = str(body.from_name, 100);
+  const from_contact = str(body.from_contact, 200);
+  const meta = (body.meta ?? {}) as Record<string, unknown>;
+
+  let row: Record<string, unknown>;
+
+  if (kind === 'account_request') {
+    const player_id = str(meta['棋士id'], 64);
+    if (!from_name || !from_contact || !player_id) {
+      return reply(400, { error: '請選擇您的姓名並填寫電子信箱。' });
+    }
+    row = {
+      kind,
+      teacher_player_id: player_id,
+      teacher_name: from_name,
+      from_name,
+      from_contact,
+      subject: `帳號開通申請：${from_name}`,
+      body: str(body.body, 1000),
+      meta: {
+        棋士id: player_id,
+        段位: str(meta['段位'], 20),
+        聯絡電話: str(meta['聯絡電話'], 50),
+      },
+    };
+  } else {
+    const text = str(body.body, 4000);
+    if (!from_name || !from_contact || !text) {
+      return reply(400, { error: '請填寫稱呼、聯絡方式與詢問內容。' });
+    }
+    const teacher_name = str(body.teacher_name, 100);
+    row = {
+      kind,
+      teacher_player_id: str(body.teacher_player_id, 64),
+      teacher_name,
+      from_name,
+      from_contact,
+      subject: teacher_name ? `向 ${teacher_name} 老師提出詢問` : '老師詢問',
+      body: text,
+      meta: {
+        目前程度: str(meta['目前程度'], 100),
+        希望上課方式: str(meta['希望上課方式'], 100),
+      },
+    };
+  }
 
   // ---- 3. 寫入 ----
   // anon 已無寫入權限，這裡用 service_role。金鑰只存在於 Edge Function 的環境，

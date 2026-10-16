@@ -34,6 +34,7 @@
     <button class="tab" data-f="all">全部</button>
     <button class="tab" data-f="teacher_enquiry">學生詢問</button>
     <button class="tab" data-f="member_feedback">棋士意見</button>
+    <button class="tab" data-f="account_request">帳號申請</button>
   </div>
 
   <div id="list" class="mt-3"><p class="muted">載入中…</p></div>
@@ -49,7 +50,8 @@
   var filter = 'open';
   var rows = [];
 
-  var KIND = { teacher_enquiry: '學生詢問', member_feedback: '棋士意見' };
+  var KIND = { teacher_enquiry: '學生詢問', member_feedback: '棋士意見',
+               account_request: '帳號申請' };
 
   function esc(s) {
     return String(s == null ? '' : s)
