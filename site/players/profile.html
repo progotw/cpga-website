@@ -38,6 +38,9 @@
 
 <div id="site-footer"></div>
 <script src="../assets/js/players.js"></script>
+<!-- 海峰成績系統的唯讀元件，只新增 window.HaifongResults 一個全域變數。
+     載入失敗時年度成績會退回每月抓取的版本，頁面其他部分不受影響。 -->
+<script src="https://milu891212-milu.github.io/qisai-schedule-web/results/player-widget.js"></script>
 <script src="../assets/js/site.js" defer></script>
 <script>
 (function () {
@@ -52,6 +55,56 @@
 
   /* 棋士自述另存一份：players.json 每天重新產生，把本人寫的內容寫進去
      會被下一次抓取蓋掉，所以分開放、在這裡合併。 */
+  function tiles(rows) {
+    return rows.map(function (s) {
+      return '<div class="stat-tile">' +
+        '<div class="stat-tile__label">' + esc(s.label) + '</div>' +
+        '<div class="stat-tile__value" style="font-size:1.25rem">' + esc(s.value) + '</div></div>';
+    }).join('');
+  }
+
+  /* ---- 即時年度成績 ----
+     成績系統的分類與我們抓的對得上：國內＝台灣職業賽、國際＝世界賽，
+     去年度直接用它的年度統計（實測與抓取版完全一致）。
+     任何一步失敗就保留原本的數字，不留空白。 */
+  function liveSeason(p) {
+    var box = document.getElementById('seasonTiles');
+    if (!box || !window.HaifongResults || !p.name) return;
+
+    window.HaifongResults.player(p.name).then(function (r) {
+      var now = new Date().getFullYear();
+      var games = (r.games || []).filter(function (g) { return g.year === String(now); });
+      var prev = (r.years || []).filter(function (y) {
+        return String(y.year) === String(now - 1);
+      })[0];
+      if (!games.length && !prev) return;
+
+      function tally(list) {
+        var n = list.length;
+        var w = list.filter(function (g) { return g.won; }).length;
+        return n ? w + '勝' + (n - w) + '負　勝率' + (w / n * 100).toFixed(1) + '%'
+                 : '0勝0負';
+      }
+
+      box.innerHTML = tiles([
+        { label: '台灣職業賽',
+          value: tally(games.filter(function (g) { return g.c1 !== '國際'; })) },
+        { label: '世界賽',
+          value: tally(games.filter(function (g) { return g.c1 === '國際'; })) },
+        { label: (now - 1) + ' 年度總成績',
+          value: prev ? prev.win + '勝' + prev.loss + '負　勝率' +
+                        (prev.rate * 100).toFixed(1) + '%' : '—' }
+      ]);
+
+      var label = document.getElementById('seasonLabel');
+      if (label) {
+        label.textContent = now + ' 年度成績';
+        label.insertAdjacentHTML('afterend',
+          '<p class="muted mb-0" style="font-size:.82rem">即時取自海峰成績系統</p>');
+      }
+    }).catch(function () { /* 保留抓取版本的數字 */ });
+  }
+
   Promise.all([
     P.load(),
     fetch('../assets/data/player_profiles.json', { cache: 'no-cache' })
@@ -86,11 +139,9 @@
       : '<div class="player-card__photo"><span class="player-card__initial">' +
         esc(p.name.charAt(0)) + '</span></div>';
 
-    var seasonTiles = (p.season || []).map(function (s) {
-      return '<div class="stat-tile">' +
-        '<div class="stat-tile__label">' + esc(s.label) + '</div>' +
-        '<div class="stat-tile__value" style="font-size:1.25rem">' + esc(s.value) + '</div></div>';
-    }).join('');
+    /* 先畫每月抓取的版本，成績系統回來後再換成即時數字。
+       那邊比我們新——我們一個月抓一次，他們每場比賽結束就更新。 */
+    var seasonTiles = tiles(p.season || []);
 
     /* 本人填的排在前面，與原有連結合併；同一個網址只留一次 */
     var seenUrl = {};
@@ -130,9 +181,9 @@
 
         '<div>' +
           (seasonTiles
-            ? '<div class="section-head" style="margin-bottom:16px"><h2 style="font-size:1.3rem">' +
+            ? '<div class="section-head" style="margin-bottom:16px"><h2 id="seasonLabel" style="font-size:1.3rem">' +
               esc(p.seasonLabel || '年度成績') + '</h2></div>' +
-              '<div class="grid grid-3" style="margin-bottom:32px">' + seasonTiles + '</div>'
+              '<div class="grid grid-3" id="seasonTiles" style="margin-bottom:32px">' + seasonTiles + '</div>'
             : '') +
 
           /* 自述放在最上面，不取代原本的簡介——那裡面有主要棋戰履歷 */
@@ -158,6 +209,8 @@
           '</div>' +
         '</div>' +
       '</div>';
+    liveSeason(p);
+
   }).catch(function (err) {
     document.getElementById('pName').textContent = '載入失敗';
     wrap.innerHTML = '<p class="muted">無法載入棋士資料（' + esc(err.message) + '）。</p>';
