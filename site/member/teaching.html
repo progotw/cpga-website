@@ -296,7 +296,17 @@
 
   document.getElementById('saveBtn').addEventListener('click', function () {
     var btn = this, state = document.getElementById('state');
-    var payload = collect();
+
+    /* collect() 讀十幾個欄位，任何一個取不到就整個中斷，按鈕看起來像沒反應。
+       把錯誤顯示出來，使用者才知道該回報什麼，而不是以為自己按錯。 */
+    var payload;
+    try {
+      payload = collect();
+    } catch (err) {
+      say('error', '表單讀取失敗：' + esc(err && err.message || err) +
+        '　請把這行訊息回報給秘書處。');
+      return;
+    }
 
     if (payload.listed && !payload.intro) {
       say('error', '刊登前請先填寫教學簡介，讓學生了解您的課程。');
