@@ -50,7 +50,16 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
-  P.load().then(function (data) {
+  /* 棋士自述另存一份：players.json 每天重新產生，把本人寫的內容寫進去
+     會被下一次抓取蓋掉，所以分開放、在這裡合併。 */
+  Promise.all([
+    P.load(),
+    fetch('../assets/data/player_profiles.json', { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : { profiles: [] }; })
+      .catch(function () { return { profiles: [] }; })
+  ]).then(function (res) {
+    var data = res[0];
+    var own = (res[1].profiles || []).filter(function (x) { return x.id === id; })[0] || {};
     var p = P.byId(data, id);
     if (!p) {
       document.getElementById('pName').textContent = '找不到此棋士';
@@ -83,7 +92,16 @@
         '<div class="stat-tile__value" style="font-size:1.25rem">' + esc(s.value) + '</div></div>';
     }).join('');
 
-    var linkBtns = (p.links || []).map(function (l) {
+    /* 本人填的排在前面，與原有連結合併；同一個網址只留一次 */
+    var seenUrl = {};
+    var allLinks = (own.links || []).concat(p.links || []).filter(function (l) {
+      var u = (l && l.url || '').replace(/\/+$/, '');
+      if (!u || seenUrl[u]) return false;
+      seenUrl[u] = 1;
+      return true;
+    });
+
+    var linkBtns = allLinks.map(function (l) {
       return '<a class="btn btn-ghost btn-sm" href="' + esc(l.url) + '" target="_blank" rel="noopener">' +
         esc(l.label) + ' ↗</a>';
     }).join('');
@@ -115,6 +133,16 @@
             ? '<div class="section-head" style="margin-bottom:16px"><h2 style="font-size:1.3rem">' +
               esc(p.seasonLabel || '年度成績') + '</h2></div>' +
               '<div class="grid grid-3" style="margin-bottom:32px">' + seasonTiles + '</div>'
+            : '') +
+
+          /* 自述放在最上面，不取代原本的簡介——那裡面有主要棋戰履歷 */
+          (own.bio
+            ? '<article class="prose player-bio" style="padding-bottom:4px">' +
+                own.bio.split(/\n{2,}/).map(function (para) {
+                  return '<p>' + esc(para).replace(/\n/g, '<br>') + '</p>';
+                }).join('') +
+              '</article>' +
+              '<hr style="border:0;border-top:1px solid var(--line);margin:28px 0">'
             : '') +
 
           '<article class="prose player-bio">' + (p.body || '<p class="muted">暫無簡介。</p>') + '</article>' +

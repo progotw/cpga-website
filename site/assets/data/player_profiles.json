@@ -1,0 +1,5 @@
+{
+ "schema_version": 1,
+ "note": "棋士自行維護的自述與社群連結。id 對應 players.json 的棋士 id；公開個人頁會把 bio 顯示在原有簡介之上，links 與原有連結合併。",
+ "profiles": []
+}

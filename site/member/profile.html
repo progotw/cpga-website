@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>個人簡介與社群｜棋士專區</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="home.html">← 棋士專區</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap" style="max-width:760px">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px">個人簡介與社群</h1>
+    <p class="muted mb-0" style="font-size:.92rem">
+      顯示在官網的棋士個人頁，由您自己維護。
+    </p>
+  </div>
+
+  <div class="callout callout--accent mt-2">
+    <p class="mb-0" style="font-size:.9rem">
+      <strong>這些內容是公開的</strong>，任何人都看得到，不需要登入。
+      請不要填寫住址、身分證字號等不希望公開的資料。
+    </p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+
+  <div id="form" hidden>
+    <div class="card mt-2">
+      <div class="field">
+        <label for="bio">自我介紹</label>
+        <textarea id="bio" rows="8" maxlength="2000"
+          placeholder="例：棋風、擅長的佈局、近期的目標，或任何想讓棋迷知道的事。"></textarea>
+        <p class="form-note mb-0" id="count">0 / 2000 字</p>
+      </div>
+      <p class="muted mb-0" style="font-size:.86rem">
+        這段會顯示在個人頁的<strong>最上方</strong>。
+        原本的簡介與主要棋戰履歷會保留在下方，不會被取代。
+      </p>
+    </div>
+
+    <div class="card mt-2">
+      <div class="section-head section-head--row" style="margin-bottom:6px">
+        <h2 style="font-size:1.1rem;margin:0">社群連結</h2>
+        <button class="btn btn-ghost btn-sm" id="addLink" type="button">新增一列</button>
+      </div>
+      <p class="muted" style="font-size:.86rem">
+        Instagram、YouTube、Facebook、Threads、個人網站都可以。
+        官網原本已有的連結會一併顯示，不必重複填寫。
+      </p>
+      <div id="links"></div>
+    </div>
+
+    <div class="admin-actions mt-3">
+      <button class="btn btn-accent" id="saveBtn" type="button">儲存</button>
+      <a class="btn btn-ghost" href="home.html">返回</a>
+      <span class="muted" style="font-size:.86rem" id="state"></span>
+    </div>
+
+    <p class="muted mt-3 mb-0" style="font-size:.86rem">
+      儲存後會在下一次發布時更新到官網，平日每 15 分鐘一次。
+      個人頁網址：<a id="publicLink" href="#" target="_blank" rel="noopener">查看我的個人頁 ↗</a>
+    </p>
+  </div>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var me = null, row = null;
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    var box = document.getElementById('notice');
+    box.innerHTML = text
+      ? '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+        '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>'
+      : '';
+    var r = box.getBoundingClientRect();
+    if (text && (r.top < 0 || r.bottom > window.innerHeight)) {
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('player');
+  });
+
+  var bio = document.getElementById('bio');
+  bio.addEventListener('input', function () {
+    document.getElementById('count').textContent = this.value.length + ' / 2000 字';
+  });
+
+  function linkRow(l) {
+    return '<div class="row-card link-row">' +
+      '<div class="row-card__fields">' +
+        '<div class="field row-field" style="max-width:200px">' +
+          '<label>名稱</label>' +
+          '<input type="text" data-l="label" value="' + esc(l && l.label) +
+            '" placeholder="例：Instagram"></div>' +
+        '<div class="field row-field"><label>網址</label>' +
+          '<input type="url" data-l="url" value="' + esc(l && l.url) +
+            '" placeholder="https://..."></div>' +
+      '</div>' +
+      '<button class="btn btn-ghost btn-sm" data-act="rm" type="button">移除</button>' +
+    '</div>';
+  }
+
+  document.getElementById('addLink').addEventListener('click', function () {
+    document.getElementById('links').insertAdjacentHTML('beforeend', linkRow(null));
+  });
+  document.getElementById('links').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-act="rm"]');
+    if (b) b.closest('.link-row').remove();
+  });
+
+  function fill(r) {
+    bio.value = r.bio || '';
+    document.getElementById('count').textContent = bio.value.length + ' / 2000 字';
+    var list = (r.links || []);
+    document.getElementById('links').innerHTML =
+      (list.length ? list : [null]).map(linkRow).join('');
+  }
+
+  function collect() {
+    var links = [].slice.call(document.querySelectorAll('.link-row')).map(function (r) {
+      var url = r.querySelector('[data-l="url"]').value.trim();
+      var label = r.querySelector('[data-l="label"]').value.trim();
+      return url ? { label: label || url, url: url } : null;
+    }).filter(Boolean);
+    return {
+      user_id: me.user.id,
+      player_id: me.profile.player_id,
+      bio: bio.value.trim(),
+      links: links
+    };
+  }
+
+  A.require('player').then(function (user) {
+    me = user;
+    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+
+    if (!me.profile.player_id) {
+      say('error', '此帳號尚未對應到棋士名錄，無法編輯個人頁，請洽秘書處。');
+      return;
+    }
+    document.getElementById('publicLink').href =
+      '../players/profile.html?id=' + encodeURIComponent(me.profile.player_id);
+
+    return A.client.from('player_profiles').select('*')
+      .eq('user_id', me.user.id).maybeSingle()
+      .then(function (res) {
+        if (res.error) throw res.error;
+        row = res.data;
+        document.getElementById('form').hidden = false;
+        fill(row || {});
+        if (row && row.hidden) {
+          say('error', '您的個人頁內容目前由協會暫時下架中，請洽秘書處了解原因。');
+        }
+      });
+  }).catch(function (err) {
+    say('error', '載入失敗：' + esc(A.message(err)));
+  });
+
+  document.getElementById('saveBtn').addEventListener('click', function () {
+    var btn = this, state = document.getElementById('state');
+
+    var payload;
+    try {
+      payload = collect();
+    } catch (err) {
+      say('error', '表單讀取失敗：' + esc(err && err.message || err) +
+        '　請把這行訊息回報給秘書處。');
+      return;
+    }
+
+    btn.disabled = true;
+    state.textContent = '儲存中…';
+    A.client.from('player_profiles').upsert(payload, { onConflict: 'user_id' })
+      .select().single()
+      .then(function (res) {
+        if (res.error) throw res.error;
+        row = res.data;
+        say('', '已儲存。下一次發布後會更新到官網的個人頁（平日每 15 分鐘一次）。');
+      })
+      .catch(function (err) { say('error', '儲存失敗：' + esc(A.message(err))); })
+      .finally(function () { btn.disabled = false; state.textContent = ''; });
+  });
+})();
+</script>
+</body>
+</html>

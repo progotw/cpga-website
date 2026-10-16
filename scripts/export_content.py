@@ -137,6 +137,47 @@ def export_teaching():
     return True
 
 
+# ---------------------------------------------------------------------------
+# 棋士自述與社群連結：由棋士自行填寫，管理員可下架
+# ---------------------------------------------------------------------------
+def export_player_profiles():
+    req = urllib.request.Request(
+        URL + '/rest/v1/player_profiles?select=player_id,bio,links&hidden=is.false',
+        headers={'apikey': KEY, 'Authorization': 'Bearer ' + KEY})
+    try:
+        rows = json.loads(urllib.request.urlopen(req, timeout=40).read().decode('utf-8'))
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            print('  – player_profiles.json（資料表尚未建立）')
+            return False
+        raise
+
+    profiles = []
+    for r in rows:
+        bio = (r.get('bio') or '').strip()
+        links = [l for l in (r.get('links') or []) if (l or {}).get('url')]
+        if not bio and not links:
+            continue          # 空白的不必輸出
+        p = {'id': r['player_id']}
+        if bio:
+            p['bio'] = bio
+        if links:
+            p['links'] = links
+        profiles.append(p)
+
+    payload = {
+        'schema_version': 1,
+        'note': '棋士自行維護的自述與社群連結。id 對應 players.json 的棋士 id；'
+                '公開個人頁會把 bio 顯示在原有簡介之上，links 與原有連結合併。',
+        'profiles': profiles,
+    }
+    with io.open(os.path.join(OUT, 'player_profiles.json'), 'w', encoding='utf-8') as f:
+        json.dump(payload, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+    print('  ✓ player_profiles.json（%d 位）' % len(profiles))
+    return True
+
+
 print('匯出完成：%d 筆' % len(written))
 for k in written:
     print('  ✓ %s.json' % k)
@@ -144,6 +185,7 @@ for k, why in skipped:
     print('  – %s（%s）' % (k, why))
 
 export_teaching()
+export_player_profiles()
 
 # 一筆都沒寫出來代表設定有問題，讓工作流程失敗而不是悄悄通過
 if not written:
