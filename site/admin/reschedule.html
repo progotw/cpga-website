@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>對局改期｜協會後台</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="index.html">← 協會後台</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap" style="max-width:980px">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px">對局改期</h1>
+    <p class="muted mb-0" style="font-size:.92rem">
+      賽程操作台提供的是原訂日期。個別對局改期由協會在這裡登錄，隔天更新後生效。
+    </p>
+  </div>
+
+  <div class="callout mt-2">
+    <p class="mb-0" style="font-size:.9rem">
+      改期後棋士專區的「我的賽程」會顯示新日期。<strong>系統不會自動通知棋士</strong>，
+      請另行以電話或訊息告知當事人。
+    </p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+
+  <div class="card mt-2">
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end">
+      <div class="field mb-0" style="flex:1 1 220px">
+        <label for="q">搜尋棋士或賽事</label>
+        <input type="text" id="q" placeholder="輸入姓名或賽事名稱">
+      </div>
+      <div class="field mb-0" style="flex:0 1 180px">
+        <label for="scope">範圍</label>
+        <select id="scope">
+          <option value="future">今天之後</option>
+          <option value="changed">已改期的</option>
+          <option value="all">全部</option>
+        </select>
+      </div>
+      <span class="muted" style="font-size:.86rem" id="count"></span>
+    </div>
+  </div>
+
+  <div id="list" class="mt-2"><p class="muted">載入中…</p></div>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var listEl = document.getElementById('list');
+  var pairings = [], over = {}, me = null;
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    var box = document.getElementById('notice');
+    box.innerHTML = text
+      ? '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+        '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>'
+      : '';
+    var r = box.getBoundingClientRect();
+    if (text && (r.top < 0 || r.bottom > window.innerHeight)) {
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+  function today() {
+    var d = new Date(); d.setHours(0, 0, 0, 0);
+    return d;
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('admin');
+  });
+
+  function rowHtml(p) {
+    var o = over[p.id];
+    var names = (p.players || []).filter(Boolean);
+    var who = names.length > 1 ? names.join('　vs　') : (names[0] || '—') + '　vs　（待定）';
+    var shown = o ? o.new_date : p.date;
+    var shownTime = o ? (o.new_time || p.time || '') : (p.time || '');
+
+    return '<div class="card mt-2" data-id="' + esc(p.id) + '">' +
+      '<div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap">' +
+        (o ? '<span class="badge-status badge-status--pending">已改期</span>' : '') +
+        '<strong style="font-size:1.02rem">' + esc(who) + '</strong>' +
+        '<span class="muted" style="font-size:.86rem">' +
+          esc(p.event || '') + (p.round ? '　·　' + esc(p.round) : '') + '</span>' +
+      '</div>' +
+
+      '<p class="muted mb-0 mt-2" style="font-size:.88rem">' +
+        '原訂　' + esc(p.date) + (p.time ? '　' + esc(p.time) : '') +
+        (o ? '　→　<strong style="color:var(--accent)">' + esc(shown) +
+             (shownTime ? '　' + esc(shownTime) : '') + '</strong>' : '') +
+        '<br><span style="font-size:.8rem">對局編號　<code>' + esc(p.id) + '</code></span>' +
+      '</p>' +
+
+      (o && o.note ? '<p class="mb-0 mt-2" style="font-size:.88rem">備註：' + esc(o.note) + '</p>' : '') +
+
+      '<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-top:12px">' +
+        '<div class="field mb-0" style="flex:0 1 180px">' +
+          '<label>改到</label>' +
+          '<input type="date" data-f="date" value="' + esc(o ? o.new_date : p.date) + '">' +
+        '</div>' +
+        '<div class="field mb-0" style="flex:0 1 130px">' +
+          '<label>時間（選填）</label>' +
+          '<input type="time" data-f="time" value="' + esc(o ? (o.new_time || '') : (p.time || '')) + '">' +
+        '</div>' +
+        '<div class="field mb-0" style="flex:1 1 200px">' +
+          '<label>備註（選填）</label>' +
+          '<input type="text" data-f="note" maxlength="500" value="' + esc(o ? o.note : '') + '"' +
+            ' placeholder="例：棋士出國比賽">' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="admin-actions mt-2">' +
+        '<button class="btn btn-accent btn-sm" data-act="save">儲存改期</button>' +
+        (o ? '<button class="btn btn-ghost btn-sm" data-act="cancel">取消改期</button>' : '') +
+        '<span class="muted" style="font-size:.84rem" data-state></span>' +
+      '</div></div>';
+  }
+
+  function render() {
+    var q = document.getElementById('q').value.trim();
+    var scope = document.getElementById('scope').value;
+    var t = today();
+
+    var rows = pairings.filter(function (p) {
+      if (!p.id) return false;              // 沒有編號就無從指定，不能改期
+      if (scope === 'changed' && !over[p.id]) return false;
+      if (scope === 'future') {
+        var d = new Date((over[p.id] ? over[p.id].new_date : p.date) + 'T00:00:00');
+        if (d < t) return false;
+      }
+      if (q) {
+        var hay = (p.players || []).join('') + (p.event || '') + (p.round || '');
+        if (hay.indexOf(q) < 0) return false;
+      }
+      return true;
+    }).sort(function (a, b) {
+      var da = over[a.id] ? over[a.id].new_date : a.date;
+      var db = over[b.id] ? over[b.id].new_date : b.date;
+      return da < db ? -1 : da > db ? 1 : 0;
+    });
+
+    document.getElementById('count').textContent = '共 ' + rows.length + ' 場';
+    listEl.innerHTML = rows.length
+      ? rows.map(rowHtml).join('')
+      : '<p class="muted">沒有符合條件的對局。</p>';
+  }
+
+  function load() {
+    return Promise.all([
+      fetch('../assets/data/pairings.json', { cache: 'no-cache' })
+        .then(function (r) { return r.ok ? r.json() : { pairings: [] }; }),
+      A.client.from('reschedules').select('*')
+    ]).then(function (res) {
+      pairings = res[0].pairings || [];
+      if (res[1].error) throw res[1].error;
+      over = {};
+      (res[1].data || []).forEach(function (r) { over[r.pairing_id] = r; });
+      render();
+    });
+  }
+
+  document.getElementById('q').addEventListener('input', render);
+  document.getElementById('scope').addEventListener('change', render);
+
+  listEl.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-act]');
+    if (!btn) return;
+    var card = btn.closest('[data-id]');
+    var id = card.getAttribute('data-id');
+    var p = pairings.filter(function (x) { return x.id === id; })[0];
+    var state = card.querySelector('[data-state]');
+    var get = function (f) { return card.querySelector('[data-f="' + f + '"]').value.trim(); };
+
+    if (btn.dataset.act === 'cancel') {
+      if (!window.confirm('取消改期後會回到原訂日期 ' + p.date + '。確定嗎？')) return;
+      btn.disabled = true;
+      state.textContent = '處理中…';
+      A.client.from('reschedules').delete().eq('pairing_id', id).then(function (r) {
+        if (r.error) throw r.error;
+        delete over[id];
+        render();
+        say('', '已取消改期，回到原訂日期。明天的更新後會反映在棋士專區。');
+      }).catch(function (err) {
+        state.textContent = '';
+        btn.disabled = false;
+        say('error', '取消失敗：' + A.message(err));
+      });
+      return;
+    }
+
+    var d = get('date');
+    if (!d) { say('error', '請選擇改期後的日期。'); return; }
+
+    btn.disabled = true;
+    state.textContent = '儲存中…';
+    /* orig_date 與 players 一併存下來：抓取時要靠它們把公告裡舊日期的
+       同一盤棋剔除，否則同一場對局會在新舊兩個日期各出現一次。 */
+    A.client.from('reschedules').upsert({
+      pairing_id: id,
+      new_date: d,
+      new_time: get('time'),
+      orig_date: (over[id] && over[id].orig_date) || p.date,
+      players: (p.players || []).filter(Boolean),
+      note: get('note'),
+      updated_by: me.user.id
+    }, { onConflict: 'pairing_id' }).select().single()
+      .then(function (r) {
+        if (r.error) throw r.error;
+        over[id] = r.data;
+        render();
+        say('', '已登錄改期。<strong>明天的資料更新後</strong>才會反映在棋士專區，' +
+          '請另行通知當事棋士。');
+      })
+      .catch(function (err) {
+        state.textContent = '';
+        btn.disabled = false;
+        say('error', '儲存失敗：' + A.message(err));
+      });
+  });
+
+  A.require('admin').then(function (user) {
+    me = user;
+    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+    return load();
+  }).catch(function (err) {
+    listEl.innerHTML = '';
+    say('error', '載入失敗：' + A.message(err));
+  });
+})();
+</script>
+</body>
+</html>

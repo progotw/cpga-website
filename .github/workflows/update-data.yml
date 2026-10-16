@@ -71,6 +71,10 @@ jobs:
         continue-on-error: true
         env:
           PAIRINGS_FEED: 'https://firestore.googleapis.com/v1/projects/test-5cfc9/databases/(default)/documents/public_pairings/current'
+          # 改期紀錄。這兩個值設計上就是公開的（讀取受資料列權限限制），
+          # 所以直接寫在這裡，不必為了讀一張公開表把 service_role 帶進 CI。
+          SUPABASE_URL: 'https://tagnpbazcpdjeobjigwx.supabase.co'
+          SUPABASE_ANON_KEY: 'sb_publishable_VQ4YNGNm1OlF2DvZgLqZDQ_4yOX2Ygi'
         run: python scripts/scrape_pairings.py site
 
       - name: 抓取精銳隊名單

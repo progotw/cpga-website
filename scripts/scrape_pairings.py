@@ -110,7 +110,45 @@ def unwrap_feed(raw):
     return raw
 
 
-def merge(announced, feed):
+def fetch_reschedules(url, key):
+    """讀取協會後台登錄的改期紀錄。讀不到時回空字典，不中斷整個流程。"""
+    if not url or not key:
+        return {}
+    try:
+        req = urllib.request.Request(
+            url.rstrip('/') + '/rest/v1/reschedules?select=pairing_id,new_date,new_time,orig_date,players',
+            headers={'apikey': key, 'Authorization': 'Bearer ' + key, 'Accept': 'application/json'})
+        rows = json.loads(urllib.request.urlopen(req, timeout=30).read().decode('utf-8'))
+        return {r['pairing_id']: r for r in rows if r.get('pairing_id') and r.get('new_date')}
+    except Exception as e:
+        print('改期紀錄讀取失敗，本次沿用原訂日期：%s' % e)
+        return {}
+
+
+def apply_reschedules(feed, over):
+    """把改期套到操作台的資料上，並回報要從公告那邊剔除的舊日期對局。
+
+    操作台給的是原訂日期、而且它不提供改期。若只改操作台這邊，公告裡
+    原訂日期的同一盤棋還在，同一場對局就會在新舊兩個日期各出現一次。
+    """
+    suppress = set()
+    n = 0
+    for p in feed:
+        o = over.get(p.get('id'))
+        if not o:
+            continue
+        names = [x for x in (p.get('players') or []) if x]
+        suppress.add((str(o.get('orig_date') or p.get('date') or ''), frozenset(names)))
+        p['date'] = str(o['new_date'])
+        if o.get('new_time'):
+            p['time'] = o['new_time']
+        n += 1
+    if n:
+        print('已套用 %d 筆改期' % n)
+    return feed, suppress
+
+
+def merge(announced, feed, suppress=None):
     """合併兩個來源。以（日期, 棋士）為鍵比對對手；衝突者剔除並回報。
 
     只在兩邊都有同一位棋士同一天的對局時才算衝突——
@@ -134,7 +172,13 @@ def merge(announced, feed):
     # 輪空沒有要下的棋，列進去會變成假的出席通知
     feed_rows = [norm(p, 'schedule-app') for p in feed
                  if p.get('date') and '輪空' not in (p.get('round') or '')]
-    ann_rows = [dict(p, source='announcement') for p in announced]
+    # 已改期的對局，公告上那筆是舊日期，要剔除，否則同一場會出現兩次
+    sup = suppress or set()
+    ann_rows = [dict(p, source='announcement') for p in announced
+                if (p.get('date', ''), frozenset(x for x in p['players'] if x)) not in sup]
+    dropped = len(announced) - len(ann_rows)
+    if dropped:
+        print('因改期而剔除公告中的舊日期對局：%d 組' % dropped)
 
     # 索引：(日期, 棋士) → 對手
     def index(rows):
@@ -256,7 +300,11 @@ def main():
     if feed_url:
         try:
             feed = unwrap_feed(json.loads(get(feed_url)))
-            pairs, conflicts = merge(pairs, feed.get('pairings') or [])
+            rows = feed.get('pairings') or []
+            over = fetch_reschedules(os.environ.get('SUPABASE_URL', ''),
+                                     os.environ.get('SUPABASE_ANON_KEY', ''))
+            rows, suppress = apply_reschedules(rows, over)
+            pairs, conflicts = merge(pairs, rows, suppress)
             print('\n已與賽程操作台比對：合併後 %d 組，不一致 %d 組'
                   % (len(pairs), len(conflicts)))
             for c in conflicts[:10]:
