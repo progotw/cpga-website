@@ -1,35 +1,13 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-15T20:58:00+08:00",
+  "generated": "2026-10-16T16:21:17+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
-    "from": "2026-10-15",
-    "to": "2026-12-13"
+    "from": "2026-10-16",
+    "to": "2026-12-14"
   },
-  "count": 20,
+  "count": 19,
   "events": [
-    {
-      "date": "2026-10-15",
-      "weekday": 3,
-      "title": "玄樂盃本賽4強",
-      "name": "玄樂盃",
-      "round": "本賽4強",
-      "series": "玄樂杯",
-      "series_slot": 1,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-10-16",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=MjY2Mm1jcDJ0NmlnaGI4a2R2MWtoNmU5N2ogNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
     {
       "date": "2026-10-16",
       "weekday": 4,
