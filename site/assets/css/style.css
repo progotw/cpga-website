@@ -693,6 +693,35 @@ body.member-area { background: var(--paper-2); }
 /* 賽事系列配色：slot 由 schedule.json 的 series_slot 指定，同系列跨次執行固定不變 */
 /* 賽事系列五色。實際資料目前是五個系列，超過會從頭循環；
    顏色只是輔助，系列名稱一直顯示在圓點旁邊。 */
+/* ---- 棋士專區的賽程月曆 ----
+   條列式看不出一個月裡哪幾天密集，排成月曆才看得出要跑幾趟。 */
+.cal__bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; margin-bottom: 8px; font-size: .92rem;
+}
+.cal__nav {
+  width: 28px; height: 28px; line-height: 1; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 6px;
+  background: transparent; color: var(--ink-2);
+}
+.cal__nav:disabled { opacity: .35; cursor: default; }
+.cal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.cal__grid--head {
+  font-size: .74rem; color: var(--ink-4); text-align: center; margin-bottom: 2px;
+}
+.cal__d {
+  position: relative; text-align: center; font-size: .8rem;
+  color: var(--ink-2); padding: 5px 0 11px; border-radius: 5px;
+}
+.cal__d--pad { visibility: hidden; }
+.cal__d--on { background: var(--paper-2); color: var(--ink); font-weight: 500; }
+.cal__d--today { outline: 1.5px solid var(--accent); }
+.cal__dots {
+  position: absolute; left: 0; right: 0; bottom: 3px;
+  display: flex; justify-content: center; gap: 2px;
+}
+.cal__dots i { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+
 .ev-s0 { background: var(--series-0-tint); color: var(--series-0); }
 .ev-s1 { background: var(--series-1-tint); color: var(--series-1); }
 .ev-s2 { background: var(--series-2-tint); color: var(--series-2); }

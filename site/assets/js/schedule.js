@@ -58,14 +58,15 @@
       return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
     },
 
-    /* 「11:00 起」；當天兩局顯示「10:00、14:00」；推定時間加註星號 */
+    /* 「11:00 開賽」；當天兩局顯示「10:00、14:00（兩局）」。
+       原本推定的時間會加註星號，但星號沒有就近說明，看的人不知道是什麼意思，
+       已改為在頁尾用一句話說明時間多為推定。 */
     timeLabel: function (e) {
       var list = (e.sessions && e.sessions.length) ? e.sessions : (e.time ? [e.time] : []);
       if (!list.length) return '整天';
-      var star = e.time_inferred ? '＊' : '';
       return list.length > 1
-        ? list.join('、') + star + '（兩局）'
-        : list[0] + ' 起' + star;
+        ? list.join('、') + '（兩局）'
+        : list[0] + ' 開賽';
     },
 
     /* 「玄樂盃 本賽32強」 */

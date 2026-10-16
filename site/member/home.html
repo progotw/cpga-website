@@ -28,90 +28,93 @@
     <p class="muted mb-0" style="font-size:.94rem" id="subline"></p>
   </div>
 
-  <div class="grid grid-aside mt-3"
-       style="grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:start">
+  <!-- 版面順序就是使用頻率：每天會看的個人資料擺最上面，設定類的擺最後。
+       每一列都是左右兩欄平均分配，不要全部疊在同一側。 -->
 
-    <!-- 內部公告 -->
-    <section>
-      <div class="section-head" style="margin-bottom:14px">
-        <h2 style="font-size:1.25rem;margin:0">內部公告</h2>
-      </div>
-      <div id="annList"><p class="muted">載入中…</p></div>
-    </section>
+  <!-- 第一列：每天會看的兩塊 -->
+  <div class="grid grid-2 mt-3" style="align-items:start">
+    <div class="card" style="border-left:4px solid var(--accent)">
+      <h3 style="font-size:1.05rem">我的賽程</h3>
+      <div id="myList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
+    </div>
 
-    <aside class="stack">
-      <!-- 我的賽程 -->
-      <div class="card" style="border-left:4px solid var(--accent)">
-        <h3 style="font-size:1.05rem">我的賽程</h3>
-        <div id="myList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
-      </div>
+    <!-- 我的成績：資料即時取自海峰成績系統，官網不存任何成績 -->
+    <div class="card" style="border-left:4px solid var(--navy)">
+      <h3 style="font-size:1.05rem">我的成績</h3>
+      <div id="myResults"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
+    </div>
+  </div>
 
-      <!-- 我的成績：資料即時取自海峰成績系統，官網不存任何成績 -->
-      <div class="card" style="border-left:4px solid var(--navy)">
-        <h3 style="font-size:1.05rem">我的成績</h3>
-        <div id="myResults"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
-      </div>
+  <!-- 第二列：要動手的事，加上全體賽程當參考 -->
+  <div class="grid grid-2 mt-3" style="align-items:start">
+    <div class="card" style="border-left:4px solid var(--accent)">
+      <h3 style="font-size:1.05rem">賽事報名</h3>
+      <p class="muted" style="font-size:.9rem">
+        職業賽事的線上報名，免報名費。開放中的賽事會列在這裡，截止前都可以取消。
+      </p>
+      <a class="btn btn-ghost btn-sm btn-block" href="entries.html">查看並報名 →</a>
+    </div>
 
-      <!-- 全體賽程 -->
-      <div class="card">
-        <h3 style="font-size:1.05rem">近期賽程（全體）</h3>
-        <div id="schedList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
-        <a class="btn btn-ghost btn-sm btn-block mt-2" href="../events/index.html">完整賽程 →</a>
-      </div>
+    <div class="card">
+      <h3 style="font-size:1.05rem">近期賽程（全體）</h3>
+      <div id="schedList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
+      <a class="btn btn-ghost btn-sm btn-block mt-2" href="../events/index.html">完整賽程 →</a>
+    </div>
+  </div>
 
-      <!-- 表單下載 -->
-      <div class="card">
-        <h3 style="font-size:1.05rem">表單下載</h3>
-        <div id="fileList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
-      </div>
+  <!-- 第三列：公告自己會排成一張張卡片，所以整列給它 -->
+  <section class="mt-3">
+    <div class="section-head" style="margin-bottom:14px">
+      <h2 style="font-size:1.25rem;margin:0">內部公告</h2>
+    </div>
+    <div id="annList"><p class="muted">載入中…</p></div>
+  </section>
 
-      <div class="card" style="border-left:4px solid var(--accent)">
-        <h3 style="font-size:1.05rem">賽事報名</h3>
-        <p class="muted" style="font-size:.9rem">
-          職業賽事的線上報名，免報名費。開放中的賽事會列在這裡，截止前都可以取消。
-        </p>
-        <a class="btn btn-ghost btn-sm btn-block" href="entries.html">查看並報名 →</a>
-      </div>
+  <!-- 第四列：偶爾才用的 -->
+  <div class="grid grid-3 mt-3" style="align-items:start">
+    <div class="card">
+      <h3 style="font-size:1.05rem">表單下載</h3>
+      <div id="fileList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
+    </div>
 
-      <div class="card">
-        <h3 style="font-size:1.05rem">個人簡介與社群</h3>
-        <p class="muted" style="font-size:.9rem">
-          自我介紹與 IG、YouTube 等連結，顯示在官網的棋士個人頁。
-        </p>
-        <a class="btn btn-ghost btn-sm btn-block" href="profile.html">編輯個人頁 →</a>
-      </div>
+    <div class="card">
+      <h3 style="font-size:1.05rem">個人簡介與社群</h3>
+      <p class="muted" style="font-size:.9rem">
+        自我介紹與 IG、YouTube 等連結，顯示在官網的棋士個人頁。
+      </p>
+      <a class="btn btn-ghost btn-sm btn-block" href="profile.html">編輯個人頁 →</a>
+    </div>
 
-      <div class="card" style="border-left:4px solid var(--navy)">
-        <h3 style="font-size:1.05rem">教學資訊</h3>
-        <p class="muted" style="font-size:.9rem">
-          填寫後可刊登在官網的「找老師」專區，讓想學棋的人找到您。刊不刊登由您決定。
-        </p>
-        <a class="btn btn-ghost btn-sm btn-block" href="teaching.html">前往填寫 →</a>
-      </div>
+    <div class="card" style="border-left:4px solid var(--navy)">
+      <h3 style="font-size:1.05rem">教學資訊</h3>
+      <p class="muted" style="font-size:.9rem">
+        填寫後可刊登在官網的「找老師」專區，讓想學棋的人找到您。刊不刊登由您決定。
+      </p>
+      <a class="btn btn-ghost btn-sm btn-block" href="teaching.html">前往填寫 →</a>
+    </div>
 
-      <div class="card">
-        <h3 style="font-size:1.05rem">意見與申訴</h3>
-        <p class="muted" style="font-size:.9rem">
-          對賽事規程、行政安排或會務有意見，請從這裡提出，由秘書處處理。
-        </p>
-        <a class="btn btn-ghost btn-sm btn-block" href="feedback.html">提出意見 →</a>
-      </div>
+    <div class="card">
+      <h3 style="font-size:1.05rem">意見與申訴</h3>
+      <p class="muted" style="font-size:.9rem">
+        對賽事規程、行政安排或會務有意見，請從這裡提出，由秘書處處理。
+      </p>
+      <a class="btn btn-ghost btn-sm btn-block" href="feedback.html">提出意見 →</a>
+    </div>
 
-      <div class="card">
-        <h3 style="font-size:1.05rem">變更密碼</h3>
-        <p class="muted" style="font-size:.9rem">
-          拿到初始密碼後，建議立刻換成只有您知道的密碼。
-        </p>
-        <a class="btn btn-ghost btn-sm btn-block" href="password.html">變更密碼 →</a>
-      </div>
+    <div class="card">
+      <h3 style="font-size:1.05rem">變更密碼</h3>
+      <p class="muted" style="font-size:.9rem">
+        拿到初始密碼後，建議立刻換成只有您知道的密碼。
+      </p>
+      <a class="btn btn-ghost btn-sm btn-block" href="password.html">變更密碼 →</a>
+    </div>
 
-      <div class="card">
-        <h3 style="font-size:1.05rem">聯絡秘書處</h3>
-        <p class="muted mb-0" style="font-size:.9rem">
-          (02) 2702-8898 轉 126<br>progotw@gmail.com
-        </p>
-      </div>
-    </aside>
+    <div class="card">
+      <h3 style="font-size:1.05rem">聯絡秘書處</h3>
+      <p class="muted mb-0" style="font-size:.9rem">
+        (02) 2702-8898 轉 126<br>progotw@gmail.com
+      </p>
+    </div>
   </div>
 </main>
 
@@ -169,6 +172,51 @@
 
      刻意獨立成一個函式而不併進 loadMine()：賽程或成績任一邊壞掉，
      另一邊都還要能顯示。 */
+  /* 自己畫，不用元件的 render()。
+     元件把「（執白）」接在對手名字後面，但那個顏色其實是本人的，
+     讀起來剛好相反：「對手：林君諺（執白）」實際上是林君諺執黑。
+     資料裡 black / white 本來就是分開的欄位，直接標出來最不會誤會。 */
+  function renderResults(box, name) {
+    return window.HaifongResults.player(name).then(function (r) {
+      var y = String(new Date().getFullYear());
+      var sum = (r.years || []).filter(function (x) { return String(x.year) === y; })[0];
+      var games = (r.games || []).filter(function (g) { return g.year === y; });
+
+      /* 年度總計放大，底下的明細縮小——這是整張卡片最先要看到的數字 */
+      var head = '<p class="mb-0" style="font-size:1.08rem">' +
+        '<strong style="color:var(--ink)">' + y + ' 年度</strong>　' +
+        (sum
+          ? sum.n + ' 局　' + sum.win + ' 勝 ' + sum.loss + ' 敗　勝率 ' +
+            (sum.rate * 100).toFixed(1) + '%'
+          : '尚無對局') +
+        '</p>';
+
+      /* 自己的名字加粗，一眼看出這局執黑還是執白 */
+      function side(label, who) {
+        return label + '：' + (who === name
+          ? '<strong style="color:var(--ink)">' + esc(who) + '</strong>'
+          : esc(who));
+      }
+
+      box.innerHTML = head + (games.length
+        ? '<ul style="list-style:none;padding:0;margin:8px 0 0;font-size:.84rem;' +
+          'max-height:420px;overflow-y:auto">' +
+          games.map(function (g) {
+            return '<li style="padding:8px 0;border-bottom:1px solid var(--line)">' +
+              '<strong style="color:var(--ink)">' + esc(g.date) + '</strong>　' +
+              '<span class="tag"' +
+                (g.won ? ' style="background:var(--good-tint);color:var(--good)"' : '') +
+                '>' + (g.won ? '勝' : '敗') + '</span><br>' +
+              '<span>' + side('黑', g.black) + '　' + side('白', g.white) +
+                (g.margin ? '　' + esc(g.margin) : '') + '</span><br>' +
+              /* 賽名在前、階段在後：先知道是哪個棋戰，再看打到第幾輪 */
+              '<span class="muted" style="font-size:.8rem">' + esc(g.event) +
+                (g.stage ? '・' + esc(g.stage) : '') + '</span></li>';
+          }).join('') + '</ul>'
+        : '');
+    });
+  }
+
   function loadMyResults(playerId) {
     var box = document.getElementById('myResults');
     function note(text) {
@@ -190,7 +238,7 @@
           note('棋士名錄中找不到此帳號對應的棋士，請洽秘書處。');
           return;
         }
-        return window.HaifongResults.render(box, mine.name);
+        return renderResults(box, mine.name);
       })
       .catch(function () { note('個人成績載入失敗。'); });
   }
@@ -301,24 +349,94 @@
       });
   }
 
-  /* ---- 近期賽程（公開資料，與官網同一份） ---- */
+  /* ---- 近期賽程（全體）：月曆 ----
+     原本是一條一條列日期，看不出整個月哪幾天密集。
+     改成月曆之後，一眼就知道這個月要跑幾趟。 */
   S.load().then(function (data) {
     var box = document.getElementById('schedList');
-    var now = new Date(); now.setHours(0, 0, 0, 0);
-    var rows = (data.events || []).filter(function (e) {
-      return new Date(e.date) >= now;
-    }).slice(0, 6);
+    var all = (data.events || []).slice().sort(function (a, b) {
+      return String(a.date).localeCompare(String(b.date));
+    });
+    if (!all.length) {
+      box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">近期沒有排定的賽程。</p>';
+      return;
+    }
 
-    box.innerHTML = rows.length
-      ? '<ul style="list-style:none;padding:0;margin:0;font-size:.9rem">' + rows.map(function (e) {
-          return '<li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;' +
-            'border-bottom:1px solid var(--line)">' +
-            '<span>' + esc(S.fullTitle(e)) + '<br>' +
-              '<span class="muted" style="font-size:.84rem">' + esc(S.timeLabel(e)) + '</span></span>' +
-            '<span class="muted" style="white-space:nowrap">' +
-              esc(String(e.date).slice(5).replace('-', '.')) + '</span></li>';
-        }).join('') + '</ul>'
-      : '<p class="muted mb-0" style="font-size:.9rem">近期沒有排定的賽程。</p>';
+    var byDate = {};
+    all.forEach(function (e) { (byDate[e.date] = byDate[e.date] || []).push(e); });
+
+    var today = S.today();
+    /* 從「還沒過的第一場」那個月開始，不是從今天的月份——
+       月底時這個月可能已經沒有比賽了，開起來會是一片空白。 */
+    var start = (all.filter(function (e) { return e.date >= today; })[0]
+                 || all[all.length - 1]).date;
+    var cur = { y: Number(start.slice(0, 4)), m: Number(start.slice(5, 7)) - 1 };
+
+    var MIN = all[0].date.slice(0, 7);
+    var MAX = all[all.length - 1].date.slice(0, 7);
+    var WD = ['日', '一', '二', '三', '四', '五', '六'];
+
+    function ym(c) { return c.y + '-' + S.pad(c.m + 1); }
+
+    function draw() {
+      var y = cur.y, m = cur.m;
+      var lead = new Date(y, m, 1).getDay();
+      var days = new Date(y, m + 1, 0).getDate();
+
+      var cells = '';
+      for (var i = 0; i < lead; i++) cells += '<span class="cal__d cal__d--pad"></span>';
+      for (var d = 1; d <= days; d++) {
+        var k = y + '-' + S.pad(m + 1) + '-' + S.pad(d);
+        var evs = byDate[k] || [];
+        cells += '<span class="cal__d' + (evs.length ? ' cal__d--on' : '') +
+          (k === today ? ' cal__d--today' : '') + '">' + d +
+          (evs.length
+            ? '<span class="cal__dots">' + evs.slice(0, 3).map(function (e) {
+                return '<i class="' + S.slotClass(e.series_slot) + '"></i>';
+              }).join('') + '</span>'
+            : '') + '</span>';
+      }
+
+      /* 月曆只看得出哪幾天有事，看不出是什麼賽，所以底下還是要列出來 */
+      var mine = all.filter(function (e) { return String(e.date).slice(0, 7) === ym(cur); });
+      var list = mine.map(function (e) {
+        return '<li style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--line)">' +
+          '<span class="legend__dot ' + S.slotClass(e.series_slot) +
+            '" style="background:currentColor;flex:none;margin-top:6px"></span>' +
+          '<span><strong style="color:var(--ink)">' +
+            esc(String(e.date).slice(5).replace('-', '/')) + '</strong>　' +
+            esc(S.fullTitle(e)) +
+            '<br><span class="muted" style="font-size:.8rem">' +
+              esc(S.timeLabel(e)) + '</span></span></li>';
+      }).join('');
+
+      box.innerHTML =
+        '<div class="cal__bar">' +
+          '<button type="button" class="cal__nav" data-step="-1"' +
+            (ym(cur) <= MIN ? ' disabled' : '') + '>&lsaquo;</button>' +
+          '<strong>' + y + ' 年 ' + (m + 1) + ' 月</strong>' +
+          '<button type="button" class="cal__nav" data-step="1"' +
+            (ym(cur) >= MAX ? ' disabled' : '') + '>&rsaquo;</button>' +
+        '</div>' +
+        '<div class="cal__grid cal__grid--head">' +
+          WD.map(function (w) { return '<span>' + w + '</span>'; }).join('') +
+        '</div>' +
+        '<div class="cal__grid">' + cells + '</div>' +
+        (list
+          ? '<ul style="list-style:none;padding:0;margin:10px 0 0;font-size:.86rem">' +
+            list + '</ul>'
+          : '<p class="muted mb-0 mt-2" style="font-size:.86rem">這個月沒有排定的賽程。</p>');
+    }
+
+    box.addEventListener('click', function (ev) {
+      var b = ev.target.closest('.cal__nav');
+      if (!b || b.disabled) return;
+      var n = cur.y * 12 + cur.m + Number(b.getAttribute('data-step'));
+      cur = { y: Math.floor(n / 12), m: ((n % 12) + 12) % 12 };
+      draw();
+    });
+
+    draw();
   }).catch(function () {
     document.getElementById('schedList').innerHTML =
       '<p class="muted mb-0" style="font-size:.9rem">賽程載入失敗。</p>';

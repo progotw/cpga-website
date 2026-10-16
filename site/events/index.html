@@ -166,7 +166,7 @@
     document.getElementById('schedSrc').innerHTML =
       '資料來源：<strong>' + esc(data.source) + '</strong>　·　更新於 ' + S.generatedLabel(data) +
       '　·　涵蓋 ' + window.CPGA_CMS.fmtDate(data.range.from) + ' – ' + window.CPGA_CMS.fmtDate(data.range.to) +
-      '<br>＊ 標示星號的開賽時間為依慣例推定，非日曆原始資料，實際時間以協會公告為準。';
+      '<br>開賽時間多為依慣例推定，非日曆原始資料，實際時間以協會公告為準。';
   }).catch(function () {
     document.getElementById('schedBody').innerHTML =
       '<tr><td colspan="3" class="muted" style="text-align:center;padding:28px">賽程資料載入失敗。</td></tr>';
