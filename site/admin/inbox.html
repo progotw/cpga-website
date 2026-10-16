@@ -140,6 +140,9 @@
       (r.kind === 'account_request' ? '' : metaHtml(r.meta)) +
 
       '<div class="admin-actions" style="padding-top:14px">' +
+        (r.kind === 'account_request' && !r.handled
+          ? '<button class="btn btn-accent btn-sm" data-act="approve" type="button">開通帳號</button>'
+          : '') +
         '<button class="btn btn-ghost btn-sm" data-act="toggle" type="button">' +
           (r.handled ? '標記為待處理' : '標記為已處理') + '</button>' +
         '<button class="btn btn-ghost btn-sm" data-act="del" type="button">刪除</button>' +
@@ -169,6 +172,28 @@
     var id = Number(card.dataset.id);
     var row = rows.filter(function (r) { return r.id === id; })[0];
     var status = card.querySelector('[data-role="status"]');
+
+    if (btn.dataset.act === 'approve') {
+      if (!window.confirm(
+            '將為「' + row.from_name + '」建立帳號，並寄出設定密碼的邀請信到\n' +
+            row.from_contact + '\n\n請先確認這是本人的信箱。確定要開通嗎？')) return;
+      btn.disabled = true;
+      status.textContent = '開通中…';
+      /* 建帳號需要繞過權限，前端不能持有那把金鑰，交由 approve 函式代為執行。
+         該函式會先用呼叫者的 JWT 確認是管理員。 */
+      A.client.functions.invoke('approve', { body: { message_id: id } })
+        .then(function (res) {
+          if (res.error) throw res.error;
+          if (res.data && res.data.error) throw new Error(res.data.error);
+          row.handled = true;
+          render();
+        })
+        .catch(function (err) {
+          status.textContent = '開通失敗：' + A.message(err);
+          btn.disabled = false;
+        });
+      return;
+    }
 
     if (btn.dataset.act === 'del') {
       if (!window.confirm('確定要刪除這則訊息嗎？此動作無法復原。')) return;
