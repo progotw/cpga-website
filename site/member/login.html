@@ -38,9 +38,22 @@
   </form>
 
   <p class="form-note mt-3 mb-0">
-    還沒有帳號？<a href="apply.html">申請開通</a><br>
-    忘記密碼請洽秘書處 (02) 2702-8898 轉 126。
+    還沒有帳號？<a href="apply.html">申請開通</a>　·
+    <a href="#" id="forgotLink">忘記密碼</a>
   </p>
+
+  <div id="forgotBox" class="mt-2" hidden>
+    <div class="field">
+      <label for="resetEmail">註冊時使用的電子信箱</label>
+      <input type="email" id="resetEmail" autocomplete="username">
+    </div>
+    <button class="btn btn-ghost btn-block btn-sm" type="button" id="resetBtn">
+      寄出重設密碼的連結
+    </button>
+    <p class="form-note mb-0 mt-2" id="resetState">
+      信箱若與協會留存的不同，請洽秘書處 (02) 2702-8898 轉 126。
+    </p>
+  </div>
   <p class="mt-2 mb-0" style="font-size:.88rem">
     <a href="index.html">← 回到專區說明</a>　·　<a href="../index.html">回到官網</a>
   </p>
@@ -76,6 +89,46 @@
   }
 
   A.current().then(function (me) { if (me && me.profile) go(me); });
+
+  /* ---- 忘記密碼 ----
+     不論信箱存不存在都回報同樣的訊息：若只在帳號存在時才說「已寄出」，
+     這個表單就成了查詢某人是不是棋士的工具。 */
+  var forgotBox = document.getElementById('forgotBox');
+  document.getElementById('forgotLink').addEventListener('click', function (e) {
+    e.preventDefault();
+    forgotBox.hidden = !forgotBox.hidden;
+    if (!forgotBox.hidden) {
+      document.getElementById('resetEmail').value =
+        document.getElementById('email').value;
+      document.getElementById('resetEmail').focus();
+    }
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', function () {
+    var btn = this;
+    var box = document.getElementById('resetState');
+    var mail = document.getElementById('resetEmail').value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(mail)) {
+      box.style.color = 'var(--accent)';
+      box.textContent = '請填寫正確的電子信箱。';
+      return;
+    }
+    btn.disabled = true;
+    box.style.color = '';
+    box.textContent = '處理中…';
+    A.client.auth.resetPasswordForEmail(mail, {
+      redirectTo: location.href.replace(/login\.html.*$/, 'password.html')
+    }).then(function () {
+      forgotBox.innerHTML =
+        '<p class="form-note mb-0">若這個信箱有對應的帳號，重設連結已經寄出，' +
+        '請查看收件匣（也看一下垃圾郵件匣）。</p>';
+    }).catch(function () {
+      /* 失敗也不透露原因，理由同上 */
+      forgotBox.innerHTML =
+        '<p class="form-note mb-0">若這個信箱有對應的帳號，重設連結已經寄出，' +
+        '請查看收件匣（也看一下垃圾郵件匣）。</p>';
+    });
+  });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
