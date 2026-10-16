@@ -71,6 +71,16 @@
     document.getElementById('notice').innerHTML =
       '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
       '"><p class="mb-0" style="font-size:.92rem">' + html + '</p></div>';
+
+    /* 提示框在頁面上方，操作按鈕可能在很下面。訊息出現在看不到的地方時，
+       畫面毫無變化，使用者會以為按鈕壞了。 */
+    var _n = document.getElementById('notice');
+    if (_n) {
+      var _r = _n.getBoundingClientRect();
+      if (_r.top < 0 || _r.bottom > window.innerHeight) {
+        _n.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
   }
   function clearNotice() { document.getElementById('notice').innerHTML = ''; }
 

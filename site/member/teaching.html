@@ -159,10 +159,18 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;')
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
+  /* 提示框在頁面最上方，而儲存鈕在兩千多像素之下。
+     使用者捲到底下按儲存，訊息出現在看不到的地方——畫面毫無變化，
+     看起來就像按鈕壞了。所以顯示訊息時要把它捲進視線內。 */
   function say(kind, text) {
-    document.getElementById('notice').innerHTML =
+    var box = document.getElementById('notice');
+    box.innerHTML =
       '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
       '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>';
+    var r = box.getBoundingClientRect();
+    if (r.top < 0 || r.bottom > window.innerHeight) {
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
   /* 「台北、新北」「台北,新北」都接受 */
   function splitList(s) {
