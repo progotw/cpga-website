@@ -116,8 +116,13 @@
     btn.disabled = true;
     box.style.color = '';
     box.textContent = '處理中…';
+    /* 用相對網址解析，不要對 location.href 做字串取代：
+       站台會把 .html 轉成無副檔名的網址（/member/login.html → /member/login），
+       原本的取代因此命中不到，redirect_to 就變成登入頁自己。
+       目的地也跟著現在的形式走，本機預覽與正式站都正確。 */
+    var ext = /\.html$/.test(location.pathname) ? 'password.html' : 'password';
     A.client.auth.resetPasswordForEmail(mail, {
-      redirectTo: location.href.replace(/login\.html.*$/, 'password.html')
+      redirectTo: new URL(ext, location.href).href
     }).then(function () {
       forgotBox.innerHTML =
         '<p class="form-note mb-0">若這個信箱有對應的帳號，重設連結已經寄出，' +

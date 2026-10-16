@@ -20,7 +20,9 @@
 
 import { createClient } from 'jsr:@supabase/supabase-js@2';
 
+// 站台會把 .html 轉成無副檔名的網址，這裡直接用最終形式，少一次轉址。
 const SITE = 'https://cpga.org.tw';
+const SET_PASSWORD_URL = `${SITE}/member/password`;
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
@@ -92,7 +94,7 @@ Deno.serve(async (req) => {
   // ---- 3. 寄出邀請（帳號在這一步建立）----
   const { data: invited, error: inviteErr } = await admin.auth.admin.inviteUserByEmail(
     email,
-    { redirectTo: `${SITE}/member/password.html` },
+    { redirectTo: SET_PASSWORD_URL },
   );
 
   let userId = invited?.user?.id ?? '';
@@ -105,7 +107,7 @@ Deno.serve(async (req) => {
       return reply(500, { error: '寄送邀請失敗：' + inviteErr.message });
     }
     const { error: resetErr } = await admin.auth.resetPasswordForEmail(
-      email, { redirectTo: `${SITE}/member/password.html` },
+      email, { redirectTo: SET_PASSWORD_URL },
     );
     if (resetErr) {
       return reply(500, { error: '這個信箱已有帳號，改寄重設信也失敗：' + resetErr.message });
