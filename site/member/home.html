@@ -46,6 +46,12 @@
         <div id="myList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
       </div>
 
+      <!-- 我的成績：資料即時取自海峰成績系統，官網不存任何成績 -->
+      <div class="card" style="border-left:4px solid var(--navy)">
+        <h3 style="font-size:1.05rem">我的成績</h3>
+        <div id="myResults"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
+      </div>
+
       <!-- 全體賽程 -->
       <div class="card">
         <h3 style="font-size:1.05rem">近期賽程（全體）</h3>
@@ -105,6 +111,9 @@
 <script src="../assets/js/sb-config.js"></script>
 <script src="../assets/js/auth.js"></script>
 <script src="../assets/js/schedule.js"></script>
+<!-- 海峰成績系統提供的唯讀元件，只新增 window.HaifongResults 一個全域變數。
+     讀取失敗時由 loadMyResults() 顯示提示，不影響頁面其他部分。 -->
+<script src="https://milu891212-milu.github.io/qisai-schedule-web/results/player-widget.js"></script>
 <script>
 (function () {
   var A = window.CPGA_AUTH;
@@ -139,7 +148,44 @@
     loadAnnouncements();
     loadFiles();
     loadMine(me.profile.player_id, name);
+    loadMyResults(me.profile.player_id);
   });
+
+  /* ---- 我的成績 ----
+     成績資料來自海峰成績系統（player-widget.js 提供 window.HaifongResults）。
+     這裡只負責把 player_id 換成棋士姓名，畫面與各種失敗狀況都交給它處理。
+     官網不存任何成績，成績系統一更新這裡就是最新的。
+
+     姓名只用 players.json 的 name：display_name 或 email 不一定是本名，
+     會查不到，更糟的是可能查到別人。
+
+     刻意獨立成一個函式而不併進 loadMine()：賽程或成績任一邊壞掉，
+     另一邊都還要能顯示。 */
+  function loadMyResults(playerId) {
+    var box = document.getElementById('myResults');
+    function note(text) {
+      box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">' + text + '</p>';
+    }
+    if (!playerId) {
+      note('此帳號尚未對應到棋士名錄，無法顯示個人成績，請洽秘書處。');
+      return;
+    }
+    if (!window.HaifongResults) {
+      note('成績服務暫時無法連線，請稍後再試。');
+      return;
+    }
+    fetch('../assets/data/players.json', { cache: 'no-cache' })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var mine = (data.players || []).filter(function (p) { return p.id === playerId; })[0];
+        if (!mine) {
+          note('棋士名錄中找不到此帳號對應的棋士，請洽秘書處。');
+          return;
+        }
+        return window.HaifongResults.render(box, mine.name);
+      })
+      .catch(function () { note('個人成績載入失敗。'); });
+  }
 
   /* ---- 我的賽程 ----
      對戰組合抓自海峰的抽籤公告。淘汰之後不會再有新的對戰組合，
