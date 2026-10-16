@@ -46,6 +46,9 @@
 <script src="../assets/js/sb-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
 <script src="../assets/js/auth.js"></script>
+<!-- 海峰成績系統的唯讀元件。催報清單要靠局數排序，而那份清單是拿來打電話的，
+     用每月抓取的快照會打錯對象。 -->
+<script src="https://milu891212-milu.github.io/qisai-schedule-web/results/player-widget.js"></script>
 <script>
 (function () {
   var A = window.CPGA_AUTH;
@@ -56,7 +59,7 @@
   /* ---- 棋士名錄與出賽局數 ----
      「活躍棋士」沒有客觀邊界，所以這裡不做標記、也不設預設門檻，
      直接把局數攤出來讓承辦人自己判斷。
-     局數來自海峰的年度成績，每天隨爬取更新。 */
+     局數即時取自成績系統，比我們每月爬一次的快。 */
   var THIS_YEAR = ['台灣職業賽', '世界賽'];
   var LAST_YEAR = ['去年度總成績'];
   var WL = /(\d+)勝(\d+)負/;
@@ -85,11 +88,31 @@
         players = (d.players || []).map(function (p) {
           return {
             id: p.id, name: p.name, rank: p.rank || '',
-            dan: danOf(p), now: games(p, THIS_YEAR), prev: games(p, LAST_YEAR)
+            dan: danOf(p), now: games(p, THIS_YEAR), prev: games(p, LAST_YEAR),
+            live: false
           };
         });
-        return players;
+        return liveCounts(players);
       });
+  }
+
+  /* 用成績系統的即時局數覆蓋抓取版。
+     抓取是每月一次的快照，催報清單卻是拿來打電話的——資料舊了會打錯人。
+     元件不在或查詢失敗時保留抓取版，不會讓清單空掉。 */
+  function liveCounts(list) {
+    if (!window.HaifongResults) return Promise.resolve(list);
+    var now = new Date().getFullYear();
+    return Promise.all(list.map(function (p) {
+      return window.HaifongResults.player(p.name).then(function (r) {
+        var g = (r.games || []).filter(function (x) { return x.year === String(now); });
+        var prev = (r.years || []).filter(function (y) {
+          return String(y.year) === String(now - 1);
+        })[0];
+        p.now = g.length;
+        p.prev = prev ? prev.win + prev.loss : p.prev;
+        p.live = true;
+      }).catch(function () { /* 保留抓取版 */ });
+    })).then(function () { return list; });
   }
 
 
@@ -297,7 +320,9 @@
     return '<div class="mt-2">' +
       '<p class="muted mb-0" style="font-size:.86rem">' +
         '共 ' + miss.length + ' 位尚未報名，依本年度出賽局數排序。' +
-        '局數來自海峰的年度成績，每天自動更新。' +
+        (miss.every(function (p) { return p.live; })
+          ? '局數即時取自海峰成績系統。'
+          : '成績系統連線失敗，局數是每月抓取的版本，可能不是最新。') +
       '</p>' +
       '<div class="field" style="max-width:220px">' +
         '<label>篩選</label><select data-missmin>' + opts + '</select>' +
