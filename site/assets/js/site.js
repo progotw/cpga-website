@@ -13,6 +13,24 @@
   })();
   window.SITE_ROOT = ROOT;
 
+  /* ---- 認證憑證的轉接 ----
+     Supabase 後台的「Send invitation」等流程不會帶 redirectTo，
+     一律導回 Site URL（也就是官網首頁），憑證放在網址的 # 片段裡。
+     首頁沒有設定密碼的程式，那串憑證就白白浪費，使用者只看到首頁，
+     完全不知道自己該做什麼。
+
+     這裡在任何頁面接住它，原樣轉到設定密碼頁。放在最前面執行，
+     不等頁首渲染完，免得中間閃一下首頁。 */
+  (function () {
+    var h = location.hash || '';
+    if (!/[#&](access_token|error_code|error_description)=/.test(h)) return;
+    /* 已經在設定密碼頁就不要再轉，否則會無限循環 */
+    if (/\/member\/password(\.html)?$/.test(location.pathname)) return;
+    /* 站台會把 .html 轉成無副檔名的網址，本機預覽則不會；跟著現況走 */
+    var ext = /\.html$/.test(location.pathname) ? 'password.html' : 'password';
+    location.replace(ROOT + 'member/' + ext + h);
+  })();
+
   var NAV = [
     {
       label: '關於協會', href: 'about/index.html', key: 'about',
