@@ -1,5 +1,37 @@
 {
  "schema_version": 1,
  "note": "職業老師登錄資料，由棋士在棋士專區自行填寫後發布。id 對應 players.json 的棋士 id，照片、段位、經歷會自動帶入。",
- "teachers": []
+ "teachers": [
+  {
+   "id": "FD4F71FF30877A4D784D40B82F6ABA13",
+   "modes": [
+    "實體",
+    "線上"
+   ],
+   "areas": [
+    "台北",
+    "新北"
+   ],
+   "students": [
+    "兒童",
+    "青少年",
+    "成人"
+   ],
+   "languages": [
+    "中文"
+   ],
+   "levels": "業餘4段以上",
+   "fee": "面議",
+   "availability": "平日晚間 週末另外洽詢",
+   "intro": "活潑 死活題跟實戰計算為主",
+   "acceptForm": true,
+   "contacts": [
+    {
+     "type": "line",
+     "label": "LINE",
+     "value": "@cabon1224"
+    }
+   ]
+  }
+ ]
 }
