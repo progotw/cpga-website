@@ -123,16 +123,17 @@
     var ext = /\.html$/.test(location.pathname) ? 'password.html' : 'password';
     A.client.auth.resetPasswordForEmail(mail, {
       redirectTo: new URL(ext, location.href).href
-    }).then(function () {
-      forgotBox.innerHTML =
-        '<p class="form-note mb-0">若這個信箱有對應的帳號，重設連結已經寄出，' +
-        '請查看收件匣（也看一下垃圾郵件匣）。</p>';
-    }).catch(function () {
-      /* 失敗也不透露原因，理由同上 */
-      forgotBox.innerHTML =
-        '<p class="form-note mb-0">若這個信箱有對應的帳號，重設連結已經寄出，' +
-        '請查看收件匣（也看一下垃圾郵件匣）。</p>';
-    });
+    }).then(done).catch(done);
+
+    /* 不論成功或失敗都顯示同一句，理由同上。
+       用上方的提示框而不是小字註解：按鈕消失後只換成一行灰色小字，
+       使用者會以為按了沒反應。 */
+    function done() {
+      forgotBox.hidden = true;
+      say('', '<strong>重設連結已寄出</strong><br>' +
+        '若這個信箱有對應的帳號，請查看收件匣。第一次收信可能會被分到垃圾郵件匣。');
+      window.scrollTo(0, 0);
+    }
   });
 
   form.addEventListener('submit', function (e) {
