@@ -32,6 +32,43 @@
      "value": "@cabon1224"
     }
    ]
+  },
+  {
+   "id": "81991D2DE8FF2F97698D8EC7905B1417",
+   "modes": [
+    "線上"
+   ],
+   "students": [
+    "兒童",
+    "青少年",
+    "成人"
+   ],
+   "languages": [
+    "中文"
+   ],
+   "levels": "業餘初段~業餘7段",
+   "fee": "1500/hr",
+   "availability": "平日晚上 8:00後",
+   "intro": "圍棋Youtuber\n從觀念上調整，確實提升實力",
+   "acceptForm": true,
+   "contacts": [
+    {
+     "type": "ig",
+     "label": "Instagram",
+     "value": "@pj.is.me"
+    },
+    {
+     "type": "fb",
+     "label": "Facebook",
+     "value": "曾品傑"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://www.youtube.com/@%E5%9C%8D%E6%A3%8B%E7%A7%98%E7%AC%88",
+     "label": "YT：圍棋秘笈"
+    }
+   ]
   }
  ]
 }
