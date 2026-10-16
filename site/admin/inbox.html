@@ -110,7 +110,9 @@
     return '<article class="card msg-card" data-id="' + r.id + '" style="margin-bottom:14px' +
         (r.handled ? ';opacity:.62' : '') + '">' +
       '<div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap">' +
-        '<span class="tag' + (r.kind === 'teacher_enquiry' ? ' tag--notice' : '') + '">' +
+        '<span class="tag' +
+          (r.kind === 'teacher_enquiry' ? ' tag--notice'
+            : r.kind === 'account_request' ? ' tag--event' : '') + '">' +
           esc(KIND[r.kind] || r.kind) + '</span>' +
         (r.handled ? '<span class="tag">已處理</span>' : '') +
         '<span class="muted" style="font-size:.84rem">' + when(r.created_at) + '</span>' +
@@ -119,13 +121,23 @@
       '<h3 style="font-size:1.05rem;margin:.5em 0 .2em">' + esc(r.subject || '（無主旨）') + '</h3>' +
 
       '<dl class="deflist" style="grid-template-columns:max-content 1fr;font-size:.9rem">' +
-        (r.teacher_name ? '<dt>詢問對象</dt><dd>' + esc(r.teacher_name) + ' 老師</dd>' : '') +
-        '<dt>來信者</dt><dd>' + esc(r.from_name || '—') + '</dd>' +
-        '<dt>聯絡方式</dt><dd>' + esc(r.from_contact || '—') + '</dd>' +
+        /* 帳號申請重用了 teacher_name 欄位存棋士姓名，但它不是「詢問對象」，
+           更不是老師。各類訊息要用自己的標籤，不然秘書處會讀錯。 */
+        (r.kind === 'account_request'
+          ? '<dt>申請人</dt><dd>' + esc(r.from_name || '—') +
+              (r.meta && r.meta['段位'] ? '　' + esc(r.meta['段位']) : '') + '</dd>' +
+            '<dt>電子信箱</dt><dd>' + esc(r.from_contact || '—') + '</dd>' +
+            (r.meta && r.meta['聯絡電話']
+              ? '<dt>聯絡電話</dt><dd>' + esc(r.meta['聯絡電話']) + '</dd>' : '') +
+            '<dt>棋士 id</dt><dd><code style="font-size:.84rem">' +
+              esc(r.meta && r.meta['棋士id'] || '—') + '</code></dd>'
+          : (r.teacher_name ? '<dt>詢問對象</dt><dd>' + esc(r.teacher_name) + ' 老師</dd>' : '') +
+            '<dt>來信者</dt><dd>' + esc(r.from_name || '—') + '</dd>' +
+            '<dt>聯絡方式</dt><dd>' + esc(r.from_contact || '—') + '</dd>') +
       '</dl>' +
 
       '<p class="mb-0 mt-2" style="white-space:pre-line">' + esc(r.body) + '</p>' +
-      metaHtml(r.meta) +
+      (r.kind === 'account_request' ? '' : metaHtml(r.meta)) +
 
       '<div class="admin-actions" style="padding-top:14px">' +
         '<button class="btn btn-ghost btn-sm" data-act="toggle" type="button">' +
