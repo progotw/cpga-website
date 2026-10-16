@@ -1,10 +1,18 @@
 {
  "schema_version": 1,
- "generated": "2026-10-16T08:21:17+00:00",
+ "generated": "2026-10-16T12:56:46+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
+   "date": "2026-10-16",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【中環碁聖賽16強戰落幕｜8強名單誕生】",
+   "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A"
+  },
   {
    "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
    "date": "2026-10-15",
@@ -172,14 +180,6 @@
    "cat": "notice",
    "title": "第九屆吳清源杯世界女子圍棋公開賽  競賽補充規定",
    "url": "https://www.haifong.org/news/content/DB5651C9F4A7840BC11602CBCE90F036"
-  },
-  {
-   "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
-   "date": "2026-09-18",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "中環碁聖3回戰：冠軍頭銜者輪番取勝，新人王擊退龍星",
-   "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A"
   },
   {
    "id": "8C5F6628BD9C2FCA4F5F329980DF81DF",
