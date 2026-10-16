@@ -277,7 +277,16 @@
     } else {
       (function render(tries) {
         if (window.turnstile && window.turnstile.render) {
-          tsWidget = window.turnstile.render('#tsHost', { sitekey: siteKey });
+          tsWidget = window.turnstile.render('#tsHost', {
+          sitekey: siteKey,
+          /* 網域不在 Turnstile 的允許清單、或驗證服務異常時，
+             元件會靜默消失。沒有這個回呼的話，按鈕是亮的但永遠送不出去。 */
+          'error-callback': function (code) {
+            btn.disabled = true;
+            state.style.color = 'var(--accent)';
+            state.textContent = '人機驗證載入失敗（' + code + '），請改用上方的聯絡管道。';
+          }
+        });
         } else if (tries > 0) {
           setTimeout(function () { render(tries - 1); }, 300);
         } else {

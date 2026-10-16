@@ -18,7 +18,7 @@
      真正的秘密是 Secret Key，存在 Edge Function 的環境變數中。
      尚未填入時，老師詢問表單會停用並請訪客改用其他聯絡管道——
      寧可表單暫時不能用，也不要退回成「任何人都能直接寫入資料表」。 */
-  var TURNSTILE_SITEKEY = '';
+  var TURNSTILE_SITEKEY = '0x4AAAAAAFYHNurQPF7pI9-t';
 
   window.CPGA_SB = {
     url: URL,
