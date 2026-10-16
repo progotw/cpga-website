@@ -181,6 +181,19 @@
       status.textContent = '開通中…';
       /* 建帳號需要繞過權限，前端不能持有那把金鑰，交由 approve 函式代為執行。
          該函式會先用呼叫者的 JWT 確認是管理員。 */
+      /* 失敗時要把函式回報的訊息挖出來。supabase-js 遇到非 2xx 只會丟
+         「Edge Function returned a non-2xx status code」，真正的原因在
+         回應的內容裡（err.context 是原始 Response），不讀就等於沒有線索。 */
+      function detail(err) {
+        var ctx = err && err.context;
+        if (ctx && typeof ctx.json === 'function') {
+          return ctx.json().then(function (b) {
+            return (b && (b.error || b.message)) || A.message(err);
+          }).catch(function () { return A.message(err); });
+        }
+        return Promise.resolve(A.message(err));
+      }
+
       A.client.functions.invoke('approve', { body: { message_id: id } })
         .then(function (res) {
           if (res.error) throw res.error;
@@ -189,8 +202,10 @@
           render();
         })
         .catch(function (err) {
-          status.textContent = '開通失敗：' + A.message(err);
-          btn.disabled = false;
+          detail(err).then(function (msg) {
+            status.textContent = '開通失敗：' + msg;
+            btn.disabled = false;
+          });
         });
       return;
     }
