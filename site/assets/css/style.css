@@ -398,6 +398,12 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 }
 /* 找老師：聯絡管道按鈕 —— 長網址不得撐破版面 */
 .contact-btn { justify-content: flex-start; max-width: 100%; }
+/* 無法轉成連結的聯絡方式（例如 FB 只填了中文姓名）。
+   不能沒有按鈕外框——會讓人一直去按。 */
+.contact-btn--plain {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 2px; font-size: .9rem; color: var(--ink-2);
+}
 .contact-value {
   min-width: 0; font-size: .85rem; color: var(--ink-4);
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;

@@ -93,13 +93,31 @@
 
     contactIcon: function (type) { return CONTACT_ICON[type] || '→'; },
 
-    /* LINE ID 轉可點連結；其餘型別自行判斷 */
+    /* 把聯絡方式轉成可點的網址。表單雖然請老師填「完整網址」，
+       實際上常常只填帳號（@pj.is.me）或省掉 https://。
+       這裡一律補起來，否則個人頁上會出現一個按不動的社群按鈕。 */
     contactHref: function (c) {
       var v = String(c.value || '').trim();
-      if (/^https?:\/\//.test(v)) return v;
+      if (!v) return '';
+      if (/^https?:\/\//i.test(v)) return v;
       if (c.type === 'email') return 'mailto:' + v;
       if (c.type === 'phone') return 'tel:' + v.replace(/[^\d+]/g, '');
       if (c.type === 'line') return 'https://line.me/R/ti/p/' + encodeURIComponent(v);
+
+      var s = v.replace(/^@/, '');
+      /* IG / FB 的帳號本身就可以含句點（例：pj.is.me），
+         光看有沒有點分不出帳號跟網址。
+         用斜線判斷：有 / 的才是網址，沒有就當帳號。 */
+      var looksUrl = c.type === 'website'
+        ? /^[\w-]+(\.[\w-]+)+(\/\S*)?$/.test(s)
+        : /^[\w-]+(\.[\w-]+)+\/\S*$/.test(s);
+      if (v.charAt(0) !== '@' && looksUrl) return 'https://' + s;
+      /* 中文姓名等猜不出帳號的，寧可不給連結，
+         也不要瞎猜一個指到別人的頁面。 */
+      if (!/^[\w.-]+$/.test(s)) return '';
+      if (c.type === 'ig') return 'https://www.instagram.com/' + s + '/';
+      if (c.type === 'fb') return 'https://www.facebook.com/' + s;
+      if (c.type === 'website') return 'https://' + s;
       return '';
     },
 

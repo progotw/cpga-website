@@ -142,7 +142,8 @@
           return href
             ? '<a class="btn btn-ghost btn-sm contact-btn" href="' + esc(href) +
               '" target="_blank" rel="noopener">' + inner + '</a>'
-            : '<span class="btn btn-ghost btn-sm contact-btn" style="cursor:default">' + inner + '</span>';
+            /* 連不出網址時不要給按鈕樣式，否則看起來可以按，按下去卻沒反應。 */
+            : '<span class="contact-btn contact-btn--plain">' + inner + '</span>';
         }).join('') + '</div>'
       : '<p class="muted mb-0" style="font-size:.9rem">這位老師未公開直接聯絡管道，請使用下方詢問表單。</p>';
 
