@@ -50,9 +50,15 @@ for i, a in enumerate(sys.argv):
     if a == '--only' and i + 1 < len(sys.argv):
         ONLY = sys.argv[i + 1]
 
-# 個人頁的保底輪替週期（天）。來源的年度成績是每月一號批次更新的，
-# 平常靠秘書處通知即可，這個輪替只是避免有人忘了通知而資料停滯。
+# 個人頁的保底輪替週期（天）。平常靠秘書處通知即可，
+# 這個輪替只是避免有人忘了通知而資料停滯。
 ROTATE_DAYS = 28
+
+# 海峰每月一號批次更新年度成績。28 天輪一圈比他們的更新週期還長，
+# 總會有人的戰績落後一整輪——2026-10-16 查彭景華就是這樣，
+# 線上已是 10/1 版，我們還停在 9/1。所以每月初全部重抓一次。
+# 挑 2 號是留一天緩衝，避免在對方還沒更新完時抓到舊資料。
+FULL_REFRESH_DAY = 2
 
 
 # ---- 1. 取得名單 ----
@@ -100,12 +106,16 @@ except Exception:
     print('沒有既有資料，這次全部抓取')
     FULL = True
 
+if not FULL and datetime.date.today().day == FULL_REFRESH_DAY:
+    FULL = True
+    print('每月例行全量更新（%d 號）' % FULL_REFRESH_DAY)
+
 order = [r['id'] for r in roster]
 by_name = {r['name']: r['id'] for r in roster if r['name']}
 
 if FULL:
     todo = set(order)
-    why = '--full 全部重抓'
+    why = '--full 全部重抓' if '--full' in sys.argv else '每月例行全量更新'
 elif ONLY:
     todo = set()
     missing = []
