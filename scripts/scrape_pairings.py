@@ -118,6 +118,9 @@ def merge(announced, feed):
     """
     def norm(p, source):
         return {
+            # 操作台給的固定對局編號。規格沒有，但同一盤棋從對手未定到標出勝負
+            # 都不會變，是日後做「改期」唯一可靠的指定方式，所以保留。
+            'id': p.get('id', ''),
             'date': p.get('date', ''),
             'time': p.get('time', '') or '',
             'event': p.get('event', ''),

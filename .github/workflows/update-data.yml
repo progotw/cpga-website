@@ -63,9 +63,14 @@ jobs:
           fi
 
       # 對戰組合取自抽籤公告，必須在 scrape_news_games 之後執行
+      # 第二來源：棋賽賽程操作台輸出的公開文件（2026-10-16 起）。
+      # 這是公開唯讀網址、不帶任何憑證，所以直接寫在這裡而不放進 Secrets——
+      # 放進 Secrets 反而看不出我們在抓什麼，出事時難追。
       - name: 抓取各輪對戰組合
         id: pairings
         continue-on-error: true
+        env:
+          PAIRINGS_FEED: 'https://firestore.googleapis.com/v1/projects/test-5cfc9/databases/(default)/documents/public_pairings/current'
         run: python scripts/scrape_pairings.py site
 
       - name: 抓取精銳隊名單
