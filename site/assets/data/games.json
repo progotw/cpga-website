@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-10-16T12:56:46+00:00",
+ "generated": "2026-10-17T12:49:01+00:00",
  "source": "海峰棋院 賽事",
  "source_url": "https://www.haifong.org",
  "count": 80,
@@ -18,7 +18,7 @@
   {
    "category": "世界賽",
    "name": "新韓銀行世界棋仙戰",
-   "period": "2025.12.24~2026.12.31",
+   "period": "2026.12.17~2026.12.31",
    "champLabel": "",
    "champion": "",
    "note": "",

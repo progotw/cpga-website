@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-10-16T12:56:46+00:00",
+ "generated": "2026-10-17T12:49:01+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
@@ -12,6 +12,22 @@
    "cat": "match",
    "title": "【中環碁聖賽16強戰落幕｜8強名單誕生】",
    "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A"
+  },
+  {
+   "id": "31A7A6144634E2B4CA7E017549377CEA",
+   "date": "2026-10-16",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第2屆 新韓銀行世界棋仙戰 簡章",
+   "url": "https://www.haifong.org/news/content/31A7A6144634E2B4CA7E017549377CEA"
+  },
+  {
+   "id": "03F79325F2AB204D2114DC0650987D07",
+   "date": "2026-10-16",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔辦法",
+   "url": "https://www.haifong.org/news/content/03F79325F2AB204D2114DC0650987D07"
   },
   {
    "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
@@ -948,22 +964,6 @@
    "cat": "match",
    "title": "第7屆快棋爭霸戰【初賽】 棋譜&結果",
    "url": "https://www.haifong.org/news/content/42C84431521083D7B6767BA98218B4F6"
-  },
-  {
-   "id": "8607401EE00C3E5B6579AACBF51E363A",
-   "date": "2026-04-25",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "2026新人王賽 簡章",
-   "url": "https://www.haifong.org/news/content/8607401EE00C3E5B6579AACBF51E363A"
-  },
-  {
-   "id": "FF8FCCD2B0E39D82ADE499F9BC36DB11",
-   "date": "2026-04-24",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "中華職業圍棋協會 參賽棋士紀律規範",
-   "url": "https://www.haifong.org/news/content/FF8FCCD2B0E39D82ADE499F9BC36DB11"
   }
  ]
 }

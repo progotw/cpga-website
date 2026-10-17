@@ -1,35 +1,13 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-16T20:56:46+08:00",
+  "generated": "2026-10-17T20:49:00+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
-    "from": "2026-10-16",
-    "to": "2026-12-14"
+    "from": "2026-10-17",
+    "to": "2026-12-15"
   },
-  "count": 19,
+  "count": 18,
   "events": [
-    {
-      "date": "2026-10-16",
-      "weekday": 4,
-      "title": "中環碁聖16強",
-      "name": "中環碁聖",
-      "round": "16強",
-      "series": "中環碁聖",
-      "series_slot": 2,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-10-17",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NDRkcXVnOGd0ZDRqc2lldHFuZTcwZWxqcjkgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
     {
       "date": "2026-10-20",
       "weekday": 1,
