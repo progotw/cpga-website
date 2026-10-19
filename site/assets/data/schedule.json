@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-19T15:28:09+08:00",
+  "generated": "2026-10-20T02:43:47+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
-    "from": "2026-10-19",
-    "to": "2026-12-17"
+    "from": "2026-10-20",
+    "to": "2026-12-18"
   },
-  "count": 18,
+  "count": 20,
   "events": [
     {
       "date": "2026-10-20",
@@ -95,6 +95,29 @@
       ]
     },
     {
+      "date": "2026-10-28",
+      "weekday": 2,
+      "title": "棋仙戰台灣代表初選(上下午)",
+      "name": "棋仙戰台灣代表初選",
+      "round": "",
+      "series": "棋仙戰台灣代表初選",
+      "series_slot": 6,
+      "sessions": [
+        "10:00",
+        "14:00"
+      ],
+      "time": "10:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-10-29",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=MTBlNDhnbmRxMG1uc2Z2NjQ1c2liYmxydW0gNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
       "date": "2026-10-30",
       "weekday": 4,
       "title": "中環碁聖4強",
@@ -156,6 +179,29 @@
       "end_date": "2026-11-04",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=MXVxbzk0bDE4bnBhZ3Nvc2U0Y2Q1c2lpMmQgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "weekday": 2,
+      "title": "棋仙戰台灣代表決選(上下午)",
+      "name": "棋仙戰台灣代表決選",
+      "round": "",
+      "series": "棋仙戰台灣代表決選",
+      "series_slot": 4,
+      "sessions": [
+        "10:00",
+        "14:00"
+      ],
+      "time": "10:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-11-05",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=N3IxM3VpdmpkYTgwNXJjcjdiNGx0MzhkZ2QgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
