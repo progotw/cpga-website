@@ -94,57 +94,89 @@
     A.signOut('admin');
   });
 
-  function rowHtml(p) {
+  /* 一場對局＝一個可折疊的項目。收起來時只有一行：日期、對手、輪次。
+     要改期才點開，不然三個輸入欄位乘上幾十場，整頁都是表單。 */
+  function itemHtml(p) {
     var o = over[p.id];
     var names = (p.players || []).filter(Boolean);
-    var who = names.length > 1 ? names.join('　vs　') : (names[0] || '—') + '　vs　（待定）';
+    /* 兩邊都還沒定的預排場次，players 是空的——
+       寫成「— vs （待定）」會讓人以為少撈到一位棋士。 */
+    var who = names.length > 1 ? names.join('　vs　')
+            : names.length === 1 ? names[0] + '　vs　（待定）'
+            : '對戰組合未定';
     var shown = o ? o.new_date : p.date;
     var shownTime = o ? (o.new_time || p.time || '') : (p.time || '');
 
-    return '<div class="card mt-2" data-id="' + esc(p.id) + '">' +
-      '<div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap">' +
+    return '<details class="rs-item" data-k="p:' + esc(p.id) + '" data-id="' + esc(p.id) + '">' +
+      '<summary>' +
+        '<span class="rs-item__when">' + esc(md(shown)) +
+          (shownTime ? '　' + esc(shownTime) : '') + '</span>' +
+        '<span>' + esc(who) + '</span>' +
+        '<span class="muted" style="font-size:.84rem">' + esc(p.round || '') + '</span>' +
         (o ? '<span class="badge-status badge-status--pending">已改期</span>' : '') +
-        '<strong style="font-size:1.02rem">' + esc(who) + '</strong>' +
-        '<span class="muted" style="font-size:.86rem">' +
-          esc(p.event || '') + (p.round ? '　·　' + esc(p.round) : '') + '</span>' +
-      '</div>' +
+      '</summary>' +
 
-      '<p class="muted mb-0 mt-2" style="font-size:.88rem">' +
-        '原訂　' + esc(p.date) + (p.time ? '　' + esc(p.time) : '') +
-        (o ? '　→　<strong style="color:var(--accent)">' + esc(shown) +
-             (shownTime ? '　' + esc(shownTime) : '') + '</strong>' : '') +
-        '<br><span style="font-size:.8rem">對局編號　<code>' + esc(p.id) + '</code></span>' +
-      '</p>' +
+      '<div class="rs-item__body">' +
+        '<p class="muted mb-0" style="font-size:.86rem">' +
+          '原訂　' + esc(p.date) + (p.time ? '　' + esc(p.time) : '') +
+          (o ? '　→　<strong style="color:var(--accent)">' + esc(shown) +
+               (shownTime ? '　' + esc(shownTime) : '') + '</strong>' : '') +
+          '<br><span style="font-size:.8rem">對局編號　<code>' + esc(p.id) + '</code></span>' +
+        '</p>' +
 
-      (o && o.note ? '<p class="mb-0 mt-2" style="font-size:.88rem">備註：' + esc(o.note) + '</p>' : '') +
+        (o && o.note
+          ? '<p class="mb-0 mt-2" style="font-size:.88rem">備註：' + esc(o.note) + '</p>' : '') +
 
-      '<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-top:12px">' +
-        '<div class="field mb-0" style="flex:0 1 180px">' +
-          '<label>改到</label>' +
-          '<input type="date" data-f="date" value="' + esc(o ? o.new_date : p.date) + '">' +
+        '<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-top:12px">' +
+          '<div class="field mb-0" style="flex:0 1 180px">' +
+            '<label>改到</label>' +
+            '<input type="date" data-f="date" value="' + esc(o ? o.new_date : p.date) + '">' +
+          '</div>' +
+          '<div class="field mb-0" style="flex:0 1 130px">' +
+            '<label>時間（選填）</label>' +
+            '<input type="time" data-f="time" value="' +
+              esc(o ? (o.new_time || '') : (p.time || '')) + '">' +
+          '</div>' +
+          '<div class="field mb-0" style="flex:1 1 200px">' +
+            '<label>備註（選填）</label>' +
+            '<input type="text" data-f="note" maxlength="500" value="' + esc(o ? o.note : '') +
+              '" placeholder="例：棋士出國比賽">' +
+          '</div>' +
         '</div>' +
-        '<div class="field mb-0" style="flex:0 1 130px">' +
-          '<label>時間（選填）</label>' +
-          '<input type="time" data-f="time" value="' + esc(o ? (o.new_time || '') : (p.time || '')) + '">' +
-        '</div>' +
-        '<div class="field mb-0" style="flex:1 1 200px">' +
-          '<label>備註（選填）</label>' +
-          '<input type="text" data-f="note" maxlength="500" value="' + esc(o ? o.note : '') + '"' +
-            ' placeholder="例：棋士出國比賽">' +
-        '</div>' +
-      '</div>' +
 
-      '<div class="admin-actions mt-2">' +
-        '<button class="btn btn-accent btn-sm" data-act="save">儲存改期</button>' +
-        (o ? '<button class="btn btn-ghost btn-sm" data-act="cancel">取消改期</button>' : '') +
-        '<span class="muted" style="font-size:.84rem" data-state></span>' +
-      '</div></div>';
+        '<div class="admin-actions mt-2">' +
+          '<button class="btn btn-accent btn-sm" data-act="save">儲存改期</button>' +
+          (o ? '<button class="btn btn-ghost btn-sm" data-act="cancel">取消改期</button>' : '') +
+          '<span class="muted" style="font-size:.84rem" data-state></span>' +
+        '</div>' +
+      '</div></details>';
   }
 
-  function render() {
+  /* 2026-10-23 → 10/23。列表裡年份都一樣，寫出來只是佔位置 */
+  function md(d) {
+    return String(d || '').slice(5).replace('-', '/');
+  }
+
+  /* 記住哪些區塊是開的。render() 會整個重畫，
+     存完一筆就把使用者展開的東西全部收起來，等於白開。 */
+  function openKeys() {
+    var s = {};
+    [].forEach.call(listEl.querySelectorAll('details[data-k]'), function (d) {
+      if (d.open) s[d.getAttribute('data-k')] = 1;
+    });
+    return s;
+  }
+  function restoreKeys(s) {
+    [].forEach.call(listEl.querySelectorAll('details[data-k]'), function (d) {
+      if (s[d.getAttribute('data-k')]) d.open = true;
+    });
+  }
+
+  function render(keepOpen) {
     var q = document.getElementById('q').value.trim();
     var scope = document.getElementById('scope').value;
     var t = today();
+    var was = keepOpen || openKeys();
 
     var rows = pairings.filter(function (p) {
       if (!p.id) return false;              // 沒有編號就無從指定，不能改期
@@ -165,9 +197,47 @@
     });
 
     document.getElementById('count').textContent = '共 ' + rows.length + ' 場';
-    listEl.innerHTML = rows.length
-      ? rows.map(rowHtml).join('')
-      : '<p class="muted">沒有符合條件的對局。</p>';
+
+    if (!rows.length) {
+      listEl.innerHTML = '<p class="muted">沒有符合條件的對局。</p>';
+      return;
+    }
+
+    /* 依賽事分組，組內維持日期順序（rows 已經排好，不要再動） */
+    var order = [], groups = {};
+    rows.forEach(function (p) {
+      var k = p.event || '（未標示賽事）';
+      if (!groups[k]) { groups[k] = []; order.push(k); }
+      groups[k].push(p);
+    });
+
+    listEl.innerHTML = order.map(function (k) {
+      var list = groups[k];
+      var changed = list.filter(function (p) { return over[p.id]; }).length;
+      var key = 'g:' + k;
+      /* 搜尋時使用者就是要看內容，全部展開；
+         平常只展開有改期的那幾組，其餘收起來。 */
+      var open = was[key] || q || changed > 0;
+
+      return '<details class="rs-group" data-k="' + esc(key) + '"' + (open ? ' open' : '') + '>' +
+        '<summary>' +
+          '<span class="rs-group__name">' + esc(k) + '</span>' +
+          '<span class="muted" style="font-size:.86rem">' + list.length + ' 場' +
+            (changed ? '　·　<span style="color:var(--accent)">' + changed + ' 場已改期</span>' : '') +
+          '</span>' +
+          '<span class="muted" style="font-size:.82rem;margin-left:auto">' +
+            esc(md(over[list[0].id] ? over[list[0].id].new_date : list[0].date)) +
+            (list.length > 1 ? ' – ' +
+              esc(md(over[list[list.length - 1].id]
+                ? over[list[list.length - 1].id].new_date
+                : list[list.length - 1].date)) : '') +
+          '</span>' +
+        '</summary>' +
+        '<div class="rs-group__body">' + list.map(itemHtml).join('') + '</div>' +
+      '</details>';
+    }).join('');
+
+    restoreKeys(was);
   }
 
   function load() {
@@ -232,7 +302,9 @@
       .then(function (r) {
         if (r.error) throw r.error;
         over[id] = r.data;
-        render();
+        /* 留著展開，不然存完畫面一收，看不到改成什麼 */
+        var keep = openKeys(); keep['p:' + id] = 1;
+        render(keep);
         say('', '已登錄改期。<strong>明天的資料更新後</strong>才會反映在棋士專區，' +
           '請另行通知當事棋士。');
       })

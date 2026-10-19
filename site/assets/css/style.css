@@ -693,6 +693,38 @@ body.member-area { background: var(--paper-2); }
 /* 賽事系列配色：slot 由 schedule.json 的 series_slot 指定，同系列跨次執行固定不變 */
 /* 賽事系列五色。實際資料目前是五個系列，超過會從頭循環；
    顏色只是輔助，系列名稱一直顯示在圓點旁邊。 */
+/* ---- 對局改期後台：依賽事分組、可折疊 ----
+   一場一張展開的卡片，幾十場疊起來根本看不完。
+   外層收成賽事，內層一場只佔一行，要改期才點開。 */
+.rs-group {
+  border: 1px solid var(--line); border-radius: 10px;
+  background: #fff; margin-bottom: 10px;
+}
+.rs-group > summary,
+.rs-item > summary {
+  cursor: pointer; list-style: none;
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+}
+.rs-group > summary::-webkit-details-marker,
+.rs-item > summary::-webkit-details-marker { display: none; }
+.rs-group > summary { padding: 12px 14px; }
+.rs-group > summary::before { content: '\25B8'; color: var(--ink-4); flex: none; }
+.rs-group[open] > summary::before { content: '\25BE'; }
+.rs-group[open] > summary { border-bottom: 1px solid var(--line); }
+.rs-group__name { font-weight: 500; color: var(--ink); }
+.rs-group__body { padding: 2px 14px 10px; }
+
+.rs-item { border-bottom: 1px solid var(--line); }
+.rs-item:last-child { border-bottom: 0; }
+.rs-item > summary { padding: 9px 2px; font-size: .9rem; border-radius: 5px; }
+.rs-item > summary:hover { background: var(--paper-2); }
+.rs-item[open] > summary { font-weight: 500; }
+.rs-item__when {
+  flex: none; color: var(--ink); font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.rs-item__body { padding: 2px 2px 14px; }
+
 /* ---- 棋士專區的賽程月曆 ----
    條列式看不出一個月裡哪幾天密集，排成月曆才看得出要跑幾趟。 */
 .cal__bar {
