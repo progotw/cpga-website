@@ -264,8 +264,13 @@
       var myName = (mine && mine.name) || fallbackName;
 
       var today = new Date(); today.setHours(0, 0, 0, 0);
+      /* 已確定對手的，和「晉級就要下」的預排場次都要列。
+         後者操作台會把可能的人選放在 candidates，前一輪下完之後
+         輸的人會自動從裡面消失、贏的人移到 players，不用我們判斷。 */
       var rows = all.filter(function (p) {
-        return p.players.indexOf(myName) > -1 && new Date(p.date) >= today;
+        if (new Date(p.date) < today) return false;
+        return p.players.indexOf(myName) > -1 ||
+               (p.candidates || []).indexOf(myName) > -1;
       });
 
       if (!rows.length) {
@@ -276,12 +281,15 @@
 
       box.innerHTML = '<ul style="list-style:none;padding:0;margin:0;font-size:.9rem">' +
         rows.map(function (p) {
+          var confirmed = p.players.indexOf(myName) > -1;
           var opp = p.players.filter(function (n) { return n !== myName; })[0];
           return '<li style="padding:9px 0;border-bottom:1px solid var(--line)">' +
             '<strong style="color:var(--ink)">' +
               esc(String(p.date).slice(5).replace('-', '/')) +
               (p.time ? '　' + esc(p.time) : '') + '</strong><br>' +
-            '<span>對手：' + esc(opp || '尚未產生') + '</span><br>' +
+            '<span>' + (confirmed
+              ? '對手：' + esc(opp || '尚未產生')
+              : '<span class="tag">若晉級</span>　對手未定') + '</span><br>' +
             /* 賽名在前、階段在後：先知道是哪個棋戰，再看打到第幾輪 */
             '<span class="muted" style="font-size:.84rem">' +
               esc((p.event || '').replace(/抽籤結果公告$/, '').trim()) +
@@ -289,8 +297,10 @@
         }).join('') + '</ul>' +
         /* 只列出已經抽好籤的對局。淘汰賽的下一輪要等這一輪打完才有對手，
            不說一聲的話會以為是系統漏掉了。 */
-        '<p class="muted mb-0 mt-2" style="font-size:.82rem">' +
-          '只顯示已公布對戰組合的對局，下一輪要等抽籤後才會出現。</p>';
+        (rows.some(function (p) { return p.players.indexOf(myName) < 0; })
+          ? '<p class="muted mb-0 mt-2" style="font-size:.82rem">' +
+            '標示「若晉級」的場次要看前一輪結果，前一輪下完後會自動更新。</p>'
+          : '');
     }).catch(function () {
       box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">個人賽程載入失敗。</p>';
     });

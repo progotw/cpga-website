@@ -165,6 +165,12 @@ def merge(announced, feed, suppress=None):
             'round': p.get('round', ''),
             'players': [x for x in (p.get('players') or []) if x],
             'pending_opponent': len([x for x in (p.get('players') or []) if x]) < 2,
+            # 日期已排定但對手要看前一輪結果的場次，操作台標成 scheduled。
+            # 公告來源沒有這個欄位，視同 drawn。
+            'status': p.get('status') or 'drawn',
+            # candidates：這個空格可能會來下的人，操作台依晉級路線推出來的。
+            # 有了它才知道這筆預排場次該顯示給誰看——players 是空的。
+            'candidates': [x for x in (p.get('candidates') or []) if x],
             'winner': p.get('winner') or None,
             'source': source,
         }
@@ -215,12 +221,31 @@ def merge(announced, feed, suppress=None):
         return out
 
     # 操作台為上游，同一組對局以它為準；公告補足它沒有的
-    merged, seen = [], set()
-    for r in clean(feed_rows) + clean(ann_rows):
-        k = (r['date'], r['time'], tuple(sorted(r['players'])))
-        if k in seen:
+    def pair_key(r):
+        return (r['date'], r['time'], tuple(sorted(r['players'])))
+
+    merged, seen_id, seen_pair = [], set(), set()
+
+    # 操作台：用它自己的對局編號去重。
+    # 不能用（日期, 時間, 棋士）——預排場次的 players 是空的，
+    # 同一天同一輪的好幾筆鍵會完全相同，會被壓成一筆，等於少掉半場比賽。
+    for r in clean(feed_rows):
+        k = r['id'] or pair_key(r)
+        if k in seen_id:
             continue
-        seen.add(k)
+        seen_id.add(k)
+        # 只有雙方都確定的才拿來擋公告，否則空的 players 會把
+        # 公告裡「對手未定」那類也一起擋掉
+        if len(r['players']) >= 2:
+            seen_pair.add(pair_key(r))
+        merged.append(r)
+
+    # 公告：操作台已經有的就不重複收
+    for r in clean(ann_rows):
+        k = pair_key(r)
+        if k in seen_pair:
+            continue
+        seen_pair.add(k)
         merged.append(r)
 
     merged.sort(key=lambda p: (p['date'], p['time']))
