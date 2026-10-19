@@ -79,7 +79,10 @@
     render();
   });
 
-  A.require('admin').then(function (me) {
+  /* 提到外層：轉交時要寫入 released_by，點擊處理器拿得到才行 */
+  var me = null;
+  A.require('admin').then(function (user) {
+    me = user;
     document.getElementById('who').textContent = me.profile.display_name || me.user.email;
     return load();
   }).catch(function (err) {
@@ -133,7 +136,10 @@
               esc(r.meta && r.meta['棋士id'] || '—') + '</code></dd>'
           : (r.teacher_name ? '<dt>詢問對象</dt><dd>' + esc(r.teacher_name) + ' 老師</dd>' : '') +
             '<dt>來信者</dt><dd>' + esc(r.from_name || '—') + '</dd>' +
-            '<dt>聯絡方式</dt><dd>' + esc(r.from_contact || '—') + '</dd>') +
+            '<dt>聯絡方式</dt><dd>' + esc(r.from_contact || '—') + '</dd>' +
+            (r.released_at
+              ? '<dt>轉交</dt><dd>' + when(r.released_at) + '　已可在棋士專區看到</dd>'
+              : '')) +
       '</dl>' +
 
       '<p class="mb-0 mt-2" style="white-space:pre-line">' + esc(r.body) + '</p>' +
@@ -142,6 +148,14 @@
       '<div class="admin-actions" style="padding-top:14px">' +
         (r.kind === 'account_request' && !r.handled
           ? '<button class="btn btn-accent btn-sm" data-act="approve" type="button">開通帳號</button>'
+          : '') +
+        /* 轉交之後老師才看得到這封信。沒有對應到棋士名錄的就沒辦法轉，
+           那種多半是老師頁上還沒接上帳號的，只能照舊人工聯絡。 */
+        (r.kind === 'teacher_enquiry' && r.teacher_player_id && !r.released_at
+          ? '<button class="btn btn-accent btn-sm" data-act="forward" type="button">轉給棋士</button>'
+          : '') +
+        (r.kind === 'teacher_enquiry' && r.released_at
+          ? '<button class="btn btn-ghost btn-sm" data-act="unforward" type="button">收回轉交</button>'
           : '') +
         '<button class="btn btn-ghost btn-sm" data-act="toggle" type="button">' +
           (r.handled ? '標記為待處理' : '標記為已處理') + '</button>' +
@@ -206,6 +220,32 @@
             status.textContent = '開通失敗：' + msg;
             btn.disabled = false;
           });
+        });
+      return;
+    }
+
+    if (btn.dataset.act === 'forward' || btn.dataset.act === 'unforward') {
+      var on = btn.dataset.act === 'forward';
+      if (on && !window.confirm(
+            '轉交後，' + (row.teacher_name || '這位棋士') +
+            ' 登入棋士專區就能看到這封信的完整內容，包含來信者的聯絡方式。\n\n' +
+            '系統不會寄通知，請另行告知對方。確定要轉交嗎？')) return;
+      btn.disabled = true;
+      status.textContent = on ? '轉交中…' : '收回中…';
+      A.client.from('messages')
+        .update(on
+          ? { released_at: new Date().toISOString(), released_by: me.user.id }
+          : { released_at: null, released_by: null })
+        .eq('id', id).select().single()
+        .then(function (res) {
+          if (res.error) throw res.error;
+          row.released_at = res.data.released_at;
+          row.released_by = res.data.released_by;
+          render();
+        })
+        .catch(function (err) {
+          status.textContent = (on ? '轉交失敗：' : '收回失敗：') + A.message(err);
+          btn.disabled = false;
         });
       return;
     }

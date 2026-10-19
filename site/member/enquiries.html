@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>學生詢問｜棋士專區</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="home.html">← 棋士專區</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap" style="max-width:760px">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px">學生詢問</h1>
+    <p class="muted mb-0" style="font-size:.92rem">
+      透過官網「找職業老師」向您提出的詢問，由秘書處確認後轉交。
+    </p>
+  </div>
+
+  <div class="callout mt-2">
+    <p class="mb-0" style="font-size:.9rem">
+      請直接用下方的聯絡方式回覆學生，<strong>官網沒有回信功能</strong>。
+      來信內容含對方的個人資料，請勿轉傳。
+    </p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+  <div id="list" class="mt-2"><p class="muted">載入中…</p></div>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var listEl = document.getElementById('list');
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    var box = document.getElementById('notice');
+    box.innerHTML = text
+      ? '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+        '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>'
+      : '';
+    var r = box.getBoundingClientRect();
+    if (text && (r.top < 0 || r.bottom > window.innerHeight)) {
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+  function when(ts) {
+    if (!ts) return '';
+    var d = new Date(ts), p = function (n) { return (n < 10 ? '0' : '') + n; };
+    return d.getFullYear() + '.' + p(d.getMonth() + 1) + '.' + p(d.getDate()) +
+      ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('player');
+  });
+
+  /* meta 放的是表單上的選填欄位（程度、希望上課方式等）。
+     欄位會隨表單增減，所以照著資料裡有什麼就列什麼，不寫死。 */
+  function metaHtml(m) {
+    var keys = Object.keys(m || {});
+    if (!keys.length) return '';
+    return '<dl class="deflist" style="grid-template-columns:max-content 1fr;font-size:.9rem">' +
+      keys.map(function (k) {
+        return '<dt>' + esc(k) + '</dt><dd>' + esc(m[k]) + '</dd>';
+      }).join('') + '</dl>';
+  }
+
+  function cardHtml(r) {
+    return '<article class="card" style="margin-bottom:14px">' +
+      '<div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap">' +
+        '<span class="tag tag--notice">學生詢問</span>' +
+        '<span class="muted" style="font-size:.84rem">' + when(r.created_at) + '</span>' +
+      '</div>' +
+
+      '<h2 style="font-size:1.05rem;margin:.5em 0 .2em">' +
+        esc(r.subject || '（無主旨）') + '</h2>' +
+
+      '<dl class="deflist" style="grid-template-columns:max-content 1fr;font-size:.9rem">' +
+        '<dt>來信者</dt><dd>' + esc(r.from_name || '—') + '</dd>' +
+        '<dt>聯絡方式</dt><dd>' + esc(r.from_contact || '—') + '</dd>' +
+      '</dl>' +
+
+      '<p class="mb-0 mt-2" style="white-space:pre-line">' + esc(r.body) + '</p>' +
+      metaHtml(r.meta) +
+    '</article>';
+  }
+
+  A.require('player').then(function (me) {
+    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+
+    if (!me.profile.player_id) {
+      listEl.innerHTML = '';
+      say('error', '此帳號尚未對應到棋士名錄，無法顯示學生詢問，請洽秘書處。');
+      return;
+    }
+
+    /* 條件要寫出來。資料列權限對棋士只放行「已轉交給本人的學生詢問」，
+       但 require('player') 是放管理員進來的，而管理員讀得到所有訊息——
+       不加條件的話，管理員開這頁會看到別人的來信和棋士意見。
+       （權限上他本來就讀得到，但這頁不該那樣顯示。） */
+    return A.client.from('messages').select('*')
+      .eq('kind', 'teacher_enquiry')
+      .eq('teacher_player_id', me.profile.player_id)
+      .not('released_at', 'is', null)
+      .order('created_at', { ascending: false })
+      .limit(100)
+      .then(function (res) {
+        if (res.error) throw res.error;
+        var rows = res.data || [];
+        listEl.innerHTML = rows.length
+          ? rows.map(cardHtml).join('')
+          : '<div class="card"><p class="muted mb-0">目前沒有學生詢問。' +
+            '有人透過官網詢問，秘書處確認後會出現在這裡。</p></div>';
+      });
+  }).catch(function (err) {
+    listEl.innerHTML = '';
+    say('error', '載入失敗：' + esc(A.message(err)));
+  });
+})();
+</script>
+</body>
+</html>
