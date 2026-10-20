@@ -82,6 +82,19 @@ jobs:
         continue-on-error: true
         run: python scripts/scrape_elite.py site/assets/data/elite.json
 
+      # 對局費跟上面幾項不同：是私人資料。
+      # HAIFONG_FEE_URL 等於密碼（知道網址就讀得到全部棋士的金額），
+      # 所以它一定要放 Secrets，而且腳本不印網址也不印金額。
+      # 資料不落地到 site/，直接寫進 Supabase 由資料列權限保護。
+      - name: 抓取對局費
+        id: fees
+        continue-on-error: true
+        env:
+          HAIFONG_FEE_URL: ${{ secrets.HAIFONG_FEE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python scripts/fetch_fees.py site/assets/data/players.json
+
       - name: 下載新增的棋士照片
         id: photos
         continue-on-error: true
@@ -113,6 +126,7 @@ jobs:
           R_PLAYERS:  ${{ steps.players.outcome }}
           R_PAIRINGS: ${{ steps.pairings.outcome }}
           R_ELITE:    ${{ steps.elite.outcome }}
+          R_FEES:     ${{ steps.fees.outcome }}
           R_PHOTOS:   ${{ steps.photos.outcome }}
         run: |
           bad=0
@@ -129,5 +143,6 @@ jobs:
           check 棋士名錄   "$R_PLAYERS"
           check 對戰組合   "$R_PAIRINGS"
           check 精銳隊     "$R_ELITE"
+          check 對局費     "$R_FEES"
           check 棋士照片   "$R_PHOTOS"
           exit $bad

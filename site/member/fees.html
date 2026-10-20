@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的對局費｜棋士專區</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="home.html">← 棋士專區</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap" style="max-width:760px">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px">我的對局費</h1>
+    <p class="muted mb-0" style="font-size:.92rem" id="sub">　</p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+  <div id="body" class="mt-2"><p class="muted">載入中…</p></div>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var box = document.getElementById('body');
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    var n = document.getElementById('notice');
+    n.innerHTML = text
+      ? '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+        '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>'
+      : '';
+  }
+  /* 金額一律加千分位。對局費是錢，少一位數看錯的代價不小。 */
+  function money(n) {
+    return Number(n || 0).toLocaleString('en-US');
+  }
+  function when(ts) {
+    if (!ts) return '';
+    var d = new Date(ts), p = function (n) { return (n < 10 ? '0' : '') + n; };
+    return d.getFullYear() + '/' + p(d.getMonth() + 1) + '/' + p(d.getDate());
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('player');
+  });
+
+  function render(row) {
+    var events = row.events || [];
+    document.getElementById('sub').textContent =
+      row.year + ' 年度　·　院方發布：' + when(row.published_at);
+
+    box.innerHTML =
+      '<div class="card" style="border-left:4px solid var(--navy)">' +
+        '<p class="muted mb-0" style="font-size:.9rem">' + row.year + ' 年合計</p>' +
+        '<p class="mb-0" style="font-size:1.7rem;font-weight:700;color:var(--ink)">' +
+          money(row.total) + ' <span style="font-size:1rem;font-weight:400">元</span></p>' +
+      '</div>' +
+
+      events.map(function (ev) {
+        return '<div class="card mt-2">' +
+          '<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline">' +
+            '<strong style="font-size:1.02rem">' + esc(ev.event || '') + '</strong>' +
+            '<strong style="font-variant-numeric:tabular-nums">' +
+              money(ev.subtotal) + '</strong>' +
+          '</div>' +
+          '<ul style="list-style:none;padding:0;margin:8px 0 0;font-size:.9rem">' +
+            (ev.items || []).map(function (it) {
+              return '<li style="display:flex;justify-content:space-between;gap:12px;' +
+                'padding:6px 0;border-top:1px solid var(--line)">' +
+                '<span>' + esc(it.item || '') +
+                  (it.detail ? '　<span class="muted" style="font-size:.84rem">' +
+                    esc(it.detail) + '</span>' : '') + '</span>' +
+                /* 負數是院方的金額調整，用顏色標出來，不然混在一堆數字裡看不見 */
+                '<span style="flex:none;font-variant-numeric:tabular-nums' +
+                  (Number(it.amount) < 0 ? ';color:var(--accent)' : '') + '">' +
+                  money(it.amount) + '</span></li>';
+            }).join('') +
+          '</ul></div>';
+      }).join('') +
+
+      '<p class="muted mt-3 mb-0" style="font-size:.86rem">' +
+        '金額以院方發布為準，實際撥款時間另行通知。' +
+        '這份是應領金額，不是匯款紀錄。<br>' +
+        '有疑問請洽秘書處，或從<a href="feedback.html">意見與申訴</a>提出。</p>';
+  }
+
+  A.require('player').then(function (me) {
+    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+
+    if (!me.profile.player_id) {
+      box.innerHTML = '';
+      say('error', '此帳號尚未對應到棋士名錄，無法顯示對局費，請洽秘書處。');
+      return;
+    }
+
+    /* 條件寫出來，不是只靠資料列權限：require('player') 會放管理員進來，
+       而管理員讀得到所有人的對局費，不加條件這頁會列出別人的金額。 */
+    return A.client.from('player_fees').select('*')
+      .eq('player_id', me.profile.player_id)
+      .order('year', { ascending: false })
+      .limit(1)
+      .then(function (res) {
+        if (res.error) throw res.error;
+        var row = (res.data || [])[0];
+        if (!row) {
+          document.getElementById('sub').textContent = '';
+          box.innerHTML = '<div class="card"><p class="muted mb-0">' +
+            '今年尚無對局費紀錄。院方核算並發布後會出現在這裡。</p></div>';
+          return;
+        }
+        render(row);
+      });
+  }).catch(function (err) {
+    box.innerHTML = '';
+    say('error', '載入失敗：' + esc(A.message(err)));
+  });
+})();
+</script>
+</body>
+</html>
