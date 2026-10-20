@@ -53,7 +53,32 @@ if SB_KEY.startswith('sb_publishable_') or SB_KEY.startswith('eyJ'):
 
 # 說明文件寫的是 -y{年份}，大括號是佔位符號要整個換掉。
 # 實際用的人（包含我們自己）填成 -y{2026} 過，所以兩種都剝掉。
-BASE = re.sub(r'-y(\{[^}]*\}|\d{4})$', '', FEE_URL.strip())
+# 貼進 Secret 時常常連反引號、引號、角括號一起複製進去。這些留著會讓網址
+# 不是以 https 開頭，而 urllib 這時拋出的例外訊息會含整條網址。
+WRAPPERS = '`\'"<>' + ' \t\r\n'
+BASE = re.sub(r'-y(\{[^}]*\}|\d{4})$', '', FEE_URL.strip(WRAPPERS))
+
+if not BASE.startswith('https://'):
+    # 絕對不要把值印出來——那是鑰匙。只說開頭幾個字，夠判斷是不是多了字元。
+    sys.exit('中止：HAIFONG_FEE_URL 不是以 https:// 開頭。\n'
+             '貼進 Secret 時可能連前後的反引號、引號或說明文字一起複製了。\n'
+             '值必須是乾淨的一整條網址，前後不能有任何其他字元。\n'
+             '目前這個值的開頭是「%s」。' % BASE[:8])
+
+
+def scrub(s):
+    """把秘密網址從訊息裡抹掉再印。
+
+    只攔 HTTPError 不夠：URLError、ValueError 之類的例外訊息會把網址整條
+    帶進去，直接輸出等於把鑰匙貼在 CI 的 log 上。所有要輸出的例外訊息
+    都要先過這裡。
+    """
+    s = str(s)
+    if BASE:
+        s = s.replace(BASE, '<秘密網址>')
+    # 萬一是別種寫法（編碼過、或只剩亂碼那一段），
+    # 把任何 24 字以上的連續亂碼都遮掉，寧可遮過頭。
+    return re.sub(r'[A-Za-z0-9_\-]{24,}', '<遮蔽>', s)
 
 
 def fetch_release(year):
@@ -72,7 +97,13 @@ def fetch_release(year):
                     '請向海峰棋院索取新網址並更新 GitHub Secret。')
         # 不要把回應內容印出來，裡面可能含網址
         sys.exit('中止：讀取對局費失敗 HTTP %s%s' % (e.code, hint))
-    return json.loads(raw['fields']['json']['stringValue'])
+    except urllib.error.URLError as e:
+        sys.exit('中止：連不上對局費來源（%s）。' % scrub(e.reason))
+    try:
+        return json.loads(raw['fields']['json']['stringValue'])
+    except (KeyError, TypeError, ValueError):
+        sys.exit('中止：對局費資料的格式與說明文件不符，'
+                 '預期有 fields.json.stringValue。請聯繫海峰棋院。')
 
 
 def sb(method, path, body=None, prefer=None):
@@ -147,4 +178,11 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except SystemExit:
+        raise
+    except Exception as e:
+        # 未預期的例外一律先 scrub。沒有這一層的話，一個 traceback
+        # 就可能把秘密網址印在 CI 的 log 上——這次就差一行。
+        sys.exit('中止：未預期的錯誤 %s — %s' % (type(e).__name__, scrub(e)))
