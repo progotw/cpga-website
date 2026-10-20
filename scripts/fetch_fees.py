@@ -23,7 +23,7 @@
    這種情況**保留現有資料直接結束**，不要清空——
    清空的話棋士會看到金額突然歸零。
 """
-import os, sys, io, json, re, urllib.request, urllib.error, datetime as dt
+import os, sys, io, json, re, urllib.request, urllib.error, urllib.parse, datetime as dt
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
@@ -103,6 +103,8 @@ def main():
     by_name = {p['name']: p['id'] for p in roster if p.get('name') and p.get('id')}
 
     published = data.get('published_at') or dt.datetime.now().isoformat()
+    # 這一次執行的時間戳。所有列都蓋同一個值，等一下用它分辨誰沒被更新到。
+    run_ts = dt.datetime.now(dt.timezone.utc).isoformat()
     rows, skipped = [], 0
     for p in data.get('players') or []:
         pid = by_name.get(p.get('name'))
@@ -117,7 +119,7 @@ def main():
             'total': int(p.get('total') or 0),
             'events': p.get('events') or [],
             'published_at': published,
-            'synced_at': dt.datetime.now(dt.timezone.utc).isoformat(),
+            'synced_at': run_ts,
         })
 
     print('%d 年度：發布版 %d 人，對應到名錄 %d 人，略過 %d 人。'
@@ -132,9 +134,12 @@ def main():
        prefer='resolution=merge-duplicates,return=minimal')
 
     # 院方修正後不再出現的棋士要刪掉，否則棋士會一直看到舊金額。
-    # 用 not.in 一次刪完，避免逐筆呼叫。
-    keep = ','.join('"%s"' % r['player_id'] for r in rows)
-    sb('DELETE', 'player_fees?year=eq.%d&player_id=not.in.(%s)' % (year, keep),
+    #
+    # 用 synced_at 判斷，不要把 id 列進網址：139 位棋士串起來是五千多字的
+    # 網址，而且 PostgREST 的 in.(...) 要加引號，引號在網址裡是非法字元。
+    # 剛才 upsert 過的列都帶著這次的 run_ts，比它舊的就是這次沒出現的。
+    sb('DELETE', 'player_fees?year=eq.%d&synced_at=lt.%s'
+       % (year, urllib.parse.quote(run_ts, safe='')),
        prefer='return=minimal')
 
     print('已寫入 %d 位棋士的對局費，並清掉本年度不在發布版中的舊資料。' % len(rows))
