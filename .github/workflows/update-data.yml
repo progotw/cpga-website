@@ -132,7 +132,9 @@ jobs:
           bad=0
           check() {
             if [ "$2" != "success" ]; then
-              echo "::error title=$1 抓取失敗::結果為 $2，請檢查上方該步驟的記錄"
+              # 名字也要寫進內文：::error 的 title 只出現在 Annotations 面板，
+              # 展開 log 看的時候那一行只有內文，不寫就不知道是哪一項失敗。
+              echo "::error title=$1 抓取失敗::$1 抓取失敗（結果為 $2），請展開上方「$1」該步驟查看原因"
               bad=1
             else
               echo "$1 正常"
