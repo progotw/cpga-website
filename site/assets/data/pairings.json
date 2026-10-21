@@ -2,7 +2,7 @@
  "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
  "schema_version": 1,
  "source": "海峰棋院 抽籤結果公告",
- "count": 344,
+ "count": 290,
  "pairings": [
   {
    "date": "2026-05-05",
@@ -1218,326 +1218,6 @@
    "source": "schedule-app"
   },
   {
-   "id": "qiwang19__0:qwc|1|1|8",
-   "date": "2026-09-08",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第一輪",
-   "players": [
-    "王元均",
-    "簡靖庭"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "簡靖庭",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|1|2|7",
-   "date": "2026-09-08",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第一輪",
-   "players": [
-    "蕭正浩",
-    "陳詩淵"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳詩淵",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|1|3|6",
-   "date": "2026-09-08",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第一輪",
-   "players": [
-    "林君諺",
-    "楊博崴"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊博崴",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|1|4|5",
-   "date": "2026-09-08",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第一輪",
-   "players": [
-    "陳祈睿",
-    "賴均輔"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_m23",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "張凱馨",
-    "施景堯"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "張凱馨",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_m45",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "楊博崴",
-    "沈逸恩"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊博崴",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_m89",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "陳劭全",
-    "林彥丞"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林彥丞",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_m1011",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "林瀚彰",
-    "劉耀文"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "劉耀文",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_m23",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "吳彥諶",
-    "許育祺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "許育祺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_m45",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "陳映嘉",
-    "陳威廷"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳映嘉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_m89",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "蕭睿杉",
-    "牛詩特"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "牛詩特",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_m1011",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "俞俐均",
-    "林世民"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林世民",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_m23",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "林聖弈",
-    "林佾緯"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林聖弈",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_m45",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "林書陽",
-    "余承叡"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林書陽",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_m89",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "黃柏人",
-    "陳品樺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃柏人",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_m1011",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "黃家胤",
-    "張哲豪"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "張哲豪",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_m23",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "彭景華",
-    "黃袖圃"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃袖圃",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_m45",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "蔡丞韋",
-    "曾品傑"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "蔡丞韋",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_m89",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "孫立言",
-    "戴旭辰"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "孫立言",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_m1011",
-   "date": "2026-09-10",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 48強",
-   "players": [
-    "林鈺娗",
-    "林立祥"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林立祥",
-   "source": "schedule-app"
-  },
-  {
    "id": "zhonghuan__0:zh69_30",
    "date": "2026-09-11",
    "time": "",
@@ -2171,326 +1851,6 @@
    "source": "announcement"
   },
   {
-   "id": "qiwang19__0:qwc|2|1|7",
-   "date": "2026-09-15",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第二輪",
-   "players": [
-    "王元均",
-    "陳詩淵"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳詩淵",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|2|2|5",
-   "date": "2026-09-15",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第二輪",
-   "players": [
-    "蕭正浩",
-    "賴均輔"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|2|3|4",
-   "date": "2026-09-15",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第二輪",
-   "players": [
-    "林君諺",
-    "陳祈睿"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|2|6|8",
-   "date": "2026-09-15",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第二輪",
-   "players": [
-    "楊博崴",
-    "簡靖庭"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "簡靖庭",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_r2a",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "許皓鋐",
-    "張凱馨"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "許皓鋐",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_r2b",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "楊博崴",
-    "林士勛"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊博崴",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_r2c",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "王元均",
-    "林彥丞"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林彥丞",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_r2d",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "劉耀文",
-    "陳首廉"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳首廉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_r2a",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "楊子萱",
-    "許育祺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊子萱",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_r2b",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "陳映嘉",
-    "李維"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "李維",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_r2c",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "陳詩淵",
-    "牛詩特"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳詩淵",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_r2d",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "林世民",
-    "林君諺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_r2a",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "賴均輔",
-    "林聖弈"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_r2b",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "林書陽",
-    "蕭正浩"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林書陽",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_r2c",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "陳祈睿",
-    "黃柏人"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_r2d",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "張哲豪",
-    "盧鈺樺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "張哲豪",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_r2a",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "簡靖庭",
-    "黃袖圃"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "簡靖庭",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_r2b",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "蔡丞韋",
-    "林新為"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "蔡丞韋",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_r2c",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "盧奕銓",
-    "孫立言"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧奕銓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_r2d",
-   "date": "2026-09-17",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 32強",
-   "players": [
-    "林立祥",
-    "徐靖恩"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "徐靖恩",
-   "source": "schedule-app"
-  },
-  {
    "id": "zhonghuan__0:zh69_22",
    "date": "2026-09-18",
    "time": "",
@@ -3075,292 +2435,88 @@
    "source": "announcement"
   },
   {
-   "id": "qiwang19__0:qwc|3|1|6",
-   "date": "2026-09-22",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第三輪",
-   "players": [
-    "王元均",
-    "楊博崴"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|3|2|3",
-   "date": "2026-09-22",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第三輪",
-   "players": [
-    "蕭正浩",
-    "林君諺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "蕭正浩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|3|4|8",
-   "date": "2026-09-22",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第三輪",
-   "players": [
-    "陳祈睿",
-    "簡靖庭"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|3|5|7",
-   "date": "2026-09-22",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第三輪",
-   "players": [
-    "賴均輔",
-    "陳詩淵"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g0_A",
    "date": "2026-09-29",
    "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
    "players": [
     "盧奕銓",
     "林宇翔"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧奕銓",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "qiwang20__0:g0_B",
    "date": "2026-09-29",
    "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
    "players": [
     "周平強",
     "余承叡"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "周平強",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "qiwang20__0:g1_A",
    "date": "2026-09-29",
    "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
    "players": [
     "林士勛",
     "陳劭全"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林士勛",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "qiwang20__0:g1_B",
    "date": "2026-09-29",
    "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
    "players": [
     "楊子萱",
     "牛詩特"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊子萱",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "qiwang20__0:g2_A",
    "date": "2026-09-29",
    "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
    "players": [
     "白昕卉",
     "許育祺"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "許育祺",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "qiwang20__0:g2_B",
    "date": "2026-09-29",
    "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
    "players": [
     "李奎漢",
     "林瀚彰"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林瀚彰",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "qiwang20__0:g3_A",
    "date": "2026-09-29",
    "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
    "players": [
     "孫偉勛",
     "張哲豪"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "張哲豪",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g3_B",
-   "date": "2026-09-29",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
-   "players": [
-    "林彥丞",
-    "黃柏人"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林彥丞",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g4_A",
-   "date": "2026-09-29",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
-   "players": [
-    "徐銘均",
-    "陳映嘉"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳映嘉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g4_B",
-   "date": "2026-09-29",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
-   "players": [
-    "陳品樺",
-    "戴嘉伸"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳品樺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g5_A",
-   "date": "2026-09-29",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
-   "players": [
-    "林世民",
-    "蔡文河"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林世民",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g5_B",
-   "date": "2026-09-29",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
-   "players": [
-    "劉建昌",
-    "施景堯"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": null,
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g6_A",
-   "date": "2026-09-29",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
-   "players": [
-    "孫立言",
-    "蔡明叡"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "孫立言",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g6_B",
-   "date": "2026-09-29",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (1~28號)",
-   "players": [
-    "林修平",
-    "丁少傑"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "丁少傑",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
    "date": "2026-09-29",
@@ -3382,6 +2538,42 @@
     "陳映嘉"
    ],
    "pending_opponent": true,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "陳品樺",
+    "戴嘉伸"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "林世民",
+    "蔡文河"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-29",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
+   "players": [
+    "劉建昌",
+    "施景堯"
+   ],
+   "pending_opponent": false,
    "source": "announcement"
   },
   {
@@ -3396,388 +2588,16 @@
    "source": "announcement"
   },
   {
-   "id": "qiwang19__0:qwc|4|1|5",
    "date": "2026-09-29",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第四輪",
+   "time": "10:00",
+   "event": "第20屆棋王資格賽、初賽抽籤結果公告",
+   "round": "初賽1回",
    "players": [
-    "王元均",
-    "賴均輔"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|4|2|8",
-   "date": "2026-09-29",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第四輪",
-   "players": [
-    "蕭正浩",
-    "簡靖庭"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "蕭正浩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|4|3|7",
-   "date": "2026-09-29",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第四輪",
-   "players": [
-    "林君諺",
-    "陳詩淵"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|4|4|6",
-   "date": "2026-09-29",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第四輪",
-   "players": [
-    "陳祈睿",
-    "楊博崴"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊博崴",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g0_LBAB",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (1~28號)",
-   "players": [
-    "林宇翔",
-    "余承叡"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林宇翔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g1_LBAB",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (1~28號)",
-   "players": [
-    "陳劭全",
-    "牛詩特"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "牛詩特",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g2_LBAB",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (1~28號)",
-   "players": [
-    "白昕卉",
-    "李奎漢"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "白昕卉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g3_LBAB",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (1~28號)",
-   "players": [
-    "孫偉勛",
-    "黃柏人"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃柏人",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g4_LBAB",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (1~28號)",
-   "players": [
-    "徐銘均",
-    "戴嘉伸"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "徐銘均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g6_LBAB",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (1~28號)",
-   "players": [
-    "蔡明叡",
-    "林修平"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林修平",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g0_C",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (1~28號)",
-   "players": [
-    "盧奕銓",
-    "周平強"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧奕銓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g1_C",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (1~28號)",
-   "players": [
-    "林士勛",
-    "楊子萱"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林士勛",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g2_C",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (1~28號)",
-   "players": [
-    "許育祺",
-    "林瀚彰"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林瀚彰",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g3_C",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (1~28號)",
-   "players": [
-    "張哲豪",
-    "林彥丞"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林彥丞",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g4_C",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (1~28號)",
-   "players": [
-    "陳映嘉",
-    "陳品樺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳映嘉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g6_C",
-   "date": "2026-09-29",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (1~28號)",
-   "players": [
-    "孫立言",
+    "林修平",
     "丁少傑"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "孫立言",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_r3top",
-   "date": "2026-10-01",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 16強",
-   "players": [
-    "許皓鋐",
-    "楊博崴"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "許皓鋐",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_r3bot",
-   "date": "2026-10-01",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 16強",
-   "players": [
-    "林彥丞",
-    "陳首廉"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林彥丞",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_r3top",
-   "date": "2026-10-01",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 16強",
-   "players": [
-    "楊子萱",
-    "李維"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "李維",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_r3bot",
-   "date": "2026-10-01",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 16強",
-   "players": [
-    "陳詩淵",
-    "林君諺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳詩淵",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_r3top",
-   "date": "2026-10-01",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 16強",
-   "players": [
-    "賴均輔",
-    "林書陽"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_r3bot",
-   "date": "2026-10-01",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 16強",
-   "players": [
-    "陳祈睿",
-    "張哲豪"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_r3top",
-   "date": "2026-10-01",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 16強",
-   "players": [
-    "簡靖庭",
-    "蔡丞韋"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "簡靖庭",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_r3bot",
-   "date": "2026-10-01",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 16強",
-   "players": [
-    "盧奕銓",
-    "徐靖恩"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧奕銓",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
    "id": "guoshou__0:gs22_11",
@@ -3905,902 +2725,6 @@
    "status": "drawn",
    "candidates": [],
    "winner": "林士勛",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g7_A",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "曾品傑",
-    "陳首廉"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳首廉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g7_B",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "陳威廷",
-    "黃家胤"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳威廷",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g8_A",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "鄭予皓",
-    "周可平"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "鄭予皓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g8_B",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "林新為",
-    "黃世元"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃世元",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g9_A",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "張凱馨",
-    "林鈺娗"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林鈺娗",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g9_B",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "黃偉",
-    "盧鈺樺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃偉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g10_A",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "陳國興",
-    "彭景華"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "彭景華",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g10_B",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "蔡丞韋",
-    "吳彥諶"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "蔡丞韋",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g11_A",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "黃袖圃",
-    "林立祥"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林立祥",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g11_B",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "詹宜典",
-    "蘇聖芳"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "詹宜典",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g12_A",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "劉耀文",
-    "謝承翰"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "劉耀文",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g12_B",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "沈逸恩",
-    "林書陽"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林書陽",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g13_A",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "林杰漢",
-    "王智弘"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林杰漢",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g13_B",
-   "date": "2026-10-06",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部1回 (29~56號)",
-   "players": [
-    "徐靖恩",
-    "周尹南"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "徐靖恩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|5|1|4",
-   "date": "2026-10-06",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第五輪",
-   "players": [
-    "王元均",
-    "陳祈睿"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|5|2|6",
-   "date": "2026-10-06",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第五輪",
-   "players": [
-    "蕭正浩",
-    "楊博崴"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "蕭正浩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|5|3|5",
-   "date": "2026-10-06",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第五輪",
-   "players": [
-    "林君諺",
-    "賴均輔"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|5|7|8",
-   "date": "2026-10-06",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第五輪",
-   "players": [
-    "陳詩淵",
-    "簡靖庭"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "簡靖庭",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g7_LBAB",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (29~56號)",
-   "players": [
-    "曾品傑",
-    "黃家胤"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃家胤",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g8_LBAB",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (29~56號)",
-   "players": [
-    "周可平",
-    "林新為"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林新為",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g9_LBAB",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (29~56號)",
-   "players": [
-    "張凱馨",
-    "盧鈺樺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧鈺樺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g10_LBAB",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (29~56號)",
-   "players": [
-    "陳國興",
-    "吳彥諶"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "吳彥諶",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g11_LBAB",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (29~56號)",
-   "players": [
-    "黃袖圃",
-    "蘇聖芳"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃袖圃",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g12_LBAB",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (29~56號)",
-   "players": [
-    "謝承翰",
-    "沈逸恩"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "沈逸恩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g13_LBAB",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部1回 (29~56號)",
-   "players": [
-    "王智弘",
-    "周尹南"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "周尹南",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g7_C",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (29~56號)",
-   "players": [
-    "陳首廉",
-    "陳威廷"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳首廉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g8_C",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (29~56號)",
-   "players": [
-    "鄭予皓",
-    "黃世元"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "鄭予皓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g9_C",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (29~56號)",
-   "players": [
-    "林鈺娗",
-    "黃偉"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林鈺娗",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g10_C",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (29~56號)",
-   "players": [
-    "彭景華",
-    "蔡丞韋"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "蔡丞韋",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g11_C",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (29~56號)",
-   "players": [
-    "林立祥",
-    "詹宜典"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林立祥",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g12_C",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (29~56號)",
-   "players": [
-    "劉耀文",
-    "林書陽"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林書陽",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g13_C",
-   "date": "2026-10-06",
-   "time": "14:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 勝部2回 (29~56號)",
-   "players": [
-    "林杰漢",
-    "徐靖恩"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "徐靖恩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TL_qf",
-   "date": "2026-10-08",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 8強",
-   "players": [
-    "許皓鋐",
-    "林彥丞"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "許皓鋐",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BL_qf",
-   "date": "2026-10-08",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 8強",
-   "players": [
-    "李維",
-    "陳詩淵"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳詩淵",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:TR_qf",
-   "date": "2026-10-08",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 8強",
-   "players": [
-    "賴均輔",
-    "陳祈睿"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:BR_qf",
-   "date": "2026-10-08",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 8強",
-   "players": [
-    "簡靖庭",
-    "盧奕銓"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "簡靖庭",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g0_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "林宇翔",
-    "周平強"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": null,
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g1_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "牛詩特",
-    "楊子萱"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊子萱",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g2_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "白昕卉",
-    "許育祺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "白昕卉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g3_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "黃柏人",
-    "張哲豪"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃柏人",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g4_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "徐銘均",
-    "陳品樺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "徐銘均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g5_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "蔡文河",
-    "劉建昌"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "劉建昌",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g6_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "林修平",
-    "丁少傑"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林修平",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g7_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "黃家胤",
-    "陳威廷"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳威廷",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g8_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "林新為",
-    "黃世元"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林新為",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g9_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "盧鈺樺",
-    "黃偉"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧鈺樺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g10_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "吳彥諶",
-    "彭景華"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "吳彥諶",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g11_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "黃袖圃",
-    "詹宜典"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "詹宜典",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g12_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "沈逸恩",
-    "劉耀文"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "沈逸恩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang20__0:g13_LBFINAL",
-   "date": "2026-10-13",
-   "time": "10:00",
-   "event": "第20屆棋王賽",
-   "round": "初賽 敗部2回 (1~56號)",
-   "players": [
-    "周尹南",
-    "林杰漢"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "周尹南",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|6|1|3",
-   "date": "2026-10-13",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第六輪",
-   "players": [
-    "王元均",
-    "林君諺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|6|2|4",
-   "date": "2026-10-13",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第六輪",
-   "players": [
-    "蕭正浩",
-    "陳祈睿"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|6|5|8",
-   "date": "2026-10-13",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第六輪",
-   "players": [
-    "賴均輔",
-    "簡靖庭"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|6|6|7",
-   "date": "2026-10-13",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第六輪",
-   "players": [
-    "楊博崴",
-    "陳詩淵"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳詩淵",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:half_left",
-   "date": "2026-10-15",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 4強",
-   "players": [
-    "許皓鋐",
-    "陳詩淵"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "許皓鋐",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:half_right",
-   "date": "2026-10-15",
-   "time": "",
-   "event": "第1屆玄樂盃",
-   "round": "本賽 4強",
-   "players": [
-    "賴均輔",
-    "簡靖庭"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
    "source": "schedule-app"
   },
   {
@@ -4932,75 +2856,11 @@
    "source": "schedule-app"
   },
   {
-   "id": "qiwang19__0:qwc|7|1|2",
-   "date": "2026-10-20",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第七輪",
-   "players": [
-    "王元均",
-    "蕭正浩"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|7|3|8",
-   "date": "2026-10-20",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第七輪",
-   "players": [
-    "林君諺",
-    "簡靖庭"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|7|4|7",
-   "date": "2026-10-20",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第七輪",
-   "players": [
-    "陳祈睿",
-    "陳詩淵"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "qiwang19__0:qwc|7|5|6",
-   "date": "2026-10-20",
-   "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 第七輪",
-   "players": [
-    "賴均輔",
-    "楊博崴"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__1:final",
+   "id": "xuanle__2:xf_g1",
    "date": "2026-10-22",
    "time": "11:00",
    "event": "第1屆玄樂盃",
-   "round": "本賽 決賽",
+   "round": "決賽 第1局",
    "players": [
     "許皓鋐",
     "賴均輔"
@@ -5008,7 +2868,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "賴均輔",
    "source": "schedule-app"
   },
   {
@@ -5076,14 +2936,17 @@
    "source": "schedule-app"
   },
   {
-   "id": "qiwang19__0:round7",
-   "date": "2026-10-27",
+   "id": "xuanle__2:xf_g2",
+   "date": "2026-10-29",
    "time": "11:00",
-   "event": "第19屆棋王賽",
-   "round": "循環圈 加賽",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
+   "event": "第1屆玄樂盃",
+   "round": "決賽 第2局",
+   "players": [
+    "許皓鋐",
+    "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
    "candidates": [],
    "winner": null,
    "source": "schedule-app"
@@ -5189,6 +3052,470 @@
    "source": "schedule-app"
   },
   {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "陳詩淵",
+    "林新為"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "周尹南",
+    "林士勛"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "沈逸恩",
+    "楊子萱"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "鄭予皓",
+    "陳首廉"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "簡靖庭",
+    "白昕卉"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "盧奕銓",
+    "林立祥"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "林修平",
+    "詹宜典"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "林君諺",
+    "陳威廷"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "林鈺娗",
+    "林書陽"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "林宇翔",
+    "徐靖恩"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "劉建昌",
+    "蔡丞韋"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "楊博崴",
+    "林彥丞"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "陳映嘉",
+    "林世民"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "黃柏人",
+    "孫立言"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "",
+   "event": "第20屆棋王賽複賽 抽籤結果公告",
+   "round": "複賽勝部1回",
+   "players": [
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "id": "qiwang20__1:f_a",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "陳詩淵",
+    "林新為"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_b",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "周尹南",
+    "林士勛"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_c",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "沈逸恩",
+    "楊子萱"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_d",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "鄭予皓",
+    "陳首廉"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_e",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "簡靖庭",
+    "白昕卉"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_f",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "盧奕銓",
+    "林立祥"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_g",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "林修平",
+    "詹宜典"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_h",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_i",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "林君諺",
+    "陳威廷"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_j",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "林鈺娗",
+    "林書陽"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_k",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "林宇翔",
+    "徐靖恩"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_l",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "劉建昌",
+    "蔡丞韋"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_m",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "楊博崴",
+    "林彥丞"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_n",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "陳映嘉",
+    "林世民"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_o",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "黃柏人",
+    "孫立言"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_p",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部1回",
+   "players": [
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "xuanle__2:xf_g3",
+   "date": "2026-11-05",
+   "time": "11:00",
+   "event": "第1屆玄樂盃",
+   "round": "決賽 第3局",
+   "players": [
+    "許皓鋐",
+    "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
    "id": "guoshou__0:gs22_1",
    "date": "2026-11-09",
    "time": "11:00",
@@ -5225,6 +3552,294 @@
    "source": "schedule-app"
   },
   {
+   "id": "qiwang20__1:f_lb7_ab",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部1回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_cd",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部1回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_ef",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部1回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_gh",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部1回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_ij",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部1回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_kl",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部1回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_mn",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部1回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_op",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部1回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_A",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_B",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_C",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_D",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_H",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_I",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_J",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_K",
+   "date": "2026-11-10",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
    "id": "guoshou__0:gs22_0",
    "date": "2026-11-16",
    "time": "11:00",
@@ -5242,6 +3857,818 @@
     "林君諺",
     "李維",
     "林士勛"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_abcd",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_efgh",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_HI",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_JK",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_ijkl",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_mnop",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_AB",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_CD",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_E",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部準決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_F",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部準決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_L",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部準決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_M",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部準決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_abcdefgh",
+   "date": "2026-11-24",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部3回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉",
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_HIJK",
+   "date": "2026-11-24",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部3回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋",
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_EF",
+   "date": "2026-11-24",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部3回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉",
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_ipresult",
+   "date": "2026-11-24",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部3回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋",
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_ABCD",
+   "date": "2026-11-24",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部3回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉",
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_LM",
+   "date": "2026-11-24",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部3回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋",
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_G",
+   "date": "2026-11-24",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉",
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_N",
+   "date": "2026-11-24",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 勝部決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋",
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "xuanle__2:xf_g4",
+   "date": "2026-11-26",
+   "time": "11:00",
+   "event": "第1屆玄樂盃",
+   "round": "決賽 第4局",
+   "players": [
+    "許皓鋐",
+    "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_X",
+   "date": "2026-12-01",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部準決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉",
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均",
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋",
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_Y",
+   "date": "2026-12-01",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部準決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋",
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰",
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉",
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_X",
+   "date": "2026-12-01",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部準決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋",
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰",
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉",
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_Y",
+   "date": "2026-12-01",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部準決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉",
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均",
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋",
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "xuanle__2:xf_g5",
+   "date": "2026-12-03",
+   "time": "11:00",
+   "event": "第1屆玄樂盃",
+   "round": "決賽 第5局",
+   "players": [
+    "許皓鋐",
+    "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb7_FINAL",
+   "date": "2026-12-08",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉",
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均",
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋",
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang20__1:f_lb8_FINAL",
+   "date": "2026-12-08",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林君諺",
+    "陳威廷",
+    "林鈺娗",
+    "林書陽",
+    "林宇翔",
+    "徐靖恩",
+    "劉建昌",
+    "蔡丞韋",
+    "楊博崴",
+    "林彥丞",
+    "陳映嘉",
+    "林世民",
+    "黃柏人",
+    "孫立言",
+    "盧鈺樺",
+    "林瀚彰",
+    "陳詩淵",
+    "林新為",
+    "周尹南",
+    "林士勛",
+    "沈逸恩",
+    "楊子萱",
+    "鄭予皓",
+    "陳首廉",
+    "簡靖庭",
+    "白昕卉",
+    "盧奕銓",
+    "林立祥",
+    "林修平",
+    "詹宜典",
+    "吳彥諶",
+    "徐銘均"
    ],
    "winner": null,
    "source": "schedule-app"

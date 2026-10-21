@@ -1,10 +1,26 @@
 {
  "schema_version": 1,
- "generated": "2026-10-20T17:09:34+00:00",
+ "generated": "2026-10-21T17:14:16+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "0D41C14AC963ED3C92BA7A79F008D504",
+   "date": "2026-10-21",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【長青賽公告】關於颱風動態與賽事說明",
+   "url": "https://www.haifong.org/news/content/0D41C14AC963ED3C92BA7A79F008D504"
+  },
+  {
+   "id": "22C9CB5F1B3FD6DE030BE44028EF208E",
+   "date": "2026-10-21",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第20屆棋王賽複賽 抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/22C9CB5F1B3FD6DE030BE44028EF208E"
+  },
   {
    "id": "3D4CDB7FE80F551905080B38148A060A",
    "date": "2026-10-20",
@@ -18,7 +34,7 @@
    "date": "2026-10-20",
    "catLabel": "比賽訊息",
    "cat": "match",
-   "title": "【第12屆國手山脈盃｜世界4強誕生】",
+   "title": "【國手山脈杯：申真諝奪冠】",
    "url": "https://www.haifong.org/news/content/F53E8FC02DEB96E9EB07DB44EB25D31F"
   },
   {
@@ -948,22 +964,6 @@
    "cat": "notice",
    "title": "【院生第四輪月賽 - 總成績公告】",
    "url": "https://www.haifong.org/news/content/837572E4D4FCF715BF8C17EE80096B27"
-  },
-  {
-   "id": "1858BB345D38BB00C345B3E1A89B56CC",
-   "date": "2026-04-29",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【院生第五輪月賽 賽程表】",
-   "url": "https://www.haifong.org/news/content/1858BB345D38BB00C345B3E1A89B56CC"
-  },
-  {
-   "id": "0686B80CED6865CCE1DFBDC0AD3F82CA",
-   "date": "2026-04-28",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "第31屆LG杯「朝鮮日報世界棋王戰」賴均輔獲得代表權",
-   "url": "https://www.haifong.org/news/content/0686B80CED6865CCE1DFBDC0AD3F82CA"
   }
  ]
 }
