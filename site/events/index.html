@@ -69,6 +69,9 @@
       </div>
       <div class="legend" id="schedLegend"></div>
     </div>
+    <!-- 月曆看得出整個月的疏密，表格看得清每一場的細節，兩個都要 -->
+    <div id="schedCal" class="mb-3"></div>
+
     <div class="table-wrap">
       <table class="table">
         <thead><tr><th style="width:120px">日期</th><th style="width:96px">時間</th><th>賽事</th></tr></thead>
@@ -144,6 +147,10 @@
           ? String(a.time || '').localeCompare(String(b.time || ''))
           : a.date.localeCompare(b.date);
       });
+
+    /* 月曆用「全部」賽事而不是 rows——rows 只留今天之後的，
+       往回翻月份時會變成空白。表格維持只列未來的場次。 */
+    S.calendar(document.getElementById('schedCal'), data.events || [], { size: 'lg' });
 
     document.getElementById('schedBody').innerHTML = rows.length
       ? rows.map(function (e) {

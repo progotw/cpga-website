@@ -725,6 +725,46 @@ body.member-area { background: var(--paper-2); }
 }
 .rs-item__body { padding: 2px 2px 14px; }
 
+/* ---- 大格月曆（賽事專區）----
+   版面夠寬時把賽事名直接寫進格子，不必對照圖例。
+   gap 設 0、用底色當格線，才不會每格都有圓角看起來像一堆貼紙。 */
+.cal--lg .cal__bar { margin-bottom: 14px; }
+.cal--lg .cal__title { font-family: var(--serif); font-size: 1.6rem; }
+.cal--lg .cal__grid--head {
+  font-size: .82rem; color: var(--ink-3); padding-bottom: 6px;
+  border-bottom: 1px solid var(--line); margin-bottom: 0;
+}
+.cal--lg .cal__grid {
+  gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-top: 0;
+}
+.cal--lg .cal__grid--head { background: none; border-left: 0; border-right: 0; }
+.cal--lg .cal__d {
+  background: #fff; min-height: 96px; border-radius: 0;
+  text-align: left; padding: 6px 7px; font-size: .82rem; color: var(--ink-2);
+}
+/* 月初月底的空格也要畫出來，否則邊框會缺一塊 */
+.cal--lg .cal__d--pad { visibility: visible; background: var(--paper-2); }
+.cal--lg .cal__d--today {
+  outline: 0; box-shadow: inset 0 0 0 2px var(--accent);
+}
+.cal--lg .cal__n { font-weight: 600; color: var(--ink); }
+.cal--lg .cal__ev {
+  display: block; margin-top: 4px; padding: 3px 6px; border-radius: 4px;
+  font-size: .74rem; line-height: 1.35; font-weight: 500;
+}
+
+@media (max-width: 720px) {
+  .cal--lg .cal__d { min-height: 54px; padding: 4px 2px; }
+  /* 七欄分下來一格只有四十幾 px，賽事名怎麼縮都塞不下。
+     改成只留色塊，看得出哪天有事、是哪個系列就夠——
+     細節下面的表格都有。 */
+  .cal--lg .cal__ev {
+    font-size: 0; padding: 0; height: 5px; margin-top: 3px; border-radius: 2px;
+  }
+  .cal--lg .cal__title { font-size: 1.2rem; }
+}
+
 /* ---- 棋士專區的賽程月曆 ----
    條列式看不出一個月裡哪幾天密集，排成月曆才看得出要跑幾趟。 */
 .cal__bar {
@@ -737,7 +777,9 @@ body.member-area { background: var(--paper-2); }
   background: transparent; color: var(--ink-2);
 }
 .cal__nav:disabled { opacity: .35; cursor: default; }
-.cal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+/* minmax(0,1fr) 而不是 1fr：1fr 等於 minmax(auto,1fr)，
+   格子裡的賽事名會把該欄撐寬，其他欄被擠到只剩二十幾 px。 */
+.cal__grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 2px; }
 .cal__grid--head {
   font-size: .74rem; color: var(--ink-4); text-align: center; margin-bottom: 2px;
 }

@@ -381,93 +381,11 @@
   }
 
   /* ---- 近期賽程（全體）：月曆 ----
-     原本是一條一條列日期，看不出整個月哪幾天密集。
-     改成月曆之後，一眼就知道這個月要跑幾趟。 */
+     月曆本身是 schedule.js 的共用函式，賽事專區那頁也用同一份。
+     這裡的卡片窄，所以用小格版，並在下方列出當月賽事——
+     小格只標色點，看不出是什麼賽。 */
   S.load().then(function (data) {
-    var box = document.getElementById('schedList');
-    var all = (data.events || []).slice().sort(function (a, b) {
-      return String(a.date).localeCompare(String(b.date));
-    });
-    if (!all.length) {
-      box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">近期沒有排定的賽程。</p>';
-      return;
-    }
-
-    var byDate = {};
-    all.forEach(function (e) { (byDate[e.date] = byDate[e.date] || []).push(e); });
-
-    var today = S.today();
-    /* 從「還沒過的第一場」那個月開始，不是從今天的月份——
-       月底時這個月可能已經沒有比賽了，開起來會是一片空白。 */
-    var start = (all.filter(function (e) { return e.date >= today; })[0]
-                 || all[all.length - 1]).date;
-    var cur = { y: Number(start.slice(0, 4)), m: Number(start.slice(5, 7)) - 1 };
-
-    var MIN = all[0].date.slice(0, 7);
-    var MAX = all[all.length - 1].date.slice(0, 7);
-    var WD = ['日', '一', '二', '三', '四', '五', '六'];
-
-    function ym(c) { return c.y + '-' + S.pad(c.m + 1); }
-
-    function draw() {
-      var y = cur.y, m = cur.m;
-      var lead = new Date(y, m, 1).getDay();
-      var days = new Date(y, m + 1, 0).getDate();
-
-      var cells = '';
-      for (var i = 0; i < lead; i++) cells += '<span class="cal__d cal__d--pad"></span>';
-      for (var d = 1; d <= days; d++) {
-        var k = y + '-' + S.pad(m + 1) + '-' + S.pad(d);
-        var evs = byDate[k] || [];
-        cells += '<span class="cal__d' + (evs.length ? ' cal__d--on' : '') +
-          (k === today ? ' cal__d--today' : '') + '">' + d +
-          (evs.length
-            ? '<span class="cal__dots">' + evs.slice(0, 3).map(function (e) {
-                return '<i class="' + S.slotClass(e.series_slot) + '"></i>';
-              }).join('') + '</span>'
-            : '') + '</span>';
-      }
-
-      /* 月曆只看得出哪幾天有事，看不出是什麼賽，所以底下還是要列出來 */
-      var mine = all.filter(function (e) { return String(e.date).slice(0, 7) === ym(cur); });
-      var list = mine.map(function (e) {
-        return '<li style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--line)">' +
-          '<span class="legend__dot ' + S.slotClass(e.series_slot) +
-            '" style="background:currentColor;flex:none;margin-top:6px"></span>' +
-          '<span><strong style="color:var(--ink)">' +
-            esc(String(e.date).slice(5).replace('-', '/')) + '</strong>　' +
-            esc(S.fullTitle(e)) +
-            '<br><span class="muted" style="font-size:.8rem">' +
-              esc(S.timeLabel(e)) + '</span></span></li>';
-      }).join('');
-
-      box.innerHTML =
-        '<div class="cal__bar">' +
-          '<button type="button" class="cal__nav" data-step="-1"' +
-            (ym(cur) <= MIN ? ' disabled' : '') + '>&lsaquo;</button>' +
-          '<strong>' + y + ' 年 ' + (m + 1) + ' 月</strong>' +
-          '<button type="button" class="cal__nav" data-step="1"' +
-            (ym(cur) >= MAX ? ' disabled' : '') + '>&rsaquo;</button>' +
-        '</div>' +
-        '<div class="cal__grid cal__grid--head">' +
-          WD.map(function (w) { return '<span>' + w + '</span>'; }).join('') +
-        '</div>' +
-        '<div class="cal__grid">' + cells + '</div>' +
-        (list
-          ? '<ul style="list-style:none;padding:0;margin:10px 0 0;font-size:.86rem">' +
-            list + '</ul>'
-          : '<p class="muted mb-0 mt-2" style="font-size:.86rem">這個月沒有排定的賽程。</p>');
-    }
-
-    box.addEventListener('click', function (ev) {
-      var b = ev.target.closest('.cal__nav');
-      if (!b || b.disabled) return;
-      var n = cur.y * 12 + cur.m + Number(b.getAttribute('data-step'));
-      cur = { y: Math.floor(n / 12), m: ((n % 12) + 12) % 12 };
-      draw();
-    });
-
-    draw();
+    S.calendar(document.getElementById('schedList'), data.events || [], { list: true });
   }).catch(function () {
     document.getElementById('schedList').innerHTML =
       '<p class="muted mb-0" style="font-size:.9rem">賽程載入失敗。</p>';
