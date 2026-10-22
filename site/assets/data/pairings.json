@@ -2,140 +2,8 @@
  "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
  "schema_version": 1,
  "source": "海峰棋院 抽籤結果公告",
- "count": 290,
+ "count": 279,
  "pairings": [
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "林瀚彰",
-    "沈逸恩"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "王惇楷",
-    "柯沛辰"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "謝承翰",
-    "蔡明叡"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "林佾緯",
-    "鄭予皓"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "林鈺娗",
-    "陳映嘉"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "楊子萱",
-    "王柏勛"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "吳彥諶",
-    "陳柏菘"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "孫偉勛",
-    "黃家胤"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "白昕卉",
-    "黃柏人"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "陳品樺",
-    "吳君成"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-05-05",
-   "time": "",
-   "event": "2026新人王賽初賽與本賽抽籤結果公告",
-   "round": "10：00 初賽",
-   "players": [
-    "李嘉馨",
-    "蕭睿杉"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
   {
    "date": "2026-08-13",
    "time": "10:00",
@@ -2868,7 +2736,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": "賴均輔",
+   "winner": "許皓鋐",
    "source": "schedule-app"
   },
   {

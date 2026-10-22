@@ -1,10 +1,42 @@
 {
  "schema_version": 1,
- "generated": "2026-10-21T17:14:16+00:00",
+ "generated": "2026-10-22T17:12:22+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "B91D72B264179C6D1BA59229CEDFC5CA",
+   "date": "2026-10-22",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【第1屆玄樂盃｜許皓鋐名人屠龍賴均輔碁聖，五番勝負先下一城】",
+   "url": "https://www.haifong.org/news/content/B91D72B264179C6D1BA59229CEDFC5CA"
+  },
+  {
+   "id": "68F78A4CB0DC1AE82109FF1DFFB4679B",
+   "date": "2026-10-22",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【長青賽公告】第25屆海峰盃長青圍棋賽　延期舉行",
+   "url": "https://www.haifong.org/news/content/68F78A4CB0DC1AE82109FF1DFFB4679B"
+  },
+  {
+   "id": "DC8A1EFAA73B3B279C9AD5AF10F323A7",
+   "date": "2026-10-22",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "因應薔琵颱風來襲「第14屆中環碁聖賽8強戰」比賽延期公告",
+   "url": "https://www.haifong.org/news/content/DC8A1EFAA73B3B279C9AD5AF10F323A7"
+  },
+  {
+   "id": "8EA9C89183D517008BFD7F933705239A",
+   "date": "2026-10-21",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "吳清源杯預選賽第四輪：楊子萱六段惜敗方若曦七段",
+   "url": "https://www.haifong.org/news/content/8EA9C89183D517008BFD7F933705239A"
+  },
   {
    "id": "0D41C14AC963ED3C92BA7A79F008D504",
    "date": "2026-10-21",
@@ -932,38 +964,6 @@
    "cat": "match",
    "title": "2026新人王賽【初賽】棋譜 & 結果",
    "url": "https://www.haifong.org/news/content/41F62D89E90CD799BE589E4C771E7D67"
-  },
-  {
-   "id": "1A5421E94A98DEAF2526C966F65E8A1D",
-   "date": "2026-04-30",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "2026海峰棋院vs關西新世代精銳交流賽 圓滿落幕",
-   "url": "https://www.haifong.org/news/content/1A5421E94A98DEAF2526C966F65E8A1D"
-  },
-  {
-   "id": "B23602CE14084A97A066E43445961EF6",
-   "date": "2026-04-30",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "2026新人王賽初賽與本賽抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/B23602CE14084A97A066E43445961EF6"
-  },
-  {
-   "id": "A6AFD27E287965083E11E3FBBBB9EDBF",
-   "date": "2026-04-29",
-   "catLabel": "媒體報導",
-   "cat": "media",
-   "title": "【精彩好棋專欄：第88篇 傳奇對決(下)】",
-   "url": "https://www.haifong.org/news/content/A6AFD27E287965083E11E3FBBBB9EDBF"
-  },
-  {
-   "id": "837572E4D4FCF715BF8C17EE80096B27",
-   "date": "2026-04-29",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【院生第四輪月賽 - 總成績公告】",
-   "url": "https://www.haifong.org/news/content/837572E4D4FCF715BF8C17EE80096B27"
   }
  ]
 }
