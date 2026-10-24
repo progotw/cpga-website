@@ -1,10 +1,18 @@
 {
  "schema_version": 1,
- "generated": "2026-10-23T17:09:46+00:00",
+ "generated": "2026-10-24T15:58:14+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "CC6390A22902CF20ACA76BE3CDEDF236",
+   "date": "2026-10-24",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第2屆 龍星賽 簡章",
+   "url": "https://www.haifong.org/news/content/CC6390A22902CF20ACA76BE3CDEDF236"
+  },
   {
    "id": "B91D72B264179C6D1BA59229CEDFC5CA",
    "date": "2026-10-22",
@@ -956,14 +964,6 @@
    "cat": "match",
    "title": "2026年新人王初賽成績",
    "url": "https://www.haifong.org/news/content/E6B9B8D4BD0A5C8F9758955B65A12492"
-  },
-  {
-   "id": "41F62D89E90CD799BE589E4C771E7D67",
-   "date": "2026-05-05",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "2026新人王賽【初賽】棋譜 & 結果",
-   "url": "https://www.haifong.org/news/content/41F62D89E90CD799BE589E4C771E7D67"
   }
  ]
 }
