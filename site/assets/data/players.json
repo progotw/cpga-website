@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-10-25T16:23:56+00:00",
+ "generated": "2026-10-26T18:41:36+00:00",
  "source": "海峰棋院 職業棋士名錄",
  "source_url": "https://www.haifong.org/profession",
  "count": 139,
@@ -2682,11 +2682,11 @@
    "rank": "三段",
    "photo": "assets/img/players/06F4746CEB171C0D5428EDA5CFE69315.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (9/1更新)",
+   "seasonLabel": "2026年度成績 (10/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "15勝12負　勝率55.6%"
+     "value": "17勝15負　勝率53.1%"
     },
     {
      "label": "世界賽",
@@ -2712,11 +2712,11 @@
    "rank": "三段",
    "photo": "assets/img/players/50A678286D3D9124EB68460F11B08E88.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (9/1更新)",
+   "seasonLabel": "2026年度成績 (10/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "4勝9負　勝率30.8%"
+     "value": "5勝11負　勝率31.3%"
     },
     {
      "label": "世界賽",
@@ -2727,7 +2727,7 @@
      "value": "9勝14負　勝率39.1%"
     }
    ],
-   "body": "<p><strong>簡介</strong><br /><br />\n2006年07月23日生，出生於臺灣桃園市。 <br /><br />\n2018~2019年加入中華職業圍棋道場，2020年入段並加入中華職協新銳隊(~2021)，2022年二段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2023年</strong><br /><br />\n111年中等以下學校圍棋運動錦標賽高中女子組 冠軍<strong> </strong></p><br />\n<br />\n<p><strong>2020年 </strong><br /><br />\n108年中等以下學校圍棋運動錦標賽國中女子組 亞軍 </p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n107年中等以下學校圍棋運動錦標賽國中女子組 亞軍 </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n106年中等以下學校圍棋運動錦標賽國小女子組 亞軍</p><br />\n</p>",
+   "body": "<p><strong>簡介</strong><br /><br />\n2006年07月23日生，出生於臺灣桃園市。 <br /><br />\n2018~2019年加入中華職業圍棋道場，2020年入段並加入中華職協新銳隊(~2021)，2022年二段，2026年三段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2023年</strong><br /><br />\n111年中等以下學校圍棋運動錦標賽高中女子組 冠軍<strong> </strong></p><br />\n<br />\n<p><strong>2020年 </strong><br /><br />\n108年中等以下學校圍棋運動錦標賽國中女子組 亞軍 </p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n107年中等以下學校圍棋運動錦標賽國中女子組 亞軍 </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n106年中等以下學校圍棋運動錦標賽國小女子組 亞軍</p><br />\n</p>",
    "links": [],
    "source": "https://www.haifong.org/profession/venue/50A678286D3D9124EB68460F11B08E88"
   },
@@ -2737,11 +2737,11 @@
    "rank": "二段",
    "photo": "assets/img/players/7832DC10400C5CC0FCEAFB40394E9ED6.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (9/1更新)",
+   "seasonLabel": "2026年度成績 (10/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "0勝1負　勝率0%"
+     "value": "0勝5負　勝率0%"
     },
     {
      "label": "世界賽",
@@ -2767,7 +2767,7 @@
      "value": "冠軍數:1冠"
     }
    ],
-   "seasonLabel": "2026年度成績 (9/1更新)",
+   "seasonLabel": "2026年度成績 (10/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2792,7 +2792,7 @@
    "rank": "二段",
    "photo": "assets/img/players/DD1E65F813D3FC0F74757318A184B0EC.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (9/1更新)",
+   "seasonLabel": "2026年度成績 (10/1更新)",
    "season": [
     {
      "label": "台灣職業賽",

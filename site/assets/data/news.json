@@ -1,10 +1,18 @@
 {
  "schema_version": 1,
- "generated": "2026-10-25T16:23:35+00:00",
+ "generated": "2026-10-26T18:41:14+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "E628142ACE733E5582E6069E85F70DF6",
+   "date": "2026-10-26",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤公告",
+   "url": "https://www.haifong.org/news/content/E628142ACE733E5582E6069E85F70DF6"
+  },
   {
    "id": "CC6390A22902CF20ACA76BE3CDEDF236",
    "date": "2026-10-24",
@@ -956,14 +964,6 @@
    "cat": "notice",
    "title": "【升段公告 - 吳彥諶二段晉升職業三段】",
    "url": "https://www.haifong.org/news/content/56C4E060F345FB2C6E9C1CF7D83E04AA"
-  },
-  {
-   "id": "E6B9B8D4BD0A5C8F9758955B65A12492",
-   "date": "2026-05-05",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "2026年新人王初賽成績",
-   "url": "https://www.haifong.org/news/content/E6B9B8D4BD0A5C8F9758955B65A12492"
   }
  ]
 }
