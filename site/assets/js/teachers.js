@@ -80,7 +80,10 @@
               acceptForm: t.acceptForm !== false,
               contacts: t.contacts || [],
               /* 老師自行提供的相關連結：課程介紹、教學影片、報名表單等，數量不限 */
-              links: (t.links || []).filter(function (l) { return l && l.url; })
+              /* 老師自己填的連結同樣要過協定白名單，理由見 safeUrl */
+              links: (t.links || []).map(function (l) {
+                return { label: l && l.label, url: window.CPGA_PLAYERS.safeUrl(l && l.url) };
+              }).filter(function (l) { return l.url; })
             };
           });
           return { meta: data, teachers: merged };

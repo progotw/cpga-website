@@ -46,9 +46,11 @@
 <script src="../assets/js/sb-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
 <script src="../assets/js/auth.js"></script>
-<!-- 海峰成績系統的唯讀元件。催報清單要靠局數排序，而那份清單是拿來打電話的，
-     用每月抓取的快照會打錯對象。 -->
-<script src="https://milu891212-milu.github.io/qisai-schedule-web/results/player-widget.js"></script>
+<!-- 成績資料。原本載入海峰那邊的 player-widget.js，但那支程式放在
+     對方的 GitHub Pages，內容隨時可改而我們不會知道——它被載入在
+     有登入身分的頁面上，對方帳號被盜就等於我們的權限被拿走。
+     改成自己讀同一份公開資料，不執行任何外部程式。 -->
+<script src="../assets/js/results.js"></script>
 <script>
 (function () {
   var A = window.CPGA_AUTH;
@@ -102,17 +104,19 @@
   function liveCounts(list) {
     if (!window.HaifongResults) return Promise.resolve(list);
     var now = new Date().getFullYear();
-    return Promise.all(list.map(function (p) {
-      return window.HaifongResults.player(p.name).then(function (r) {
-        var g = (r.games || []).filter(function (x) { return x.year === String(now); });
-        var prev = (r.years || []).filter(function (y) {
-          return String(y.year) === String(now - 1);
-        })[0];
-        p.now = g.length;
-        p.prev = prev ? prev.win + prev.loss : p.prev;
+    /* 一次拿整年的局數對照表，不必逐人查 139 次 */
+    return Promise.all([
+      window.HaifongResults.countsByYear(now),
+      window.HaifongResults.countsByYear(now - 1)
+    ]).then(function (c) {
+      list.forEach(function (p) {
+        /* 抓得到整年資料時，沒出現在裡面就是真的 0 局，不是查不到 */
+        p.now = c[0][p.name] || 0;
+        p.prev = c[1][p.name] || 0;
         p.live = true;
-      }).catch(function () { /* 保留抓取版 */ });
-    })).then(function () { return list; });
+      });
+      return list;
+    }).catch(function () { return list; });   // 失敗就保留抓取版
   }
 
 

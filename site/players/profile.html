@@ -38,9 +38,11 @@
 
 <div id="site-footer"></div>
 <script src="../assets/js/players.js"></script>
-<!-- 海峰成績系統的唯讀元件，只新增 window.HaifongResults 一個全域變數。
-     載入失敗時年度成績會退回每月抓取的版本，頁面其他部分不受影響。 -->
-<script src="https://milu891212-milu.github.io/qisai-schedule-web/results/player-widget.js"></script>
+<!-- 成績資料。原本載入海峰那邊的 player-widget.js，但那支程式放在
+     對方的 GitHub Pages，內容隨時可改而我們不會知道——它被載入在
+     有登入身分的頁面上，對方帳號被盜就等於我們的權限被拿走。
+     改成自己讀同一份公開資料，不執行任何外部程式。 -->
+<script src="../assets/js/results.js"></script>
 <script src="../assets/js/site.js" defer></script>
 <script>
 (function () {
@@ -146,13 +148,16 @@
     /* 本人填的排在前面，與原有連結合併；同一個網址只留一次 */
     var seenUrl = {};
     var allLinks = (own.links || []).concat(p.links || []).filter(function (l) {
-      var u = (l && l.url || '').replace(/\/+$/, '');
+      var u = (l && P.safeUrl(l.url) || '').replace(/\/+$/, '');
       if (!u || seenUrl[u]) return false;
       seenUrl[u] = 1;
       return true;
     });
 
+    /* 網址先過協定白名單：這些連結是棋士自己填的，
+       javascript: 放進 href 就會在公開頁面上執行 */
     var linkBtns = allLinks.map(function (l) {
+      l = { label: l.label, url: P.safeUrl(l.url) };
       return '<a class="btn btn-ghost btn-sm" href="' + esc(l.url) + '" target="_blank" rel="noopener">' +
         esc(l.label) + ' ↗</a>';
     }).join('');
@@ -196,7 +201,9 @@
               '<hr style="border:0;border-top:1px solid var(--line);margin:28px 0">'
             : '') +
 
-          '<article class="prose player-bio">' + (p.body || '<p class="muted">暫無簡介。</p>') + '</article>' +
+          /* 海峰的簡介是 HTML，清掉標籤與屬性之後才放行 */
+          '<article class="prose player-bio">' +
+            (P.safeHtml(p.body) || '<p class="muted">暫無簡介。</p>') + '</article>' +
 
           '<p class="src-note mt-3">資料來源：<strong>' + esc(data.source) + '</strong>' +
             (p.source ? '　·　<a href="' + esc(p.source) + '" target="_blank" rel="noopener">原始頁面 ↗</a>' : '') +
