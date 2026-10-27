@@ -2,7 +2,7 @@
  "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
  "schema_version": 1,
  "source": "海峰棋院 抽籤結果公告",
- "count": 279,
+ "count": 305,
  "pairings": [
   {
    "date": "2026-08-13",
@@ -2804,6 +2804,302 @@
    "source": "schedule-app"
   },
   {
+   "date": "2026-10-27",
+   "time": "10:00",
+   "event": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "王元均",
+    "黃柏人"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "10:00",
+   "event": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "孫立言",
+    "許育祺"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "10:00",
+   "event": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "盧奕銓",
+    "牛詩特"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "10:00",
+   "event": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "吳彥諶",
+    "白昕卉"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "10:00",
+   "event": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "陳祈睿",
+    "李嘉馨"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "10:00",
+   "event": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "林立祥",
+    "陳品樺"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "10:00",
+   "event": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "林彥丞",
+    "鄭予皓"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "10:00",
+   "event": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤結果公告",
+   "round": "上午",
+   "players": [
+    "陳映嘉",
+    "沈逸恩"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "id": "qixian2__0:P1a",
+   "date": "2026-10-28",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選1回",
+   "players": [
+    "王元均",
+    "黃柏人"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P1b",
+   "date": "2026-10-28",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選1回",
+   "players": [
+    "孫立言",
+    "許育祺"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P2a",
+   "date": "2026-10-28",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選1回",
+   "players": [
+    "盧奕銓",
+    "牛詩特"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P2b",
+   "date": "2026-10-28",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選1回",
+   "players": [
+    "吳彥諶",
+    "白昕卉"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P3a",
+   "date": "2026-10-28",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選1回",
+   "players": [
+    "陳祈睿",
+    "李嘉馨"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P3b",
+   "date": "2026-10-28",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選1回",
+   "players": [
+    "林立祥",
+    "陳品樺"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P4a",
+   "date": "2026-10-28",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選1回",
+   "players": [
+    "林彥丞",
+    "鄭予皓"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P4b",
+   "date": "2026-10-28",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選1回",
+   "players": [
+    "陳映嘉",
+    "沈逸恩"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P1f",
+   "date": "2026-10-28",
+   "time": "14:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "王元均",
+    "黃柏人",
+    "孫立言",
+    "許育祺"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P2f",
+   "date": "2026-10-28",
+   "time": "14:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "盧奕銓",
+    "牛詩特",
+    "吳彥諶",
+    "白昕卉"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P3f",
+   "date": "2026-10-28",
+   "time": "14:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "陳祈睿",
+    "李嘉馨",
+    "林立祥",
+    "陳品樺"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:P4f",
+   "date": "2026-10-28",
+   "time": "14:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 初選2回",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "林彥丞",
+    "鄭予皓",
+    "陳映嘉",
+    "沈逸恩"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
    "id": "xuanle__2:xf_g2",
    "date": "2026-10-29",
    "time": "11:00",
@@ -3364,6 +3660,134 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:F1",
+   "date": "2026-11-04",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 決選四強",
+   "players": [
+    "賴均輔"
+   ],
+   "pending_opponent": true,
+   "status": "drawn",
+   "candidates": [
+    "王元均",
+    "黃柏人",
+    "孫立言",
+    "許育祺"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:F2",
+   "date": "2026-11-04",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 決選四強",
+   "players": [
+    "徐靖恩"
+   ],
+   "pending_opponent": true,
+   "status": "drawn",
+   "candidates": [
+    "盧奕銓",
+    "牛詩特",
+    "吳彥諶",
+    "白昕卉"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:F3",
+   "date": "2026-11-04",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 決選四強",
+   "players": [
+    "許皓鋐"
+   ],
+   "pending_opponent": true,
+   "status": "drawn",
+   "candidates": [
+    "陳祈睿",
+    "李嘉馨",
+    "林立祥",
+    "陳品樺"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:F4",
+   "date": "2026-11-04",
+   "time": "10:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 決選四強",
+   "players": [
+    "林君諺"
+   ],
+   "pending_opponent": true,
+   "status": "drawn",
+   "candidates": [
+    "林彥丞",
+    "鄭予皓",
+    "陳映嘉",
+    "沈逸恩"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:FS1",
+   "date": "2026-11-04",
+   "time": "14:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 決選決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "賴均輔",
+    "王元均",
+    "黃柏人",
+    "孫立言",
+    "許育祺",
+    "徐靖恩",
+    "盧奕銓",
+    "牛詩特",
+    "吳彥諶",
+    "白昕卉"
+   ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qixian2__0:FS2",
+   "date": "2026-11-04",
+   "time": "14:00",
+   "event": "第2屆世界棋仙戰台灣代表選拔",
+   "round": "選拔賽 決選決賽",
+   "players": [],
+   "pending_opponent": true,
+   "status": "scheduled",
+   "candidates": [
+    "許皓鋐",
+    "陳祈睿",
+    "李嘉馨",
+    "林立祥",
+    "陳品樺",
+    "林君諺",
+    "林彥丞",
+    "鄭予皓",
+    "陳映嘉",
+    "沈逸恩"
+   ],
    "winner": null,
    "source": "schedule-app"
   },
