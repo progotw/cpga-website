@@ -1,10 +1,34 @@
 {
  "schema_version": 1,
- "generated": "2026-10-27T18:01:51+00:00",
+ "generated": "2026-10-28T18:21:32+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "377BA1EA911733D86678792601F86475",
+   "date": "2026-10-28",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【2027年度 院生甄選名單及注意事項】",
+   "url": "https://www.haifong.org/news/content/377BA1EA911733D86678792601F86475"
+  },
+  {
+   "id": "21A7FBB3B0CF4FB0761BCFF7E0A14DCE",
+   "date": "2026-10-28",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【2027年度 院生培訓繼續、保留及棄權名單公告】",
+   "url": "https://www.haifong.org/news/content/21A7FBB3B0CF4FB0761BCFF7E0A14DCE"
+  },
+  {
+   "id": "C5315F4C4415F13E996EED8192025899",
+   "date": "2026-10-28",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第25屆海峰盃全國長青圍棋賽【北區賽事延期通知】",
+   "url": "https://www.haifong.org/news/content/C5315F4C4415F13E996EED8192025899"
+  },
   {
    "id": "4007E632CF90FAC4696AA72401417806",
    "date": "2026-10-27",
@@ -940,30 +964,6 @@
    "cat": "match",
    "title": "【2026新人王決賽組合出爐！盧奕銓、吳彥諶會師冠軍戰】",
    "url": "https://www.haifong.org/news/content/D6A8155F630E319A34A7781D59AD42E8"
-  },
-  {
-   "id": "D4772B945FF8FF6830306341050178F3",
-   "date": "2026-05-17",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【院生第五輪月賽 - 第二週成績公告】",
-   "url": "https://www.haifong.org/news/content/D4772B945FF8FF6830306341050178F3"
-  },
-  {
-   "id": "A82B292825107A759AD5E9594887292C",
-   "date": "2026-05-12",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【夢百合杯預選賽：台灣男將遺憾出局，楊子萱今對決韓國崔精】",
-   "url": "https://www.haifong.org/news/content/A82B292825107A759AD5E9594887292C"
-  },
-  {
-   "id": "2491EA4AF49CD6B7B1B8B932BB3022A6",
-   "date": "2026-05-11",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "第26屆全國女子圍棋公開賽",
-   "url": "https://www.haifong.org/news/content/2491EA4AF49CD6B7B1B8B932BB3022A6"
   }
  ]
 }

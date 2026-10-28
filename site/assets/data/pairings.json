@@ -2912,7 +2912,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "王元均",
    "source": "schedule-app"
   },
   {
@@ -2928,7 +2928,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "許育祺",
    "source": "schedule-app"
   },
   {
@@ -2944,7 +2944,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "盧奕銓",
    "source": "schedule-app"
   },
   {
@@ -2960,7 +2960,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "吳彥諶",
    "source": "schedule-app"
   },
   {
@@ -2976,7 +2976,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "陳祈睿",
    "source": "schedule-app"
   },
   {
@@ -2992,7 +2992,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林立祥",
    "source": "schedule-app"
   },
   {
@@ -3008,7 +3008,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "鄭予皓",
    "source": "schedule-app"
   },
   {
@@ -3024,7 +3024,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "沈逸恩",
    "source": "schedule-app"
   },
   {
@@ -3033,16 +3033,14 @@
    "time": "14:00",
    "event": "第2屆世界棋仙戰台灣代表選拔",
    "round": "選拔賽 初選2回",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "王元均",
-    "黃柏人",
-    "孫立言",
     "許育祺"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "王元均",
    "source": "schedule-app"
   },
   {
@@ -3051,16 +3049,14 @@
    "time": "14:00",
    "event": "第2屆世界棋仙戰台灣代表選拔",
    "round": "選拔賽 初選2回",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "盧奕銓",
-    "牛詩特",
-    "吳彥諶",
-    "白昕卉"
+    "吳彥諶"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "吳彥諶",
    "source": "schedule-app"
   },
   {
@@ -3069,16 +3065,14 @@
    "time": "14:00",
    "event": "第2屆世界棋仙戰台灣代表選拔",
    "round": "選拔賽 初選2回",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "陳祈睿",
-    "李嘉馨",
-    "林立祥",
-    "陳品樺"
+    "林立祥"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "陳祈睿",
    "source": "schedule-app"
   },
   {
@@ -3087,16 +3081,14 @@
    "time": "14:00",
    "event": "第2屆世界棋仙戰台灣代表選拔",
    "round": "選拔賽 初選2回",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "林彥丞",
+   "players": [
     "鄭予皓",
-    "陳映嘉",
     "沈逸恩"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "沈逸恩",
    "source": "schedule-app"
   },
   {
@@ -3670,16 +3662,12 @@
    "event": "第2屆世界棋仙戰台灣代表選拔",
    "round": "選拔賽 決選四強",
    "players": [
-    "賴均輔"
+    "賴均輔",
+    "王元均"
    ],
-   "pending_opponent": true,
+   "pending_opponent": false,
    "status": "drawn",
-   "candidates": [
-    "王元均",
-    "黃柏人",
-    "孫立言",
-    "許育祺"
-   ],
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -3690,16 +3678,12 @@
    "event": "第2屆世界棋仙戰台灣代表選拔",
    "round": "選拔賽 決選四強",
    "players": [
-    "徐靖恩"
+    "徐靖恩",
+    "吳彥諶"
    ],
-   "pending_opponent": true,
+   "pending_opponent": false,
    "status": "drawn",
-   "candidates": [
-    "盧奕銓",
-    "牛詩特",
-    "吳彥諶",
-    "白昕卉"
-   ],
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -3710,16 +3694,12 @@
    "event": "第2屆世界棋仙戰台灣代表選拔",
    "round": "選拔賽 決選四強",
    "players": [
-    "許皓鋐"
+    "許皓鋐",
+    "陳祈睿"
    ],
-   "pending_opponent": true,
+   "pending_opponent": false,
    "status": "drawn",
-   "candidates": [
-    "陳祈睿",
-    "李嘉馨",
-    "林立祥",
-    "陳品樺"
-   ],
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -3730,16 +3710,12 @@
    "event": "第2屆世界棋仙戰台灣代表選拔",
    "round": "選拔賽 決選四強",
    "players": [
-    "林君諺"
-   ],
-   "pending_opponent": true,
-   "status": "drawn",
-   "candidates": [
-    "林彥丞",
-    "鄭予皓",
-    "陳映嘉",
+    "林君諺",
     "沈逸恩"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -3755,14 +3731,8 @@
    "candidates": [
     "賴均輔",
     "王元均",
-    "黃柏人",
-    "孫立言",
-    "許育祺",
     "徐靖恩",
-    "盧奕銓",
-    "牛詩特",
-    "吳彥諶",
-    "白昕卉"
+    "吳彥諶"
    ],
    "winner": null,
    "source": "schedule-app"
@@ -3779,13 +3749,7 @@
    "candidates": [
     "許皓鋐",
     "陳祈睿",
-    "李嘉馨",
-    "林立祥",
-    "陳品樺",
     "林君諺",
-    "林彥丞",
-    "鄭予皓",
-    "陳映嘉",
     "沈逸恩"
    ],
    "winner": null,
