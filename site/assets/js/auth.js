@@ -87,8 +87,12 @@
 
     /* 觸發發布：呼叫 Edge Function，由它驗證權限後通知 GitHub Action。
        前端不持有 GitHub 權杖——寫進網頁的任何東西都是公開的。 */
-    publish: function () {
-      return client.functions.invoke('publish', { body: {} }).then(function (res) {
+    /* what：'content'（預設）、'schedule'、'fees'。
+       可觸發的範圍由 Edge Function 的白名單決定，這裡只傳鍵名。 */
+    publish: function (what) {
+      return client.functions.invoke('publish', {
+        body: what ? { what: what } : {}
+      }).then(function (res) {
         if (res.error) {
           /* Edge Function 回非 2xx 時，錯誤內容在 context 裡 */
           return (res.error.context && typeof res.error.context.json === 'function'

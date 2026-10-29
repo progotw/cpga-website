@@ -85,6 +85,22 @@
     <button class="btn btn-accent" id="publishBtn" type="button">發布</button>
   </div>
   <p class="muted mt-2 mb-0" style="font-size:.86rem" id="publishState"></p>
+
+  <!-- 改完 Google 日曆、或院方發布對局費之後，不必等排程也不必進 GitHub -->
+  <div class="publish-bar mt-3">
+    <div>
+      <strong style="display:block;margin-bottom:2px">立即同步</strong>
+      <span class="muted" style="font-size:.88rem">
+        賽程每晚 20:17、對局費每早 09:30 會自動更新。
+        剛改完日曆或院方剛發布對局費，想馬上看到就按這裡。
+      </span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-ghost" data-sync="schedule" type="button">更新賽程</button>
+      <button class="btn btn-ghost" data-sync="fees" type="button">更新對局費</button>
+    </div>
+  </div>
+  <p class="muted mt-2 mb-0" style="font-size:.86rem" id="syncState"></p>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
@@ -128,6 +144,34 @@
       state.textContent = '立即發布未啟用（' + A.message(err) +
         '）。內容已存檔，會在下一次定時發布時更新。';
     }).finally(function () { btn.disabled = false; });
+  });
+
+  /* ---- 立即同步 ----
+     賽程會連帶重抓海峰的消息與對戰組合，所以按完要隔一段時間再按；
+     對局費完全不碰海峰，按幾次都沒關係。 */
+  var SYNC = {
+    schedule: { label: '賽程', wait: '約兩分鐘',
+                confirm: '會重抓海峰的賽程、消息與對戰組合，約兩分鐘。\n' +
+                         '請不要短時間內重複按，以免對海峰網站造成負擔。確定嗎？' },
+    fees:     { label: '對局費', wait: '約半分鐘', confirm: null }
+  };
+  [].forEach.call(document.querySelectorAll('[data-sync]'), function (btn) {
+    btn.addEventListener('click', function () {
+      var what = btn.getAttribute('data-sync'), s = SYNC[what];
+      var state = document.getElementById('syncState');
+      if (s.confirm && !window.confirm(s.confirm)) return;
+      btn.disabled = true;
+      state.textContent = '送出中…';
+      A.publish(what).then(function () {
+        state.innerHTML = '已開始更新' + s.label + '，' + s.wait + '後完成。' +
+          '<a href="https://github.com/progotw/cpga-website/actions" target="_blank" rel="noopener">查看進度 ↗</a>';
+      }).catch(function (err) {
+        state.textContent = '更新' + s.label + '失敗：' + A.message(err);
+      }).finally(function () {
+        /* 賽程那顆按完鎖一分鐘，避免連按重抓海峰 */
+        setTimeout(function () { btn.disabled = false; }, what === 'schedule' ? 60000 : 0);
+      });
+    });
   });
 
   /* 收件匣未處理數：只取數量不取內容，載入失敗就不顯示 */

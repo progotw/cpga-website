@@ -1,0 +1,44 @@
+name: 更新對局費
+
+# 對局費從每日爬蟲裡拆出來，自成一個流程。
+#
+# 原本放在 update-data.yml 裡，想更新對局費就得連海峰的消息、賽程、
+# 對戰組合全部重抓一次——院方每發布一次就多打海峰幾十個請求，
+# 而我們之前才因為請求太密集被擋過。拆開後這裡完全不碰海峰的網站，
+# 只讀對局費的發布版，十秒左右跑完。
+#
+# 觸發方式：
+#   1. 每天台灣時間 09:30（UTC 01:30），院方前一晚若有發布，早上就看得到
+#   2. 後台的「更新對局費」按鈕（經由 publish Edge Function）
+#   3. 在 Actions 頁面手動執行
+#
+# 這個流程不提交任何東西：資料直接寫進 Supabase 的 player_fees，
+# 由資料列權限保護，不落地到 repo。
+on:
+  schedule:
+    - cron: '30 1 * * *'
+  repository_dispatch:
+    types: [update-fees]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fees:
+    runs-on: ubuntu-latest
+    steps:
+      # 只為了讀 players.json（姓名對到棋士 id）
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      # HAIFONG_FEE_URL 等於密碼，腳本不印網址、不印金額、不印姓名
+      - name: 抓取對局費
+        env:
+          HAIFONG_FEE_URL: ${{ secrets.HAIFONG_FEE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python scripts/fetch_fees.py site/assets/data/players.json

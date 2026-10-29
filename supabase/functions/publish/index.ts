@@ -1,4 +1,4 @@
-// 後台「發布」按鈕的中介。
+// 後台「發布」「更新賽程」「更新對局費」三顆按鈕的中介。
 //
 // 前端不能持有 GitHub 權杖（任何寫進網頁的東西都是公開的），
 // 因此由這支函式代為觸發 GitHub Action：
@@ -11,6 +11,15 @@
 //   GITHUB_REPO    例如 progotw/cpga-website
 
 import { createClient } from 'jsr:@supabase/supabase-js@2';
+
+// 能觸發哪些工作流程，寫死在這裡。
+// 前端只能傳鍵名，不能自己指定 event_type——否則任何管理員帳號
+// （或偷到管理員登入的人）都能觸發 repo 裡任意一個工作流程。
+const EVENTS: Record<string, string> = {
+  content:  'publish-content',   // 發布協會內容（publish-content.yml）
+  schedule: 'update-data',       // 重抓賽程與對戰組合（update-data.yml）
+  fees:     'update-fees',       // 更新對局費（fetch-fees.yml）
+};
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
@@ -50,6 +59,15 @@ Deno.serve(async (req) => {
     return reply(403, { error: '此帳號沒有發布權限' });
   }
 
+  // 沒帶 what 時視為「發布內容」，舊版前端照常可用
+  let what = 'content';
+  try {
+    const body = await req.json();
+    if (body && typeof body.what === 'string') what = body.what;
+  } catch { /* 空 body 也是合法的 */ }
+  const eventType = EVENTS[what];
+  if (!eventType) return reply(400, { error: `不支援的動作：${what}` });
+
   const token = Deno.env.get('GITHUB_TOKEN');
   const repo = Deno.env.get('GITHUB_REPO');
   if (!token || !repo) return reply(500, { error: '伺服器尚未設定 GITHUB_TOKEN 或 GITHUB_REPO' });
@@ -64,7 +82,7 @@ Deno.serve(async (req) => {
       'User-Agent': 'cpga-publish',
     },
     body: JSON.stringify({
-      event_type: 'publish-content',
+      event_type: eventType,
       client_payload: { by: userData.user.email },
     }),
   });
