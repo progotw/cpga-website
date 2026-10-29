@@ -36,6 +36,9 @@
           <div class="hero__stat"><b>2008</b><span>創會年份</span></div>
         </div>
       </div>
+
+      <!-- 棋士照片牆。照片沿用海峰的，與個人頁同一批。 -->
+      <div class="hero-faces" id="heroFaces" aria-label="職業棋士"></div>
     </div>
   </div>
 </section>
@@ -151,8 +154,30 @@
 <script>
 (function () {
   /* 棋士人數直接數 players.json，名錄更新後首頁數字會自己跟著變 */
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
   window.CPGA_PLAYERS.load().then(function (data) {
     document.getElementById('statPlayers').textContent = (data.players || []).length;
+
+    /* ---- 首屏棋士照片牆 ----
+       每次載入隨機挑 12 位。固定挑人就得回答「為什麼首頁放他不放我」，
+       協會有 139 位會員，隨機最公平，而且每次來看都不一樣。 */
+    var P = window.CPGA_PLAYERS;
+    var pool = (data.players || []).filter(function (p) { return p.photo; });
+    for (var i = pool.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = pool[i]; pool[i] = pool[j]; pool[j] = t;
+    }
+    document.getElementById('heroFaces').innerHTML = pool.slice(0, 12).map(function (p) {
+      return '<a class="hero-face" href="players/profile.html?id=' + encodeURIComponent(p.id) +
+        '" title="' + esc(p.name + '　' + (p.rank || '')) + '">' +
+        '<img src="' + esc(P.photoUrl(p)) + '" alt="' + esc(p.name) + '"' +
+        ' width="120" height="120" decoding="async"></a>';
+    }).join('');
   }).catch(function () { /* 失敗就維持「—」，不要顯示過期數字 */ });
 
   /* 年度職業賽事數：現行台灣職業賽（不含已停辦） */

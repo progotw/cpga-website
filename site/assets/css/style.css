@@ -275,7 +275,28 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 }
 .hero > .wrap { position: relative; z-index: 2; }
 /* 原為左文字／右棋盤的兩欄；棋盤移除後改單欄，限制行寬避免標題與內文過長 */
-.hero__grid { display: grid; grid-template-columns: minmax(0, 760px); gap: 56px; align-items: center; }
+.hero__grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  gap: 56px; align-items: center;
+}
+
+/* ---- 首屏棋士照片牆 ----
+   海峰的照片是淺藍底的證件照。單張放大像證件，名錄改版時也被嫌過
+   「頭太大很可怕」，所以改成一面小格照片牆。
+   淺藍底直接放在深藍首屏上會像一張張貼紙，用 luminosity 混合統一：
+   取照片自己的明暗、底色的色相，變成深藍單色調；滑過才恢復原色。 */
+.hero-faces { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.hero-face {
+  display: block; aspect-ratio: 1; overflow: hidden; border-radius: 8px;
+  background: var(--navy);
+}
+.hero-face img {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+  mix-blend-mode: luminosity; opacity: .72;
+  transition: opacity .2s, transform .3s;
+}
+.hero-face:hover img,
+.hero-face:focus-visible img { mix-blend-mode: normal; opacity: 1; transform: scale(1.04); }
 .hero__eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
   font-size: .78rem; letter-spacing: .2em; color: var(--wood);
@@ -867,6 +888,9 @@ body.member-area { background: var(--paper-2); }
   .cal-scroll { overflow-x: auto; }
   .cal-scroll .cal { min-width: 520px; }
   .hero__grid { grid-template-columns: 1fr; gap: 40px; }
+  /* 手機上排成一列六張，放在文字下方，不要把首屏拉得太長 */
+  .hero-faces { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+  .hero-face:nth-child(n+7) { display: none; }
   .member-shell { grid-template-columns: minmax(0, 1fr); }
   .member-side { position: static; }
   .news-item { grid-template-columns: 1fr auto; gap: 6px 14px; }
