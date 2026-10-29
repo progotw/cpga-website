@@ -11,6 +11,8 @@
    看過的記在 hero.json 的 checked，之後不再碰——
    我們曾經因為請求太密集被海峰擋過，平常每天只會多打一兩個請求，
    每個請求之間也會停一秒。
+   報導若已經由 fetch_articles.py 轉存進官網，就直接用存好的圖片清單，
+   不再去海峰讀同一篇。
 
 2. 標題含業餘、學生類字眼的跳過。這是職業棋士協會的網站。
 
@@ -55,6 +57,7 @@ if '--backfill' in sys.argv:
 
 DATA = os.path.join(SITE, 'assets', 'data')
 NEWS = os.path.join(DATA, 'news.json')
+ARTICLES = os.path.join(DATA, 'articles')
 HERO = os.path.join(DATA, 'hero.json')
 GALLERY = os.path.join(DATA, 'gallery.json')
 IMG_DIR = os.path.join(SITE, 'assets', 'img', 'gallery')
@@ -99,6 +102,15 @@ def image_urls(html):
     return out
 
 
+def article_images(item):
+    """報導裡的圖片：已轉存的用存好的清單，沒有才去海峰讀。"""
+    saved = os.path.join(ARTICLES, item['id'] + '.json')
+    if os.path.exists(saved):
+        return [u for u in load(saved, {}).get('images') or []
+                if not re.search(r'logo|icon|qrcode|\.svg|\.gif', u, re.I)]
+    return image_urls(get(item['url']))
+
+
 def caption_of(title):
     return re.sub(r'^[【\[]|[】\]]$', '', title.strip()).strip()
 
@@ -106,7 +118,7 @@ def caption_of(title):
 def find_photo(item):
     """回傳這篇報導第一張橫式現場照（PIL Image），沒有就回 None。"""
     try:
-        urls = image_urls(get(item['url']))
+        urls = article_images(item)
     except Exception as e:
         print('  讀取報導失敗，略過：%s（%s）' % (item['title'][:30], e))
         return None

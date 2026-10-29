@@ -47,7 +47,16 @@ jobs:
         continue-on-error: true
         run: python scripts/scrape_news_games.py site
 
-      # 比賽照片（首頁首屏＋賽事花絮相簿），必須在最新消息之後執行。
+      # 新聞全文轉存進官網，讀者不必跳去海峰。必須在最新消息之後執行。
+      # 分批讀：新的先讀，一次最多 10 篇、每篇間隔 3 秒，讀過的不再讀；
+      # 舊文章每天補一些，大約兩週補完。海峰一拒絕連線就整批停下，隔天再繼續。
+      - name: 轉存新聞內文
+        id: articles
+        continue-on-error: true
+        run: python scripts/fetch_articles.py site
+
+      # 比賽照片（首頁首屏＋賽事花絮相簿），必須在轉存新聞內文之後執行：
+      # 已轉存的報導直接用存好的圖片清單，不必再去海峰讀同一篇。
       # 只看「沒看過的」比賽報導，最多 5 篇，找到一張橫式現場照就停——
       # 平常每天只多打海峰一兩個請求，沒有新報導時一個都不打。
       - name: 更新比賽照片
@@ -121,6 +130,7 @@ jobs:
         env:
           R_SCHEDULE: ${{ steps.schedule.outcome }}
           R_NEWS:     ${{ steps.news.outcome }}
+          R_ARTICLES: ${{ steps.articles.outcome }}
           R_HERO:     ${{ steps.hero.outcome }}
           R_PLAYERS:  ${{ steps.players.outcome }}
           R_PAIRINGS: ${{ steps.pairings.outcome }}
@@ -140,6 +150,7 @@ jobs:
           }
           check 賽程行事曆 "$R_SCHEDULE"
           check 最新消息   "$R_NEWS"
+          check 新聞內文   "$R_ARTICLES"
           check 首頁照片   "$R_HERO"
           check 棋士名錄   "$R_PLAYERS"
           check 對戰組合   "$R_PAIRINGS"
