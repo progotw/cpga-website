@@ -1,0 +1,74 @@
+<!-- Supabase → Authentication → Email Templates → Change Email Address
+     主旨建議：中華職業圍棋協會 棋士專區｜確認變更登入信箱
+
+     「Secure email change」開啟時，這封信會同時寄到舊信箱與新信箱，
+     兩邊都點了才生效。所以內文要讓兩邊的人讀起來都說得通，
+     也要明講「兩封都要點」，不然只點一封的人會以為已經改好了。
+
+     信件要用行內樣式與表格排版：郵件軟體大多不支援外部 CSS 與現代版面語法。 -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+       style="background:#f4efe6;padding:28px 12px;font-family:'Noto Sans TC','Microsoft JhengHei',Arial,sans-serif">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+             style="max-width:520px;background:#ffffff;border:1px solid #d8cfbe;border-radius:12px;padding:32px 28px">
+
+        <tr>
+          <td style="font-size:13px;letter-spacing:.12em;color:#9c7434;padding-bottom:6px">
+            中華職業圍棋協會
+          </td>
+        </tr>
+
+        <tr>
+          <td style="font-size:20px;font-weight:700;color:#17191d;padding-bottom:16px">
+            確認變更登入信箱
+          </td>
+        </tr>
+
+        <tr>
+          <td style="font-size:15px;line-height:1.85;color:#2c3037;padding-bottom:20px">
+            棋士專區收到變更登入信箱的申請：<br>
+            <span style="color:#565c66">原信箱</span>　{{ .Email }}<br>
+            <span style="color:#565c66">新信箱</span>　{{ .NewEmail }}<br><br>
+            如果是您本人申請的，請點下方按鈕確認。
+          </td>
+        </tr>
+
+        <tr>
+          <td align="center" style="padding-bottom:20px">
+            <a href="{{ .ConfirmationURL }}"
+               style="display:inline-block;background:#9e3029;color:#ffffff;text-decoration:none;
+                      font-size:15px;font-weight:500;padding:13px 32px;border-radius:999px">
+              確認變更
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="font-size:13px;line-height:1.8;color:#2c3037;
+                     background:#f4efe6;border-radius:8px;padding:12px 14px">
+            <strong>新舊兩個信箱都會收到這封信，兩封都要點「確認變更」</strong>，
+            登入信箱才會改過去。
+          </td>
+        </tr>
+
+        <tr>
+          <td style="font-size:13px;line-height:1.8;color:#565c66;padding:18px 0">
+            按鈕無法點選時，請複製下面的網址貼到瀏覽器：<br>
+            <span style="word-break:break-all;color:#1e3a5f">{{ .ConfirmationURL }}</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="border-top:1px solid #e2dace;padding-top:16px;font-size:13px;line-height:1.8;color:#565c66">
+            這個連結有時效，逾期請重新申請一次。<br>
+            <strong style="color:#2c3037">若不是您本人提出的，請不要點擊，並儘快聯絡秘書處</strong>——
+            在兩邊都確認之前，登入信箱不會有任何變動。<br><br>
+            秘書處　(02) 2702-8898 轉 126
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
