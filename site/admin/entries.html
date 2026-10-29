@@ -193,7 +193,8 @@
       '<div class="admin-actions mt-3">' +
         '<button class="btn btn-accent btn-sm" data-act="save">儲存</button>' +
         '<button class="btn btn-ghost btn-sm" data-act="roster">報名名單（' + n + '）</button>' +
-        '<button class="btn btn-ghost btn-sm" data-act="csv">匯出 CSV</button>' +
+        '<button class="btn btn-ghost btn-sm" data-act="csv" data-order="dan">匯出 CSV（依段位）</button>' +
+        '<button class="btn btn-ghost btn-sm" data-act="csv" data-order="fee">匯出 CSV（依去年對局費）</button>' +
         '<button class="btn btn-ghost btn-sm" data-act="missing">尚未報名</button>' +
         '<button class="btn btn-ghost btn-sm" data-act="promo">文宣格式</button>' +
         '<button class="btn btn-ghost btn-sm" data-act="del">刪除</button>' +
@@ -270,40 +271,103 @@
       });
   }
 
-  function downloadCsv(title, list) {
-    var head = ['序號', '姓名', '棋士id', '報名時間', '備註', '狀態'];
+  function downloadCsv(title, list, order) {
+    var head = ['序號', '姓名', '段位', '生日', FEE_YEAR + '對局費', FEE_YEAR + '對局費排名',
+                '報名時間', '備註', '棋士id'];
     var cell = function (v) { return '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"'; };
     var lines = [head.map(cell).join(',')];
-    list.filter(function (e) { return !e.withdrawn; }).forEach(function (e, i) {
-      lines.push([i + 1, e.display_name, e.player_id,
-        new Date(e.created_at).toLocaleString('zh-TW'), e.note || '', '報名中'].map(cell).join(','));
+    sortRoster(joinRoster(list), order).forEach(function (e, i) {
+      lines.push([i + 1, e.name, e.rank, e.birthLabel,
+        e.fee || '', e.feeRank || '',
+        new Date(e.created_at).toLocaleString('zh-TW'), e.note, e.id].map(cell).join(','));
     });
     /* BOM：Excel 沒有它會把 UTF-8 中文讀成亂碼 */
     var blob = new Blob(['﻿' + lines.join('\r\n') + '\r\n'],
       { type: 'text/csv;charset=utf-8;' });
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = title.replace(/[\\/:*?"<>|]/g, '') + '_報名名單.csv';
+    a.download = title.replace(/[\\/:*?"<>|]/g, '') + '_報名名單_' +
+      (order === 'fee' ? '依去年對局費' : '依段位') + '.csv';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
   }
 
   /* 報名者對應到名錄。優先用棋士 id，沒有才退回姓名——
      姓名比對正是原本試算表會靜默出錯的地方，能不用就不用。 */
+  /* ---- 生日與去年對局費 ----
+     兩者都是個資，放在只有管理員讀得到的資料表，不進公開的 assets/data。
+     第一次用到才讀，之後沿用。讀不到（例如表還沒建）就當作沒有，
+     名單照樣能排，只是那兩欄空白。 */
+  var extras = null;
+  var FEE_YEAR = new Date().getFullYear() - 1;
+
+  function loadExtras() {
+    if (extras) return Promise.resolve(extras);
+    return Promise.all([
+      A.client.from('player_birthdays').select('player_id,birth_year,birth_date'),
+      A.client.from('player_fees').select('player_id,total').eq('year', FEE_YEAR)
+    ]).then(function (r) {
+      var birth = {}, fee = {}, feeRank = {};
+      (r[0].data || []).forEach(function (b) { birth[b.player_id] = b; });
+      var fees = (r[1].data || []).filter(function (f) { return f.total > 0; });
+      fees.forEach(function (f) { fee[f.player_id] = f.total; });
+      /* 與 Excel 的 RANK 相同：同金額同名次，下一名跳號（1、2、2、4） */
+      fees.forEach(function (f) {
+        feeRank[f.player_id] = 1 + fees.filter(function (g) { return g.total > f.total; }).length;
+      });
+      extras = { birth: birth, fee: fee, feeRank: feeRank };
+      return extras;
+    }).catch(function () {
+      extras = { birth: {}, fee: {}, feeRank: {} };
+      return extras;
+    });
+  }
+
   function joinRoster(list) {
     var byId = {}, byName = {};
     players.forEach(function (p) { byId[p.id] = p; byName[p.name] = p; });
+    var x = extras || { birth: {}, fee: {}, feeRank: {} };
     return list.filter(function (e) { return !e.withdrawn; }).map(function (e) {
       var p = (e.player_id && byId[e.player_id]) || byName[e.display_name] || null;
+      var pid = p ? p.id : e.player_id;
+      var b = x.birth[pid];
       return {
+        id: pid,
         name: p ? p.name : e.display_name,
         rank: p ? p.rank : '',
         dan: p ? p.dan : 0,
         now: p ? p.now : 0,
+        /* 排序用：只知道年份的排在該年最前面（0000 會比任何月日小） */
+        birthKey: b ? (b.birth_date || b.birth_year + '-00-00') : '',
+        birthLabel: b ? (b.birth_date ? b.birth_date.replace(/-/g, '/') : b.birth_year + '（僅年份）') : '',
+        fee: x.fee[pid] || 0,
+        feeRank: x.feeRank[pid] || 0,
         matched: !!p,
+        note: e.note || '',
         created_at: e.created_at
       };
     });
+  }
+
+  /* 報名名單的排序，CSV 與文宣格式共用，兩邊才不會排得不一樣。
+       dan  段位高到低；同段位年長在前；沒有生日的排在該段最後
+       fee  去年對局費排名；沒有對局費的排最後，再依段位、年紀
+       time 報名先後 */
+  function byBirth(a, b) {
+    if (a.birthKey && b.birthKey) return a.birthKey < b.birthKey ? -1 : a.birthKey > b.birthKey ? 1 : 0;
+    return a.birthKey ? -1 : b.birthKey ? 1 : 0;
+  }
+  function sortRoster(arr, order) {
+    if (order === 'time') {
+      return arr.sort(function (a, b) { return new Date(a.created_at) - new Date(b.created_at); });
+    }
+    if (order === 'fee') {
+      return arr.sort(function (a, b) {
+        var ra = a.feeRank || 9999, rb = b.feeRank || 9999;
+        return (ra - rb) || (b.dan - a.dan) || byBirth(a, b);
+      });
+    }
+    return arr.sort(function (a, b) { return (b.dan - a.dan) || byBirth(a, b); });
   }
 
   /* 不列入催報名單的棋士。名錄每天從海峰同步，無法在那邊刪，所以在這裡排除；
@@ -352,12 +416,7 @@
   }
 
   function promoHtml(list, order) {
-    var arr = joinRoster(list);
-    if (order === 'time') {
-      arr.sort(function (a, b) { return new Date(a.created_at) - new Date(b.created_at); });
-    } else {
-      arr.sort(function (a, b) { return (b.dan - a.dan) || (b.now - a.now); });
-    }
+    var arr = sortRoster(joinRoster(list), order);
     var parts = arr.map(function (x) { return x.name + x.rank; });
     var lines = [];
     for (var i = 0; i < parts.length; i += 8) {
@@ -369,7 +428,8 @@
       '<div class="field" style="max-width:260px">' +
         '<label>排序</label>' +
         '<select data-promoorder>' +
-          '<option value="dan"' + (order !== 'time' ? ' selected' : '') + '>段位（高到低）</option>' +
+          '<option value="dan"' + (order === 'dan' ? ' selected' : '') + '>段位（同段位年長在前）</option>' +
+          '<option value="fee"' + (order === 'fee' ? ' selected' : '') + '>' + FEE_YEAR + ' 對局費排名</option>' +
           '<option value="time"' + (order === 'time' ? ' selected' : '') + '>報名先後</option>' +
         '</select>' +
       '</div>' +
@@ -431,12 +491,13 @@
 
     } else if (act === 'csv') {
       state.textContent = '準備中…';
-      fetchRoster(id).then(function (list) {
+      Promise.all([loadPlayers(), loadExtras(), fetchRoster(id)]).then(function (r) {
+        var list = r[2];
         state.textContent = '';
         if (!list.filter(function (x) { return !x.withdrawn; }).length) {
           say('error', '沒有可匯出的報名資料。'); return;
         }
-        downloadCsv(get('title').value.trim() || '賽事', list);
+        downloadCsv(get('title').value.trim() || '賽事', list, btn.getAttribute('data-order'));
       }).catch(function (err) { state.textContent = ''; say('error', '匯出失敗：' + A.message(err)); });
 
     } else if (act === 'missing' || act === 'promo') {
@@ -445,7 +506,7 @@
         box.innerHTML = ''; box.removeAttribute('data-kind'); return;
       }
       state.textContent = '載入中…';
-      Promise.all([loadPlayers(), fetchRoster(id)]).then(function (r) {
+      Promise.all([loadPlayers(), fetchRoster(id), loadExtras()]).then(function (r) {
         box.setAttribute('data-kind', act);
         box.innerHTML = act === 'missing' ? missingHtml(r[1], 0) : promoHtml(r[1], 'dan');
         box.setAttribute('data-tid', id);
