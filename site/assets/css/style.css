@@ -274,8 +274,21 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
   -webkit-mask-image: radial-gradient(ellipse 70% 80% at 72% 45%, #000 20%, transparent 75%);
 }
 .hero > .wrap { position: relative; z-index: 2; }
-/* 原為左文字／右棋盤的兩欄；棋盤移除後改單欄，限制行寬避免標題與內文過長 */
-.hero__grid { display: grid; grid-template-columns: minmax(0, 760px); gap: 56px; align-items: center; }
+/* 左文字、右比賽照片 */
+.hero__grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 560px);
+  gap: 56px; align-items: center;
+}
+.hero-photo { margin: 0; }
+.hero-photo a { display: block; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .45); }
+.hero-photo img { display: block; width: 100%; height: auto; transition: transform .4s; }
+.hero-photo a:hover img { transform: scale(1.02); }
+.hero-photo figcaption {
+  display: flex; flex-direction: column; gap: 2px; margin-top: 12px;
+  font-size: .84rem; color: var(--on-dark-2);
+}
+.hero-photo figcaption span + span { font-size: .78rem; color: var(--on-dark-3); }
 .hero__eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
   font-size: .78rem; letter-spacing: .2em; color: var(--wood);
