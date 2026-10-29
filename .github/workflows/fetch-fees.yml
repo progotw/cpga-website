@@ -20,6 +20,11 @@ on:
   repository_dispatch:
     types: [update-fees]
   workflow_dispatch:
+    inputs:
+      year:
+        description: '要抓的年度（留空＝今年。報名名單需要前一年時用這個補抓）'
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -41,4 +46,9 @@ jobs:
           HAIFONG_FEE_URL: ${{ secrets.HAIFONG_FEE_URL }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-        run: python scripts/fetch_fees.py site/assets/data/players.json
+        run: |
+          if [ -n "${{ inputs.year }}" ]; then
+            python scripts/fetch_fees.py site/assets/data/players.json --year "${{ inputs.year }}"
+          else
+            python scripts/fetch_fees.py site/assets/data/players.json
+          fi

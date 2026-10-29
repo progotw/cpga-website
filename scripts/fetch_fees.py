@@ -30,7 +30,8 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 FEE_URL = os.environ.get('HAIFONG_FEE_URL') or ''
 SB_URL = (os.environ.get('SUPABASE_URL') or '').rstrip('/')
 SB_KEY = os.environ.get('SUPABASE_SERVICE_ROLE_KEY') or ''
-PLAYERS = sys.argv[1] if len(sys.argv) > 1 else 'site/assets/data/players.json'
+PLAYERS = (sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith('--')
+           else 'site/assets/data/players.json')
 
 
 def describe(name, v):
@@ -123,7 +124,11 @@ def sb(method, path, body=None, prefer=None):
 
 
 def main():
+    # 預設抓今年；報名名單要用前一年的對局費，所以留一個指定年份的入口。
+    # 例：python scripts/fetch_fees.py site/assets/data/players.json --year 2025
     year = dt.datetime.now().year
+    if '--year' in sys.argv:
+        year = int(sys.argv[sys.argv.index('--year') + 1])
     data = fetch_release(year)
     if data is None:
         print('%d 年度：院方尚未發布，保留現有資料，不做任何變更。' % year)
