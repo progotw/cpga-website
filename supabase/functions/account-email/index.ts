@@ -81,7 +81,10 @@ Deno.serve(async (req) => {
     // 棋士最多一百多位，一頁就拿完
     const { data: list, error: uErr } = await admin.auth.admin.listUsers({ perPage: 1000 });
     if (uErr) return reply(500, { error: '讀取帳號失敗：' + uErr.message });
-    const byId = new Map(list.users.map((u) => [u.id, u]));
+    type U = { id: string; email?: string; new_email?: string;
+               created_at?: string; last_sign_in_at?: string };
+    const byId = new Map<string, U>(
+      (list.users as U[]).map((u) => [u.id, u] as [string, U]));
 
     return reply(200, {
       accounts: (profs ?? []).map((p) => {
