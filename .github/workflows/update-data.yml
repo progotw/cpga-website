@@ -47,10 +47,10 @@ jobs:
         continue-on-error: true
         run: python scripts/scrape_news_games.py site
 
-      # 首頁首屏的比賽照片，必須在最新消息之後執行。
+      # 比賽照片（首頁首屏＋賽事花絮相簿），必須在最新消息之後執行。
       # 只看「沒看過的」比賽報導，最多 5 篇，找到一張橫式現場照就停——
       # 平常每天只多打海峰一兩個請求，沒有新報導時一個都不打。
-      - name: 更新首頁比賽照片
+      - name: 更新比賽照片
         id: hero
         continue-on-error: true
         run: python scripts/update_hero.py site
@@ -103,7 +103,7 @@ jobs:
         run: |
           git config user.name  "cpga-data-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/assets/data site/assets/img/players site/assets/img/hero
+          git add site/assets/data site/assets/img/players site/assets/img/gallery
           if git diff --staged --quiet; then
             echo "資料沒有變動，不需提交。"
           else

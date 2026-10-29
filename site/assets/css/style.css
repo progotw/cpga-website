@@ -300,6 +300,8 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
   line-height: 1.28; margin-bottom: .5em; letter-spacing: .03em;
 }
 .hero h1 em { font-style: normal; color: var(--wood); }
+/* 真的窄到放不下時，整組換行，不要只剩一個字掉下去 */
+.hero h1 .nobr { white-space: nowrap; }
 .hero__lead { font-size: 1.06rem; color: var(--on-dark-2); max-width: 44ch; margin-bottom: 2rem; }
 .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero__stats {
@@ -519,40 +521,6 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
   font-size: 1.05rem; display: block; margin-bottom: 2px;
 }
 
-/* ---------- Gallery ---------- */
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
-.gallery-item {
-  aspect-ratio: 1; border-radius: var(--radius); overflow: hidden;
-  background: var(--paper-2); border: 1px solid var(--line);
-  display: grid; place-items: center; position: relative;
-  cursor: pointer; transition: transform .18s, box-shadow .18s;
-}
-.gallery-item:hover { transform: scale(1.02); box-shadow: var(--shadow); }
-.gallery-item__label {
-  position: absolute; inset: auto 0 0 0; padding: 10px 12px;
-  background: linear-gradient(transparent, rgba(0,0,0,.6));
-  color: #fff; font-size: .8rem;
-}
-.gallery-item__ph { color: var(--line-2); font-size: 2rem; }
-
-/* Lightbox */
-.lightbox {
-  position: fixed; inset: 0; z-index: 300;
-  background: rgba(15,16,19,.92); display: none;
-  align-items: center; justify-content: center; padding: 28px;
-}
-.lightbox.is-open { display: flex; }
-.lightbox__inner { max-width: 900px; width: 100%; text-align: center; color: #ddd; }
-.lightbox__frame {
-  aspect-ratio: 3/2; background: var(--ink-2); border-radius: var(--radius);
-  display: grid; place-items: center; color: #555; margin-bottom: 16px;
-}
-.lightbox__close {
-  position: absolute; top: 20px; right: 24px; width: 42px; height: 42px;
-  border-radius: 50%; border: 1px solid rgba(255,255,255,.25);
-  background: transparent; color: #fff; font-size: 1.3rem; line-height: 1;
-}
-
 /* ---------- Notice / callout ---------- */
 .callout {
   border-left: 3px solid var(--wood);
@@ -737,6 +705,26 @@ body.member-area { background: var(--paper-2); }
   font-variant-numeric: tabular-nums;
 }
 .rs-item__body { padding: 2px 2px 14px; }
+
+/* ---- 賽事花絮相簿 ----
+   照片比例不一（3:2、4:3 都有），統一裁成 3:2，格線才會整齊。 */
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 28px 20px;
+}
+.gallery-item { margin: 0; }
+.gallery-item a { display: block; border-radius: 10px; overflow: hidden; background: var(--paper-2); }
+.gallery-item img {
+  display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover;
+  transition: transform .35s;
+}
+.gallery-item a:hover img { transform: scale(1.03); }
+.gallery-item figcaption { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; }
+.gallery-item__title {
+  font-size: .94rem; color: var(--ink); line-height: 1.5;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.gallery-item__meta { font-size: .8rem; color: var(--ink-4); }
 
 /* ---- 大格月曆（賽事專區）----
    版面夠寬時把賽事名直接寫進格子，不必對照圖例。
@@ -927,6 +915,7 @@ body.member-area { background: var(--paper-2); }
   .section { padding: 52px 0; }
   .hero { padding: 64px 0 72px; }
   .wrap { padding-inline: 18px; }
+  .hero h1 { font-size: 1.95rem; }
   .brand__logo { height: 26px; }
   .card { padding: 20px; }
   .panel { padding: 20px; }

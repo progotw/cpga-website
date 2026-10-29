@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>賽事花絮｜中華職業圍棋協會</title>
-<meta name="description" content="職業賽事現場拍攝規範與賽事照片相簿。">
+<meta name="description" content="職業賽事的現場照片與拍攝規範。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
@@ -18,12 +18,35 @@
   <div class="wrap">
     <nav class="breadcrumb"><a href="../index.html">首頁</a><span class="sep">/</span><span>賽事花絮</span></nav>
     <h1>賽事花絮</h1>
-    <p>賽事現場紀錄。所有照片皆於開賽前 15 分鐘的開放拍攝時段內拍攝。</p>
+    <p>職業賽事的現場紀錄。照片取自海峰棋院的賽事報導，點照片可閱讀完整報導。</p>
+  </div>
+</section>
+
+<!-- ===== 賽事相簿 =====
+     照片由 scripts/update_hero.py 每天從海峰的比賽報導自動加入，
+     首頁首屏用的就是這裡最新的一張。 -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head section-head--row">
+      <div>
+        <span class="eyebrow">Albums</span>
+        <h2>賽事照片</h2>
+        <p id="galleryNote">有新的比賽報導時會自動加入。</p>
+      </div>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+
+    <div class="callout" id="galleryEmpty" hidden>
+      <p class="mb-0">
+        照片載入失敗。賽事結果與賽況報導可於<a href="../news/index.html">最新消息</a>查詢。
+      </p>
+    </div>
   </div>
 </section>
 
 <!-- ===== 現場拍攝規範 ===== -->
-<section class="section">
+<section class="section section--paper2">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Rules</span>
@@ -53,24 +76,42 @@
   </div>
 </section>
 
-<!-- ===== 賽事相簿 ===== -->
-<section class="section section--paper2">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Albums</span>
-      <h2>賽事照片相簿</h2>
-    </div>
-
-    <div class="callout">
-      <p class="mb-0">
-        相簿建置中，各項賽事的現場照片將陸續上線。
-        在此之前，賽事結果與賽況報導可於<a href="../news/index.html">最新消息</a>查詢。
-      </p>
-    </div>
-  </div>
-</section>
-
 <div id="site-footer"></div>
 <script src="../assets/js/site.js" defer></script>
+<script>
+(function () {
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  var grid = document.getElementById('galleryGrid');
+
+  fetch('../assets/data/gallery.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      var photos = d.photos || [];
+      if (!photos.length) throw new Error('empty');
+      document.getElementById('galleryNote').textContent =
+        '共 ' + photos.length + ' 張，有新的比賽報導時會自動加入。';
+      grid.innerHTML = photos.map(function (p, i) {
+        return '<figure class="gallery-item">' +
+          '<a href="' + esc(p.link) + '" target="_blank" rel="noopener">' +
+            /* 前六張在第一屏，其餘等捲到再載入 */
+            '<img src="../' + esc(p.image) + '" width="' + (p.width || 1200) +
+              '" height="' + (p.height || 800) + '" alt="' + esc(p.caption) + '"' +
+              (i >= 6 ? ' loading="lazy"' : '') + ' decoding="async"></a>' +
+          '<figcaption>' +
+            '<span class="gallery-item__title">' + esc(p.caption) + '</span>' +
+            '<span class="gallery-item__meta">' + esc((p.date || '').replace(/-/g, '/')) +
+              '　·　照片：' + esc(p.credit || '海峰棋院') + '</span>' +
+          '</figcaption></figure>';
+      }).join('');
+    })
+    .catch(function () {
+      document.getElementById('galleryEmpty').hidden = false;
+    });
+})();
+</script>
 </body>
 </html>
