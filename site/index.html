@@ -169,7 +169,7 @@
       if (!h || !h.image) return;
       var box = document.getElementById('heroPhoto');
       box.innerHTML =
-        '<a href="' + esc(h.link) + '" target="_blank" rel="noopener">' +
+        '<a href="' + esc(h.link) + '">' +
           '<img src="' + esc(h.image) + '" width="' + (h.width || 1200) + '" height="' +
             (h.height || 800) + '" alt="' + esc(h.caption) + '"></a>' +
         '<figcaption><span>' + esc(h.caption) + '</span>' +

@@ -52,7 +52,9 @@
       opts = opts || {};
       var self = this;
       return items.map(function (n) {
-        return '<a class="news-item" href="' + esc(n.url) + '" target="_blank" rel="noopener">' +
+        /* 同一個分頁打開，不開新分頁：手機上新分頁會蓋過去，按「返回」回不到官網。
+           海峰的頁面一律這樣；棋士自己的 IG、YouTube 等社群連結才開新分頁。 */
+        return '<a class="news-item" href="' + esc(n.url) + '">' +
           '<span class="news-item__date">' + n.date.replace(/-/g, '.') + '</span>' +
           '<span class="tag ' + self.catClass(n.cat) + '">' + esc(n.catLabel) + '</span>' +
           '<span class="news-item__title">' + esc(n.title) + '</span>' +

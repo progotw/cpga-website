@@ -30,7 +30,7 @@
                 '</p>'
               : '<p class="muted mb-0" style="font-size:.92rem">尚無冠軍紀錄</p>') +
             (g.url
-              ? '<a class="card__more" href="' + esc(g.url) + '" target="_blank" rel="noopener">賽事詳情 ↗</a>'
+              ? '<a class="card__more" href="' + esc(g.url) + '">賽事詳情 ↗</a>'
               : '') +
             '</div>';
         }).join('') + '</div>';

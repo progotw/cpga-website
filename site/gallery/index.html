@@ -96,7 +96,7 @@
         '共 ' + photos.length + ' 張，有新的比賽報導時會自動加入。';
       grid.innerHTML = photos.map(function (p, i) {
         return '<figure class="gallery-item">' +
-          '<a href="' + esc(p.link) + '" target="_blank" rel="noopener">' +
+          '<a href="' + esc(p.link) + '">' +
             /* 前六張在第一屏，其餘等捲到再載入 */
             '<img src="../' + esc(p.image) + '" width="' + (p.width || 1200) +
               '" height="' + (p.height || 800) + '" alt="' + esc(p.caption) + '"' +

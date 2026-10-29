@@ -97,7 +97,7 @@
     var rows = (data.games || []).filter(function (g) { return g.category === '職棋甄選'; });
     document.getElementById('qualGames').innerHTML = rows.length
       ? '<ul style="list-style:none;padding:0;margin:0;font-size:.92rem">' + rows.map(function (g) {
-          return '<li style="margin-bottom:8px"><a href="' + esc(g.url) + '" target="_blank" rel="noopener">' +
+          return '<li style="margin-bottom:8px"><a href="' + esc(g.url) + '">' +
             esc(g.name) + ' ↗</a></li>';
         }).join('') + '</ul>'
       : '<p class="muted mb-0" style="font-size:.9rem">尚無資料。</p>';
