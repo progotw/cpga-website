@@ -1,10 +1,18 @@
 {
  "schema_version": 1,
- "generated": "2026-10-29T01:52:03+00:00",
+ "generated": "2026-10-29T18:29:09+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "B91D72B264179C6D1BA59229CEDFC5CA",
+   "date": "2026-10-29",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "玄樂盃決賽第二局結果？許皓鋐中盤勝 距首屆冠軍一勝之遙",
+   "url": "https://www.haifong.org/news/content/B91D72B264179C6D1BA59229CEDFC5CA"
+  },
   {
    "id": "377BA1EA911733D86678792601F86475",
    "date": "2026-10-28",
@@ -30,6 +38,14 @@
    "url": "https://www.haifong.org/news/content/C5315F4C4415F13E996EED8192025899"
   },
   {
+   "id": "CFC2B5E57E884A324D8439A1BFC63728",
+   "date": "2026-10-27",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "世界棋仙戰臺灣代表選拔：王元均等4人晉級，決選八強對陣出爐",
+   "url": "https://www.haifong.org/news/content/CFC2B5E57E884A324D8439A1BFC63728"
+  },
+  {
    "id": "4007E632CF90FAC4696AA72401417806",
    "date": "2026-10-27",
    "catLabel": "公告",
@@ -52,14 +68,6 @@
    "cat": "notice",
    "title": "第2屆 龍星賽 簡章",
    "url": "https://www.haifong.org/news/content/CC6390A22902CF20ACA76BE3CDEDF236"
-  },
-  {
-   "id": "B91D72B264179C6D1BA59229CEDFC5CA",
-   "date": "2026-10-22",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【第1屆玄樂盃｜許皓鋐名人屠龍賴均輔碁聖，五番勝負先下一城】",
-   "url": "https://www.haifong.org/news/content/B91D72B264179C6D1BA59229CEDFC5CA"
   },
   {
    "id": "68F78A4CB0DC1AE82109FF1DFFB4679B",
@@ -956,14 +964,6 @@
    "cat": "match",
    "title": "第16屆春蘭杯世界職業圍棋錦標賽：台灣代表賴均輔止步世界24強",
    "url": "https://www.haifong.org/news/content/B6893ED1E14E3004DF555697FE683123"
-  },
-  {
-   "id": "D6A8155F630E319A34A7781D59AD42E8",
-   "date": "2026-05-22",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【2026新人王決賽組合出爐！盧奕銓、吳彥諶會師冠軍戰】",
-   "url": "https://www.haifong.org/news/content/D6A8155F630E319A34A7781D59AD42E8"
   }
  ]
 }

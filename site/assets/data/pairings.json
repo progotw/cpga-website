@@ -2,7 +2,7 @@
  "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
  "schema_version": 1,
  "source": "海峰棋院 抽籤結果公告",
- "count": 305,
+ "count": 304,
  "pairings": [
   {
    "date": "2026-08-13",
@@ -3104,7 +3104,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "許皓鋐",
    "source": "schedule-app"
   },
   {
@@ -3768,7 +3768,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "許皓鋐",
    "source": "schedule-app"
   },
   {
@@ -4634,7 +4634,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "許皓鋐",
    "source": "schedule-app"
   },
   {
@@ -4818,22 +4818,6 @@
     "盧鈺樺",
     "林瀚彰"
    ],
-   "winner": null,
-   "source": "schedule-app"
-  },
-  {
-   "id": "xuanle__2:xf_g5",
-   "date": "2026-12-03",
-   "time": "11:00",
-   "event": "第1屆玄樂盃",
-   "round": "決賽 第5局",
-   "players": [
-    "許皓鋐",
-    "賴均輔"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
