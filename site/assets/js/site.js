@@ -23,12 +23,17 @@
      不等頁首渲染完，免得中間閃一下首頁。 */
   (function () {
     var h = location.hash || '';
-    if (!/[#&](access_token|error_code|error_description)=/.test(h)) return;
-    /* 已經在設定密碼頁就不要再轉，否則會無限循環 */
-    if (/\/member\/password(\.html)?$/.test(location.pathname)) return;
+    /* 變更信箱的確認連結也帶著登入憑證，但要回「變更信箱」頁，
+       不是設定密碼頁——否則棋士點了確認信卻看到「設定您的密碼」。
+       兩個信箱只確認一邊時，網址只會帶 message=，也要接住。 */
+    var isEmail = /[#&]type=email_change\b/.test(h) || /[#&]message=/.test(h);
+    if (!isEmail && !/[#&](access_token|error_code|error_description)=/.test(h)) return;
+    var page = isEmail ? 'email' : 'password';
+    /* 已經在目的頁就不要再轉，否則會無限循環 */
+    if (new RegExp('/member/' + page + '(\\.html)?$').test(location.pathname)) return;
     /* 站台會把 .html 轉成無副檔名的網址，本機預覽則不會；跟著現況走 */
-    var ext = /\.html$/.test(location.pathname) ? 'password.html' : 'password';
-    location.replace(ROOT + 'member/' + ext + h);
+    var ext = /\.html$/.test(location.pathname) ? '.html' : '';
+    location.replace(ROOT + 'member/' + page + ext + h);
   })();
 
   var NAV = [

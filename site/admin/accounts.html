@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>棋士帳號｜協會後台</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="index.html">← 協會後台</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap" style="max-width:980px">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px">棋士帳號</h1>
+    <p class="muted mb-0" style="font-size:.92rem">
+      已開通的棋士帳號、登入信箱與最後登入時間。
+    </p>
+  </div>
+
+  <div class="callout mt-2">
+    <p class="mb-0" style="font-size:.9rem">
+      棋士還能登入的話，請他到棋士專區自己改信箱（會寄確認信，避免打錯）。<br>
+      這裡的「修改信箱」是給<strong>舊信箱已經停用、登不進來</strong>的棋士用的，
+      <strong>改完立即生效</strong>，請先電話確認是本人。
+    </p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+
+  <div class="card mt-2">
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end">
+      <div class="field mb-0" style="flex:1 1 220px">
+        <label for="q">搜尋姓名或信箱</label>
+        <input type="text" id="q" placeholder="輸入姓名或信箱">
+      </div>
+      <div class="field mb-0" style="flex:0 1 200px">
+        <label for="scope">範圍</label>
+        <select id="scope">
+          <option value="all">全部</option>
+          <option value="never">從未登入</option>
+          <option value="pending">信箱變更待確認</option>
+        </select>
+      </div>
+      <span class="muted" style="font-size:.86rem" id="count"></span>
+    </div>
+  </div>
+
+  <div id="list" class="mt-2"><p class="muted">載入中…</p></div>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var listEl = document.getElementById('list');
+  var accounts = [];
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    var box = document.getElementById('notice');
+    box.innerHTML = text
+      ? '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+        '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>'
+      : '';
+    var r = box.getBoundingClientRect();
+    if (text && (r.top < 0 || r.bottom > window.innerHeight)) {
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+  function when(ts) {
+    if (!ts) return '';
+    var d = new Date(ts), p = function (n) { return (n < 10 ? '0' : '') + n; };
+    return d.getFullYear() + '/' + p(d.getMonth() + 1) + '/' + p(d.getDate());
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('admin');
+  });
+
+  /* Edge Function 回非 2xx 時，真正的錯誤訊息在回應內容裡 */
+  function call(body) {
+    return A.client.functions.invoke('account-email', { body: body }).then(function (res) {
+      if (res.error) {
+        var ctx = res.error.context;
+        return (ctx && typeof ctx.json === 'function'
+          ? ctx.json().catch(function () { return null; }) : Promise.resolve(null)
+        ).then(function (b) {
+          throw new Error((b && b.error) || res.error.message);
+        });
+      }
+      return res.data;
+    });
+  }
+
+  function rowHtml(a) {
+    var never = !a.last_sign_in_at;
+    return '<div class="card mt-2" data-id="' + esc(a.user_id) + '">' +
+      '<div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap">' +
+        '<strong style="font-size:1.02rem">' + esc(a.display_name || '（未填姓名）') + '</strong>' +
+        '<span>' + esc(a.email) + '</span>' +
+        (never ? '<span class="tag">從未登入</span>' : '') +
+      '</div>' +
+      '<p class="muted mb-0 mt-2" style="font-size:.86rem">' +
+        '開通　' + esc(when(a.created_at)) +
+        (a.last_sign_in_at ? '　·　最後登入　' + esc(when(a.last_sign_in_at)) : '') +
+        (a.pending_email
+          ? '<br><span style="color:var(--accent)">棋士已申請改成 ' + esc(a.pending_email) +
+            '，等他點確認信</span>' : '') +
+      '</p>' +
+      '<details class="mt-2"><summary style="cursor:pointer;font-size:.9rem">修改信箱</summary>' +
+        '<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-top:10px">' +
+          '<div class="field mb-0" style="flex:1 1 240px">' +
+            '<label>新信箱</label><input type="email" data-f="email" autocomplete="off">' +
+          '</div>' +
+          '<label style="display:flex;align-items:center;gap:6px;font-size:.88rem">' +
+            '<input type="checkbox" data-f="reset" checked>同時寄「設定密碼」信到新信箱' +
+          '</label>' +
+          '<button class="btn btn-accent btn-sm" data-act="change" type="button">確認修改</button>' +
+          '<span class="muted" style="font-size:.84rem" data-state></span>' +
+        '</div>' +
+      '</details>' +
+    '</div>';
+  }
+
+  function render() {
+    var q = document.getElementById('q').value.trim().toLowerCase();
+    var scope = document.getElementById('scope').value;
+    var rows = accounts.filter(function (a) {
+      if (scope === 'never' && a.last_sign_in_at) return false;
+      if (scope === 'pending' && !a.pending_email) return false;
+      if (q && ((a.display_name || '') + ' ' + (a.email || '')).toLowerCase().indexOf(q) < 0) return false;
+      return true;
+    }).sort(function (a, b) {
+      return (a.display_name || '').localeCompare(b.display_name || '', 'zh-Hant');
+    });
+    var never = accounts.filter(function (a) { return !a.last_sign_in_at; }).length;
+    document.getElementById('count').textContent =
+      '共 ' + accounts.length + ' 個帳號，其中 ' + never + ' 個從未登入';
+    listEl.innerHTML = rows.length ? rows.map(rowHtml).join('')
+      : '<p class="muted">沒有符合條件的帳號。</p>';
+  }
+
+  function load() {
+    return call({ action: 'list' }).then(function (d) {
+      accounts = d.accounts || [];
+      render();
+    });
+  }
+
+  document.getElementById('q').addEventListener('input', render);
+  document.getElementById('scope').addEventListener('change', render);
+
+  listEl.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-act="change"]');
+    if (!btn) return;
+    var card = btn.closest('[data-id]');
+    var id = card.getAttribute('data-id');
+    var a = accounts.filter(function (x) { return x.user_id === id; })[0];
+    var email = card.querySelector('[data-f="email"]').value.trim().toLowerCase();
+    var reset = card.querySelector('[data-f="reset"]').checked;
+    var state = card.querySelector('[data-state]');
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say('error', '新信箱格式不正確。'); return; }
+    if (email === (a.email || '').toLowerCase()) { say('error', '新信箱跟目前的一樣。'); return; }
+    if (!window.confirm(
+          '要把「' + (a.display_name || '') + '」的登入信箱\n\n' +
+          '　' + a.email + '\n→ ' + email + '\n\n' +
+          '改完立即生效，之後所有通知都會寄到新信箱。\n請確認已經跟本人核對過。')) return;
+
+    btn.disabled = true;
+    state.textContent = '修改中…';
+    call({ action: 'change', user_id: id, email: email, reset: reset }).then(function (r) {
+      a.email = r.email;
+      a.pending_email = '';
+      render();
+      say('', '已將「' + esc(a.display_name || '') + '」的信箱改為 ' + esc(r.email) + '。' +
+        (reset ? (r.reset_sent ? '設定密碼的信已寄到新信箱。'
+                               : '<strong>但設定密碼的信沒寄出</strong>，請請他到登入頁按「忘記密碼」。')
+               : ''));
+    }).catch(function (err) {
+      btn.disabled = false;
+      state.textContent = '';
+      say('error', '修改失敗：' + esc(err.message || err));
+    });
+  });
+
+  A.require('admin').then(function (user) {
+    document.getElementById('who').textContent = user.profile.display_name || user.user.email;
+    return load();
+  }).catch(function (err) {
+    listEl.innerHTML = '';
+    say('error', '載入失敗：' + esc(A.message ? A.message(err) : err.message) +
+      '<br>若是剛建好這個功能，請確認 account-email 函式已經部署。');
+  });
+})();
+</script>
+</body>
+</html>

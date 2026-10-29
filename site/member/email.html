@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>變更登入信箱｜棋士專區</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body class="auth-body">
+
+<main class="auth-card">
+  <a class="auth-brand" href="../index.html">
+    <img src="../assets/img/cpga-logo.png" alt="中華職業圍棋協會">
+  </a>
+
+  <h1>變更登入信箱</h1>
+  <p class="muted" style="font-size:.92rem" id="lede">載入中…</p>
+
+  <div id="notice" class="mt-2"></div>
+
+  <form id="emailForm" novalidate hidden>
+    <div class="field">
+      <label for="e1">新的信箱</label>
+      <input type="email" id="e1" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="e2">再輸入一次</label>
+      <input type="email" id="e2" autocomplete="off" required>
+      <p class="form-note mb-0">之後登入、報名通知、學生詢問的通知都會改寄到這個信箱。</p>
+    </div>
+
+    <button class="btn btn-accent btn-block mt-2" type="submit" id="saveBtn">寄出確認信</button>
+    <p class="mb-0 mt-2" id="state" style="font-size:.9rem"></p>
+  </form>
+
+  <p class="muted mt-3 mb-0" style="font-size:.86rem">
+    舊信箱已經不能用、又登不進來的話，請聯絡秘書處代為修改：<br>
+    (02) 2702-8898 轉 126　·　progotw@gmail.com
+  </p>
+  <p class="mt-2 mb-0" style="font-size:.9rem"><a href="home.html">← 回棋士專區</a></p>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var form = document.getElementById('emailForm');
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    var box = document.getElementById('notice');
+    box.innerHTML = text
+      ? '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+        '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>'
+      : '';
+    var r = box.getBoundingClientRect();
+    if (text && (r.top < 0 || r.bottom > window.innerHeight)) {
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  /* 從確認信點進來時，網址後面會帶著結果：
+       message=…           兩個信箱只確認了一邊（舊信箱也要確認時）
+       type=email_change   兩邊都確認完，變更生效
+       error_description=… 連結失效或已用過
+     讀完就把它從網址拿掉，免得重新整理又顯示一次。 */
+  var hp = new URLSearchParams((location.hash || '').replace(/^#/, ''));
+  var fromLink = {
+    error: hp.get('error_description'),
+    half: hp.get('message'),
+    done: hp.get('type') === 'email_change'
+  };
+
+  /* 網址列裡的確認憑證要等 supabase-js 換成登入狀態後再清，
+     太早清掉會讓它讀不到。 */
+  var SHOWN = {};
+  A.client.auth.getSession().then(function (res) {
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    /* 在沒登入的裝置上點確認信（例如手機收信、平常用電腦），直接告知結果，
+       不要跳去登入頁把訊息吞掉 */
+    if (!(res.data && res.data.session) && (fromLink.half || fromLink.error)) {
+      document.getElementById('lede').textContent = '';
+      say(fromLink.error ? 'error' : '', fromLink.error
+        ? '確認連結已經失效或已經使用過，變更沒有完成。請登入後重新申請。'
+        : '已確認其中一個信箱。請再到<strong>另一個信箱</strong>點確認連結，兩邊都確認後才會生效。');
+      throw SHOWN;
+    }
+    return A.require('player');
+  }).then(function (me) {
+    var u = me.user;
+    document.getElementById('lede').innerHTML =
+      '目前的登入信箱：<strong>' + esc(u.email) + '</strong>';
+
+    if (fromLink.error) {
+      say('error', '確認連結已經失效或已經使用過，變更沒有完成。請重新輸入新信箱再寄一次。');
+    } else if (fromLink.done) {
+      say('', '登入信箱已經改為 <strong>' + esc(u.email) + '</strong>。之後請用這個信箱登入。');
+    } else if (fromLink.half) {
+      say('', '已確認其中一個信箱。請再到<strong>另一個信箱</strong>點確認連結，兩邊都確認後才會生效。');
+    } else if (u.new_email) {
+      say('', '您已申請改成 <strong>' + esc(u.new_email) + '</strong>，還沒確認。' +
+        '請到信箱點確認連結；沒收到的話，請查看垃圾郵件匣，或在下面重新寄一次。');
+    }
+
+    form.hidden = false;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var a = document.getElementById('e1').value.trim().toLowerCase();
+      var b = document.getElementById('e2').value.trim().toLowerCase();
+      var state = document.getElementById('state');
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(a)) { say('error', '信箱格式不正確。'); return; }
+      if (a !== b) { say('error', '兩次輸入的信箱不一樣，請再確認。'); return; }
+      if (a === (u.email || '').toLowerCase()) { say('error', '這就是您目前的信箱。'); return; }
+
+      var btn = document.getElementById('saveBtn');
+      btn.disabled = true;
+      state.textContent = '寄送中…';
+      /* 確認信裡的連結點了之後回到這一頁顯示結果。
+         站台會把 .html 轉成無副檔名的網址，本機預覽則不會；跟著現況走。 */
+      var back = new URL(/\.html$/.test(location.pathname) ? 'email.html' : 'email',
+                         location.href).href;
+      A.client.auth.updateUser({ email: a }, { emailRedirectTo: back }).then(function (res) {
+        if (res.error) throw res.error;
+        state.textContent = '';
+        say('', '確認信已寄到 <strong>' + esc(a) + '</strong>，請到信箱點「確認變更」，點了才會生效。<br>' +
+          '如果目前的信箱（' + esc(u.email) + '）也收到確認信，<strong>兩封都要點</strong>。<br>' +
+          '沒收到的話請查看垃圾郵件匣。');
+        form.reset();
+      }).catch(function (err) {
+        state.textContent = '';
+        say('error', '寄送失敗：' + esc(A.message ? A.message(err) : err.message));
+      }).finally(function () { btn.disabled = false; });
+    });
+  }).catch(function (err) {
+    if (err === SHOWN) return;
+    document.getElementById('lede').textContent = '';
+    say('error', '載入失敗：' + esc(A.message ? A.message(err) : err.message));
+  });
+})();
+</script>
+</body>
+</html>
