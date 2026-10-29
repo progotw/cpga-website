@@ -306,13 +306,21 @@
     });
   }
 
+  /* 不列入催報名單的棋士。名錄每天從海峰同步，無法在那邊刪，所以在這裡排除；
+     要加人就把棋士 id 加進來（id 在棋士個人頁網址的 ?id= 後面）。 */
+  var NOT_CONTACT = {
+    '40BC858E8C6FE2A96019D6D6FB7E460F': 1   // 楊志德
+  };
+
   function missingHtml(list, min) {
     var inId = {}, inName = {};
     list.filter(function (e) { return !e.withdrawn; }).forEach(function (e) {
       if (e.player_id) inId[e.player_id] = 1;
       if (e.display_name) inName[e.display_name] = 1;
     });
-    var miss = players.filter(function (p) { return !inId[p.id] && !inName[p.name]; })
+    var miss = players.filter(function (p) {
+        return !inId[p.id] && !inName[p.name] && !NOT_CONTACT[p.id];
+      })
       .filter(function (p) { return p.now >= min; })
       .sort(function (a, b) { return (b.now - a.now) || (b.prev - a.prev) || (b.dan - a.dan); });
 

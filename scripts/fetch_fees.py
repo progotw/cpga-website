@@ -123,12 +123,7 @@ def sb(method, path, body=None, prefer=None):
                  % (e.code, e.read().decode('utf-8')[:200]))
 
 
-def main():
-    # 預設抓今年；報名名單要用前一年的對局費，所以留一個指定年份的入口。
-    # 例：python scripts/fetch_fees.py site/assets/data/players.json --year 2025
-    year = dt.datetime.now().year
-    if '--year' in sys.argv:
-        year = int(sys.argv[sys.argv.index('--year') + 1])
+def sync(year):
     data = fetch_release(year)
     if data is None:
         print('%d 年度：院方尚未發布，保留現有資料，不做任何變更。' % year)
@@ -180,6 +175,21 @@ def main():
 
     print('已寫入 %d 位棋士的對局費，並清掉本年度不在發布版中的舊資料。' % len(rows))
     print('院方發布時間：%s' % published)   # 時間不是機密，而且出問題時要靠它判斷版本
+
+
+def main():
+    # 指定年份：python scripts/fetch_fees.py site/assets/data/players.json --year 2025
+    if '--year' in sys.argv:
+        sync(int(sys.argv[sys.argv.index('--year') + 1]))
+        return
+
+    now = dt.datetime.now()
+    sync(now.year)
+    # 1 月時也重抓前一年。跨年後每天只抓新年度，前一年就停在 12/31 的版本；
+    # 院方若在 1 月才對前一年做最後修正並重新發布，不重抓就永遠收不到。
+    # 報名名單要依「前一年」對局費排序，正好用的就是這份最終版。
+    if now.month == 1:
+        sync(now.year - 1)
 
 
 if __name__ == '__main__':
