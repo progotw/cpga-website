@@ -63,7 +63,8 @@
    "caption": "中環碁聖賽16強戰落幕｜8強名單誕生",
    "date": "2026-10-16",
    "link": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
@@ -73,7 +74,8 @@
    "caption": "首屆玄樂盃決賽　許皓鋐、賴均輔10/22起五番棋爭冠",
    "date": "2026-10-15",
    "link": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "45AE43CECB40863461D2D73FBEC0330B",
@@ -83,7 +85,8 @@
    "caption": "棋王之路 》世界亞軍上演二度對決 棋王複賽27強率先誕生",
    "date": "2026-10-06",
    "link": "https://www.haifong.org/news/content/45AE43CECB40863461D2D73FBEC0330B",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "3451570A26F89280F60B1C54E340EC15",
@@ -273,6 +276,46 @@
    "caption": "社會組 職棋甄選複賽 - 第四日成績 / 蔡品倩晉升新科職棋",
    "date": "2026-07-21",
    "link": "https://www.haifong.org/news/content/BBA0EC09B7C87807B970177196D8415D",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "5959BF659C06878C654CD75E843EC6DB",
+   "image": "assets/img/gallery/5959BF659C06878C654CD75E843EC6DB.jpg",
+   "width": 1200,
+   "height": 849,
+   "caption": "社會組 職棋甄選複賽 - 第三日成績",
+   "date": "2026-07-20",
+   "link": "https://www.haifong.org/news/content/5959BF659C06878C654CD75E843EC6DB",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "156ABD5851EB49E4AB29357B916DC2B4",
+   "image": "assets/img/gallery/156ABD5851EB49E4AB29357B916DC2B4.jpg",
+   "width": 1200,
+   "height": 849,
+   "caption": "社會組 職棋甄選複賽 - 第二日成績",
+   "date": "2026-07-17",
+   "link": "https://www.haifong.org/news/content/156ABD5851EB49E4AB29357B916DC2B4",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "BD29B4ED1FB02F8696D5CF918581C435",
+   "image": "assets/img/gallery/BD29B4ED1FB02F8696D5CF918581C435.jpg",
+   "width": 1200,
+   "height": 849,
+   "caption": "社會組 職棋甄選複賽 - 第一日成績",
+   "date": "2026-07-16",
+   "link": "https://www.haifong.org/news/content/BD29B4ED1FB02F8696D5CF918581C435",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "9334DE1173C0A6D33AEFA096E8EDE06F",
+   "image": "assets/img/gallery/9334DE1173C0A6D33AEFA096E8EDE06F.jpg",
+   "width": 1200,
+   "height": 900,
+   "caption": "社會組 職棋甄選初賽 - 總成績",
+   "date": "2026-07-14",
+   "link": "https://www.haifong.org/news/content/9334DE1173C0A6D33AEFA096E8EDE06F",
    "credit": "海峰棋院"
   }
  ]

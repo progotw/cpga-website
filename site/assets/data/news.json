@@ -1,10 +1,28 @@
 {
  "schema_version": 1,
- "generated": "2026-10-29T18:29:09+00:00",
+ "generated": "2026-10-30T18:01:40+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
+   "date": "2026-10-30",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "圍棋》四大冠軍得主會師中環碁聖4強！上屆冠軍賴均輔再下一城",
+   "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A",
+   "local": true
+  },
+  {
+   "id": "33A23CF4A79848F6BEF781248456EA9A",
+   "date": "2026-10-30",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "【精彩好棋專欄：第90篇 小將的衝擊(上)】",
+   "url": "https://www.haifong.org/news/content/33A23CF4A79848F6BEF781248456EA9A",
+   "local": true
+  },
   {
    "id": "B91D72B264179C6D1BA59229CEDFC5CA",
    "date": "2026-10-29",
@@ -155,15 +173,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第20屆棋王賽複賽 抽籤公告",
-   "url": "https://www.haifong.org/news/content/06CBE54D9579F4BCBB4BE2374F6202C5"
-  },
-  {
-   "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
-   "date": "2026-10-16",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【中環碁聖賽16強戰落幕｜8強名單誕生】",
-   "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A"
+   "url": "https://www.haifong.org/news/content/06CBE54D9579F4BCBB4BE2374F6202C5",
+   "local": true
   },
   {
    "id": "31A7A6144634E2B4CA7E017549377CEA",
@@ -171,7 +182,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第2屆 新韓銀行世界棋仙戰 簡章",
-   "url": "https://www.haifong.org/news/content/31A7A6144634E2B4CA7E017549377CEA"
+   "url": "https://www.haifong.org/news/content/31A7A6144634E2B4CA7E017549377CEA",
+   "local": true
   },
   {
    "id": "03F79325F2AB204D2114DC0650987D07",
@@ -179,7 +191,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔辦法",
-   "url": "https://www.haifong.org/news/content/03F79325F2AB204D2114DC0650987D07"
+   "url": "https://www.haifong.org/news/content/03F79325F2AB204D2114DC0650987D07",
+   "local": true
   },
   {
    "id": "B2F9FE535264EF51E27593BCBB9BCDBA",
@@ -187,7 +200,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "首屆玄樂盃決賽　許皓鋐、賴均輔10/22起五番棋爭冠",
-   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA"
+   "url": "https://www.haifong.org/news/content/B2F9FE535264EF51E27593BCBB9BCDBA",
+   "local": true
   },
   {
    "id": "9A86571D0FC95663C85655CD48943A7B",
@@ -195,7 +209,8 @@
    "catLabel": "媒體報導",
    "cat": "media",
    "title": "【棋編碎碎念：你聽到落子 她聽見思念】",
-   "url": "https://www.haifong.org/news/content/9A86571D0FC95663C85655CD48943A7B"
+   "url": "https://www.haifong.org/news/content/9A86571D0FC95663C85655CD48943A7B",
+   "local": true
   },
   {
    "id": "0A60C8925A7E9EE8B16C465C57BA8B07",
@@ -203,7 +218,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【升段公告 - 林士勛八段晉升職業九段】",
-   "url": "https://www.haifong.org/news/content/0A60C8925A7E9EE8B16C465C57BA8B07"
+   "url": "https://www.haifong.org/news/content/0A60C8925A7E9EE8B16C465C57BA8B07",
+   "local": true
   },
   {
    "id": "CB1A6F48F26CB78CD83823379389CFDE",
@@ -211,7 +227,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【升段公告 - 林鈺娗二段晉升職業三段】",
-   "url": "https://www.haifong.org/news/content/CB1A6F48F26CB78CD83823379389CFDE"
+   "url": "https://www.haifong.org/news/content/CB1A6F48F26CB78CD83823379389CFDE",
+   "local": true
   },
   {
    "id": "45AE43CECB40863461D2D73FBEC0330B",
@@ -219,7 +236,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "棋王之路 》世界亞軍上演二度對決 棋王複賽27強率先誕生",
-   "url": "https://www.haifong.org/news/content/45AE43CECB40863461D2D73FBEC0330B"
+   "url": "https://www.haifong.org/news/content/45AE43CECB40863461D2D73FBEC0330B",
+   "local": true
   },
   {
    "id": "3451570A26F89280F60B1C54E340EC15",
@@ -972,14 +990,6 @@
    "cat": "notice",
    "title": "【院生第六輪月賽 賽程表】",
    "url": "https://www.haifong.org/news/content/98504B4B324991C411897EB7AFF84546"
-  },
-  {
-   "id": "B6893ED1E14E3004DF555697FE683123",
-   "date": "2026-05-23",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "第16屆春蘭杯世界職業圍棋錦標賽：台灣代表賴均輔止步世界24強",
-   "url": "https://www.haifong.org/news/content/B6893ED1E14E3004DF555697FE683123"
   }
  ]
 }
