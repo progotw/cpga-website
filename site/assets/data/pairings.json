@@ -1,5 +1,5 @@
 {
- "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
+ "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供職業棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
  "schema_version": 1,
  "source": "海峰棋院 抽籤結果公告",
  "count": 304,

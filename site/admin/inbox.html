@@ -138,7 +138,7 @@
             '<dt>來信者</dt><dd>' + esc(r.from_name || '—') + '</dd>' +
             '<dt>聯絡方式</dt><dd>' + esc(r.from_contact || '—') + '</dd>' +
             (r.released_at
-              ? '<dt>轉交</dt><dd>' + when(r.released_at) + '　已可在棋士專區看到</dd>'
+              ? '<dt>轉交</dt><dd>' + when(r.released_at) + '　已可在職業棋士專區看到</dd>'
               : '')) +
       '</dl>' +
 
@@ -228,7 +228,7 @@
       var on = btn.dataset.act === 'forward';
       if (on && !window.confirm(
             '轉交後，' + (row.teacher_name || '這位棋士') +
-            ' 登入棋士專區就能看到這封信的完整內容，包含來信者的聯絡方式。\n\n' +
+            ' 登入職業棋士專區就能看到這封信的完整內容，包含來信者的聯絡方式。\n\n' +
             '系統不會寄通知，請另行告知對方。確定要轉交嗎？')) return;
       btn.disabled = true;
       status.textContent = on ? '轉交中…' : '收回中…';

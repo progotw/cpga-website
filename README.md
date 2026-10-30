@@ -20,9 +20,9 @@ site/                   ← Netlify 發布的網站本體
   gallery/              賽事花絮
   membership/           加入會員
   downloads/            下載專區
-  member/               棋士專區說明頁（尚未開放登入）
+  member/               職業棋士專區說明頁（尚未開放登入）
   admin/                管理後台（登入後才可進入，robots.txt 已排除）
-  assets/files/member/  棋士專區的表單檔案（不在公開頁面上，但知道網址仍可下載）
+  assets/files/member/  職業棋士專區的表單檔案（不在公開頁面上，但知道網址仍可下載）
   assets/css/style.css  全站樣式
   assets/js/            共用程式（見下表）
   assets/data/          資料檔：爬蟲產生的（players/news/games/schedule/elite）
@@ -30,7 +30,7 @@ site/                   ← Netlify 發布的網站本體
   assets/img/players/   棋士照片（壓縮後約 4 MB）
   assets/files/         可下載的協會文件
 
-prototype/member/       棋士專區示意版（已移出發布目錄，第二階段改接後端時作為參考）
+prototype/member/       職業棋士專區示意版（已移出發布目錄，第二階段改接後端時作為參考）
 scripts/                抓取程式（不會被公開存取）
 .github/workflows/      每日自動更新資料
 netlify.toml            指定發布目錄為 site/
@@ -122,7 +122,7 @@ python scripts/fetch_photos.py site
 
 ## 找職業老師
 
-`teachers.json` 由棋士在棋士專區（`member/teaching.html`）自行填寫，
+`teachers.json` 由棋士在職業棋士專區（`member/teaching.html`）自行填寫，
 存進 Supabase 的 `teaching` 表，發布時由 `scripts/export_content.py` 匯出。
 姓名、段位、照片、經歷由 `players.json` 依 `id` 自動帶入，不需重複維護。
 
@@ -202,7 +202,7 @@ Markdown 對中文標題只能產生 `_1`、`_2` 這種流水號，頁內目錄�
 
 ## 已知限制
 
-**棋士專區（第一階段已開放）**
+**職業棋士專區（第一階段已開放）**
 
 - 登入 `member/login.html`，專區首頁 `member/home.html`
 - 內容：內部公告、棋士專屬表單、近期賽程（賽程沿用官網同一份 `schedule.json`）

@@ -82,7 +82,7 @@
     { label: '下載專區', href: 'downloads/index.html',  key: 'downloads' },
     /* 最後兩項是膠囊，成對放在導覽列右端 */
     { label: '找老師',   href: 'teachers/index.html',   key: 'teachers', pill: 'teachers' },
-    { label: '棋士專區', href: 'member/index.html',     key: 'member',   pill: 'member' }
+    { label: '職業棋士專區', href: 'member/index.html',     key: 'member',   pill: 'member' }
   ];
 
   var LOGO_SRC = ROOT + 'assets/img/cpga-logo.png';
@@ -150,7 +150,7 @@
               '<li><a href="' + ROOT + 'teachers/index.html">找職業老師</a></li>' +
               '<li><a href="' + ROOT + 'membership/index.html">加入會員</a></li>' +
               '<li><a href="' + ROOT + 'downloads/index.html">下載專區</a></li>' +
-              '<li><a href="' + ROOT + 'member/index.html">棋士專區</a></li>' +
+              '<li><a href="' + ROOT + 'member/index.html">職業棋士專區</a></li>' +
               '<li><a href="' + ROOT + 'about/contact.html">聯絡我們</a></li>' +
             '</ul></div>' +
           '</div>' +

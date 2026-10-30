@@ -27,7 +27,7 @@
 import io, os, re, sys, json, zipfile
 
 YEAR = 2025
-# 檔案最後修改日。棋士專區會顯示「院方發布」日期，用這天表示這份是何時定案的。
+# 檔案最後修改日。職業棋士專區會顯示「院方發布」日期，用這天表示這份是何時定案的。
 PUBLISHED = '2026-01-05T00:00:00+08:00'
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

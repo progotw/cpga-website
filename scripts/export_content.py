@@ -125,7 +125,7 @@ def export_teaching():
 
     payload = {
         'schema_version': 1,
-        'note': '職業老師登錄資料，由棋士在棋士專區自行填寫後發布。'
+        'note': '職業老師登錄資料，由棋士在職業棋士專區自行填寫後發布。'
                 'id 對應 players.json 的棋士 id，照片、段位、經歷會自動帶入。',
 
         'teachers': teachers,

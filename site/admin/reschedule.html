@@ -31,7 +31,7 @@
 
   <div class="callout mt-2">
     <p class="mb-0" style="font-size:.9rem">
-      改期後棋士專區的「我的賽程」會顯示新日期。<strong>系統不會自動通知棋士</strong>，
+      改期後職業棋士專區的「我的賽程」會顯示新日期。<strong>系統不會自動通知棋士</strong>，
       請另行以電話或訊息告知當事人。
     </p>
   </div>
@@ -274,7 +274,7 @@
         if (r.error) throw r.error;
         delete over[id];
         render();
-        say('', '已取消改期，回到原訂日期。明天的更新後會反映在棋士專區。');
+        say('', '已取消改期，回到原訂日期。明天的更新後會反映在職業棋士專區。');
       }).catch(function (err) {
         state.textContent = '';
         btn.disabled = false;
@@ -305,7 +305,7 @@
         /* 留著展開，不然存完畫面一收，看不到改成什麼 */
         var keep = openKeys(); keep['p:' + id] = 1;
         render(keep);
-        say('', '已登錄改期。<strong>明天的資料更新後</strong>才會反映在棋士專區，' +
+        say('', '已登錄改期。<strong>明天的資料更新後</strong>才會反映在職業棋士專區，' +
           '請另行通知當事棋士。');
       })
       .catch(function (err) {

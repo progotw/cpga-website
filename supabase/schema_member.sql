@@ -1,5 +1,5 @@
 -- ===========================================================================
--- 棋士專區 — 第一階段
+-- 職業棋士專區 — 第一階段
 --
 -- 在 Supabase 的 SQL Editor 貼上執行。可重複執行。
 -- 需先執行過 schema.sql（本檔依賴 profiles 與 is_admin()）。
@@ -26,7 +26,7 @@ create table if not exists public.announcements (
 );
 
 comment on table public.announcements is
-  '棋士專區的內部公告。published 為 false 時只有管理員看得到，供先擬稿後發布。';
+  '職業棋士專區的內部公告。published 為 false 時只有管理員看得到，供先擬稿後發布。';
 
 create index if not exists announcements_order
   on public.announcements (pinned desc, published_at desc nulls last, id desc);
@@ -49,7 +49,7 @@ create table if not exists public.member_files (
 );
 
 comment on table public.member_files is
-  '棋士專區的下載項目索引。檔案本身放在網站目錄，不存在資料庫裡。';
+  '職業棋士專區的下載項目索引。檔案本身放在網站目錄，不存在資料庫裡。';
 
 -- ---------------------------------------------------------------------------
 -- 更新時間

@@ -75,7 +75,7 @@
           return new Promise(function () {});   // 停住，不要繼續渲染
         }
         if (role && (!me.profile || me.profile.role !== role)) {
-          /* 管理員進棋士專區是合理的（要檢視畫面），反之則不行 */
+          /* 管理員進職業棋士專區是合理的（要檢視畫面），反之則不行 */
           if (!(role === 'player' && me.profile && me.profile.role === 'admin')) {
             location.replace(login + '?denied=1');
             return new Promise(function () {});

@@ -16,7 +16,7 @@
 
   /* 三個色相，各有分工：
      朱紅＝行動（入會、報名、主要按鈕）
-     深藍＝系統功能（登入、棋士專區、找老師）
+     深藍＝系統功能（登入、職業棋士專區、找老師）
      木金＝裝飾點綴（章節小標、分隔、提示框）
      原本還有玉綠與淺藍，各只用到一兩次，拿掉。 */
   --accent:      #9e3029;
@@ -197,7 +197,7 @@ button { font: inherit; cursor: pointer; }
 
 .nav { display: flex; align-items: center; gap: 2px; }
 /* 這層曾經是 display:contents，但那樣 <li> 拿不到 align-items: center，
-   整排選單會貼齊頂端，只有清單外的「棋士專區」被置中——兩顆膠囊因此差 3px。
+   整排選單會貼齊頂端，只有清單外的「職業棋士專區」被置中——兩顆膠囊因此差 3px。
    改成真正的 flex 容器，兩邊就在同一條中線上。 */
 .nav__list {
   display: flex; align-items: center; gap: 2px;
@@ -797,7 +797,7 @@ body.member-area { background: var(--paper-2); }
   .cal--lg .cal__title { font-size: 1.2rem; }
 }
 
-/* ---- 棋士專區的賽程月曆 ----
+/* ---- 職業棋士專區的賽程月曆 ----
    條列式看不出一個月裡哪幾天密集，排成月曆才看得出要跑幾趟。 */
 .cal__bar {
   display: flex; align-items: center; justify-content: space-between;
@@ -890,7 +890,6 @@ body.member-area { background: var(--paper-2); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
-  .nav__link { padding: 10px 9px; font-size: .88rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 900px) {
@@ -1115,7 +1114,7 @@ body.member-area { background: var(--paper-2); }
 }
 
 /* ---------- 導覽列的膠囊項目 ----------
-   棋士專區為實心紅底；找老師為玉綠外框，兩者以顏色與實心／外框區分。 */
+   職業棋士專區為實心紅底；找老師為玉綠外框，兩者以顏色與實心／外框區分。 */
 .nav__link--pill {
   padding: 9px 16px; border-radius: 999px; margin-left: 6px;
   border: 1px solid transparent;
@@ -1135,10 +1134,12 @@ body.member-area { background: var(--paper-2); }
 .nav__item.is-active > .nav__link--member { color: var(--white); }
 .nav__item.is-active > .nav__link--teachers { color: var(--navy); }
 
-/* 1025–1080px 是桌機導覽最窄的區間（1024 以下換成漢堡選單）。
-   兩顆維持等寬，但整體縮一號，否則「棋士專區」會被擠出頁首右緣。
+/* 1025–1180px 是桌機導覽最窄的區間（1024 以下換成漢堡選單）。
+   整排縮一號，兩顆膠囊維持等寬，否則「職業棋士專區」會被擠出頁首右緣——
+   這個名稱比原本的四字長，1180px 以下就放不下了。
    這段必須放在上面的 .nav__link--pill 之後——媒體查詢不會提高優先序。 */
-@media (max-width: 1080px) {
+@media (max-width: 1180px) {
+  .nav__link { padding: 10px 9px; font-size: .88rem; }
   .nav__link--pill { min-width: 79px; padding: 9px 10px; }
   .nav__link--teachers { margin-left: 8px; }
 }

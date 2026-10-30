@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>意見與申訴｜棋士專區</title>
+<title>意見與申訴｜職業棋士專區</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 
 <div class="admin-bar">
   <div class="admin-bar__inner">
-    <a class="admin-bar__title" href="home.html">← 棋士專區</a>
+    <a class="admin-bar__title" href="home.html">← 職業棋士專區</a>
     <span class="admin-bar__who" id="who"></span>
     <a class="admin-bar__link" href="#" id="logout">登出</a>
   </div>
@@ -150,7 +150,7 @@
       if (res.error) throw res.error;
       document.getElementById('form').hidden = true;
       say('', '已送出，謝謝您。秘書處收到後會儘速處理，必要時會與您聯繫。' +
-        '<br><a href="home.html">← 回到棋士專區</a>');
+        '<br><a href="home.html">← 回到職業棋士專區</a>');
     }).catch(function (err) {
       say('error', '送出失敗：' + esc(A.message(err)));
       btn.disabled = false;
