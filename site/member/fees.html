@@ -28,6 +28,8 @@
   </div>
 
   <div id="notice" class="mt-2"></div>
+  <!-- 年度切換。只有一個年度時不顯示 -->
+  <div class="tabs mt-2" id="years" style="margin-bottom:0" hidden></div>
   <div id="body" class="mt-2"><p class="muted">載入中…</p></div>
 </main>
 
@@ -137,6 +139,28 @@
         '有疑問請洽秘書處，或從<a href="feedback.html">意見與申訴</a>提出。</p>';
   }
 
+  /* 年度按鈕。院方每年發布一次，舊年度留著讓棋士回頭對帳；
+     只有一個年度時不顯示，免得畫面多一排沒用的按鈕。 */
+  function renderYears(rows) {
+    if (rows.length < 2) return;
+    var tabs = document.getElementById('years');
+    tabs.innerHTML = rows.map(function (r, i) {
+      return '<button class="tab' + (i ? '' : ' is-active') + '" data-year="' +
+        esc(r.year) + '">' + esc(r.year) + '</button>';
+    }).join('');
+    tabs.hidden = false;
+    tabs.addEventListener('click', function (e) {
+      var btn = e.target.closest('.tab');
+      if (!btn) return;
+      [].slice.call(this.querySelectorAll('.tab')).forEach(function (t) {
+        t.classList.toggle('is-active', t === btn);
+      });
+      rows.forEach(function (r) {
+        if (String(r.year) === btn.getAttribute('data-year')) render(r);
+      });
+    });
+  }
+
   A.require('player').then(function (me) {
     document.getElementById('who').textContent = me.profile.display_name || me.user.email;
 
@@ -151,17 +175,18 @@
     return A.client.from('player_fees').select('*')
       .eq('player_id', me.profile.player_id)
       .order('year', { ascending: false })
-      .limit(1)
+      .limit(20)
       .then(function (res) {
         if (res.error) throw res.error;
-        var row = (res.data || [])[0];
-        if (!row) {
+        var rows = res.data || [];
+        if (!rows.length) {
           document.getElementById('sub').textContent = '';
           box.innerHTML = '<div class="card"><p class="muted mb-0">' +
             '今年尚無對局費紀錄。院方核算並發布後會出現在這裡。</p></div>';
           return;
         }
-        render(row);
+        renderYears(rows);
+        render(rows[0]);
       });
   }).catch(function (err) {
     box.innerHTML = '';
