@@ -55,6 +55,37 @@
   function money(n) {
     return Number(n || 0).toLocaleString('en-US');
   }
+  /* 賽事的排列順序由秘書處指定。名單以外的賽事（十段、霸王賽、世界賽等）
+     排在後面，維持原本的順序。
+
+     比對前先正規化：資料來源的寫法不一致——2025 年是協會 Excel 的簡稱
+     （天元、中環碁聖、快棋爭霸戰），2026 年起是院方系統的全名
+     （中環天元賽）。去掉「中環」「圍棋」與結尾的賽／戰／盃之後兩邊就對得上，
+     哪一年的資料都照這個順序排。 */
+  var EVENT_ORDER = [
+    '中環天元賽', '海峰盃', '名人賽', '快棋爭霸賽', '玄樂盃', '新人王',
+    '女子圍棋最強戰', '棋王賽', '中環碁聖賽', '中環國手賽', '龍星賽'
+  ];
+  var ORDER_INDEX = {};
+  function eventKey(s) {
+    return String(s == null ? '' : s)
+      .replace(/\s+/g, '').replace(/中環|圍棋/g, '').replace(/[賽戰盃杯]+$/, '');
+  }
+  EVENT_ORDER.forEach(function (name, i) { ORDER_INDEX[eventKey(name)] = i; });
+
+  function sortEvents(events) {
+    /* 先記下原本的位置再排，舊瀏覽器的 sort 不保證穩定 */
+    return events.map(function (ev, i) { return { ev: ev, i: i }; })
+      .sort(function (a, b) {
+        var ra = ORDER_INDEX[eventKey(a.ev.event)];
+        var rb = ORDER_INDEX[eventKey(b.ev.event)];
+        if (ra === undefined) ra = EVENT_ORDER.length + a.i;
+        if (rb === undefined) rb = EVENT_ORDER.length + b.i;
+        return ra - rb || a.i - b.i;
+      })
+      .map(function (x) { return x.ev; });
+  }
+
   function when(ts) {
     if (!ts) return '';
     var d = new Date(ts), p = function (n) { return (n < 10 ? '0' : '') + n; };
@@ -67,7 +98,7 @@
   });
 
   function render(row) {
-    var events = row.events || [];
+    var events = sortEvents(row.events || []);
     document.getElementById('sub').textContent =
       row.year + ' 年度　·　院方發布：' + when(row.published_at);
 
