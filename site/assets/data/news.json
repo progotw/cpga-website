@@ -11,7 +11,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "玄樂盃決賽第二局結果？許皓鋐中盤勝 距首屆冠軍一勝之遙",
-   "url": "https://www.haifong.org/news/content/B91D72B264179C6D1BA59229CEDFC5CA"
+   "url": "https://www.haifong.org/news/content/B91D72B264179C6D1BA59229CEDFC5CA",
+   "local": true
   },
   {
    "id": "377BA1EA911733D86678792601F86475",
@@ -19,7 +20,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【2027年度 院生甄選名單及注意事項】",
-   "url": "https://www.haifong.org/news/content/377BA1EA911733D86678792601F86475"
+   "url": "https://www.haifong.org/news/content/377BA1EA911733D86678792601F86475",
+   "local": true
   },
   {
    "id": "21A7FBB3B0CF4FB0761BCFF7E0A14DCE",
@@ -27,7 +29,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【2027年度 院生培訓繼續、保留及棄權名單公告】",
-   "url": "https://www.haifong.org/news/content/21A7FBB3B0CF4FB0761BCFF7E0A14DCE"
+   "url": "https://www.haifong.org/news/content/21A7FBB3B0CF4FB0761BCFF7E0A14DCE",
+   "local": true
   },
   {
    "id": "C5315F4C4415F13E996EED8192025899",
@@ -35,7 +38,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第25屆海峰盃全國長青圍棋賽【北區賽事延期通知】",
-   "url": "https://www.haifong.org/news/content/C5315F4C4415F13E996EED8192025899"
+   "url": "https://www.haifong.org/news/content/C5315F4C4415F13E996EED8192025899",
+   "local": true
   },
   {
    "id": "CFC2B5E57E884A324D8439A1BFC63728",
@@ -43,7 +47,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "世界棋仙戰臺灣代表選拔：王元均等4人晉級，決選八強對陣出爐",
-   "url": "https://www.haifong.org/news/content/CFC2B5E57E884A324D8439A1BFC63728"
+   "url": "https://www.haifong.org/news/content/CFC2B5E57E884A324D8439A1BFC63728",
+   "local": true
   },
   {
    "id": "4007E632CF90FAC4696AA72401417806",
@@ -51,7 +56,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/4007E632CF90FAC4696AA72401417806"
+   "url": "https://www.haifong.org/news/content/4007E632CF90FAC4696AA72401417806",
+   "local": true
   },
   {
    "id": "E628142ACE733E5582E6069E85F70DF6",
@@ -59,7 +65,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第2屆新韓銀行「世界棋仙戰」台灣代表選拔抽籤公告",
-   "url": "https://www.haifong.org/news/content/E628142ACE733E5582E6069E85F70DF6"
+   "url": "https://www.haifong.org/news/content/E628142ACE733E5582E6069E85F70DF6",
+   "local": true
   },
   {
    "id": "CC6390A22902CF20ACA76BE3CDEDF236",
@@ -67,7 +74,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第2屆 龍星賽 簡章",
-   "url": "https://www.haifong.org/news/content/CC6390A22902CF20ACA76BE3CDEDF236"
+   "url": "https://www.haifong.org/news/content/CC6390A22902CF20ACA76BE3CDEDF236",
+   "local": true
   },
   {
    "id": "68F78A4CB0DC1AE82109FF1DFFB4679B",
@@ -75,7 +83,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【長青賽公告】第25屆海峰盃長青圍棋賽　延期舉行",
-   "url": "https://www.haifong.org/news/content/68F78A4CB0DC1AE82109FF1DFFB4679B"
+   "url": "https://www.haifong.org/news/content/68F78A4CB0DC1AE82109FF1DFFB4679B",
+   "local": true
   },
   {
    "id": "DC8A1EFAA73B3B279C9AD5AF10F323A7",
@@ -83,7 +92,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "因應薔琵颱風來襲「第14屆中環碁聖賽8強戰」比賽延期公告",
-   "url": "https://www.haifong.org/news/content/DC8A1EFAA73B3B279C9AD5AF10F323A7"
+   "url": "https://www.haifong.org/news/content/DC8A1EFAA73B3B279C9AD5AF10F323A7",
+   "local": true
   },
   {
    "id": "8EA9C89183D517008BFD7F933705239A",
@@ -91,7 +101,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "吳清源杯預選賽第四輪：楊子萱六段惜敗方若曦七段",
-   "url": "https://www.haifong.org/news/content/8EA9C89183D517008BFD7F933705239A"
+   "url": "https://www.haifong.org/news/content/8EA9C89183D517008BFD7F933705239A",
+   "local": true
   },
   {
    "id": "0D41C14AC963ED3C92BA7A79F008D504",
@@ -99,7 +110,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【長青賽公告】關於颱風動態與賽事說明",
-   "url": "https://www.haifong.org/news/content/0D41C14AC963ED3C92BA7A79F008D504"
+   "url": "https://www.haifong.org/news/content/0D41C14AC963ED3C92BA7A79F008D504",
+   "local": true
   },
   {
    "id": "22C9CB5F1B3FD6DE030BE44028EF208E",
@@ -107,7 +119,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第20屆棋王賽複賽 抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/22C9CB5F1B3FD6DE030BE44028EF208E"
+   "url": "https://www.haifong.org/news/content/22C9CB5F1B3FD6DE030BE44028EF208E",
+   "local": true
   },
   {
    "id": "3D4CDB7FE80F551905080B38148A060A",
@@ -115,7 +128,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "第19屆棋王挑戰者出爐：賴均輔6勝1負，11/3挑戰棋王許皓鋐",
-   "url": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A"
+   "url": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A",
+   "local": true
   },
   {
    "id": "F53E8FC02DEB96E9EB07DB44EB25D31F",
@@ -123,7 +137,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【國手山脈杯：申真諝奪冠】",
-   "url": "https://www.haifong.org/news/content/F53E8FC02DEB96E9EB07DB44EB25D31F"
+   "url": "https://www.haifong.org/news/content/F53E8FC02DEB96E9EB07DB44EB25D31F",
+   "local": true
   },
   {
    "id": "4506165613026F8C1F3EB8724CC67A3F",
@@ -131,7 +146,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "第19屆棋王賽 【循環賽】結果",
-   "url": "https://www.haifong.org/news/content/4506165613026F8C1F3EB8724CC67A3F"
+   "url": "https://www.haifong.org/news/content/4506165613026F8C1F3EB8724CC67A3F",
+   "local": true
   },
   {
    "id": "06CBE54D9579F4BCBB4BE2374F6202C5",

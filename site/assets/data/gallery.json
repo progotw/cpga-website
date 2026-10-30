@@ -8,7 +8,8 @@
    "caption": "世界棋仙戰臺灣代表選拔：王元均等4人晉級，決選八強對陣出爐",
    "date": "2026-10-27",
    "link": "https://www.haifong.org/news/content/CFC2B5E57E884A324D8439A1BFC63728",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "B91D72B264179C6D1BA59229CEDFC5CA",
@@ -18,7 +19,8 @@
    "caption": "第1屆玄樂盃｜許皓鋐名人屠龍賴均輔碁聖，五番勝負先下一城",
    "date": "2026-10-22",
    "link": "https://www.haifong.org/news/content/B91D72B264179C6D1BA59229CEDFC5CA",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "8EA9C89183D517008BFD7F933705239A",
@@ -28,7 +30,8 @@
    "caption": "吳清源杯預選賽第四輪：楊子萱六段惜敗方若曦七段",
    "date": "2026-10-21",
    "link": "https://www.haifong.org/news/content/8EA9C89183D517008BFD7F933705239A",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "3D4CDB7FE80F551905080B38148A060A",
@@ -38,7 +41,8 @@
    "caption": "第19屆棋王挑戰者出爐：賴均輔6勝1負，11/3挑戰棋王許皓鋐",
    "date": "2026-10-20",
    "link": "https://www.haifong.org/news/content/3D4CDB7FE80F551905080B38148A060A",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "F53E8FC02DEB96E9EB07DB44EB25D31F",
@@ -48,7 +52,8 @@
    "caption": "國手山脈杯：申真諝奪冠",
    "date": "2026-10-20",
    "link": "https://www.haifong.org/news/content/F53E8FC02DEB96E9EB07DB44EB25D31F",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
@@ -218,6 +223,56 @@
    "caption": "社會組 職棋甄選決賽 - 第三日成績",
    "date": "2026-07-30",
    "link": "https://www.haifong.org/news/content/1100E3EA770478B3AE2EC7ECECC1DE19",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "DC859FC88550207EF731D646BAE1E9C8",
+   "image": "assets/img/gallery/DC859FC88550207EF731D646BAE1E9C8.jpg",
+   "width": 1200,
+   "height": 849,
+   "caption": "社會組 職棋甄選決賽 - 第二日成績",
+   "date": "2026-07-28",
+   "link": "https://www.haifong.org/news/content/DC859FC88550207EF731D646BAE1E9C8",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "6D3D1EEC00E5FCC90CA6E0A2FBA4C537",
+   "image": "assets/img/gallery/6D3D1EEC00E5FCC90CA6E0A2FBA4C537.jpg",
+   "width": 1200,
+   "height": 849,
+   "caption": "社會組 職棋甄選決賽 - 第一日成績",
+   "date": "2026-07-27",
+   "link": "https://www.haifong.org/news/content/6D3D1EEC00E5FCC90CA6E0A2FBA4C537",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "AE9141919A4F1991B81814795374987F",
+   "image": "assets/img/gallery/AE9141919A4F1991B81814795374987F.jpg",
+   "width": 1060,
+   "height": 641,
+   "caption": "社會組 職棋甄選複賽 - 總成績",
+   "date": "2026-07-23",
+   "link": "https://www.haifong.org/news/content/AE9141919A4F1991B81814795374987F",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "2E9D4FA41CE7135E6F8BB51F26ED28CF",
+   "image": "assets/img/gallery/2E9D4FA41CE7135E6F8BB51F26ED28CF.jpg",
+   "width": 1200,
+   "height": 849,
+   "caption": "社會組 職棋甄選複賽 - 第五日成績",
+   "date": "2026-07-22",
+   "link": "https://www.haifong.org/news/content/2E9D4FA41CE7135E6F8BB51F26ED28CF",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "BBA0EC09B7C87807B970177196D8415D",
+   "image": "assets/img/gallery/BBA0EC09B7C87807B970177196D8415D.jpg",
+   "width": 1200,
+   "height": 849,
+   "caption": "社會組 職棋甄選複賽 - 第四日成績 / 蔡品倩晉升新科職棋",
+   "date": "2026-07-21",
+   "link": "https://www.haifong.org/news/content/BBA0EC09B7C87807B970177196D8415D",
    "credit": "海峰棋院"
   }
  ]

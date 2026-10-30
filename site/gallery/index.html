@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>賽事花絮｜中華職業圍棋協會</title>
 <meta name="description" content="職業賽事的現場照片與拍攝規範。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="中華職業圍棋協會">
+<meta property="og:title" content="賽事花絮｜中華職業圍棋協會">
+<meta property="og:description" content="職業賽事的現場照片與拍攝規範。">
+<meta property="og:url" content="https://cpga.org.tw/gallery/">
+<meta property="og:image" content="https://cpga.org.tw/assets/img/share.jpg">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
@@ -96,8 +104,9 @@
         '共 ' + photos.length + ' 張，有新的比賽報導時會自動加入。';
       grid.innerHTML = photos.map(function (p, i) {
         return '<figure class="gallery-item">' +
-          /* 照片的 id 就是那篇報導的新聞 id，點下去到本站的報導頁 */
-          '<a href="../news/article.html?id=' + encodeURIComponent(p.id) + '">' +
+          /* 照片的 id 就是那篇報導的新聞 id。已轉存的看本站的報導頁，
+             還沒轉存的直接連海峰原文。 */
+          '<a href="' + esc(p.local ? '../news/p/' + p.id + '.html' : p.link) + '">' +
             /* 前六張在第一屏，其餘等捲到再載入 */
             '<img src="../' + esc(p.image) + '" width="' + (p.width || 1200) +
               '" height="' + (p.height || 800) + '" alt="' + esc(p.caption) + '"' +

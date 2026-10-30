@@ -214,13 +214,22 @@ def main():
             os.remove(p)
     gallery = gallery[:MAX_GALLERY]
 
+    # 哪幾篇報導已經轉存到本站（fetch_articles.py 先跑），
+    # 點照片才知道要連官網的文章頁還是海峰原文。每次都重算，不必連網。
+    for g in gallery:
+        if os.path.exists(os.path.join(ARTICLES, g['id'] + '.json')):
+            g['local'] = True
+        else:
+            g.pop('local', None)
+
     save(GALLERY, {'photos': gallery})
 
     # 首頁用相簿裡最新的一張
     hero = {'checked': checked[-KEEP_CHECKED:]}
     if gallery:
-        hero.update({k: gallery[0][k] for k in
-                     ('image', 'width', 'height', 'caption', 'date', 'link', 'credit')})
+        hero.update({k: gallery[0].get(k) for k in
+                     ('id', 'image', 'width', 'height', 'caption', 'date',
+                      'link', 'credit', 'local')})
     save(HERO, hero)
 
     print('新增 %d 張，相簿共 %d 張。首頁照片：%s'

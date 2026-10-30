@@ -18,6 +18,14 @@
 === 存放 ===
 
 site/assets/data/articles/<新聞id>.json，一篇一個檔案。純文字，一篇約 5～20 KB。
+另外每篇產生一頁 site/news/p/<新聞id>.html：標題、摘要與分享用的 Open Graph
+標籤都寫在 HTML 裡，貼到 LINE、Facebook 才有標題與縮圖（對方的機器人不會跑
+JavaScript，光靠網頁上的程式去填是讀不到的）。內文仍由瀏覽器讀 JSON 畫出來，
+過濾才會跑第二次。
+
+已轉存的文章會在 news.json 的項目上標 "local": true，網站據此決定連結指向
+本站文章頁還是海峰原文。這支程式若當天失敗，標記就不會出現，連結自動退回
+海峰原文，不會連到不存在的頁面。
 文章裡的照片不下載，直接顯示海峰的圖（一篇常有十幾張，全部存進來網站會太大）。
 
 內文來自別人的網站，存檔前先過濾一次：只留段落、粗體、清單、表格、圖片、連結這些
@@ -33,6 +41,9 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 UA = {'User-Agent': 'CPGA-site-builder/1.1 (+https://cpga.org.tw; CPGA official site data sync)'}
 HAIFONG = 'https://www.haifong.org'
+
+SITE_URL = 'https://cpga.org.tw/'
+SHARE_IMG = SITE_URL + 'assets/img/share.jpg'
 
 MAX_PER_RUN = 10
 MAX_TRIES = 3         # 同一篇讀了三次都失敗就不再試，免得每天卡住名額
@@ -190,6 +201,106 @@ def parse(page):
     return title, body_html, images
 
 
+# ---------------- 每篇一頁 ----------------
+PAGE = """<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}｜中華職業圍棋協會</title>
+<meta name="description" content="{excerpt}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="中華職業圍棋協會">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{excerpt}">
+<meta property="og:url" content="{page_url}">
+<meta property="og:image" content="{image}">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="{date}">
+<meta name="twitter:card" content="summary_large_image">
+<!-- 整篇轉載自海峰棋院，告訴搜尋引擎原文在哪裡，不要把本站當成重複內容 -->
+<link rel="canonical" href="{source_url}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body data-nav="news" data-article="{id}">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../../index.html">首頁</a><span class="sep">/</span><a href="../index.html">最新消息</a><span class="sep">/</span><a href="../index.html?cat={cat}">{cat_label}</a></nav>
+    <h1 class="article-title">{title}</h1>
+    <p class="article-meta"><span>{shown_date}</span><span class="tag tag--dark">{cat_label}</span></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="article-wrap">
+      <article class="article-body" id="artBody"><p class="muted">載入中…</p></article>
+      <p class="src-note mt-3">本文轉載自<strong>海峰棋院</strong>　·　<a href="{source_url}">閱讀海峰棋院原文</a></p>
+      <div class="article-foot">
+        <a class="btn btn-ghost" href="../index.html">← 回最新消息</a>
+      </div>
+      <div class="article-more" id="artMoreBox" hidden>
+        <h2 class="article-more__title">其他消息</h2>
+        <div id="artMore"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../../assets/js/content.js"></script>
+<script src="../../assets/js/site.js" defer></script>
+<script src="../../assets/js/article.js"></script>
+</body>
+</html>
+"""
+
+
+def write_page(site, a):
+    """文章頁。每次執行都重寫，版面改了舊文章才會跟著更新。"""
+    img = ''
+    for u in a.get('images') or []:
+        # 直式海報當縮圖會被裁得很奇怪，但第一張通常就是封面照，照順序取
+        img = u
+        break
+    d = html.escape(a.get('date') or '', quote=True)
+    out = PAGE.format(
+        id=a['id'],
+        title=html.escape(a.get('title') or '最新消息', quote=True),
+        excerpt=html.escape(a.get('excerpt') or '', quote=True),
+        cat=html.escape(a.get('cat') or '', quote=True),
+        cat_label=html.escape(a.get('catLabel') or '消息', quote=True),
+        date=d,
+        shown_date=d.replace('-', '.'),
+        image=html.escape(img or SHARE_IMG, quote=True),
+        source_url=html.escape(a.get('source_url') or (HAIFONG + '/news/content/' + a['id']),
+                               quote=True),
+        page_url=SITE_URL + 'news/p/' + a['id'],
+    )
+    page_dir = os.path.join(site, 'news', 'p')
+    os.makedirs(page_dir, exist_ok=True)
+    path = os.path.join(page_dir, a['id'] + '.html')
+    old = load_text(path)
+    if old != out:                       # 沒變就不要動檔案，才不會每天都產生一筆提交
+        with io.open(path, 'w', encoding='utf-8', newline='') as f:
+            f.write(out)
+        return True
+    return False
+
+
+def load_text(path):
+    if os.path.exists(path):
+        with io.open(path, encoding='utf-8', newline='') as f:
+            return f.read()
+    return None
+
+
 # ---------------- 主程式 ----------------
 class Refused(Exception):
     pass
@@ -231,7 +342,22 @@ def main():
     failed_path = os.path.join(out_dir, '_failed.json')
     failed = load(failed_path, {})
 
-    items = load(os.path.join(data, 'news.json'), {}).get('items') or []
+    news_path = os.path.join(data, 'news.json')
+    news = load(news_path, {})
+    items = news.get('items') or []
+
+    def mark_local(saved_ids):
+        changed = False
+        for it in items:
+            want = it.get('id') in saved_ids
+            if bool(it.get('local')) != want:
+                if want:
+                    it['local'] = True
+                else:
+                    it.pop('local', None)
+                changed = True
+        if changed:
+            save(news_path, news)
     todo = [i for i in items
             if ID_RE.fullmatch(i.get('id') or '')
             and not os.path.exists(os.path.join(out_dir, i['id'] + '.json'))
@@ -278,7 +404,22 @@ def main():
         print('  ✓ %s　%s（%d 張圖）' % (item.get('date'), (item.get('title') or title)[:30], len(images)))
 
     save(failed_path, failed)
-    print('完成：轉存 %d 篇，失敗 %d 篇。' % (ok, bad))
+
+    # 每天重建所有文章頁，並把「已轉存」標記寫回 news.json，
+    # 讓最新消息、首頁、花絮的連結知道哪幾篇可以留在官網看。
+    pages = 0
+    saved_ids = set()
+    for item in items:
+        path = os.path.join(out_dir, (item.get('id') or '') + '.json')
+        if not os.path.exists(path):
+            continue
+        saved_ids.add(item['id'])
+        if write_page(site, load(path, {})):
+            pages += 1
+    mark_local(saved_ids)
+
+    print('完成：轉存 %d 篇，失敗 %d 篇；文章頁更新 %d 頁，已轉存共 %d 篇。'
+          % (ok, bad, pages, len(saved_ids)))
 
     if stopped:
         sys.exit('海峰回應 %s（暫時拒絕連線），這批先停，明天再繼續。' % stopped)

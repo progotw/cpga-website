@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中華職業圍棋協會｜官方網站</title>
 <meta name="description" content="中華職業圍棋協會官方網站 — 職業賽事、棋士名錄、段位制度、職業棋士甄選、賽事花絮與會員服務。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="中華職業圍棋協會">
+<meta property="og:title" content="中華職業圍棋協會｜官方網站">
+<meta property="og:description" content="中華職業圍棋協會官方網站 — 職業賽事、棋士名錄、段位制度、職業棋士甄選、賽事花絮與會員服務。">
+<meta property="og:url" content="https://cpga.org.tw/">
+<meta property="og:image" content="https://cpga.org.tw/assets/img/share.jpg">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
@@ -169,7 +177,7 @@
       if (!h || !h.image) return;
       var box = document.getElementById('heroPhoto');
       box.innerHTML =
-        '<a href="' + esc(window.CPGA_NEWS.href(h.link)) + '">' +
+        '<a href="' + esc(window.CPGA_NEWS.href(h)) + '">' +
           '<img src="' + esc(h.image) + '" width="' + (h.width || 1200) + '" height="' +
             (h.height || 800) + '" alt="' + esc(h.caption) + '"></a>' +
         '<figcaption><span>' + esc(h.caption) + '</span>' +

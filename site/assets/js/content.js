@@ -52,10 +52,19 @@
       return out;
     },
 
-    /* 本站文章頁的網址。可以給新聞 id，也可以給海峰的新聞網址。 */
-    href: function (idOrUrl) {
-      var m = HAIFONG_NEWS.exec(idOrUrl || '');
-      return ROOT + 'news/article.html?id=' + encodeURIComponent(m ? m[1] : (idOrUrl || ''));
+    /* 這則消息要連去哪裡。傳進來的是 news.json／gallery.json／hero.json 的項目。
+       已經轉存到本站的（local）留在官網看，其餘直接連海峰原文——
+       連到不存在的本站頁面會變成「找不到頁面」，比跳去海峰還糟。 */
+    href: function (n) {
+      n = n || {};
+      var id = n.id || '';
+      var url = n.url || n.link || '';
+      if (!id) {
+        var m = HAIFONG_NEWS.exec(url);
+        id = m ? m[1] : '';
+      }
+      if (n.local && id) return ROOT + 'news/p/' + id + '.html';
+      return url || (id ? 'https://www.haifong.org/news/content/' + id : '');
     },
 
     /* 文章內文。轉存時已經過濾過一次（scripts/fetch_articles.py），這裡再過濾一次：
@@ -133,11 +142,12 @@
       opts = opts || {};
       var self = this;
       return items.map(function (n) {
-        return '<a class="news-item" href="' + esc(self.href(n.id || n.url)) + '">' +
+        return '<a class="news-item" href="' + esc(self.href(n)) + '">' +
           '<span class="news-item__date">' + n.date.replace(/-/g, '.') + '</span>' +
           '<span class="tag ' + self.catClass(n.cat) + '">' + esc(n.catLabel) + '</span>' +
           '<span class="news-item__title">' + esc(n.title) + '</span>' +
-          '<span class="news-item__arrow">→</span></a>';
+          /* 箭頭先告訴讀者這一則會不會離開官網：→ 留在官網，↗ 連去海峰 */
+          '<span class="news-item__arrow">' + (n.local ? '→' : '↗') + '</span></a>';
       }).join('') || (opts.empty || '<p class="muted" style="padding:20px 0">目前沒有消息。</p>');
     }
   };
