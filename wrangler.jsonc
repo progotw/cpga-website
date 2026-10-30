@@ -1,0 +1,22 @@
+// Cloudflare 的部署設定。
+//
+// 以前程式庫裡沒有這個檔案，每次部署時 Cloudflare 會自己產生一份一模一樣的，
+// 只少了最後那一行。沒有那一行，網址打錯時回的是「404 加一片空白」，
+// 看起來像網站壞掉；加上去才會顯示 site/404.html。
+//
+// 下面的 name、compatibility_date、observability、assets.directory
+// 都照抄 Cloudflare 原本自動產生的內容（可在後台的建置紀錄裡看到
+// 「Create wrangler.jsonc」那一段），不要隨意更動：
+// name 改掉會部署到另一個 Worker，cpga.org.tw 就不會再更新。
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cpga-website",
+  "compatibility_date": "2026-10-23",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "site",
+    "not_found_handling": "404-page"
+  }
+}
