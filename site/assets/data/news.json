@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-10-30T18:01:40+00:00",
+ "generated": "2026-10-31T17:15:33+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
@@ -245,7 +245,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "中環國手賽16強》賴均輔中盤擊退陳映嘉 13歲鄭予皓闖進八強",
-   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15"
+   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15",
+   "local": true
   },
   {
    "id": "5CE948D602E3F3D5C6DDC48B3145E500",
@@ -253,7 +254,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【2026年大學生圍棋十傑賽 簡章】",
-   "url": "https://www.haifong.org/news/content/5CE948D602E3F3D5C6DDC48B3145E500"
+   "url": "https://www.haifong.org/news/content/5CE948D602E3F3D5C6DDC48B3145E500",
+   "local": true
   },
   {
    "id": "6251682609A359E3A26DAEB6CA285D97",
@@ -261,7 +263,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【2026大專院校圍棋交流團體邀請賽｜佛光大學奪冠】",
-   "url": "https://www.haifong.org/news/content/6251682609A359E3A26DAEB6CA285D97"
+   "url": "https://www.haifong.org/news/content/6251682609A359E3A26DAEB6CA285D97",
+   "local": true
   },
   {
    "id": "DF87A054E0A9B144A315EDC67F7C815E",
@@ -269,7 +272,8 @@
    "catLabel": "媒體報導",
    "cat": "media",
    "title": "【棋編碎碎念：感謝曾走過低谷】",
-   "url": "https://www.haifong.org/news/content/DF87A054E0A9B144A315EDC67F7C815E"
+   "url": "https://www.haifong.org/news/content/DF87A054E0A9B144A315EDC67F7C815E",
+   "local": true
   },
   {
    "id": "71C2277A75C1387BCABC4FA23AFD2080",
@@ -277,7 +281,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【首屆IBK世界女子圍棋大師賽｜楊子萱今晨出戰，強碰韓國名將吳政娥】",
-   "url": "https://www.haifong.org/news/content/71C2277A75C1387BCABC4FA23AFD2080"
+   "url": "https://www.haifong.org/news/content/71C2277A75C1387BCABC4FA23AFD2080",
+   "local": true
   },
   {
    "id": "1367B9A2EE0C7DAED6CCC13FF066BDAD",
@@ -285,7 +290,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【2026名古屋PairGo｜Day 3 圓滿落幕】",
-   "url": "https://www.haifong.org/news/content/1367B9A2EE0C7DAED6CCC13FF066BDAD"
+   "url": "https://www.haifong.org/news/content/1367B9A2EE0C7DAED6CCC13FF066BDAD",
+   "local": true
   },
   {
    "id": "15C37CC26A102F2114B18E95FBCED516",
@@ -293,7 +299,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【2027年度 院生培訓辦法】",
-   "url": "https://www.haifong.org/news/content/15C37CC26A102F2114B18E95FBCED516"
+   "url": "https://www.haifong.org/news/content/15C37CC26A102F2114B18E95FBCED516",
+   "local": true
   },
   {
    "id": "82492BD11A295B6E346031BBB8BAA112",
@@ -301,7 +308,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【2027年度 院生甄選辦法】",
-   "url": "https://www.haifong.org/news/content/82492BD11A295B6E346031BBB8BAA112"
+   "url": "https://www.haifong.org/news/content/82492BD11A295B6E346031BBB8BAA112",
+   "local": true
   },
   {
    "id": "C37E70744FA4849172A729CBADBBA6BE",
@@ -309,7 +317,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "圍棋／世界雙人圍棋最強戰 許皓鋐、楊子萱奪亞軍",
-   "url": "https://www.haifong.org/news/content/C37E70744FA4849172A729CBADBBA6BE"
+   "url": "https://www.haifong.org/news/content/C37E70744FA4849172A729CBADBBA6BE",
+   "local": true
   },
   {
    "id": "3577E9ECCE104DEBC7C317242491D435",
@@ -317,7 +326,8 @@
    "catLabel": "媒體報導",
    "cat": "media",
    "title": "圍棋「台日對決」激戰名古屋！許皓鋐、楊子萱連克中韓強敵，冠軍戰不敵日本奪銀",
-   "url": "https://www.haifong.org/news/content/3577E9ECCE104DEBC7C317242491D435"
+   "url": "https://www.haifong.org/news/content/3577E9ECCE104DEBC7C317242491D435",
+   "local": true
   },
   {
    "id": "A55F86323317236004FBFB6864E906D1",

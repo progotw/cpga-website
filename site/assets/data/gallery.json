@@ -96,7 +96,8 @@
    "caption": "中環國手賽16強》賴均輔中盤擊退陳映嘉 13歲鄭予皓闖進八強",
    "date": "2026-10-05",
    "link": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "71C2277A75C1387BCABC4FA23AFD2080",
@@ -106,7 +107,8 @@
    "caption": "首屆IBK世界女子圍棋大師賽｜楊子萱今晨出戰，強碰韓國名將吳政娥",
    "date": "2026-10-02",
    "link": "https://www.haifong.org/news/content/71C2277A75C1387BCABC4FA23AFD2080",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "C37E70744FA4849172A729CBADBBA6BE",
@@ -116,7 +118,8 @@
    "caption": "圍棋／世界雙人圍棋最強戰 許皓鋐、楊子萱奪亞軍",
    "date": "2026-09-29",
    "link": "https://www.haifong.org/news/content/C37E70744FA4849172A729CBADBBA6BE",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "A55F86323317236004FBFB6864E906D1",
@@ -316,6 +319,46 @@
    "caption": "社會組 職棋甄選初賽 - 總成績",
    "date": "2026-07-14",
    "link": "https://www.haifong.org/news/content/9334DE1173C0A6D33AEFA096E8EDE06F",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "A751530BFF2205660098641160A29483",
+   "image": "assets/img/gallery/A751530BFF2205660098641160A29483.jpg",
+   "width": 1200,
+   "height": 800,
+   "caption": "社會組 職棋甄選初賽 - 第一日成績",
+   "date": "2026-07-13",
+   "link": "https://www.haifong.org/news/content/A751530BFF2205660098641160A29483",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "C5A0A0C0F909ACC3086A956F3FF3F4B7",
+   "image": "assets/img/gallery/C5A0A0C0F909ACC3086A956F3FF3F4B7.jpg",
+   "width": 1200,
+   "height": 819,
+   "caption": "第26屆女子圍棋公開賽圓滿落幕｜級位組報名人數創新高、6、7段組陳芊瑜二度奪冠！",
+   "date": "2026-07-04",
+   "link": "https://www.haifong.org/news/content/C5A0A0C0F909ACC3086A956F3FF3F4B7",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "FFAC5F635AA0F527094DD6D3C19272A1",
+   "image": "assets/img/gallery/FFAC5F635AA0F527094DD6D3C19272A1.jpg",
+   "width": 1200,
+   "height": 900,
+   "caption": "徐靖恩七段Globis杯二連勝後惜敗韓國金昇珍，止步八強",
+   "date": "2026-06-29",
+   "link": "https://www.haifong.org/news/content/FFAC5F635AA0F527094DD6D3C19272A1",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "3542090403889B1AE8E191C2D33FD66B",
+   "image": "assets/img/gallery/3542090403889B1AE8E191C2D33FD66B.jpg",
+   "width": 1200,
+   "height": 876,
+   "caption": "終結三年冠軍荒 王元均 2：0 甜蜜復仇徐靖恩 奪快棋爭霸戰冠軍",
+   "date": "2026-06-24",
+   "link": "https://www.haifong.org/news/content/3542090403889B1AE8E191C2D33FD66B",
    "credit": "海峰棋院"
   }
  ]
