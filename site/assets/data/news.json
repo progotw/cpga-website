@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-10-31T17:15:33+00:00",
+ "generated": "2026-11-01T17:56:06+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "6C00B7A1B28A16F3B1515048DE9E978B",
+   "date": "2026-11-01",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【2027年度 院生甄選成績及錄取名單】",
+   "url": "https://www.haifong.org/news/content/6C00B7A1B28A16F3B1515048DE9E978B",
+   "local": true
+  },
   {
    "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
    "date": "2026-10-30",
@@ -335,7 +344,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【五位初段同日突圍！棋王資格賽吹起新銳旋風】",
-   "url": "https://www.haifong.org/news/content/A55F86323317236004FBFB6864E906D1"
+   "url": "https://www.haifong.org/news/content/A55F86323317236004FBFB6864E906D1",
+   "local": true
   },
   {
    "id": "2A7A5E3F83773087406AA9CD6E25D6D5",
@@ -343,7 +353,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "第20屆棋王賽 【資格賽】棋譜&結果",
-   "url": "https://www.haifong.org/news/content/2A7A5E3F83773087406AA9CD6E25D6D5"
+   "url": "https://www.haifong.org/news/content/2A7A5E3F83773087406AA9CD6E25D6D5",
+   "local": true
   },
   {
    "id": "DB16D09B84265FE036A742C4DA04A910",
@@ -351,7 +362,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【升段公告 - 楊博崴七段晉升職業八段】",
-   "url": "https://www.haifong.org/news/content/DB16D09B84265FE036A742C4DA04A910"
+   "url": "https://www.haifong.org/news/content/DB16D09B84265FE036A742C4DA04A910",
+   "local": true
   },
   {
    "id": "C10B525E1175C72C68708BC2C87E9A35",
@@ -359,7 +371,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第九屆吳清源杯世界女子圍棋公開賽規程",
-   "url": "https://www.haifong.org/news/content/C10B525E1175C72C68708BC2C87E9A35"
+   "url": "https://www.haifong.org/news/content/C10B525E1175C72C68708BC2C87E9A35",
+   "local": true
   },
   {
    "id": "DB5651C9F4A7840BC11602CBCE90F036",
@@ -367,7 +380,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第九屆吳清源杯世界女子圍棋公開賽  競賽補充規定",
-   "url": "https://www.haifong.org/news/content/DB5651C9F4A7840BC11602CBCE90F036"
+   "url": "https://www.haifong.org/news/content/DB5651C9F4A7840BC11602CBCE90F036",
+   "local": true
   },
   {
    "id": "8C5F6628BD9C2FCA4F5F329980DF81DF",
@@ -375,7 +389,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第20屆棋王資格賽、初賽抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF"
+   "url": "https://www.haifong.org/news/content/8C5F6628BD9C2FCA4F5F329980DF81DF",
+   "local": true
   },
   {
    "id": "938FE4D21C2FF829067BBE5631298E69",
@@ -383,7 +398,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "《林文伯：人生如棋，黑白分明》今天(9/9)正式上市，現正預購中！",
-   "url": "https://www.haifong.org/news/content/938FE4D21C2FF829067BBE5631298E69"
+   "url": "https://www.haifong.org/news/content/938FE4D21C2FF829067BBE5631298E69",
+   "local": true
   },
   {
    "id": "B5C93DE67B68238D0B1785F5B093B3BB",
@@ -391,7 +407,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【升段公告 - 簡靖庭七段晉升職業八段】",
-   "url": "https://www.haifong.org/news/content/B5C93DE67B68238D0B1785F5B093B3BB"
+   "url": "https://www.haifong.org/news/content/B5C93DE67B68238D0B1785F5B093B3BB",
+   "local": true
   },
   {
    "id": "03D6B22E84F12E9B1C38F30AA3CB8491",
@@ -399,7 +416,8 @@
    "catLabel": "媒體報導",
    "cat": "media",
    "title": "一步棋，一輩子——呂水上與玄樂盃的緣分",
-   "url": "https://www.haifong.org/news/content/03D6B22E84F12E9B1C38F30AA3CB8491"
+   "url": "https://www.haifong.org/news/content/03D6B22E84F12E9B1C38F30AA3CB8491",
+   "local": true
   },
   {
    "id": "9C639DF04E1E98B296D032CB8929AB7C",
@@ -992,14 +1010,6 @@
    "cat": "notice",
    "title": "【院生第五輪月賽 - 總成績公告】",
    "url": "https://www.haifong.org/news/content/2881291C9CFDED05AE95A20BC4AEE1B1"
-  },
-  {
-   "id": "98504B4B324991C411897EB7AFF84546",
-   "date": "2026-05-24",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【院生第六輪月賽 賽程表】",
-   "url": "https://www.haifong.org/news/content/98504B4B324991C411897EB7AFF84546"
   }
  ]
 }

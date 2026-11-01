@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-10-31T17:16:52+00:00",
+ "generated": "2026-11-01T17:57:21+00:00",
  "source": "海峰棋院 職業棋士名錄",
  "source_url": "https://www.haifong.org/profession",
  "count": 139,
@@ -3462,7 +3462,7 @@
    "rank": "初段",
    "photo": "assets/img/players/1C420292E1C7DCBAFD8B8875704EAA8B.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (9/1更新)",
+   "seasonLabel": "2026年度成績 (10/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -3487,7 +3487,7 @@
    "rank": "初段",
    "photo": "assets/img/players/E5FDC6FC1538CCA3F43846503E7B0D98.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (8/1更新)",
+   "seasonLabel": "2026年度成績 (10/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -3512,11 +3512,11 @@
    "rank": "初段",
    "photo": "assets/img/players/8AB03BA6DA9332148C3AC88706421907.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績(9/1更新)",
+   "seasonLabel": "2026年度成績(10/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "1勝2負　勝率33.3%"
+     "value": "2勝5負　勝率28.6%"
     },
     {
      "label": "世界賽",
@@ -3537,7 +3537,7 @@
    "rank": "初段",
    "photo": "assets/img/players/E2147DAF60476BEB86CB683B107B3690.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (9/1更新)",
+   "seasonLabel": "2026年度成績 (10/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -3562,11 +3562,11 @@
    "rank": "初段",
    "photo": "assets/img/players/A3086B92CB5CF060FA04DDA30E0A2058.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (9/1更新)",
+   "seasonLabel": "2026年度成績 (10/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "3勝5負　勝率37.5%"
+     "value": "6勝7負　勝率46.2%"
     },
     {
      "label": "世界賽",

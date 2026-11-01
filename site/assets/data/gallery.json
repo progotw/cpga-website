@@ -129,7 +129,8 @@
    "caption": "五位初段同日突圍！棋王資格賽吹起新銳旋風",
    "date": "2026-09-22",
    "link": "https://www.haifong.org/news/content/A55F86323317236004FBFB6864E906D1",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "3406ACB254C8EC935D79E11516348D95",
@@ -359,6 +360,46 @@
    "caption": "終結三年冠軍荒 王元均 2：0 甜蜜復仇徐靖恩 奪快棋爭霸戰冠軍",
    "date": "2026-06-24",
    "link": "https://www.haifong.org/news/content/3542090403889B1AE8E191C2D33FD66B",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "8B15BFFC66518AB88A3EAFED8211BF87",
+   "image": "assets/img/gallery/8B15BFFC66518AB88A3EAFED8211BF87.jpg",
+   "width": 1200,
+   "height": 904,
+   "caption": "第7屆名人賽決賽落幕！許皓鋐4：0戰勝王元均 第四度奪得名人!",
+   "date": "2026-06-22",
+   "link": "https://www.haifong.org/news/content/8B15BFFC66518AB88A3EAFED8211BF87",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "9CCF5215162ED1FCCD9BC8D73CD51F35",
+   "image": "assets/img/gallery/9CCF5215162ED1FCCD9BC8D73CD51F35.jpg",
+   "width": 1200,
+   "height": 675,
+   "caption": "台灣中環隊獲得男子圍丙聯賽第八名",
+   "date": "2026-06-14",
+   "link": "https://www.haifong.org/news/content/9CCF5215162ED1FCCD9BC8D73CD51F35",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "3D615AAB2569BAF9336021393736163C",
+   "image": "assets/img/gallery/3D615AAB2569BAF9336021393736163C.jpg",
+   "width": 1200,
+   "height": 675,
+   "caption": "環旭電子寶島隊 圍乙聯賽成績",
+   "date": "2026-06-14",
+   "link": "https://www.haifong.org/news/content/3D615AAB2569BAF9336021393736163C",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "EB4A1DF327BE871F90B05DFA217E5344",
+   "image": "assets/img/gallery/EB4A1DF327BE871F90B05DFA217E5344.jpg",
+   "width": 1200,
+   "height": 675,
+   "caption": "海峰棋院女子隊 圍乙聯賽成績",
+   "date": "2026-06-14",
+   "link": "https://www.haifong.org/news/content/EB4A1DF327BE871F90B05DFA217E5344",
    "credit": "海峰棋院"
   }
  ]
