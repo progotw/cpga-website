@@ -52,6 +52,48 @@
       return out;
     },
 
+    /* 這場比賽實際佔了哪幾天（YYYY-MM-DD 陣列）。
+
+       整天行程的 end_date 是 Google 行事曆的結束日，而它「不含當天」：
+       11/07 開始、end_date 11/09 就是 11/07、11/08 兩天；單日行程的
+       end_date 則是隔天。不展開的話，為期兩天的比賽在月曆上只看得到第一天
+       （2026-11-02 使用者回報大學生圍棋十傑賽只顯示一天）。
+
+       有填時間的行程不展開：那是當天的對局，end_date 只是結束時刻那一天。
+       上限 14 天是防呆，資料有誤時不要把整個月曆鋪滿。 */
+    days: function (e) {
+      var out = [e.date];
+      if (!e || !e.all_day || !e.end_date || e.end_date <= e.date) return out;
+      var d = new Date(e.date + 'T00:00:00');
+      for (var i = 0; i < 14; i++) {
+        d.setDate(d.getDate() + 1);
+        var k = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+        if (k >= e.end_date) break;
+        out.push(k);
+      }
+      return out;
+    },
+
+    /* 最後一天。用來判斷「還沒結束」——為期兩天的比賽，第二天仍在進行中，
+       不能因為開始日是昨天就從近期賽程裡消失。 */
+    lastDay: function (e) {
+      var ds = this.days(e);
+      return ds[ds.length - 1];
+    },
+
+    /* 日期標示。單日「2026.11.07」；跨日「2026.11.07–08」，跨月「2026.11.30–12.01」。
+       short＝省略年份（版面窄的清單用）。 */
+    dateLabel: function (e, short) {
+      var ds = this.days(e);
+      var a = ds[0], b = ds[ds.length - 1];
+      var head = short ? a.slice(5).replace('-', '/') : a.split('-').join('.');
+      if (b === a) return head;
+      var tail = a.slice(0, 7) === b.slice(0, 7)
+        ? b.slice(8)
+        : (short ? b.slice(5).replace('-', '/') : b.slice(5).split('-').join('.'));
+      return head + '–' + tail;
+    },
+
     /* 今天（本機時區）YYYY-MM-DD */
     today: function () {
       var d = new Date();
@@ -98,17 +140,23 @@
       }
 
       var byDate = {};
-      all.forEach(function (e) { (byDate[e.date] = byDate[e.date] || []).push(e); });
+      all.forEach(function (e) {
+        S.days(e).forEach(function (k) { (byDate[k] = byDate[k] || []).push(e); });
+      });
 
       var today = S.today();
       /* 從「還沒過的第一場」那個月開始，不是從今天的月份——
          月底時這個月可能已經沒有比賽了，開起來會是一片空白。 */
-      var start = (all.filter(function (e) { return e.date >= today; })[0]
+      var start = (all.filter(function (e) { return S.lastDay(e) >= today; })[0]
                    || all[all.length - 1]).date;
       var cur = { y: Number(start.slice(0, 4)), m: Number(start.slice(5, 7)) - 1 };
 
       var MIN = all[0].date.slice(0, 7);
-      var MAX = all[all.length - 1].date.slice(0, 7);
+      /* 跨月的比賽（例如 11/30–12/01）要能翻到最後一天所在的月份 */
+      var MAX = all.reduce(function (m, e) {
+        var k = S.lastDay(e).slice(0, 7);
+        return k > m ? k : m;
+      }, all[all.length - 1].date.slice(0, 7));
 
       function ym(c) { return c.y + '-' + S.pad(c.m + 1); }
 
@@ -155,14 +203,15 @@
         var list = '';
         if (opts.list) {
           list = all.filter(function (e) {
-            return String(e.date).slice(0, 7) === ym(cur);
+            /* 跨月的比賽在兩個月的清單裡都要出現 */
+            return S.days(e).some(function (k) { return k.slice(0, 7) === ym(cur); });
           }).map(function (e) {
             return '<li style="display:flex;gap:8px;padding:6px 0;' +
               'border-bottom:1px solid var(--line)">' +
               '<span class="legend__dot ' + S.slotClass(e.series_slot) +
                 '" style="background:currentColor;flex:none;margin-top:6px"></span>' +
               '<span><strong style="color:var(--ink)">' +
-                esc(String(e.date).slice(5).replace('-', '/')) + '</strong>　' +
+                esc(S.dateLabel(e, true)) + '</strong>　' +
                 esc(S.fullTitle(e)) +
                 '<br><span class="muted" style="font-size:.8rem">' +
                   esc(S.timeLabel(e)) + '</span></span></li>';

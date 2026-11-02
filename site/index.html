@@ -233,7 +233,8 @@
   S.load().then(function (data) {
     var today = S.today();
     var upcoming = (data.events || [])
-      .filter(function (e) { return e.date >= today; })
+      /* 用最後一天比對：為期兩天的比賽，第二天仍在進行中，不能消失 */
+      .filter(function (e) { return S.lastDay(e) >= today; })
       .sort(function (a, b) {
         return a.date === b.date
           ? String(a.time || '').localeCompare(String(b.time || ''))
@@ -249,7 +250,7 @@
                 '<span class="legend__dot ' + S.slotClass(e.series_slot) + '" style="background:currentColor"></span>' +
                 S.fullTitle(e) + '</strong>' +
               '<span class="muted" style="font-size:.82rem;font-variant-numeric:tabular-nums;white-space:nowrap">' +
-                window.CPGA_CMS.fmtDate(e.date).slice(5) + '</span>' +
+                S.dateLabel(e, true) + '</span>' +
             '</div>' +
             '<div class="muted" style="font-size:.82rem;margin-top:2px;padding-left:16px">' + S.timeLabel(e) + '</div></div>';
         }).join('') +
