@@ -361,6 +361,19 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 }
 .card__more { color: var(--accent); font-size: .88rem; font-weight: 500; margin-top: 14px; display: inline-block; }
 
+/* 首頁四張入口卡片裡的「找職業老師」。
+   另外三張是會務資訊，這一張是給想學棋的一般民眾用的，用深藍整張填滿，
+   在三張淺色卡片中間一眼就看得到。深藍本來就是全站「找老師」的代表色
+   （導覽列那顆膠囊也是深藍外框）。 */
+.card--teachers {
+  background: var(--navy); border-color: var(--navy); color: var(--on-dark-2);
+}
+.card--teachers h3 { color: var(--white); }
+.card--teachers p.muted { color: rgba(255, 255, 255, .78); }
+.card--teachers .card__icon { background: rgba(255, 255, 255, .16); color: var(--white); }
+.card--teachers .card__more { color: #bcd4ef; }
+.card--teachers:hover { border-color: var(--navy-2); background: var(--navy-2); }
+
 /* ---------- News ---------- */
 .news-list { list-style: none; padding: 0; margin: 0; }
 .news-item {
