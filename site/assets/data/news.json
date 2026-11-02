@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-02T06:46:35+00:00",
+ "generated": "2026-11-02T08:08:17+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
@@ -515,7 +515,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【李嘉馨勇奪吳清源杯台灣代表】",
-   "url": "https://www.haifong.org/news/content/83DDF91C4AEDAE48FD332D16B434A322"
+   "url": "https://www.haifong.org/news/content/83DDF91C4AEDAE48FD332D16B434A322",
+   "local": true
   },
   {
    "id": "283285C4707CCB42BEDEB65304A070DA",
@@ -523,7 +524,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【夢百合杯世界圍棋公開賽：陳詩淵九段負張柏清六段，止步本賽64強】",
-   "url": "https://www.haifong.org/news/content/283285C4707CCB42BEDEB65304A070DA"
+   "url": "https://www.haifong.org/news/content/283285C4707CCB42BEDEB65304A070DA",
+   "local": true
   },
   {
    "id": "B870BEB250E497FEC9E10CAB0CD72DA4",
@@ -531,7 +533,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "楊子萱六段、李嘉馨三段取得 IBK 世界女子圍棋大師賽代表權",
-   "url": "https://www.haifong.org/news/content/B870BEB250E497FEC9E10CAB0CD72DA4"
+   "url": "https://www.haifong.org/news/content/B870BEB250E497FEC9E10CAB0CD72DA4",
+   "local": true
   },
   {
    "id": "FE96A4C2C55A6F99DEC490820F34F29A",
@@ -539,7 +542,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "陳祈睿九段、盧奕銓七段取得國手山脈盃台灣代表權",
-   "url": "https://www.haifong.org/news/content/FE96A4C2C55A6F99DEC490820F34F29A"
+   "url": "https://www.haifong.org/news/content/FE96A4C2C55A6F99DEC490820F34F29A",
+   "local": true
   },
   {
    "id": "4B39CB2428827F386F4DCA8F0771AD3C",
@@ -547,7 +551,8 @@
    "catLabel": "媒體報導",
    "cat": "media",
    "title": "專注棋道，無懼現實——海峰棋院與宜特科技攜手啟動「精銳隊百萬激勵培育計畫」",
-   "url": "https://www.haifong.org/news/content/4B39CB2428827F386F4DCA8F0771AD3C"
+   "url": "https://www.haifong.org/news/content/4B39CB2428827F386F4DCA8F0771AD3C",
+   "local": true
   },
   {
    "id": "0AB8C9C72B30E9619A6A508474BFD1DE",
@@ -555,7 +560,8 @@
    "catLabel": "媒體報導",
    "cat": "media",
    "title": "精銳隊百萬新氣象 何理事長勉勵棋士做青年典範",
-   "url": "https://www.haifong.org/news/content/0AB8C9C72B30E9619A6A508474BFD1DE"
+   "url": "https://www.haifong.org/news/content/0AB8C9C72B30E9619A6A508474BFD1DE",
+   "local": true
   },
   {
    "id": "89ECD41D8BF94BEE5594A1721DBC0D32",
@@ -563,7 +569,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第1届玄樂杯 簡章",
-   "url": "https://www.haifong.org/news/content/89ECD41D8BF94BEE5594A1721DBC0D32"
+   "url": "https://www.haifong.org/news/content/89ECD41D8BF94BEE5594A1721DBC0D32",
+   "local": true
   },
   {
    "id": "2FE0014735B1F18E47862A75681F3816",
@@ -571,7 +578,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "圍棋的樂趣盡在玄妙之中！ 「玄樂盃」職業圍棋賽將於9月登場",
-   "url": "https://www.haifong.org/news/content/2FE0014735B1F18E47862A75681F3816"
+   "url": "https://www.haifong.org/news/content/2FE0014735B1F18E47862A75681F3816",
+   "local": true
   },
   {
    "id": "23C237FF41C1955FB5B5342D0547D077",
@@ -579,7 +587,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "時隔四年！盧鈺樺復仇楊子萱 加冕健喬盃女子最強后冠",
-   "url": "https://www.haifong.org/news/content/23C237FF41C1955FB5B5342D0547D077"
+   "url": "https://www.haifong.org/news/content/23C237FF41C1955FB5B5342D0547D077",
+   "local": true
   },
   {
    "id": "CB3C74886426B6291B382682945DFA9E",
@@ -587,7 +596,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "第十二屆健喬盃女子圍棋最強戰 【本賽】棋譜 & 結果",
-   "url": "https://www.haifong.org/news/content/CB3C74886426B6291B382682945DFA9E"
+   "url": "https://www.haifong.org/news/content/CB3C74886426B6291B382682945DFA9E",
+   "local": true
   },
   {
    "id": "924A2A29F266036ACF94C299AFE0A24A",

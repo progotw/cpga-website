@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-02T06:51:49+00:00",
+ "generated": "2026-11-02T08:13:02+00:00",
  "source": "海峰棋院 職業棋士名錄",
  "source_url": "https://www.haifong.org/profession",
  "count": 139,
@@ -1545,11 +1545,11 @@
    "rank": "四段",
    "photo": "assets/img/players/D5F5D47C98B0595491AF1146956FE38D.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "10勝7負　勝率58.8%"
+     "value": "11勝10負　勝率52.4%"
     },
     {
      "label": "世界賽",
@@ -1570,11 +1570,11 @@
    "rank": "四段",
    "photo": "assets/img/players/1B1B317DAFD897543FF1C175651B06AC.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "9勝7負　勝率56.3%"
+     "value": "9勝8負　勝率52.9%"
     },
     {
      "label": "世界賽",
@@ -1600,7 +1600,7 @@
      "value": "冠軍數:3冠"
     }
    ],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -1635,11 +1635,11 @@
      "value": "冠軍數:1冠"
     }
    ],
-   "seasonLabel": "2026年度成績 (9/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "9勝10負　勝率47.4%"
+     "value": "9勝12負　勝率42.9%"
     },
     {
      "label": "世界賽",
@@ -1690,7 +1690,7 @@
    "rank": "四段",
    "photo": "assets/img/players/7CE0B44C8D68B4C450E08D17864AA4D9.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -1715,11 +1715,11 @@
    "rank": "四段",
    "photo": "assets/img/players/A5C3900CB8FC98E0B62E558F008D3014.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "8勝8負　勝率50%"
+     "value": "10勝9負　勝率52.6%"
     },
     {
      "label": "世界賽",
@@ -1754,11 +1754,11 @@
      "value": "冠軍數:2冠(含非公式戰2)"
     }
    ],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "9勝21負　勝率30%"
+     "value": "10勝23負　勝率30.3%"
     },
     {
      "label": "世界賽",
@@ -1793,11 +1793,11 @@
      "value": "冠軍數: 1冠"
     }
    ],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "11勝9負　勝率55%"
+     "value": "13勝9負　勝率59.1%"
     },
     {
      "label": "世界賽",
@@ -1818,11 +1818,11 @@
    "rank": "四段",
    "photo": "assets/img/players/CD870F50F947A140848F9F4E75842EED.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "8勝9負　勝率47.1%"
+     "value": "11勝10負　勝率52.4%"
     },
     {
      "label": "世界賽",
@@ -1843,11 +1843,11 @@
    "rank": "四段",
    "photo": "assets/img/players/CDF70610323C8ED99F7262A73CAF89B5.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "0勝4負　勝率0%"
+     "value": "2勝5負　勝率28.6%"
     },
     {
      "label": "世界賽",
@@ -1868,11 +1868,11 @@
    "rank": "三段",
    "photo": "assets/img/players/3299C78D82B897AD55C0D0C3E7420002.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "3勝5負　勝率37.5%"
+     "value": "2勝6負　勝率25%"
     },
     {
      "label": "世界賽",
@@ -1898,7 +1898,7 @@
      "value": "冠軍數:1冠"
     }
    ],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -1923,7 +1923,7 @@
    "rank": "三段",
    "photo": "assets/img/players/1E1D56B68405F91D63929F9FFDA0B1AC.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -1948,7 +1948,7 @@
    "rank": "三段",
    "photo": "assets/img/players/6E223B36BE5A435F135E8C813D105283.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -1973,7 +1973,7 @@
    "rank": "三段",
    "photo": "assets/img/players/9591BEE9466684C1AFD8B656A66F14A7.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -1998,7 +1998,7 @@
    "rank": "三段",
    "photo": "assets/img/players/C8DB0930E8F794DE61B6FE1F8C177400.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2023,7 +2023,7 @@
    "rank": "三段",
    "photo": "assets/img/players/814BC77388BF34101205FD5C82ECADBE.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2048,7 +2048,7 @@
    "rank": "三段",
    "photo": "assets/img/players/8EF756A53BCB8BD1D3C8CF8EEFDF2A69.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2073,7 +2073,7 @@
    "rank": "三段",
    "photo": "assets/img/players/AB983C38E0F6CC44207444B3B5A46458.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2098,7 +2098,7 @@
    "rank": "三段",
    "photo": "assets/img/players/7F62ED0BE5F25AB2324B436CFD94A55D.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2123,7 +2123,7 @@
    "rank": "三段",
    "photo": "assets/img/players/ED29DEC1345C1158BABED0D24B900235.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2148,7 +2148,7 @@
    "rank": "三段",
    "photo": "assets/img/players/07FBD55A0E698F4F543B575FA58160FA.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2173,7 +2173,7 @@
    "rank": "三段",
    "photo": "assets/img/players/C8580FB096D478712175B7CC9CAFE177.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2198,7 +2198,7 @@
    "rank": "三段",
    "photo": "assets/img/players/FBDFBD0302EDD53201B64B6BA9BBD404.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2223,7 +2223,7 @@
    "rank": "三段",
    "photo": "assets/img/players/F285D7E0BE55E357CEF8841C1AE85C3D.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2248,11 +2248,11 @@
    "rank": "三段",
    "photo": "assets/img/players/8D59175A9D5B3DA2D0A3B65560A5D476.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "1勝5負　勝率16.7%"
+     "value": "2勝5負　勝率28.6%"
     },
     {
      "label": "世界賽",
@@ -2273,7 +2273,7 @@
    "rank": "三段",
    "photo": "assets/img/players/07D1230959795CC93A7B1AC664B2ABD0.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2298,7 +2298,7 @@
    "rank": "三段",
    "photo": "assets/img/players/588F241257F65FD5855A660A81BCD243.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2323,11 +2323,11 @@
    "rank": "三段",
    "photo": "assets/img/players/C53A54B63C282F8FAF2FA3D078B51178.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "3勝1負　勝率75%"
+     "value": "3勝2負　勝率60%"
     },
     {
      "label": "世界賽",
@@ -2348,7 +2348,7 @@
    "rank": "三段",
    "photo": "assets/img/players/0747ABCC941FB323AC5BAA3B8E2CBAB8.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2373,7 +2373,7 @@
    "rank": "三段",
    "photo": "assets/img/players/A09CE0ACB62DC6C4075045F63418D5F4.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2403,7 +2403,7 @@
      "value": "冠軍數:1冠"
     }
    ],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2438,7 +2438,7 @@
      "value": "冠軍數:1冠"
     }
    ],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",

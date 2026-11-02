@@ -2,7 +2,7 @@
  "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供職業棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
  "schema_version": 1,
  "source": "海峰棋院 抽籤結果公告",
- "count": 310,
+ "count": 294,
  "pairings": [
   {
    "date": "2026-08-13",
@@ -3120,7 +3120,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "王元均",
    "source": "schedule-app"
   },
   {
@@ -3136,7 +3136,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "鄭予皓",
    "source": "schedule-app"
   },
   {
@@ -3152,7 +3152,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "賴均輔",
    "source": "schedule-app"
   },
   {
@@ -3170,198 +3170,6 @@
    "candidates": [],
    "winner": "林士勛",
    "source": "schedule-app"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "陳詩淵",
-    "林新為"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "周尹南",
-    "林士勛"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "沈逸恩",
-    "楊子萱"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "鄭予皓",
-    "陳首廉"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "簡靖庭",
-    "白昕卉"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "盧奕銓",
-    "林立祥"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "林修平",
-    "詹宜典"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "吳彥諶",
-    "徐銘均"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "林君諺",
-    "陳威廷"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "林鈺娗",
-    "林書陽"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "林宇翔",
-    "徐靖恩"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "劉建昌",
-    "蔡丞韋"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "楊博崴",
-    "林彥丞"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "陳映嘉",
-    "林世民"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "黃柏人",
-    "孫立言"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
-   "event": "第20屆棋王賽複賽 抽籤結果公告",
-   "round": "複賽勝部1回",
-   "players": [
-    "盧鈺樺",
-    "林瀚彰"
-   ],
-   "pending_opponent": false,
-   "source": "announcement"
   },
   {
    "id": "qiwang19__1:ch_g1",
@@ -3789,15 +3597,13 @@
    "time": "11:00",
    "event": "第22屆中環國手賽",
    "round": "本賽 4強賽",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "陳祈睿",
+   "players": [
     "王元均",
-    "林新為",
     "鄭予皓"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -3808,14 +3614,12 @@
    "event": "第22屆中環國手賽",
    "round": "本賽 4強賽",
    "players": [
+    "賴均輔",
     "林士勛"
    ],
-   "pending_opponent": true,
+   "pending_opponent": false,
    "status": "drawn",
-   "candidates": [
-    "賴均輔",
-    "林君諺"
-   ],
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4117,12 +3921,9 @@
    "pending_opponent": true,
    "status": "scheduled",
    "candidates": [
-    "陳祈睿",
     "王元均",
-    "林新為",
     "鄭予皓",
     "賴均輔",
-    "林君諺",
     "林士勛"
    ],
    "winner": null,
@@ -5005,5 +4806,6 @@
    "source": "schedule-app"
   }
  ],
- "conflicts": []
+ "conflicts": [],
+ "warnings": []
 }
