@@ -64,6 +64,42 @@
      "label": "YT：圍棋秘笈"
     }
    ]
+  },
+  {
+   "id": "A5C3900CB8FC98E0B62E558F008D3014",
+   "modes": [
+    "實體",
+    "線上"
+   ],
+   "areas": [
+    "雙北地區",
+    "線上主要野狐為主"
+   ],
+   "students": [
+    "兒童",
+    "青少年",
+    "成人"
+   ],
+   "languages": [
+    "中文"
+   ],
+   "levels": "甲組以上",
+   "fee": "可議",
+   "availability": "週一晚上、週三晚上、",
+   "intro": "主要上課方式以覆盤或對奕後覆盤\n針對棋局內容找出問題，對症下藥",
+   "acceptForm": true,
+   "contacts": [
+    {
+     "type": "ig",
+     "label": "Instagram",
+     "value": "https://www.instagram.com/weitingchen2000?cplk=MWE2a2trd3g3eGF5Nw%3D%3D&utm_source=qr"
+    },
+    {
+     "type": "fb",
+     "label": "Facebook",
+     "value": "https://www.facebook.com/share/18pMb4LYo4/?mibextid=wwXIfr"
+    }
+   ]
   }
  ]
 }
