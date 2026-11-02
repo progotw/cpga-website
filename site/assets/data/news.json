@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-01T17:56:06+00:00",
+ "generated": "2026-11-02T06:46:35+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "52510BE8BF2C3B5275E82A06F37454C4",
+   "date": "2026-11-02",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "2026大學生圍棋十傑賽 選手名單 時間表公告",
+   "url": "https://www.haifong.org/news/content/52510BE8BF2C3B5275E82A06F37454C4",
+   "local": true
+  },
   {
    "id": "6C00B7A1B28A16F3B1515048DE9E978B",
    "date": "2026-11-01",
@@ -425,7 +434,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第22屆「中環國手賽」本賽抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C"
+   "url": "https://www.haifong.org/news/content/9C639DF04E1E98B296D032CB8929AB7C",
+   "local": true
   },
   {
    "id": "6A3BCCA683287F85004280B5C93A2887",
@@ -433,7 +443,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第19屆棋王賽循環賽比賽日程公告",
-   "url": "https://www.haifong.org/news/content/6A3BCCA683287F85004280B5C93A2887"
+   "url": "https://www.haifong.org/news/content/6A3BCCA683287F85004280B5C93A2887",
+   "local": true
   },
   {
    "id": "54BA02F71E29CE68107EE8F7BCC0DC03",
@@ -441,7 +452,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第20屆棋王賽 比賽辦法",
-   "url": "https://www.haifong.org/news/content/54BA02F71E29CE68107EE8F7BCC0DC03"
+   "url": "https://www.haifong.org/news/content/54BA02F71E29CE68107EE8F7BCC0DC03",
+   "local": true
   },
   {
    "id": "3406ACB254C8EC935D79E11516348D95",
@@ -449,7 +461,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "第31期三星盃世界圍棋大師賽統合預選成績",
-   "url": "https://www.haifong.org/news/content/3406ACB254C8EC935D79E11516348D95"
+   "url": "https://www.haifong.org/news/content/3406ACB254C8EC935D79E11516348D95",
+   "local": true
   },
   {
    "id": "7EBC69190755EB1E0821802EB5454182",
@@ -457,7 +470,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第14屆中環碁聖賽 抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182"
+   "url": "https://www.haifong.org/news/content/7EBC69190755EB1E0821802EB5454182",
+   "local": true
   },
   {
    "id": "66D681653A406C04C726CFFC34D10E3C",
@@ -465,7 +479,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第1屆玄樂盃 抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C"
+   "url": "https://www.haifong.org/news/content/66D681653A406C04C726CFFC34D10E3C",
+   "local": true
   },
   {
    "id": "B6F87E936AF26D69D869468C3BAC5D24",
@@ -473,7 +488,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "第25屆海峰盃全國長青圍棋賽",
-   "url": "https://www.haifong.org/news/content/B6F87E936AF26D69D869468C3BAC5D24"
+   "url": "https://www.haifong.org/news/content/B6F87E936AF26D69D869468C3BAC5D24",
+   "local": true
   },
   {
    "id": "D00162ECCA97063D7160DC48DDD83B20",
@@ -481,7 +497,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第22屆『中環國手賽』比賽辦法",
-   "url": "https://www.haifong.org/news/content/D00162ECCA97063D7160DC48DDD83B20"
+   "url": "https://www.haifong.org/news/content/D00162ECCA97063D7160DC48DDD83B20",
+   "local": true
   },
   {
    "id": "5312FEC0DD8F3154352F04B0F965AEFE",
@@ -489,7 +506,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第14屆『中環碁聖賽』比賽辦法",
-   "url": "https://www.haifong.org/news/content/5312FEC0DD8F3154352F04B0F965AEFE"
+   "url": "https://www.haifong.org/news/content/5312FEC0DD8F3154352F04B0F965AEFE",
+   "local": true
   },
   {
    "id": "83DDF91C4AEDAE48FD332D16B434A322",
@@ -1002,14 +1020,6 @@
    "cat": "match",
    "title": "2026新人王賽【決賽與本賽】 棋譜 & 結果",
    "url": "https://www.haifong.org/news/content/DABC26B68F504C876891CF97335095E1"
-  },
-  {
-   "id": "2881291C9CFDED05AE95A20BC4AEE1B1",
-   "date": "2026-05-24",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【院生第五輪月賽 - 總成績公告】",
-   "url": "https://www.haifong.org/news/content/2881291C9CFDED05AE95A20BC4AEE1B1"
   }
  ]
 }

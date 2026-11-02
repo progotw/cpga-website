@@ -140,7 +140,8 @@
    "caption": "第31期三星盃世界圍棋大師賽統合預選成績",
    "date": "2026-08-31",
    "link": "https://www.haifong.org/news/content/3406ACB254C8EC935D79E11516348D95",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "83DDF91C4AEDAE48FD332D16B434A322",
@@ -400,6 +401,36 @@
    "caption": "海峰棋院女子隊 圍乙聯賽成績",
    "date": "2026-06-14",
    "link": "https://www.haifong.org/news/content/EB4A1DF327BE871F90B05DFA217E5344",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "BEB7F8B2B0DB634ECA7FC30407C0016A",
+   "image": "assets/img/gallery/BEB7F8B2B0DB634ECA7FC30407C0016A.jpg",
+   "width": 1200,
+   "height": 900,
+   "caption": "第31屆LG杯世界棋王戰：賴均輔九段止步本賽16強",
+   "date": "2026-06-11",
+   "link": "https://www.haifong.org/news/content/BEB7F8B2B0DB634ECA7FC30407C0016A",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "18946B1C7944A87310855E422956302A",
+   "image": "assets/img/gallery/18946B1C7944A87310855E422956302A.jpg",
+   "width": 1200,
+   "height": 856,
+   "caption": "第7屆快棋爭霸戰本賽4強賽果：王元均九段、徐靖恩快棋王會師決賽",
+   "date": "2026-06-03",
+   "link": "https://www.haifong.org/news/content/18946B1C7944A87310855E422956302A",
+   "credit": "海峰棋院"
+  },
+  {
+   "id": "D4289F73F5710B4863CDCA966C1C34F5",
+   "image": "assets/img/gallery/D4289F73F5710B4863CDCA966C1C34F5.jpg",
+   "width": 1200,
+   "height": 904,
+   "caption": "預言成真！ 盧奕銓「最後一舞」2:0戰勝吳彥諶 奪新人王畢業圓夢",
+   "date": "2026-05-29",
+   "link": "https://www.haifong.org/news/content/D4289F73F5710B4863CDCA966C1C34F5",
    "credit": "海峰棋院"
   }
  ]

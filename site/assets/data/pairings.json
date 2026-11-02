@@ -2,7 +2,7 @@
  "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供職業棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
  "schema_version": 1,
  "source": "海峰棋院 抽籤結果公告",
- "count": 304,
+ "count": 310,
  "pairings": [
   {
    "date": "2026-08-13",
@@ -3168,7 +3168,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林士勛",
    "source": "schedule-app"
   },
   {
@@ -3362,6 +3362,22 @@
    ],
    "pending_opponent": false,
    "source": "announcement"
+  },
+  {
+   "id": "qiwang19__1:ch_g1",
+   "date": "2026-11-03",
+   "time": "11:00",
+   "event": "第19屆棋王賽",
+   "round": "挑戰賽 第1局",
+   "players": [
+    "許皓鋐",
+    "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
   },
   {
    "id": "qiwang20__1:f_a",
@@ -3732,7 +3748,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": "許皓鋐",
+   "winner": null,
    "source": "schedule-app"
   },
   {
@@ -3791,14 +3807,14 @@
    "time": "11:00",
    "event": "第22屆中環國手賽",
    "round": "本賽 4強賽",
-   "players": [],
+   "players": [
+    "林士勛"
+   ],
    "pending_opponent": true,
-   "status": "scheduled",
+   "status": "drawn",
    "candidates": [
     "賴均輔",
-    "林君諺",
-    "李維",
-    "林士勛"
+    "林君諺"
    ],
    "winner": null,
    "source": "schedule-app"
@@ -4107,7 +4123,6 @@
     "鄭予皓",
     "賴均輔",
     "林君諺",
-    "李維",
     "林士勛"
    ],
    "winner": null,
@@ -4378,6 +4393,22 @@
    "source": "schedule-app"
   },
   {
+   "id": "qiwang19__1:ch_g2",
+   "date": "2026-11-24",
+   "time": "11:00",
+   "event": "第19屆棋王賽",
+   "round": "挑戰賽 第2局",
+   "players": [
+    "許皓鋐",
+    "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
    "id": "qiwang20__1:f_lb7_abcdefgh",
    "date": "2026-11-24",
    "time": "11:00",
@@ -4630,7 +4661,23 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": "許皓鋐",
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang19__1:ch_g3",
+   "date": "2026-12-01",
+   "time": "11:00",
+   "event": "第19屆棋王賽",
+   "round": "挑戰賽 第3局",
+   "players": [
+    "許皓鋐",
+    "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
    "source": "schedule-app"
   },
   {
@@ -4818,6 +4865,38 @@
    "source": "schedule-app"
   },
   {
+   "id": "xuanle__2:xf_g5",
+   "date": "2026-12-03",
+   "time": "11:00",
+   "event": "第1屆玄樂盃",
+   "round": "決賽 第5局",
+   "players": [
+    "許皓鋐",
+    "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang19__1:ch_g4",
+   "date": "2026-12-08",
+   "time": "11:00",
+   "event": "第19屆棋王賽",
+   "round": "挑戰賽 第4局",
+   "players": [
+    "許皓鋐",
+    "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
    "id": "qiwang20__1:f_lb7_FINAL",
    "date": "2026-12-08",
    "time": "11:00",
@@ -4906,6 +4985,22 @@
     "吳彥諶",
     "徐銘均"
    ],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "qiwang19__1:ch_g5",
+   "date": "2026-12-10",
+   "time": "11:00",
+   "event": "第19屆棋王賽",
+   "round": "挑戰賽 第5局",
+   "players": [
+    "許皓鋐",
+    "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   }
