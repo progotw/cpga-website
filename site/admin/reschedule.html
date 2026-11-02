@@ -23,9 +23,10 @@
 
 <main class="admin-wrap" style="max-width:980px">
   <div class="section-head">
-    <h1 style="font-size:1.5rem;margin-bottom:4px">對局改期</h1>
+    <h1 style="font-size:1.5rem;margin-bottom:4px">對局改期與補登</h1>
     <p class="muted mb-0" style="font-size:.92rem">
-      賽程操作台提供的是原訂日期。個別對局改期由協會在這裡登錄，隔天更新後生效。
+      賽程操作台提供的是原訂日期。個別對局改期、以及官方來源沒有的場次，
+      都在這裡登錄，更新賽程後生效。
     </p>
   </div>
 
@@ -37,6 +38,63 @@
   </div>
 
   <div id="notice" class="mt-2"></div>
+
+  <!-- 手動補登：平常用不到，收合起來，不要擋住下面的改期清單 -->
+  <details class="card mt-2" id="manualBox">
+    <summary style="cursor:pointer;font-weight:500">
+      手動新增場次
+      <span class="muted" style="font-weight:400;font-size:.88rem">
+        　世界賽、番棋挑戰賽等官方來源沒有的對局
+      </span>
+    </summary>
+
+    <p class="muted mt-2" style="font-size:.88rem">
+      個人賽程來自海峰的抽籤公告與賽程操作台。不經過抽籤的對局（例如番棋的
+      挑戰賽、部分世界賽）兩邊都查不到，當事人就看不到自己這一盤，請在這裡補登。
+      之後官方來源出現同一盤棋時會自動讓位，不會重複顯示。
+    </p>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end">
+      <div class="field mb-0" style="flex:0 1 160px">
+        <label for="mDate">日期</label>
+        <input type="date" id="mDate">
+      </div>
+      <div class="field mb-0" style="flex:0 1 120px">
+        <label for="mTime">時間（選填）</label>
+        <input type="time" id="mTime">
+      </div>
+      <div class="field mb-0" style="flex:1 1 220px">
+        <label for="mEvent">賽事</label>
+        <input type="text" id="mEvent" maxlength="100" placeholder="例如：第19屆棋王賽">
+      </div>
+      <div class="field mb-0" style="flex:1 1 180px">
+        <label for="mRound">輪次（選填）</label>
+        <input type="text" id="mRound" maxlength="100" placeholder="例如：挑戰賽第1局">
+      </div>
+    </div>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end" class="mt-2">
+      <div class="field mb-0" style="flex:1 1 200px">
+        <label for="mP1">棋士一</label>
+        <select id="mP1"><option value="">載入中…</option></select>
+      </div>
+      <div class="field mb-0" style="flex:1 1 200px">
+        <label for="mP2">棋士二</label>
+        <select id="mP2"><option value="">載入中…</option></select>
+      </div>
+      <div class="field mb-0" style="flex:1 1 200px">
+        <label for="mNote">備註（選填，只有後台看得到）</label>
+        <input type="text" id="mNote" maxlength="500">
+      </div>
+    </div>
+
+    <div class="mt-2" style="display:flex;gap:12px;align-items:center">
+      <button class="btn btn-accent btn-sm" id="mAdd">新增場次</button>
+      <span class="muted" style="font-size:.86rem" id="mState"></span>
+    </div>
+
+    <div id="manualList" class="mt-2"></div>
+  </details>
 
   <div class="card mt-2">
     <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end">
@@ -66,7 +124,7 @@
 (function () {
   var A = window.CPGA_AUTH;
   var listEl = document.getElementById('list');
-  var pairings = [], over = {}, me = null;
+  var pairings = [], over = {}, me = null, manual = [];
 
   function esc(s) {
     return String(s == null ? '' : s)
@@ -244,15 +302,122 @@
     return Promise.all([
       fetch('../assets/data/pairings.json', { cache: 'no-cache' })
         .then(function (r) { return r.ok ? r.json() : { pairings: [] }; }),
-      A.client.from('reschedules').select('*')
+      A.client.from('reschedules').select('*'),
+      fetch('../assets/data/players.json', { cache: 'no-cache' })
+        .then(function (r) { return r.ok ? r.json() : { players: [] }; }),
+      A.client.from('manual_pairings').select('*').order('date')
     ]).then(function (res) {
       pairings = res[0].pairings || [];
       if (res[1].error) throw res[1].error;
       over = {};
       (res[1].data || []).forEach(function (r) { over[r.pairing_id] = r; });
+      fillPlayers(res[2].players || []);
+      /* 補登的表還沒建立時不要讓整頁掛掉，改期仍然要能用 */
+      if (res[3].error) {
+        document.getElementById('manualList').innerHTML =
+          '<p class="muted mb-0" style="font-size:.88rem">手動場次讀取失敗（' +
+          esc(A.message(res[3].error)) + '）。</p>';
+      } else {
+        manual = res[3].data || [];
+        renderManual();
+      }
       render();
     });
   }
+
+  /* ---- 手動補登的場次 ---- */
+
+  function fillPlayers(list) {
+    /* 用下拉選單而不是打字：姓名要與棋士名錄一字不差，抓取流程才對得起來，
+       打錯一個字就會變成「查無此人」，而且沒有人會發現。 */
+    var opts = '<option value="">請選擇</option>' + list.map(function (p) {
+      return '<option value="' + esc(p.name) + '">' + esc(p.name) +
+        (p.rank ? '（' + esc(p.rank) + '）' : '') + '</option>';
+    }).join('');
+    ['mP1', 'mP2'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.innerHTML = opts;
+    });
+  }
+
+  function renderManual() {
+    var box = document.getElementById('manualList');
+    if (!manual.length) {
+      box.innerHTML = '<p class="muted mb-0" style="font-size:.88rem">目前沒有手動新增的場次。</p>';
+      return;
+    }
+    box.innerHTML = '<ul style="list-style:none;padding:0;margin:0;font-size:.9rem">' +
+      manual.map(function (m) {
+        return '<li style="padding:9px 0;border-top:1px solid var(--line);' +
+          'display:flex;gap:12px;align-items:baseline;justify-content:space-between">' +
+          '<span><strong style="color:var(--ink)">' + esc(m.date) +
+            (m.time ? '　' + esc(m.time) : '') + '</strong>　' +
+            esc((m.players || []).join('　vs　')) +
+            '<br><span class="muted" style="font-size:.84rem">' + esc(m.event) +
+            (m.round ? '・' + esc(m.round) : '') +
+            (m.note ? '　·　' + esc(m.note) : '') + '</span></span>' +
+          '<button class="btn btn-ghost btn-sm" data-del="' + m.id + '">刪除</button></li>';
+      }).join('') + '</ul>';
+  }
+
+  document.getElementById('manualList').addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-del]');
+    if (!btn) return;
+    var id = Number(btn.getAttribute('data-del'));
+    var m = manual.filter(function (x) { return x.id === id; })[0];
+    if (!m) return;
+    if (!window.confirm('刪除 ' + m.date + ' ' + (m.players || []).join(' vs ') +
+                        ' 這一筆？下次更新賽程後棋士就看不到了。')) return;
+    btn.disabled = true;
+    A.client.from('manual_pairings').delete().eq('id', id).then(function (r) {
+      if (r.error) throw r.error;
+      manual = manual.filter(function (x) { return x.id !== id; });
+      renderManual();
+      say('', '已刪除。<strong>要按首頁的「更新賽程」</strong>棋士那邊才會同步。');
+    }).catch(function (err) {
+      btn.disabled = false;
+      say('error', '刪除失敗：' + A.message(err));
+    });
+  });
+
+  document.getElementById('mAdd').addEventListener('click', function () {
+    var btn = this;
+    var v = function (id) { return (document.getElementById(id).value || '').trim(); };
+    var date = v('mDate'), time = v('mTime'), event = v('mEvent');
+    var p1 = v('mP1'), p2 = v('mP2');
+    var state = document.getElementById('mState');
+
+    if (!date || !event || !p1 || !p2) {
+      state.textContent = '日期、賽事與兩位棋士都要填。';
+      return;
+    }
+    if (p1 === p2) {
+      state.textContent = '兩位棋士不能是同一人。';
+      return;
+    }
+    btn.disabled = true;
+    state.textContent = '新增中…';
+    A.client.from('manual_pairings').insert({
+      date: date, time: time, event: event, round: v('mRound'),
+      players: [p1, p2], note: v('mNote'), updated_by: me.user.id
+    }).select().then(function (r) {
+      if (r.error) throw r.error;
+      manual = manual.concat(r.data || []).sort(function (a, b) {
+        return String(a.date).localeCompare(String(b.date));
+      });
+      renderManual();
+      ['mDate', 'mTime', 'mEvent', 'mRound', 'mP1', 'mP2', 'mNote'].forEach(function (id) {
+        document.getElementById(id).value = '';
+      });
+      state.textContent = '';
+      btn.disabled = false;
+      say('', '已新增。<strong>要按首頁的「更新賽程」</strong>棋士那邊才會出現；' +
+            '系統不會自動通知當事人。');
+    }).catch(function (err) {
+      btn.disabled = false;
+      state.textContent = '新增失敗：' + A.message(err);
+    });
+  });
 
   document.getElementById('q').addEventListener('input', render);
   document.getElementById('scope').addEventListener('change', render);

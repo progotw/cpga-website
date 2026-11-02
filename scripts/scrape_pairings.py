@@ -125,6 +125,66 @@ def fetch_reschedules(url, key):
         return {}
 
 
+def fetch_manual(url, key):
+    """秘書處手動補登的對局。讀不到時回空清單，不中斷整個流程。"""
+    if not url or not key:
+        return []
+    try:
+        req = urllib.request.Request(
+            url.rstrip('/') + '/rest/v1/manual_pairings'
+            '?select=date,time,event,round,players,note&order=date',
+            headers={'apikey': key, 'Authorization': 'Bearer ' + key,
+                     'Accept': 'application/json'})
+        return json.loads(urllib.request.urlopen(req, timeout=30).read().decode('utf-8'))
+    except Exception as e:
+        print('手動場次讀取失敗，本次略過：%s' % e)
+        return []
+
+
+def add_manual(rows, manual):
+    """把手動補登的對局加進來。
+
+    番棋的挑戰賽不經過抽籤，操作台也未必輸入，當事人反而看不到自己
+    最重要的那一盤，所以留一個手動補登的入口。
+
+    官方來源之後補上同一盤棋時要自動讓位：同一天、同樣兩位棋士就視為
+    同一盤，手動那筆略過。否則棋士會看到同一場對局出現兩次。
+    """
+    have = set()
+    for p in rows:
+        names = frozenset(x for x in (p.get('players') or []) if x)
+        if names:
+            have.add((p.get('date'), names))
+
+    added = skipped = 0
+    for m in manual:
+        names = frozenset(x for x in (m.get('players') or []) if x)
+        date = str(m.get('date') or '')
+        if not date or len(names) < 2:
+            continue
+        if (date, names) in have:
+            skipped += 1
+            continue
+        have.add((date, names))
+        rows.append({
+            'id': '',
+            'date': date,
+            'time': m.get('time') or '',
+            'event': m.get('event') or '',
+            'round': m.get('round') or '',
+            'players': sorted(names),
+            'pending_opponent': False,
+            'status': 'drawn',
+            'candidates': [],
+            'winner': None,
+            'source': 'manual',
+        })
+        added += 1
+    if added or skipped:
+        print('手動補登場次：加入 %d 筆，官方已有而略過 %d 筆' % (added, skipped))
+    return rows
+
+
 def apply_reschedules(feed, over):
     """把改期套到操作台的資料上，並回報要從公告那邊剔除的舊日期對局。
 
@@ -342,6 +402,10 @@ def main():
     if len(pairs) < MIN_PAIRS:
         sys.exit('中止：只解析到 %d 組對局（門檻 %d）。原站格式可能已改，既有資料未被覆蓋。'
                  % (len(pairs), MIN_PAIRS))
+
+    # 手動補登的場次最後再加：官方兩個來源都合併完了，才知道哪幾盤已經有了
+    pairs = add_manual(pairs, fetch_manual(os.environ.get('SUPABASE_URL', ''),
+                                           os.environ.get('SUPABASE_ANON_KEY', '')))
 
     pairs.sort(key=lambda p: (p['date'], p['time']))
     out = {
