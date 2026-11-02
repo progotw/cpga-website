@@ -428,6 +428,21 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 .tab:hover { border-color: var(--ink-3); color: var(--ink); }
 .tab.is-active { background: var(--ink); border-color: var(--ink); color: var(--white); }
 
+/* 並排卡片：兩邊的清單長度一定不一樣（有人五場、有人二十場），
+   誰長誰就把那一列撐高，短的那張下面空一大塊。
+   做法：卡片高度設上限，裡面的清單自己撐滿剩下的空間、超過就在卡片裡捲動。
+   這樣同一列的兩張卡片一樣高，兩邊的清單也都看得到最多的內容。
+   手機是單欄，不需要對齊，上限取消——觸控螢幕上卡片裡面再捲一層很難用。 */
+.card--fill { display: flex; flex-direction: column; max-height: 640px; }
+.card--fill > .fill-list {
+  flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column;
+}
+.card--fill > .fill-list > ul { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+@media (max-width: 900px) {
+  .card--fill { max-height: none; }
+  .card--fill > .fill-list > ul { overflow-y: visible; }
+}
+
 /* ---------- Player cards ---------- */
 .player-card {
   background: var(--white); border: 1px solid var(--line);
