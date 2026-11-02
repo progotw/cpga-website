@@ -362,23 +362,26 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 }
 .card__more { color: var(--accent); font-size: .88rem; font-weight: 500; margin-top: 14px; display: inline-block; }
 
-/* 首頁四張入口卡片裡的「找職業老師」。
-   另外三張是會務資訊，這一張是給想學棋的一般民眾用的，所以用深藍標示——
-   深藍本來就是全站「找老師」的代表色（頁首那顆膠囊也是）。
+/* 首頁的四張入口卡片：滑鼠移上去整張填滿深藍、文字轉白，離開就恢復。
+   只套在首頁這一排（.entry-cards）——賽事專區那六張、找老師的老師卡片
+   也用同一個 .card--link，但老師卡片有照片，整張變藍會很難看。
 
-   平常只有圖示、邊框與箭頭是藍的，滑鼠移上去才整張填滿深藍。
-   一開始做成整張都是深藍，使用者覺得太重（2026-11-02）。
-   手機沒有滑鼠，所以平常的樣子也要看得出不一樣，不能只靠移上去變色。 */
+   其中「找職業老師」平常就帶一點藍（邊框、圖示底色、箭頭）：
+   另外三張是會務資訊，這一張是給想學棋的一般民眾用的，所以做得醒目些。
+   手機沒有滑鼠，平常的樣子也要看得出不一樣，不能只靠移上去變色。 */
+.entry-cards .card--link:hover {
+  background: var(--navy); border-color: var(--navy); color: var(--on-dark-2);
+}
+.entry-cards .card--link:hover h3 { color: var(--white); }
+.entry-cards .card--link:hover p.muted { color: rgba(255, 255, 255, .78); }
+.entry-cards .card--link:hover .card__icon {
+  background: rgba(255, 255, 255, .16); color: var(--white);
+}
+.entry-cards .card--link:hover .card__more { color: #bcd4ef; }
+
 .card--teachers { border-color: var(--navy); }
 .card--teachers .card__icon { background: var(--navy-tint); color: var(--navy); }
 .card--teachers .card__more { color: var(--navy-3); }
-.card--teachers:hover {
-  background: var(--navy); border-color: var(--navy); color: var(--on-dark-2);
-}
-.card--teachers:hover h3 { color: var(--white); }
-.card--teachers:hover p.muted { color: rgba(255, 255, 255, .78); }
-.card--teachers:hover .card__icon { background: rgba(255, 255, 255, .16); color: var(--white); }
-.card--teachers:hover .card__more { color: #bcd4ef; }
 
 /* ---------- News ---------- */
 .news-list { list-style: none; padding: 0; margin: 0; }
