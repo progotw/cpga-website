@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-02T08:08:17+00:00",
+ "generated": "2026-11-02T21:43:11+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "3451570A26F89280F60B1C54E340EC15",
+   "date": "2026-11-02",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "中環國手賽8強戰報：王元均、鄭予皓、賴均輔、林士勛晉級4強",
+   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15",
+   "local": true
+  },
   {
    "id": "52510BE8BF2C3B5275E82A06F37454C4",
    "date": "2026-11-02",
@@ -255,15 +264,6 @@
    "cat": "match",
    "title": "棋王之路 》世界亞軍上演二度對決 棋王複賽27強率先誕生",
    "url": "https://www.haifong.org/news/content/45AE43CECB40863461D2D73FBEC0330B",
-   "local": true
-  },
-  {
-   "id": "3451570A26F89280F60B1C54E340EC15",
-   "date": "2026-10-05",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "中環國手賽16強》賴均輔中盤擊退陳映嘉 13歲鄭予皓闖進八強",
-   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15",
    "local": true
   },
   {
@@ -605,7 +605,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "IBK企業銀行盃 女子圍棋世界大師賽臺灣代表選拔抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/924A2A29F266036ACF94C299AFE0A24A"
+   "url": "https://www.haifong.org/news/content/924A2A29F266036ACF94C299AFE0A24A",
+   "local": true
   },
   {
    "id": "11FEFD17FF1B69B9BFE4873ABFB284DC",
@@ -613,7 +614,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第12屆全羅南道「國手山脈國際圍棋大會」 世界職業最強戰 台灣代表選拔抽籤結果公告",
-   "url": "https://www.haifong.org/news/content/11FEFD17FF1B69B9BFE4873ABFB284DC"
+   "url": "https://www.haifong.org/news/content/11FEFD17FF1B69B9BFE4873ABFB284DC",
+   "local": true
   },
   {
    "id": "A058767062E8962AA673137E2BC490C9",
@@ -621,7 +623,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "2026 IBK企業銀行盃 女子圍棋世界大師賽 台灣代表選拔辦法",
-   "url": "https://www.haifong.org/news/content/A058767062E8962AA673137E2BC490C9"
+   "url": "https://www.haifong.org/news/content/A058767062E8962AA673137E2BC490C9",
+   "local": true
   },
   {
    "id": "EC958F66B3AFCCEA4363DA8B9A6ABA94",
@@ -629,7 +632,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "2026 IBK企業銀行盃 女子圍棋世界大師賽- 大賽簡章",
-   "url": "https://www.haifong.org/news/content/EC958F66B3AFCCEA4363DA8B9A6ABA94"
+   "url": "https://www.haifong.org/news/content/EC958F66B3AFCCEA4363DA8B9A6ABA94",
+   "local": true
   },
   {
    "id": "1632CBD144D7DC5E33DB00D7B0012A92",
@@ -637,7 +641,8 @@
    "catLabel": "媒體報導",
    "cat": "media",
    "title": "健喬集團7年力挺女子圍棋最強戰 日傳奇女棋士跨海參賽",
-   "url": "https://www.haifong.org/news/content/1632CBD144D7DC5E33DB00D7B0012A92"
+   "url": "https://www.haifong.org/news/content/1632CBD144D7DC5E33DB00D7B0012A92",
+   "local": true
   },
   {
    "id": "F3834F9FEE5A385594D52D677FB06378",
@@ -645,7 +650,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "第12屆健喬盃女子圍棋最強戰 女棋士簡介",
-   "url": "https://www.haifong.org/news/content/F3834F9FEE5A385594D52D677FB06378"
+   "url": "https://www.haifong.org/news/content/F3834F9FEE5A385594D52D677FB06378",
+   "local": true
   },
   {
    "id": "8E22DE1E96670941B23CBEE1DFB79702",
@@ -653,7 +659,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "第12屆健喬盃女子圍棋最強戰 初賽成績",
-   "url": "https://www.haifong.org/news/content/8E22DE1E96670941B23CBEE1DFB79702"
+   "url": "https://www.haifong.org/news/content/8E22DE1E96670941B23CBEE1DFB79702",
+   "local": true
   },
   {
    "id": "DC44FEF15F2225655308325FDCB54CED",
@@ -661,7 +668,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "第十二屆健喬盃女子圍棋最強戰 【初賽】棋譜 & 結果",
-   "url": "https://www.haifong.org/news/content/DC44FEF15F2225655308325FDCB54CED"
+   "url": "https://www.haifong.org/news/content/DC44FEF15F2225655308325FDCB54CED",
+   "local": true
   },
   {
    "id": "F6A268A331A895BC5295F72F879046D5",
@@ -669,7 +677,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【社會組 職棋甄選決賽 - 總成績 / 林秉寬、謝知勵 晉升新科職棋】",
-   "url": "https://www.haifong.org/news/content/F6A268A331A895BC5295F72F879046D5"
+   "url": "https://www.haifong.org/news/content/F6A268A331A895BC5295F72F879046D5",
+   "local": true
   },
   {
    "id": "1100E3EA770478B3AE2EC7ECECC1DE19",
@@ -677,7 +686,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【社會組 職棋甄選決賽 - 第三日成績】",
-   "url": "https://www.haifong.org/news/content/1100E3EA770478B3AE2EC7ECECC1DE19"
+   "url": "https://www.haifong.org/news/content/1100E3EA770478B3AE2EC7ECECC1DE19",
+   "local": true
   },
   {
    "id": "DC859FC88550207EF731D646BAE1E9C8",
