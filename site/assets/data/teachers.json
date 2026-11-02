@@ -34,6 +34,34 @@
    ]
   },
   {
+   "id": "0747ABCC941FB323AC5BAA3B8E2CBAB8",
+   "modes": [
+    "實體",
+    "線上"
+   ],
+   "areas": [
+    "臺北市",
+    "新北市",
+    "新竹市"
+   ],
+   "students": [
+    "兒童",
+    "青少年",
+    "成人"
+   ],
+   "levels": "1段～7段",
+   "fee": "面議",
+   "intro": "重視棋局理解與思考能力，幫助學生建立正確的學習方法。",
+   "acceptForm": true,
+   "contacts": [
+    {
+     "type": "line",
+     "label": "LINE",
+     "value": "https://line.me/ti/p/_7ZHZldkNY"
+    }
+   ]
+  },
+  {
    "id": "81991D2DE8FF2F97698D8EC7905B1417",
    "modes": [
     "線上"

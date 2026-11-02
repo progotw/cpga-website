@@ -1,5 +1,19 @@
 {
  "schema_version": 1,
  "note": "棋士自行維護的自述與社群連結。id 對應 players.json 的棋士 id；公開個人頁會把 bio 顯示在原有簡介之上，links 與原有連結合併。",
- "profiles": []
+ "profiles": [
+  {
+   "id": "0747ABCC941FB323AC5BAA3B8E2CBAB8",
+   "links": [
+    {
+     "url": "https://www.instagram.com/shaoquanc?vrfl=MXczd28wNm5xMWozcA==",
+     "label": "IG"
+    },
+    {
+     "url": "https://www.facebook.com/share/1EFU6sVTJC/",
+     "label": "FB"
+    }
+   ]
+  }
+ ]
 }
