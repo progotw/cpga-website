@@ -346,7 +346,8 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
   border-radius: var(--radius-lg);
   padding: 26px;
   box-shadow: var(--shadow-sm);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease,
+              background-color .18s ease, color .18s ease;
 }
 .card--link:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--line-2); }
 .card h3 { margin-bottom: .5em; }
@@ -362,17 +363,22 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 .card__more { color: var(--accent); font-size: .88rem; font-weight: 500; margin-top: 14px; display: inline-block; }
 
 /* 首頁四張入口卡片裡的「找職業老師」。
-   另外三張是會務資訊，這一張是給想學棋的一般民眾用的，用深藍整張填滿，
-   在三張淺色卡片中間一眼就看得到。深藍本來就是全站「找老師」的代表色
-   （導覽列那顆膠囊也是深藍外框）。 */
-.card--teachers {
+   另外三張是會務資訊，這一張是給想學棋的一般民眾用的，所以用深藍標示——
+   深藍本來就是全站「找老師」的代表色（頁首那顆膠囊也是）。
+
+   平常只有圖示、邊框與箭頭是藍的，滑鼠移上去才整張填滿深藍。
+   一開始做成整張都是深藍，使用者覺得太重（2026-11-02）。
+   手機沒有滑鼠，所以平常的樣子也要看得出不一樣，不能只靠移上去變色。 */
+.card--teachers { border-color: var(--navy); }
+.card--teachers .card__icon { background: var(--navy-tint); color: var(--navy); }
+.card--teachers .card__more { color: var(--navy-3); }
+.card--teachers:hover {
   background: var(--navy); border-color: var(--navy); color: var(--on-dark-2);
 }
-.card--teachers h3 { color: var(--white); }
-.card--teachers p.muted { color: rgba(255, 255, 255, .78); }
-.card--teachers .card__icon { background: rgba(255, 255, 255, .16); color: var(--white); }
-.card--teachers .card__more { color: #bcd4ef; }
-.card--teachers:hover { border-color: var(--navy-2); background: var(--navy-2); }
+.card--teachers:hover h3 { color: var(--white); }
+.card--teachers:hover p.muted { color: rgba(255, 255, 255, .78); }
+.card--teachers:hover .card__icon { background: rgba(255, 255, 255, .16); color: var(--white); }
+.card--teachers:hover .card__more { color: #bcd4ef; }
 
 /* ---------- News ---------- */
 .news-list { list-style: none; padding: 0; margin: 0; }
