@@ -206,7 +206,8 @@
             /* 跨月的比賽在兩個月的清單裡都要出現 */
             return S.days(e).some(function (k) { return k.slice(0, 7) === ym(cur); });
           }).map(function (e) {
-            return '<li style="display:flex;gap:8px;padding:6px 0;' +
+            return '<li data-date="' + esc(S.lastDay(e)) + '"' +
+              ' style="display:flex;gap:8px;padding:6px 0;' +
               'border-bottom:1px solid var(--line)">' +
               '<span class="legend__dot ' + S.slotClass(e.series_slot) +
                 '" style="background:currentColor;flex:none;margin-top:6px"></span>' +
@@ -233,10 +234,21 @@
           '<div class="cal__grid">' + cells + '</div>' +
           (opts.list
             ? (list
-                ? '<ul style="list-style:none;padding:0;margin:10px 0 0;font-size:.86rem">' +
-                  list + '</ul>'
+                /* 一個月二十幾場，整排列出來卡片會變得很高，旁邊那一欄就空一大塊。
+                   留大約五筆的高度，其餘在卡片裡捲動。 */
+                ? '<ul class="cal__list" style="list-style:none;padding:0;margin:10px 0 0;' +
+                  'font-size:.86rem;max-height:306px;overflow-y:auto">' + list + '</ul>'
                 : '<p class="muted mb-0 mt-2" style="font-size:.86rem">這個月沒有排定的賽程。</p>')
             : '');
+
+        /* 清單從今天開始看，不要從月初——月底時前面十幾場都已經過去了 */
+        var ul = box.querySelector('.cal__list');
+        if (ul) {
+          var next = [].slice.call(ul.querySelectorAll('li')).filter(function (li) {
+            return li.getAttribute('data-date') >= today;
+          })[0];
+          if (next) ul.scrollTop = next.offsetTop - ul.querySelector('li').offsetTop;
+        }
       }
 
       box.addEventListener('click', function (ev) {
