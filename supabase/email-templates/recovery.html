@@ -29,7 +29,13 @@
 
         <tr>
           <td align="center" style="padding-bottom:20px">
-            <a href="{{ .ConfirmationURL }}"
+            <!-- 連結指向官網的設定密碼頁，憑證（TokenHash）當參數帶過去，
+     到那一頁按下按鈕才真的驗證。
+     不要用 {{ .ConfirmationURL }}：那個網址一被打開就算用掉，
+     而手機的信箱 App 會替使用者「預讀」連結，等本人點下去時
+     已經失效（2026-11-02 第一位棋士就遇到，Supabase 紀錄顯示
+     同一個連結在一秒內被打開兩次，第二次就是 403）。 -->
+            <a href="https://cpga.org.tw/member/password?token_hash={{ .TokenHash }}&amp;type=recovery"
                style="display:inline-block;background:#9e3029;color:#ffffff;text-decoration:none;
                       font-size:15px;font-weight:500;padding:13px 32px;border-radius:999px">
               設定新密碼
@@ -40,7 +46,7 @@
         <tr>
           <td style="font-size:13px;line-height:1.8;color:#565c66;padding-bottom:18px">
             按鈕無法點選時，請複製下面的網址貼到瀏覽器：<br>
-            <span style="word-break:break-all;color:#1e3a5f">{{ .ConfirmationURL }}</span>
+            <span style="word-break:break-all;color:#1e3a5f">https://cpga.org.tw/member/password?token_hash={{ .TokenHash }}&amp;type=recovery</span>
           </td>
         </tr>
 

@@ -119,6 +119,10 @@
         '<span>' + esc(a.email) + '</span>' +
         (never ? '<span class="tag">從未登入</span>' : '') +
       '</div>' +
+      '<div class="mt-2">' +
+        '<button class="btn btn-ghost btn-sm" data-act="resend" type="button">重寄設定密碼信</button>' +
+        '　<span class="muted" style="font-size:.84rem" data-resend></span>' +
+      '</div>' +
       '<p class="muted mb-0 mt-2" style="font-size:.86rem">' +
         '開通　' + esc(when(a.created_at)) +
         (a.last_sign_in_at ? '　·　最後登入　' + esc(when(a.last_sign_in_at)) : '') +
@@ -169,7 +173,39 @@
   document.getElementById('q').addEventListener('input', render);
   document.getElementById('scope').addEventListener('change', render);
 
+  /* 重寄設定密碼信：信箱不用改，只是再寄一封。
+     開通信的連結用過即失效，而手機信箱 App 常會替使用者「預讀」連結、
+     先一步把它用掉（2026-11-02 第一位棋士就遇到），所以要能隨時重寄。
+     這裡直接呼叫公開的「忘記密碼」端點，不必經過 Edge Function。 */
   listEl.addEventListener('click', function (e) {
+    var re = e.target.closest('button[data-act="resend"]');
+    if (re) {
+      var rcard = re.closest('[data-id]');
+      var rid = rcard.getAttribute('data-id');
+      var ra = accounts.filter(function (x) { return x.user_id === rid; })[0];
+      var rstate = rcard.querySelector('[data-resend]');
+      if (!ra || !ra.email) return;
+      if (!window.confirm('要重新寄一封設定密碼的信給「' +
+            (ra.display_name || '') + '」（' + ra.email + '）嗎？舊的連結會同時失效。')) return;
+      re.disabled = true;
+      rstate.style.color = '';
+      rstate.textContent = '寄送中…';
+      A.client.auth.resetPasswordForEmail(ra.email, {
+        redirectTo: location.origin + '/member/password'
+      }).then(function (r) {
+        if (r.error) throw r.error;
+        rstate.textContent = '已寄出';
+        say('', '已重新寄信到 ' + esc(ra.email) + '。請提醒他：' +
+          '點開信裡的按鈕後，網頁上還要再按一次「開始設定密碼」。');
+      }).catch(function (err) {
+        re.disabled = false;
+        rstate.style.color = 'var(--accent)';
+        rstate.textContent = '寄送失敗';
+        say('error', '寄送失敗：' + esc(A.message(err)));
+      });
+      return;
+    }
+
     var btn = e.target.closest('button[data-act="change"]');
     if (!btn) return;
     var card = btn.closest('[data-id]');
