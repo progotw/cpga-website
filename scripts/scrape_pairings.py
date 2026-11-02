@@ -185,6 +185,45 @@ def add_manual(rows, manual):
     return rows
 
 
+def find_warnings(rows):
+    """找出同一盤棋可能被當成兩筆的情形，供後台檢視。
+
+    同樣兩位棋士、同樣的輪次，卻一筆來自公告、一筆來自操作台，日期還不一樣——
+    多半是操作台把日期改了而公告沒重發，或是改期沒有登錄。
+    這種情況程式無法自動判斷哪個才對（真的可能同一組人下兩次），
+    所以不自動刪，只列出來讓秘書處看一眼。
+
+    同一個來源內部的重複不算：那是同一輪的不同空格，本來就該各自存在。
+    """
+    def norm(s):
+        return re.sub(r'\s+', '', str(s or ''))
+
+    groups = {}
+    for r in rows:
+        names = [x for x in (r.get('players') or []) if x]
+        if len(names) < 2:
+            continue
+        key = (tuple(sorted(names)), norm(r.get('round')))
+        groups.setdefault(key, []).append(r)
+
+    out = []
+    for (names, _round), items in groups.items():
+        dates = {r.get('date') for r in items}
+        sources = {r.get('source') for r in items}
+        if len(dates) > 1 and len(sources) > 1:
+            out.append({
+                'players': list(names),
+                'round': items[0].get('round', ''),
+                'rows': sorted(
+                    ({'date': r.get('date', ''), 'time': r.get('time', ''),
+                      'event': r.get('event', ''), 'source': r.get('source', '')}
+                     for r in items),
+                    key=lambda x: x['date']),
+            })
+    out.sort(key=lambda w: w['rows'][0]['date'])
+    return out
+
+
 def apply_reschedules(feed, over):
     """把改期套到操作台的資料上，並回報要從公告那邊剔除的舊日期對局。
 
@@ -422,7 +461,10 @@ def main():
         'source': '海峰棋院 抽籤結果公告',
         'count': len(pairs),
         'pairings': pairs,
+        # conflicts：同一位棋士同一天，兩個來源寫的對手不一樣
         'conflicts': conflicts,
+        # warnings：同一盤棋可能被排在兩個不同日期（公告與操作台對不起來）
+        'warnings': find_warnings(pairs),
     }
     dest = os.path.join(site, 'assets', 'data', 'pairings.json')
     with io.open(dest, 'w', encoding='utf-8') as f:

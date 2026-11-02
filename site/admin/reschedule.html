@@ -39,6 +39,9 @@
 
   <div id="notice" class="mt-2"></div>
 
+  <!-- 資料對不起來時才出現，平常是空的 -->
+  <div id="dataWarn"></div>
+
   <!-- 手動補登：平常用不到，收合起來，不要擋住下面的改期清單 -->
   <details class="card mt-2" id="manualBox">
     <summary style="cursor:pointer;font-weight:500">
@@ -308,6 +311,7 @@
       A.client.from('manual_pairings').select('*').order('date')
     ]).then(function (res) {
       pairings = res[0].pairings || [];
+      renderWarnings(res[0]);
       if (res[1].error) throw res[1].error;
       over = {};
       (res[1].data || []).forEach(function (r) { over[r.pairing_id] = r; });
@@ -323,6 +327,39 @@
       }
       render();
     });
+  }
+
+  /* ---- 抓取流程發現的可疑資料 ----
+     公告與操作台對不起來時，程式無法判斷哪一邊才對（真的可能同一組人
+     下兩次），所以不自動刪，列在這裡讓秘書處看一眼。平常是空的。 */
+  function renderWarnings(data) {
+    var warns = data.warnings || [], conf = data.conflicts || [];
+    var box = document.getElementById('dataWarn');
+    if (!warns.length && !conf.length) { box.innerHTML = ''; return; }
+
+    var items = warns.map(function (w) {
+      return '<li style="padding:8px 0;border-top:1px solid var(--line)">' +
+        '<strong style="color:var(--ink)">' + esc((w.players || []).join('　vs　')) +
+          '</strong>　' + esc(w.round || '') +
+        '<br><span class="muted" style="font-size:.86rem">同一盤棋出現在兩個日期：' +
+        (w.rows || []).map(function (r) {
+          return esc(r.date) + (r.time ? ' ' + esc(r.time) : '（未寫時間）') + '　' +
+            (r.source === 'announcement' ? '抽籤公告' : '賽程操作台');
+        }).join('　／　') + '</span></li>';
+    }).concat(conf.map(function (c) {
+      return '<li style="padding:8px 0;border-top:1px solid var(--line)">' +
+        '<strong style="color:var(--ink)">' + esc(c.date) + '　' + esc(c.player) +
+          '</strong><br><span class="muted" style="font-size:.86rem">兩邊寫的對手不同：' +
+        '抽籤公告「' + esc(c.announced) + '」／賽程操作台「' + esc(c.feed) + '」' +
+        '　·　這幾筆都已從棋士的賽程中剔除</span></li>';
+    }));
+
+    box.innerHTML = '<div class="callout callout--accent mt-2">' +
+      '<p class="mb-0" style="font-size:.92rem"><strong>賽程資料有 ' + items.length +
+        ' 筆對不起來</strong>，請確認哪一邊才對。' +
+        '協會決定的改期請用下面的清單登錄；公告或操作台寫錯請聯繫海峰更正。</p>' +
+      '<ul style="list-style:none;padding:0;margin:8px 0 0;font-size:.9rem">' +
+        items.join('') + '</ul></div>';
   }
 
   /* ---- 手動補登的場次 ---- */
