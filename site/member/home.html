@@ -406,7 +406,9 @@
     }
 
     Promise.all([
-      A.client.from('tournaments').select('id, name, opens_at, closes_at, sort')
+      /* 欄位是 title 不是 name（schema_entries.sql）；
+         published 也要拿，管理員讀得到未發布的草稿，首頁不該列出來 */
+      A.client.from('tournaments').select('id, title, opens_at, closes_at, sort, published')
         .order('sort', { ascending: false })
         .order('closes_at', { ascending: true, nullsFirst: false }),
       /* 管理員檢視時不查報名紀錄：查到的會是管理員自己的（通常是空的），
@@ -420,6 +422,7 @@
 
       var now = Date.now();
       var open = (res[0].data || []).filter(function (t) {
+        if (!t.published) return false;
         if (t.opens_at && now < new Date(t.opens_at).getTime()) return false;
         if (t.closes_at && now > new Date(t.closes_at).getTime()) return false;
         return true;
@@ -439,7 +442,7 @@
           var joined = mine[t.id];
           return '<li style="padding:9px 0;border-bottom:1px solid var(--line);' +
             'display:flex;gap:10px;align-items:baseline;justify-content:space-between">' +
-            '<span><strong style="color:var(--ink)">' + esc(t.name) + '</strong>' +
+            '<span><strong style="color:var(--ink)">' + esc(t.title) + '</strong>' +
               (t.closes_at
                 /* 只寫月／日，跟上面的賽程一致；完整日期時間在報名頁 */
                 ? '<br><span class="muted" style="font-size:.84rem">報名至 ' +
@@ -451,7 +454,9 @@
                 '>' + (joined ? '已報名' : '未報名') + '</span>') +
             '</li>';
         }).join('') + '</ul>';
-    }).catch(function () { note('報名資料載入失敗。'); });
+    }).catch(function (err) {
+      note('報名資料載入失敗' + (err && err.message ? '（' + esc(err.message) + '）' : '') + '。');
+    });
   }
 
   /* ---- 內部公告 ---- */
