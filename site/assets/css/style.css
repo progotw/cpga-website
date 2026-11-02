@@ -433,15 +433,24 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
    做法：卡片高度設上限，裡面的清單自己撐滿剩下的空間、超過就在卡片裡捲動。
    這樣同一列的兩張卡片一樣高，兩邊的清單也都看得到最多的內容。
    手機是單欄，不需要對齊，上限取消——觸控螢幕上卡片裡面再捲一層很難用。 */
-.card--fill { display: flex; flex-direction: column; max-height: 640px; }
-.card--fill > .fill-list {
+.card--col { display: flex; flex-direction: column; }
+.card--col > .fill-list {
   flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column;
 }
-.card--fill > .fill-list > ul { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+.card--col > .fill-list > ul { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+/* 高度上限只給「兩張都很長」的那一列（我的賽程／我的成績）。
+   旁邊是月曆的那一列不加，否則卡片會比月曆矮、底下留一條空白。 */
+.card--cap { max-height: 640px; }
 @media (max-width: 900px) {
-  .card--fill { max-height: none; }
-  .card--fill > .fill-list > ul { overflow-y: visible; }
+  .card--cap { max-height: none; }
+  .card--col > .fill-list > ul { overflow-y: visible; }
 }
+
+/* 功能小卡（職業棋士專區下半部那一區）：每一張一樣大、按鈕對齊在底部。
+   說明文字有的兩行、有的三行，有的卡片根本沒有按鈕（例如沒有表單可下載時），
+   不統一的話整區看起來會參差不齊。min-height 取最高的那張，少於此高度的補白。 */
+.tile-grid > .card { display: flex; flex-direction: column; min-height: 200px; }
+.tile-grid > .card > .btn { margin-top: auto; }
 
 /* ---------- Player cards ---------- */
 .player-card {

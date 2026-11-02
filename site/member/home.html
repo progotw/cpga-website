@@ -33,13 +33,13 @@
 
   <!-- 第一列：每天會看的兩塊 -->
   <div class="grid grid-2 mt-3">
-    <div class="card card--fill" style="border-left:4px solid var(--accent)">
+    <div class="card card--col card--cap" style="border-left:4px solid var(--accent)">
       <h3 style="font-size:1.05rem">我的賽程</h3>
       <div id="myList" class="fill-list"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
     </div>
 
     <!-- 我的成績：資料即時取自海峰成績系統，官網不存任何成績 -->
-    <div class="card card--fill" style="border-left:4px solid var(--navy)">
+    <div class="card card--col card--cap" style="border-left:4px solid var(--navy)">
       <h3 style="font-size:1.05rem">我的成績</h3>
       <!-- 升段進度與成績是同一份資料算出來的，放在最上面——
            這是棋士最常想知道的一個數字 -->
@@ -55,12 +55,15 @@
 
   <!-- 第二列：要動手的事，加上全體賽程當參考 -->
   <div class="grid grid-2 mt-3">
-    <div class="card" style="border-left:4px solid var(--accent)">
+    <div class="card card--col" style="border-left:4px solid var(--accent)">
       <h3 style="font-size:1.05rem">賽事報名</h3>
       <p class="muted" style="font-size:.9rem">
-        職業賽事的線上報名，免報名費。開放中的賽事會列在這裡，截止前都可以取消。
+        職業賽事的線上報名，免報名費，截止前都可以取消。
       </p>
-      <a class="btn btn-ghost btn-sm btn-block" href="entries.html">查看並報名 →</a>
+      <div id="entryList" class="fill-list">
+        <p class="muted mb-0" style="font-size:.9rem">載入中…</p>
+      </div>
+      <a class="btn btn-ghost btn-sm btn-block mt-2" href="entries.html">查看並報名 →</a>
     </div>
 
     <div class="card">
@@ -79,7 +82,7 @@
   </section>
 
   <!-- 第四列：偶爾才用的 -->
-  <div class="grid grid-3 mt-3" style="align-items:start">
+  <div class="grid grid-3 tile-grid mt-3">
     <div class="card">
       <h3 style="font-size:1.05rem">表單下載</h3>
       <div id="fileList"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
@@ -192,6 +195,7 @@
 
     loadAnnouncements();
     loadFiles();
+    loadEntries(me.profile.role === 'admin');
     loadMine(me.profile.player_id, name);
     loadMyResults(me.profile.player_id);
   });
@@ -387,6 +391,67 @@
     }).catch(function () {
       box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">個人賽程載入失敗。</p>';
     });
+  }
+
+  /* ---- 賽事報名：開放中的賽事 ----
+     只列現在可以報名的，並標出自己報了沒——棋士打開專區最想知道的就是
+     「有沒有新的要報」「我報了嗎」。詳細說明與報名動作都在報名頁做，
+     這裡不放按鈕，避免在首頁誤按。
+
+     報名期間資料庫層也會把關（entry_open），這裡只決定畫面。 */
+  function loadEntries(isAdmin) {
+    var box = document.getElementById('entryList');
+    function note(text) {
+      box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">' + text + '</p>';
+    }
+
+    Promise.all([
+      A.client.from('tournaments').select('id, name, opens_at, closes_at, sort')
+        .order('sort', { ascending: false })
+        .order('closes_at', { ascending: true, nullsFirst: false }),
+      /* 管理員檢視時不查報名紀錄：查到的會是管理員自己的（通常是空的），
+         標成「未報名」反而會誤導 */
+      isAdmin
+        ? Promise.resolve({ data: [] })
+        : A.client.from('entries').select('tournament_id, withdrawn')
+    ]).then(function (res) {
+      if (res[0].error) throw res[0].error;
+      if (res[1].error) throw res[1].error;
+
+      var now = Date.now();
+      var open = (res[0].data || []).filter(function (t) {
+        if (t.opens_at && now < new Date(t.opens_at).getTime()) return false;
+        if (t.closes_at && now > new Date(t.closes_at).getTime()) return false;
+        return true;
+      });
+      if (!open.length) {
+        note('目前沒有開放報名的賽事。');
+        return;
+      }
+
+      var mine = {};
+      (res[1].data || []).forEach(function (e) {
+        if (!e.withdrawn) mine[e.tournament_id] = true;
+      });
+
+      box.innerHTML = '<ul style="list-style:none;padding:0;margin:0;font-size:.9rem">' +
+        open.map(function (t) {
+          var joined = mine[t.id];
+          return '<li style="padding:9px 0;border-bottom:1px solid var(--line);' +
+            'display:flex;gap:10px;align-items:baseline;justify-content:space-between">' +
+            '<span><strong style="color:var(--ink)">' + esc(t.name) + '</strong>' +
+              (t.closes_at
+                /* 只寫月／日，跟上面的賽程一致；完整日期時間在報名頁 */
+                ? '<br><span class="muted" style="font-size:.84rem">報名至 ' +
+                  esc(day(t.closes_at).slice(5).replace('.', '/')) + '</span>'
+                : '') + '</span>' +
+            (isAdmin ? '' :
+              '<span class="tag' + (joined ? '' : ' tag--notice') + '"' +
+                (joined ? ' style="background:var(--good-tint);color:var(--good)"' : '') +
+                '>' + (joined ? '已報名' : '未報名') + '</span>') +
+            '</li>';
+        }).join('') + '</ul>';
+    }).catch(function () { note('報名資料載入失敗。'); });
   }
 
   /* ---- 內部公告 ---- */
