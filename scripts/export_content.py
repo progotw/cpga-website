@@ -10,7 +10,7 @@
 條文類的 markdown 會在這裡轉成 html 一併寫入，公開頁面因此不需要
 載入任何 Markdown 函式庫。
 """
-import os, sys, io, json, urllib.request, urllib.error
+import os, sys, io, re, json, urllib.request, urllib.error
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -91,6 +91,39 @@ for r in rows:
 # ---------------------------------------------------------------------------
 # 找老師：由棋士自行填寫，只匯出勾選「願意刊登」的那些
 # ---------------------------------------------------------------------------
+
+# 可授課地區以前是自由輸入，資料庫裡留著「台北」「北部」這類寫法。
+# 匯出時統一成正式縣市名，「找老師」的地區篩選才不會出現一堆
+# 意思相同的選項。清單與 site/assets/js/areas.js 相同，改要一起改。
+AREAS = [
+    '基隆市', '臺北市', '新北市', '桃園市', '新竹市', '新竹縣', '宜蘭縣',
+    '苗栗縣', '臺中市', '彰化縣', '南投縣', '雲林縣',
+    '嘉義市', '嘉義縣', '臺南市', '高雄市', '屏東縣',
+    '花蓮縣', '臺東縣', '澎湖縣', '金門縣', '連江縣',
+]
+
+
+def _area_key(s):
+    s = re.sub(r'\s', '', str(s or '')).replace('台', '臺')
+    return re.sub(r'[市縣]$', '', s)
+
+
+_AREA_BY_KEY = {}
+for _a in AREAS:
+    _AREA_BY_KEY.setdefault(_area_key(_a), _a)
+
+
+def norm_areas(values):
+    """對得上縣市的換成正式名稱；對不上的原樣保留，不要默默弄丟老師填的東西。"""
+    out = []
+    for v in values or []:
+        name = _AREA_BY_KEY.get(_area_key(v), str(v).strip())
+        if name and name not in out:
+            out.append(name)
+    out.sort(key=lambda n: AREAS.index(n) if n in AREAS else len(AREAS))
+    return out
+
+
 def export_teaching():
     req = urllib.request.Request(
         URL + '/rest/v1/teaching?select=player_id,modes,areas,students,languages,'
@@ -109,7 +142,7 @@ def export_teaching():
         t = {'id': r['player_id']}
         for k in ('modes', 'areas', 'students', 'languages'):
             if r.get(k):
-                t[k] = r[k]
+                t[k] = norm_areas(r[k]) if k == 'areas' else r[k]
         for k in ('levels', 'fee', 'availability', 'intro'):
             if (r.get(k) or '').strip():
                 t[k] = r[k].strip()

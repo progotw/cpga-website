@@ -59,8 +59,11 @@
         </div>
 
         <div class="field">
-          <label for="areas">可授課地區</label>
-          <input type="text" id="areas" placeholder="例：台北、新北（實體授課才需填，以頓號或逗號分隔）">
+          <label>可授課地區</label>
+          <p class="form-note mt-0">實體授課才需要勾選，可複選。</p>
+          <!-- 縣市清單由 assets/js/areas.js 產生，與「找老師」的篩選共用同一份 -->
+          <div id="areaBox"></div>
+          <p class="form-note mb-0" id="areaOld" hidden></p>
         </div>
 
         <div class="field">
@@ -139,6 +142,7 @@
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/areas.js"></script>
 <script src="../assets/js/sb-config.js"></script>
 <script src="../assets/js/auth.js"></script>
 <script>
@@ -173,6 +177,47 @@
     }
   }
   /* 「台北、新北」「台北,新北」都接受 */
+  /* ---- 可授課地區 ----
+     以前是自由輸入，寫法各憑喜好（台北／臺北市／北部），
+     「找老師」的篩選選單就變成一堆意思相同的選項。改成勾選縣市。 */
+  function buildAreas() {
+    var A = window.CPGA_AREAS;
+    document.getElementById('areaBox').innerHTML = A.groups.map(function (g) {
+      return '<div class="mt-1">' +
+        '<span class="muted" style="font-size:.82rem">' + g.label + '</span>' +
+        '<div class="chk-row">' + g.items.map(function (name) {
+          return '<label class="row-check"><input type="checkbox" data-area value="' +
+            name + '"><span>' + name + '</span></label>';
+        }).join('') + '</div></div>';
+    }).join('');
+  }
+
+  function setAreas(saved) {
+    var A = window.CPGA_AREAS;
+    var want = {}, unknown = [];
+    (saved || []).forEach(function (v) {
+      var hit = A.normalize(v);
+      if (hit) want[hit] = 1; else unknown.push(v);
+    });
+    document.querySelectorAll('[data-area]').forEach(function (i) {
+      i.checked = !!want[i.value];
+    });
+    /* 對不上清單的舊資料不要默默吃掉，講出來讓他自己重勾 */
+    var note = document.getElementById('areaOld');
+    if (unknown.length) {
+      note.textContent = '原本填的「' + unknown.join('、') +
+        '」不在縣市清單中，請改勾選上面的縣市。';
+      note.hidden = false;
+    } else {
+      note.hidden = true;
+    }
+  }
+
+  function getAreas() {
+    return [].slice.call(document.querySelectorAll('[data-area]:checked'))
+      .map(function (i) { return i.value; });
+  }
+
   function splitList(s) {
     return String(s || '').split(/[、,，\s]+/).map(function (x) { return x.trim(); })
       .filter(Boolean);
@@ -221,7 +266,7 @@
 
   function fill(r) {
     listed.checked = !!r.listed;
-    document.getElementById('areas').value = (r.areas || []).join('、');
+    setAreas(r.areas || []);
     document.getElementById('languages').value = (r.languages || []).join('、');
     document.getElementById('levels').value = r.levels || '';
     document.getElementById('fee').value = r.fee || '';
@@ -269,7 +314,7 @@
       listed: listed.checked,
       modes: multi('modes'),
       students: multi('students'),
-      areas: splitList(document.getElementById('areas').value),
+      areas: getAreas(),
       languages: splitList(document.getElementById('languages').value),
       levels: document.getElementById('levels').value.trim(),
       fee: document.getElementById('fee').value.trim(),
@@ -280,6 +325,8 @@
       links: links
     };
   }
+
+  buildAreas();
 
   A.require('player').then(function (user) {
     me = user;

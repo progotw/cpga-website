@@ -82,6 +82,7 @@
 </section>
 
 <div id="site-footer"></div>
+<script src="../assets/js/areas.js"></script>
 <script src="../assets/js/players.js"></script>
 <script src="../assets/js/teachers.js"></script>
 <script src="../assets/js/site.js" defer></script>
@@ -172,7 +173,8 @@
 
     document.getElementById('filters').style.display = '';
     fillSelect('fMode', T.options(all, 'modes'));
-    fillSelect('fArea', T.options(all, 'areas'));
+    /* 地區依北到南、本島到離島排，不是老師登錄的先後順序 */
+    fillSelect('fArea', window.CPGA_AREAS.sort(T.options(all, 'areas')));
     fillSelect('fStudent', T.options(all, 'students'));
     ['fMode', 'fArea', 'fStudent', 'fSearch'].forEach(function (id) {
       document.getElementById(id).addEventListener('input', render);
