@@ -284,6 +284,13 @@ def merge(announced, feed, suppress=None):
     def pair_key(r):
         return (r['date'], r['time'], tuple(sorted(r['players'])))
 
+    # 跨來源比對時不能把時間算進去：公告常常只寫日期不寫開賽時間，
+    # 操作台則一定有，同一盤棋因此被當成兩筆，棋士會看到自己同一天
+    # 要跟同一個人下兩場（2026-11-02 使用者回報第20屆棋王賽複賽勝部1回）。
+    # 同一天同兩人真的下兩盤（番棋兩日制）時，操作台兩筆都在，不受影響。
+    def day_key(r):
+        return (r['date'], tuple(sorted(r['players'])))
+
     merged, seen_id, seen_pair = [], set(), set()
 
     # 操作台：用它自己的對局編號去重。
@@ -297,12 +304,12 @@ def merge(announced, feed, suppress=None):
         # 只有雙方都確定的才拿來擋公告，否則空的 players 會把
         # 公告裡「對手未定」那類也一起擋掉
         if len(r['players']) >= 2:
-            seen_pair.add(pair_key(r))
+            seen_pair.add(day_key(r))
         merged.append(r)
 
     # 公告：操作台已經有的就不重複收
     for r in clean(ann_rows):
-        k = pair_key(r)
+        k = day_key(r)
         if k in seen_pair:
             continue
         seen_pair.add(k)

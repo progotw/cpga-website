@@ -360,6 +360,19 @@
                (p.candidates || []).indexOf(myName) > -1;
       });
 
+      /* 同一天同一輪常常有好幾個空格——敗部3回有三組，他會落在哪一組要看
+         前幾輪的結果——列出來就是三筆一模一樣的「若晉級　對手未定」，
+         看起來像那天要下三場。同一天、同賽事、同輪次只留一筆。
+         已經確定對手的不動：那是真的要下的場次，同一天兩場也要照實列。 */
+      var seenSlot = {};
+      rows = rows.filter(function (p) {
+        if ((p.players || []).indexOf(myName) > -1) return true;
+        var k = p.date + '|' + (p.event || '') + '|' + (p.round || '');
+        if (seenSlot[k]) return false;
+        seenSlot[k] = 1;
+        return true;
+      });
+
       if (!rows.length) {
         box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">' +
           '目前沒有安排中的對局。新一輪抽籤公告後會自動出現。</p>';
