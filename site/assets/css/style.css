@@ -441,9 +441,13 @@ body.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45d
 /* 高度上限只給「兩張都很長」的那一列（我的賽程／我的成績）。
    旁邊是月曆的那一列不加，否則卡片會比月曆矮、底下留一條空白。 */
 .card--cap { max-height: 640px; }
+/* 手機上一樣要能在卡片裡捲（使用者指定）：一整年的成績有五十幾局，
+   不限高的話光這張卡片就要滑過好幾個螢幕才看得完。
+   但手機是單欄、不必兩張一樣高，所以改成限制清單本身——
+   卡片標題與升段進度完整顯示，只有清單在裡面捲，不會被壓到剩兩行。 */
 @media (max-width: 900px) {
   .card--cap { max-height: none; }
-  .card--col > .fill-list > ul { overflow-y: visible; }
+  .card--col > .fill-list > ul { max-height: 320px; }
 }
 
 /* 功能小卡（職業棋士專區下半部那一區）：每一張一樣大、按鈕對齊在底部。
