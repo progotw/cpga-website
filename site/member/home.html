@@ -41,6 +41,14 @@
     <!-- 我的成績：資料即時取自海峰成績系統，官網不存任何成績 -->
     <div class="card" style="border-left:4px solid var(--navy)">
       <h3 style="font-size:1.05rem">我的成績</h3>
+      <!-- 升段進度與成績是同一份資料算出來的，放在最上面——
+           這是棋士最常想知道的一個數字 -->
+      <div style="padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid var(--line)">
+        <p class="muted mb-0" style="font-size:.8rem;letter-spacing:.06em">升段進度</p>
+        <div id="myDan" class="mt-1">
+          <p class="muted mb-0" style="font-size:.9rem">載入中…</p>
+        </div>
+      </div>
       <div id="myResults"><p class="muted mb-0" style="font-size:.9rem">載入中…</p></div>
     </div>
   </div>
@@ -243,10 +251,59 @@
     });
   }
 
+  /* ---- 升段進度 ----
+     算法與海峰成績系統的「升段提醒」相同（對方 2026-11-02 的串接說明），
+     資料即時取自同一份公開的段位資料，官網不存段位，院方一改這裡就是新的。
+     達標只寫「已達標準」——實際升段以院方公告為準，不要讓人以為已經升了。 */
+  function renderDan(box, name) {
+    if (!box) return Promise.resolve();
+    function note(text) {
+      box.innerHTML = '<p class="muted mb-0" style="font-size:.86rem">' + text + '</p>';
+    }
+    return window.HaifongResults.dan(name).then(function (d) {
+      if (!d) { note('段位資料裡沒有這位棋士，請洽秘書處。'); return; }
+
+      var head = '<p class="mb-0" style="font-size:.9rem">目前段位　' +
+        '<strong style="color:var(--ink)">' + esc(d.dan) + '</strong></p>';
+      if (!d.nextDan) {
+        box.innerHTML = head +
+          '<p class="muted mb-0" style="font-size:.84rem;margin-top:4px">已是最高段位。</p>';
+        return;
+      }
+      if (d.settleMissing || d.need == null) {
+        box.innerHTML = head +
+          '<p class="muted mb-0" style="font-size:.84rem;margin-top:4px">' +
+          '段位資料不完整，無法計算升段進度，請洽秘書處。</p>';
+        return;
+      }
+
+      var pct = Math.max(0, Math.min(100, Math.round(d.total * 100 / d.need)));
+      var slash = function (s) { return String(s).replace(/-/g, '/'); };
+      box.innerHTML = head +
+        '<p class="mb-0" style="font-size:1.05rem;margin-top:4px">' +
+          '<strong style="color:var(--ink)">' +
+          (d.reached ? '已達升' + esc(d.nextDan) + '標準'
+                     : '升' + esc(d.nextDan) + '還差 ' + d.remaining + ' 勝') +
+          '</strong></p>' +
+        '<div style="height:8px;background:var(--line);border-radius:4px;' +
+          'margin:8px 0 4px;overflow:hidden">' +
+          '<div style="height:100%;width:' + pct + '%;background:var(--good)"></div></div>' +
+        '<p class="muted mb-0" style="font-size:.82rem">累積 ' + d.total + '／' + d.need +
+          ' 勝（結算日 ' + slash(d.settleDate) + ' 已 ' + d.baseWins + ' 勝，之後又贏 ' +
+          d.winsSince + ' 局；算到 ' + slash(d.asOf) + '，交流賽不算）</p>' +
+        (d.reached
+          ? '<p class="muted mb-0" style="font-size:.82rem;margin-top:4px">升段以院方公告為準。</p>'
+          : '');
+    }).catch(function () { note('升段進度載入失敗，請稍後再試。'); });
+  }
+
   function loadMyResults(playerId) {
     var box = document.getElementById('myResults');
+    var danBox = document.getElementById('myDan');
     function note(text) {
       box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">' + text + '</p>';
+      /* 升段進度也查不到，不要讓它一直停在「載入中…」 */
+      if (danBox) danBox.innerHTML = '<p class="muted mb-0" style="font-size:.86rem">—</p>';
     }
     if (!playerId) {
       note('此帳號尚未對應到棋士名錄，無法顯示個人成績，請洽秘書處。');
@@ -264,6 +321,7 @@
           note('棋士名錄中找不到此帳號對應的棋士，請洽秘書處。');
           return;
         }
+        renderDan(danBox, mine.name);
         return renderResults(box, mine.name);
       })
       .catch(function () { note('個人成績載入失敗。'); });

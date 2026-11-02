@@ -68,6 +68,63 @@
              rate: n ? win / n : 0 };
   }
 
+  /* ---- 升段進度（海峰 2026-11-02 的串接說明）----
+
+     還差幾勝 ＝ 升段需要的勝場 －（結算日已達成的勝場 ＋ 結算日「之後」到今天的勝局）
+     國內、國際、正式、限制都算，交流賽不算；「今天」用台灣時間。
+     與成績系統「升段提醒」同一套算法。
+
+     對方提供的是 player-widget.js 的新方法，但那支程式我們不載入
+     （理由見本檔開頭），所以改讀同兩份公開資料自己算：
+       results/danPlayers  [[姓名, 目前段位, 結算日, 已達成勝場]]
+       results/danRules    [[段位, 需要勝場]]
+     院方升段或調整結算日時會直接改這兩份，所以每次都重讀、不快取（都很小）。 */
+  var DAN_ORDER = ['初段', '二段', '三段', '四段', '五段', '六段', '七段', '八段', '九段'];
+  /* danRules 不存在時的預設值（2026-11-02 查詢時院方尚未建立這份文件，
+     走的就是這一組，與對方程式內建的相同）。 */
+  var DAN_NEED = {
+    '初段': 20, '二段': 30, '三段': 50, '四段': 60, '五段': 70,
+    '六段': 100, '七段': 110, '八段': 120, '九段': 150
+  };
+
+  function norm(s) { return String(s == null ? '' : s).replace(/\s+/g, ''); }
+
+  function docOf(id) {
+    return fetch(BASE + '/' + id, { cache: 'no-cache' })
+      .then(function (r) {
+        if (r.status === 404) return null;
+        if (!r.ok) throw new Error('段位資料讀取失敗 HTTP ' + r.status);
+        return r.json();
+      });
+  }
+
+  function jsonField(doc, key) {
+    try {
+      return JSON.parse((doc && doc.fields && doc.fields[key] &&
+                         doc.fields[key].stringValue) || 'null');
+    } catch (e) { return null; }
+  }
+
+  /* 日期一律換成 20261102 這種數字再比大小 */
+  function dayNum(s) {
+    var m = String(s).match(/^(\d{4})[-\/.](\d{1,2})[-\/.](\d{1,2})/);
+    return m ? Number(m[1]) * 10000 + Number(m[2]) * 100 + Number(m[3]) : 0;
+  }
+  function gameNum(year, md) {
+    var m = String(md).match(/^(\d{1,2})\.(\d{1,2})$/);
+    return m ? Number(year) * 10000 + Number(m[1]) * 100 + Number(m[2])
+             : Number(year) * 10000;
+  }
+  function numDate(n) {
+    n = String(n);
+    return n.slice(0, 4) + '-' + n.slice(4, 6) + '-' + n.slice(6, 8);
+  }
+  /* 台灣時間的今天。使用者的電腦時區不一定正確，也可能人在國外。 */
+  function todayNum() {
+    var t = new Date(Date.now() + 8 * 3600000);
+    return t.getUTCFullYear() * 10000 + (t.getUTCMonth() + 1) * 100 + t.getUTCDate();
+  }
+
   window.HaifongResults = {
     /* 單一棋士的成績。預設取今年與去年——頁面上只用得到這兩年。 */
     player: function (name, years) {
@@ -96,6 +153,83 @@
           years: per.filter(function (p) { return p.games.length; })
                     .map(function (p) { return summarise(p.games, p.year); })
         };
+      });
+    },
+
+    /* 升段進度。段位資料裡沒有這位棋士時回傳 null。
+       欄位與對方說明書第 4 節一致，另加 settleMissing（資料缺結算日）。 */
+    dan: function (name) {
+      var p = norm(name);
+      var until = todayNum();
+      var nowY = Math.floor(until / 10000);
+
+      return Promise.all([docOf('danPlayers'), docOf('danRules')]).then(function (res) {
+        var players = jsonField(res[0], 'players') || [];
+        var rules = jsonField(res[1], 'rules');
+        var row = players.filter(function (r) { return r && norm(r[0]) === p; })[0];
+        if (!row) return null;
+
+        var dan = row[1] || '';
+        var base = dayNum(row[2]);
+        var baseWins = Number(row[3]) || 0;
+        var idx = DAN_ORDER.indexOf(dan);
+        var need = null;
+        if (rules) {
+          var hit = rules.filter(function (x) { return x[0] === dan; })[0];
+          need = hit ? Number(hit[1]) : null;
+        } else if (DAN_NEED[dan] != null) {
+          need = DAN_NEED[dan];
+        }
+        var info = {
+          name: row[0], dan: dan,
+          nextDan: idx >= 0 && idx < DAN_ORDER.length - 1 ? DAN_ORDER[idx + 1] : null,
+          need: need, settleDate: base ? numDate(base) : '', baseWins: baseWins,
+          asOf: numDate(until)
+        };
+        /* 沒有結算日就沒有起算點，算出來的數字會是錯的，寧可說資料不完整。
+           2026-11-02 檢查時 139 位棋士都有結算日，這是防呆。 */
+        if (!base) {
+          info.settleMissing = true;
+          info.winsSince = info.total = info.remaining = null;
+          info.reached = false;
+          info.wins = [];
+          return info;
+        }
+
+        /* 只讀結算日那年到今年——更早的對局本來就不列入，不必抓 */
+        var years = [];
+        for (var y = Math.floor(base / 10000); y <= nowY; y++) years.push(y);
+
+        return Promise.all(years.map(rowsOf)).then(function (per) {
+          var wins = [];
+          per.forEach(function (rows, i) {
+            var y = years[i];
+            rows.forEach(function (r) {
+              if (norm(r[WINNER]) !== p) return;
+              if (r[C2] === '交流') return;            /* 交流賽不列入升段 */
+              var n = gameNum(y, r[DATE]);
+              if (n <= base || n > until) return;
+              wins.push({ at: n, year: y, row: r });
+            });
+          });
+          wins.sort(function (a, b) { return a.at - b.at; });
+
+          var list = wins.map(function (w, k) {
+            var r = w.row, isB = norm(r[BLACK]) === p;
+            return { no: baseWins + k + 1, year: String(w.year), date: r[DATE],
+                     event: r[EVENT], stage: r[STAGE],
+                     opponent: isB ? r[WHITE] : r[BLACK],
+                     color: isB ? '黑' : '白', margin: r[MARGIN] };
+          });
+          info.winsSince = list.length;
+          info.total = baseWins + list.length;
+          info.remaining = need == null ? null : need - info.total;
+          info.reached = info.remaining != null && info.remaining <= 0;
+          info.reachGame = (need != null && baseWins < need && info.total >= need)
+            ? list[need - baseWins - 1] : null;
+          info.wins = list;
+          return info;
+        });
       });
     },
 
