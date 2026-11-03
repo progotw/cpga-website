@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-03T14:58:00+00:00",
+ "generated": "2026-11-03T19:29:40+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
@@ -965,7 +965,8 @@
    "catLabel": "媒體報導",
    "cat": "media",
    "title": "【精彩好棋專欄：第89篇 海峰盃之旅】",
-   "url": "https://www.haifong.org/news/content/00D8C9A186DD8FE67E29EDBE45AB3FD1"
+   "url": "https://www.haifong.org/news/content/00D8C9A186DD8FE67E29EDBE45AB3FD1",
+   "local": true
   },
   {
    "id": "9CCF5215162ED1FCCD9BC8D73CD51F35",
@@ -973,7 +974,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【台灣中環隊獲得男子圍丙聯賽第八名】",
-   "url": "https://www.haifong.org/news/content/9CCF5215162ED1FCCD9BC8D73CD51F35"
+   "url": "https://www.haifong.org/news/content/9CCF5215162ED1FCCD9BC8D73CD51F35",
+   "local": true
   },
   {
    "id": "3D615AAB2569BAF9336021393736163C",
@@ -981,7 +983,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "環旭電子寶島隊 圍乙聯賽成績",
-   "url": "https://www.haifong.org/news/content/3D615AAB2569BAF9336021393736163C"
+   "url": "https://www.haifong.org/news/content/3D615AAB2569BAF9336021393736163C",
+   "local": true
   },
   {
    "id": "EB4A1DF327BE871F90B05DFA217E5344",
@@ -989,7 +992,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "海峰棋院女子隊 圍乙聯賽成績",
-   "url": "https://www.haifong.org/news/content/EB4A1DF327BE871F90B05DFA217E5344"
+   "url": "https://www.haifong.org/news/content/EB4A1DF327BE871F90B05DFA217E5344",
+   "local": true
   },
   {
    "id": "837855B842313A0E67EA9191A55C662A",
@@ -997,7 +1001,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【2026年 院生組 職業棋士甄選名單及注意事項】",
-   "url": "https://www.haifong.org/news/content/837855B842313A0E67EA9191A55C662A"
+   "url": "https://www.haifong.org/news/content/837855B842313A0E67EA9191A55C662A",
+   "local": true
   },
   {
    "id": "432739B6241717B6E0D5400C578C737D",
@@ -1005,7 +1010,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【院生第六輪月賽 - 總成績 及 年度積分表公告】",
-   "url": "https://www.haifong.org/news/content/432739B6241717B6E0D5400C578C737D"
+   "url": "https://www.haifong.org/news/content/432739B6241717B6E0D5400C578C737D",
+   "local": true
   },
   {
    "id": "8FEE419806ADBE8C39B2D2808531DC89",
@@ -1013,7 +1019,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【院生結訓儀式 - 邁向職業棋士考試】",
-   "url": "https://www.haifong.org/news/content/8FEE419806ADBE8C39B2D2808531DC89"
+   "url": "https://www.haifong.org/news/content/8FEE419806ADBE8C39B2D2808531DC89",
+   "local": true
   },
   {
    "id": "BEB7F8B2B0DB634ECA7FC30407C0016A",
@@ -1021,7 +1028,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "第31屆LG杯世界棋王戰：賴均輔九段止步本賽16強",
-   "url": "https://www.haifong.org/news/content/BEB7F8B2B0DB634ECA7FC30407C0016A"
+   "url": "https://www.haifong.org/news/content/BEB7F8B2B0DB634ECA7FC30407C0016A",
+   "local": true
   },
   {
    "id": "6340F58BFB3AF6007B21734864E014DA",
@@ -1029,7 +1037,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【院生第六輪月賽 - 第二週成績公告】",
-   "url": "https://www.haifong.org/news/content/6340F58BFB3AF6007B21734864E014DA"
+   "url": "https://www.haifong.org/news/content/6340F58BFB3AF6007B21734864E014DA",
+   "local": true
   },
   {
    "id": "D0DE2168BF2EA551A076B2A53AB93CD9",
@@ -1037,7 +1046,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【社群媒體使用指引】",
-   "url": "https://www.haifong.org/news/content/D0DE2168BF2EA551A076B2A53AB93CD9"
+   "url": "https://www.haifong.org/news/content/D0DE2168BF2EA551A076B2A53AB93CD9",
+   "local": true
   },
   {
    "id": "6DD9BC85DC6148535C3915E04C497BFD",
