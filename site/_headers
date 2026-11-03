@@ -1,0 +1,13 @@
+# Cloudflare 的回應標頭設定（Netlify 也讀同樣格式）
+#
+# assets/data/ 底下是公開的唯讀資料檔，本來就允許任何人讀取
+# （網址直接打開就看得到）。加上這個標頭是為了讓別的網站也能用
+# 瀏覽器端的程式讀——目前的用途是海峰棋院網站要讀 player-stats.json
+# 來顯示棋士的年度成績（2026-11-03）。
+#
+# 只開放 assets/data/，不要整站開放：棋士專區與後台的頁面同源政策
+# 是一道防線，不該因為這個需求被放寬。
+
+/assets/data/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=600
