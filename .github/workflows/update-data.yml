@@ -82,6 +82,12 @@ jobs:
             python scripts/scrape_players.py site/assets/data/players.json
           fi
 
+      # 棋士年度成績彙總（給海峰網站與協會自己用），必須在棋士名錄之後執行
+      - name: 產生棋士年度成績
+        id: stats
+        continue-on-error: true
+        run: python scripts/build_player_stats.py site
+
       # 對戰組合取自抽籤公告，必須在 scrape_news_games 之後執行
       # 第二來源：棋賽賽程操作台輸出的公開文件（2026-10-16 起）。
       # 這是公開唯讀網址、不帶任何憑證，所以直接寫在這裡而不放進 Secrets——
@@ -132,6 +138,7 @@ jobs:
           R_NEWS:     ${{ steps.news.outcome }}
           R_ARTICLES: ${{ steps.articles.outcome }}
           R_HERO:     ${{ steps.hero.outcome }}
+          R_STATS:    ${{ steps.stats.outcome }}
           R_PLAYERS:  ${{ steps.players.outcome }}
           R_PAIRINGS: ${{ steps.pairings.outcome }}
           R_ELITE:    ${{ steps.elite.outcome }}
@@ -152,6 +159,7 @@ jobs:
           check 最新消息   "$R_NEWS"
           check 新聞內文   "$R_ARTICLES"
           check 首頁照片   "$R_HERO"
+          check 年度成績   "$R_STATS"
           check 棋士名錄   "$R_PLAYERS"
           check 對戰組合   "$R_PAIRINGS"
           check 精銳隊     "$R_ELITE"
