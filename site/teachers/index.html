@@ -46,6 +46,13 @@
           <label for="fStudent">招收對象</label>
           <select id="fStudent"><option value="all">不限</option></select>
         </div>
+        <div class="field" style="margin:0;min-width:150px">
+          <label for="fSort">排序</label>
+          <select id="fSort">
+            <option value="daily">每日輪替</option>
+            <option value="rank">段位（高到低）</option>
+          </select>
+        </div>
         <div class="field" style="margin:0;flex:1 1 200px;max-width:300px">
           <label for="fSearch">搜尋</label>
           <input type="search" id="fSearch" placeholder="輸入老師姓名…">
@@ -124,6 +131,55 @@
       '</a>';
   }
 
+  /* ---- 排序 ----
+     預設每日輪替：同一天所有訪客看到的順序一樣，隔天換一輪。
+
+     不排序的話就是照老師登錄的先後，最早填的永遠在第一位；
+     固定照段位排則是高段永遠在前面，低段的老師等於沒有曝光機會。
+     兩種都會變成秘書處的麻煩，所以預設讓順序每天輪一次。
+
+     每次重新整理都隨機也公平，但使用者回頭找剛剛看到的那位會找不到，
+     所以用日期當亂數種子——當天固定，隔天才變。 */
+  var DAN = ['九段', '八段', '七段', '六段', '五段', '四段', '三段', '二段', '初段'];
+
+  function todayKey() {
+    /* 用台灣時間：訪客的電腦時區不一定正確，也可能人在國外，
+       否則同一天會有人看到今天的順序、有人看到昨天的。 */
+    var t = new Date(Date.now() + 8 * 3600000);
+    return t.getUTCFullYear() * 10000 + (t.getUTCMonth() + 1) * 100 + t.getUTCDate();
+  }
+
+  /* 固定種子的亂數（mulberry32）。同一個種子永遠產生同一串數字。 */
+  function rng(seed) {
+    return function () {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      var x = Math.imul(seed ^ seed >>> 15, 1 | seed);
+      x = x + Math.imul(x ^ x >>> 7, 61 | x) ^ x;
+      return ((x ^ x >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  /* 今天的順序：每位老師一個分數，排序時照分數排 */
+  var dailyRank = {};
+  function shuffleDaily(list) {
+    var r = rng(todayKey());
+    list.forEach(function (t) { dailyRank[t.id] = r(); });
+  }
+
+  function sortRows(rows) {
+    var by = document.getElementById('fSort').value;
+    return rows.slice().sort(function (a, b) {
+      if (by === 'rank') {
+        var ia = DAN.indexOf(a.rank), ib = DAN.indexOf(b.rank);
+        if (ia < 0) ia = DAN.length;
+        if (ib < 0) ib = DAN.length;
+        /* 同段位之間一樣每天輪替，不要變成誰先登錄誰在前 */
+        if (ia !== ib) return ia - ib;
+      }
+      return (dailyRank[a.id] || 0) - (dailyRank[b.id] || 0);
+    });
+  }
+
   function render() {
     var mode = document.getElementById('fMode').value;
     var area = document.getElementById('fArea').value;
@@ -137,10 +193,14 @@
         && (!kw || t.name.indexOf(kw) > -1);
     });
 
+    rows = sortRows(rows);
+
     listEl.innerHTML = rows.length
       ? '<div class="grid grid-3">' + rows.map(card).join('') + '</div>'
       : '<p class="muted">找不到符合條件的老師，請放寬篩選條件。</p>';
-    document.getElementById('resultCount').textContent = '共 ' + rows.length + ' 位老師';
+    document.getElementById('resultCount').textContent = '共 ' + rows.length + ' 位老師' +
+      (document.getElementById('fSort').value === 'daily'
+        ? '　·　預設順序每天輪替，讓每位老師都有曝光機會' : '');
   }
 
   function fillSelect(id, values) {
@@ -176,7 +236,8 @@
     /* 地區依北到南、本島到離島排，不是老師登錄的先後順序 */
     fillSelect('fArea', window.CPGA_AREAS.sort(T.options(all, 'areas')));
     fillSelect('fStudent', T.options(all, 'students'));
-    ['fMode', 'fArea', 'fStudent', 'fSearch'].forEach(function (id) {
+    shuffleDaily(all);
+    ['fMode', 'fArea', 'fStudent', 'fSort', 'fSearch'].forEach(function (id) {
       document.getElementById(id).addEventListener('input', render);
     });
     render();
