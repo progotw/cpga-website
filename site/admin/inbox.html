@@ -43,6 +43,7 @@
 <script src="../assets/js/sb-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
 <script src="../assets/js/auth.js"></script>
+<script src="../assets/js/admin-notify.js"></script>
 <script>
 (function () {
   var A = window.CPGA_AUTH;
@@ -88,6 +89,15 @@
   }).catch(function (err) {
     list.innerHTML = '<p class="muted">載入失敗：' + esc(A.message(err)) + '</p>';
   });
+
+  /* 有人剛送出訊息時由 admin-notify.js 呼叫，直接插到最上面，
+     不必重新整理。重複的不再插一次——同一則有可能收到兩次事件。 */
+  window.CPGA_INBOX_NEW = function (row) {
+    if (!row || !row.id) return;
+    if (rows.some(function (r) { return r.id === row.id; })) return;
+    rows.unshift(row);
+    render();
+  };
 
   function load() {
     return A.client.from('messages').select('*')

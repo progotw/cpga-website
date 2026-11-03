@@ -30,6 +30,13 @@
     </p>
   </div>
 
+  <!-- 新訊息的桌面通知。已經答應過、或瀏覽器不支援時，程式會讓這一整塊消失 -->
+  <p class="mt-2 mb-0" id="notifyAsk" hidden style="font-size:.9rem">
+    有人來信時要在畫面上跳提醒（不必重新整理）。
+    想連視窗切走也收到通知的話：
+    <button class="btn btn-ghost btn-sm" type="button">開啟桌面通知</button>
+  </p>
+
   <div class="admin-grid mt-3">
     <a class="admin-tile" href="inbox.html">
       <span class="admin-tile__kind">來訊</span>
@@ -111,6 +118,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
 <script src="../assets/js/sb-config.js"></script>
 <script src="../assets/js/auth.js"></script>
+<script src="../assets/js/admin-notify.js"></script>
 <script>
 (function () {
   var A = window.CPGA_AUTH;
@@ -188,6 +196,25 @@
           '<span class="tile-badge">' + res.count + '</span>';
       }).catch(function () { /* 不顯示就好 */ });
   }
+
+  /* 桌面通知要由使用者按一下才能要求權限，瀏覽器的規定。
+     已經答應過或瀏覽器不支援就不顯示這顆按鈕。 */
+  (function () {
+    var box = document.getElementById('notifyAsk');
+    if (!box) return;
+    var N = window.CPGA_NOTIFY;
+    if (!N || !N.supported || Notification.permission !== 'default') return;
+    box.hidden = false;
+    box.querySelector('button').addEventListener('click', function () {
+      var btn = this;
+      btn.disabled = true;
+      N.askPermission().then(function (r) {
+        box.innerHTML = r === 'granted'
+          ? '<span class="muted" style="font-size:.86rem">已開啟桌面通知。</span>'
+          : '<span class="muted" style="font-size:.86rem">沒有開啟。之後可以在瀏覽器的網站設定裡改。</span>';
+      });
+    });
+  })();
 
   A.require('admin').then(function (me) {
     inboxBadge();

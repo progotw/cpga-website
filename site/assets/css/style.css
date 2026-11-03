@@ -1348,6 +1348,42 @@ body.member-area { background: var(--paper-2); }
 .chk-row { display: flex; gap: 18px; flex-wrap: wrap; }
 .chk-row .row-check { margin: 0; }
 
+/* 後台右下角的新訊息提示。
+   有人送出詢問時跳出來，不必重新整理頁面就看得到。
+   固定在右下角：後台的內容在左上，彈在右下不會擋到正在編輯的東西。 */
+.toast-stack {
+  position: fixed; right: 20px; bottom: 20px; z-index: 200;
+  display: flex; flex-direction: column; gap: 10px; max-width: 320px;
+}
+.toast {
+  position: relative;
+  background: var(--ink); color: var(--on-dark);
+  border-radius: var(--radius); padding: 14px 38px 14px 16px;
+  box-shadow: var(--shadow); font-size: .92rem; line-height: 1.6;
+  animation: toast-in .25s ease;
+}
+.toast strong { color: var(--white); }
+.toast__sub { color: var(--on-dark-2); font-size: .84rem; }
+.toast__go {
+  display: block; margin-top: 8px; color: #e9c48a;
+  font-size: .88rem; text-decoration: none;
+}
+.toast__go:hover { text-decoration: underline; }
+.toast__x {
+  position: absolute; top: 8px; right: 10px;
+  background: none; border: 0; color: var(--on-dark-2);
+  font-size: 1.1rem; line-height: 1; cursor: pointer; padding: 2px 4px;
+}
+.toast__x:hover { color: var(--white); }
+.toast.is-out { opacity: 0; transition: opacity .6s ease; }
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (max-width: 620px) {
+  .toast-stack { right: 12px; left: 12px; bottom: 12px; max-width: none; }
+}
+
 /* 後台格子上的未處理數 */
 .tile-badge {
   display: inline-block; margin-left: 8px; padding: 1px 8px; border-radius: 999px;
