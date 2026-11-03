@@ -1,6 +1,28 @@
 {
  "photos": [
   {
+   "id": "D380ECD80FA00D80F1347B1D225A248C",
+   "image": "assets/img/gallery/D380ECD80FA00D80F1347B1D225A248C.jpg",
+   "width": 1200,
+   "height": 901,
+   "caption": "棋王賽複賽首輪 林新為、鄭予皓雙雙半目勝出",
+   "date": "2026-11-03",
+   "link": "https://www.haifong.org/news/content/D380ECD80FA00D80F1347B1D225A248C",
+   "credit": "海峰棋院",
+   "local": true
+  },
+  {
+   "id": "103D522AED4555B25B8FF4001836C6F0",
+   "image": "assets/img/gallery/103D522AED4555B25B8FF4001836C6F0.jpg",
+   "width": 1200,
+   "height": 901,
+   "caption": "棋王賽挑戰賽第一局：許皓鋐執黑勝賴均輔，五番勝負1:0 領先",
+   "date": "2026-11-03",
+   "link": "https://www.haifong.org/news/content/103D522AED4555B25B8FF4001836C6F0",
+   "credit": "海峰棋院",
+   "local": true
+  },
+  {
    "id": "CFC2B5E57E884A324D8439A1BFC63728",
    "image": "assets/img/gallery/CFC2B5E57E884A324D8439A1BFC63728.jpg",
    "width": 1200,
@@ -327,7 +349,8 @@
    "caption": "社會組 職棋甄選複賽 - 第一日成績",
    "date": "2026-07-16",
    "link": "https://www.haifong.org/news/content/BD29B4ED1FB02F8696D5CF918581C435",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "9334DE1173C0A6D33AEFA096E8EDE06F",
@@ -337,7 +360,8 @@
    "caption": "社會組 職棋甄選初賽 - 總成績",
    "date": "2026-07-14",
    "link": "https://www.haifong.org/news/content/9334DE1173C0A6D33AEFA096E8EDE06F",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "A751530BFF2205660098641160A29483",
@@ -347,7 +371,8 @@
    "caption": "社會組 職棋甄選初賽 - 第一日成績",
    "date": "2026-07-13",
    "link": "https://www.haifong.org/news/content/A751530BFF2205660098641160A29483",
-   "credit": "海峰棋院"
+   "credit": "海峰棋院",
+   "local": true
   },
   {
    "id": "C5A0A0C0F909ACC3086A956F3FF3F4B7",

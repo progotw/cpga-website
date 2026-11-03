@@ -1,10 +1,28 @@
 {
  "schema_version": 1,
- "generated": "2026-11-03T09:58:59+00:00",
+ "generated": "2026-11-03T11:56:36+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "D380ECD80FA00D80F1347B1D225A248C",
+   "date": "2026-11-03",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "棋王賽複賽首輪 林新為、鄭予皓雙雙半目勝出",
+   "url": "https://www.haifong.org/news/content/D380ECD80FA00D80F1347B1D225A248C",
+   "local": true
+  },
+  {
+   "id": "103D522AED4555B25B8FF4001836C6F0",
+   "date": "2026-11-03",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "棋王賽挑戰賽第一局：許皓鋐執黑勝賴均輔，五番勝負1:0 領先",
+   "url": "https://www.haifong.org/news/content/103D522AED4555B25B8FF4001836C6F0",
+   "local": true
+  },
   {
    "id": "D103EF90501E49BE2375F8DFAE9DD516",
    "date": "2026-11-03",
@@ -785,7 +803,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【社會組 職棋甄選複賽 - 第一日成績】",
-   "url": "https://www.haifong.org/news/content/BD29B4ED1FB02F8696D5CF918581C435"
+   "url": "https://www.haifong.org/news/content/BD29B4ED1FB02F8696D5CF918581C435",
+   "local": true
   },
   {
    "id": "9334DE1173C0A6D33AEFA096E8EDE06F",
@@ -793,7 +812,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【社會組 職棋甄選初賽 - 總成績】",
-   "url": "https://www.haifong.org/news/content/9334DE1173C0A6D33AEFA096E8EDE06F"
+   "url": "https://www.haifong.org/news/content/9334DE1173C0A6D33AEFA096E8EDE06F",
+   "local": true
   },
   {
    "id": "501908ADE98DC2C89F6E0FE7A32ACBB5",
@@ -801,7 +821,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【社會組 職棋甄選複賽 分組名單及注意事項】",
-   "url": "https://www.haifong.org/news/content/501908ADE98DC2C89F6E0FE7A32ACBB5"
+   "url": "https://www.haifong.org/news/content/501908ADE98DC2C89F6E0FE7A32ACBB5",
+   "local": true
   },
   {
    "id": "A751530BFF2205660098641160A29483",
@@ -809,7 +830,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【社會組 職棋甄選初賽 - 第一日成績】",
-   "url": "https://www.haifong.org/news/content/A751530BFF2205660098641160A29483"
+   "url": "https://www.haifong.org/news/content/A751530BFF2205660098641160A29483",
+   "local": true
   },
   {
    "id": "82E64FEF60451C64BFE986CE4A16EB1B",
@@ -817,7 +839,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "第12屆健喬盃女子圍棋最強戰  簡章",
-   "url": "https://www.haifong.org/news/content/82E64FEF60451C64BFE986CE4A16EB1B"
+   "url": "https://www.haifong.org/news/content/82E64FEF60451C64BFE986CE4A16EB1B",
+   "local": true
   },
   {
    "id": "14A3B1197494D429F7043F863B5BDD88",
@@ -825,7 +848,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【院生組 職棋甄選 - 總成績 / 陳天宸、楊淞賁晉升新科職棋】",
-   "url": "https://www.haifong.org/news/content/14A3B1197494D429F7043F863B5BDD88"
+   "url": "https://www.haifong.org/news/content/14A3B1197494D429F7043F863B5BDD88",
+   "local": true
   },
   {
    "id": "DD0705C1473F80EB142248BE39D6D1C2",
@@ -833,7 +857,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【院生組 職棋甄選 - 第五日成績 / 黃名棻、楊昕潔晉升新科職棋】",
-   "url": "https://www.haifong.org/news/content/DD0705C1473F80EB142248BE39D6D1C2"
+   "url": "https://www.haifong.org/news/content/DD0705C1473F80EB142248BE39D6D1C2",
+   "local": true
   },
   {
    "id": "05094752F149D3645BBA14F63C10F00D",
@@ -841,7 +866,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【院生組 職棋甄選 - 第四日成績】",
-   "url": "https://www.haifong.org/news/content/05094752F149D3645BBA14F63C10F00D"
+   "url": "https://www.haifong.org/news/content/05094752F149D3645BBA14F63C10F00D",
+   "local": true
   },
   {
    "id": "C5A0A0C0F909ACC3086A956F3FF3F4B7",
@@ -1034,22 +1060,6 @@
    "cat": "media",
    "title": "圍棋》長征11年！ 盧奕銓「最後一舞」2:0戰勝吳彥諶 奪新人王畢業圓夢 (風傳媒報導)",
    "url": "https://www.haifong.org/news/content/34E8658EAEFC39D080963EC9A84535E3"
-  },
-  {
-   "id": "0E9DCEF9EDA610160CEC9AD6DEEB6278",
-   "date": "2026-05-31",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【院生第六輪月賽 - 第一週成績公告】",
-   "url": "https://www.haifong.org/news/content/0E9DCEF9EDA610160CEC9AD6DEEB6278"
-  },
-  {
-   "id": "D4289F73F5710B4863CDCA966C1C34F5",
-   "date": "2026-05-29",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "預言成真！ 盧奕銓「最後一舞」2:0戰勝吳彥諶 奪新人王畢業圓夢",
-   "url": "https://www.haifong.org/news/content/D4289F73F5710B4863CDCA966C1C34F5"
   }
  ]
 }
