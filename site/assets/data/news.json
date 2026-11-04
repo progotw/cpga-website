@@ -1,10 +1,28 @@
 {
  "schema_version": 1,
- "generated": "2026-11-03T19:29:40+00:00",
+ "generated": "2026-11-04T12:08:23+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "084D8580F0C140C24B87DBBF60CA0309",
+   "date": "2026-11-04",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "【棋編碎碎念：大龍只想活下去】",
+   "url": "https://www.haifong.org/news/content/084D8580F0C140C24B87DBBF60CA0309",
+   "local": true
+  },
+  {
+   "id": "B4453DC77C0601C454BA39638FD550F2",
+   "date": "2026-11-04",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第2屆「龍星賽」本賽選手與抽籤日期公告",
+   "url": "https://www.haifong.org/news/content/B4453DC77C0601C454BA39638FD550F2",
+   "local": true
+  },
   {
    "id": "D380ECD80FA00D80F1347B1D225A248C",
    "date": "2026-11-03",
@@ -1055,7 +1073,8 @@
    "catLabel": "公告",
    "cat": "notice",
    "title": "【圍棋比賽作弊防制與處理辦法】",
-   "url": "https://www.haifong.org/news/content/6DD9BC85DC6148535C3915E04C497BFD"
+   "url": "https://www.haifong.org/news/content/6DD9BC85DC6148535C3915E04C497BFD",
+   "local": true
   },
   {
    "id": "18946B1C7944A87310855E422956302A",
@@ -1063,23 +1082,8 @@
    "catLabel": "比賽訊息",
    "cat": "match",
    "title": "【第7屆快棋爭霸戰本賽4強賽果：王元均九段、徐靖恩快棋王會師決賽】",
-   "url": "https://www.haifong.org/news/content/18946B1C7944A87310855E422956302A"
-  },
-  {
-   "id": "5B572BF8DC774CF00BBCD1DFB57B2056",
-   "date": "2026-06-03",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "第7屆快棋爭霸戰【本賽】 棋譜 & 結果",
-   "url": "https://www.haifong.org/news/content/5B572BF8DC774CF00BBCD1DFB57B2056"
-  },
-  {
-   "id": "34E8658EAEFC39D080963EC9A84535E3",
-   "date": "2026-06-01",
-   "catLabel": "媒體報導",
-   "cat": "media",
-   "title": "圍棋》長征11年！ 盧奕銓「最後一舞」2:0戰勝吳彥諶 奪新人王畢業圓夢 (風傳媒報導)",
-   "url": "https://www.haifong.org/news/content/34E8658EAEFC39D080963EC9A84535E3"
+   "url": "https://www.haifong.org/news/content/18946B1C7944A87310855E422956302A",
+   "local": true
   }
  ]
 }
