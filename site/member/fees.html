@@ -121,24 +121,31 @@
     });
     if (!has) return '';
 
+    /* 用表格而不是一行一個 flex：金額、名次、人數要上下對齊成三欄，
+       各行的字數不一樣（/ 101 人 比 / 95 人 寬），flex 會讓「第 4 名」
+       在每一行落在不同位置。 */
+    var TD = 'padding:7px 0 7px 12px;border-top:1px solid var(--line);' +
+             'text-align:right;white-space:nowrap;vertical-align:baseline';
+
     return '<div class="card mt-2">' +
       '<p class="muted mb-0" style="font-size:.9rem">獎金排名</p>' +
-      '<ul style="list-style:none;padding:0;margin:8px 0 0;font-size:.95rem">' +
+      '<table style="margin-top:8px;font-size:.95rem"><tbody>' +
       RANK_CATS.map(function (c) {
         var r = ranks[c[0]];
-        return '<li style="display:flex;justify-content:space-between;gap:12px;' +
-          'align-items:baseline;padding:7px 0;border-top:1px solid var(--line)">' +
-          '<span' + (r && r.rank ? '' : ' class="muted"') + '>' + esc(c[1]) + '</span>' +
-          '<span style="flex:none;font-variant-numeric:tabular-nums">' +
-            (r && r.rank
-              ? money(r.amount) +
-                '　<strong>第 ' + Number(r.rank) + ' 名</strong>' +
-                '<span class="muted" style="font-size:.84rem"> / ' +
-                  Number(r.n) + ' 人</span>'
-              : '<span class="muted">—</span>') +
-          '</span></li>';
+        return '<tr>' +
+          '<td style="' + TD + ';text-align:left;padding-left:0;width:99%"' +
+            (r && r.rank ? '' : ' class="muted"') + '>' + esc(c[1]) + '</td>' +
+          (r && r.rank
+            ? '<td style="' + TD + ';font-variant-numeric:tabular-nums">' +
+                money(r.amount) + '</td>' +
+              '<td style="' + TD + '"><strong>第 ' + Number(r.rank) + ' 名</strong></td>' +
+              '<td class="muted" style="' + TD + ';font-size:.84rem;padding-left:6px">/ ' +
+                Number(r.n) + ' 人</td>'
+            : '<td class="muted" style="' + TD + '">—</td>' +
+              '<td style="' + TD + '"></td><td style="' + TD + '"></td>') +
+          '</tr>';
       }).join('') +
-      '</ul>' +
+      '</tbody></table>' +
       '<p class="muted mb-0 mt-2" style="font-size:.84rem">' +
         '名次只算有獎金的人，同額同名次；「—」表示該項沒有獎金。' +
         '女棋總計為採計＋女子賽，只排有女子賽獎金的棋士。' +
