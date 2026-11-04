@@ -20,7 +20,19 @@
 
   /* 一列的欄位順序，由對方的資料決定，不要自行調動 */
   var DATE = 0, C1 = 1, C2 = 2, EVENT = 3, STAGE = 4,
-      BLACK = 5, WHITE = 6, WINNER = 7, MARGIN = 8;
+      BLACK = 5, WHITE = 6, WINNER = 7, MARGIN = 8,
+      /* 第 10 欄：HiGO 的棋譜編號。成績系統還沒加這個欄位（2026-11-04），
+         先接起來——對方加上去的那天就會自動出現「看棋譜」連結，
+         官網這邊不必再改。沒有值時一律當作沒有棋譜。 */
+      KIFU = 9;
+
+  /* 棋譜網址。編號只收數字，其餘一律視為沒有——
+     這個值來自外部資料，直接串進連結會變成可被注入的網址。 */
+  function kifuUrl(v) {
+    return /^[0-9]{1,12}$/.test(String(v == null ? '' : v).trim())
+      ? 'https://www.higohigo.org/#/kifu/' + String(v).trim()
+      : '';
+  }
 
   var cache = {};   // year -> Promise<rows>
 
@@ -54,6 +66,7 @@
       white: r[WHITE],
       winner: r[WINNER],
       margin: r[MARGIN],
+      kifu: kifuUrl(r[KIFU]),
       /* 勝方欄等於本人才算勝，其餘都算敗——與成績系統的算法一致 */
       won: r[WINNER] === name,
       color: r[BLACK] === name ? '黑' : '白',
@@ -219,7 +232,8 @@
             return { no: baseWins + k + 1, year: String(w.year), date: r[DATE],
                      event: r[EVENT], stage: r[STAGE],
                      opponent: isB ? r[WHITE] : r[BLACK],
-                     color: isB ? '黑' : '白', margin: r[MARGIN] };
+                     color: isB ? '黑' : '白', margin: r[MARGIN],
+                     kifu: kifuUrl(r[KIFU]) };
           });
           info.winsSince = list.length;
           info.total = baseWins + list.length;
