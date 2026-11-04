@@ -115,63 +115,6 @@
    ]
   },
   {
-   "id": "B26F65E303FB09F01C3DAF55AC233885",
-   "modes": [
-    "實體",
-    "線上"
-   ],
-   "areas": [
-    "臺北市",
-    "新北市"
-   ],
-   "students": [
-    "兒童",
-    "青少年",
-    "成人"
-   ],
-   "languages": [
-    "中英文皆可"
-   ],
-   "levels": "不限",
-   "fee": "面議",
-   "availability": "週一～六皆可，請直接私訊討論",
-   "intro": "隨著新一季的開始，我準備開設全新的圍棋線上課程～\n無論你是級位還是高段，都歡迎加入我，一起深入探索圍棋的精妙與挑戰！\n準備好面對各種複雜局面，提升棋藝了嗎？快來報名，一同迎接這個充實且有收穫的學習旅程吧！\n \n📍課程地點\n    實體課：限雙北地區\n    需額外支付場地、車馬費等費用\n    可在公共場所：如咖啡廳、包廂、圖書館（須自備棋具）\n    線上課：地點不拘\n   \n📍上課方式\n    個別課：根據學生需求量身定制課程，針對弱點進行強化訓練\n    網路團體班：依學生棋力分班，每班約3至8人，每節課約1.5小時\n\n📍上課內容\n    心態素質培養\n    指導棋、覆盤\n    AI布局、定石套路\n    計算力、中盤訓練\n    形勢判斷、官子等\n\n📍費用與時數\n\n    請私訊詢問\n\n📍上課時間\n\n    請私訊詢問\n\n📍年齡及棋力\n\n    不限\n__________________________________________\n\n老師將以專業的角度深入分析和推理，幫助學生學到更高水準的圍棋知識和技巧！有任何問題，歡迎私訊詢問！",
-   "acceptForm": true,
-   "contacts": [
-    {
-     "type": "line",
-     "label": "LINE",
-     "value": "https://line.me/ti/p/T_izRfqxT0"
-    },
-    {
-     "type": "ig",
-     "label": "Instagram",
-     "value": "https://www.instagram.com/steventsai98?igsh=ODFxZGVnYTh1cGl2&utm_source=qr"
-    },
-    {
-     "type": "fb",
-     "label": "Facebook",
-     "value": "https://www.facebook.com/profile.php?id=61592921801758"
-    },
-    {
-     "type": "email",
-     "label": "電子信箱",
-     "value": "stevendg0421@gmail.com"
-    },
-    {
-     "type": "phone",
-     "label": "電話",
-     "value": "0930729411"
-    }
-   ],
-   "links": [
-    {
-     "url": "https://youtube.com/channel/UCL-HlNhZ9vKo19wX6FXlrxA?si=HCuXTHW42m8dvXfw",
-     "label": "Youtube頻道"
-    }
-   ]
-  },
-  {
    "id": "A5C3900CB8FC98E0B62E558F008D3014",
    "modes": [
     "實體",
@@ -204,6 +147,63 @@
      "type": "fb",
      "label": "Facebook",
      "value": "https://www.facebook.com/share/18pMb4LYo4/?mibextid=wwXIfr"
+    }
+   ]
+  },
+  {
+   "id": "B26F65E303FB09F01C3DAF55AC233885",
+   "modes": [
+    "實體",
+    "線上"
+   ],
+   "areas": [
+    "臺北市",
+    "新北市"
+   ],
+   "students": [
+    "兒童",
+    "青少年",
+    "成人"
+   ],
+   "languages": [
+    "中英文皆可"
+   ],
+   "levels": "不限",
+   "fee": "面議",
+   "availability": "週一～六皆可，請直接私訊討論",
+   "intro": "◼︎ 授課型態與地點\n○ 線上課程｜不限地區，線上即時對弈與語音覆盤，高效彈性\n○ 實體個別課｜限雙北地區\n・地點可選安靜咖啡廳、租借包廂或圖書館（須自備棋具）\n・依實際地點酌收車馬費及場地費用\n○ 網路團體班｜3～8 人小班制，依棋力精準分班，每堂約 1.5 小時\n\n◼︎ 核心訓練內容\n○ 心態與素養｜高壓讀秒下的冷靜取捨、時間分配與劣勢拼搏手段\n○ 指導棋覆盤｜直擊實戰惡手與思考盲點，引導修正錯誤僵化思維\n○ 佈局大局觀｜理解現代AI著法背後邏輯，確立方向拒絕死記硬背\n○ 中盤計算力｜培養深層算路與戰鬥觀念，精準掌握勝負攻防要點\n○ 形勢與官子｜建立厚薄觀念與得失判斷，提升後半盤收束與點目\n\n◼︎ 對象與課程諮詢\n○ 招生對象｜年齡、棋力不限（依學員程度量身訂製）\n○ 時數與費用｜依個別需求客製安排，歡迎洽詢\n○ 上課時間｜預約協調合適時段\n\n📩 歡迎來訊洽詢課程詳情與棋力規劃。",
+   "acceptForm": true,
+   "contacts": [
+    {
+     "type": "line",
+     "label": "LINE",
+     "value": "https://line.me/ti/p/T_izRfqxT0"
+    },
+    {
+     "type": "ig",
+     "label": "Instagram",
+     "value": "https://www.instagram.com/steventsai98?igsh=ODFxZGVnYTh1cGl2&utm_source=qr"
+    },
+    {
+     "type": "fb",
+     "label": "Facebook",
+     "value": "https://www.facebook.com/profile.php?id=61592921801758"
+    },
+    {
+     "type": "email",
+     "label": "電子信箱",
+     "value": "stevendg0421@gmail.com"
+    },
+    {
+     "type": "phone",
+     "label": "電話",
+     "value": "0930729411"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://youtube.com/channel/UCL-HlNhZ9vKo19wX6FXlrxA?si=HCuXTHW42m8dvXfw",
+     "label": "Youtube頻道"
     }
    ]
   }
