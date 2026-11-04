@@ -62,6 +62,27 @@
    ]
   },
   {
+   "id": "A09CE0ACB62DC6C4075045F63418D5F4",
+   "modes": [
+    "線上"
+   ],
+   "languages": [
+    "中文"
+   ],
+   "levels": "業餘初段～業餘七段",
+   "fee": "1000/1hr",
+   "availability": "平日晚間、假日",
+   "intro": "上課模式一般為覆盤或下棋後復盤",
+   "acceptForm": true,
+   "contacts": [
+    {
+     "type": "email",
+     "label": "電子信箱",
+     "value": "jasper200392h@gmail.com"
+    }
+   ]
+  },
+  {
    "id": "81991D2DE8FF2F97698D8EC7905B1417",
    "modes": [
     "線上"
