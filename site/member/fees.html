@@ -113,32 +113,36 @@
   ];
 
   function ranksCard(ranks) {
-    /* 2026 年初第一次同步前的舊資料沒有這個欄位，整塊不顯示 */
-    var rows = RANK_CATS.filter(function (c) {
-      var r = ranks && ranks[c[0]];
-      return r && r.rank;
+    /* 2026 年初第一次同步前的舊資料沒有這個欄位，整塊不顯示。
+       有這個欄位之後四種一律都列出來：沒下到的、不能下的（男棋士的女棋總計）
+       顯示「—」，秘書處要的是看得出「這一項是零」，而不是整列消失。 */
+    var has = RANK_CATS.some(function (c) {
+      return ranks && ranks[c[0]] && ranks[c[0]].rank;
     });
-    if (!rows.length) return '';
+    if (!has) return '';
 
     return '<div class="card mt-2">' +
       '<p class="muted mb-0" style="font-size:.9rem">獎金排名</p>' +
       '<ul style="list-style:none;padding:0;margin:8px 0 0;font-size:.95rem">' +
-      rows.map(function (c) {
+      RANK_CATS.map(function (c) {
         var r = ranks[c[0]];
         return '<li style="display:flex;justify-content:space-between;gap:12px;' +
           'align-items:baseline;padding:7px 0;border-top:1px solid var(--line)">' +
-          '<span>' + esc(c[1]) + '</span>' +
+          '<span' + (r && r.rank ? '' : ' class="muted"') + '>' + esc(c[1]) + '</span>' +
           '<span style="flex:none;font-variant-numeric:tabular-nums">' +
-            money(r.amount) +
-            '　<strong>第 ' + Number(r.rank) + ' 名</strong>' +
-            '<span class="muted" style="font-size:.84rem"> / ' +
-              Number(r.n) + ' 人</span>' +
+            (r && r.rank
+              ? money(r.amount) +
+                '　<strong>第 ' + Number(r.rank) + ' 名</strong>' +
+                '<span class="muted" style="font-size:.84rem"> / ' +
+                  Number(r.n) + ' 人</span>'
+              : '<span class="muted">—</span>') +
           '</span></li>';
       }).join('') +
       '</ul>' +
       '<p class="muted mb-0 mt-2" style="font-size:.84rem">' +
-        '名次只算有獎金的人，同額同名次。女棋總計為採計＋女子賽，' +
-        '只排有女子賽獎金的棋士。與院方「對局費」系統的排行榜同一份資料。' +
+        '名次只算有獎金的人，同額同名次；「—」表示該項沒有獎金。' +
+        '女棋總計為採計＋女子賽，只排有女子賽獎金的棋士。' +
+        '與院方「對局費」系統的排行榜同一份資料。' +
       '</p></div>';
   }
 
