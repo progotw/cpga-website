@@ -99,6 +99,49 @@
     A.signOut('player');
   });
 
+  /* 獎金排名。四種總計都只是同一份明細的不同加總，名次由 CI 算好寫在
+     自己那一列裡（見 scripts/fetch_fees.py）。分類與名稱照院方「對局費」
+     系統排行榜的寫法，棋士才對得起來。
+
+     秘書處決定只給看自己的名次，所以這裡沒有別人的姓名與金額可顯示——
+     資料庫那一列裡本來就沒有。 */
+  var RANK_CATS = [
+    ['total', '實際全額總計'],
+    ['counted', '採計獎金'],
+    ['women', '女棋總計'],
+    ['restricted', '限制賽總計']
+  ];
+
+  function ranksCard(ranks) {
+    /* 2026 年初第一次同步前的舊資料沒有這個欄位，整塊不顯示 */
+    var rows = RANK_CATS.filter(function (c) {
+      var r = ranks && ranks[c[0]];
+      return r && r.rank;
+    });
+    if (!rows.length) return '';
+
+    return '<div class="card mt-2">' +
+      '<p class="muted mb-0" style="font-size:.9rem">獎金排名</p>' +
+      '<ul style="list-style:none;padding:0;margin:8px 0 0;font-size:.95rem">' +
+      rows.map(function (c) {
+        var r = ranks[c[0]];
+        return '<li style="display:flex;justify-content:space-between;gap:12px;' +
+          'align-items:baseline;padding:7px 0;border-top:1px solid var(--line)">' +
+          '<span>' + esc(c[1]) + '</span>' +
+          '<span style="flex:none;font-variant-numeric:tabular-nums">' +
+            money(r.amount) +
+            '　<strong>第 ' + Number(r.rank) + ' 名</strong>' +
+            '<span class="muted" style="font-size:.84rem"> / ' +
+              Number(r.n) + ' 人</span>' +
+          '</span></li>';
+      }).join('') +
+      '</ul>' +
+      '<p class="muted mb-0 mt-2" style="font-size:.84rem">' +
+        '名次只算有獎金的人，同額同名次。女棋總計為採計＋女子賽，' +
+        '只排有女子賽獎金的棋士。與院方「對局費」系統的排行榜同一份資料。' +
+      '</p></div>';
+  }
+
   function render(row) {
     var events = sortEvents(row.events || []);
     document.getElementById('sub').textContent =
@@ -110,6 +153,8 @@
         '<p class="mb-0" style="font-size:1.7rem;font-weight:700;color:var(--ink)">' +
           money(row.total) + ' <span style="font-size:1rem;font-weight:400">元</span></p>' +
       '</div>' +
+
+      ranksCard(row.ranks) +
 
       events.map(function (ev) {
         return '<div class="card mt-2">' +

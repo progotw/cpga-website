@@ -123,6 +123,79 @@ def sb(method, path, body=None, prefer=None):
                  % (e.code, e.read().decode('utf-8')[:200]))
 
 
+# ---------------------------------------------------------------------------
+# 獎金排名
+#
+# 海峰「對局費」系統的排行榜有四張表，四張都只是同一份明細的不同加總。
+# 每筆賽事本來就帶著 group（採計／女子／限制），所以官網自己算得出來。
+#
+# 一定要用「院方發布的完整名單」來排，不是只用名錄上的 139 位——
+# 業餘與外籍棋手也領對局費，把他們漏掉會讓名次整個往前跑，
+# 棋士拿去跟院方那頁對就對不起來。寫回資料庫時才只留名錄上的人。
+#
+# 秘書處決定棋士只看得到自己的名次，所以這裡算完只把「自己那一格」
+# 寫進自己那一列，別人的姓名與金額不會離開這支程式。
+# ---------------------------------------------------------------------------
+GROUPS = ('採計', '女子', '限制')
+
+
+def group_sums(events):
+    s = dict.fromkeys(GROUPS, 0)
+    for e in events or []:
+        g = (e or {}).get('group')
+        if g in s:
+            s[g] += int((e or {}).get('subtotal') or 0)
+    return s
+
+
+def rank_board(pairs):
+    """[(key, 金額)] → {key: (名次, 這張榜共幾人)}
+
+    同額同名次，下一位跳號（兩人並列第 3 則下一位是第 5）——
+    比照 Excel 的 RANK，與報名名單用的是同一套規則。
+    金額 0 或負數的不上榜，院方那頁也不列。
+    """
+    pairs = sorted([(k, a) for k, a in pairs if a > 0], key=lambda x: -x[1])
+    out, n = {}, len(pairs)
+    for i, (k, a) in enumerate(pairs):
+        out[k] = (out[pairs[i - 1][0]][0] if i and a == pairs[i - 1][1] else i + 1, n)
+    return out
+
+
+def compute_ranks(entries):
+    """entries：[{'key':…, 'total':int, 'events':[…]}]（院方發布的全部人）
+    回傳 {key: {分類: {'amount','rank','n'}}}；沒上榜的分類整個不放。
+    """
+    sums = {}
+    for e in entries:
+        g = group_sums(e.get('events'))
+        # 女棋榜只排有下女子賽的棋士。名錄沒有性別欄位，這是手上唯一的依據；
+        # 整年沒有女子賽獎金的女棋士會不在這張榜上（院方那頁同樣不會有她）。
+        g['_women'] = (g['採計'] + g['女子']) if any(
+            (x or {}).get('group') == '女子' for x in e.get('events') or []) else 0
+        g['_total'] = int(e.get('total') or 0)
+        sums[e['key']] = g
+
+    boards = {
+        'total':      rank_board([(k, v['_total']) for k, v in sums.items()]),
+        'counted':    rank_board([(k, v['採計']) for k, v in sums.items()]),
+        'women':      rank_board([(k, v['_women']) for k, v in sums.items()]),
+        'restricted': rank_board([(k, v['限制']) for k, v in sums.items()]),
+    }
+    amount = {'total': '_total', 'counted': '採計',
+              'women': '_women', 'restricted': '限制'}
+
+    out = {}
+    for k, v in sums.items():
+        r = {}
+        for cat, board in boards.items():
+            if k in board:
+                r[cat] = {'amount': v[amount[cat]],
+                          'rank': board[k][0], 'n': board[k][1]}
+        out[k] = r
+    return out
+
+
 def sync(year):
     data = fetch_release(year)
     if data is None:
@@ -136,6 +209,11 @@ def sync(year):
     published = data.get('published_at') or dt.datetime.now().isoformat()
     # 這一次執行的時間戳。所有列都蓋同一個值，等一下用它分辨誰沒被更新到。
     run_ts = dt.datetime.now(dt.timezone.utc).isoformat()
+    # 名次用完整名單算，寫回去的只有名錄上的人
+    ranks = compute_ranks([{'key': p.get('name'), 'total': p.get('total'),
+                            'events': p.get('events')}
+                           for p in data.get('players') or []])
+
     rows, skipped = [], 0
     for p in data.get('players') or []:
         pid = by_name.get(p.get('name'))
@@ -151,6 +229,7 @@ def sync(year):
             'events': p.get('events') or [],
             'published_at': published,
             'synced_at': run_ts,
+            'ranks': ranks.get(p.get('name')) or {},
         })
 
     print('%d 年度：發布版 %d 人，對應到名錄 %d 人，略過 %d 人。'
@@ -177,7 +256,35 @@ def sync(year):
     print('院方發布時間：%s' % published)   # 時間不是機密，而且出問題時要靠它判斷版本
 
 
+def rerank(year):
+    """只重算名次，不重抓對局費。
+
+    2025 年度是秘書處從協會的 Excel 匯入的，院方沒有發布版可抓，
+    所以名次只能用資料庫裡現有的列來排——名錄以外的人（業餘、外籍）
+    當年就沒有匯進來，這一年的名次是「職業棋士之間」的名次。
+    2026 年起由 sync() 用院方的完整名單算，與院方那頁一致。
+    """
+    rows = json.loads(sb(
+        'GET',
+        'player_fees?year=eq.%d&select=player_id,total,events,published_at' % year))
+    if not rows:
+        print('%d 年度：資料庫裡沒有這一年的對局費，不做任何變更。' % year)
+        return
+    ranks = compute_ranks([{'key': r['player_id'], 'total': r['total'],
+                            'events': r['events']} for r in rows])
+    for r in rows:
+        r['ranks'] = ranks.get(r['player_id']) or {}
+    sb('POST', 'player_fees', rows,
+       prefer='resolution=merge-duplicates,return=minimal')
+    print('%d 年度：已重算 %d 位棋士的名次。' % (year, len(rows)))
+
+
 def main():
+    # 只重算名次：python scripts/fetch_fees.py --rerank 2025
+    if '--rerank' in sys.argv:
+        rerank(int(sys.argv[sys.argv.index('--rerank') + 1]))
+        return
+
     # 指定年份：python scripts/fetch_fees.py site/assets/data/players.json --year 2025
     if '--year' in sys.argv:
         sync(int(sys.argv[sys.argv.index('--year') + 1]))

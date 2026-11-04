@@ -25,6 +25,10 @@ on:
         description: '要抓的年度（留空＝今年。報名名單需要前一年時用這個補抓）'
         required: false
         default: ''
+      rerank:
+        description: '只重算這一年的獎金排名，不重抓金額（2025 年度用；院方沒有發布版可抓）'
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -47,7 +51,9 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
-          if [ -n "${{ inputs.year }}" ]; then
+          if [ -n "${{ inputs.rerank }}" ]; then
+            python scripts/fetch_fees.py --rerank "${{ inputs.rerank }}"
+          elif [ -n "${{ inputs.year }}" ]; then
             python scripts/fetch_fees.py site/assets/data/players.json --year "${{ inputs.year }}"
           else
             python scripts/fetch_fees.py site/assets/data/players.json
