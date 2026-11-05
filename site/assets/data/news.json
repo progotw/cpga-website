@@ -1,10 +1,37 @@
 {
  "schema_version": 1,
- "generated": "2026-11-05T05:32:01+00:00",
+ "generated": "2026-11-05T12:20:23+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "B91D72B264179C6D1BA59229CEDFC5CA",
+   "date": "2026-11-05",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第1屆玄樂盃決賽第三局 賴均輔扳回一城 比數2:1",
+   "url": "https://www.haifong.org/news/content/B91D72B264179C6D1BA59229CEDFC5CA",
+   "local": true
+  },
+  {
+   "id": "C7B40D854890F5DAA5C6253918AACF2F",
+   "date": "2026-11-05",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "第2屆世界棋仙戰臺灣代表選拔 徐靖恩、許皓鋐取得代表權！",
+   "url": "https://www.haifong.org/news/content/C7B40D854890F5DAA5C6253918AACF2F",
+   "local": true
+  },
+  {
+   "id": "A72E3F547208ECC9E0078372378637B0",
+   "date": "2026-11-05",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "第2屆「龍星賽」抽籤結果公告",
+   "url": "https://www.haifong.org/news/content/A72E3F547208ECC9E0078372378637B0",
+   "local": true
+  },
   {
    "id": "084D8580F0C140C24B87DBBF60CA0309",
    "date": "2026-11-04",
@@ -93,15 +120,6 @@
    "cat": "media",
    "title": "【精彩好棋專欄：第90篇 小將的衝擊(上)】",
    "url": "https://www.haifong.org/news/content/33A23CF4A79848F6BEF781248456EA9A",
-   "local": true
-  },
-  {
-   "id": "B91D72B264179C6D1BA59229CEDFC5CA",
-   "date": "2026-10-29",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "玄樂盃決賽第二局結果？許皓鋐中盤勝 距首屆冠軍一勝之遙",
-   "url": "https://www.haifong.org/news/content/B91D72B264179C6D1BA59229CEDFC5CA",
    "local": true
   },
   {
@@ -1065,24 +1083,6 @@
    "cat": "notice",
    "title": "【社群媒體使用指引】",
    "url": "https://www.haifong.org/news/content/D0DE2168BF2EA551A076B2A53AB93CD9",
-   "local": true
-  },
-  {
-   "id": "6DD9BC85DC6148535C3915E04C497BFD",
-   "date": "2026-06-04",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【圍棋比賽作弊防制與處理辦法】",
-   "url": "https://www.haifong.org/news/content/6DD9BC85DC6148535C3915E04C497BFD",
-   "local": true
-  },
-  {
-   "id": "18946B1C7944A87310855E422956302A",
-   "date": "2026-06-03",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【第7屆快棋爭霸戰本賽4強賽果：王元均九段、徐靖恩快棋王會師決賽】",
-   "url": "https://www.haifong.org/news/content/18946B1C7944A87310855E422956302A",
    "local": true
   }
  ]

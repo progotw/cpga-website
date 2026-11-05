@@ -1,6 +1,17 @@
 {
  "photos": [
   {
+   "id": "C7B40D854890F5DAA5C6253918AACF2F",
+   "image": "assets/img/gallery/C7B40D854890F5DAA5C6253918AACF2F.jpg",
+   "width": 1200,
+   "height": 901,
+   "caption": "第2屆世界棋仙戰臺灣代表選拔 徐靖恩、許皓鋐取得代表權！",
+   "date": "2026-11-05",
+   "link": "https://www.haifong.org/news/content/C7B40D854890F5DAA5C6253918AACF2F",
+   "credit": "海峰棋院",
+   "local": true
+  },
+  {
    "id": "D380ECD80FA00D80F1347B1D225A248C",
    "image": "assets/img/gallery/D380ECD80FA00D80F1347B1D225A248C.jpg",
    "width": 1200,
