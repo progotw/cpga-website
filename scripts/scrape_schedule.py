@@ -45,15 +45,37 @@ AMPM_SESSIONS = {
 }
 
 
+# 小編也會直接把時間寫在標題裡，例如「龍星賽決賽(13:00)」。
+# 這種是寫明的時間，不是我們推定的，優先於下面任何慣例。
+# 時與分都限定在合理範圍，才不會把「20屆」之類的數字誤認成時間。
+CLOCK = re.compile(r'[（(]?\s*([01]?\d|2[0-3])\s*[:：]\s*([0-5]\d)\s*[）)]?')
+
+
+def clock_of(title):
+    """標題寫明時間（13:00）時回傳 ['13:00']，否則 None。"""
+    m = CLOCK.search(title)
+    return ['%02d:%s' % (int(m.group(1)), m.group(2))] if m else None
+
+
 def sessions_of(title):
-    """標題若註明場次，回傳該場次的開賽時間清單，否則 None。"""
+    """標題若註明場次，回傳該場次的開賽時間清單，否則 None。
+
+    寫明的時間優先：「(下午)」會被當成 14:00，但小編若寫的是「(13:00)」，
+    就照 13:00，不要被時段註記蓋掉。
+    """
+    exact = clock_of(title)
+    if exact:
+        return exact
     m = AMPM.search(title)
     return AMPM_SESSIONS.get(m.group(1)) if m else None
 
 
 def clean_title(title):
-    """去掉「(上午)」這類場次註記，讓賽事名與輪次不會夾雜它。"""
-    return re.sub(r'\s{2,}', ' ', AMPM.sub('', title)).strip()
+    """去掉「(上午)」「(13:00)」這類註記，讓賽事名與輪次不會夾雜它。
+
+    沒有去掉的話輪次會變成「決賽(13:00)」，畫面上時間會出現兩次。
+    """
+    return re.sub(r'\s{2,}', ' ', CLOCK.sub('', AMPM.sub('', title))).strip()
 
 
 def split_title(title):
@@ -108,11 +130,14 @@ def infer_times(events):
             continue
         if (e['end'].date() - e['start'].date()).days > 1:
             continue
-        hint = sessions_of(e['summary'])
+        exact = clock_of(e['summary'])
+        hint = exact or sessions_of(e['summary'])
         if not hint and is_pro_series(e['summary']):
             hint = [DEFAULT_TIME]
         if hint:
             e['session_hint'] = hint
+            # 標題寫明的時間不是推定的，不該跟著「時間多為推定」那句話
+            e['session_exact'] = bool(exact)
     return events
 
 
@@ -208,7 +233,7 @@ def render_json(events, time_min, time_max, out_path):
             # sessions：當天的開賽時間清單，「(上下午)」會有兩個
             'sessions': hint or ([] if e['all_day'] else [e['start'].strftime('%H:%M')]),
             'time': (hint[0] if hint else (None if e['all_day'] else e['start'].strftime('%H:%M'))),
-            'time_inferred': bool(hint),
+            'time_inferred': bool(hint) and not e.get('session_exact'),
             'end_time': None if e['all_day'] else e['end'].strftime('%H:%M'),
             'all_day': e['all_day'],
             'end_date': e['end'].date().isoformat(),
