@@ -94,6 +94,17 @@
       return head + '–' + tail;
     },
 
+    /* 同一天的排序依據：當天最早的開賽時間。
+       沒有時間的（整天行程）排在最前面——那一整天都算在內。
+
+       資料來源的順序是日曆給的，同一天不保證由早到晚：2026-11-05 使用者
+       回報 11/11 的龍星賽 16 強（14:00）排在 32 強（10:00）上面。 */
+    startKey: function (e) {
+      var list = (e && e.sessions && e.sessions.length) ? e.sessions
+                 : (e && e.time ? [e.time] : []);
+      return list.slice().sort()[0] || '';
+    },
+
     /* 今天（本機時區）YYYY-MM-DD */
     today: function () {
       var d = new Date();
@@ -132,7 +143,8 @@
       }
 
       var all = (events || []).slice().sort(function (a, b) {
-        return String(a.date).localeCompare(String(b.date));
+        return String(a.date).localeCompare(String(b.date)) ||
+               String(S.startKey(a)).localeCompare(String(S.startKey(b)));
       });
       if (!all.length) {
         box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">近期沒有排定的賽程。</p>';

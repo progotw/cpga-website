@@ -151,9 +151,11 @@
     var rows = (data.events || [])
       /* 用最後一天比對：為期兩天的比賽，第二天仍在進行中，不能消失 */
       .filter(function (e) { return S.lastDay(e) >= today; })
+      /* 同一天由早到晚。時間用 startKey()，與月曆下方的清單同一套——
+         一天兩局時 time 可能是空的，真正的開賽時間在 sessions 裡。 */
       .sort(function (a, b) {
         return a.date === b.date
-          ? String(a.time || '').localeCompare(String(b.time || ''))
+          ? String(S.startKey(a)).localeCompare(String(S.startKey(b)))
           : a.date.localeCompare(b.date);
       });
 
