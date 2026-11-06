@@ -366,6 +366,21 @@
                (p.candidates || []).indexOf(myName) > -1;
       });
 
+      /* 同一天的排序：有時間的照時間，沒時間的排在後面；同一個賽事再依
+         「第 N 局」的號碼。資料來源的順序是操作台給的，同一天不保證照
+         號碼走——2026-11-06 使用者回報龍星賽決賽第 1、2、3 局排成 2、3、1。
+         「16強」這種沒有局數的不抓號碼，免得 8 強排到 16 強後面。 */
+      function roundNo(p) {
+        var m = String(p.round || '').match(/第\s*(\d+)\s*[局場]/);
+        return m ? Number(m[1]) : 0;
+      }
+      rows.sort(function (a, b) {
+        return String(a.date).localeCompare(String(b.date)) ||
+               String(a.time || '99:99').localeCompare(String(b.time || '99:99')) ||
+               String(a.event || '').localeCompare(String(b.event || '')) ||
+               roundNo(a) - roundNo(b);
+      });
+
       /* 同一天同一輪常常有好幾個空格——敗部3回有三組，他會落在哪一組要看
          前幾輪的結果——列出來就是三筆一模一樣的「若晉級　對手未定」，
          看起來像那天要下三場。同一天、同賽事、同輪次只留一筆。
