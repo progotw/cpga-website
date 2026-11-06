@@ -70,6 +70,9 @@
       '<div class="admin-bar__inner" style="display:flex;gap:10px;align-items:center;' +
         'flex-wrap:wrap;padding:9px 0">' +
         '<strong style="font-size:.88rem;color:var(--accent)">管理員檢視</strong>' +
+        '<input id="viewAsFind" type="search" placeholder="輸入姓名搜尋" ' +
+          'autocomplete="off" style="font:inherit;font-size:.88rem;padding:5px 8px;' +
+          'border:1px solid var(--line);border-radius:6px;background:#fff;width:9em">' +
         '<select id="viewAsSel" style="font:inherit;font-size:.88rem;padding:5px 8px;' +
           'border:1px solid var(--line);border-radius:6px;background:#fff;max-width:14em">' +
           '<option value="">（我自己的帳號）</option>' +
@@ -84,31 +87,64 @@
     else document.body.insertBefore(bar, document.body.firstChild);
 
     var sel = bar.querySelector('#viewAsSel');
+    var find = bar.querySelector('#viewAsFind');
+    var hint = bar.querySelector('#viewAsHint');
     var cur = read();
+    var all = [];
+
+    /* 一百多個人用拉的太慢，所以搜尋框打字就把選單篩到剩下符合的。
+       段位也一起比對，打「七段」可以列出全部七段。 */
+    function fill(q) {
+      q = String(q || '').trim();
+      var list = q
+        ? all.filter(function (p) {
+            return (p.name + (p.rank || '')).indexOf(q) > -1;
+          })
+        : all;
+      sel.innerHTML = '<option value="">（我自己的帳號）</option>' +
+        list.map(function (p) {
+          return '<option value="' + esc(p.id) + '"' +
+            (cur && cur.id === p.id ? ' selected' : '') + '>' +
+            esc(p.name) + (p.rank ? '　' + esc(p.rank) : '') + '</option>';
+        }).join('');
+      if (q) hint.textContent = list.length
+        ? '符合 ' + list.length + ' 位，按 Enter 看第一位。'
+        : '名錄裡沒有符合「' + q + '」的棋士。';
+      else hint.textContent = '選一位棋士，底下的賽程、對局費、成績就照那位棋士看到的樣子顯示。';
+      return list;
+    }
+
+    function go(id, name) {
+      write(id ? { id: id, name: name } : null);
+      location.reload();
+    }
 
     /* 名錄是公開檔，跟棋士個人頁、報名頁用的是同一份 */
     fetch('../assets/data/players.json', { cache: 'no-cache' })
       .then(function (r) { return r.json(); })
       .then(function (d) {
-        var list = (d.players || []).slice().sort(function (a, b) {
+        all = (d.players || []).slice().sort(function (a, b) {
           return String(a.name).localeCompare(String(b.name), 'zh-Hant');
         });
-        sel.innerHTML = '<option value="">（我自己的帳號）</option>' +
-          list.map(function (p) {
-            return '<option value="' + esc(p.id) + '"' +
-              (cur && cur.id === p.id ? ' selected' : '') + '>' +
-              esc(p.name) + (p.rank ? '　' + esc(p.rank) : '') + '</option>';
-          }).join('');
+        fill('');
       })
       .catch(function () {
-        bar.querySelector('#viewAsHint').textContent = '棋士名錄載入失敗，暫時無法切換檢視對象。';
+        hint.textContent = '棋士名錄載入失敗，暫時無法切換檢視對象。';
       });
+
+    find.addEventListener('input', function () { fill(find.value); });
+
+    /* 打完名字按 Enter 就直接換過去，不用再移到旁邊的選單 */
+    find.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+      var list = fill(find.value);
+      if (list.length) go(list[0].id, list[0].name);
+    });
 
     sel.addEventListener('change', function () {
       var id = sel.value;
-      var name = id ? sel.options[sel.selectedIndex].text.split('　')[0] : '';
-      write(id ? { id: id, name: name } : null);
-      location.reload();
+      go(id, id ? sel.options[sel.selectedIndex].text.split('　')[0] : '');
     });
   };
 
