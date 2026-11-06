@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-06T07:32:37+00:00",
+ "generated": "2026-11-06T12:06:44+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
+   "date": "2026-11-06",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "中環碁聖賽決賽是誰對誰？新人王盧奕銓對決海峰盃冠軍林君諺",
+   "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A",
+   "local": true
+  },
   {
    "id": "B91D72B264179C6D1BA59229CEDFC5CA",
    "date": "2026-11-05",
@@ -102,15 +111,6 @@
    "cat": "notice",
    "title": "【2027年度 院生甄選成績及錄取名單】",
    "url": "https://www.haifong.org/news/content/6C00B7A1B28A16F3B1515048DE9E978B",
-   "local": true
-  },
-  {
-   "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
-   "date": "2026-10-30",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "圍棋》四大冠軍得主會師中環碁聖4強！上屆冠軍賴均輔再下一城",
-   "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A",
    "local": true
   },
   {
