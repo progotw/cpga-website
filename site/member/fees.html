@@ -36,6 +36,8 @@
 <script src="../assets/js/sb-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
 <script src="../assets/js/auth.js"></script>
+<!-- 管理員「以棋士身分檢視」：選定的棋士在首頁選，這頁跟著一起換 -->
+<script src="../assets/js/viewas.js"></script>
 <script>
 (function () {
   var A = window.CPGA_AUTH;
@@ -218,18 +220,24 @@
   }
 
   A.require('player').then(function (me) {
-    document.getElementById('who').textContent = me.profile.display_name || me.user.email;
+    var V = window.CPGA_VIEWAS;
+    V.mount(me);
+    var pid = V.playerId(me);
+    var asName = V.name(me);
+    document.getElementById('who').textContent =
+      (me.profile.display_name || me.user.email) +
+      (asName ? '　·　檢視：' + asName : '');
 
-    if (!me.profile.player_id) {
+    if (!pid) {
       box.innerHTML = '';
-      say('error', '此帳號尚未對應到棋士名錄，無法顯示對局費，請洽秘書處。');
+      say('error', window.CPGA_VIEWAS.noPlayerText('對局費'));
       return;
     }
 
     /* 條件寫出來，不是只靠資料列權限：require('player') 會放管理員進來，
        而管理員讀得到所有人的對局費，不加條件這頁會列出別人的金額。 */
     return A.client.from('player_fees').select('*')
-      .eq('player_id', me.profile.player_id)
+      .eq('player_id', pid)
       .order('year', { ascending: false })
       .limit(20)
       .then(function (res) {

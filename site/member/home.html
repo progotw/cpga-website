@@ -162,6 +162,8 @@
      有登入身分的頁面上，對方帳號被盜就等於我們的權限被拿走。
      改成自己讀同一份公開資料，不執行任何外部程式。 -->
 <script src="../assets/js/results.js"></script>
+<!-- 管理員「以棋士身分檢視」：秘書處要能確認棋士登入後看到的內容對不對 -->
+<script src="../assets/js/viewas.js"></script>
 <script>
 (function () {
   var A = window.CPGA_AUTH;
@@ -184,20 +186,29 @@
   });
 
   A.require('player').then(function (me) {
+    var V = window.CPGA_VIEWAS;
+    var isAdmin = me.profile.role === 'admin';
+    V.mount(me);                 /* 管理員才會出現的「以棋士身分檢視」選單 */
+    var pid = V.playerId(me);    /* 這一頁要顯示誰的賽程／對局費／成績 */
+    var asName = V.name(me);     /* 有值＝管理員正在看某位棋士 */
+
     var name = me.profile.display_name || me.user.email;
     document.getElementById('who').textContent =
-      name + (me.profile.role === 'admin' ? '　·　管理員檢視' : '');
-    document.getElementById('greeting').textContent = name + '，您好';
+      name + (isAdmin ? '　·　管理員' : '');
+    document.getElementById('greeting').textContent =
+      asName ? asName + '　（管理員檢視）' : name + '，您好';
     document.getElementById('subline').textContent =
-      me.profile.role === 'admin'
-        ? '您是以管理員身分檢視職業棋士專區。'
-        : '以下為本會對棋士發布的內部資訊。';
+      asName
+        ? '以下是這位棋士登入後看到的內容，與他本人看到的是同一份資料。'
+        : isAdmin
+          ? '您是以管理員身分檢視職業棋士專區。上方可切換成某位棋士的檢視畫面。'
+          : '以下為本會對棋士發布的內部資訊。';
 
     loadAnnouncements();
     loadFiles();
-    loadEntries(me.profile.role === 'admin');
-    loadMine(me.profile.player_id, name);
-    loadMyResults(me.profile.player_id);
+    loadEntries(pid, asName, isAdmin);
+    loadMine(pid, asName || name);
+    loadMyResults(pid);
   });
 
   /* ---- 我的成績 ----
@@ -315,7 +326,7 @@
       if (danBox) danBox.innerHTML = '<p class="muted mb-0" style="font-size:.86rem">—</p>';
     }
     if (!playerId) {
-      note('此帳號尚未對應到棋士名錄，無法顯示個人成績，請洽秘書處。');
+      note(window.CPGA_VIEWAS.noPlayerText('個人成績'));
       return;
     }
     if (!window.HaifongResults) {
@@ -343,7 +354,7 @@
     var box = document.getElementById('myList');
     if (!playerId) {
       box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">' +
-        '此帳號尚未對應到棋士名錄，無法顯示個人賽程，請洽秘書處。</p>';
+        esc(window.CPGA_VIEWAS.noPlayerText('個人賽程')) + '</p>';
       return;
     }
 
@@ -443,7 +454,7 @@
      這裡不放按鈕，避免在首頁誤按。
 
      報名期間資料庫層也會把關（entry_open），這裡只決定畫面。 */
-  function loadEntries(isAdmin) {
+  function loadEntries(playerId, playerName, isAdmin) {
     var box = document.getElementById('entryList');
     function note(text) {
       box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">' + text + '</p>';
@@ -455,10 +466,11 @@
       A.client.from('tournaments').select('id, title, opens_at, closes_at, sort, published')
         .order('sort', { ascending: false })
         .order('closes_at', { ascending: true, nullsFirst: false }),
-      /* 管理員檢視時不查報名紀錄：查到的會是管理員自己的（通常是空的），
-         標成「未報名」反而會誤導 */
+      /* 管理員讀得到所有人的報名紀錄，所以要自己篩出檢視對象那一位；
+         沒有選人時不標報名狀態（標成「未報名」反而會誤導）。
+         棋士自己看時資料列權限只會給他自己的，不必也不能加條件。 */
       isAdmin
-        ? Promise.resolve({ data: [] })
+        ? A.client.from('entries').select('tournament_id, withdrawn, player_id, display_name')
         : A.client.from('entries').select('tournament_id, withdrawn')
     ]).then(function (res) {
       if (res[0].error) throw res[0].error;
@@ -478,7 +490,16 @@
 
       var mine = {};
       (res[1].data || []).forEach(function (e) {
-        if (!e.withdrawn) mine[e.tournament_id] = true;
+        if (e.withdrawn) return;
+        if (isAdmin) {
+          if (!playerId) return;
+          /* 早期的報名紀錄有些沒帶 player_id，只好退回用姓名對 */
+          var hit = e.player_id
+            ? e.player_id === playerId
+            : (playerName && e.display_name === playerName);
+          if (!hit) return;
+        }
+        mine[e.tournament_id] = true;
       });
 
       box.innerHTML = '<ul style="list-style:none;padding:0;margin:0;font-size:.9rem">' +
@@ -492,7 +513,7 @@
                 ? '<br><span class="muted" style="font-size:.84rem">報名至 ' +
                   esc(day(t.closes_at).slice(5).replace('.', '/')) + '</span>'
                 : '') + '</span>' +
-            (isAdmin ? '' :
+            (isAdmin && !playerId ? '' :
               '<span class="tag' + (joined ? '' : ' tag--notice') + '"' +
                 (joined ? ' style="background:var(--good-tint);color:var(--good)"' : '') +
                 '>' + (joined ? '已報名' : '未報名') + '</span>') +
