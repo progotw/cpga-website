@@ -407,7 +407,11 @@
           return '<li style="padding:9px 0;border-bottom:1px solid var(--line)">' +
             '<strong style="color:var(--ink)">' +
               esc(String(p.date).slice(5).replace('-', '/')) +
-              (p.time ? '　' + esc(p.time) : '') + '</strong><br>' +
+              (p.time ? '　' + esc(p.time) : '') + '</strong>' +
+            /* 沒有時間的場次，時間要看前一局什麼時候下完才定得下來。
+               不講一聲的話，跟有時間的場次長得一樣，會以為那天一定要到。 */
+            (p.time ? '' : '<span class="muted" style="font-size:.84rem">　時間未定</span>') +
+            '<br>' +
             '<span>' + (confirmed
               ? '對手：' + esc(opp || '尚未產生')
               : '<span class="tag">若晉級</span>　對手未定') + '</span><br>' +
@@ -421,6 +425,12 @@
         (rows.some(function (p) { return p.players.indexOf(myName) < 0; })
           ? '<p class="muted mb-0 mt-2" style="font-size:.82rem">' +
             '標示「若晉級」的場次要看前一輪結果，前一輪下完後會自動更新。</p>'
+          : '') +
+        /* 三戰兩勝的第二、三局會先掛在同一天當預備，第三局也可能根本不用下 */
+        (rows.some(function (p) { return !p.time; })
+          ? '<p class="muted mb-0 mt-2" style="font-size:.82rem">' +
+            '「時間未定」的場次依前一局的結果與結束時間另訂；' +
+            '三戰兩勝的最後一局若已分出勝負就不會進行。</p>'
           : '');
     }).catch(function () {
       box.innerHTML = '<p class="muted mb-0" style="font-size:.9rem">個人賽程載入失敗。</p>';
