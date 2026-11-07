@@ -1,33 +1,13 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-07T19:03:57+08:00",
+  "generated": "2026-11-08T01:45:08+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
-    "from": "2026-11-07",
-    "to": "2027-01-05"
+    "from": "2026-11-08",
+    "to": "2027-01-06"
   },
-  "count": 28,
+  "count": 27,
   "events": [
-    {
-      "date": "2026-11-07",
-      "weekday": 5,
-      "title": "大學生圍棋十傑賽",
-      "name": "大學生圍棋十傑賽",
-      "round": "",
-      "series": "大學生圍棋十傑賽",
-      "series_slot": 4,
-      "sessions": [],
-      "time": null,
-      "time_inferred": false,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-11-09",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=N3BlNzI1NGN0ZWxib3U5Z2U2dXJucmc4b3QgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
     {
       "date": "2026-11-09",
       "weekday": 0,
@@ -75,28 +55,6 @@
     {
       "date": "2026-11-11",
       "weekday": 2,
-      "title": "龍星賽32強(上午)",
-      "name": "龍星賽",
-      "round": "32強",
-      "series": "龍星賽",
-      "series_slot": 7,
-      "sessions": [
-        "10:00"
-      ],
-      "time": "10:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-11-12",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NnQ1cXJhNmd2dHYxaHExa2IwZ2VuZjV2aTUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-11-11",
-      "weekday": 2,
       "title": "龍星賽16強(下午)",
       "name": "龍星賽",
       "round": "16強",
@@ -112,6 +70,28 @@
       "end_date": "2026-11-12",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=NjRyZ2dqb3Nkb2k5MXN0YmllaG9tanZiOHEgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "weekday": 2,
+      "title": "龍星賽32強(上午)",
+      "name": "龍星賽",
+      "round": "32強",
+      "series": "龍星賽",
+      "series_slot": 7,
+      "sessions": [
+        "10:00"
+      ],
+      "time": "10:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-11-12",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=NnQ1cXJhNmd2dHYxaHExa2IwZ2VuZjV2aTUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
@@ -496,28 +476,6 @@
     {
       "date": "2026-12-08",
       "weekday": 1,
-      "title": "20屆棋王複賽6",
-      "name": "棋王",
-      "round": "20屆 複賽6",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-12-09",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NzBuc21tNGV2ZG5zZnB2ZmkzNjliN3Q5cmggNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-12-08",
-      "weekday": 1,
       "title": "第19屆棋王挑戰賽第4局",
       "name": "棋王",
       "round": "第19屆 挑戰賽第4局",
@@ -533,6 +491,28 @@
       "end_date": "2026-12-09",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=NGdsdWw4aGJlZGkxZjNtYnRzYzA1bzQ2MGUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "weekday": 1,
+      "title": "20屆棋王複賽6",
+      "name": "棋王",
+      "round": "20屆 複賽6",
+      "series": "棋王循環圈",
+      "series_slot": 0,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-12-09",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=NzBuc21tNGV2ZG5zZnB2ZmkzNjliN3Q5cmggNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
