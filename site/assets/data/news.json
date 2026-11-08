@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-07T17:45:08+00:00",
+ "generated": "2026-11-08T11:16:17+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "E6F069944AF779AA82110F156202077E",
+   "date": "2026-11-08",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "2026年大學生圍棋十傑賽成績",
+   "url": "https://www.haifong.org/news/content/E6F069944AF779AA82110F156202077E",
+   "local": true
+  },
   {
    "id": "89FD3DF9812A4D5F8C5EED43CFABE75A",
    "date": "2026-11-06",
@@ -1074,15 +1083,6 @@
    "cat": "notice",
    "title": "【院生第六輪月賽 - 第二週成績公告】",
    "url": "https://www.haifong.org/news/content/6340F58BFB3AF6007B21734864E014DA",
-   "local": true
-  },
-  {
-   "id": "D0DE2168BF2EA551A076B2A53AB93CD9",
-   "date": "2026-06-04",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【社群媒體使用指引】",
-   "url": "https://www.haifong.org/news/content/D0DE2168BF2EA551A076B2A53AB93CD9",
    "local": true
   }
  ]
