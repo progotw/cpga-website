@@ -3600,7 +3600,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "王元均",
    "source": "schedule-app"
   },
   {
@@ -3616,7 +3616,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "賴均輔",
    "source": "schedule-app"
   },
   {
@@ -4281,15 +4281,13 @@
    "time": "11:00",
    "event": "第22屆中環國手賽",
    "round": "本賽 挑戰者決定賽",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "王元均",
-    "鄭予皓",
-    "賴均輔",
-    "林士勛"
+    "賴均輔"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },

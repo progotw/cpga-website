@@ -1,10 +1,37 @@
 {
  "schema_version": 1,
- "generated": "2026-11-09T05:51:04+00:00",
+ "generated": "2026-11-09T12:51:56+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "3451570A26F89280F60B1C54E340EC15",
+   "date": "2026-11-09",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "中環國手賽4強戰報：王元均、賴均輔晉級挑戰者決定賽",
+   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15",
+   "local": true
+  },
+  {
+   "id": "A8DAE4821D1DC3752E5BDC92FA9B7778",
+   "date": "2026-11-09",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【升段公告 - 鄭予皓二段晉升職業三段】",
+   "url": "https://www.haifong.org/news/content/A8DAE4821D1DC3752E5BDC92FA9B7778",
+   "local": true
+  },
+  {
+   "id": "8C401D4BE55DBBDA4E0AF7188CF1281C",
+   "date": "2026-11-09",
+   "catLabel": "公告",
+   "cat": "notice",
+   "title": "【升段公告 - 林彥丞五段晉升職業六段】",
+   "url": "https://www.haifong.org/news/content/8C401D4BE55DBBDA4E0AF7188CF1281C",
+   "local": true
+  },
   {
    "id": "E6F069944AF779AA82110F156202077E",
    "date": "2026-11-08",
@@ -93,15 +120,6 @@
    "cat": "notice",
    "title": "2026年 國際業餘圍棋配對賽、世界大學生圍棋配對賽 台灣代表選拔賽",
    "url": "https://www.haifong.org/news/content/D103EF90501E49BE2375F8DFAE9DD516",
-   "local": true
-  },
-  {
-   "id": "3451570A26F89280F60B1C54E340EC15",
-   "date": "2026-11-02",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "中環國手賽8強戰報：王元均、鄭予皓、賴均輔、林士勛晉級4強",
-   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15",
    "local": true
   },
   {
@@ -1065,24 +1083,6 @@
    "cat": "notice",
    "title": "【院生結訓儀式 - 邁向職業棋士考試】",
    "url": "https://www.haifong.org/news/content/8FEE419806ADBE8C39B2D2808531DC89",
-   "local": true
-  },
-  {
-   "id": "BEB7F8B2B0DB634ECA7FC30407C0016A",
-   "date": "2026-06-11",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "第31屆LG杯世界棋王戰：賴均輔九段止步本賽16強",
-   "url": "https://www.haifong.org/news/content/BEB7F8B2B0DB634ECA7FC30407C0016A",
-   "local": true
-  },
-  {
-   "id": "6340F58BFB3AF6007B21734864E014DA",
-   "date": "2026-06-07",
-   "catLabel": "公告",
-   "cat": "notice",
-   "title": "【院生第六輪月賽 - 第二週成績公告】",
-   "url": "https://www.haifong.org/news/content/6340F58BFB3AF6007B21734864E014DA",
    "local": true
   }
  ]

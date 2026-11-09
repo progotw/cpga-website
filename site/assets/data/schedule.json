@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-09T13:51:04+08:00",
+  "generated": "2026-11-09T20:51:56+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
     "from": "2026-11-09",
@@ -55,28 +55,6 @@
     {
       "date": "2026-11-11",
       "weekday": 2,
-      "title": "龍星賽32強(上午)",
-      "name": "龍星賽",
-      "round": "32強",
-      "series": "龍星賽",
-      "series_slot": 7,
-      "sessions": [
-        "10:00"
-      ],
-      "time": "10:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-11-12",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NnQ1cXJhNmd2dHYxaHExa2IwZ2VuZjV2aTUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-11-11",
-      "weekday": 2,
       "title": "龍星賽16強(下午)",
       "name": "龍星賽",
       "round": "16強",
@@ -92,6 +70,28 @@
       "end_date": "2026-11-12",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=NjRyZ2dqb3Nkb2k5MXN0YmllaG9tanZiOHEgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "weekday": 2,
+      "title": "龍星賽32強(上午)",
+      "name": "龍星賽",
+      "round": "32強",
+      "series": "龍星賽",
+      "series_slot": 7,
+      "sessions": [
+        "10:00"
+      ],
+      "time": "10:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-11-12",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=NnQ1cXJhNmd2dHYxaHExa2IwZ2VuZjV2aTUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
