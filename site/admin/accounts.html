@@ -33,7 +33,9 @@
     <p class="mb-0" style="font-size:.9rem">
       棋士還能登入的話，請他到職業棋士專區自己改信箱（會寄確認信，避免打錯）。<br>
       這裡的「修改信箱」是給<strong>舊信箱已經停用、登不進來</strong>的棋士用的，
-      <strong>改完立即生效</strong>，請先電話確認是本人。
+      <strong>改完立即生效</strong>，請先電話確認是本人。<br>
+      開通時信箱打錯、對方從未登入過的空帳號，可以直接刪除；
+      登入過的帳號不會出現刪除按鈕，請改用「修改信箱」。
     </p>
   </div>
 
@@ -122,6 +124,11 @@
       '</div>' +
       '<div class="mt-2">' +
         '<button class="btn btn-ghost btn-sm" data-act="resend" type="button">重寄設定密碼信</button>' +
+        /* 刪除只給從未登入的帳號——登入過就表示有人在用，信箱打錯要用改的 */
+        (never
+          ? '　<button class="btn btn-ghost btn-sm" data-act="del" type="button" ' +
+            'style="color:var(--accent);border-color:var(--accent)">刪除帳號</button>'
+          : '') +
         '　<span class="muted" style="font-size:.84rem" data-resend></span>' +
       '</div>' +
       '<p class="muted mb-0 mt-2" style="font-size:.86rem">' +
@@ -203,6 +210,40 @@
         rstate.style.color = 'var(--accent)';
         rstate.textContent = '寄送失敗';
         say('error', '寄送失敗：' + esc(A.message(err)));
+      });
+      return;
+    }
+
+    /* 刪除帳號：只處理「開通時信箱打錯、對方從未登入」的空帳號。
+       函式那邊會再擋一次（必須是棋士、必須從未登入、底下不能有資料），
+       畫面上的清單過期也不會誤刪。 */
+    var del = e.target.closest('button[data-act="del"]');
+    if (del) {
+      var dcard = del.closest('[data-id]');
+      var did = dcard.getAttribute('data-id');
+      var da = accounts.filter(function (x) { return x.user_id === did; })[0];
+      var dstate = dcard.querySelector('[data-resend]');
+      if (!da) return;
+      if (da.last_sign_in_at) { say('error', '這個帳號登入過，不能刪除。'); return; }
+      if (!window.confirm(
+            '要永久刪除這個帳號嗎？\n\n' +
+            '　' + (da.display_name || '（未填姓名）') + '\n' +
+            '　' + da.email + '\n\n' +
+            '這個帳號從未登入過。刪除後無法復原。\n' +
+            '如果只是信箱打錯，也可以改用「修改信箱」。')) return;
+      del.disabled = true;
+      dstate.style.color = '';
+      dstate.textContent = '刪除中…';
+      call({ action: 'delete', user_id: did, email: da.email }).then(function (r) {
+        accounts = accounts.filter(function (x) { return x.user_id !== did; });
+        render();
+        say('', '已刪除帳號 ' + esc(r.email || da.email) +
+          '（' + esc(r.display_name || da.display_name || '') + '）。');
+      }).catch(function (err) {
+        del.disabled = false;
+        dstate.style.color = 'var(--accent)';
+        dstate.textContent = '刪除失敗';
+        say('error', '刪除失敗：' + esc(err.message || err));
       });
       return;
     }

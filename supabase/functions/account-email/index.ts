@@ -12,6 +12,12 @@
 //   { action: 'list' }                              → 所有棋士帳號（含信箱、最後登入）
 //   { action: 'change', user_id, email, reset }     → 改信箱；reset 為 true 時順便寄
 //                                                     重設密碼信到新信箱
+//   { action: 'delete', user_id, email }            → 刪掉一個從未登入的棋士帳號
+//
+// delete 只處理一種情況：開通時信箱打錯（2026-11-06 有人少打一個 m），
+// 對方根本收不到信、也從來沒登入過，留著只是一個空帳號。
+// 因此限制得很死——必須是棋士帳號、必須從未登入、畫面上的信箱要跟目前
+// 的一致、底下不能有任何資料。只要登入過就一律擋下來，改用「修改信箱」。
 //
 // 只能改「棋士」帳號，不能改管理員帳號：管理員的信箱等於後台的鑰匙，
 // 不應該被另一個管理員按一下就換掉。
@@ -141,6 +147,54 @@ Deno.serve(async (req) => {
     }
 
     return reply(200, { ok: true, old_email: oldEmail, email, reset_sent: resetSent });
+  }
+
+  // ---- 刪除帳號（僅限從未登入）----
+  if (body.action === 'delete') {
+    const userId = String(body.user_id ?? '').trim();
+    const email = String(body.email ?? '').trim().toLowerCase();
+    if (!userId) return reply(400, { error: '缺少 user_id' });
+
+    const { data: target } = await admin
+      .from('profiles').select('role, display_name').eq('id', userId).single();
+    if (!target) return reply(404, { error: '找不到這個帳號' });
+    if (target.role !== 'player') {
+      return reply(403, { error: '只能刪除棋士帳號，管理員帳號不能從這裡刪' });
+    }
+
+    const { data: before } = await admin.auth.admin.getUserById(userId);
+    const u = before?.user;
+    if (!u) return reply(404, { error: '找不到這個帳號' });
+
+    // 畫面上的清單可能是幾分鐘前載入的，信箱對不起來就不要動
+    if (email && (u.email ?? '').toLowerCase() !== email) {
+      return reply(409, { error: '畫面上的信箱和目前的不一樣，請重新整理後再試一次' });
+    }
+    if (u.last_sign_in_at) {
+      return reply(403, { error: '這個帳號登入過，不能刪除。要換信箱請用「修改信箱」。' });
+    }
+
+    // 從未登入的帳號照理說什麼都沒有。真的有就停下來，不要連帶刪掉。
+    const OWNED: [string, string][] = [
+      ['entries', 'user_id'],
+      ['player_profiles', 'user_id'],
+      ['teaching', 'user_id'],
+      ['messages', 'created_by'],
+    ];
+    for (const [table, col] of OWNED) {
+      const { count, error } = await admin
+        .from(table).select('*', { count: 'exact', head: true }).eq(col, userId);
+      if (error) return reply(500, { error: '檢查資料失敗：' + error.message });
+      if (count) {
+        return reply(409, { error: '這個帳號底下還有資料（' + table + '），沒有刪除' });
+      }
+    }
+
+    const { error: dErr } = await admin.auth.admin.deleteUser(userId);
+    if (dErr) return reply(500, { error: '刪除失敗：' + dErr.message });
+
+    // profiles 的外鍵是 on delete cascade，帳號刪掉那一列會跟著不見
+    return reply(200, { ok: true, email: u.email ?? '', display_name: target.display_name });
   }
 
   return reply(400, { error: '不支援的動作' });
