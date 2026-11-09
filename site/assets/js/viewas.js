@@ -70,9 +70,17 @@
       '<div class="admin-bar__inner" style="display:flex;gap:10px;align-items:center;' +
         'flex-wrap:wrap;padding:9px 0">' +
         '<strong style="font-size:.88rem;color:var(--accent)">管理員檢視</strong>' +
-        '<input id="viewAsFind" type="search" placeholder="輸入姓名搜尋" ' +
-          'autocomplete="off" style="font:inherit;font-size:.88rem;padding:5px 8px;' +
-          'border:1px solid var(--line);border-radius:6px;background:#fff;width:9em">' +
+        /* 搜尋框底下直接列出符合的人。原本只是把旁邊的下拉選單篩掉，
+           但下拉關著的時候看不到篩出了誰，等於打完字還要再拉開來看。 */
+        '<span style="position:relative;display:inline-block">' +
+          '<input id="viewAsFind" type="search" placeholder="輸入姓名搜尋" ' +
+            'autocomplete="off" style="font:inherit;font-size:.88rem;padding:5px 8px;' +
+            'border:1px solid var(--line);border-radius:6px;background:#fff;width:10em">' +
+          '<div id="viewAsList" style="position:absolute;z-index:40;top:calc(100% + 4px);' +
+            'left:0;min-width:13em;max-height:16em;overflow:auto;background:#fff;' +
+            'border:1px solid var(--line);border-radius:8px;' +
+            'box-shadow:0 6px 20px rgba(0,0,0,.14);display:none"></div>' +
+        '</span>' +
         '<select id="viewAsSel" style="font:inherit;font-size:.88rem;padding:5px 8px;' +
           'border:1px solid var(--line);border-radius:6px;background:#fff;max-width:14em">' +
           '<option value="">（我自己的帳號）</option>' +
@@ -92,7 +100,16 @@
 
     var sel = bar.querySelector('#viewAsSel');
     var find = bar.querySelector('#viewAsFind');
+    var panel = bar.querySelector('#viewAsList');
     var hint = bar.querySelector('#viewAsHint');
+
+    /* 清單用 class 才有滑鼠移過去的反白；行內樣式做不到 :hover */
+    var css = document.createElement('style');
+    css.textContent =
+      '.va-opt{display:block;width:100%;text-align:left;border:0;background:#fff;' +
+      'font:inherit;font-size:.88rem;padding:7px 10px;cursor:pointer;white-space:nowrap}' +
+      '.va-opt:hover,.va-opt.is-on{background:var(--accent-tint)}';
+    document.head.appendChild(css);
     var cur = read();
     var all = [];
 
@@ -111,8 +128,21 @@
             (cur && cur.id === p.id ? ' selected' : '') + '>' +
             esc(p.name) + (p.rank ? '　' + esc(p.rank) : '') + '</option>';
         }).join('');
+      /* 第一位反白，對應「按 Enter 看第一位」 */
+      panel.innerHTML = list.length
+        ? list.map(function (p, i) {
+            return '<button type="button" class="va-opt' + (i ? '' : ' is-on') + '" ' +
+              'data-id="' + esc(p.id) + '" data-name="' + esc(p.name) + '">' +
+              esc(p.name) +
+              (p.rank ? '<span class="muted">　' + esc(p.rank) + '</span>' : '') +
+              '</button>';
+          }).join('')
+        : '<p class="muted mb-0" style="font-size:.84rem;padding:8px 10px;white-space:nowrap">' +
+          '沒有符合的棋士</p>';
+      panel.style.display = q ? 'block' : 'none';
+
       if (q) hint.textContent = list.length
-        ? '符合 ' + list.length + ' 位，按 Enter 看第一位。'
+        ? '符合 ' + list.length + ' 位，點一下或按 Enter。'
         : '名錄裡沒有符合「' + q + '」的棋士。';
       else hint.textContent = '選一位棋士，底下的賽程、對局費、成績就照那位棋士看到的樣子顯示。';
       return list;
@@ -138,8 +168,21 @@
 
     find.addEventListener('input', function () { fill(find.value); });
 
+    /* mousedown 比 blur 早一步，不然清單會在點到之前就收起來 */
+    panel.addEventListener('mousedown', function (e) {
+      var b = e.target.closest && e.target.closest('button[data-id]');
+      if (!b) return;
+      e.preventDefault();
+      go(b.getAttribute('data-id'), b.getAttribute('data-name'));
+    });
+    find.addEventListener('focus', function () { if (find.value.trim()) fill(find.value); });
+    find.addEventListener('blur', function () {
+      setTimeout(function () { panel.style.display = 'none'; }, 150);
+    });
+
     /* 打完名字按 Enter 就直接換過去，不用再移到旁邊的選單 */
     find.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { panel.style.display = 'none'; return; }
       if (e.key !== 'Enter') return;
       e.preventDefault();
       var list = fill(find.value);
