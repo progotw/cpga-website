@@ -80,6 +80,10 @@
         '<span class="muted" style="font-size:.82rem" id="viewAsHint">' +
           '選一位棋士，底下的賽程、對局費、成績就照那位棋士看到的樣子顯示。' +
         '</span>' +
+        /* 專區的上排只有「回官網」和「登出」，管理員從後台繞進來之後
+           沒有路可以回去，只能自己打網址。這條就是那條回頭路。 */
+        '<a class="btn btn-ghost btn-sm" href="../admin/index.html" ' +
+          'style="margin-left:auto">回管理後台 →</a>' +
       '</div>';
 
     var top = document.querySelector('.admin-bar');
