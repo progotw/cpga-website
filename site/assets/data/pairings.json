@@ -3344,7 +3344,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "周尹南",
    "source": "schedule-app"
   },
   {
@@ -3360,7 +3360,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "楊子萱",
    "source": "schedule-app"
   },
   {
@@ -3376,7 +3376,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林立祥",
    "source": "schedule-app"
   },
   {
@@ -3392,7 +3392,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林宇翔",
    "source": "schedule-app"
   },
   {
@@ -3408,7 +3408,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "陳映嘉",
    "source": "schedule-app"
   },
   {
@@ -3424,7 +3424,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林瀚彰",
    "source": "schedule-app"
   },
   {
@@ -3440,7 +3440,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林新為",
    "source": "schedule-app"
   },
   {
@@ -3456,7 +3456,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "鄭予皓",
    "source": "schedule-app"
   },
   {
@@ -3472,7 +3472,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "盧奕銓",
    "source": "schedule-app"
   },
   {
@@ -3488,7 +3488,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "吳彥諶",
    "source": "schedule-app"
   },
   {
@@ -3504,7 +3504,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林君諺",
    "source": "schedule-app"
   },
   {
@@ -3520,7 +3520,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "徐靖恩",
    "source": "schedule-app"
   },
   {
@@ -3536,7 +3536,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林彥丞",
    "source": "schedule-app"
   },
   {
@@ -3552,7 +3552,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "盧鈺樺",
    "source": "schedule-app"
   },
   {
@@ -4009,15 +4009,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部2回",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "陳詩淵",
+   "players": [
     "周尹南",
-    "楊子萱",
-    "陳首廉"
+    "楊子萱"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4027,12 +4025,12 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部2回",
-   "players": [],
+   "players": [
+    "林立祥"
+   ],
    "pending_opponent": true,
-   "status": "scheduled",
+   "status": "drawn",
    "candidates": [
-    "白昕卉",
-    "林立祥",
     "林修平",
     "徐銘均"
    ],
@@ -4045,15 +4043,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部2回",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "林君諺",
+   "players": [
     "林書陽",
-    "徐靖恩",
     "蔡丞韋"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4063,15 +4059,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部2回",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "林彥丞",
+   "players": [
     "林世民",
-    "孫立言",
-    "盧鈺樺"
+    "孫立言"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4081,14 +4075,14 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部2回",
-   "players": [],
+   "players": [
+    "林宇翔"
+   ],
    "pending_opponent": true,
-   "status": "scheduled",
+   "status": "drawn",
    "candidates": [
     "陳威廷",
-    "林鈺娗",
-    "林宇翔",
-    "劉建昌"
+    "林鈺娗"
    ],
    "winner": null,
    "source": "schedule-app"
@@ -4099,15 +4093,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部2回",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "楊博崴",
+   "players": [
     "陳映嘉",
-    "黃柏人",
     "林瀚彰"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4117,15 +4109,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部2回",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "林新為",
+   "players": [
     "林士勛",
-    "沈逸恩",
-    "鄭予皓"
+    "沈逸恩"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4135,15 +4125,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部2回",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "簡靖庭",
-    "盧奕銓",
-    "詹宜典",
-    "吳彥諶"
+    "詹宜典"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4153,15 +4141,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 勝部準決賽",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "林新為",
-    "林士勛",
-    "沈逸恩",
     "鄭予皓"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4171,15 +4157,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 勝部準決賽",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "簡靖庭",
+   "players": [
     "盧奕銓",
-    "詹宜典",
     "吳彥諶"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4189,15 +4173,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 勝部準決賽",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "林君諺",
-    "林書陽",
-    "徐靖恩",
-    "蔡丞韋"
+    "徐靖恩"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4207,15 +4189,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 勝部準決賽",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "林彥丞",
-    "林世民",
-    "孫立言",
     "盧鈺樺"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4288,11 +4268,8 @@
    "pending_opponent": true,
    "status": "scheduled",
    "candidates": [
-    "陳詩淵",
     "周尹南",
     "楊子萱",
-    "陳首廉",
-    "白昕卉",
     "林立祥",
     "林修平",
     "徐銘均"
@@ -4310,14 +4287,10 @@
    "pending_opponent": true,
    "status": "scheduled",
    "candidates": [
-    "林君諺",
     "林書陽",
-    "徐靖恩",
     "蔡丞韋",
-    "林彥丞",
     "林世民",
-    "孫立言",
-    "盧鈺樺"
+    "孫立言"
    ],
    "winner": null,
    "source": "schedule-app"
@@ -4333,12 +4306,8 @@
    "status": "scheduled",
    "candidates": [
     "林新為",
-    "林士勛",
-    "沈逸恩",
     "鄭予皓",
-    "簡靖庭",
     "盧奕銓",
-    "詹宜典",
     "吳彥諶"
    ],
    "winner": null,
@@ -4357,10 +4326,7 @@
     "陳威廷",
     "林鈺娗",
     "林宇翔",
-    "劉建昌",
-    "楊博崴",
     "陳映嘉",
-    "黃柏人",
     "林瀚彰"
    ],
    "winner": null,
@@ -4376,14 +4342,10 @@
    "pending_opponent": true,
    "status": "scheduled",
    "candidates": [
-    "林新為",
     "林士勛",
     "沈逸恩",
-    "鄭予皓",
     "簡靖庭",
-    "盧奕銓",
-    "詹宜典",
-    "吳彥諶"
+    "詹宜典"
    ],
    "winner": null,
    "source": "schedule-app"
@@ -4399,12 +4361,8 @@
    "status": "scheduled",
    "candidates": [
     "林君諺",
-    "林書陽",
     "徐靖恩",
-    "蔡丞韋",
     "林彥丞",
-    "林世民",
-    "孫立言",
     "盧鈺樺"
    ],
    "winner": null,
@@ -4421,12 +4379,8 @@
    "status": "scheduled",
    "candidates": [
     "林新為",
-    "林士勛",
-    "沈逸恩",
     "鄭予皓",
-    "簡靖庭",
     "盧奕銓",
-    "詹宜典",
     "吳彥諶"
    ],
    "winner": null,
@@ -4443,12 +4397,8 @@
    "status": "scheduled",
    "candidates": [
     "林君諺",
-    "林書陽",
     "徐靖恩",
-    "蔡丞韋",
     "林彥丞",
-    "林世民",
-    "孫立言",
     "盧鈺樺"
    ],
    "winner": null,
@@ -4540,21 +4490,14 @@
    "pending_opponent": true,
    "status": "scheduled",
    "candidates": [
-    "陳詩淵",
     "周尹南",
     "楊子萱",
-    "陳首廉",
-    "白昕卉",
     "林立祥",
     "林修平",
     "徐銘均",
     "林君諺",
-    "林書陽",
     "徐靖恩",
-    "蔡丞韋",
     "林彥丞",
-    "林世民",
-    "孫立言",
     "盧鈺樺"
    ],
    "winner": null,
@@ -4570,21 +4513,13 @@
    "pending_opponent": true,
    "status": "scheduled",
    "candidates": [
-    "林君諺",
     "林書陽",
-    "徐靖恩",
     "蔡丞韋",
-    "林彥丞",
     "林世民",
     "孫立言",
-    "盧鈺樺",
     "林新為",
-    "林士勛",
-    "沈逸恩",
     "鄭予皓",
-    "簡靖庭",
     "盧奕銓",
-    "詹宜典",
     "吳彥諶"
    ],
    "winner": null,
@@ -4603,18 +4538,11 @@
     "陳威廷",
     "林鈺娗",
     "林宇翔",
-    "劉建昌",
-    "楊博崴",
     "陳映嘉",
-    "黃柏人",
     "林瀚彰",
     "林新為",
-    "林士勛",
-    "沈逸恩",
     "鄭予皓",
-    "簡靖庭",
     "盧奕銓",
-    "詹宜典",
     "吳彥諶"
    ],
    "winner": null,
@@ -4630,21 +4558,13 @@
    "pending_opponent": true,
    "status": "scheduled",
    "candidates": [
-    "林新為",
     "林士勛",
     "沈逸恩",
-    "鄭予皓",
     "簡靖庭",
-    "盧奕銓",
     "詹宜典",
-    "吳彥諶",
     "林君諺",
-    "林書陽",
     "徐靖恩",
-    "蔡丞韋",
     "林彥丞",
-    "林世民",
-    "孫立言",
     "盧鈺樺"
    ],
    "winner": null,
@@ -4751,29 +4671,22 @@
    "pending_opponent": true,
    "status": "scheduled",
    "candidates": [
-    "陳詩淵",
     "周尹南",
     "楊子萱",
-    "陳首廉",
-    "白昕卉",
     "林立祥",
     "林修平",
     "徐銘均",
     "林君諺",
-    "林書陽",
     "徐靖恩",
-    "蔡丞韋",
     "林彥丞",
+    "盧鈺樺",
+    "林書陽",
+    "蔡丞韋",
     "林世民",
     "孫立言",
-    "盧鈺樺",
     "林新為",
-    "林士勛",
-    "沈逸恩",
     "鄭予皓",
-    "簡靖庭",
     "盧奕銓",
-    "詹宜典",
     "吳彥諶"
    ],
    "winner": null,
@@ -4792,26 +4705,19 @@
     "陳威廷",
     "林鈺娗",
     "林宇翔",
-    "劉建昌",
-    "楊博崴",
     "陳映嘉",
-    "黃柏人",
     "林瀚彰",
     "林新為",
+    "鄭予皓",
+    "盧奕銓",
+    "吳彥諶",
     "林士勛",
     "沈逸恩",
-    "鄭予皓",
     "簡靖庭",
-    "盧奕銓",
     "詹宜典",
-    "吳彥諶",
     "林君諺",
-    "林書陽",
     "徐靖恩",
-    "蔡丞韋",
     "林彥丞",
-    "林世民",
-    "孫立言",
     "盧鈺樺"
    ],
    "winner": null,

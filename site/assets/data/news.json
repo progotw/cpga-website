@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-10T03:09:58+00:00",
+ "generated": "2026-11-10T12:39:01+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "D380ECD80FA00D80F1347B1D225A248C",
+   "date": "2026-11-10",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "棋王複賽2回戰：上屆循環圈詩淵、博崴意外止步，勝部8人晉級準決賽！",
+   "url": "https://www.haifong.org/news/content/D380ECD80FA00D80F1347B1D225A248C",
+   "local": true
+  },
   {
    "id": "3451570A26F89280F60B1C54E340EC15",
    "date": "2026-11-09",
@@ -93,15 +102,6 @@
    "cat": "notice",
    "title": "第2屆「龍星賽」本賽選手與抽籤日期公告",
    "url": "https://www.haifong.org/news/content/B4453DC77C0601C454BA39638FD550F2",
-   "local": true
-  },
-  {
-   "id": "D380ECD80FA00D80F1347B1D225A248C",
-   "date": "2026-11-03",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "棋王賽複賽首輪 林新為、鄭予皓雙雙半目勝出",
-   "url": "https://www.haifong.org/news/content/D380ECD80FA00D80F1347B1D225A248C",
    "local": true
   },
   {
