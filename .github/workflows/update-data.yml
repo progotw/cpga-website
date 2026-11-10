@@ -120,6 +120,14 @@ jobs:
           SUPABASE_ANON_KEY: 'sb_publishable_VQ4YNGNm1OlF2DvZgLqZDQ_4yOX2Ygi'
         run: python scripts/scrape_pairings.py site
 
+      # 棋譜對照表。成績資料沒有棋譜編號，對方是另外用日期與雙方姓名配對
+      # HiGO 的公開棋譜，把結果放在他的 GitHub Pages；這裡抓一份下來，
+      # 網頁才不必即時連對方的站。只留最近三年（完整檔案 400KB 以上）。
+      - name: 抓取棋譜對照表
+        id: kifu
+        continue-on-error: true
+        run: python scripts/fetch_kifu.py site/assets/data/kifu.json
+
       - name: 抓取精銳隊名單
         id: elite
         continue-on-error: true
@@ -161,6 +169,7 @@ jobs:
           R_STATS:    ${{ steps.stats.outcome }}
           R_PLAYERS:  ${{ steps.players.outcome }}
           R_PAIRINGS: ${{ steps.pairings.outcome }}
+          R_KIFU:     ${{ steps.kifu.outcome }}
           R_ELITE:    ${{ steps.elite.outcome }}
           R_PHOTOS:   ${{ steps.photos.outcome }}
         run: |
@@ -182,6 +191,7 @@ jobs:
           check 年度成績   "$R_STATS"
           check 棋士名錄   "$R_PLAYERS"
           check 對戰組合   "$R_PAIRINGS"
+          check 棋譜對照   "$R_KIFU"
           check 精銳隊     "$R_ELITE"
           check 棋士照片   "$R_PHOTOS"
           exit $bad

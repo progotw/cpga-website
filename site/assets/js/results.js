@@ -21,9 +21,9 @@
   /* 一列的欄位順序，由對方的資料決定，不要自行調動 */
   var DATE = 0, C1 = 1, C2 = 2, EVENT = 3, STAGE = 4,
       BLACK = 5, WHITE = 6, WINNER = 7, MARGIN = 8,
-      /* 第 10 欄：HiGO 的棋譜編號。成績系統還沒加這個欄位（2026-11-04），
-         先接起來——對方加上去的那天就會自動出現「看棋譜」連結，
-         官網這邊不必再改。沒有值時一律當作沒有棋譜。 */
+      /* 第 10 欄：HiGO 的棋譜編號。成績系統到 2026-11-10 還是只有 9 欄，
+         對方改用另一種做法（見下方的棋譜對照表）。這一欄還是接著，
+         哪天對方真的加上去就會優先採用。 */
       KIFU = 9;
 
   /* 棋譜網址。編號只收數字，其餘一律視為沒有——
@@ -33,6 +33,28 @@
       ? 'https://www.higohigo.org/#/kifu/' + String(v).trim()
       : '';
   }
+
+  /* ---- 棋譜對照表 ----
+     成績資料本身沒有棋譜編號。對方另外跑一支程式，用「年份｜日期｜黑方｜白方」
+     把每一局配到 HiGO 圍棋的公開棋譜，成績查詢頁讀那一份來顯示「棋譜」欄。
+     檔案在對方的 GitHub Pages，官網不即時讀它——每天在 CI 抓一份放進
+     assets/data/kifu.json，網頁讀自己網域的檔案（scripts/fetch_kifu.py）。
+     讀不到就只是不顯示棋譜連結，成績照常。
+
+     路徑由這支程式自己的網址推出來：results.js 被 member/、players/、admin/
+     底下的頁面載入，相對路徑各不相同。 */
+  var SELF = (document.currentScript && document.currentScript.src) || '';
+  var KIFU_JSON = SELF.replace(/js\/results\.js(\?.*)?$/, 'data/kifu.json');
+  var kifuMap = null;
+  var kifuBase = 'https://www.higohigo.org/#/kifu/';
+  var kifuReady = (SELF && KIFU_JSON !== SELF)
+    ? fetch(KIFU_JSON, { cache: 'no-cache' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (j) {
+          if (j && j.map) { kifuMap = j.map; kifuBase = j.url || kifuBase; }
+        })
+        .catch(function () { /* 沒有對照表就不顯示棋譜，不影響成績 */ })
+    : Promise.resolve();
 
   var cache = {};   // year -> Promise<rows>
 
@@ -54,7 +76,18 @@
     return cache[year];
   }
 
+  /* 一局的棋譜網址（可能不只一份：同一天同一對下兩盤就會有兩個編號）。
+     對方若哪天補上第 10 欄，那一欄優先。 */
+  function kifuOf(year, r) {
+    var direct = kifuUrl(r[KIFU]);
+    if (direct) return [direct];
+    if (!kifuMap) return [];
+    var ids = kifuMap[[year, r[DATE], r[BLACK], r[WHITE]].map(norm).join('|')];
+    return (ids || []).map(function (id) { return kifuBase + id; });
+  }
+
   function toGame(r, year, name) {
+    var ks = kifuOf(year, r);
     return {
       year: String(year),
       date: r[DATE],
@@ -66,7 +99,8 @@
       white: r[WHITE],
       winner: r[WINNER],
       margin: r[MARGIN],
-      kifu: kifuUrl(r[KIFU]),
+      kifu: ks[0] || '',
+      kifus: ks,
       /* 勝方欄等於本人才算勝，其餘都算敗——與成績系統的算法一致 */
       won: r[WINNER] === name,
       color: r[BLACK] === name ? '黑' : '白',
@@ -143,6 +177,7 @@
     player: function (name, years) {
       var now = new Date().getFullYear();
       var want = years || [now, now - 1];
+      return kifuReady.then(function () {
       return Promise.all(want.map(function (y) {
         return rowsOf(y).then(function (rows) {
           var mine = rows.filter(function (r) {
@@ -167,6 +202,7 @@
                     .map(function (p) { return summarise(p.games, p.year); })
         };
       });
+      });
     },
 
     /* 升段進度。段位資料裡沒有這位棋士時回傳 null。
@@ -176,7 +212,7 @@
       var until = todayNum();
       var nowY = Math.floor(until / 10000);
 
-      return Promise.all([docOf('danPlayers'), docOf('danRules')]).then(function (res) {
+      return Promise.all([docOf('danPlayers'), docOf('danRules'), kifuReady]).then(function (res) {
         var players = jsonField(res[0], 'players') || [];
         var rules = jsonField(res[1], 'rules');
         var row = players.filter(function (r) { return r && norm(r[0]) === p; })[0];
@@ -233,7 +269,7 @@
                      event: r[EVENT], stage: r[STAGE],
                      opponent: isB ? r[WHITE] : r[BLACK],
                      color: isB ? '黑' : '白', margin: r[MARGIN],
-                     kifu: kifuUrl(r[KIFU]) };
+                     kifu: kifuOf(w.year, r)[0] || '' };
           });
           info.winsSince = list.length;
           info.total = baseWins + list.length;

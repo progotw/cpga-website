@@ -260,11 +260,16 @@
               /* 賽名在前、階段在後：先知道是哪個棋戰，再看打到第幾輪 */
               '<span class="muted" style="font-size:.8rem">' + esc(g.event) +
                 (g.stage ? '・' + esc(g.stage) : '') + '</span>' +
-              /* 成績系統有附棋譜編號時才出現。沒有編號的局不顯示，
-                 不要給一個點了是空白的連結。 */
-              (g.kifu
-                ? '<br><a href="' + esc(g.kifu) + '" target="_blank" rel="noopener"' +
-                  ' style="font-size:.8rem">看棋譜 ↗</a>'
+              /* 配得到 HiGO 棋譜的局才出現。沒有的不顯示，
+                 不要給一個點了是空白的連結。
+                 同一天同一對下兩盤時會配到兩份，兩個都列出來，
+                 由棋士自己認哪一盤——對照表只有日期與雙方姓名，分不出先後。 */
+              ((g.kifus || []).length
+                ? '<br>' + g.kifus.map(function (u, i) {
+                    return '<a href="' + esc(u) + '" target="_blank" rel="noopener"' +
+                      ' style="font-size:.8rem">看棋譜' +
+                      (g.kifus.length > 1 ? ' ' + (i + 1) : '') + ' ↗</a>';
+                  }).join('　')
                 : '') + '</li>';
           }).join('') + '</ul>'
         : '');
