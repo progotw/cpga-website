@@ -2,7 +2,7 @@
  "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供職業棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
  "schema_version": 1,
  "source": "海峰棋院 抽籤結果公告",
- "count": 309,
+ "count": 310,
  "pairings": [
   {
    "date": "2026-08-13",
@@ -3568,7 +3568,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "盧奕銓",
    "source": "schedule-app"
   },
   {
@@ -3584,7 +3584,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "尤浩宇",
    "source": "schedule-app"
   },
   {
@@ -3616,7 +3616,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "王智弘",
    "source": "schedule-app"
   },
   {
@@ -3632,7 +3632,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林彥丞",
    "source": "schedule-app"
   },
   {
@@ -3648,7 +3648,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "周尹南",
    "source": "schedule-app"
   },
   {
@@ -3664,7 +3664,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林宇翔",
    "source": "schedule-app"
   },
   {
@@ -3680,7 +3680,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林新為",
    "source": "schedule-app"
   },
   {
@@ -3696,7 +3696,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "陳祈睿",
    "source": "schedule-app"
   },
   {
@@ -3712,7 +3712,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "劉耀文",
    "source": "schedule-app"
   },
   {
@@ -3728,7 +3728,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "楊子萱",
    "source": "schedule-app"
   },
   {
@@ -3744,7 +3744,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "牛詩特",
    "source": "schedule-app"
   },
   {
@@ -3760,7 +3760,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "蔡丞韋",
    "source": "schedule-app"
   },
   {
@@ -3776,7 +3776,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "孫偉勛",
    "source": "schedule-app"
   },
   {
@@ -3792,7 +3792,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "陳映嘉",
    "source": "schedule-app"
   },
   {
@@ -3808,7 +3808,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "簡靖庭",
    "source": "schedule-app"
   },
   {
@@ -3817,16 +3817,14 @@
    "time": "14:00",
    "event": "第2屆龍星賽",
    "round": "本賽 16強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "盧奕銓",
-    "黃世元",
-    "尤浩宇",
-    "蘇聖芳"
+    "尤浩宇"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "盧奕銓",
    "source": "schedule-app"
   },
   {
@@ -3836,15 +3834,13 @@
    "event": "第2屆龍星賽",
    "round": "本賽 16強",
    "players": [
-    "陳威廷"
+    "陳威廷",
+    "王智弘"
    ],
-   "pending_opponent": true,
+   "pending_opponent": false,
    "status": "drawn",
-   "candidates": [
-    "王智弘",
-    "盧鈺樺"
-   ],
-   "winner": null,
+   "candidates": [],
+   "winner": "陳威廷",
    "source": "schedule-app"
   },
   {
@@ -3853,16 +3849,14 @@
    "time": "14:00",
    "event": "第2屆龍星賽",
    "round": "本賽 16強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "林彥丞",
-    "詹宜典",
-    "李嘉馨",
     "周尹南"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "周尹南",
    "source": "schedule-app"
   },
   {
@@ -3871,16 +3865,14 @@
    "time": "14:00",
    "event": "第2屆龍星賽",
    "round": "本賽 16強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "沈逸恩",
+   "players": [
     "林宇翔",
-    "鄭予皓",
     "林新為"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "林新為",
    "source": "schedule-app"
   },
   {
@@ -3889,16 +3881,14 @@
    "time": "14:00",
    "event": "第2屆龍星賽",
    "round": "本賽 16強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "陳祈睿",
-    "許育祺",
-    "劉耀文",
-    "黃偉"
+    "劉耀文"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "陳祈睿",
    "source": "schedule-app"
   },
   {
@@ -3907,16 +3897,14 @@
    "time": "14:00",
    "event": "第2屆龍星賽",
    "round": "本賽 16強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "楊子萱",
-    "張哲豪",
-    "林世民",
     "牛詩特"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "牛詩特",
    "source": "schedule-app"
   },
   {
@@ -3925,16 +3913,14 @@
    "time": "14:00",
    "event": "第2屆龍星賽",
    "round": "本賽 16強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "蔡丞韋",
-    "吳彥諶",
-    "林瀚彰",
     "孫偉勛"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "孫偉勛",
    "source": "schedule-app"
   },
   {
@@ -3943,17 +3929,31 @@
    "time": "14:00",
    "event": "第2屆龍星賽",
    "round": "本賽 16強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "施景堯",
+   "players": [
     "陳映嘉",
-    "白昕卉",
     "簡靖庭"
    ],
-   "winner": null,
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": "簡靖庭",
    "source": "schedule-app"
+  },
+  {
+   "id": "",
+   "date": "2026-11-12",
+   "time": "11:00",
+   "event": "大森盃女子名人賽",
+   "round": "敗部決賽",
+   "players": [
+    "林怡廷",
+    "蘇聖芳"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "manual"
   },
   {
    "id": "qiwang20__1:f_lb7_gh",
@@ -4205,18 +4205,13 @@
    "time": "10:00",
    "event": "第2屆龍星賽",
    "round": "本賽 8強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "盧奕銓",
-    "黃世元",
-    "尤浩宇",
-    "蘇聖芳",
-    "陳威廷",
-    "王智弘",
-    "盧鈺樺"
+    "陳威廷"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4226,19 +4221,13 @@
    "time": "14:00",
    "event": "第2屆龍星賽",
    "round": "本賽 8強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "林彥丞",
-    "詹宜典",
-    "李嘉馨",
+   "players": [
     "周尹南",
-    "沈逸恩",
-    "林宇翔",
-    "鄭予皓",
     "林新為"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4410,19 +4399,13 @@
    "time": "10:00",
    "event": "第2屆龍星賽",
    "round": "本賽 8強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "陳祈睿",
-    "許育祺",
-    "劉耀文",
-    "黃偉",
-    "楊子萱",
-    "張哲豪",
-    "林世民",
     "牛詩特"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4432,19 +4415,13 @@
    "time": "14:00",
    "event": "第2屆龍星賽",
    "round": "本賽 8強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
-    "蔡丞韋",
-    "吳彥諶",
-    "林瀚彰",
+   "players": [
     "孫偉勛",
-    "施景堯",
-    "陳映嘉",
-    "白昕卉",
     "簡靖庭"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4581,19 +4558,8 @@
    "status": "scheduled",
    "candidates": [
     "盧奕銓",
-    "黃世元",
-    "尤浩宇",
-    "蘇聖芳",
     "陳威廷",
-    "王智弘",
-    "盧鈺樺",
-    "林彥丞",
-    "詹宜典",
-    "李嘉馨",
     "周尹南",
-    "沈逸恩",
-    "林宇翔",
-    "鄭予皓",
     "林新為"
    ],
    "winner": null,
@@ -4610,20 +4576,8 @@
    "status": "scheduled",
    "candidates": [
     "陳祈睿",
-    "許育祺",
-    "劉耀文",
-    "黃偉",
-    "楊子萱",
-    "張哲豪",
-    "林世民",
     "牛詩特",
-    "蔡丞韋",
-    "吳彥諶",
-    "林瀚彰",
     "孫偉勛",
-    "施景堯",
-    "陳映嘉",
-    "白昕卉",
     "簡靖庭"
    ],
    "winner": null,
@@ -4734,35 +4688,12 @@
    "status": "scheduled",
    "candidates": [
     "盧奕銓",
-    "黃世元",
-    "尤浩宇",
-    "蘇聖芳",
     "陳威廷",
-    "王智弘",
-    "盧鈺樺",
-    "林彥丞",
-    "詹宜典",
-    "李嘉馨",
     "周尹南",
-    "沈逸恩",
-    "林宇翔",
-    "鄭予皓",
     "林新為",
     "陳祈睿",
-    "許育祺",
-    "劉耀文",
-    "黃偉",
-    "楊子萱",
-    "張哲豪",
-    "林世民",
     "牛詩特",
-    "蔡丞韋",
-    "吳彥諶",
-    "林瀚彰",
     "孫偉勛",
-    "施景堯",
-    "陳映嘉",
-    "白昕卉",
     "簡靖庭"
    ],
    "winner": null,
@@ -4779,35 +4710,12 @@
    "status": "scheduled",
    "candidates": [
     "盧奕銓",
-    "黃世元",
-    "尤浩宇",
-    "蘇聖芳",
     "陳威廷",
-    "王智弘",
-    "盧鈺樺",
-    "林彥丞",
-    "詹宜典",
-    "李嘉馨",
     "周尹南",
-    "沈逸恩",
-    "林宇翔",
-    "鄭予皓",
     "林新為",
     "陳祈睿",
-    "許育祺",
-    "劉耀文",
-    "黃偉",
-    "楊子萱",
-    "張哲豪",
-    "林世民",
     "牛詩特",
-    "蔡丞韋",
-    "吳彥諶",
-    "林瀚彰",
     "孫偉勛",
-    "施景堯",
-    "陳映嘉",
-    "白昕卉",
     "簡靖庭"
    ],
    "winner": null,
@@ -4824,35 +4732,12 @@
    "status": "scheduled",
    "candidates": [
     "盧奕銓",
-    "黃世元",
-    "尤浩宇",
-    "蘇聖芳",
     "陳威廷",
-    "王智弘",
-    "盧鈺樺",
-    "林彥丞",
-    "詹宜典",
-    "李嘉馨",
     "周尹南",
-    "沈逸恩",
-    "林宇翔",
-    "鄭予皓",
     "林新為",
     "陳祈睿",
-    "許育祺",
-    "劉耀文",
-    "黃偉",
-    "楊子萱",
-    "張哲豪",
-    "林世民",
     "牛詩特",
-    "蔡丞韋",
-    "吳彥諶",
-    "林瀚彰",
     "孫偉勛",
-    "施景堯",
-    "陳映嘉",
-    "白昕卉",
     "簡靖庭"
    ],
    "winner": null,
