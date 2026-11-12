@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T11:08:26+08:00",
+ "generated": "2026-11-12T17:14:34+08:00",
  "generated_label": "(11/12更新)",
  "source": "海峰棋院 成績系統（公開對局紀錄）",
  "note": "國內＝台灣職業賽、國際＝世界賽；last_year 為前一年全部對局。players 的鍵是海峰棋士頁網址上的棋士編號。",
@@ -210,11 +210,11 @@
     "text": "27勝6負　勝率81.8%"
    },
    "international": {
-    "games": 15,
-    "win": 7,
+    "games": 16,
+    "win": 8,
     "loss": 8,
-    "rate": 46.7,
-    "text": "7勝8負　勝率46.7%"
+    "rate": 50.0,
+    "text": "8勝8負　勝率50%"
    },
    "last_year": {
     "games": 61,
@@ -810,11 +810,11 @@
     "text": "18勝12負　勝率60%"
    },
    "international": {
-    "games": 18,
-    "win": 7,
-    "loss": 11,
-    "rate": 38.9,
-    "text": "7勝11負　勝率38.9%"
+    "games": 21,
+    "win": 9,
+    "loss": 12,
+    "rate": 42.9,
+    "text": "9勝12負　勝率42.9%"
    },
    "last_year": {
     "games": 62,
@@ -1235,11 +1235,11 @@
   "5633D60970E952C7F0F7EFB8F55DC5FE": {
    "name": "蘇聖芳",
    "domestic": {
-    "games": 24,
-    "win": 10,
+    "games": 25,
+    "win": 11,
     "loss": 14,
-    "rate": 41.7,
-    "text": "10勝14負　勝率41.7%"
+    "rate": 44.0,
+    "text": "11勝14負　勝率44%"
    },
    "international": {
     "games": 0,
@@ -1338,11 +1338,11 @@
     "text": "10勝25負　勝率28.6%"
    },
    "international": {
-    "games": 7,
+    "games": 8,
     "win": 4,
-    "loss": 3,
-    "rate": 57.1,
-    "text": "4勝3負　勝率57.1%"
+    "loss": 4,
+    "rate": 50.0,
+    "text": "4勝4負　勝率50%"
    },
    "last_year": {
     "games": 45,
@@ -1931,11 +1931,11 @@
   "3124CD1CC5C356605D28F2EF244A3688": {
    "name": "林怡廷",
    "domestic": {
-    "games": 13,
+    "games": 14,
     "win": 6,
-    "loss": 7,
-    "rate": 46.2,
-    "text": "6勝7負　勝率46.2%"
+    "loss": 8,
+    "rate": 42.9,
+    "text": "6勝8負　勝率42.9%"
    },
    "international": {
     "games": 0,
@@ -2682,11 +2682,11 @@
     "text": "8勝20負　勝率28.6%"
    },
    "international": {
-    "games": 7,
+    "games": 8,
     "win": 4,
-    "loss": 3,
-    "rate": 57.1,
-    "text": "4勝3負　勝率57.1%"
+    "loss": 4,
+    "rate": 50.0,
+    "text": "4勝4負　勝率50%"
    },
    "last_year": {
     "games": 32,
