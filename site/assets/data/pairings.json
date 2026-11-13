@@ -1859,7 +1859,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": "王元均",
+   "winner": "周尹南",
    "source": "schedule-app"
   },
   {
@@ -2666,13 +2666,13 @@
    "event": "第14屆中環碁聖賽",
    "round": "本賽 16強賽",
    "players": [
-    "王元均",
+    "周尹南",
     "楊博崴"
    ],
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": "王元均",
+   "winner": null,
    "source": "schedule-app"
   },
   {
@@ -2890,13 +2890,15 @@
    "event": "第14屆中環碁聖賽",
    "round": "本賽 8強賽",
    "players": [
-    "王元均",
     "徐靖恩"
    ],
-   "pending_opponent": false,
+   "pending_opponent": true,
    "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
+   "candidates": [
+    "周尹南",
+    "楊博崴"
+   ],
+   "winner": null,
    "source": "schedule-app"
   },
   {
@@ -3290,12 +3292,15 @@
    "event": "第14屆中環碁聖賽",
    "round": "本賽 4強賽",
    "players": [
-    "王元均",
     "盧奕銓"
    ],
-   "pending_opponent": false,
+   "pending_opponent": true,
    "status": "drawn",
-   "candidates": [],
+   "candidates": [
+    "周尹南",
+    "楊博崴",
+    "徐靖恩"
+   ],
    "winner": "盧奕銓",
    "source": "schedule-app"
   },

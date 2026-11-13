@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-13T03:56:07+08:00",
+ "generated": "2026-11-13T20:13:02+08:00",
  "generated_label": "(11/13更新)",
  "source": "海峰棋院 成績系統（公開對局紀錄）",
  "note": "國內＝台灣職業賽、國際＝世界賽；last_year 為前一年全部對局。players 的鍵是海峰棋士頁網址上的棋士編號。",
@@ -155,11 +155,11 @@
   "D354DB8D0B2F277236D9E6B5FBC5D228": {
    "name": "林君諺",
    "domestic": {
-    "games": 58,
+    "games": 59,
     "win": 35,
-    "loss": 23,
-    "rate": 60.3,
-    "text": "35勝23負　勝率60.3%"
+    "loss": 24,
+    "rate": 59.3,
+    "text": "35勝24負　勝率59.3%"
    },
    "international": {
     "games": 8,
@@ -515,11 +515,11 @@
   "E9DF0E8E3BA4B7CB4D5A44BC0598CF01": {
    "name": "盧奕銓",
    "domestic": {
-    "games": 57,
-    "win": 46,
+    "games": 58,
+    "win": 47,
     "loss": 11,
-    "rate": 80.7,
-    "text": "46勝11負　勝率80.7%"
+    "rate": 81.0,
+    "text": "47勝11負　勝率81%"
    },
    "international": {
     "games": 10,
