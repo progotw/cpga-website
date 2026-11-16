@@ -3973,7 +3973,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "徐銘均",
    "source": "schedule-app"
   },
   {
@@ -3989,7 +3989,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "陳威廷",
    "source": "schedule-app"
   },
   {
@@ -4005,7 +4005,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "賴均輔",
    "source": "schedule-app"
   },
   {
@@ -4031,14 +4031,12 @@
    "event": "第20屆棋王賽",
    "round": "複賽 敗部2回",
    "players": [
-    "林立祥"
-   ],
-   "pending_opponent": true,
-   "status": "drawn",
-   "candidates": [
-    "林修平",
+    "林立祥",
     "徐銘均"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4081,14 +4079,12 @@
    "event": "第20屆棋王賽",
    "round": "複賽 敗部2回",
    "players": [
+    "陳威廷",
     "林宇翔"
    ],
-   "pending_opponent": true,
+   "pending_opponent": false,
    "status": "drawn",
-   "candidates": [
-    "陳威廷",
-    "林鈺娗"
-   ],
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4265,7 +4261,6 @@
     "周尹南",
     "楊子萱",
     "林立祥",
-    "林修平",
     "徐銘均"
    ],
    "winner": null,
@@ -4318,7 +4313,6 @@
    "status": "scheduled",
    "candidates": [
     "陳威廷",
-    "林鈺娗",
     "林宇翔",
     "陳映嘉",
     "林瀚彰"
@@ -4475,7 +4469,6 @@
     "周尹南",
     "楊子萱",
     "林立祥",
-    "林修平",
     "徐銘均",
     "林君諺",
     "徐靖恩",
@@ -4518,7 +4511,6 @@
    "status": "scheduled",
    "candidates": [
     "陳威廷",
-    "林鈺娗",
     "林宇翔",
     "陳映嘉",
     "林瀚彰",
@@ -4633,7 +4625,6 @@
     "周尹南",
     "楊子萱",
     "林立祥",
-    "林修平",
     "徐銘均",
     "林君諺",
     "徐靖恩",
@@ -4662,7 +4653,6 @@
    "status": "scheduled",
    "candidates": [
     "陳威廷",
-    "林鈺娗",
     "林宇翔",
     "陳映嘉",
     "林瀚彰",

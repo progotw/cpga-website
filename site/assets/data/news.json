@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-16T04:49:03+00:00",
+ "generated": "2026-11-16T12:44:51+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "3451570A26F89280F60B1C54E340EC15",
+   "date": "2026-11-16",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "中環國手挑戰者決定賽：賴均輔勝王元均，將挑戰許皓鋐國手",
+   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15",
+   "local": true
+  },
   {
    "id": "E8CBD38D82E4DB4164476E9128A7759D",
    "date": "2026-11-13",
@@ -39,15 +48,6 @@
    "cat": "match",
    "title": "棋王複賽2回戰：上屆循環圈詩淵、博崴意外止步，勝部8人晉級準決賽！",
    "url": "https://www.haifong.org/news/content/D380ECD80FA00D80F1347B1D225A248C",
-   "local": true
-  },
-  {
-   "id": "3451570A26F89280F60B1C54E340EC15",
-   "date": "2026-11-09",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "中環國手賽4強戰報：王元均、賴均輔晉級挑戰者決定賽",
-   "url": "https://www.haifong.org/news/content/3451570A26F89280F60B1C54E340EC15",
    "local": true
   },
   {

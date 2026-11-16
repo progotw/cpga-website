@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-16T12:49:22+08:00",
+ "generated": "2026-11-16T20:45:16+08:00",
  "generated_label": "(11/16更新)",
  "source": "海峰棋院 成績系統（公開對局紀錄）",
  "note": "國內＝台灣職業賽、國際＝世界賽；last_year 為前一年全部對局。players 的鍵是海峰棋士頁網址上的棋士編號。",
@@ -107,11 +107,11 @@
   "E9D94D4CE46F6025510F71D1EA39FCB3": {
    "name": "王元均",
    "domestic": {
-    "games": 66,
+    "games": 67,
     "win": 46,
-    "loss": 20,
-    "rate": 69.7,
-    "text": "46勝20負　勝率69.7%"
+    "loss": 21,
+    "rate": 68.7,
+    "text": "46勝21負　勝率68.7%"
    },
    "international": {
     "games": 10,
@@ -227,11 +227,11 @@
   "E81B48D148D947DCA3E3ECFF3CA72E20": {
    "name": "賴均輔",
    "domestic": {
-    "games": 59,
-    "win": 44,
+    "games": 60,
+    "win": 45,
     "loss": 15,
-    "rate": 74.6,
-    "text": "44勝15負　勝率74.6%"
+    "rate": 75.0,
+    "text": "45勝15負　勝率75%"
    },
    "international": {
     "games": 5,
@@ -659,11 +659,11 @@
   "9D2A7763AEE6BD3CBC65C3383F7C0E29": {
    "name": "林修平",
    "domestic": {
-    "games": 4,
+    "games": 5,
     "win": 2,
-    "loss": 2,
-    "rate": 50.0,
-    "text": "2勝2負　勝率50%"
+    "loss": 3,
+    "rate": 40.0,
+    "text": "2勝3負　勝率40%"
    },
    "international": {
     "games": 0,
@@ -1307,11 +1307,11 @@
   "A5C3900CB8FC98E0B62E558F008D3014": {
    "name": "陳威廷",
    "domestic": {
-    "games": 22,
-    "win": 12,
+    "games": 23,
+    "win": 13,
     "loss": 10,
-    "rate": 54.5,
-    "text": "12勝10負　勝率54.5%"
+    "rate": 56.5,
+    "text": "13勝10負　勝率56.5%"
    },
    "international": {
     "games": 0,
@@ -2195,11 +2195,11 @@
   "50A678286D3D9124EB68460F11B08E88": {
    "name": "林鈺娗",
    "domestic": {
-    "games": 20,
+    "games": 21,
     "win": 8,
-    "loss": 12,
-    "rate": 40.0,
-    "text": "8勝12負　勝率40%"
+    "loss": 13,
+    "rate": 38.1,
+    "text": "8勝13負　勝率38.1%"
    },
    "international": {
     "games": 0,
@@ -3059,11 +3059,11 @@
   "EA39A1946C438D77F69289CA6789016C": {
    "name": "徐銘均",
    "domestic": {
-    "games": 9,
-    "win": 3,
+    "games": 10,
+    "win": 4,
     "loss": 6,
-    "rate": 33.3,
-    "text": "3勝6負　勝率33.3%"
+    "rate": 40.0,
+    "text": "4勝6負　勝率40%"
    },
    "international": {
     "games": 0,
