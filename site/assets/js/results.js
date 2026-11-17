@@ -172,6 +172,20 @@
     return t.getUTCFullYear() * 10000 + (t.getUTCMonth() + 1) * 100 + t.getUTCDate();
   }
 
+  /* 階段的先後。數字越大表示越後面的輪次。
+       32強 → 16強 → 8強：剩的人越少越後面
+       1回賽 → 2回賽、決賽第1局 → 第2局：編號越大越後面
+     兩種寫法不會出現在同一個棋戰的同一天，所以各自成一組就夠。 */
+  function stageOrder(s) {
+    s = String(s == null ? '' : s);
+    var m = s.match(/(\d+)\s*強/);
+    if (m) return 10000 - Number(m[1]);
+    m = s.match(/(\d+)\s*(?:回|局|輪)/);
+    if (m) return Number(m[1]);
+    if (/決賽|冠亞|冠軍/.test(s)) return 9999;
+    return 0;
+  }
+
   window.HaifongResults = {
     /* 單一棋士的成績。預設取今年與去年——頁面上只用得到這兩年。 */
     player: function (name, years) {
@@ -188,10 +202,16 @@
       })).then(function (per) {
         var games = [];
         per.forEach(function (p) { games = games.concat(p.games); });
-        /* 日期是 MM.DD，同年才可比；先依年份再依日期，新的在前 */
+        /* 日期是 MM.DD，同年才可比；先依年份再依日期，新的在前。
+           同一天同一個棋戰下兩盤（32強打完接著打16強）時，日期分不出先後，
+           再比階段——越後面的輪次排越上面，跟整份清單「新的在前」一致。
+           原本相等時回傳 -1，比較器不一致，同一天的順序會亂跳。 */
         games.sort(function (a, b) {
-          return a.year !== b.year ? (a.year < b.year ? 1 : -1)
-                                   : (a.date < b.date ? 1 : -1);
+          if (a.year !== b.year) return a.year < b.year ? 1 : -1;
+          if (a.date !== b.date) return a.date < b.date ? 1 : -1;
+          /* 不同棋戰的輪次沒得比（16強 vs 1回賽），維持原本的順序 */
+          if (a.event !== b.event) return 0;
+          return stageOrder(b.stage) - stageOrder(a.stage);
         });
         return {
           name: name,
