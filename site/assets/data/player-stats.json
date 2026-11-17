@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-17T16:45:32+08:00",
+ "generated": "2026-11-17T19:54:33+08:00",
  "generated_label": "(11/17更新)",
  "source": "海峰棋院 成績系統（公開對局紀錄）",
  "note": "國內＝台灣職業賽、國際＝世界賽；last_year 為前一年全部對局。players 的鍵是海峰棋士頁網址上的棋士編號。",
@@ -131,11 +131,11 @@
   "115967099A3190B9705F17A83DFF23C5": {
    "name": "林書陽",
    "domestic": {
-    "games": 28,
-    "win": 17,
+    "games": 29,
+    "win": 18,
     "loss": 11,
-    "rate": 60.7,
-    "text": "17勝11負　勝率60.7%"
+    "rate": 62.1,
+    "text": "18勝11負　勝率62.1%"
    },
    "international": {
     "games": 0,
@@ -179,11 +179,11 @@
   "CFE91E4CC316BDAA23077D2D414DA825": {
    "name": "林立祥",
    "domestic": {
-    "games": 29,
-    "win": 18,
+    "games": 30,
+    "win": 19,
     "loss": 11,
-    "rate": 62.1,
-    "text": "18勝11負　勝率62.1%"
+    "rate": 63.3,
+    "text": "19勝11負　勝率63.3%"
    },
    "international": {
     "games": 0,
@@ -275,11 +275,11 @@
   "39DB6A531FEBD95C2829A32DA88CCCE0": {
    "name": "林士勛",
    "domestic": {
-    "games": 32,
-    "win": 19,
+    "games": 33,
+    "win": 20,
     "loss": 13,
-    "rate": 59.4,
-    "text": "19勝13負　勝率59.4%"
+    "rate": 60.6,
+    "text": "20勝13負　勝率60.6%"
    },
    "international": {
     "games": 8,
@@ -347,11 +347,11 @@
   "3AB09C2D42977CB66F69737B529900F2": {
    "name": "簡靖庭",
    "domestic": {
-    "games": 51,
-    "win": 34,
+    "games": 52,
+    "win": 35,
     "loss": 17,
-    "rate": 66.7,
-    "text": "34勝17負　勝率66.7%"
+    "rate": 67.3,
+    "text": "35勝17負　勝率67.3%"
    },
    "international": {
     "games": 8,
@@ -731,11 +731,11 @@
   "08D697DF2D668FC2B0F8A6B67498CBBD": {
    "name": "周尹南",
    "domestic": {
-    "games": 20,
+    "games": 21,
     "win": 10,
-    "loss": 10,
-    "rate": 50.0,
-    "text": "10勝10負　勝率50%"
+    "loss": 11,
+    "rate": 47.6,
+    "text": "10勝11負　勝率47.6%"
    },
    "international": {
     "games": 0,
@@ -779,11 +779,11 @@
   "AED46C721B4BC83AA23815E70632D976": {
    "name": "林宇翔",
    "domestic": {
-    "games": 16,
+    "games": 17,
     "win": 6,
-    "loss": 10,
-    "rate": 37.5,
-    "text": "6勝10負　勝率37.5%"
+    "loss": 11,
+    "rate": 35.3,
+    "text": "6勝11負　勝率35.3%"
    },
    "international": {
     "games": 0,
@@ -803,11 +803,11 @@
   "C52F5EFDF989D8CE3BA53AB7A2355F45": {
    "name": "楊子萱",
    "domestic": {
-    "games": 30,
-    "win": 18,
+    "games": 31,
+    "win": 19,
     "loss": 12,
-    "rate": 60.0,
-    "text": "18勝12負　勝率60%"
+    "rate": 61.3,
+    "text": "19勝12負　勝率61.3%"
    },
    "international": {
     "games": 21,
@@ -827,11 +827,11 @@
   "B26F65E303FB09F01C3DAF55AC233885": {
    "name": "蔡丞韋",
    "domestic": {
-    "games": 24,
+    "games": 25,
     "win": 14,
-    "loss": 10,
-    "rate": 58.3,
-    "text": "14勝10負　勝率58.3%"
+    "loss": 11,
+    "rate": 56.0,
+    "text": "14勝11負　勝率56%"
    },
    "international": {
     "games": 0,
@@ -1187,11 +1187,11 @@
   "1B1B317DAFD897543FF1C175651B06AC": {
    "name": "林世民",
    "domestic": {
-    "games": 20,
-    "win": 10,
+    "games": 21,
+    "win": 11,
     "loss": 10,
-    "rate": 50.0,
-    "text": "10勝10負　勝率50%"
+    "rate": 52.4,
+    "text": "11勝10負　勝率52.4%"
    },
    "international": {
     "games": 0,
@@ -1307,11 +1307,11 @@
   "A5C3900CB8FC98E0B62E558F008D3014": {
    "name": "陳威廷",
    "domestic": {
-    "games": 23,
-    "win": 13,
+    "games": 24,
+    "win": 14,
     "loss": 10,
-    "rate": 56.5,
-    "text": "13勝10負　勝率56.5%"
+    "rate": 58.3,
+    "text": "14勝10負　勝率58.3%"
    },
    "international": {
     "games": 0,
@@ -1403,11 +1403,11 @@
   "CDF70610323C8ED99F7262A73CAF89B5": {
    "name": "詹宜典",
    "domestic": {
-    "games": 10,
+    "games": 11,
     "win": 3,
-    "loss": 7,
-    "rate": 30.0,
-    "text": "3勝7負　勝率30%"
+    "loss": 8,
+    "rate": 27.3,
+    "text": "3勝8負　勝率27.3%"
    },
    "international": {
     "games": 0,
@@ -2051,11 +2051,11 @@
   "A994D5EC1935043B7991E0D5B047154B": {
    "name": "林瀚彰",
    "domestic": {
-    "games": 22,
+    "games": 23,
     "win": 11,
-    "loss": 11,
-    "rate": 50.0,
-    "text": "11勝11負　勝率50%"
+    "loss": 12,
+    "rate": 47.8,
+    "text": "11勝12負　勝率47.8%"
    },
    "international": {
     "games": 0,
@@ -2147,11 +2147,11 @@
   "2F00F3E909704F83EF577DCA651BF421": {
    "name": "沈逸恩",
    "domestic": {
-    "games": 34,
+    "games": 35,
     "win": 17,
-    "loss": 17,
-    "rate": 50.0,
-    "text": "17勝17負　勝率50%"
+    "loss": 18,
+    "rate": 48.6,
+    "text": "17勝18負　勝率48.6%"
    },
    "international": {
     "games": 0,
@@ -2699,11 +2699,11 @@
   "9D9CE3D386D8B7E6177A2CAF682FB380": {
    "name": "孫立言",
    "domestic": {
-    "games": 30,
+    "games": 31,
     "win": 14,
-    "loss": 16,
-    "rate": 46.7,
-    "text": "14勝16負　勝率46.7%"
+    "loss": 17,
+    "rate": 45.2,
+    "text": "14勝17負　勝率45.2%"
    },
    "international": {
     "games": 0,
@@ -2723,11 +2723,11 @@
   "403CCFF3850BDA70455BBF929FCA4AB7": {
    "name": "陳映嘉",
    "domestic": {
-    "games": 34,
-    "win": 17,
+    "games": 35,
+    "win": 18,
     "loss": 17,
-    "rate": 50.0,
-    "text": "17勝17負　勝率50%"
+    "rate": 51.4,
+    "text": "18勝17負　勝率51.4%"
    },
    "international": {
     "games": 0,
@@ -3059,11 +3059,11 @@
   "EA39A1946C438D77F69289CA6789016C": {
    "name": "徐銘均",
    "domestic": {
-    "games": 10,
+    "games": 11,
     "win": 4,
-    "loss": 6,
-    "rate": 40.0,
-    "text": "4勝6負　勝率40%"
+    "loss": 7,
+    "rate": 36.4,
+    "text": "4勝7負　勝率36.4%"
    },
    "international": {
     "games": 0,
