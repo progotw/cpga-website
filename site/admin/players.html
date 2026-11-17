@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>棋士概況｜協會後台</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23ffffff'/><circle cx='12.5' cy='16' r='8.2' fill='none' stroke='%23111111' stroke-width='2.6'/><circle cx='20.5' cy='16' r='7.8' fill='%233f3b39'/></svg>">
+</head>
+<body style="background:var(--paper-2)">
+
+<div class="admin-bar">
+  <div class="admin-bar__inner">
+    <a class="admin-bar__title" href="index.html">← 協會後台</a>
+    <span class="admin-bar__who" id="who"></span>
+    <a class="admin-bar__link" href="#" id="logout">登出</a>
+  </div>
+</div>
+
+<main class="admin-wrap" style="max-width:1040px">
+  <div class="section-head">
+    <h1 style="font-size:1.5rem;margin-bottom:4px">棋士概況</h1>
+    <p class="muted mb-0" style="font-size:.92rem">
+      每位棋士本年度的對局數與對局費，一頁看完。可以排序、搜尋，也可以匯出試算表。
+    </p>
+  </div>
+
+  <!-- 兩份資料的更新時間不一樣，看數字的人要知道自己在看哪一天的東西 -->
+  <div class="callout mt-2">
+    <p class="mb-0" style="font-size:.9rem">
+      <strong>對局數</strong>即時取自海峰成績系統，成績登錄後就會變。<br>
+      <strong>對局費</strong>是院方核算並發布的版本，發布日期見下方；院方尚未發布的賽事不在裡面。
+    </p>
+  </div>
+
+  <div id="notice" class="mt-2"></div>
+
+  <div class="card mt-2">
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end">
+      <div class="field mb-0" style="flex:1 1 200px">
+        <label for="q">搜尋姓名</label>
+        <input type="text" id="q" placeholder="輸入姓名">
+      </div>
+      <div class="field mb-0" style="flex:0 1 130px">
+        <label for="year">年度</label>
+        <select id="year"></select>
+      </div>
+      <div class="field mb-0" style="flex:0 1 190px">
+        <label for="sort">排序</label>
+        <select id="sort">
+          <option value="fee">對局費（高到低）</option>
+          <option value="games">對局數（多到少）</option>
+          <option value="dan">段位（高到低）</option>
+          <option value="name">姓名</option>
+        </select>
+      </div>
+      <button class="btn btn-ghost btn-sm" id="csv" type="button">匯出 CSV</button>
+    </div>
+    <p class="muted mb-0 mt-2" style="font-size:.86rem" id="summary"></p>
+  </div>
+
+  <div id="list" class="mt-2"><p class="muted">載入中…</p></div>
+</main>
+
+<script src="../assets/js/sb-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/dist/umd/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+<!-- 對局數讀的是海峰成績系統的公開資料，跟棋士專區「我的成績」同一支程式 -->
+<script src="../assets/js/results.js"></script>
+<script>
+(function () {
+  var A = window.CPGA_AUTH;
+  var R = window.HaifongResults;
+  var listEl = document.getElementById('list');
+  var rows = [];          // 目前年度的合併結果
+  var published = '';     // 對局費的發布日期
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function say(kind, text) {
+    document.getElementById('notice').innerHTML = text
+      ? '<div class="callout' + (kind === 'error' ? ' callout--accent' : '') +
+        '"><p class="mb-0" style="font-size:.92rem">' + text + '</p></div>'
+      : '';
+  }
+  function money(n) {
+    return Number(n || 0).toLocaleString('zh-TW');
+  }
+  function day(ts) {
+    if (!ts) return '';
+    var d = new Date(ts), p = function (n) { return (n < 10 ? '0' : '') + n; };
+    return d.getFullYear() + '/' + p(d.getMonth() + 1) + '/' + p(d.getDate());
+  }
+
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    A.signOut('admin');
+  });
+
+  /* 年度選單：今年與前兩年。更早的要看再加，沒必要一次塞十年。 */
+  var now = new Date().getFullYear();
+  var yearSel = document.getElementById('year');
+  yearSel.innerHTML = [0, 1, 2].map(function (i) {
+    return '<option value="' + (now - i) + '">' + (now - i) + ' 年</option>';
+  }).join('');
+
+  var players = null;     // 棋士名錄，只讀一次
+
+  /* 名錄裡只有「七段」這種字，排序要數字。與報名頁同一張表。 */
+  var DAN = { '初': 1, '一': 1, '二': 2, '三': 3, '四': 4,
+              '五': 5, '六': 6, '七': 7, '八': 8, '九': 9 };
+  function danOf(p) { return DAN[String(p.rank || '').charAt(0)] || 0; }
+
+  function roster() {
+    if (players) return Promise.resolve(players);
+    return fetch('../assets/data/players.json', { cache: 'no-cache' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('讀取棋士名錄失敗（HTTP ' + r.status + '）');
+        return r.json();
+      })
+      .then(function (d) { players = d.players || []; return players; });
+  }
+
+  /* 三份資料合併：名錄（誰）＋成績（下幾盤）＋對局費（拿多少）。
+     對局數用姓名對（成績系統只有姓名），對局費用棋士 id 對。 */
+  function load(year) {
+    listEl.innerHTML = '<p class="muted">載入中…</p>';
+    say('', '');
+    return Promise.all([
+      roster(),
+      R.countsByYear(year),
+      /* 管理員讀得到所有人的對局費（資料列權限 is_admin()）。
+         這是個資，只在後台這一頁用，不會進公開的 assets/data。 */
+      A.client.from('player_fees').select('player_id,total,ranks,published_at').eq('year', year)
+    ]).then(function (res) {
+      var list = res[0], counts = res[1] || {}, fees = res[2];
+      if (fees.error) throw fees.error;
+
+      var byId = {};
+      published = '';
+      (fees.data || []).forEach(function (f) {
+        byId[f.player_id] = f;
+        if (f.published_at && f.published_at > published) published = f.published_at;
+      });
+
+      rows = list.map(function (p) {
+        var f = byId[p.id] || {};
+        var rk = (f.ranks && f.ranks.total) || null;
+        return {
+          id: p.id,
+          name: p.name,
+          rank: p.rank || '',
+          dan: danOf(p),
+          games: counts[p.name] || 0,
+          fee: Number(f.total || 0),
+          feeRank: rk && rk.rank ? rk.rank : 0,
+          feeOf: rk && rk.n ? rk.n : 0
+        };
+      });
+      render();
+    }).catch(function (err) {
+      listEl.innerHTML = '';
+      say('error', '載入失敗：' + esc(A.message ? A.message(err) : (err.message || err)));
+    });
+  }
+
+  function sorted() {
+    var how = document.getElementById('sort').value;
+    var q = document.getElementById('q').value.trim();
+    var out = rows.filter(function (r) { return !q || r.name.indexOf(q) > -1; });
+    return out.sort(function (a, b) {
+      if (how === 'fee') return b.fee - a.fee || b.games - a.games;
+      if (how === 'games') return b.games - a.games || b.fee - a.fee;
+      if (how === 'dan') return b.dan - a.dan || b.fee - a.fee;
+      return a.name.localeCompare(b.name, 'zh-Hant');
+    });
+  }
+
+  function render() {
+    var list = sorted();
+    var played = rows.filter(function (r) { return r.games > 0; }).length;
+    var paid = rows.filter(function (r) { return r.fee > 0; }).length;
+    var sumG = rows.reduce(function (s, r) { return s + r.games; }, 0);
+    var sumF = rows.reduce(function (s, r) { return s + r.fee; }, 0);
+
+    document.getElementById('summary').innerHTML =
+      '名錄 ' + rows.length + ' 位，其中 ' + played + ' 位今年有出賽、' +
+      paid + ' 位有對局費。' +
+      /* 同一局雙方各算一次，所以這是人次不是局數——
+         對手是業餘或外籍棋士時只會算到一次，除以二會失真 */
+      '對局人次合計 ' + sumG + '（同一局雙方各算一次），' +
+      '對局費合計 ' + money(sumF) + ' 元。' +
+      (published ? '　對局費為院方 ' + esc(day(published)) + ' 發布的版本。' : '');
+
+    if (!list.length) {
+      listEl.innerHTML = '<p class="muted">沒有符合的棋士。</p>';
+      return;
+    }
+
+    var TH = 'text-align:right;padding:8px 10px;border-bottom:2px solid var(--line);' +
+             'font-size:.86rem;white-space:nowrap';
+    var TD = 'text-align:right;padding:7px 10px;border-bottom:1px solid var(--line);' +
+             'white-space:nowrap;font-variant-numeric:tabular-nums';
+
+    listEl.innerHTML = '<div class="card" style="overflow-x:auto">' +
+      '<table style="width:100%;border-collapse:collapse;font-size:.92rem">' +
+      '<thead><tr>' +
+        '<th style="' + TH + ';text-align:left">棋士</th>' +
+        '<th style="' + TH + '">段位</th>' +
+        '<th style="' + TH + '">對局數</th>' +
+        '<th style="' + TH + '">對局費</th>' +
+        '<th style="' + TH + '">名次</th>' +
+      '</tr></thead><tbody>' +
+      list.map(function (r) {
+        return '<tr>' +
+          '<td style="' + TD + ';text-align:left">' + esc(r.name) + '</td>' +
+          '<td class="muted" style="' + TD + '">' + esc(r.rank) + '</td>' +
+          '<td style="' + TD + '">' + (r.games || '—') + '</td>' +
+          '<td style="' + TD + '">' + (r.fee ? money(r.fee) : '—') + '</td>' +
+          '<td class="muted" style="' + TD + ';font-size:.86rem">' +
+            (r.feeRank ? '第 ' + r.feeRank + ' 名' + (r.feeOf ? ' / ' + r.feeOf + ' 人' : '') : '—') +
+          '</td>' +
+        '</tr>';
+      }).join('') +
+      '</tbody></table></div>';
+  }
+
+  document.getElementById('q').addEventListener('input', render);
+  document.getElementById('sort').addEventListener('change', render);
+  document.getElementById('year').addEventListener('change', function () {
+    load(Number(this.value));
+  });
+
+  /* 匯出 CSV：主管多半要貼進 Excel 或轉成報表。
+     開頭加 BOM，Excel 才不會把中文顯示成亂碼。 */
+  document.getElementById('csv').addEventListener('click', function () {
+    var year = yearSel.value;
+    var head = ['姓名', '段位', year + '年對局數', year + '年對局費', '對局費名次'];
+    var body = sorted().map(function (r) {
+      return [r.name, r.rank, r.games, r.fee, r.feeRank || ''];
+    });
+    var csv = [head].concat(body).map(function (cols) {
+      return cols.map(function (c) {
+        var s = String(c == null ? '' : c);
+        return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+      }).join(',');
+    }).join('\r\n');
+
+    var url = URL.createObjectURL(
+      new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' }));
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = '棋士概況_' + year + '.csv';
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+
+  A.require('admin').then(function (user) {
+    document.getElementById('who').textContent = user.profile.display_name || user.user.email;
+    return load(now);
+  }).catch(function (err) {
+    listEl.innerHTML = '';
+    say('error', '載入失敗：' + esc(A.message ? A.message(err) : err.message));
+  });
+})();
+</script>
+</body>
+</html>
