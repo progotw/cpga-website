@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-17T14:46:13+08:00",
+ "generated": "2026-11-17T16:45:32+08:00",
  "generated_label": "(11/17更新)",
  "source": "海峰棋院 成績系統（公開對局紀錄）",
  "note": "國內＝台灣職業賽、國際＝世界賽；last_year 為前一年全部對局。players 的鍵是海峰棋士頁網址上的棋士編號。",
@@ -155,11 +155,11 @@
   "D354DB8D0B2F277236D9E6B5FBC5D228": {
    "name": "林君諺",
    "domestic": {
-    "games": 59,
-    "win": 35,
+    "games": 60,
+    "win": 36,
     "loss": 24,
-    "rate": 59.3,
-    "text": "35勝24負　勝率59.3%"
+    "rate": 60.0,
+    "text": "36勝24負　勝率60%"
    },
    "international": {
     "games": 8,
@@ -515,11 +515,11 @@
   "E9DF0E8E3BA4B7CB4D5A44BC0598CF01": {
    "name": "盧奕銓",
    "domestic": {
-    "games": 58,
-    "win": 47,
+    "games": 59,
+    "win": 48,
     "loss": 11,
-    "rate": 81.0,
-    "text": "47勝11負　勝率81%"
+    "rate": 81.4,
+    "text": "48勝11負　勝率81.4%"
    },
    "international": {
     "games": 10,
@@ -539,11 +539,11 @@
   "5F56B6A27939285C8C6CE8EAF86E33FD": {
    "name": "徐靖恩",
    "domestic": {
-    "games": 42,
+    "games": 43,
     "win": 29,
-    "loss": 13,
-    "rate": 69.0,
-    "text": "29勝13負　勝率69%"
+    "loss": 14,
+    "rate": 67.4,
+    "text": "29勝14負　勝率67.4%"
    },
    "international": {
     "games": 3,
@@ -1067,11 +1067,11 @@
   "AE4B5AB0DFEB900CDE0CBD2979FAFEA0": {
    "name": "林彥丞",
    "domestic": {
-    "games": 30,
-    "win": 19,
+    "games": 31,
+    "win": 20,
     "loss": 11,
-    "rate": 63.3,
-    "text": "19勝11負　勝率63.3%"
+    "rate": 64.5,
+    "text": "20勝11負　勝率64.5%"
    },
    "international": {
     "games": 8,
@@ -1091,11 +1091,11 @@
   "2FAC98B749A332D40442FDDE6626FDE5": {
    "name": "盧鈺樺",
    "domestic": {
-    "games": 35,
+    "games": 36,
     "win": 20,
-    "loss": 15,
-    "rate": 57.1,
-    "text": "20勝15負　勝率57.1%"
+    "loss": 16,
+    "rate": 55.6,
+    "text": "20勝16負　勝率55.6%"
    },
    "international": {
     "games": 7,
@@ -1379,11 +1379,11 @@
   "CD870F50F947A140848F9F4E75842EED": {
    "name": "林新為",
    "domestic": {
-    "games": 26,
-    "win": 15,
+    "games": 27,
+    "win": 16,
     "loss": 11,
-    "rate": 57.7,
-    "text": "15勝11負　勝率57.7%"
+    "rate": 59.3,
+    "text": "16勝11負　勝率59.3%"
    },
    "international": {
     "games": 8,
@@ -2171,11 +2171,11 @@
   "06F4746CEB171C0D5428EDA5CFE69315": {
    "name": "吳彥諶",
    "domestic": {
-    "games": 41,
+    "games": 42,
     "win": 23,
-    "loss": 18,
-    "rate": 56.1,
-    "text": "23勝18負　勝率56.1%"
+    "loss": 19,
+    "rate": 54.8,
+    "text": "23勝19負　勝率54.8%"
    },
    "international": {
     "games": 2,
@@ -2627,11 +2627,11 @@
   "FB01E247BDE33C245ED82C83417B0A84": {
    "name": "鄭予皓",
    "domestic": {
-    "games": 35,
+    "games": 36,
     "win": 19,
-    "loss": 16,
-    "rate": 54.3,
-    "text": "19勝16負　勝率54.3%"
+    "loss": 17,
+    "rate": 52.8,
+    "text": "19勝17負　勝率52.8%"
    },
    "international": {
     "games": 0,
