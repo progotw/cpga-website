@@ -4213,7 +4213,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "盧奕銓",
    "source": "schedule-app"
   },
   {
@@ -4229,7 +4229,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "周尹南",
    "source": "schedule-app"
   },
   {
@@ -4518,15 +4518,13 @@
    "time": "10:00",
    "event": "第2屆龍星賽",
    "round": "本賽 4強",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "盧奕銓",
-    "陳威廷",
-    "周尹南",
-    "林新為"
+    "周尹南"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -4635,9 +4633,7 @@
    "status": "scheduled",
    "candidates": [
     "盧奕銓",
-    "陳威廷",
     "周尹南",
-    "林新為",
     "陳祈睿",
     "牛詩特",
     "孫偉勛",
@@ -4657,9 +4653,7 @@
    "status": "scheduled",
    "candidates": [
     "盧奕銓",
-    "陳威廷",
     "周尹南",
-    "林新為",
     "陳祈睿",
     "牛詩特",
     "孫偉勛",
@@ -4679,9 +4673,7 @@
    "status": "scheduled",
    "candidates": [
     "盧奕銓",
-    "陳威廷",
     "周尹南",
-    "林新為",
     "陳祈睿",
     "牛詩特",
     "孫偉勛",

@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-18T03:05:41+00:00",
+ "generated": "2026-11-18T13:02:17+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "E5AB28EA05EA8116B0072EEDEFA4A227",
+   "date": "2026-11-18",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "【盧奕銓新人王、周尹南六段晉級4強｜第2屆龍星賽8強戰報】",
+   "url": "https://www.haifong.org/news/content/E5AB28EA05EA8116B0072EEDEFA4A227",
+   "local": true
+  },
   {
    "id": "D380ECD80FA00D80F1347B1D225A248C",
    "date": "2026-11-17",
@@ -42,12 +51,12 @@
    "local": true
   },
   {
-   "id": "E5AB28EA05EA8116B0072EEDEFA4A227",
-   "date": "2026-11-11",
+   "id": "936CE6B61A29849C95935C96F64DA723",
+   "date": "2026-11-13",
    "catLabel": "比賽訊息",
    "cat": "match",
-   "title": "龍星賽8強出爐：盧奕銓、陳祈睿等8人晉級",
-   "url": "https://www.haifong.org/news/content/E5AB28EA05EA8116B0072EEDEFA4A227",
+   "title": "【三星盃世界圍棋大師賽 許皓鋐半目之差止步16強】",
+   "url": "https://www.haifong.org/news/content/936CE6B61A29849C95935C96F64DA723",
    "local": true
   },
   {
@@ -1074,15 +1083,6 @@
    "cat": "match",
    "title": "環旭電子寶島隊 圍乙聯賽成績",
    "url": "https://www.haifong.org/news/content/3D615AAB2569BAF9336021393736163C",
-   "local": true
-  },
-  {
-   "id": "EB4A1DF327BE871F90B05DFA217E5344",
-   "date": "2026-06-14",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "海峰棋院女子隊 圍乙聯賽成績",
-   "url": "https://www.haifong.org/news/content/EB4A1DF327BE871F90B05DFA217E5344",
    "local": true
   }
  ]
