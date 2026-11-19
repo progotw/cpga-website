@@ -36,13 +36,34 @@ ROUND_MARKER = re.compile(r'第|本賽|預賽|複賽|決賽|挑戰|循環|\d')
 #   (上下午) = 當天兩局，10:00 與 14:00
 #   (上午) / (下午) = 當天只有該時段一局
 # 「上下午」必須排在「下午」前面，否則會被後者先比對到。
-AMPM = re.compile(r'[（(]?\s*(上下午|上午|早上|下午)\s*[）)]?')
+#
+# 2026-11-19：日曆上寫的是「(上、下午)」，中間多一個頓號，
+# 只認「上下午」就比對不到，結果被後面的「下午」接走，一天兩局變成只剩 14:00。
+# 小編怎麼寫都有可能，所以兩個時段中間允許頓號、逗號、斜線、「與」「及」「和」、
+# 空白，也允許寫成「上午、下午」。
+_SEP = r'\s*[、,，/／~～\-－和與及＋+]?\s*'
+AMPM = re.compile(
+    r'[（(]?\s*('
+    r'上午' + _SEP + r'下午|'      # 上午、下午
+    r'上' + _SEP + r'下午|'        # 上、下午 / 上下午
+    r'上午|早上|下午'
+    r')\s*[）)]?')
 AMPM_SESSIONS = {
-    '上下午': ['10:00', '14:00'],
     '上午': ['10:00'],
     '早上': ['10:00'],
     '下午': ['14:00'],
 }
+
+
+def ampm_sessions(word):
+    """把比對到的時段字樣換成開賽時間。
+
+    「上、下午」這種中間夾符號的寫法去掉符號才查得到，
+    去掉後就是「上下午」＝當天兩局。"""
+    key = re.sub(r'[^一-鿿]', '', word)
+    if key in ('上下午', '上午下午'):
+        return ['10:00', '14:00']
+    return AMPM_SESSIONS.get(key)
 
 
 # 小編也會直接把時間寫在標題裡，例如「龍星賽決賽(13:00)」。
@@ -67,7 +88,7 @@ def sessions_of(title):
     if exact:
         return exact
     m = AMPM.search(title)
-    return AMPM_SESSIONS.get(m.group(1)) if m else None
+    return ampm_sessions(m.group(1)) if m else None
 
 
 def clean_title(title):
