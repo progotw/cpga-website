@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-19T12:41:17+08:00",
+  "generated": "2026-11-19T12:43:18+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
     "from": "2026-11-19",
     "to": "2027-01-17"
   },
-  "count": 19,
+  "count": 22,
   "events": [
     {
       "date": "2026-11-20",
@@ -55,28 +55,6 @@
     {
       "date": "2026-11-24",
       "weekday": 1,
-      "title": "第19屆棋王挑戰賽第2局",
-      "name": "棋王",
-      "round": "第19屆 挑戰賽第2局",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-11-25",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=N2hncTJ0MXNnY3QwMG8yZ2FtYmJkb3FocnMgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-11-24",
-      "weekday": 1,
       "title": "20屆棋王複賽4",
       "name": "棋王",
       "round": "20屆 複賽4",
@@ -92,6 +70,28 @@
       "end_date": "2026-11-25",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=MGY1MGpuZDVxYWkybmVqdnFocjBxZHZzZzQgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "weekday": 1,
+      "title": "第19屆棋王挑戰賽第2局",
+      "name": "棋王",
+      "round": "第19屆 挑戰賽第2局",
+      "series": "棋王循環圈",
+      "series_slot": 0,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-11-25",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=N2hncTJ0MXNnY3QwMG8yZ2FtYmJkb3FocnMgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
@@ -166,28 +166,6 @@
     {
       "date": "2026-12-01",
       "weekday": 1,
-      "title": "第19屆棋王挑戰賽第3局",
-      "name": "棋王",
-      "round": "第19屆 挑戰賽第3局",
-      "series": "棋王循環圈",
-      "series_slot": 0,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-12-02",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=MjNoZmNnbm9lcTVvcDhlcjhzMWdidXMxN2QgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
-    {
-      "date": "2026-12-01",
-      "weekday": 1,
       "title": "20屆棋王複賽5",
       "name": "棋王",
       "round": "20屆 複賽5",
@@ -203,6 +181,28 @@
       "end_date": "2026-12-02",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=NmNwYnRmMzc4a2gyaGowNXRjdDRkM2VsZGEgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-12-01",
+      "weekday": 1,
+      "title": "第19屆棋王挑戰賽第3局",
+      "name": "棋王",
+      "round": "第19屆 挑戰賽第3局",
+      "series": "棋王循環圈",
+      "series_slot": 0,
+      "sessions": [
+        "11:00"
+      ],
+      "time": "11:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-12-02",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=MjNoZmNnbm9lcTVvcDhlcjhzMWdidXMxN2QgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
@@ -400,6 +400,72 @@
       "end_date": "2026-12-14",
       "location": "",
       "link": "https://www.google.com/calendar/event?eid=N205NWZsdTgyZHZlMmc1NzVrbTJ1cmVocXUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-12-17",
+      "weekday": 3,
+      "title": "韓國國家隊交流第1日(上、下午)",
+      "name": "韓國國家隊交流",
+      "round": "第1日(上、",
+      "series": "韓國國家隊交流",
+      "series_slot": 6,
+      "sessions": [
+        "14:00"
+      ],
+      "time": "14:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-12-18",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=N3E3aGU4bTE0OXVlbmk5bnRscWFzcTlvdXUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-12-18",
+      "weekday": 4,
+      "title": "韓國國家隊交流第2日(上、下午)",
+      "name": "韓國國家隊交流",
+      "round": "第2日(上、",
+      "series": "韓國國家隊交流",
+      "series_slot": 6,
+      "sessions": [
+        "14:00"
+      ],
+      "time": "14:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-12-19",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=Nml1aXM1ZThrZmZsa2E2M3JjaTUyaGJpMmQgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
+      "calendars": [
+        "海峰棋院公開行事曆"
+      ]
+    },
+    {
+      "date": "2026-12-19",
+      "weekday": 5,
+      "title": "韓國國家隊交流第3日(上、下午)",
+      "name": "韓國國家隊交流",
+      "round": "第3日(上、",
+      "series": "韓國國家隊交流",
+      "series_slot": 6,
+      "sessions": [
+        "14:00"
+      ],
+      "time": "14:00",
+      "time_inferred": true,
+      "end_time": null,
+      "all_day": true,
+      "end_date": "2026-12-20",
+      "location": "",
+      "link": "https://www.google.com/calendar/event?eid=MmN0NTgwZ2J0YmpjNjcydWZ0cjY4YXA4MWggNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
       "calendars": [
         "海峰棋院公開行事曆"
       ]
