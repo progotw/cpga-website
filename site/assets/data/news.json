@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-19T04:46:31+00:00",
+ "generated": "2026-11-19T09:15:07+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
@@ -12,6 +12,15 @@
    "cat": "match",
    "title": "【棋編碎碎念：棋盤如山】",
    "url": "https://www.haifong.org/news/content/720CC5EB9503C2C6DDB7F06F21356A2A",
+   "local": true
+  },
+  {
+   "id": "6A13F9BB511EE79D9D0002F4EFC3ECE0",
+   "date": "2026-11-19",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "【精彩好棋專欄：第91篇 小將的衝擊(下)】",
+   "url": "https://www.haifong.org/news/content/6A13F9BB511EE79D9D0002F4EFC3ECE0",
    "local": true
   },
   {
@@ -1074,15 +1083,6 @@
    "cat": "media",
    "title": "【精彩好棋專欄：第89篇 海峰盃之旅】",
    "url": "https://www.haifong.org/news/content/00D8C9A186DD8FE67E29EDBE45AB3FD1",
-   "local": true
-  },
-  {
-   "id": "9CCF5215162ED1FCCD9BC8D73CD51F35",
-   "date": "2026-06-14",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "【台灣中環隊獲得男子圍丙聯賽第八名】",
-   "url": "https://www.haifong.org/news/content/9CCF5215162ED1FCCD9BC8D73CD51F35",
    "local": true
   }
  ]
