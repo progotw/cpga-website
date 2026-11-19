@@ -21,10 +21,12 @@ KEY = os.environ.get('SUPABASE_SERVICE_ROLE_KEY') or ''
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'site/assets/data'
 
 def describe(name, v):
-    """只印長度與開頭幾字，足以辨認拿錯金鑰，又不洩漏內容。"""
+    """只印長度，足以辨認「有沒有設定、是不是拿錯那一把」，又不洩漏內容。
+
+    原本會印開頭 12 個字；雖然前綴佔掉大半，但金鑰一個字元都不該回顯。"""
     if not v:
         return '%s：未設定 ✗' % name
-    return '%s：已設定（%d 字，開頭 %s…）' % (name, len(v), v[:12])
+    return '%s：已設定（%d 字）' % (name, len(v))
 
 
 print(describe('SUPABASE_URL', URL))
@@ -64,6 +66,13 @@ written, skipped = [], []
 
 for r in rows:
     key, kind = r['key'], r['kind']
+
+    # key 是資料庫來的，直接接成路徑的話，'../' 就能寫到輸出目錄外面。
+    # 內容項目的代號本來就只有英數與底線、橫線。
+    if not re.fullmatch(r'[A-Za-z0-9_-]+', key or ''):
+        skipped.append((key, '代號含有不允許的字元，沒有輸出'))
+        continue
+
     path = os.path.join(OUT, key + '.json')
 
     if kind == 'markdown':

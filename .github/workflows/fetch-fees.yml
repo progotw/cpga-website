@@ -45,16 +45,22 @@ jobs:
           python-version: '3.12'
 
       # HAIFONG_FEE_URL 等於密碼，腳本不印網址、不印金額、不印姓名
+      # 手動執行時填的年度要先接到環境變數再用。
+      # ${{ }} 是在 shell 讀到之前就被換成字面文字的，直接寫在 run: 裡等於
+      # 讓填表的人能夾帶指令——而這一步的環境變數有 HAIFONG_FEE_URL 與
+      # service_role 金鑰，夾帶成功就能把它們印進誰都看得到的執行紀錄。
       - name: 抓取對局費
         env:
           HAIFONG_FEE_URL: ${{ secrets.HAIFONG_FEE_URL }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          YEAR: ${{ inputs.year }}
+          RERANK: ${{ inputs.rerank }}
         run: |
-          if [ -n "${{ inputs.rerank }}" ]; then
-            python scripts/fetch_fees.py --rerank "${{ inputs.rerank }}"
-          elif [ -n "${{ inputs.year }}" ]; then
-            python scripts/fetch_fees.py site/assets/data/players.json --year "${{ inputs.year }}"
+          if [ -n "$RERANK" ]; then
+            python scripts/fetch_fees.py --rerank "$RERANK"
+          elif [ -n "$YEAR" ]; then
+            python scripts/fetch_fees.py site/assets/data/players.json --year "$YEAR"
           else
             python scripts/fetch_fees.py site/assets/data/players.json
           fi

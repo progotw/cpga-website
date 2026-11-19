@@ -91,6 +91,26 @@ Deno.serve(async (req) => {
     return reply(400, { error: '申請資料不完整，無法開通' });
   }
 
+  // ---- 2.5 這個信箱如果已經是管理員帳號，就不能從這裡開通 ----
+  //
+  // 申請表單是公開的，來信者自己填信箱。有人填了秘書處管理員的信箱，
+  // 按下開通之後下面第 4 步會無條件把那個帳號改成 role='player'，
+  // 等於把管理員踢出後台（而且還白寄一封重設密碼信給他）。
+  // 改信箱、刪帳號那兩支函式都有這道檢查，這裡補上。
+  {
+    const { data: existing } = await admin.rpc('user_id_by_email', { p_email: email });
+    const existingId = String(existing ?? '');
+    if (existingId) {
+      const { data: prof } = await admin
+        .from('profiles').select('role').eq('id', existingId).single();
+      if (prof && prof.role !== 'player') {
+        return reply(409, {
+          error: '這個信箱已經是管理員帳號，不能從這裡開通。請確認申請人填的信箱。',
+        });
+      }
+    }
+  }
+
   // ---- 3. 寄出邀請（帳號在這一步建立）----
   const { data: invited, error: inviteErr } = await admin.auth.admin.inviteUserByEmail(
     email,

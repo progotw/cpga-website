@@ -26,6 +26,9 @@ UA = {'User-Agent': 'CPGA-site-builder/1.1 (+https://cpga.org.tw; CPGA official 
 # 預設留今年與前兩年：「我的成績」只列今年與去年，升段進度最多再往前翻一兩年。
 YEARS = 3
 
+# 棋譜網址的開頭。寫死不跟著來源跑，理由見下面 out['url'] 的註解。
+KIFU_BASE = 'https://www.higohigo.org/#/kifu/'
+
 # 資料異常就中止，不要用壞資料覆蓋好資料。
 # 2026-11-10 時最近三年約有 3000 筆，門檻抓寬一點。
 MIN_ENTRIES = 300
@@ -47,7 +50,14 @@ def main():
     keep = {str(y) for y in range(now - years + 1, now + 1)}
 
     # 鍵是「年份|日期|黑|白」，年份在第一段
-    out_map = {k: v for k, v in full.items() if k.split('|', 1)[0] in keep}
+    # 值只收整數編號。網頁會把它接在網址後面，收到奇怪的東西
+    # （物件、含符號的字串）就跳過那一局，不要原封不動鏡像過來。
+    def ids_of(v):
+        return [int(x) for x in v if isinstance(x, int) or
+                (isinstance(x, str) and x.isdigit())] if isinstance(v, list) else []
+
+    out_map = {k: ids_of(v) for k, v in full.items() if k.split('|', 1)[0] in keep}
+    out_map = {k: v for k, v in out_map.items() if v}
 
     if len(out_map) < MIN_ENTRIES:
         sys.exit(f'中止：{"、".join(sorted(keep))} 只配到 {len(out_map)} 局'
@@ -61,7 +71,10 @@ def main():
         'source_generated': src.get('generated', ''),
         'years': sorted(keep),
         'count': len(out_map),
-        'url': src.get('url') or 'https://www.higohigo.org/#/kifu/',
+        # 棋譜網址寫死，不採用來源給的值。
+        # 這一格會變成棋士專區「看棋譜」的連結；對方的站台若被動手腳，
+        # 改成 javascript: 開頭的字串，就等於在顯示對局費的那一頁執行指令碼。
+        'url': KIFU_BASE,
         # 排序過才不會每天因為鍵的順序變動而產生假的差異
         'map': {k: out_map[k] for k in sorted(out_map)},
     }

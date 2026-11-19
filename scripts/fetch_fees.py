@@ -119,8 +119,17 @@ def sb(method, path, body=None, prefer=None):
     try:
         return urllib.request.urlopen(req, timeout=40).read().decode('utf-8')
     except urllib.error.HTTPError as e:
-        sys.exit('中止：寫入 player_fees 失敗 HTTP %s — %s'
-                 % (e.code, e.read().decode('utf-8')[:200]))
+        # 只留下狀態碼與 PostgREST 的錯誤代號。
+        # 整段回應不能印：欄位不符時 Postgres 會附上整列資料
+        #（Failing row contains (棋士 id, 年度, 金額…)），那就等於把
+        # 金額印進執行紀錄了。
+        code = ''
+        try:
+            code = str(json.loads(e.read().decode('utf-8', 'replace')).get('code', ''))[:20]
+        except Exception:
+            pass
+        sys.exit('中止：寫入 player_fees 失敗 HTTP %s%s（詳細內容不印出，'
+                 '內含棋士資料）' % (e.code, ('，代號 ' + code) if code else ''))
 
 
 # ---------------------------------------------------------------------------
