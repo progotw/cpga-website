@@ -1,6 +1,17 @@
 {
  "photos": [
   {
+   "id": "720CC5EB9503C2C6DDB7F06F21356A2A",
+   "image": "assets/img/gallery/720CC5EB9503C2C6DDB7F06F21356A2A.jpg",
+   "width": 1200,
+   "height": 800,
+   "caption": "棋編碎碎念：棋盤如山",
+   "date": "2026-11-19",
+   "link": "https://www.haifong.org/news/content/720CC5EB9503C2C6DDB7F06F21356A2A",
+   "credit": "海峰棋院",
+   "local": true
+  },
+  {
    "id": "6E0F888792394160070A79C0DCD05F3E",
    "image": "assets/img/gallery/6E0F888792394160070A79C0DCD05F3E.jpg",
    "width": 1200,
