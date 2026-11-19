@@ -248,11 +248,11 @@
             '<div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline">' +
               '<strong style="color:var(--ink);font-size:.95rem">' +
                 '<span class="legend__dot ' + S.slotClass(e.series_slot) + '" style="background:currentColor"></span>' +
-                S.fullTitle(e) + '</strong>' +
+                esc(S.fullTitle(e)) + '</strong>' +
               '<span class="muted" style="font-size:.82rem;font-variant-numeric:tabular-nums;white-space:nowrap">' +
-                S.dateLabel(e, true) + '</span>' +
+                esc(S.dateLabel(e, true)) + '</span>' +
             '</div>' +
-            '<div class="muted" style="font-size:.82rem;margin-top:2px;padding-left:16px">' + S.timeLabel(e) + '</div></div>';
+            '<div class="muted" style="font-size:.82rem;margin-top:2px;padding-left:16px">' + esc(S.timeLabel(e)) + '</div></div>';
         }).join('') +
         '<div style="padding:12px 20px;font-size:.78rem;color:var(--ink-4)">＊ 開賽時間為依慣例推定</div>'
       : '<div style="padding:20px" class="muted">近期無排定賽程。</div>';

@@ -51,7 +51,13 @@
     ? fetch(KIFU_JSON, { cache: 'no-cache' })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (j) {
-          if (j && j.map) { kifuMap = j.map; kifuBase = j.url || kifuBase; }
+          if (j && j.map) {
+          kifuMap = j.map;
+          /* 這個網址來自鏡像過來的第三方檔案，只收 https 開頭的值。
+             javascript: 開頭的字串會變成「看棋譜」的連結，點下去就在
+             顯示對局費的那一頁執行。抓取端也擋了一次，這裡是第二道。 */
+          if (typeof j.url === 'string' && /^https:[/][/]/.test(j.url)) kifuBase = j.url;
+        }
         })
         .catch(function () { /* 沒有對照表就不顯示棋譜，不影響成績 */ })
     : Promise.resolve();

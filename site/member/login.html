@@ -86,15 +86,28 @@
     }
   }
 
+  /* 登入後要去哪一頁。網址上的 next 是外人給的，不能照單全收：
+     location.replace('javascript:…') 會在本站的身分底下執行，
+     等於把管理員的登入憑證交出去。只收站內的相對路徑。 */
+  function safeNext(v) {
+    v = String(v || '');
+    /* 冒號擋掉 javascript: 與 https: 之類的協定；
+       開頭兩條斜線是「//別人的網域」這種寫法；反斜線是它的變形。
+       站內的路徑（/member/fees.html、home.html）都不含這些。 */
+    if (!v || v.indexOf(':') > -1 || v.indexOf('\\') > -1) return '';
+    if (v.charAt(0) === '/' && v.charAt(1) === '/') return '';
+    return v;
+  }
+
   if (params.get('denied')) say('error', '此帳號沒有職業棋士專區的權限，請洽秘書處。');
   if (params.get('signedout')) say('', '已登出。');
 
   /* 依角色決定去處：管理員登入這裡時直接送進後台，不要擋在門外 */
   function go(me) {
     if (me.profile && me.profile.role === 'admin') {
-      location.replace(params.get('next') || '../admin/index.html');
+      location.replace(safeNext(params.get('next')) || '../admin/index.html');
     } else {
-      location.replace(params.get('next') || 'home.html');
+      location.replace(safeNext(params.get('next')) || 'home.html');
     }
   }
 
