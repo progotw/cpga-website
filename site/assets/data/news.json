@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-19T20:39:21+00:00",
+ "generated": "2026-11-20T12:53:15+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "6E0F888792394160070A79C0DCD05F3E",
+   "date": "2026-11-20",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "中環碁聖賽：盧奕銓2比0勝林君諺 奪生涯首座八大頭銜",
+   "url": "https://www.haifong.org/news/content/6E0F888792394160070A79C0DCD05F3E",
+   "local": true
+  },
   {
    "id": "720CC5EB9503C2C6DDB7F06F21356A2A",
    "date": "2026-11-19",
@@ -57,15 +66,6 @@
    "cat": "match",
    "title": "【2027年度 院生第一輪月賽前順位】",
    "url": "https://www.haifong.org/news/content/E8CBD38D82E4DB4164476E9128A7759D",
-   "local": true
-  },
-  {
-   "id": "6E0F888792394160070A79C0DCD05F3E",
-   "date": "2026-11-13",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "中環碁聖賽決賽首局 盧奕銓中盤後著著精準，持白4.5目先馳得點",
-   "url": "https://www.haifong.org/news/content/6E0F888792394160070A79C0DCD05F3E",
    "local": true
   },
   {

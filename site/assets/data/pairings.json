@@ -2,7 +2,7 @@
  "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供職業棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
  "schema_version": 1,
  "source": "海峰棋院 抽籤結果公告",
- "count": 310,
+ "count": 276,
  "pairings": [
   {
    "date": "2026-08-13",
@@ -734,356 +734,268 @@
    "source": "schedule-app"
   },
   {
-   "id": "guoshou__0:gs22_32",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "陳劭全",
     "蔡丞韋"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "蔡丞韋",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_33",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "吳彥諶",
     "李嘉馨"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "李嘉馨",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_66",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "陳品樺",
     "孫立言"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "孫立言",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_36",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "劉一芳",
     "彭鐏德"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "彭鐏德",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_37",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "蔡文河",
     "黃世元"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃世元",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_70",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "林宇翔",
     "周可平"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林宇翔",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_40",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "黃柏人",
     "余承叡"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃柏人",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_41",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "林瀚彰",
     "彭景華"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林瀚彰",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_74",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "沈逸恩",
     "陳威廷"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳威廷",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_44",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "鄭予皓",
     "徐銘均"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "鄭予皓",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_45",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "施景堯",
     "柯沛辰"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "施景堯",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_48",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "盧奕銓",
     "林立祥"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林立祥",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_49",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "林佾緯",
     "孫偉勛"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林佾緯",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_82",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "楊博崴",
     "林彥丞"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林彥丞",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_52",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "陳首廉",
     "戴嘉伸"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳首廉",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_53",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "周尹南",
     "戴旭辰"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "周尹南",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_86",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "丁少傑",
     "周平強"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "周平強",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_56",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "劉耀文",
     "謝承翰"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "劉耀文",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_57",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "曾品傑",
     "蔡明叡"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "曾品傑",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_90",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "張凱馨",
     "林世民"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林世民",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_60",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "牛詩特",
     "林士勛"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林士勛",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_61",
    "date": "2026-09-07",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 1回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "1回賽",
    "players": [
     "黃彥誠",
     "白昕卉"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃彥誠",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
    "id": "zhonghuan__0:zh69_30",
@@ -1397,260 +1309,16 @@
    "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_31",
    "date": "2026-09-14",
    "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
    "players": [
     "陳祈睿",
     "盧鈺樺"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_34",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "俞俐均",
-    "孫立言"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "孫立言",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_35",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "王元均",
-    "許育祺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_38",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "黃偉",
-    "林宇翔"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林宇翔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_39",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "林新為",
-    "蘇聖芳"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林新為",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_42",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "尤浩宇",
-    "陳威廷"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳威廷",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_43",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "簡靖庭",
-    "陳國興"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "簡靖庭",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_46",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "林杰漢",
-    "王智弘"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林杰漢",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_47",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "賴均輔",
-    "蕭睿杉"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_50",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "陳映嘉",
-    "林彥丞"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳映嘉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_51",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "林君諺",
-    "林書陽"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_54",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "吳君成",
-    "周平強"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "吳君成",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_55",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "李維",
-    "林鈺娗"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "李維",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_58",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "林聖弈",
-    "林世民"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林世民",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_59",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "徐靖恩",
-    "張哲豪"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "徐靖恩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_62",
-   "date": "2026-09-14",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "李奎漢",
-    "楊子萱"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊子萱",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
    "date": "2026-09-14",
@@ -1661,6 +1329,18 @@
     "俞俐均"
    ],
    "pending_opponent": true,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "王元均",
+    "許育祺"
+   ],
+   "pending_opponent": false,
    "source": "announcement"
   },
   {
@@ -1680,9 +1360,57 @@
    "event": "第22屆「中環國手賽」本賽抽籤結果公告",
    "round": "2回賽",
    "players": [
+    "林新為",
+    "蘇聖芳"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
     "尤浩宇"
    ],
    "pending_opponent": true,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "簡靖庭",
+    "陳國興"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "林杰漢",
+    "王智弘"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "賴均輔",
+    "蕭睿杉"
+   ],
+   "pending_opponent": false,
    "source": "announcement"
   },
   {
@@ -1702,6 +1430,18 @@
    "event": "第22屆「中環國手賽」本賽抽籤結果公告",
    "round": "2回賽",
    "players": [
+    "林君諺",
+    "林書陽"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
     "吳君成"
    ],
    "pending_opponent": true,
@@ -1713,9 +1453,45 @@
    "event": "第22屆「中環國手賽」本賽抽籤結果公告",
    "round": "2回賽",
    "players": [
+    "李維",
+    "林鈺娗"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
     "林聖弈"
    ],
    "pending_opponent": true,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "徐靖恩",
+    "張哲豪"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-14",
+   "time": "",
+   "event": "第22屆「中環國手賽」本賽抽籤結果公告",
+   "round": "2回賽",
+   "players": [
+    "李奎漢",
+    "楊子萱"
+   ],
+   "pending_opponent": false,
    "source": "announcement"
   },
   {
@@ -1859,7 +1635,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": "周尹南",
+   "winner": "王元均",
    "source": "schedule-app"
   },
   {
@@ -1972,262 +1748,6 @@
    "status": "drawn",
    "candidates": [],
    "winner": "林書陽",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_23",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "陳祈睿",
-    "蔡丞韋"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_15",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "李嘉馨",
-    "孫立言"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "孫立言",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_24",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "王元均",
-    "彭鐏德"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_16",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "黃世元",
-    "林宇翔"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃世元",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_25",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "林新為",
-    "黃柏人"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林新為",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_17",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "林瀚彰",
-    "陳威廷"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林瀚彰",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_26",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "簡靖庭",
-    "鄭予皓"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "鄭予皓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_18",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "施景堯",
-    "林杰漢"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林杰漢",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_27",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "賴均輔",
-    "林立祥"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_19",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "林佾緯",
-    "陳映嘉"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳映嘉",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_28",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "林君諺",
-    "陳首廉"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_20",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "周尹南",
-    "吳君成"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "周尹南",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_29",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "李維",
-    "劉耀文"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "李維",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_21",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "曾品傑",
-    "林世民"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "曾品傑",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_30",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "徐靖恩",
-    "林士勛"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林士勛",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_22",
-   "date": "2026-09-21",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "黃彥誠",
-    "楊子萱"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊子萱",
    "source": "schedule-app"
   },
   {
@@ -2468,134 +1988,6 @@
    "source": "announcement"
   },
   {
-   "id": "guoshou__0:gs22_11",
-   "date": "2026-10-05",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "陳祈睿",
-    "孫立言"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_7",
-   "date": "2026-10-05",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "王元均",
-    "黃世元"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_12",
-   "date": "2026-10-05",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "林新為",
-    "林瀚彰"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林新為",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_8",
-   "date": "2026-10-05",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "鄭予皓",
-    "林杰漢"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "鄭予皓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_13",
-   "date": "2026-10-05",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "賴均輔",
-    "陳映嘉"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_9",
-   "date": "2026-10-05",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "林君諺",
-    "周尹南"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_14",
-   "date": "2026-10-05",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "李維",
-    "曾品傑"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "李維",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_10",
-   "date": "2026-10-05",
-   "time": "",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "林士勛",
-    "楊子萱"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林士勛",
-   "source": "schedule-app"
-  },
-  {
    "id": "zhonghuan__0:zh69_10",
    "date": "2026-10-16",
    "time": "11:00",
@@ -2666,13 +2058,13 @@
    "event": "第14屆中環碁聖賽",
    "round": "本賽 16強賽",
    "players": [
-    "周尹南",
+    "王元均",
     "楊博崴"
    ],
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "王元均",
    "source": "schedule-app"
   },
   {
@@ -2890,15 +2282,13 @@
    "event": "第14屆中環碁聖賽",
    "round": "本賽 8強賽",
    "players": [
+    "王元均",
     "徐靖恩"
    ],
-   "pending_opponent": true,
+   "pending_opponent": false,
    "status": "drawn",
-   "candidates": [
-    "周尹南",
-    "楊博崴"
-   ],
-   "winner": null,
+   "candidates": [],
+   "winner": "王元均",
    "source": "schedule-app"
   },
   {
@@ -2915,70 +2305,6 @@
    "status": "drawn",
    "candidates": [],
    "winner": "盧奕銓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_3",
-   "date": "2026-11-02",
-   "time": "11:00",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 8強賽",
-   "players": [
-    "陳祈睿",
-    "王元均"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_4",
-   "date": "2026-11-02",
-   "time": "11:00",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 8強賽",
-   "players": [
-    "林新為",
-    "鄭予皓"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "鄭予皓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_5",
-   "date": "2026-11-02",
-   "time": "11:00",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 8強賽",
-   "players": [
-    "賴均輔",
-    "林君諺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_6",
-   "date": "2026-11-02",
-   "time": "11:00",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 8強賽",
-   "players": [
-    "李維",
-    "林士勛"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林士勛",
    "source": "schedule-app"
   },
   {
@@ -3292,48 +2618,13 @@
    "event": "第14屆中環碁聖賽",
    "round": "本賽 4強賽",
    "players": [
+    "王元均",
     "盧奕銓"
    ],
-   "pending_opponent": true,
+   "pending_opponent": false,
    "status": "drawn",
-   "candidates": [
-    "周尹南",
-    "楊博崴",
-    "徐靖恩"
-   ],
+   "candidates": [],
    "winner": "盧奕銓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_1",
-   "date": "2026-11-09",
-   "time": "11:00",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 4強賽",
-   "players": [
-    "王元均",
-    "鄭予皓"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "guoshou__0:gs22_2",
-   "date": "2026-11-09",
-   "time": "11:00",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 4強賽",
-   "players": [
-    "賴均輔",
-    "林士勛"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
    "source": "schedule-app"
   },
   {
@@ -3993,22 +3284,6 @@
    "source": "schedule-app"
   },
   {
-   "id": "guoshou__0:gs22_0",
-   "date": "2026-11-16",
-   "time": "11:00",
-   "event": "第22屆中環國手賽",
-   "round": "本賽 挑戰者決定賽",
-   "players": [
-    "王元均",
-    "賴均輔"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
    "id": "qiwang20__1:f_lb7_abcd",
    "date": "2026-11-17",
    "time": "11:00",
@@ -4233,6 +3508,22 @@
    "source": "schedule-app"
   },
   {
+   "id": "guoshou__1:gc_g1",
+   "date": "2026-11-23",
+   "time": "11:00",
+   "event": "第22屆中環國手賽",
+   "round": "挑戰賽 第1局",
+   "players": [
+    "賴均輔",
+    "許皓鋐"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
    "id": "qiwang19__1:ch_g2",
    "date": "2026-11-24",
    "time": "11:00",
@@ -4425,6 +3716,22 @@
    "source": "schedule-app"
   },
   {
+   "id": "guoshou__1:gc_g2",
+   "date": "2026-11-30",
+   "time": "11:00",
+   "event": "第22屆中環國手賽",
+   "round": "挑戰賽 第2局",
+   "players": [
+    "賴均輔",
+    "許皓鋐"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
    "id": "qiwang19__1:ch_g3",
    "date": "2026-12-01",
    "time": "11:00",
@@ -4555,6 +3862,22 @@
    "players": [
     "許皓鋐",
     "賴均輔"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
+   "id": "guoshou__1:gc_g3",
+   "date": "2026-12-07",
+   "time": "11:00",
+   "event": "第22屆中環國手賽",
+   "round": "挑戰賽 第3局",
+   "players": [
+    "賴均輔",
+    "許皓鋐"
    ],
    "pending_opponent": false,
    "status": "drawn",
