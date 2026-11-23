@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-23T13:23:45+08:00",
+ "generated": "2026-11-23T13:25:37+08:00",
  "source": "海峰棋院 職業棋士名錄",
  "source_url": "https://www.haifong.org/profession",
  "count": 139,
@@ -362,10 +362,6 @@
    "rank": "九段",
    "photo": "assets/img/players/E81B48D148D947DCA3E3ECFF3CA72E20.jpg",
    "history": [
-    {
-     "label": "頭銜冠軍",
-     "value": "中環碁聖"
-    },
     {
      "label": "歷史成績",
      "value": "冠軍數: 7冠 (含國際賽1冠)"
@@ -756,11 +752,11 @@
    "history": [
     {
      "label": "頭銜冠軍",
-     "value": "新人王"
+     "value": "中環碁聖、新人王"
     },
     {
      "label": "歷史成績",
-     "value": "冠軍數:1冠"
+     "value": "冠軍數:2冠"
     }
    ],
    "seasonLabel": "2026年度成績 (11/1更新)",
@@ -778,7 +774,7 @@
      "value": "39勝28負　勝率58.2%"
     }
    ],
-   "body": "<p><strong>簡介</strong><br /><br />\n2001年3月29日生，出生於臺灣新竹縣。 <br /><br />\n2014年加入中華職協圍棋道場，2016年入段並加入中華職協新銳隊至今，2018年二段，2019年三段，2020年四段，2021年五段，<br /><br />\n2023年加入中華職協精英隊，同年六段，2026年七段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong> </p><br />\n<br />\n<p><strong>2026年 </strong><br /><br />\n2026新人王 冠軍 </p><br />\n<br />\n<p><strong>2023年</strong><br /><br />\n112年吳彫枝盃全國圍棋公開賽高段組 冠軍 (非公式戰)<br /><br />\n第19屆國手 亞軍</p><br />\n<br />\n<p><strong>2022年</strong><br /><br />\n第12屆友士盃十段賽季軍 </p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n2019新人王 亞軍 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第6屆台北市中正盃圍棋公開賽季軍(非公式戰)</p><br />\n</p>",
+   "body": "<p><strong>簡介</strong><br /><br />\n2001年3月29日生，出生於臺灣新竹縣。 <br /><br />\n2014年加入中華職協圍棋道場，2016年入段並加入中華職協新銳隊至今，2018年二段，2019年三段，2020年四段，2021年五段，<br /><br />\n2023年加入中華職協精英隊，同年六段，2026年七段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong> </p><br />\n<br />\n<p><strong>2026年</strong><br /><br />\n第14屆中環碁聖賽 冠軍 <br /><br />\n2026新人王冠軍 </p><br />\n<br />\n<p><strong>2023年</strong><br /><br />\n112年吳彫枝盃全國圍棋公開賽高段組 冠軍 (非公式戰)<br /><br />\n第19屆國手 亞軍</p><br />\n<br />\n<p><strong>2022年</strong><br /><br />\n第12屆友士盃十段賽季軍 </p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n2019新人王 亞軍 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第6屆台北市中正盃圍棋公開賽季軍(非公式戰)</p><br />\n</p>",
    "links": [
     {
      "label": "相關影片",
