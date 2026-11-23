@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-02T21:47:38+00:00",
+ "generated": "2026-11-23T13:23:45+08:00",
  "source": "海峰棋院 職業棋士名錄",
  "source_url": "https://www.haifong.org/profession",
  "count": 139,
@@ -1176,6 +1176,36 @@
    "source": "https://www.haifong.org/profession/venue/B26F65E303FB09F01C3DAF55AC233885"
   },
   {
+   "id": "AE4B5AB0DFEB900CDE0CBD2979FAFEA0",
+   "name": "林彥丞",
+   "rank": "六段",
+   "photo": "assets/img/players/AE4B5AB0DFEB900CDE0CBD2979FAFEA0.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (11/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "16勝11負　勝率59.3%"
+    },
+    {
+     "label": "世界賽",
+     "value": "6勝2負　勝率75%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "32勝22負　勝率59.3%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2001年9月18日生，出生於臺灣新北市。 <br /><br />\n2014年加入中華職協圍棋道場，2017年入段，2017加入中華職協新銳隊(~2018)，2018年二段，2019年三段，2021重返中華職協新銳隊，2022年四段，2024年五段</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2017年 </strong><br /><br />\n第22期LG盃朝鮮日報棋王戰國際統合賽 打入決賽 <br /><br />\n105學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第33屆世界青少年圍棋錦標賽 青年組亞軍 </p><br />\n<br />\n<p><strong>2013年 </strong><br /><br />\n第8屆榮三盃全國學生棋王賽 小學組冠軍</p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E5%BD%A5%E4%B8%9E"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/AE4B5AB0DFEB900CDE0CBD2979FAFEA0"
+  },
+  {
    "id": "D763F81C56FC291C1793C17AA82439C1",
    "name": "簡立宸",
    "rank": "五段",
@@ -1414,36 +1444,6 @@
    "body": "<p><strong>簡介</strong><br /><br />\n2000年8月31日生，出生於臺灣臺北市。 <br /><br />\n2014年加入中華職協圍棋道場，2015年入段並加入中華職協新銳隊至今，2017年二段。2019年三段，2021年四段，2024年五段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2014年 </strong><br /><br />\n第4屆陳毅杯中國圍棋圍棋公開賽 台灣代表 </p><br />\n<br />\n<p><strong>2013年 </strong><br /><br />\n第30屆應氏盃世界青少年圍棋錦標賽 青年組第四名</p><br />\n</p>",
    "links": [],
    "source": "https://www.haifong.org/profession/venue/4CE8E505BBEEC3B5C043C1C50291CDD9"
-  },
-  {
-   "id": "AE4B5AB0DFEB900CDE0CBD2979FAFEA0",
-   "name": "林彥丞",
-   "rank": "五段",
-   "photo": "assets/img/players/AE4B5AB0DFEB900CDE0CBD2979FAFEA0.jpg",
-   "history": [],
-   "seasonLabel": "2026年度成績 (11/1更新)",
-   "season": [
-    {
-     "label": "台灣職業賽",
-     "value": "16勝11負　勝率59.3%"
-    },
-    {
-     "label": "世界賽",
-     "value": "6勝2負　勝率75%"
-    },
-    {
-     "label": "去年度總成績",
-     "value": "32勝22負　勝率59.3%"
-    }
-   ],
-   "body": "<p><strong>簡介</strong><br /><br />\n2001年9月18日生，出生於臺灣新北市。 <br /><br />\n2014年加入中華職協圍棋道場，2017年入段，2017加入中華職協新銳隊(~2018)，2018年二段，2019年三段，2021重返中華職協新銳隊，2022年四段，2024年五段</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2017年 </strong><br /><br />\n第22期LG盃朝鮮日報棋王戰國際統合賽 打入決賽 <br /><br />\n105學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2016年 </strong><br /><br />\n第33屆世界青少年圍棋錦標賽 青年組亞軍 </p><br />\n<br />\n<p><strong>2013年 </strong><br /><br />\n第8屆榮三盃全國學生棋王賽 小學組冠軍</p><br />\n</p>",
-   "links": [
-    {
-     "label": "相關影片",
-     "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E5%BD%A5%E4%B8%9E"
-    }
-   ],
-   "source": "https://www.haifong.org/profession/venue/AE4B5AB0DFEB900CDE0CBD2979FAFEA0"
   },
   {
    "id": "2FAC98B749A332D40442FDDE6626FDE5",
@@ -2712,11 +2712,11 @@
    "rank": "三段",
    "photo": "assets/img/players/50A678286D3D9124EB68460F11B08E88.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "5勝11負　勝率31.3%"
+     "value": "8勝12負　勝率40%"
     },
     {
      "label": "世界賽",
@@ -2732,16 +2732,46 @@
    "source": "https://www.haifong.org/profession/venue/50A678286D3D9124EB68460F11B08E88"
   },
   {
+   "id": "FB01E247BDE33C245ED82C83417B0A84",
+   "name": "鄭予皓",
+   "rank": "三段",
+   "photo": "assets/img/players/FB01E247BDE33C245ED82C83417B0A84.jpg",
+   "history": [],
+   "seasonLabel": "2026年度成績 (11/1更新)",
+   "season": [
+    {
+     "label": "台灣職業賽",
+     "value": "17勝15負　勝率53.1%"
+    },
+    {
+     "label": "世界賽",
+     "value": "0勝0負   勝率0%"
+    },
+    {
+     "label": "去年度總成績",
+     "value": "14勝19負　勝率42.4%"
+    }
+   ],
+   "body": "<p><strong>簡介</strong><br /><br />\n2012年10月9日生，出生於臺灣新北市。 <br /><br />\n2020年加入中華職業圍棋道場，2023年入段並加入中華職協新銳隊。 <br /><br />\n2025年二段，2026年三段</p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2024年 </strong><br /><br />\n112學年各級學校圍棋運動錦標賽-國小男子個人組 冠軍 </p><br />\n<br />\n<p> </p><br />\n</p>",
+   "links": [
+    {
+     "label": "相關影片",
+     "url": "https://www.youtube.com/@haifongigo/search?query=%E9%84%AD%E4%BA%88%E7%9A%93"
+    }
+   ],
+   "source": "https://www.haifong.org/profession/venue/FB01E247BDE33C245ED82C83417B0A84"
+  },
+  {
    "id": "7832DC10400C5CC0FCEAFB40394E9ED6",
    "name": "蔡文河",
    "rank": "二段",
    "photo": "assets/img/players/7832DC10400C5CC0FCEAFB40394E9ED6.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
-     "value": "0勝5負　勝率0%"
+     "value": "0勝6負　勝率0%"
     },
     {
      "label": "世界賽",
@@ -2767,7 +2797,7 @@
      "value": "冠軍數:1冠"
     }
    ],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -2792,7 +2822,7 @@
    "rank": "二段",
    "photo": "assets/img/players/DD1E65F813D3FC0F74757318A184B0EC.jpg",
    "history": [],
-   "seasonLabel": "2026年度成績 (10/1更新)",
+   "seasonLabel": "2026年度成績 (11/1更新)",
    "season": [
     {
      "label": "台灣職業賽",
@@ -3170,36 +3200,6 @@
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1994年09月15日</p><br />\n<br />\n<p>2010年入段(韓國籍)，2025年二段</p><br />\n</p>",
    "links": [],
    "source": "https://www.haifong.org/profession/venue/C0BD4D0B9C99262A469F4C04ADAE83B0"
-  },
-  {
-   "id": "FB01E247BDE33C245ED82C83417B0A84",
-   "name": "鄭予皓",
-   "rank": "二段",
-   "photo": "assets/img/players/FB01E247BDE33C245ED82C83417B0A84.jpg",
-   "history": [],
-   "seasonLabel": "2026年度成績 (11/1更新)",
-   "season": [
-    {
-     "label": "台灣職業賽",
-     "value": "17勝15負　勝率53.1%"
-    },
-    {
-     "label": "世界賽",
-     "value": "0勝0負   勝率0%"
-    },
-    {
-     "label": "去年度總成績",
-     "value": "14勝19負　勝率42.4%"
-    }
-   ],
-   "body": "<p><strong>簡介</strong><br /><br />\n2012年10月9日生，出生於臺灣新北市。 <br /><br />\n2020年加入中華職業圍棋道場，2023年入段並加入中華職協新銳隊。 <br /><br />\n2025年二段</p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2024年 </strong><br /><br />\n112學年各級學校圍棋運動錦標賽-國小男子個人組 冠軍 </p><br />\n<br />\n<p> </p><br />\n</p>",
-   "links": [
-    {
-     "label": "相關影片",
-     "url": "https://www.youtube.com/@haifongigo/search?query=%E9%84%AD%E4%BA%88%E7%9A%93"
-    }
-   ],
-   "source": "https://www.haifong.org/profession/venue/FB01E247BDE33C245ED82C83417B0A84"
   },
   {
    "id": "9D499F9D84E063199B9472622146859E",
