@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-22T19:42:18+00:00",
+ "generated": "2026-11-23T14:38:06+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "26561922FEF6519A192BDAE567C5EA60",
+   "date": "2026-11-23",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "中環國手賽挑戰賽首局 賴均輔勝許皓鋐 聽牌國手",
+   "url": "https://www.haifong.org/news/content/26561922FEF6519A192BDAE567C5EA60",
+   "local": true
+  },
   {
    "id": "6E0F888792394160070A79C0DCD05F3E",
    "date": "2026-11-20",
@@ -1074,15 +1083,6 @@
    "cat": "match",
    "title": "第7屆名人賽 【本賽】【決賽】棋譜 & 結果",
    "url": "https://www.haifong.org/news/content/F4AE383875FE266CC20B869840D146A9",
-   "local": true
-  },
-  {
-   "id": "00D8C9A186DD8FE67E29EDBE45AB3FD1",
-   "date": "2026-06-19",
-   "catLabel": "媒體報導",
-   "cat": "media",
-   "title": "【精彩好棋專欄：第89篇 海峰盃之旅】",
-   "url": "https://www.haifong.org/news/content/00D8C9A186DD8FE67E29EDBE45AB3FD1",
    "local": true
   }
  ]

@@ -1,6 +1,17 @@
 {
  "photos": [
   {
+   "id": "26561922FEF6519A192BDAE567C5EA60",
+   "image": "assets/img/gallery/26561922FEF6519A192BDAE567C5EA60.jpg",
+   "width": 1200,
+   "height": 900,
+   "caption": "中環國手賽挑戰賽首局 賴均輔勝許皓鋐 聽牌國手",
+   "date": "2026-11-23",
+   "link": "https://www.haifong.org/news/content/26561922FEF6519A192BDAE567C5EA60",
+   "credit": "海峰棋院",
+   "local": true
+  },
+  {
    "id": "720CC5EB9503C2C6DDB7F06F21356A2A",
    "image": "assets/img/gallery/720CC5EB9503C2C6DDB7F06F21356A2A.jpg",
    "width": 1200,

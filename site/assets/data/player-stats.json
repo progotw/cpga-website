@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-23T03:42:39+08:00",
+ "generated": "2026-11-23T22:38:27+08:00",
  "generated_label": "(11/23更新)",
  "source": "海峰棋院 成績系統（公開對局紀錄）",
  "note": "國內＝台灣職業賽、國際＝世界賽；last_year 為前一年全部對局。players 的鍵是海峰棋士頁網址上的棋士編號。",
@@ -848,6 +848,30 @@
     "text": "20勝17負　勝率54.1%"
    }
   },
+  "AE4B5AB0DFEB900CDE0CBD2979FAFEA0": {
+   "name": "林彥丞",
+   "domestic": {
+    "games": 31,
+    "win": 20,
+    "loss": 11,
+    "rate": 64.5,
+    "text": "20勝11負　勝率64.5%"
+   },
+   "international": {
+    "games": 8,
+    "win": 6,
+    "loss": 2,
+    "rate": 75.0,
+    "text": "6勝2負　勝率75%"
+   },
+   "last_year": {
+    "games": 54,
+    "win": 32,
+    "loss": 22,
+    "rate": 59.3,
+    "text": "32勝22負　勝率59.3%"
+   }
+  },
   "D763F81C56FC291C1793C17AA82439C1": {
    "name": "簡立宸",
    "domestic": {
@@ -1062,30 +1086,6 @@
     "loss": 13,
     "rate": 40.9,
     "text": "9勝13負　勝率40.9%"
-   }
-  },
-  "AE4B5AB0DFEB900CDE0CBD2979FAFEA0": {
-   "name": "林彥丞",
-   "domestic": {
-    "games": 31,
-    "win": 20,
-    "loss": 11,
-    "rate": 64.5,
-    "text": "20勝11負　勝率64.5%"
-   },
-   "international": {
-    "games": 8,
-    "win": 6,
-    "loss": 2,
-    "rate": 75.0,
-    "text": "6勝2負　勝率75%"
-   },
-   "last_year": {
-    "games": 54,
-    "win": 32,
-    "loss": 22,
-    "rate": 59.3,
-    "text": "32勝22負　勝率59.3%"
    }
   },
   "2FAC98B749A332D40442FDDE6626FDE5": {
@@ -2216,6 +2216,30 @@
     "text": "9勝15負　勝率37.5%"
    }
   },
+  "FB01E247BDE33C245ED82C83417B0A84": {
+   "name": "鄭予皓",
+   "domestic": {
+    "games": 36,
+    "win": 19,
+    "loss": 17,
+    "rate": 52.8,
+    "text": "19勝17負　勝率52.8%"
+   },
+   "international": {
+    "games": 3,
+    "win": 2,
+    "loss": 1,
+    "rate": 66.7,
+    "text": "2勝1負　勝率66.7%"
+   },
+   "last_year": {
+    "games": 33,
+    "win": 14,
+    "loss": 19,
+    "rate": 42.4,
+    "text": "14勝19負　勝率42.4%"
+   }
+  },
   "7832DC10400C5CC0FCEAFB40394E9ED6": {
    "name": "蔡文河",
    "domestic": {
@@ -2622,30 +2646,6 @@
     "loss": 2,
     "rate": 60.0,
     "text": "3勝2負　勝率60%"
-   }
-  },
-  "FB01E247BDE33C245ED82C83417B0A84": {
-   "name": "鄭予皓",
-   "domestic": {
-    "games": 36,
-    "win": 19,
-    "loss": 17,
-    "rate": 52.8,
-    "text": "19勝17負　勝率52.8%"
-   },
-   "international": {
-    "games": 3,
-    "win": 2,
-    "loss": 1,
-    "rate": 66.7,
-    "text": "2勝1負　勝率66.7%"
-   },
-   "last_year": {
-    "games": 33,
-    "win": 14,
-    "loss": 19,
-    "rate": 42.4,
-    "text": "14勝19負　勝率42.4%"
    }
   },
   "9D499F9D84E063199B9472622146859E": {

@@ -2,7 +2,7 @@
  "_說明": "各輪對戰組合，抓自海峰的抽籤結果公告，供職業棋士專區顯示個人賽程。players 只列得以辨識的棋士；pending_opponent 為 true 表示對手尚未產生。",
  "schema_version": 1,
  "source": "海峰棋院 抽籤結果公告",
- "count": 276,
+ "count": 241,
  "pairings": [
   {
    "date": "2026-08-13",
@@ -398,340 +398,256 @@
    "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_31",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "林瀚彰",
     "戴嘉伸"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林瀚彰",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_32",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "白昕卉",
     "牛詩特"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "牛詩特",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_65",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "李嘉馨",
     "楊子萱"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊子萱",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_35",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "丁少傑",
     "劉耀文"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "劉耀文",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_36",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "彭鐏德",
     "戴旭辰"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "彭鐏德",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_39",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "蔡明叡",
     "吳彥諶"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "吳彥諶",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_40",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "孫立言",
     "張凱馨"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "張凱馨",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_73",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "劉一芳",
     "陳品樺"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "劉一芳",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_43",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "林宇翔",
     "陳劭全"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳劭全",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_44",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "施景堯",
     "黃偉"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "施景堯",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_47",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "周尹南",
     "尤浩宇"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "周尹南",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_48",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "孫偉勛",
     "俞俐均"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "俞俐均",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_81",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "楊博崴",
     "周可平"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊博崴",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_51",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "林立祥",
     "黃家胤"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃家胤",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_52",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "陳映嘉",
     "蘇聖芳"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "蘇聖芳",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_85",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "陳威廷",
     "黃袖圃"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃袖圃",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_55",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "謝承翰",
     "黃柏人"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃柏人",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_56",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "張哲豪",
     "陳首廉"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳首廉",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_89",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "周平強",
     "盧奕銓"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧奕銓",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_59",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "王智弘",
     "林世民"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林世民",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_60",
    "date": "2026-09-04",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 1回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽一回戰",
    "players": [
     "余承叡",
     "吳君成"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "吳君成",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
    "date": "2026-09-07",
@@ -998,260 +914,16 @@
    "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_30",
    "date": "2026-09-11",
    "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
    "players": [
     "賴均輔",
     "曾品傑"
    ],
    "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_33",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "彭景華",
-    "楊子萱"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊子萱",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_34",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "李維",
-    "李奎漢"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "李維",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_37",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "林佾緯",
-    "黃彥誠"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林佾緯",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_38",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "林君諺",
-    "陳國興"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_41",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "許育祺",
-    "劉一芳"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "許育祺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_42",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "陳祈睿",
-    "盧鈺樺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_45",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "蔡文河",
-    "王惇楷"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王惇楷",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_46",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "王元均",
-    "徐銘均"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_49",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "蔡丞韋",
-    "楊博崴"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊博崴",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_50",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "徐靖恩",
-    "沈逸恩"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "徐靖恩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_53",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "林杰漢",
-    "黃袖圃"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃袖圃",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_54",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "簡靖庭",
-    "林士勛"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林士勛",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_57",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "鄭予皓",
-    "盧奕銓"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧奕銓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_58",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "林彥丞",
-    "黃世元"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林彥丞",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_61",
-   "date": "2026-09-11",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 2回賽",
-   "players": [
-    "林書陽",
-    "林新為"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林書陽",
-   "source": "schedule-app"
+   "source": "announcement"
   },
   {
    "date": "2026-09-11",
@@ -1262,6 +934,42 @@
     "彭景華"
    ],
    "pending_opponent": true,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "李維",
+    "李奎漢"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "林佾緯",
+    "黃彥誠"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "林君諺",
+    "陳國興"
+   ],
+   "pending_opponent": false,
    "source": "announcement"
   },
   {
@@ -1281,9 +989,57 @@
    "event": "第14屆中環碁聖賽 抽籤結果公告",
    "round": "本賽二回戰",
    "players": [
+    "陳祈睿",
+    "盧鈺樺"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "蔡文河",
+    "王惇楷"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "王元均",
+    "徐銘均"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
     "蔡丞韋"
    ],
    "pending_opponent": true,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "徐靖恩",
+    "沈逸恩"
+   ],
+   "pending_opponent": false,
    "source": "announcement"
   },
   {
@@ -1303,9 +1059,45 @@
    "event": "第14屆中環碁聖賽 抽籤結果公告",
    "round": "本賽二回戰",
    "players": [
+    "簡靖庭",
+    "林士勛"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
     "鄭予皓"
    ],
    "pending_opponent": true,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "林彥丞",
+    "黃世元"
+   ],
+   "pending_opponent": false,
+   "source": "announcement"
+  },
+  {
+   "date": "2026-09-11",
+   "time": "",
+   "event": "第14屆中環碁聖賽 抽籤結果公告",
+   "round": "本賽二回戰",
+   "players": [
+    "林書陽",
+    "林新為"
+   ],
+   "pending_opponent": false,
    "source": "announcement"
   },
   {
@@ -1493,262 +1285,6 @@
    ],
    "pending_opponent": false,
    "source": "announcement"
-  },
-  {
-   "id": "zhonghuan__0:zh69_22",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "賴均輔",
-    "林瀚彰"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_14",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "牛詩特",
-    "楊子萱"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "牛詩特",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_23",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "李維",
-    "劉耀文"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "李維",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_15",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "彭鐏德",
-    "林佾緯"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "彭鐏德",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_24",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "林君諺",
-    "吳彥諶"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_16",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "張凱馨",
-    "許育祺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "許育祺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_25",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "陳祈睿",
-    "陳劭全"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_17",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "施景堯",
-    "王惇楷"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "施景堯",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_26",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "王元均",
-    "周尹南"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_18",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "俞俐均",
-    "楊博崴"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "楊博崴",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_27",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "徐靖恩",
-    "黃家胤"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "徐靖恩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_19",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "蘇聖芳",
-    "黃袖圃"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "黃袖圃",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_28",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "林士勛",
-    "黃柏人"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林士勛",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_20",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "陳首廉",
-    "盧奕銓"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧奕銓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_29",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "林彥丞",
-    "林世民"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林世民",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_21",
-   "date": "2026-09-18",
-   "time": "",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 3回賽",
-   "players": [
-    "吳君成",
-    "林書陽"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林書陽",
-   "source": "schedule-app"
   },
   {
    "date": "2026-09-22",
@@ -1988,134 +1524,6 @@
    "source": "announcement"
   },
   {
-   "id": "zhonghuan__0:zh69_10",
-   "date": "2026-10-16",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "賴均輔",
-    "牛詩特"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_6",
-   "date": "2026-10-16",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "李維",
-    "彭鐏德"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "李維",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_11",
-   "date": "2026-10-16",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "林君諺",
-    "許育祺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_7",
-   "date": "2026-10-16",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "陳祈睿",
-    "施景堯"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "陳祈睿",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_12",
-   "date": "2026-10-16",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "王元均",
-    "楊博崴"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_8",
-   "date": "2026-10-16",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "徐靖恩",
-    "黃袖圃"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "徐靖恩",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_13",
-   "date": "2026-10-16",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "林士勛",
-    "盧奕銓"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧奕銓",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_9",
-   "date": "2026-10-16",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 16強賽",
-   "players": [
-    "林世民",
-    "林書陽"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林書陽",
-   "source": "schedule-app"
-  },
-  {
    "id": "xuanle__2:xf_g1",
    "date": "2026-10-22",
    "time": "11:00",
@@ -2241,70 +1649,6 @@
    "status": "drawn",
    "candidates": [],
    "winner": "許皓鋐",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_2",
-   "date": "2026-10-30",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 8強賽",
-   "players": [
-    "賴均輔",
-    "李維"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_3",
-   "date": "2026-10-30",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 8強賽",
-   "players": [
-    "林君諺",
-    "陳祈睿"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_4",
-   "date": "2026-10-30",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 8強賽",
-   "players": [
-    "王元均",
-    "徐靖恩"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "王元均",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_5",
-   "date": "2026-10-30",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 8強賽",
-   "players": [
-    "盧奕銓",
-    "林書陽"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧奕銓",
    "source": "schedule-app"
   },
   {
@@ -2593,38 +1937,6 @@
    "status": "drawn",
    "candidates": [],
    "winner": "賴均輔",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_0",
-   "date": "2026-11-06",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 4強賽",
-   "players": [
-    "賴均輔",
-    "林君諺"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "林君諺",
-   "source": "schedule-app"
-  },
-  {
-   "id": "zhonghuan__0:zh69_1",
-   "date": "2026-11-06",
-   "time": "11:00",
-   "event": "第14屆中環碁聖賽",
-   "round": "本賽 4強賽",
-   "players": [
-    "王元均",
-    "盧奕銓"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": "盧奕銓",
    "source": "schedule-app"
   },
   {
@@ -3520,7 +2832,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "賴均輔",
    "source": "schedule-app"
   },
   {
