@@ -206,6 +206,20 @@
      "label": "Youtube頻道"
     }
    ]
+  },
+  {
+   "id": "39DB6A531FEBD95C2829A32DA88CCCE0",
+   "modes": [
+    "線上"
+   ],
+   "languages": [
+    "中文"
+   ],
+   "levels": "業餘五段~七段",
+   "fee": "面議",
+   "availability": "平日晚間",
+   "intro": "主要上課方式以覆盤或對奕後覆盤",
+   "acceptForm": true
   }
  ]
 }
