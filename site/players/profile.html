@@ -23,6 +23,16 @@
   .player-bio p { margin: 0 0 .9em; }
   .player-bio strong { color: var(--ink); }
   .player-bio br + br { display: none; }
+
+  /* 近期對局表：欄位多，字和內距都調小一點，
+     日期、姓名、棋譜連結不要被折成兩行（放不下時整張表橫向捲動）。 */
+  #recentGames .table { min-width: 640px; }
+  #recentGames .table th,
+  #recentGames .table td { padding: 10px 12px; font-size: .86rem; }
+  #recentGames .table td:nth-child(1),
+  #recentGames .table td:nth-child(3),
+  #recentGames .table td:nth-child(7) { white-space: nowrap; }
+  #recentGames .table td .muted { font-size: .82em; }
 </style>
 </head>
 <body data-nav="players">
@@ -74,15 +84,159 @@
     }).join('');
   }
 
+  /* ---- 近期對局 ----
+     院長 2026-11-23 要求公開的棋士個人頁也看得到最近幾場成績（比照日本棋院）。
+     資料沿用年度成績那一次查詢（今年＋去年），不另外再抓一次。
+     「今後的賽程」取自抽籤公告 pairings.json，與職業棋士專區同一份；
+     那份本來就是海峰公開的抽籤結果，不是個資。
+     排序比照日本棋院：舊的在上、今後的排最後。 */
+  var RECENT_N = 10;
+
+  /* 台灣時間的今天（YYYY-MM-DD）。看的人可能人在國外或電腦時區不準。 */
+  function twToday() {
+    var t = new Date(Date.now() + 8 * 3600000);
+    return t.toISOString().slice(0, 10);
+  }
+  function pad2(n) { return ('0' + n).slice(-2); }
+  /* 成績資料的日期是 M.D，年份另外存 */
+  function dateParts(year, md) {
+    var m = String(md == null ? '' : md).match(/^(\d{1,2})[.](\d{1,2})$/);
+    return m ? { y: String(year), m: pad2(m[1]), d: pad2(m[2]) } : null;
+  }
+  function gameDay(g) {
+    var x = dateParts(g.year, g.date);
+    return x ? x.y + '-' + x.m + '-' + x.d : '';
+  }
+  function dayLabel(iso) { return String(iso).replace(/-/g, '/'); }
+
+  function renderRecent(r, p, data) {
+    var box = document.getElementById('recentGames');
+    if (!box) return;
+
+    var roster = {};
+    (data.players || []).forEach(function (x) { if (x && x.name) roster[x.name] = x; });
+
+    var games = (r.games || []).slice();        /* HaifongResults 給的是新到舊 */
+    var showAll = false;
+
+    fetch('../assets/data/pairings.json', { cache: 'no-cache' })
+      .then(function (res) { return res.ok ? res.json() : { pairings: [] }; })
+      .catch(function () { return { pairings: [] }; })   /* 抓不到就只顯示成績 */
+      .then(function (pj) {
+        var today = twToday();
+
+        /* 已經有結果的那一局不要又出現在「今後的賽程」裡
+           （當天已下完，但抽籤公告還留著） */
+        var played = {};
+        games.forEach(function (g) { played[gameDay(g) + '|' + g.opponent] = 1; });
+
+        var soon = (pj.pairings || []).filter(function (x) {
+          return x && x.date >= today && (x.players || []).indexOf(p.name) > -1;
+        }).map(function (x) {
+          var ps = x.players || [];
+          var opp = x.pending_opponent ? '' : ((ps[0] === p.name ? ps[1] : ps[0]) || '');
+          return { date: x.date, event: x.event || '', stage: x.round || '', opponent: opp };
+        }).filter(function (x) {
+          return !played[x.date + '|' + x.opponent];
+        }).sort(function (a, b) {
+          return a.date < b.date ? -1 : a.date > b.date ? 1 : 0;
+        });
+
+        if (!games.length && !soon.length) return;
+
+        var years = {};
+        games.forEach(function (g) { years[g.year] = 1; });
+        years = Object.keys(years).sort();
+
+        /* 對手是本會棋士就連到他的個人頁；不是的（外籍、業餘）只顯示名字 */
+        function who(name) {
+          if (!name) return '<span class="muted">未定</span>';
+          var hit = roster[name];
+          var label = esc(name) +
+            (hit && hit.rank ? ' <span class="muted">' + esc(hit.rank) + '</span>' : '');
+          return hit
+            ? '<a href="profile.html?id=' + encodeURIComponent(hit.id) + '">' + label + '</a>'
+            : label;
+        }
+
+        function resultRow(g) {
+          var day = gameDay(g);
+          return '<tr>' +
+            '<td class="num">' + esc(day ? dayLabel(day) : g.year + '/' + g.date) + '</td>' +
+            '<td><span class="tag"' +
+              (g.won ? ' style="background:var(--good-tint);color:var(--good)"' : '') +
+              '>' + (g.won ? '勝' : '負') + '</span></td>' +
+            '<td>' + who(g.opponent) + '</td>' +
+            '<td>' + esc(g.color) + '</td>' +
+            '<td>' + esc(g.event) + '</td>' +
+            '<td>' + esc(g.stage || '') + '</td>' +
+            '<td>' + ((g.kifus || []).length
+              ? g.kifus.map(function (u, i) {
+                  return '<a href="' + esc(u) + '" target="_blank" rel="noopener">棋譜' +
+                    (g.kifus.length > 1 ? ' ' + (i + 1) : '') + ' \u2197</a>';
+                }).join('\u3000')
+              : '') + '</td>' +
+            '</tr>';
+        }
+
+        function comingRow(x) {
+          return '<tr style="background:var(--paper)">' +
+            '<td class="num">' + esc(dayLabel(x.date)) + '</td>' +
+            '<td><span class="muted">預定</span></td>' +
+            '<td>' + who(x.opponent) + '</td>' +
+            '<td></td>' +
+            '<td>' + esc(x.event) + '</td>' +
+            '<td>' + esc(x.stage) + '</td>' +
+            '<td></td>' +
+            '</tr>';
+        }
+
+        function draw() {
+          /* 預設只給最近幾場；畫面上由舊到新，與日本棋院一致 */
+          var pick = games.slice(0, showAll ? games.length : RECENT_N).reverse();
+
+          box.innerHTML =
+            '<div class="section-head" style="margin-bottom:12px">' +
+              '<h2 style="font-size:1.3rem">對局結果與今後賽程</h2></div>' +
+            '<div class="table-wrap"><table class="table"><thead><tr>' +
+              '<th>對局日</th><th>勝負</th><th>對手</th><th>執子</th>' +
+              '<th>棋戰</th><th>階段</th><th>棋譜</th>' +
+            '</tr></thead><tbody>' +
+              pick.map(resultRow).join('') +
+              soon.map(comingRow).join('') +
+            '</tbody></table></div>' +
+            '<p class="muted mt-2" style="font-size:.82rem">' +
+              '「執子」是本人執黑或執白。成績即時取自海峰成績系統，' +
+              '今後賽程取自抽籤公告，實際日期以大會公告為準。</p>' +
+            (!showAll && games.length > RECENT_N
+              ? '<p class="mb-0"><button type="button" class="btn btn-ghost btn-sm" id="moreGames">' +
+                '顯示全部對局（' + esc(years.join('、')) + ' 年度共 ' + games.length + ' 局）</button></p>'
+              : (showAll
+                  ? '<p class="muted mb-0" style="font-size:.82rem">以上為 ' +
+                    esc(years.join('、')) + ' 年度的全部對局。</p>'
+                  : '')) +
+            '<div style="margin-bottom:32px"></div>';
+
+          var more = document.getElementById('moreGames');
+          if (more) more.addEventListener('click', function () { showAll = true; draw(); });
+        }
+
+        draw();
+      });
+  }
+
   /* ---- 即時年度成績 ----
      成績系統的分類與我們抓的對得上：國內＝台灣職業賽、國際＝世界賽，
      去年度直接用它的年度統計（實測與抓取版完全一致）。
      任何一步失敗就保留原本的數字，不留空白。 */
-  function liveSeason(p) {
+  function liveSeason(p, data) {
     var box = document.getElementById('seasonTiles');
     if (!box || !window.HaifongResults || !p.name) return;
 
     window.HaifongResults.player(p.name).then(function (r) {
+      /* 同一份查詢結果，近期對局不要再查一次 */
+      try { renderRecent(r, p, data); } catch (e) { /* 近期對局壞掉不影響年度成績 */ }
+
       var now = new Date().getFullYear();
       var games = (r.games || []).filter(function (g) { return g.year === String(now); });
       var prev = (r.years || []).filter(function (y) {
@@ -200,6 +354,9 @@
               '<div class="grid grid-3" id="seasonTiles" style="margin-bottom:32px">' + seasonTiles + '</div>'
             : '') +
 
+          /* 近期對局。成績回來之前是空的，不佔版面 */
+          '<div id="recentGames"></div>' +
+
           /* 自述放在最上面，不取代原本的簡介——那裡面有主要棋戰履歷 */
           (own.bio
             ? '<article class="prose player-bio" style="padding-bottom:4px">' +
@@ -225,7 +382,7 @@
           '</div>' +
         '</div>' +
       '</div>';
-    liveSeason(p);
+    liveSeason(p, data);
 
   }).catch(function (err) {
     document.getElementById('pName').textContent = '載入失敗';
