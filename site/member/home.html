@@ -214,7 +214,7 @@
     loadEntries(pid, asName, isAdmin);
     loadMine(pid, asName || name);
     loadMyResults(pid);
-    loadQishiLink(isAdmin, asName);
+    loadQishiLink(pid, isAdmin, asName);
   });
 
   /* ---- 棋士研究室（海峰棋院的個人 AI 分析）----
@@ -226,14 +226,17 @@
      - rel="noopener noreferrer"：不要把本頁網址交給對方的網站；
      - 不印進 console、不送任何統計。
 
-     管理員「以棋士身分檢視」時讀不到別人的連結——這是資料庫擋的，
-     刻意如此，不是壞掉，所以那種情況給一句說明而不是留白。 */
-  function loadQishiLink(isAdmin, asName) {
+     管理員讀得到全部（2026-11-23 海峰同意），所以一定要指定 player_id，
+     不然管理員會一次查出 89 列、maybeSingle() 直接報錯。
+     棋士自己查也帶著這個條件，多一層保險沒有壞處。 */
+  function loadQishiLink(playerId, isAdmin, asName) {
     var box = document.getElementById('qishiLink');
     if (!box) return;
+    if (!playerId) return;          /* 管理員還沒選人，沒有對象可查 */
     var PREFIX = 'https://milu891212-milu.github.io/qishi-lab/me/#k=';
 
-    A.client.from('qishi_links').select('url').maybeSingle().then(function (res) {
+    A.client.from('qishi_links').select('url')
+      .eq('player_id', playerId).maybeSingle().then(function (res) {
       var url = (res && res.data && typeof res.data.url === 'string') ? res.data.url : '';
       if ((res && res.error) || url.indexOf(PREFIX) !== 0) {
         /* 沒有 AI 分析棋譜的棋士就是沒有這一列，不顯示任何東西 */
@@ -241,7 +244,7 @@
           var note = document.createElement('p');
           note.className = 'muted mb-0';
           note.style.fontSize = '.84rem';
-          note.textContent = '棋士研究室的連結只有棋士本人讀得到，管理員檢視時不會顯示。';
+          note.textContent = '這位棋士沒有棋士研究室的分析（海峰那邊還沒有他的 AI 分析棋譜）。';
           box.replaceChildren(note);
           box.hidden = false;
         }
@@ -252,11 +255,14 @@
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
       a.className = 'btn btn-ghost btn-sm';
-      a.textContent = '我的 AI 分析（棋士研究室）↗';
+      a.textContent = (asName ? asName + ' 的 AI 分析（棋士研究室）↗'
+                              : '我的 AI 分析（棋士研究室）↗');
       var hint = document.createElement('p');
       hint.className = 'muted mb-0 mt-1';
       hint.style.fontSize = '.8rem';
-      hint.textContent = '由海峰棋院提供，在新分頁開啟。網址含個人專屬金鑰，請勿轉傳。';
+      hint.textContent = asName
+        ? '這是該棋士本人看到的連結。網址本身就是鑰匙，不會過期，請勿轉傳或截圖外流。'
+        : '由海峰棋院提供，在新分頁開啟。網址含個人專屬金鑰，請勿轉傳。';
       box.replaceChildren(a, hint);
       box.hidden = false;
     }).catch(function () { /* 讀不到就當沒有，不要影響整頁 */ });

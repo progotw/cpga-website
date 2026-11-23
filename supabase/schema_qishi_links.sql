@@ -29,9 +29,21 @@ create policy qishi_links_select_own on public.qishi_links
   for select to authenticated
   using (player_id = (select p.player_id from public.profiles p where p.id = auth.uid()));
 
+-- 管理員可讀全部。
+--
+-- 海峰原本的說明交代不要加這條（多一條政策就等於多一個把全部鑰匙一次讀走的
+-- 入口），2026-11-23 秘書處詢問後海峰同意開放，所以補上。
+-- 代價要記著：這些網址不會過期，管理員帳號一旦被盜，外流的是 89 把永久鑰匙。
+-- 真的外流時的處理方式是請海峰重設，再整份重新匯入一次連結表。
+drop policy if exists qishi_links_admin_read on public.qishi_links;
+create policy qishi_links_admin_read on public.qishi_links
+  for select to authenticated
+  using (public.is_admin());
+
 -- 自我檢查
-select '匿名可讀（應為 0 筆政策）' as 檢查項目,
-       count(*) filter (where 'anon' = any (roles) or 'public' = any (roles)) as 開放匿名,
-       count(*) as 政策總數
+select '政策檢查' as 檢查項目,
+       count(*) filter (where 'anon' = any (roles) or 'public' = any (roles)) as 開放匿名_應為0,
+       count(*) as 政策總數_應為2,
+       count(*) filter (where cmd <> 'SELECT') as 可寫入的政策_應為0
 from pg_policies
 where schemaname = 'public' and tablename = 'qishi_links';
