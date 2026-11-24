@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-24T07:55:25+08:00",
+ "generated": "2026-11-24T14:38:51+08:00",
  "generated_label": "(11/24更新)",
  "source": "海峰棋院 成績系統（公開對局紀錄）",
  "note": "國內＝台灣職業賽、國際＝世界賽；last_year 為前一年全部對局。players 的鍵是海峰棋士頁網址上的棋士編號。",
@@ -203,11 +203,11 @@
   "498745583367139F2AD618F39303A6C4": {
    "name": "許皓鋐",
    "domestic": {
-    "games": 33,
+    "games": 34,
     "win": 27,
-    "loss": 6,
-    "rate": 81.8,
-    "text": "27勝6負　勝率81.8%"
+    "loss": 7,
+    "rate": 79.4,
+    "text": "27勝7負　勝率79.4%"
    },
    "international": {
     "games": 17,
@@ -227,11 +227,11 @@
   "E81B48D148D947DCA3E3ECFF3CA72E20": {
    "name": "賴均輔",
    "domestic": {
-    "games": 60,
-    "win": 45,
+    "games": 61,
+    "win": 46,
     "loss": 15,
-    "rate": 75.0,
-    "text": "45勝15負　勝率75%"
+    "rate": 75.4,
+    "text": "46勝15負　勝率75.4%"
    },
    "international": {
     "games": 6,
