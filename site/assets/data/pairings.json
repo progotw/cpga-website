@@ -2852,22 +2852,6 @@
    "source": "schedule-app"
   },
   {
-   "id": "qiwang20__1:f_lb7_abcdefgh",
-   "date": "2026-11-24",
-   "time": "11:00",
-   "event": "第20屆棋王賽",
-   "round": "複賽 敗部3回",
-   "players": [
-    "楊子萱",
-    "林立祥"
-   ],
-   "pending_opponent": false,
-   "status": "drawn",
-   "candidates": [],
-   "winner": null,
-   "source": "schedule-app"
-  },
-  {
    "id": "qiwang20__1:f_lb7_HIJK",
    "date": "2026-11-24",
    "time": "11:00",
@@ -2880,7 +2864,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林書陽",
    "source": "schedule-app"
   },
   {
@@ -2896,7 +2880,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "吳彥諶",
    "source": "schedule-app"
   },
   {
@@ -2912,7 +2896,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "陳威廷",
    "source": "schedule-app"
   },
   {
@@ -2928,7 +2912,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林士勛",
    "source": "schedule-app"
   },
   {
@@ -2944,7 +2928,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "徐靖恩",
    "source": "schedule-app"
   },
   {
@@ -2960,7 +2944,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "盧奕銓",
    "source": "schedule-app"
   },
   {
@@ -2976,7 +2960,7 @@
    "pending_opponent": false,
    "status": "drawn",
    "candidates": [],
-   "winner": null,
+   "winner": "林彥丞",
    "source": "schedule-app"
   },
   {
@@ -3028,6 +3012,22 @@
    "source": "schedule-app"
   },
   {
+   "id": "qiwang20__1:f_lb7_abcdefgh",
+   "date": "2026-11-30",
+   "time": "11:00",
+   "event": "第20屆棋王賽",
+   "round": "複賽 敗部3回",
+   "players": [
+    "楊子萱",
+    "林立祥"
+   ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
+   "winner": null,
+   "source": "schedule-app"
+  },
+  {
    "id": "guoshou__1:gc_g2",
    "date": "2026-11-30",
    "time": "11:00",
@@ -3065,14 +3065,14 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部準決賽",
-   "players": [],
+   "players": [
+    "林君諺"
+   ],
    "pending_opponent": true,
-   "status": "scheduled",
+   "status": "drawn",
    "candidates": [
     "楊子萱",
-    "林立祥",
-    "林君諺",
-    "林彥丞"
+    "林立祥"
    ],
    "winner": null,
    "source": "schedule-app"
@@ -3083,15 +3083,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部準決賽",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "林書陽",
-    "林世民",
-    "鄭予皓",
     "吳彥諶"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -3101,15 +3099,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部準決賽",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "陳威廷",
-    "陳映嘉",
-    "林新為",
-    "盧奕銓"
+    "林新為"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -3119,15 +3115,13 @@
    "time": "11:00",
    "event": "第20屆棋王賽",
    "round": "複賽 敗部準決賽",
-   "players": [],
-   "pending_opponent": true,
-   "status": "scheduled",
-   "candidates": [
+   "players": [
     "林士勛",
-    "簡靖庭",
-    "徐靖恩",
-    "盧鈺樺"
+    "徐靖恩"
    ],
+   "pending_opponent": false,
+   "status": "drawn",
+   "candidates": [],
    "winner": null,
    "source": "schedule-app"
   },
@@ -3226,10 +3220,7 @@
     "楊子萱",
     "林立祥",
     "林君諺",
-    "林彥丞",
     "林書陽",
-    "林世民",
-    "鄭予皓",
     "吳彥諶"
    ],
    "winner": null,
@@ -3246,13 +3237,9 @@
    "status": "scheduled",
    "candidates": [
     "陳威廷",
-    "陳映嘉",
     "林新為",
-    "盧奕銓",
     "林士勛",
-    "簡靖庭",
-    "徐靖恩",
-    "盧鈺樺"
+    "徐靖恩"
    ],
    "winner": null,
    "source": "schedule-app"
