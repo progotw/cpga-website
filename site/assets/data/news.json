@@ -1,10 +1,28 @@
 {
  "schema_version": 1,
- "generated": "2026-11-24T08:11:24+00:00",
+ "generated": "2026-11-24T14:52:02+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "D380ECD80FA00D80F1347B1D225A248C",
+   "date": "2026-11-24",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "棋王複賽第四日：盧奕銓、林彥丞全勝闖關 率先晉級循環圈",
+   "url": "https://www.haifong.org/news/content/D380ECD80FA00D80F1347B1D225A248C",
+   "local": true
+  },
+  {
+   "id": "103D522AED4555B25B8FF4001836C6F0",
+   "date": "2026-11-24",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "棋王賽挑戰賽第二局 許皓鋐再下一城 2:0聽牌衛冕",
+   "url": "https://www.haifong.org/news/content/103D522AED4555B25B8FF4001836C6F0",
+   "local": true
+  },
   {
    "id": "26561922FEF6519A192BDAE567C5EA60",
    "date": "2026-11-23",
@@ -48,15 +66,6 @@
    "cat": "match",
    "title": "【盧奕銓新人王、周尹南六段晉級4強｜第2屆龍星賽8強戰報】",
    "url": "https://www.haifong.org/news/content/E5AB28EA05EA8116B0072EEDEFA4A227",
-   "local": true
-  },
-  {
-   "id": "D380ECD80FA00D80F1347B1D225A248C",
-   "date": "2026-11-17",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "棋王複賽第三日：林新為、盧奕銓、林君諺、林彥丞晉級勝部決賽",
-   "url": "https://www.haifong.org/news/content/D380ECD80FA00D80F1347B1D225A248C",
    "local": true
   },
   {
@@ -165,15 +174,6 @@
    "cat": "notice",
    "title": "第2屆「龍星賽」本賽選手與抽籤日期公告",
    "url": "https://www.haifong.org/news/content/B4453DC77C0601C454BA39638FD550F2",
-   "local": true
-  },
-  {
-   "id": "103D522AED4555B25B8FF4001836C6F0",
-   "date": "2026-11-03",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "棋王賽挑戰賽第一局：許皓鋐執黑勝賴均輔，五番勝負1:0 領先",
-   "url": "https://www.haifong.org/news/content/103D522AED4555B25B8FF4001836C6F0",
    "local": true
   },
   {
