@@ -33,10 +33,9 @@
   #recentGames .table td:nth-child(3),
   #recentGames .table td:nth-child(7) { white-space: nowrap; }
   #recentGames .table td .muted { font-size: .82em; }
-  /* ○ ✕ 比文字小得多，膠囊裡的字級要加大才看得清楚 */
-  #recentGames .table td:nth-child(2) .tag {
-    font-size: .95rem; font-weight: 700; line-height: 1.1; padding: 3px 9px;
-  }
+  /* 勝負只用 ○ ✕ 兩個符號，不加膠囊底色（院長 2026-11-24 指定）。
+     這兩個符號比中文字小，字級要再放大一點才看得清楚。 */
+  #recentGames .table .wl { font-size: 1.05rem; font-weight: 700; color: var(--ink-3); }
 </style>
 </head>
 <body data-nav="players">
@@ -169,8 +168,8 @@
             '<td class="num">' + esc(day ? dayLabel(day) : g.year + '/' + g.date) + '</td>' +
             /* ○ 勝、✕ 負（院長 2026-11-24 指定，比照日本棋院）。
                符號看不懂時滑鼠停著會出現「勝」「負」，讀螢幕軟體也唸得出來。 */
-            '<td><span class="tag" title="' + (g.won ? '勝' : '負') + '"' +
-              (g.won ? ' style="background:var(--good-tint);color:var(--good)"' : '') +
+            '<td><span class="wl" title="' + (g.won ? '勝' : '負') + '"' +
+              (g.won ? ' style="color:var(--good)"' : '') +
               '>' + (g.won ? '○' : '✕') + '</span></td>' +
             '<td>' + who(g.opponent) + '</td>' +
             '<td>' + esc(g.color) + '</td>' +
