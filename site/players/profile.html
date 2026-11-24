@@ -33,6 +33,10 @@
   #recentGames .table td:nth-child(3),
   #recentGames .table td:nth-child(7) { white-space: nowrap; }
   #recentGames .table td .muted { font-size: .82em; }
+  /* ○ ✕ 比文字小得多，膠囊裡的字級要加大才看得清楚 */
+  #recentGames .table td:nth-child(2) .tag {
+    font-size: .95rem; font-weight: 700; line-height: 1.1; padding: 3px 9px;
+  }
 </style>
 </head>
 <body data-nav="players">
@@ -163,9 +167,11 @@
           var day = gameDay(g);
           return '<tr>' +
             '<td class="num">' + esc(day ? dayLabel(day) : g.year + '/' + g.date) + '</td>' +
-            '<td><span class="tag"' +
+            /* ○ 勝、✕ 負（院長 2026-11-24 指定，比照日本棋院）。
+               符號看不懂時滑鼠停著會出現「勝」「負」，讀螢幕軟體也唸得出來。 */
+            '<td><span class="tag" title="' + (g.won ? '勝' : '負') + '"' +
               (g.won ? ' style="background:var(--good-tint);color:var(--good)"' : '') +
-              '>' + (g.won ? '勝' : '負') + '</span></td>' +
+              '>' + (g.won ? '○' : '✕') + '</span></td>' +
             '<td>' + who(g.opponent) + '</td>' +
             '<td>' + esc(g.color) + '</td>' +
             '<td>' + esc(g.event) + '</td>' +
