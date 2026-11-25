@@ -1,36 +1,13 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-25T22:21:54+08:00",
+  "generated": "2026-11-26T05:43:21+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
-    "from": "2026-11-25",
-    "to": "2027-01-23"
+    "from": "2026-11-26",
+    "to": "2027-01-24"
   },
-  "count": 17,
+  "count": 16,
   "events": [
-    {
-      "date": "2026-11-25",
-      "weekday": 2,
-      "title": "龍星賽8強(上下午)",
-      "name": "龍星賽",
-      "round": "8強",
-      "series": "龍星賽",
-      "series_slot": 7,
-      "sessions": [
-        "10:00",
-        "14:00"
-      ],
-      "time": "10:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-11-26",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NmtnNDRqNmtsOWNzajMzZ2tqYzZlZmkwZjUgNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
     {
       "date": "2026-11-26",
       "weekday": 3,
