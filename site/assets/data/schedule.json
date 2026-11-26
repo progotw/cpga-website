@@ -1,35 +1,13 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-26T21:53:29+08:00",
+  "generated": "2026-11-27T05:34:25+08:00",
   "source": "海峰棋院公開行事曆",
   "range": {
-    "from": "2026-11-26",
-    "to": "2027-01-24"
+    "from": "2026-11-27",
+    "to": "2027-01-25"
   },
-  "count": 16,
+  "count": 15,
   "events": [
-    {
-      "date": "2026-11-26",
-      "weekday": 3,
-      "title": "玄樂盃決賽第4局",
-      "name": "玄樂盃",
-      "round": "決賽第4局",
-      "series": "玄樂杯",
-      "series_slot": 1,
-      "sessions": [
-        "11:00"
-      ],
-      "time": "11:00",
-      "time_inferred": true,
-      "end_time": null,
-      "all_day": true,
-      "end_date": "2026-11-27",
-      "location": "",
-      "link": "https://www.google.com/calendar/event?eid=NjVxa2o4ODdrbWU0MGJtN2pvN2g0Nm51NG0gNmY5MzgzYzcyYmNmNDI2NGY4ZTVjZTRjMmZkY2NkMjk3NDlmMjg4MTc2ZDVmOGRlZTFkNDEyYTI5OTBkNjY2NkBn",
-      "calendars": [
-        "海峰棋院公開行事曆"
-      ]
-    },
     {
       "date": "2026-11-30",
       "weekday": 0,
