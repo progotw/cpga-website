@@ -107,6 +107,19 @@
           <div id="homeSchedule"></div>
         </div>
         <a class="btn btn-ghost btn-sm mt-2" href="events/index.html">完整賽程 →</a>
+
+        <!-- 本月壽星。日期取自海峰公開的棋士簡介，players.json 裡只有「月-日」，
+             沒有年份，所以這裡顯示得出日期、算不出年齡（刻意的）。
+             這個月沒有人、或資料讀不到，整塊就不出現。 -->
+        <div id="homeBirthdayBox" hidden style="margin-top:2.4rem">
+          <div class="section-head">
+            <span class="eyebrow">Birthday</span>
+            <h2 style="font-size:1.4rem">本月壽星</h2>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div id="homeBirthdays"></div>
+          </div>
+        </div>
       </aside>
     </div>
   </div>
@@ -268,6 +281,69 @@
         '<span style="color:var(--on-dark-2);font-size:.92rem">' + C.esc(m.text) + '</span></li>';
     }).join('');
   }).catch(function (e) { C.fail(mEl, e); });
+
+  /* ---- 本月壽星 ----
+     生日來自海峰棋院公開的棋士簡介（139 位裡 137 位有寫）。
+     players.json 只存「MM-DD」，年份在抓取時就被丟掉了，
+     所以官網不會、也算不出任何人的年齡——見 scripts/scrape_players.py。
+     整段用自己的 catch 包住：壽星讀不到不該讓首頁其他區塊一起空白。 */
+  var bBox = document.getElementById('homeBirthdayBox');
+  var bEl = document.getElementById('homeBirthdays');
+  if (bBox && bEl && window.CPGA_PLAYERS) {
+    window.CPGA_PLAYERS.load().then(function (data) {
+      /* 台灣時間的今天。訪客可能人在國外，或電腦時區不準 */
+      var t = new Date(Date.now() + 8 * 3600000);
+      var mm = ('0' + (t.getUTCMonth() + 1)).slice(-2);
+      var dd = ('0' + t.getUTCDate()).slice(-2);
+
+      var list = (data.players || []).filter(function (p) {
+        return p && typeof p.birthday === 'string' && p.birthday.slice(0, 2) === mm;
+      }).sort(function (a, b) { return a.birthday < b.birthday ? -1 : 1; });
+      if (!list.length) return;
+
+      /* 一個月可能有十幾位，整串列出來會比旁邊的近期賽程長一倍。
+         預設只顯示今天和之後的，已經過的收起來。
+         月底時「之後的」可能是空的，那就乾脆整個月都攤開，
+         否則卡片裡只剩一個按鈕，看起來像壞掉。 */
+      var past = list.filter(function (p) { return p.birthday.slice(3, 5) < dd; });
+      var rest = list.filter(function (p) { return p.birthday.slice(3, 5) >= dd; });
+      var showPast = !rest.length;
+
+      function row(p, last) {
+        var isToday = p.birthday.slice(3, 5) === dd;
+        return '<a href="players/profile.html?id=' + encodeURIComponent(p.id) + '"' +
+          ' style="display:flex;gap:10px;align-items:baseline;padding:10px 20px' +
+          (last ? '' : ';border-bottom:1px solid var(--line)') +
+          (isToday ? ';background:var(--good-tint)' : '') + '">' +
+          '<span class="muted" style="font-size:.82rem;font-variant-numeric:tabular-nums;' +
+            'white-space:nowrap">' + esc(p.birthday.replace('-', '/')) + '</span>' +
+          '<strong style="color:var(--ink);font-size:.95rem">' + esc(p.name) + '</strong>' +
+          '<span class="muted" style="font-size:.82rem">' + esc(p.rank) + '</span>' +
+          (isToday
+            ? '<span class="tag" style="margin-left:auto;background:var(--good);color:#fff">今天</span>'
+            : '') +
+          '</a>';
+      }
+
+      function draw() {
+        var rows = (showPast ? past : []).concat(rest);
+        bEl.innerHTML =
+          (!showPast && past.length
+            ? '<button type="button" id="homeBirthdayMore" style="display:block;width:100%;' +
+              'padding:9px 20px;border:0;border-bottom:1px solid var(--line);background:none;' +
+              'text-align:left;font:inherit;font-size:.82rem;color:var(--ink-4);cursor:pointer">' +
+              '本月已過 ' + past.length + ' 位 ▾</button>'
+            : '') +
+          rows.map(function (p, i) { return row(p, i === rows.length - 1); }).join('');
+
+        var more = document.getElementById('homeBirthdayMore');
+        if (more) more.addEventListener('click', function () { showPast = true; draw(); });
+      }
+
+      draw();
+      bBox.hidden = false;
+    }).catch(function () { /* 讀不到就不顯示 */ });
+  }
 
 })();
 </script>

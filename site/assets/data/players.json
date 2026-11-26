@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-26T08:14:50+00:00",
+ "generated": "2026-11-26T17:40:19+08:00",
  "source": "海峰棋院 職業棋士名錄",
  "source_url": "https://www.haifong.org/profession",
  "count": 139,
@@ -42,7 +42,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E5%91%A8%E4%BF%8A%E5%8B%B3"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/524D63AB167F4AC82887FD1660977B3E"
+   "source": "https://www.haifong.org/profession/venue/524D63AB167F4AC82887FD1660977B3E",
+   "birthday": "02-23"
   },
   {
    "id": "07C277A02F5A3328B8E44D1B653B2996",
@@ -77,7 +78,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E8%87%B3%E6%B6%B5"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/07C277A02F5A3328B8E44D1B653B2996"
+   "source": "https://www.haifong.org/profession/venue/07C277A02F5A3328B8E44D1B653B2996",
+   "birthday": "11-14"
   },
   {
    "id": "248B7B2EE622C94D9B841530AE46D9FF",
@@ -112,7 +114,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E9%99%B3%E8%A9%A9%E6%B7%B5"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/248B7B2EE622C94D9B841530AE46D9FF"
+   "source": "https://www.haifong.org/profession/venue/248B7B2EE622C94D9B841530AE46D9FF",
+   "birthday": "10-28"
   },
   {
    "id": "24FA409B34B5EDEB5AA85CD9CA4234E5",
@@ -151,7 +154,8 @@
      "url": "https://search.books.com.tw/search/query/key/%E8%95%AD%E6%AD%A3%E6%B5%A9/adv_author/1/"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/24FA409B34B5EDEB5AA85CD9CA4234E5"
+   "source": "https://www.haifong.org/profession/venue/24FA409B34B5EDEB5AA85CD9CA4234E5",
+   "birthday": "10-05"
   },
   {
    "id": "E9D94D4CE46F6025510F71D1EA39FCB3",
@@ -194,7 +198,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E7%8E%8B%E5%85%83%E5%9D%87"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/E9D94D4CE46F6025510F71D1EA39FCB3"
+   "source": "https://www.haifong.org/profession/venue/E9D94D4CE46F6025510F71D1EA39FCB3",
+   "birthday": "03-14"
   },
   {
    "id": "115967099A3190B9705F17A83DFF23C5",
@@ -233,7 +238,8 @@
      "url": "https://www.haifong.org/game/classes/81DA46A14B38EDAFFEB03C9F5AE01E34"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/115967099A3190B9705F17A83DFF23C5"
+   "source": "https://www.haifong.org/profession/venue/115967099A3190B9705F17A83DFF23C5",
+   "birthday": "09-19"
   },
   {
    "id": "D354DB8D0B2F277236D9E6B5FBC5D228",
@@ -280,7 +286,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E5%90%9B%E8%AB%BA"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/D354DB8D0B2F277236D9E6B5FBC5D228"
+   "source": "https://www.haifong.org/profession/venue/D354DB8D0B2F277236D9E6B5FBC5D228",
+   "birthday": "11-26"
   },
   {
    "id": "CFE91E4CC316BDAA23077D2D414DA825",
@@ -315,7 +322,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E7%AB%8B%E7%A5%A5"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/CFE91E4CC316BDAA23077D2D414DA825"
+   "source": "https://www.haifong.org/profession/venue/CFE91E4CC316BDAA23077D2D414DA825",
+   "birthday": "09-07"
   },
   {
    "id": "498745583367139F2AD618F39303A6C4",
@@ -354,7 +362,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E8%A8%B1%E7%9A%93%E9%8B%90"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/498745583367139F2AD618F39303A6C4"
+   "source": "https://www.haifong.org/profession/venue/498745583367139F2AD618F39303A6C4",
+   "birthday": "04-30"
   },
   {
    "id": "E81B48D148D947DCA3E3ECFF3CA72E20",
@@ -389,7 +398,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E8%B3%B4%E5%9D%87%E8%BC%94"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/E81B48D148D947DCA3E3ECFF3CA72E20"
+   "source": "https://www.haifong.org/profession/venue/E81B48D148D947DCA3E3ECFF3CA72E20",
+   "birthday": "04-08"
   },
   {
    "id": "E0105F37B8050597F275972467EA648E",
@@ -424,7 +434,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E9%99%B3%E7%A5%88%E7%9D%BF"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/E0105F37B8050597F275972467EA648E"
+   "source": "https://www.haifong.org/profession/venue/E0105F37B8050597F275972467EA648E",
+   "birthday": "06-15"
   },
   {
    "id": "39DB6A531FEBD95C2829A32DA88CCCE0",
@@ -459,7 +470,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E5%A3%AB%E5%8B%9B"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/39DB6A531FEBD95C2829A32DA88CCCE0"
+   "source": "https://www.haifong.org/profession/venue/39DB6A531FEBD95C2829A32DA88CCCE0",
+   "birthday": "07-12"
   },
   {
    "id": "656782CAB5A2F7025566457688468C15",
@@ -489,7 +501,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1959年6月14日<br><br>1983年九品，1986年八品，1987年七品，1993年四品，2000年六段，2002年七段，2010年八段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2001年</strong><br /><br />\n第一屆棋士盃冠軍</p><br />\n<br />\n<p><strong>1994年</strong><br /><br />\n第二屆永大盃冠軍</p><br />\n<br />\n<p><strong>1993年</strong><br /><br />\n第十三屆舊國手賽冠軍、第十九屆名人賽冠軍</p><br />\n<br />\n<p><strong>1992年</strong><br /><br />\n第十二屆舊國手賽冠軍</p><br />\n<br />\n<p><strong>1991年</strong><br /><br />\n第十一屆舊國手賽冠軍</p><br />\n<br />\n<p><strong>1990年</strong><br /><br />\n第二屆茂榜盃冠軍</p><br />\n<br />\n<p><strong>1989年</strong><br /><br />\n第一屆茂榜盃冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/656782CAB5A2F7025566457688468C15"
+   "source": "https://www.haifong.org/profession/venue/656782CAB5A2F7025566457688468C15",
+   "birthday": "06-14"
   },
   {
    "id": "EABAB380EA36DEDD2090DBE6D518E186",
@@ -514,7 +527,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1958年6月2日</p><br />\n<br />\n<p>2022年八段</p><br />\n<br />\n<p><br /><br />\n<strong>主要棋戰履歷<br><br>2003年 </strong><br /><br />\n第三屆東鋼盃亞軍</p><br />\n<br />\n<p><strong>2001年</strong><br /><br />\n第一屆棋士盃亞軍</p><br />\n<br />\n<p><strong>1995、1996年</strong><br /><br />\n名人擂台賽第二名</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/EABAB380EA36DEDD2090DBE6D518E186"
+   "source": "https://www.haifong.org/profession/venue/EABAB380EA36DEDD2090DBE6D518E186",
+   "birthday": "06-02"
   },
   {
    "id": "3AB09C2D42977CB66F69737B529900F2",
@@ -549,7 +563,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E7%B0%A1%E9%9D%96%E5%BA%AD"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/3AB09C2D42977CB66F69737B529900F2"
+   "source": "https://www.haifong.org/profession/venue/3AB09C2D42977CB66F69737B529900F2",
+   "birthday": "09-05"
   },
   {
    "id": "37BBCE6C7228E2D9AE8B6EB84221BA97",
@@ -579,7 +594,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n1998年1月3日生，臺灣桃園市人。 <br /><br />\n2011年入段，2012年二段，2013年三段，2014年跳昇五段，2015年加入中華職協精英隊(~2016)，2018年六段，2019年重返中華職協精英隊，2021年七段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2020年 </strong><br /><br />\n108學年各級學校圍棋運動錦標賽-高中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2018年</strong> <br /><br />\n2018新人王冠軍 第17屆天元 亞軍 </p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n第6屆海峰盃職業圍棋賽 冠軍 </p><br />\n<br />\n<p><strong>2013年</strong> <br /><br />\n第4屆思源盃職業圍棋賽冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/37BBCE6C7228E2D9AE8B6EB84221BA97"
+   "source": "https://www.haifong.org/profession/venue/37BBCE6C7228E2D9AE8B6EB84221BA97",
+   "birthday": "01-03"
   },
   {
    "id": "BAB49E1223C36B263E5B436D7CCD99AF",
@@ -609,7 +625,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1960年3月13日</p><br />\n<br />\n<p>2007年七段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br /><br />\n<strong>2003年</strong> <br /><br />\n第十屆中環盃 冠軍<br /><br />\n第三屆CMC盃職業圍棋電視快棋賽 亞軍</p><br />\n<br />\n<p><strong>2002年</strong><br /><br />\n第二屆東鋼盃 冠軍<br /><br />\n第一屆棋靈盃 冠軍</p><br />\n<br />\n<p><strong>2001年</strong><br /><br />\n第一屆CMC盃職業圍棋電視快棋賽 冠軍</p><br />\n<br />\n<p><strong>1999年</strong><br /><br />\n第七屆永大盃 冠軍</p><br />\n<br />\n<p><strong>1996年</strong><br /><br />\n第十六屆舊國手賽 冠軍</p><br />\n<br />\n<p><strong>1995年</strong><br /><br />\n第二屆中環盃 冠軍</p><br />\n<br />\n<p><strong>1992年</strong><br /><br />\n第十八屆名人賽 冠軍</p><br />\n<br />\n<p><strong>1990年</strong><br /><br />\n第十六屆名人賽 冠軍</p><br />\n<br />\n<p><strong>1988年</strong><br /><br />\n第八屆舊國手賽 冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/BAB49E1223C36B263E5B436D7CCD99AF"
+   "source": "https://www.haifong.org/profession/venue/BAB49E1223C36B263E5B436D7CCD99AF",
+   "birthday": "03-13"
   },
   {
    "id": "CE7FB82858C7438605C9D65FE9274AB1",
@@ -648,7 +665,8 @@
      "url": "https://www.instagram.com/jiajia94526/?hl=zh-tw"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/CE7FB82858C7438605C9D65FE9274AB1"
+   "source": "https://www.haifong.org/profession/venue/CE7FB82858C7438605C9D65FE9274AB1",
+   "birthday": "05-26"
   },
   {
    "id": "70228523DBA5896634FC5837AC5CA377",
@@ -687,7 +705,8 @@
      "url": "https://search.books.com.tw/search/query/key/%E5%A4%8F%E5%A4%A7%E9%8A%98/adv_author/1/"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/70228523DBA5896634FC5837AC5CA377"
+   "source": "https://www.haifong.org/profession/venue/70228523DBA5896634FC5837AC5CA377",
+   "birthday": "12-01"
   },
   {
    "id": "529515168CFC55E68A81B0B8308189E4",
@@ -717,7 +736,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n1998年8月23日生，出生於臺灣臺北市。 <br /><br />\n2013年入段，2015年二段並加入中華職協新銳隊至今，同年三段，2018年四段，2019年擔任中華職協精銳隊副教練，2020年五段，2021年加入中華職協精英隊，2022年六段，2025年七段</p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong></p><br />\n<br />\n<p><strong>2023年</strong><br /><br />\n2023新人王賽 亞軍 </p><br />\n<br />\n<p><strong>2022年 </strong><br /><br />\n第9屆大成杯全國圍棋棋聖賽 冠軍 (非公式戰)  </p><br />\n<br />\n<p><strong>2020年 </strong><br /><br />\n2020新人王 冠軍 </p><br />\n<br />\n<p><strong>2015年 </strong><br /><br />\n第5屆台北市中正盃圍棋公開賽季軍(非公式戰)</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/529515168CFC55E68A81B0B8308189E4"
+   "source": "https://www.haifong.org/profession/venue/529515168CFC55E68A81B0B8308189E4",
+   "birthday": "08-23"
   },
   {
    "id": "A171DFC04906431680FC73EB858CC94A",
@@ -742,7 +762,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1986年4月7日</p><br />\n<br />\n<p>2007年入段，同年二段，2008年三段，2011年四段，2013年五段，2017年六段，2025年七段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2014年</strong><br /><br />\n第四屆世界智力精英運動會男子團體賽第四名</p><br />\n<br />\n<p><strong>2009年</strong><br /><br />\n第二屆愛心盃亞軍</p><br />\n<br />\n<p> </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/A171DFC04906431680FC73EB858CC94A"
+   "source": "https://www.haifong.org/profession/venue/A171DFC04906431680FC73EB858CC94A",
+   "birthday": "04-07"
   },
   {
    "id": "E9DF0E8E3BA4B7CB4D5A44BC0598CF01",
@@ -781,7 +802,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E7%9B%A7%E5%A5%95%E9%8A%93"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/E9DF0E8E3BA4B7CB4D5A44BC0598CF01"
+   "source": "https://www.haifong.org/profession/venue/E9DF0E8E3BA4B7CB4D5A44BC0598CF01",
+   "birthday": "03-29"
   },
   {
    "id": "5F56B6A27939285C8C6CE8EAF86E33FD",
@@ -820,7 +842,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E5%BE%90%E9%9D%96%E6%81%A9"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/5F56B6A27939285C8C6CE8EAF86E33FD"
+   "source": "https://www.haifong.org/profession/venue/5F56B6A27939285C8C6CE8EAF86E33FD",
+   "birthday": "12-26"
   },
   {
    "id": "FD4F71FF30877A4D784D40B82F6ABA13",
@@ -845,7 +868,8 @@
    ],
    "body": "<p>簡介<br /><br />\n生日:1982年12月24日</p><br />\n<br />\n<p>2001年入段，2002年二段，2003年三段，2006年四段，2010年五段，2015年六段，2026年七段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/FD4F71FF30877A4D784D40B82F6ABA13"
+   "source": "https://www.haifong.org/profession/venue/FD4F71FF30877A4D784D40B82F6ABA13",
+   "birthday": "12-24"
   },
   {
    "id": "56DB4F3D10D6B220F65B67D09C244002",
@@ -905,7 +929,8 @@
    ],
    "body": "<p><strong>簡介 </strong><br /><br />\n1974年06月22日生，出生於臺灣臺北市。 <br /><br />\n2000年臺灣棋院直接聘為初段，同年二段，2001年三段，2004年四段，2007年五段，2012年六段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 </strong><br /><br />\n<strong>2004年 </strong><br /><br />\n第11屆中環盃圍棋公開賽 亞軍 </p><br />\n<br />\n<p><strong>2003年 </strong><br /><br />\n第2屆魔戒盃 亞軍 <br /><br />\n第2屆新人王 亞軍<br><br><strong>2002年</strong> <br /><br />\n第9屆中環盃圍棋公開賽 冠軍 <br /><br />\n第2屆東鋼盃 亞軍 <br /><br />\n第1屆魔戒盃 亞軍 </p><br />\n<br />\n<p><strong>1996年</strong> <br /><br />\n第18屆世界業餘圍棋錦標賽 臺灣代表</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/FD8E84C36BEC219DB02DD64565C10989"
+   "source": "https://www.haifong.org/profession/venue/FD8E84C36BEC219DB02DD64565C10989",
+   "birthday": "06-22"
   },
   {
    "id": "DD4FAAF5BECA8897B01156991D2A7803",
@@ -935,7 +960,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1967年7月19日</p><br />\n<br />\n<p>2000年二段，2002年三段，2004年四段，2009年五段，2015年六段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2003年</strong> <br /><br />\n第三屆東鋼盃冠軍</p><br />\n<br />\n<p><strong>2001年</strong> <br /><br />\n第一屆東鋼盃亞軍</p><br />\n<br />\n<p><strong>1999年</strong> <br /><br />\n永大杯第二名</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/DD4FAAF5BECA8897B01156991D2A7803"
+   "source": "https://www.haifong.org/profession/venue/DD4FAAF5BECA8897B01156991D2A7803",
+   "birthday": "07-19"
   },
   {
    "id": "9D2A7763AEE6BD3CBC65C3383F7C0E29",
@@ -960,7 +986,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1992年3月8日</p><br />\n<br />\n<p>2007年入段，2008年二段，2009年三段，2011年四段，2013年五段，2016年六段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2011年</strong><br /><br />\n第五屆愛心盃亞軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/9D2A7763AEE6BD3CBC65C3383F7C0E29"
+   "source": "https://www.haifong.org/profession/venue/9D2A7763AEE6BD3CBC65C3383F7C0E29",
+   "birthday": "03-08"
   },
   {
    "id": "40BC858E8C6FE2A96019D6D6FB7E460F",
@@ -990,7 +1017,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1956年10月27日</p><br />\n<br />\n<p>2000年四段，2005年五段，2017年六段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2002年</strong> <br /><br />\n第九屆中環盃亞軍<br /><br />\n<strong>2001年</strong> <br /><br />\n第八屆中環盃冠軍<br /><br />\n<strong>1994年</strong> <br /><br />\n第二十屆名人賽亞軍<br /><br />\n<strong>1993年</strong> <br /><br />\n第一屆永大盃冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/40BC858E8C6FE2A96019D6D6FB7E460F"
+   "source": "https://www.haifong.org/profession/venue/40BC858E8C6FE2A96019D6D6FB7E460F",
+   "birthday": "10-27"
   },
   {
    "id": "96D22F1BFCD9F6FC92CC958E167EC390",
@@ -1024,7 +1052,8 @@
      "url": "https://www.youtube.com/playlist?list=PL9F6AD046F8F7D4D2"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/96D22F1BFCD9F6FC92CC958E167EC390"
+   "source": "https://www.haifong.org/profession/venue/96D22F1BFCD9F6FC92CC958E167EC390",
+   "birthday": "07-07"
   },
   {
    "id": "08D697DF2D668FC2B0F8A6B67498CBBD",
@@ -1049,7 +1078,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n1989年01月30日生，出生於臺灣台中市人。 <br /><br />\n2003年入段，2004年二段， 2006年三段，2010年四段，2014年五段 2015年加入中華職協新銳隊(2015)。2019年六段。  </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/08D697DF2D668FC2B0F8A6B67498CBBD"
+   "source": "https://www.haifong.org/profession/venue/08D697DF2D668FC2B0F8A6B67498CBBD",
+   "birthday": "01-30"
   },
   {
    "id": "C69D6010E6103B10BE46C2050F1B73ED",
@@ -1079,7 +1109,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n1980年7月4日生，出生於臺灣。 <br /><br />\n2003年入段，同年二段，2006年三段，2011年四段，2014年五段，2015年加入中華職協精英隊(~2016)，2021加入中華職協新銳隊，2021年晉升六段。</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2021年</strong><br /><br />\n第四屆大森盃全國女子職業圍棋名人錦標賽 亞軍</p><br />\n<br />\n<p><strong>2020年</strong><br /><br />\n第三屆大森盃全國女子職業名人賽 季軍</p><br />\n<br />\n<p><strong>2018年</strong><br /><br />\n第七屆天台山•森然楊帆杯世界女子圍棋團體錦標賽 殿軍</p><br />\n<br />\n<p><strong> </strong><br /><br />\n<strong>2016年</strong> <br /><br />\n第5屆天台山•農商銀行杯世界女子圍棋團體錦標賽 季軍 (團體隊友黑嘉嘉、張正平) </p><br />\n<br />\n<p><strong>2015年</strong> <br /><br />\n第1屆女子最強戰 亞軍 </p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n第4屆鈺德盃女子名人戰 冠軍 <br /><br />\n第4屆世界智力精英運動會女子個人賽第四名 <br /><br />\n第4屆世界智力精英運動會男女混雙賽銅牌 (搭檔林立祥) </p><br />\n<br />\n<p><strong>2012年</strong> <br /><br />\n第2屆鈺德盃女子名人賽 冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/C69D6010E6103B10BE46C2050F1B73ED"
+   "source": "https://www.haifong.org/profession/venue/C69D6010E6103B10BE46C2050F1B73ED",
+   "birthday": "07-04"
   },
   {
    "id": "AED46C721B4BC83AA23815E70632D976",
@@ -1104,7 +1135,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1984年9月10日</p><br />\n<br />\n<p>2002年入段，2004年二段，2007年三段，2011年四段，2013年五段，2021年六段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2016年</strong><br /><br />\n中正盃圍棋公開賽(職業、業餘混合賽) 殿軍</p><br />\n<br />\n<p><strong>2013年</strong><br /><br />\n中正盃圍棋公開賽(職業、業餘混合賽) 亞軍 </p><br />\n<br />\n<p><strong>2009年</strong><br /><br />\n第八屆東鋼盃四強</p><br />\n<br />\n<p><strong>2007年</strong><br /><br />\n第六屆新人王賽亞軍、第一屆亞藝盃四強</p><br />\n<br />\n<p><strong>2006年</strong><br /><br />\n第五屆新人王賽亞軍</p><br />\n<br />\n<p><strong>2003年</strong><br /><br />\n第三屆東鋼盃四強</p><br />\n<br />\n<p><strong>2002年</strong><br /><br />\n第一屆新人王賽亞軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/AED46C721B4BC83AA23815E70632D976"
+   "source": "https://www.haifong.org/profession/venue/AED46C721B4BC83AA23815E70632D976",
+   "birthday": "09-10"
   },
   {
    "id": "C52F5EFDF989D8CE3BA53AB7A2355F45",
@@ -1139,7 +1171,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E6%A5%8A%E5%AD%90%E8%90%B1"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/C52F5EFDF989D8CE3BA53AB7A2355F45"
+   "source": "https://www.haifong.org/profession/venue/C52F5EFDF989D8CE3BA53AB7A2355F45",
+   "birthday": "12-24"
   },
   {
    "id": "B26F65E303FB09F01C3DAF55AC233885",
@@ -1169,7 +1202,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E8%94%A1%E4%B8%9E%E9%9F%8B"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/B26F65E303FB09F01C3DAF55AC233885"
+   "source": "https://www.haifong.org/profession/venue/B26F65E303FB09F01C3DAF55AC233885",
+   "birthday": "03-21"
   },
   {
    "id": "AE4B5AB0DFEB900CDE0CBD2979FAFEA0",
@@ -1199,7 +1233,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E5%BD%A5%E4%B8%9E"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/AE4B5AB0DFEB900CDE0CBD2979FAFEA0"
+   "source": "https://www.haifong.org/profession/venue/AE4B5AB0DFEB900CDE0CBD2979FAFEA0",
+   "birthday": "09-18"
   },
   {
    "id": "D763F81C56FC291C1793C17AA82439C1",
@@ -1229,7 +1264,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1996年09月25日</p><br />\n<br />\n<p>2009年入段，同年二段，2010年中環盃冠軍跳升五段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>《業餘》<br /><br />\n2008年</strong><br /><br />\n韓國國務總理盃業餘大賽冠軍</p><br />\n<br />\n<p><strong>《職業》</strong><br /><br />\n<strong>2010年</strong><br /><br />\n中環盃冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/D763F81C56FC291C1793C17AA82439C1"
+   "source": "https://www.haifong.org/profession/venue/D763F81C56FC291C1793C17AA82439C1",
+   "birthday": "09-25"
   },
   {
    "id": "AE397B760DDE4789458D37C595AA3E9C",
@@ -1259,7 +1295,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1983年11月23日</p><br />\n<br />\n<p>2001入段，2002年二段，2004年三段，2007年四段，2013年五段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2004年</strong><br /><br />\n第四屆CMC杯職業圍棋電視快棋賽 冠軍</p><br />\n<br />\n<p><strong>2003年</strong><br /><br />\n第三屆CMC杯職業圍棋電視快棋賽 冠軍</p><br />\n<br />\n<p><strong>2002年</strong><br /><br />\n第一屆魔戒盃 冠軍</p><br />\n<br />\n<p><strong>2001年</strong><br /><br />\n第一屆富聚杯 冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/AE397B760DDE4789458D37C595AA3E9C"
+   "source": "https://www.haifong.org/profession/venue/AE397B760DDE4789458D37C595AA3E9C",
+   "birthday": "11-23"
   },
   {
    "id": "98406AFBE07BEF7B4CA1DD035F6AD998",
@@ -1284,7 +1321,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1983年11月07日</p><br />\n<br />\n<p>2007年二段，2009年三段，2012年四段，2017年五段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/98406AFBE07BEF7B4CA1DD035F6AD998"
+   "source": "https://www.haifong.org/profession/venue/98406AFBE07BEF7B4CA1DD035F6AD998",
+   "birthday": "11-07"
   },
   {
    "id": "CF3E0D31C9F118003D870534329B32D9",
@@ -1309,7 +1347,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1991年12月04日</p><br />\n<br />\n<p>2004年入段，2007年二段，2010年三段，2014年四段，2018年五段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2005年</strong><br /><br />\n第五屆CMC盃職業圍棋電視快棋賽 亞軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/CF3E0D31C9F118003D870534329B32D9"
+   "source": "https://www.haifong.org/profession/venue/CF3E0D31C9F118003D870534329B32D9",
+   "birthday": "12-04"
   },
   {
    "id": "ACAC693DCD98F923A2FA353ECD593F74",
@@ -1334,7 +1373,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1985年04月24日</p><br />\n<br />\n<p>2004年入段，2005年二段，2007年三段，2012年四段，2018年五段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/ACAC693DCD98F923A2FA353ECD593F74"
+   "source": "https://www.haifong.org/profession/venue/ACAC693DCD98F923A2FA353ECD593F74",
+   "birthday": "04-24"
   },
   {
    "id": "339499576DF93AC3D85F41B3F4AC97B8",
@@ -1359,7 +1399,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1995年09月30日</p><br />\n<br />\n<p>2007年入段，2009年二段，2012年三段，2018年四段，2021年五段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/339499576DF93AC3D85F41B3F4AC97B8"
+   "source": "https://www.haifong.org/profession/venue/339499576DF93AC3D85F41B3F4AC97B8",
+   "birthday": "09-30"
   },
   {
    "id": "011C328596ED1AB76CFCF3203696B1DD",
@@ -1384,7 +1425,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年12月03日</p><br />\n<br />\n<p>2014年入段，2016年二段，2018年三段，2020年四段，2024年五段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2025年</strong><br /><br />\n第1屆龍星賽 亞軍</p><br />\n<br />\n<p><strong>2015年</strong><br /><br />\n臺北市中正盃圍棋公開賽(職業、業餘混合賽) 亞軍<br /><br />\n </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/011C328596ED1AB76CFCF3203696B1DD"
+   "source": "https://www.haifong.org/profession/venue/011C328596ED1AB76CFCF3203696B1DD",
+   "birthday": "12-03"
   },
   {
    "id": "177AC3E5D8241171ADC3F4BA4AD04108",
@@ -1414,7 +1456,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E7%89%9B%E8%A9%A9%E7%89%B9"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/177AC3E5D8241171ADC3F4BA4AD04108"
+   "source": "https://www.haifong.org/profession/venue/177AC3E5D8241171ADC3F4BA4AD04108",
+   "birthday": "04-02"
   },
   {
    "id": "4CE8E505BBEEC3B5C043C1C50291CDD9",
@@ -1439,7 +1482,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n2000年8月31日生，出生於臺灣臺北市。 <br /><br />\n2014年加入中華職協圍棋道場，2015年入段並加入中華職協新銳隊至今，2017年二段。2019年三段，2021年四段，2024年五段。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2014年 </strong><br /><br />\n第4屆陳毅杯中國圍棋圍棋公開賽 台灣代表 </p><br />\n<br />\n<p><strong>2013年 </strong><br /><br />\n第30屆應氏盃世界青少年圍棋錦標賽 青年組第四名</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/4CE8E505BBEEC3B5C043C1C50291CDD9"
+   "source": "https://www.haifong.org/profession/venue/4CE8E505BBEEC3B5C043C1C50291CDD9",
+   "birthday": "08-31"
   },
   {
    "id": "2FAC98B749A332D40442FDDE6626FDE5",
@@ -1478,7 +1522,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E7%9B%A7%E9%88%BA%E6%A8%BA"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/2FAC98B749A332D40442FDDE6626FDE5"
+   "source": "https://www.haifong.org/profession/venue/2FAC98B749A332D40442FDDE6626FDE5",
+   "birthday": "10-16"
   },
   {
    "id": "3596D56FE306EA2C941FC3BDF88AF346",
@@ -1508,7 +1553,8 @@
    ],
    "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>1945年8月3日生</p><br />\n<br />\n<p> </p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>1994年</strong> </p><br />\n<br />\n<p>第一屆中環盃冠軍</p><br />\n<br />\n<p>第二十屆名人賽冠軍<br /><br />\n </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/3596D56FE306EA2C941FC3BDF88AF346"
+   "source": "https://www.haifong.org/profession/venue/3596D56FE306EA2C941FC3BDF88AF346",
+   "birthday": "08-03"
   },
   {
    "id": "2A01EF2BD63BF8A0BE96AB0545BA7C5F",
@@ -1533,7 +1579,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n1990年09月04日生，出生於臺灣台北市。 <br /><br />\n2009年入段，2010年二段，2012年三段，2015年加入中華職協精英隊(~2015)，2020年四段。</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/2A01EF2BD63BF8A0BE96AB0545BA7C5F"
+   "source": "https://www.haifong.org/profession/venue/2A01EF2BD63BF8A0BE96AB0545BA7C5F",
+   "birthday": "09-04"
   },
   {
    "id": "D5F5D47C98B0595491AF1146956FE38D",
@@ -1558,7 +1605,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n1995年04月10日生，出生於臺灣高雄市。 <br /><br />\n2012年入段，2013年二段，2015年加入中華職協新銳隊，2017年三段，2018加入中華職協新銳隊並擔任道場助理教練(~2018)，2020年四段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2013年</strong> <br /><br />\n第3屆台北市中正盃圍棋公開賽第四名 (非公式戰)</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/D5F5D47C98B0595491AF1146956FE38D"
+   "source": "https://www.haifong.org/profession/venue/D5F5D47C98B0595491AF1146956FE38D",
+   "birthday": "04-10"
   },
   {
    "id": "1B1B317DAFD897543FF1C175651B06AC",
@@ -1583,7 +1631,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n1996年12月31日生，出生於臺灣台中市。 <br /><br />\n2013年入段，2014年二段，2016年三段，同年加入中華職協精銳隊(~2016)，2021年四段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/1B1B317DAFD897543FF1C175651B06AC"
+   "source": "https://www.haifong.org/profession/venue/1B1B317DAFD897543FF1C175651B06AC",
+   "birthday": "12-31"
   },
   {
    "id": "EC6378120418024CD419E8EA5228E370",
@@ -1618,7 +1667,8 @@
      "url": "https://www.facebook.com/%E5%9C%8D%E6%A3%8B%E7%94%9C%E5%BF%83-%E4%BF%9E%E4%BF%90%E5%9D%87-2133655473311622/?__xts__[0]=68.ARBFcb0f8rIiNy3E05z5448ju7UxML5ABDvsbOTlyZkutWEeh9VPjNheZxWHQ76dOMpYPt-Xqs9_WH31lESvcQU46Cb8yp68RdemtTzr5_23YY1s1c4hGDzs46tn40-eyJx9Z_YnZy4ytZ4oOHPar_zeelsOrqJ6TQf3DQRWoqrvbOreltamneEmOfoKZ2fZe5_9dLh6D3UAqS2yJkiti-tKpA6Lt8nrrMyvNY185YVlft1DEUXIK6yY0NXB3htYgpiE5jyYU8vO6V-bCW2p4Ed9lyKuj-G5NCnJoaeDH4yhszHZDk6UfioE637oa-8kDaP7tXTHHtD-bnNS8IBR4XnOa6AU34ksA-3nFRgLyT5NOz7Y8VQDEBrHM88"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/EC6378120418024CD419E8EA5228E370"
+   "source": "https://www.haifong.org/profession/venue/EC6378120418024CD419E8EA5228E370",
+   "birthday": "04-29"
   },
   {
    "id": "5633D60970E952C7F0F7EFB8F55DC5FE",
@@ -1653,7 +1703,8 @@
      "url": "https://www.facebook.com/shengfang85/"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/5633D60970E952C7F0F7EFB8F55DC5FE"
+   "source": "https://www.haifong.org/profession/venue/5633D60970E952C7F0F7EFB8F55DC5FE",
+   "birthday": "08-05"
   },
   {
    "id": "B19E86B66130698F373BB1AEF26EDE12",
@@ -1678,7 +1729,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年11月04日</p><br />\n<br />\n<p>2012年入段，2013年二段，2016年三段，2022年四段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/B19E86B66130698F373BB1AEF26EDE12"
+   "source": "https://www.haifong.org/profession/venue/B19E86B66130698F373BB1AEF26EDE12",
+   "birthday": "11-04"
   },
   {
    "id": "7CE0B44C8D68B4C450E08D17864AA4D9",
@@ -1703,7 +1755,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n1994年12月09日生，出生於臺灣新北市。 <br /><br />\n2011年入段，2012年二段，2015年加入中華職協新銳隊(~2015)，2016年三段，2023年四段。</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/7CE0B44C8D68B4C450E08D17864AA4D9"
+   "source": "https://www.haifong.org/profession/venue/7CE0B44C8D68B4C450E08D17864AA4D9",
+   "birthday": "12-09"
   },
   {
    "id": "A5C3900CB8FC98E0B62E558F008D3014",
@@ -1733,7 +1786,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E9%99%B3%E5%A8%81%E5%BB%B7"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/A5C3900CB8FC98E0B62E558F008D3014"
+   "source": "https://www.haifong.org/profession/venue/A5C3900CB8FC98E0B62E558F008D3014",
+   "birthday": "01-30"
   },
   {
    "id": "62EC6449700E8FB51C87B841DC69DFAC",
@@ -1772,7 +1826,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E7%99%BD%E6%98%95%E5%8D%89"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/62EC6449700E8FB51C87B841DC69DFAC"
+   "source": "https://www.haifong.org/profession/venue/62EC6449700E8FB51C87B841DC69DFAC",
+   "birthday": "04-12"
   },
   {
    "id": "879C866C12836DB6656B81021DD2BB19",
@@ -1806,7 +1861,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2003年01月02日</p><br />\n<br />\n<p>2018年入段，同年二段，2021年三段，2023年四段</p><br />\n<br />\n<p><strong>2025年</strong><br /><br />\n第1屆龍星賽 冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/879C866C12836DB6656B81021DD2BB19"
+   "source": "https://www.haifong.org/profession/venue/879C866C12836DB6656B81021DD2BB19",
+   "birthday": "01-02"
   },
   {
    "id": "CD870F50F947A140848F9F4E75842EED",
@@ -1831,7 +1887,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1999年01月10日</p><br />\n<br />\n<p>2014年入段，2016年二段，2021年三段，2024年四段</p><br />\n<br />\n<p> </p><br />\n<br />\n<p><strong>2025年 </strong><br /><br />\n第13屆中環碁聖賽 亞軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/CD870F50F947A140848F9F4E75842EED"
+   "source": "https://www.haifong.org/profession/venue/CD870F50F947A140848F9F4E75842EED",
+   "birthday": "01-10"
   },
   {
    "id": "CDF70610323C8ED99F7262A73CAF89B5",
@@ -1856,7 +1913,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年07月29日</p><br />\n<br />\n<p>2021年三段 (103、107年榮獲二次世界業餘大賽冠軍，經第八屆第三次董事會通過晉升)</p><br />\n<br />\n<p>2025年四段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br>《業餘》<br /><br />\n<strong>2018年</strong> <br /><br />\n世界業餘錦標賽 冠軍</p><br />\n<br />\n<p><strong>2014年</strong> <br /><br />\n世界業餘錦標賽 冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/CDF70610323C8ED99F7262A73CAF89B5"
+   "source": "https://www.haifong.org/profession/venue/CDF70610323C8ED99F7262A73CAF89B5",
+   "birthday": "07-29"
   },
   {
    "id": "3299C78D82B897AD55C0D0C3E7420002",
@@ -1881,7 +1939,8 @@
    ],
    "body": "<p><strong>簡介</strong></p><br />\n<br />\n<p>1983年4月7日生</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/3299C78D82B897AD55C0D0C3E7420002"
+   "source": "https://www.haifong.org/profession/venue/3299C78D82B897AD55C0D0C3E7420002",
+   "birthday": "04-07"
   },
   {
    "id": "FE5BC7B18BA028ED87BD3F05A07D9FFF",
@@ -1911,7 +1970,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年02月25日</p><br />\n<br />\n<p>2006年入段，2008年二段，2009年思源盃冠軍跳升三段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2009年</strong><br /><br />\n第一屆思源盃冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/FE5BC7B18BA028ED87BD3F05A07D9FFF"
+   "source": "https://www.haifong.org/profession/venue/FE5BC7B18BA028ED87BD3F05A07D9FFF",
+   "birthday": "02-25"
   },
   {
    "id": "1E1D56B68405F91D63929F9FFDA0B1AC",
@@ -1936,7 +1996,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年02月11日</p><br />\n<br />\n<p>2007年入段，2009年二段，2011年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/1E1D56B68405F91D63929F9FFDA0B1AC"
+   "source": "https://www.haifong.org/profession/venue/1E1D56B68405F91D63929F9FFDA0B1AC",
+   "birthday": "02-11"
   },
   {
    "id": "6E223B36BE5A435F135E8C813D105283",
@@ -1961,7 +2022,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1981年12月16日</p><br />\n<br />\n<p>2005年入段，2008年二段，2012年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/6E223B36BE5A435F135E8C813D105283"
+   "source": "https://www.haifong.org/profession/venue/6E223B36BE5A435F135E8C813D105283",
+   "birthday": "12-16"
   },
   {
    "id": "9591BEE9466684C1AFD8B656A66F14A7",
@@ -1986,7 +2048,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1952年08月27日</p><br />\n<br />\n<p>2012年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/9591BEE9466684C1AFD8B656A66F14A7"
+   "source": "https://www.haifong.org/profession/venue/9591BEE9466684C1AFD8B656A66F14A7",
+   "birthday": "08-27"
   },
   {
    "id": "C8DB0930E8F794DE61B6FE1F8C177400",
@@ -2011,7 +2074,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1992年12月06日</p><br />\n<br />\n<p>2006年入段，2008年二段，2012年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/C8DB0930E8F794DE61B6FE1F8C177400"
+   "source": "https://www.haifong.org/profession/venue/C8DB0930E8F794DE61B6FE1F8C177400",
+   "birthday": "12-06"
   },
   {
    "id": "814BC77388BF34101205FD5C82ECADBE",
@@ -2036,7 +2100,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1973年10月03日</p><br />\n<br />\n<p>2003年入段，2008年二段，2012年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/814BC77388BF34101205FD5C82ECADBE"
+   "source": "https://www.haifong.org/profession/venue/814BC77388BF34101205FD5C82ECADBE",
+   "birthday": "10-03"
   },
   {
    "id": "8EF756A53BCB8BD1D3C8CF8EEFDF2A69",
@@ -2061,7 +2126,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1981年10月05日</p><br />\n<br />\n<p>1998年韓國棋院入段，2000年台灣棋院初段，2009年二段，2012三段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2016年</strong><br /><br />\n第五屆『天台山•農商銀行杯』世界女子圍棋團體錦標賽 季軍</p><br />\n<br />\n<p><strong>2013年</strong><br /><br />\n第三屆世界智力精英運動會女子個人賽 殿軍<br /><br />\n鈺德盃第三屆女子名人戰冠軍</p><br />\n<br />\n<p><strong>2011年</strong><br /><br />\n鈺德盃第一屆女子名人戰冠軍</p><br />\n<br />\n<p><strong>2009年</strong><br /><br />\n入選2010年廣州亞運國手</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/8EF756A53BCB8BD1D3C8CF8EEFDF2A69"
+   "source": "https://www.haifong.org/profession/venue/8EF756A53BCB8BD1D3C8CF8EEFDF2A69",
+   "birthday": "10-05"
   },
   {
    "id": "AB983C38E0F6CC44207444B3B5A46458",
@@ -2086,7 +2152,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1997年05月07日</p><br />\n<br />\n<p>2011年入段，同年二段，2013年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/AB983C38E0F6CC44207444B3B5A46458"
+   "source": "https://www.haifong.org/profession/venue/AB983C38E0F6CC44207444B3B5A46458",
+   "birthday": "05-07"
   },
   {
    "id": "7F62ED0BE5F25AB2324B436CFD94A55D",
@@ -2111,7 +2178,8 @@
    ],
    "body": "<p>簡介<br /><br />\n生日:1996年11月20日</p><br />\n<br />\n<p>2009年入段，2010年二段，2014年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/7F62ED0BE5F25AB2324B436CFD94A55D"
+   "source": "https://www.haifong.org/profession/venue/7F62ED0BE5F25AB2324B436CFD94A55D",
+   "birthday": "11-20"
   },
   {
    "id": "ED29DEC1345C1158BABED0D24B900235",
@@ -2136,7 +2204,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年10月11日</p><br />\n<br />\n<p>2004年入段，2006年二段，2019年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/ED29DEC1345C1158BABED0D24B900235"
+   "source": "https://www.haifong.org/profession/venue/ED29DEC1345C1158BABED0D24B900235",
+   "birthday": "10-11"
   },
   {
    "id": "07FBD55A0E698F4F543B575FA58160FA",
@@ -2161,7 +2230,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1992年10月16日</p><br />\n<br />\n<p>2007年入段，2011年二段，2014年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/07FBD55A0E698F4F543B575FA58160FA"
+   "source": "https://www.haifong.org/profession/venue/07FBD55A0E698F4F543B575FA58160FA",
+   "birthday": "10-16"
   },
   {
    "id": "C8580FB096D478712175B7CC9CAFE177",
@@ -2186,7 +2256,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1987年11月02日</p><br />\n<br />\n<p>2003年入段，2004年二段，2014年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/C8580FB096D478712175B7CC9CAFE177"
+   "source": "https://www.haifong.org/profession/venue/C8580FB096D478712175B7CC9CAFE177",
+   "birthday": "11-02"
   },
   {
    "id": "FBDFBD0302EDD53201B64B6BA9BBD404",
@@ -2211,7 +2282,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1985年03月08日</p><br />\n<br />\n<p>2009年入段，2010年二段，2016年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/FBDFBD0302EDD53201B64B6BA9BBD404"
+   "source": "https://www.haifong.org/profession/venue/FBDFBD0302EDD53201B64B6BA9BBD404",
+   "birthday": "03-08"
   },
   {
    "id": "F285D7E0BE55E357CEF8841C1AE85C3D",
@@ -2236,7 +2308,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1992年11月10日</p><br />\n<br />\n<p>2011年入段，2013年二段，2018年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/F285D7E0BE55E357CEF8841C1AE85C3D"
+   "source": "https://www.haifong.org/profession/venue/F285D7E0BE55E357CEF8841C1AE85C3D",
+   "birthday": "11-10"
   },
   {
    "id": "8D59175A9D5B3DA2D0A3B65560A5D476",
@@ -2261,7 +2334,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1974年11月17日</p><br />\n<br />\n<p>2004年入段，2012年二段，2021年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/8D59175A9D5B3DA2D0A3B65560A5D476"
+   "source": "https://www.haifong.org/profession/venue/8D59175A9D5B3DA2D0A3B65560A5D476",
+   "birthday": "11-17"
   },
   {
    "id": "07D1230959795CC93A7B1AC664B2ABD0",
@@ -2286,7 +2360,8 @@
    ],
    "body": "<p>簡介<br /><br />\n1999年11月29日生，出生於臺灣新北市。<br /><br />\n2015年入段，同年二段。 2015年加入中華職協新銳隊(~2015)。2016~2019前往中國杭州棋院訓練，2021年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/07D1230959795CC93A7B1AC664B2ABD0"
+   "source": "https://www.haifong.org/profession/venue/07D1230959795CC93A7B1AC664B2ABD0",
+   "birthday": "11-29"
   },
   {
    "id": "588F241257F65FD5855A660A81BCD243",
@@ -2311,7 +2386,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1994年10月19日</p><br />\n<br />\n<p>2010年入段，2013年二段，2022年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/588F241257F65FD5855A660A81BCD243"
+   "source": "https://www.haifong.org/profession/venue/588F241257F65FD5855A660A81BCD243",
+   "birthday": "10-19"
   },
   {
    "id": "C53A54B63C282F8FAF2FA3D078B51178",
@@ -2336,7 +2412,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1991年10月24日</p><br />\n<br />\n<p>2010年入段，2016年二段，2022年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/C53A54B63C282F8FAF2FA3D078B51178"
+   "source": "https://www.haifong.org/profession/venue/C53A54B63C282F8FAF2FA3D078B51178",
+   "birthday": "10-24"
   },
   {
    "id": "0747ABCC941FB323AC5BAA3B8E2CBAB8",
@@ -2361,7 +2438,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n1999年6月2日生，出生於臺灣新竹市。 <br /><br />\n2018年入段，2018加入中華職協新銳隊至今。2019年二段。2022年三段。</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/0747ABCC941FB323AC5BAA3B8E2CBAB8"
+   "source": "https://www.haifong.org/profession/venue/0747ABCC941FB323AC5BAA3B8E2CBAB8",
+   "birthday": "06-02"
   },
   {
    "id": "A09CE0ACB62DC6C4075045F63418D5F4",
@@ -2386,7 +2464,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n2003年11月12日生，出生於臺灣新北市。 <br /><br />\n2017年加入中華職業圍棋道場，2019年入段並加入中華職協新銳隊(~2020)，2020年二段，2023年三段。</p><br />\n<br />\n<p> </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/A09CE0ACB62DC6C4075045F63418D5F4"
+   "source": "https://www.haifong.org/profession/venue/A09CE0ACB62DC6C4075045F63418D5F4",
+   "birthday": "11-12"
   },
   {
    "id": "3124CD1CC5C356605D28F2EF244A3688",
@@ -2421,7 +2500,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9E%97%E6%80%A1%E5%BB%B7"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/3124CD1CC5C356605D28F2EF244A3688"
+   "source": "https://www.haifong.org/profession/venue/3124CD1CC5C356605D28F2EF244A3688",
+   "birthday": "11-10"
   },
   {
    "id": "058D14C68533983342FAF53879C0BCE2",
@@ -2460,7 +2540,8 @@
      "url": "https://www.youtube.com/channel/UCotV2Ue163bbF20vxBD6qRg"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/058D14C68533983342FAF53879C0BCE2"
+   "source": "https://www.haifong.org/profession/venue/058D14C68533983342FAF53879C0BCE2",
+   "birthday": "04-16"
   },
   {
    "id": "81991D2DE8FF2F97698D8EC7905B1417",
@@ -2485,7 +2566,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2000年12月12日</p><br />\n<br />\n<p>2020年入段，2021年二段，2023年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/81991D2DE8FF2F97698D8EC7905B1417"
+   "source": "https://www.haifong.org/profession/venue/81991D2DE8FF2F97698D8EC7905B1417",
+   "birthday": "12-12"
   },
   {
    "id": "8F897BBF92C2E7CE794CBE8CE93875B3",
@@ -2510,7 +2592,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2003年04月30日</p><br />\n<br />\n<p>2019年入段，2022年二段，2024年三段。</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/8F897BBF92C2E7CE794CBE8CE93875B3"
+   "source": "https://www.haifong.org/profession/venue/8F897BBF92C2E7CE794CBE8CE93875B3",
+   "birthday": "04-30"
   },
   {
    "id": "F858AB28DCA4A96A066C33E153AE680C",
@@ -2545,7 +2628,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E6%9D%8E%E5%98%89%E9%A6%A8"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/F858AB28DCA4A96A066C33E153AE680C"
+   "source": "https://www.haifong.org/profession/venue/F858AB28DCA4A96A066C33E153AE680C",
+   "birthday": "09-14"
   },
   {
    "id": "A994D5EC1935043B7991E0D5B047154B",
@@ -2570,7 +2654,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2004年11月01日</p><br />\n<br />\n<p>2021年入段，2022年二段，2025年三段。</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/A994D5EC1935043B7991E0D5B047154B"
+   "source": "https://www.haifong.org/profession/venue/A994D5EC1935043B7991E0D5B047154B",
+   "birthday": "11-01"
   },
   {
    "id": "422575A04644AFD6BE4763C9A20BA3C7",
@@ -2595,7 +2680,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2005年03月27日</p><br />\n<br />\n<p>2021年入段，2022年二段，2025年三段<br /><br />\n </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/422575A04644AFD6BE4763C9A20BA3C7"
+   "source": "https://www.haifong.org/profession/venue/422575A04644AFD6BE4763C9A20BA3C7",
+   "birthday": "03-27"
   },
   {
    "id": "09F1EB3EA731D094DD1EA6C740EAF53D",
@@ -2620,7 +2706,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n2005年03月19日生，出生於臺灣臺北市。 <br /><br />\n2016~2017年加入中華職業圍棋道場，2020年入段，2022二段，2024加入中華職協新銳隊至今。 2025年三段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong></p><br />\n<br />\n<p><strong>2017年</strong> <br /><br />\n105學年各級學校圍棋運動錦標賽-國小男子個人組 冠軍 </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/09F1EB3EA731D094DD1EA6C740EAF53D"
+   "source": "https://www.haifong.org/profession/venue/09F1EB3EA731D094DD1EA6C740EAF53D",
+   "birthday": "03-19"
   },
   {
    "id": "EA6735DDA07BCB49726EEDDD26C70014",
@@ -2645,7 +2732,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n1998年10月10日生，臺灣新北市人。 <br /><br />\n2013~2016年加入中華職業圍棋道場，2019年入段並加入中華職協新銳隊(~2019)，2020年二段，2025年三段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2017年</strong> <br /><br />\n第12屆榮三盃全國學生棋王賽 中學組 冠軍<br><br><strong>2016年 </strong><br /><br />\n第27回國際業餘圍棋配對賽 亞軍 (搭檔 白昕卉)</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/EA6735DDA07BCB49726EEDDD26C70014"
+   "source": "https://www.haifong.org/profession/venue/EA6735DDA07BCB49726EEDDD26C70014",
+   "birthday": "10-10"
   },
   {
    "id": "2F00F3E909704F83EF577DCA651BF421",
@@ -2670,7 +2758,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2005年05月13日</p><br />\n<br />\n<p>2023年入段，同年二段，2026年三段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/2F00F3E909704F83EF577DCA651BF421"
+   "source": "https://www.haifong.org/profession/venue/2F00F3E909704F83EF577DCA651BF421",
+   "birthday": "05-13"
   },
   {
    "id": "06F4746CEB171C0D5428EDA5CFE69315",
@@ -2700,7 +2789,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E5%90%B3%E5%BD%A5%E8%AB%B6"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/06F4746CEB171C0D5428EDA5CFE69315"
+   "source": "https://www.haifong.org/profession/venue/06F4746CEB171C0D5428EDA5CFE69315",
+   "birthday": "01-20"
   },
   {
    "id": "50A678286D3D9124EB68460F11B08E88",
@@ -2725,7 +2815,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n2006年07月23日生，出生於臺灣桃園市。 <br /><br />\n2018~2019年加入中華職業圍棋道場，2020年入段並加入中華職協新銳隊(~2021)，2022年二段，2026年三段。</p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2023年</strong><br /><br />\n111年中等以下學校圍棋運動錦標賽高中女子組 冠軍<strong> </strong></p><br />\n<br />\n<p><strong>2020年 </strong><br /><br />\n108年中等以下學校圍棋運動錦標賽國中女子組 亞軍 </p><br />\n<br />\n<p><strong>2019年 </strong><br /><br />\n107年中等以下學校圍棋運動錦標賽國中女子組 亞軍 </p><br />\n<br />\n<p><strong>2018年 </strong><br /><br />\n106年中等以下學校圍棋運動錦標賽國小女子組 亞軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/50A678286D3D9124EB68460F11B08E88"
+   "source": "https://www.haifong.org/profession/venue/50A678286D3D9124EB68460F11B08E88",
+   "birthday": "07-23"
   },
   {
    "id": "FB01E247BDE33C245ED82C83417B0A84",
@@ -2755,7 +2846,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E9%84%AD%E4%BA%88%E7%9A%93"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/FB01E247BDE33C245ED82C83417B0A84"
+   "source": "https://www.haifong.org/profession/venue/FB01E247BDE33C245ED82C83417B0A84",
+   "birthday": "10-09"
   },
   {
    "id": "7832DC10400C5CC0FCEAFB40394E9ED6",
@@ -2810,7 +2902,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1987年09月13日</p><br />\n<br />\n<p>2008年鈺德盃十段賽冠軍跳升二段</p><br />\n<br />\n<p><strong>主要棋戰履歷</strong><br><br><strong>2008年</strong> <br /><br />\n鈺德盃十段賽冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/775267E2780B550129D345B125002307"
+   "source": "https://www.haifong.org/profession/venue/775267E2780B550129D345B125002307",
+   "birthday": "09-13"
   },
   {
    "id": "DD1E65F813D3FC0F74757318A184B0EC",
@@ -2835,7 +2928,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1981年01月25日</p><br />\n<br />\n<p>2005年入段，2010年二段<br /><br />\n </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/DD1E65F813D3FC0F74757318A184B0EC"
+   "source": "https://www.haifong.org/profession/venue/DD1E65F813D3FC0F74757318A184B0EC",
+   "birthday": "01-25"
   },
   {
    "id": "A5B93221E600DDB19DEC301B9331941A",
@@ -2860,7 +2954,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1990年03月20日</p><br />\n<br />\n<p>2005年入段，2010年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/A5B93221E600DDB19DEC301B9331941A"
+   "source": "https://www.haifong.org/profession/venue/A5B93221E600DDB19DEC301B9331941A",
+   "birthday": "03-20"
   },
   {
    "id": "AAA5D2F511B54119D7203E9D35DD808B",
@@ -2885,7 +2980,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1990年08月16日</p><br />\n<br />\n<p>2005年入段，2011年二段<br /><br />\n </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/AAA5D2F511B54119D7203E9D35DD808B"
+   "source": "https://www.haifong.org/profession/venue/AAA5D2F511B54119D7203E9D35DD808B",
+   "birthday": "08-16"
   },
   {
    "id": "0F0054572581E083B2A2B305CD9671C6",
@@ -2910,7 +3006,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1989年06月09日</p><br />\n<br />\n<p>2006年入段，2012年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/0F0054572581E083B2A2B305CD9671C6"
+   "source": "https://www.haifong.org/profession/venue/0F0054572581E083B2A2B305CD9671C6",
+   "birthday": "06-09"
   },
   {
    "id": "8CE247A1C017225FD4067F9346748E31",
@@ -2935,7 +3032,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1998年01月11日</p><br />\n<br />\n<p>2014年入段，2016年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/8CE247A1C017225FD4067F9346748E31"
+   "source": "https://www.haifong.org/profession/venue/8CE247A1C017225FD4067F9346748E31",
+   "birthday": "01-11"
   },
   {
    "id": "0D1E5FC664B42F21CF21FF5877565C7B",
@@ -2960,7 +3058,8 @@
    ],
    "body": "<p>簡介<br /><br />\n生日:1997年07月05日</p><br />\n<br />\n<p>2012年入段，2017年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/0D1E5FC664B42F21CF21FF5877565C7B"
+   "source": "https://www.haifong.org/profession/venue/0D1E5FC664B42F21CF21FF5877565C7B",
+   "birthday": "07-05"
   },
   {
    "id": "88BC5E16030BA3E4C02E448DD20DB009",
@@ -2985,7 +3084,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n2004年01月07日生，出生於臺灣台北市。 <br /><br />\n2016年入段，2018年二段。2016年加入中華職協新銳隊(~2016)。 </p><br />\n<br />\n<p><strong>主要棋戰履歷 <br /><br />\n2019年</strong> <br /><br />\n107學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍 </p><br />\n<br />\n<p><strong>2015年</strong><br /><br />\n第32屆世界青少年圍棋錦標賽少年組 亞軍 </p><br />\n<br />\n<p><strong>2014年 </strong><br /><br />\n102學年各級學校圍棋運動錦標賽-國小男子個人組 冠軍<br /><br />\n第14屆韓華生命保險杯世界兒童圍棋國手戰 季軍<br /><br />\n第9屆榮三盃全國學生棋王賽 小學組冠軍<br /><br />\n </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/88BC5E16030BA3E4C02E448DD20DB009"
+   "source": "https://www.haifong.org/profession/venue/88BC5E16030BA3E4C02E448DD20DB009",
+   "birthday": "01-07"
   },
   {
    "id": "36E06BE8056630B0AA286117B14EA99E",
@@ -3010,7 +3110,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1987年10月23日</p><br />\n<br />\n<p>2001年入段，2021年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/36E06BE8056630B0AA286117B14EA99E"
+   "source": "https://www.haifong.org/profession/venue/36E06BE8056630B0AA286117B14EA99E",
+   "birthday": "10-23"
   },
   {
    "id": "0AE98742F2BC82BE37B10999148A3769",
@@ -3035,7 +3136,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n2000年9月13日生，出生於臺灣臺北市。 <br /><br />\n2017年入段，2017加入中華職協新銳隊(~2018)，2023年二段。</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/0AE98742F2BC82BE37B10999148A3769"
+   "source": "https://www.haifong.org/profession/venue/0AE98742F2BC82BE37B10999148A3769",
+   "birthday": "09-13"
   },
   {
    "id": "66CCCAD1DCB05AD7264B07A94F7DAAD3",
@@ -3060,7 +3162,8 @@
    ],
    "body": "<p>簡介<br /><br />\n生日:2004年07月07日</p><br />\n<br />\n<p>2018年入段，2023年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/66CCCAD1DCB05AD7264B07A94F7DAAD3"
+   "source": "https://www.haifong.org/profession/venue/66CCCAD1DCB05AD7264B07A94F7DAAD3",
+   "birthday": "07-07"
   },
   {
    "id": "B09E5E3FAB5F3FA5013162AA3D560569",
@@ -3090,7 +3193,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E5%8A%89%E4%B8%80%E8%8A%B3"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/B09E5E3FAB5F3FA5013162AA3D560569"
+   "source": "https://www.haifong.org/profession/venue/B09E5E3FAB5F3FA5013162AA3D560569",
+   "birthday": "05-08"
   },
   {
    "id": "4C23B9A228EAD5E3FA353CFC17192C6B",
@@ -3115,7 +3219,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n2007年10月29日生，出生於臺灣基隆市。 <br /><br />\n2018~2019年加入中華職業圍棋道場，2020年入段並加入中華職協新銳隊(~2020)，2023年二段。</p><br />\n<br />\n<p><strong>主要棋戰履歷<br /><br />\n2022年 </strong><br /><br />\n110學年各級學校圍棋運動錦標賽-國中男子個人組 冠軍</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/4C23B9A228EAD5E3FA353CFC17192C6B"
+   "source": "https://www.haifong.org/profession/venue/4C23B9A228EAD5E3FA353CFC17192C6B",
+   "birthday": "10-29"
   },
   {
    "id": "83D107A920C782C4AC1995F1AAFCCB4B",
@@ -3145,7 +3250,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E5%B0%A4%E6%B5%A9%E5%AE%87"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/83D107A920C782C4AC1995F1AAFCCB4B"
+   "source": "https://www.haifong.org/profession/venue/83D107A920C782C4AC1995F1AAFCCB4B",
+   "birthday": "05-17"
   },
   {
    "id": "932038A2F21AA24E87EF526ABFC40B55",
@@ -3170,7 +3276,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2003年10月29日</p><br />\n<br />\n<p>2021年入段，2024年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/932038A2F21AA24E87EF526ABFC40B55"
+   "source": "https://www.haifong.org/profession/venue/932038A2F21AA24E87EF526ABFC40B55",
+   "birthday": "10-29"
   },
   {
    "id": "C0BD4D0B9C99262A469F4C04ADAE83B0",
@@ -3195,7 +3302,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1994年09月15日</p><br />\n<br />\n<p>2010年入段(韓國籍)，2025年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/C0BD4D0B9C99262A469F4C04ADAE83B0"
+   "source": "https://www.haifong.org/profession/venue/C0BD4D0B9C99262A469F4C04ADAE83B0",
+   "birthday": "09-15"
   },
   {
    "id": "9D499F9D84E063199B9472622146859E",
@@ -3220,7 +3328,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1993年11月09日</p><br />\n<br />\n<p>2008年入段，2025年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/9D499F9D84E063199B9472622146859E"
+   "source": "https://www.haifong.org/profession/venue/9D499F9D84E063199B9472622146859E",
+   "birthday": "11-09"
   },
   {
    "id": "ACD79CE5E8DF58153703BD197D1743BD",
@@ -3250,7 +3359,8 @@
      "url": "https://www.youtube.com/@haifongigo/search?query=%E9%99%B3%E5%93%81%E6%A8%BA"
     }
    ],
-   "source": "https://www.haifong.org/profession/venue/ACD79CE5E8DF58153703BD197D1743BD"
+   "source": "https://www.haifong.org/profession/venue/ACD79CE5E8DF58153703BD197D1743BD",
+   "birthday": "11-02"
   },
   {
    "id": "9D9CE3D386D8B7E6177A2CAF682FB380",
@@ -3275,7 +3385,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2005年11月03日</p><br />\n<br />\n<p>2024年入段，2025年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/9D9CE3D386D8B7E6177A2CAF682FB380"
+   "source": "https://www.haifong.org/profession/venue/9D9CE3D386D8B7E6177A2CAF682FB380",
+   "birthday": "11-03"
   },
   {
    "id": "403CCFF3850BDA70455BBF929FCA4AB7",
@@ -3300,7 +3411,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日：2012年10月12日</p><br />\n<br />\n<p>2025年入段，2026年二段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/403CCFF3850BDA70455BBF929FCA4AB7"
+   "source": "https://www.haifong.org/profession/venue/403CCFF3850BDA70455BBF929FCA4AB7",
+   "birthday": "10-12"
   },
   {
    "id": "32AEA3B47BF32E1DDF31A8EB04BB6CEF",
@@ -3325,7 +3437,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1955年12月31日</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/32AEA3B47BF32E1DDF31A8EB04BB6CEF"
+   "source": "https://www.haifong.org/profession/venue/32AEA3B47BF32E1DDF31A8EB04BB6CEF",
+   "birthday": "12-31"
   },
   {
    "id": "13457E7445F9AFA1EFBB5651322429FE",
@@ -3350,7 +3463,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1990年04月28日</p><br />\n<br />\n<p>2009年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/13457E7445F9AFA1EFBB5651322429FE"
+   "source": "https://www.haifong.org/profession/venue/13457E7445F9AFA1EFBB5651322429FE",
+   "birthday": "04-28"
   },
   {
    "id": "945647E17CE9BB405E0BAFB0867DDFAF",
@@ -3375,7 +3489,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:1997年09月22日</p><br />\n<br />\n<p>2015年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/945647E17CE9BB405E0BAFB0867DDFAF"
+   "source": "https://www.haifong.org/profession/venue/945647E17CE9BB405E0BAFB0867DDFAF",
+   "birthday": "09-22"
   },
   {
    "id": "86D4681C71D90F91ED128A3AE3CEB875",
@@ -3400,7 +3515,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2000年10月26日</p><br />\n<br />\n<p>2016年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/86D4681C71D90F91ED128A3AE3CEB875"
+   "source": "https://www.haifong.org/profession/venue/86D4681C71D90F91ED128A3AE3CEB875",
+   "birthday": "10-26"
   },
   {
    "id": "777A643554A2A7129433C1CB640D0141",
@@ -3425,7 +3541,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2001年09月26日</p><br />\n<br />\n<p>2017年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/777A643554A2A7129433C1CB640D0141"
+   "source": "https://www.haifong.org/profession/venue/777A643554A2A7129433C1CB640D0141",
+   "birthday": "09-26"
   },
   {
    "id": "03427F04E78D2C4DFD0841F2676F2390",
@@ -3450,7 +3567,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2005年06月07日</p><br />\n<br />\n<p>2020年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/03427F04E78D2C4DFD0841F2676F2390"
+   "source": "https://www.haifong.org/profession/venue/03427F04E78D2C4DFD0841F2676F2390",
+   "birthday": "06-07"
   },
   {
    "id": "1C420292E1C7DCBAFD8B8875704EAA8B",
@@ -3475,7 +3593,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2002年02月19日</p><br />\n<br />\n<p>2020年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/1C420292E1C7DCBAFD8B8875704EAA8B"
+   "source": "https://www.haifong.org/profession/venue/1C420292E1C7DCBAFD8B8875704EAA8B",
+   "birthday": "02-19"
   },
   {
    "id": "E5FDC6FC1538CCA3F43846503E7B0D98",
@@ -3500,7 +3619,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2006年4月20日</p><br />\n<br />\n<p>2021年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/E5FDC6FC1538CCA3F43846503E7B0D98"
+   "source": "https://www.haifong.org/profession/venue/E5FDC6FC1538CCA3F43846503E7B0D98",
+   "birthday": "04-20"
   },
   {
    "id": "8AB03BA6DA9332148C3AC88706421907",
@@ -3525,7 +3645,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2010年08月05日</p><br />\n<br />\n<p>2022年入段<br /><br />\n </p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/8AB03BA6DA9332148C3AC88706421907"
+   "source": "https://www.haifong.org/profession/venue/8AB03BA6DA9332148C3AC88706421907",
+   "birthday": "08-05"
   },
   {
    "id": "E2147DAF60476BEB86CB683B107B3690",
@@ -3550,7 +3671,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2003年03月12日</p><br />\n<br />\n<p>2023年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/E2147DAF60476BEB86CB683B107B3690"
+   "source": "https://www.haifong.org/profession/venue/E2147DAF60476BEB86CB683B107B3690",
+   "birthday": "03-12"
   },
   {
    "id": "A3086B92CB5CF060FA04DDA30E0A2058",
@@ -3575,7 +3697,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2007年08月14日</p><br />\n<br />\n<p>2023年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/A3086B92CB5CF060FA04DDA30E0A2058"
+   "source": "https://www.haifong.org/profession/venue/A3086B92CB5CF060FA04DDA30E0A2058",
+   "birthday": "08-14"
   },
   {
    "id": "EE45F7AC217BD46C293D002F1CDFB7DB",
@@ -3600,7 +3723,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2009年03月26日</p><br />\n<br />\n<p>2023年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/EE45F7AC217BD46C293D002F1CDFB7DB"
+   "source": "https://www.haifong.org/profession/venue/EE45F7AC217BD46C293D002F1CDFB7DB",
+   "birthday": "03-26"
   },
   {
    "id": "ACBF499C50310A39B5ED50FBD5B1E4E3",
@@ -3625,7 +3749,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2010年01月17日</p><br />\n<br />\n<p>2024年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/ACBF499C50310A39B5ED50FBD5B1E4E3"
+   "source": "https://www.haifong.org/profession/venue/ACBF499C50310A39B5ED50FBD5B1E4E3",
+   "birthday": "01-17"
   },
   {
    "id": "EA39A1946C438D77F69289CA6789016C",
@@ -3650,7 +3775,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2007年04月12日</p><br />\n<br />\n<p>2024年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/EA39A1946C438D77F69289CA6789016C"
+   "source": "https://www.haifong.org/profession/venue/EA39A1946C438D77F69289CA6789016C",
+   "birthday": "04-12"
   },
   {
    "id": "212B6175C46FA774BF7A6970C616FED6",
@@ -3675,7 +3801,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2007年03月13日</p><br />\n<br />\n<p>2024年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/212B6175C46FA774BF7A6970C616FED6"
+   "source": "https://www.haifong.org/profession/venue/212B6175C46FA774BF7A6970C616FED6",
+   "birthday": "03-13"
   },
   {
    "id": "B15AD71345F8FF8D7E2E8FC2D7037F82",
@@ -3700,7 +3827,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2010年10月29日</p><br />\n<br />\n<p>2024年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/B15AD71345F8FF8D7E2E8FC2D7037F82"
+   "source": "https://www.haifong.org/profession/venue/B15AD71345F8FF8D7E2E8FC2D7037F82",
+   "birthday": "10-29"
   },
   {
    "id": "49D6C8A4D62E0918E9CB8628417A5155",
@@ -3725,7 +3853,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日:2007年11月08日</p><br />\n<br />\n<p>2024年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/49D6C8A4D62E0918E9CB8628417A5155"
+   "source": "https://www.haifong.org/profession/venue/49D6C8A4D62E0918E9CB8628417A5155",
+   "birthday": "11-08"
   },
   {
    "id": "9A6C5B763F85D75AFCB337502A485757",
@@ -3750,7 +3879,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日：2013年09月23日</p><br />\n<br />\n<p>2025年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/9A6C5B763F85D75AFCB337502A485757"
+   "source": "https://www.haifong.org/profession/venue/9A6C5B763F85D75AFCB337502A485757",
+   "birthday": "09-23"
   },
   {
    "id": "465B233177CF9525D2CD7B642B932693",
@@ -3775,7 +3905,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日：2010年05月18日</p><br />\n<br />\n<p>2025年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/465B233177CF9525D2CD7B642B932693"
+   "source": "https://www.haifong.org/profession/venue/465B233177CF9525D2CD7B642B932693",
+   "birthday": "05-18"
   },
   {
    "id": "DBB39646C51ABED6B86C346731EA8C1E",
@@ -3800,7 +3931,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日：2006年06月17日</p><br />\n<br />\n<p>2025年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/DBB39646C51ABED6B86C346731EA8C1E"
+   "source": "https://www.haifong.org/profession/venue/DBB39646C51ABED6B86C346731EA8C1E",
+   "birthday": "06-17"
   },
   {
    "id": "D22D25EACDA34CD7C1E02C36CB6DD873",
@@ -3825,7 +3957,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日：2005年04月27日</p><br />\n<br />\n<p>2025年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/D22D25EACDA34CD7C1E02C36CB6DD873"
+   "source": "https://www.haifong.org/profession/venue/D22D25EACDA34CD7C1E02C36CB6DD873",
+   "birthday": "04-27"
   },
   {
    "id": "BB19A81D2A276320E28F25EFC92E0747",
@@ -3846,7 +3979,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日：2011年11月12日</p><br />\n<br />\n<p>2026年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/BB19A81D2A276320E28F25EFC92E0747"
+   "source": "https://www.haifong.org/profession/venue/BB19A81D2A276320E28F25EFC92E0747",
+   "birthday": "11-12"
   },
   {
    "id": "04F4C5C9AE6905E6C7428ADF5B5498D7",
@@ -3867,7 +4001,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日：2013年4月29日</p><br />\n<br />\n<p>2026年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/04F4C5C9AE6905E6C7428ADF5B5498D7"
+   "source": "https://www.haifong.org/profession/venue/04F4C5C9AE6905E6C7428ADF5B5498D7",
+   "birthday": "04-29"
   },
   {
    "id": "CDF2A5819244A0A6FF8FB6E06DAAF205",
@@ -3888,7 +4023,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日：2010年9月8日</p><br />\n<br />\n<p>2026年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/CDF2A5819244A0A6FF8FB6E06DAAF205"
+   "source": "https://www.haifong.org/profession/venue/CDF2A5819244A0A6FF8FB6E06DAAF205",
+   "birthday": "09-08"
   },
   {
    "id": "AD9C93B9FA23345BBB7EA4037B249B0D",
@@ -3909,7 +4045,8 @@
    ],
    "body": "<p><strong>簡介</strong><br /><br />\n生日：2005年9月9日</p><br />\n<br />\n<p>2026年入段</p><br />\n</p>",
    "links": [],
-   "source": "https://www.haifong.org/profession/venue/AD9C93B9FA23345BBB7EA4037B249B0D"
+   "source": "https://www.haifong.org/profession/venue/AD9C93B9FA23345BBB7EA4037B249B0D",
+   "birthday": "09-09"
   }
  ]
 }

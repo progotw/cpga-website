@@ -50,6 +50,28 @@ for i, a in enumerate(sys.argv):
     if a == '--only' and i + 1 < len(sys.argv):
         ONLY = sys.argv[i + 1]
 
+# ---- 生日（首頁「本月壽星」用）----
+# 海峰的簡介裡有兩種寫法：「生日：2012年10月12日」與「1980年2月23日生」。
+# 這裡只取月和日，**年份刻意不寫進 players.json**——那是公開檔案，
+# 沒有必要把 137 位棋士的年齡集中成一份任何人都能下載的清單。
+BIRTH_PATS = (
+    re.compile(r'生日\s*[:：]\s*\d{4}\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日'),
+    re.compile(r'\d{4}\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日\s*生'),
+)
+
+
+def birthday_of(body):
+    """從簡介取出生日，回傳 'MM-DD'；沒寫或格式怪就回空字串。"""
+    text = re.sub(r'<[^>]+>', ' ', body or '')
+    for pat in BIRTH_PATS:
+        m = pat.search(text)
+        if m:
+            mm, dd = int(m.group(1)), int(m.group(2))
+            if 1 <= mm <= 12 and 1 <= dd <= 31:
+                return '%02d-%02d' % (mm, dd)
+    return ''
+
+
 # 個人頁的保底輪替週期（天）。平常靠秘書處通知即可，
 # 這個輪替只是避免有人忘了通知而資料停滯。
 ROTATE_DAYS = 28
@@ -251,6 +273,12 @@ for r in roster:
     rec.setdefault('season', [])
     rec.setdefault('body', '')
     rec.setdefault('links', [])
+    # 每次都重算：簡介改了就會跟著改，簡介沒了就把欄位拿掉
+    bd = birthday_of(rec.get('body'))
+    if bd:
+        rec['birthday'] = bd
+    else:
+        rec.pop('birthday', None)
     players.append(rec)
 
 if len(players) < MIN_PLAYERS:
@@ -289,5 +317,8 @@ for r in RANK_ORDER:
     c = sum(1 for p in players if p['rank'] == r)
     if c:
         print(f'  {r}: {c}')
+no_birthday = [p['name'] for p in players if not p.get('birthday')]
+print('無生日資料者 %d 位' % len(no_birthday) +
+      ('：%s' % '、'.join(no_birthday[:10]) if no_birthday else ''))
 missing_body = [p['name'] for p in players if not p['body']]
 print(f'無簡介內容者 {len(missing_body)} 位' + (f'：{missing_body[:10]}' if missing_body else ''))
