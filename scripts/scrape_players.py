@@ -43,12 +43,17 @@ def text_of(s):
     return html.unescape(s).replace('\xa0', ' ').strip()
 
 
-DEST = next((a for a in sys.argv[1:] if not a.startswith('-')), 'players.json')
 FULL = '--full' in sys.argv
 ONLY = ''
 for i, a in enumerate(sys.argv):
     if a == '--only' and i + 1 < len(sys.argv):
         ONLY = sys.argv[i + 1]
+
+# 檔名：第一個不是旗標、也不是 --only 的值的參數。
+# （沒排掉 --only 的值的話，忘了寫檔名時會把棋士姓名當成檔名寫出一個怪檔）
+_skip = {ONLY} if ONLY else set()
+DEST = next((a for a in sys.argv[1:]
+             if not a.startswith('-') and a not in _skip), 'players.json')
 
 # ---- 生日（首頁「本月壽星」用）----
 # 海峰的簡介裡有兩種寫法：「生日：2012年10月12日」與「1980年2月23日生」。
@@ -58,6 +63,13 @@ BIRTH_PATS = (
     re.compile(r'生日\s*[:：]\s*\d{4}\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日'),
     re.compile(r'\d{4}\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日\s*生'),
 )
+
+
+# 海峰簡介沒寫、由秘書處另外提供的生日。一樣只存月和日。
+# 哪天海峰把簡介補上了，上面的解析會先命中，這裡就自動沒作用。
+MANUAL_BIRTHDAYS = {
+    '蔡文河': '04-13',   # 2026-11-26 秘書處提供
+}
 
 
 def birthday_of(body):
@@ -274,7 +286,7 @@ for r in roster:
     rec.setdefault('body', '')
     rec.setdefault('links', [])
     # 每次都重算：簡介改了就會跟著改，簡介沒了就把欄位拿掉
-    bd = birthday_of(rec.get('body'))
+    bd = birthday_of(rec.get('body')) or MANUAL_BIRTHDAYS.get(rec.get('name'), '')
     if bd:
         rec['birthday'] = bd
     else:
