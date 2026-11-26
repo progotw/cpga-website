@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-26T08:14:29+00:00",
+ "generated": "2026-11-26T13:53:29+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "B91D72B264179C6D1BA59229CEDFC5CA",
+   "date": "2026-11-26",
+   "catLabel": "比賽訊息",
+   "cat": "match",
+   "title": "首屆玄樂盃職業圍棋決賽 許皓鋐3:1奪冠 獲獎金百萬",
+   "url": "https://www.haifong.org/news/content/B91D72B264179C6D1BA59229CEDFC5CA",
+   "local": true
+  },
   {
    "id": "6E595149D7B5000B5908E44DB97B8419",
    "date": "2026-11-26",
@@ -138,15 +147,6 @@
    "cat": "match",
    "title": "中環碁聖賽決賽是誰對誰？新人王盧奕銓對決海峰盃冠軍林君諺",
    "url": "https://www.haifong.org/news/content/89FD3DF9812A4D5F8C5EED43CFABE75A",
-   "local": true
-  },
-  {
-   "id": "B91D72B264179C6D1BA59229CEDFC5CA",
-   "date": "2026-11-05",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "第1屆玄樂盃決賽第三局 賴均輔扳回一城 比數2:1",
-   "url": "https://www.haifong.org/news/content/B91D72B264179C6D1BA59229CEDFC5CA",
    "local": true
   },
   {

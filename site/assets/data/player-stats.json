@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-26T16:14:50+08:00",
+ "generated": "2026-11-26T21:53:48+08:00",
  "generated_label": "(11/26更新)",
  "source": "海峰棋院 成績系統（公開對局紀錄）",
  "note": "國內＝台灣職業賽、國際＝世界賽；last_year 為前一年全部對局。players 的鍵是海峰棋士頁網址上的棋士編號。",
@@ -203,11 +203,11 @@
   "498745583367139F2AD618F39303A6C4": {
    "name": "許皓鋐",
    "domestic": {
-    "games": 35,
-    "win": 28,
+    "games": 36,
+    "win": 29,
     "loss": 7,
-    "rate": 80.0,
-    "text": "28勝7負　勝率80%"
+    "rate": 80.6,
+    "text": "29勝7負　勝率80.6%"
    },
    "international": {
     "games": 17,
@@ -227,11 +227,11 @@
   "E81B48D148D947DCA3E3ECFF3CA72E20": {
    "name": "賴均輔",
    "domestic": {
-    "games": 62,
+    "games": 63,
     "win": 46,
-    "loss": 16,
-    "rate": 74.2,
-    "text": "46勝16負　勝率74.2%"
+    "loss": 17,
+    "rate": 73.0,
+    "text": "46勝17負　勝率73%"
    },
    "international": {
     "games": 6,
@@ -1091,11 +1091,11 @@
   "2FAC98B749A332D40442FDDE6626FDE5": {
    "name": "盧鈺樺",
    "domestic": {
-    "games": 37,
-    "win": 20,
+    "games": 38,
+    "win": 21,
     "loss": 17,
-    "rate": 54.1,
-    "text": "20勝17負　勝率54.1%"
+    "rate": 55.3,
+    "text": "21勝17負　勝率55.3%"
    },
    "international": {
     "games": 8,
@@ -1235,11 +1235,11 @@
   "5633D60970E952C7F0F7EFB8F55DC5FE": {
    "name": "蘇聖芳",
    "domestic": {
-    "games": 25,
+    "games": 26,
     "win": 11,
-    "loss": 14,
-    "rate": 44.0,
-    "text": "11勝14負　勝率44%"
+    "loss": 15,
+    "rate": 42.3,
+    "text": "11勝15負　勝率42.3%"
    },
    "international": {
     "games": 0,
