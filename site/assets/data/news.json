@@ -1,10 +1,19 @@
 {
  "schema_version": 1,
- "generated": "2026-11-25T21:43:21+00:00",
+ "generated": "2026-11-26T08:14:29+00:00",
  "source": "海峰棋院 最新消息",
  "source_url": "https://www.haifong.org/news",
  "count": 120,
  "items": [
+  {
+   "id": "6E595149D7B5000B5908E44DB97B8419",
+   "date": "2026-11-26",
+   "catLabel": "媒體報導",
+   "cat": "media",
+   "title": "圍棋》中環碁聖賽：盧奕銓2比0勝林君諺　奪職業生涯首座八大頭銜(風傳媒報導)",
+   "url": "https://www.haifong.org/news/content/6E595149D7B5000B5908E44DB97B8419",
+   "local": true
+  },
   {
    "id": "D380ECD80FA00D80F1347B1D225A248C",
    "date": "2026-11-24",
@@ -1074,15 +1083,6 @@
    "cat": "match",
    "title": "第7屆名人賽決賽落幕！許皓鋐4：0戰勝王元均 第四度奪得名人!",
    "url": "https://www.haifong.org/news/content/8B15BFFC66518AB88A3EAFED8211BF87",
-   "local": true
-  },
-  {
-   "id": "F4AE383875FE266CC20B869840D146A9",
-   "date": "2026-06-22",
-   "catLabel": "比賽訊息",
-   "cat": "match",
-   "title": "第7屆名人賽 【本賽】【決賽】棋譜 & 結果",
-   "url": "https://www.haifong.org/news/content/F4AE383875FE266CC20B869840D146A9",
    "local": true
   }
  ]

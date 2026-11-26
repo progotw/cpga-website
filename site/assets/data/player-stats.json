@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-26T05:43:45+08:00",
+ "generated": "2026-11-26T16:14:50+08:00",
  "generated_label": "(11/26更新)",
  "source": "海峰棋院 成績系統（公開對局紀錄）",
  "note": "國內＝台灣職業賽、國際＝世界賽；last_year 為前一年全部對局。players 的鍵是海峰棋士頁網址上的棋士編號。",
@@ -251,11 +251,11 @@
   "E0105F37B8050597F275972467EA648E": {
    "name": "陳祈睿",
    "domestic": {
-    "games": 53,
-    "win": 35,
+    "games": 54,
+    "win": 36,
     "loss": 18,
-    "rate": 66.0,
-    "text": "35勝18負　勝率66%"
+    "rate": 66.7,
+    "text": "36勝18負　勝率66.7%"
    },
    "international": {
     "games": 13,
@@ -347,11 +347,11 @@
   "3AB09C2D42977CB66F69737B529900F2": {
    "name": "簡靖庭",
    "domestic": {
-    "games": 53,
-    "win": 35,
+    "games": 54,
+    "win": 36,
     "loss": 18,
-    "rate": 66.0,
-    "text": "35勝18負　勝率66%"
+    "rate": 66.7,
+    "text": "36勝18負　勝率66.7%"
    },
    "international": {
     "games": 9,
@@ -810,11 +810,11 @@
     "text": "19勝12負　勝率61.3%"
    },
    "international": {
-    "games": 23,
+    "games": 25,
     "win": 10,
-    "loss": 13,
-    "rate": 43.5,
-    "text": "10勝13負　勝率43.5%"
+    "loss": 15,
+    "rate": 40.0,
+    "text": "10勝15負　勝率40%"
    },
    "last_year": {
     "games": 62,
@@ -1043,11 +1043,11 @@
   "177AC3E5D8241171ADC3F4BA4AD04108": {
    "name": "牛詩特",
    "domestic": {
-    "games": 35,
+    "games": 36,
     "win": 19,
-    "loss": 16,
-    "rate": 54.3,
-    "text": "19勝16負　勝率54.3%"
+    "loss": 17,
+    "rate": 52.8,
+    "text": "19勝17負　勝率52.8%"
    },
    "international": {
     "games": 2,
@@ -2075,11 +2075,11 @@
   "422575A04644AFD6BE4763C9A20BA3C7": {
    "name": "孫偉勛",
    "domestic": {
-    "games": 15,
+    "games": 16,
     "win": 4,
-    "loss": 11,
-    "rate": 26.7,
-    "text": "4勝11負　勝率26.7%"
+    "loss": 12,
+    "rate": 25.0,
+    "text": "4勝12負　勝率25%"
    },
    "international": {
     "games": 0,
